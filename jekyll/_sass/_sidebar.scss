@@ -69,9 +69,9 @@ $sidebar-spacing-base: 5px;
     }
     .arrow {
       position: absolute;
-      right: 0;
+      left: 0;
       top: $sidebar-spacing-base;
-      transform: rotate(90deg);
+      transform: rotate(-90deg);
       transition: transform 400ms;
     }
     .subnav {
@@ -111,7 +111,7 @@ $sidebar-spacing-base: 5px;
     li {
       a, span.nav-span {
         color: $body-text-color;
-        margin-left: 30px;
+        margin-right: 30px;
         display: inline-block;
       }
     }
