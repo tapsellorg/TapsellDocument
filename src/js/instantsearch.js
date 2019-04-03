@@ -1,18 +1,17 @@
 import * as debounce from 'lodash.debounce';
 import * as get from 'lodash.get';
 
-const formatResultSnippet = (snippet) => {
+const formatResultSnippet = snippet => {
   const title = get(snippet, ['title', 'value'], '(untitled)');
   const content = get(snippet, ['content', 'value'], '');
   const titleTag = `<strong>${title}</strong>`;
-  const contextTag = snippet.headings ?
-    `<p class="context">${snippet.headings.map(h => h.value).join(' > ')}</p>` : '';
+  const contextTag = snippet.headings ? `<p class="context">${snippet.headings.map(h => h.value).join(' > ')}</p>` : '';
   const contentTag = `<p class="content">${content}</p>`;
   return `<div class="result-item-wrap">${titleTag + contextTag + contentTag}</div>`;
-}
+};
 
 // Instant search initialization
-export function init () {
+export function init() {
   var search = instantsearch({
     appId: 'U0RXNGRK45',
     apiKey: 'dd49f5b81d238d474b49645a4daed322', // search-only API Key; safe for front-end code
@@ -24,7 +23,7 @@ export function init () {
   // adding conditions to filter search
   search.addWidget(
     instantsearch.widgets.configure({
-      filters: "collection: cci2"
+      filters: 'collection: cci2'
     })
   );
 
@@ -36,7 +35,14 @@ export function init () {
         input: 'instantsearch-search'
       },
       placeholder: 'Search Documentation',
-      queryHook: debounce(function (query, searchFunction) { searchFunction(query); setTimeout(renderResults, 100); }, 500, { 'leading': true, 'trailing': true, 'maxWait': 1000 }) // method to throttle search requests
+      queryHook: debounce(
+        function(query, searchFunction) {
+          searchFunction(query);
+          setTimeout(renderResults, 100);
+        },
+        500,
+        { leading: true, trailing: true, maxWait: 1000 }
+      ) // method to throttle search requests
     })
   );
 
@@ -47,7 +53,7 @@ export function init () {
       escapeHits: true,
       templates: {
         empty: 'No results',
-        item: (item) => {
+        item: item => {
           let url = item.url;
           if (item.anchor) {
             url += `#${item.anchor}`;
@@ -61,16 +67,16 @@ export function init () {
   search.start();
 
   // insert search results
-  var searchResetButton = document.querySelector("#search-box .ais-search-box--reset");
-  var searchBox = document.querySelector("input.instantsearch-search");
-  var template = document.querySelector("#hits-template");
+  var searchResetButton = document.querySelector('#search-box .ais-search-box--reset');
+  var searchBox = document.querySelector('input.instantsearch-search');
+  var template = document.querySelector('#hits-template');
   var pageBody = document.querySelector('.main-body');
   var resultDisplay = document.querySelector('.hits-target');
   var stateHolder = resultDisplay.cloneNode(true);
   var form = document.querySelector('.main-searchbar form');
 
-  function renderResults (e) {
-    resultDisplay.innerHTML = "";
+  function renderResults(e) {
+    resultDisplay.innerHTML = '';
     if (searchBox.value.length > 0) {
       template.querySelector('#search-term-display').innerText = searchBox.value;
       var results = template.cloneNode(true);
@@ -78,27 +84,27 @@ export function init () {
       resultDisplay.appendChild(results);
       window.scrollTo(0, 0);
 
-      pageBody.style.display = "none";
-      resultDisplay.style.display = "block";
+      pageBody.style.display = 'none';
+      resultDisplay.style.display = 'block';
     } else {
       resultDisplay.appendChild(stateHolder);
 
-      pageBody.style.display = "flex";
-      resultDisplay.style.display = "none";
+      pageBody.style.display = 'flex';
+      resultDisplay.style.display = 'none';
     }
-  };
+  }
 
   searchBox.addEventListener('keyup', renderResults);
 
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
     renderResults();
   });
 
   window.addEventListener('load', renderResults);
-  searchResetButton.addEventListener('click', function () {
-    setTimeout(function () {
+  searchResetButton.addEventListener('click', function() {
+    setTimeout(function() {
       renderResults();
     }, 100);
   });
-};
+}

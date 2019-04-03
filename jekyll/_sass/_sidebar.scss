@@ -10,8 +10,8 @@ $sidebar-spacing-base: 5px;
 }
 
 .sidebar {
-  background: #F7F7F7;
-  font-family: "roboto";
+  background: #f7f7f7;
+  font-family: 'roboto';
   height: 92vh;
   padding: 30px 24px 60px 16px;
   position: absolute;
@@ -32,16 +32,15 @@ $sidebar-spacing-base: 5px;
     box-shadow: none;
   }
 
-  &:hover{
+  &:hover {
     &::-webkit-scrollbar-thumb {
-      background: #C2C2C2;
+      background: #c2c2c2;
     }
   }
 
   &::-webkit-scrollbar {
     width: 5px;
   }
-
 
   a.active,
   .nav-span {
@@ -58,32 +57,38 @@ $sidebar-spacing-base: 5px;
     font-size: $font-size-small;
 
     .list-wrap {
+      display: flex;
+      align-items: center;
       margin: 0 0 20px 0;
       position: relative;
       cursor: pointer;
+      .icon {
+        flex: 0 0 auto;
+        margin-right: 9px;
+      }
+      .main-nav-item-text {
+        flex: 1 0 auto;
+      }
+      .arrow {
+        flex: 0 0 auto;
+        transform: rotate(90deg);
+        transition: transform 400ms;
+        margin-left: 8px;
+      }
     }
 
-    .icon {
-      position: absolute;
-      top: -1px;
-    }
-    .arrow {
-      position: absolute;
-      left: 0;
-      top: $sidebar-spacing-base;
-      transform: rotate(-90deg);
-      transition: transform 400ms;
-    }
     .subnav {
       overflow: hidden;
-      ul{
+      ul {
         margin-bottom: 20px;
       }
     }
 
     &.closed {
-      .arrow {
-        transform: rotate(0deg);
+      .list-wrap {
+        .arrow {
+          transform: rotate(0deg);
+        }
       }
       .subnav {
         height: 0;
@@ -96,7 +101,7 @@ $sidebar-spacing-base: 5px;
     font-size: $font-size-micro;
     font-weight: $font-weight-bold;
     margin: 0 0 10px 0;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
   .subnav-item {
     font-weight: 400;
@@ -109,7 +114,8 @@ $sidebar-spacing-base: 5px;
     padding: 0;
 
     li {
-      a, span.nav-span {
+      a,
+      span.nav-span {
         color: $body-text-color;
         margin-right: 30px;
         display: inline-block;

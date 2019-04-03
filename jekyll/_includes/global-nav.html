@@ -4,36 +4,12 @@
       <div class="col-md-12">
 
         <div class="widescreen">
-          <a href="https://circleci.com"><img src="{{ '/assets/img/logos/logo-wordmark.svg' | prepend: site.baseurl }}" class="logo" alt="CircleCI Home"></a>
+          <a href="{{site.global_vars.blog_url}}"><img src="{{ '/assets/img/logos/logo-dark-background.png' | prepend: site.baseurl }}"
+                 class="logo" alt="Metrix Blog"></a>
 
 
           <ul class="left-links main-nav">
-            <li class="nav-item"><a href="https://circleci.com/product/">Product</a>
-              <div class="submenu">
-                <ul class="subnav">
-                  <li class="subnav-item"><a href="https://circleci.com/product/">Overview</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/product/#how-it-works">How It Works</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/product/#features">Features</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/product/#build-environments">Build Environments</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/product/#hosting-options">Hosting Options</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/product/#integrations">Integrations</a></li>
-                </ul>
-              </div>
-            </li>
-
             <li class="nav-item"><a href="https://circleci.com/pricing/">Pricing</a></li>
-            <li class="nav-item"><a href="https://circleci.com/enterprise/">Enterprise</a></li>
-            <li class="nav-item">Developers
-              <div class="submenu">
-                <ul class="subnav">
-                  <li class="subnav-item"><a href="https://circleci.com/docs/2.0/hello-world/">Hello World</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/docs/">Documentation</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/integrations/">Integrations</a></li>
-                  <li class="subnav-item" ><a href="https://circleci.com/orbs/">Orbs</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/docs/api/v1-reference/">API</a></li>
-                </ul>
-              </div>
-            </li>
             <li class="default-item nav-item"><a href="https://circleci.com/about/">Company</a>
               <div class="submenu">
                 <ul class="subnav">
@@ -49,42 +25,38 @@
           </ul>
 
           <ul class="right-links main-nav">
-            <li class="default-item nav-item">Support
-              <div class="submenu">
-                <ul class="subnav">
-                  <li class="subnav-item"><a href="https://support.circleci.com/hc/en-us" target="_blank">Get Support</a></li>
-                  <li class="subnav-item"><a href="https://discuss.circleci.com/" target="_blank">Community Forum</a></li>
-                  <li class="subnav-item"><a href="https://ideas.circleci.com/">Feature Requests</a></li>
-                  <li class="subnav-item"><a href="https://circleci.com/support/premium-support/">Premium Support</a></li>
-                </ul>
-              </div>
+            <li class="divider-left nav-item visitor-item"><a href="{{site.global_vars.dashboard_url}}" data-hj-masked>Dashboard</a></li>
+            <li class="nav-item visitor-item">
+              <a class="btn-primary small" href="{{site.global_vars.get_demo_url}}" target="_blank">Get a Demo</a>
             </li>
-            <li class="divider-left nav-item visitor-item"><a href="https://circleci.com/vcs-authorize/" data-hj-masked>Log In</a></li>
-            <li class="nav-item visitor-item"><a class="btn-primary small" href="https://circleci.com/signup/" data-analytics-action="signup-clicked" data-analytics-location="nav" data-optimizely="signup_button_clicked">Sign Up</a></li>
-            <li class="dashboard-link desktop-nav divider-left"><a href="https://circleci.com/dashboard">Go to app</a></li>
           </ul>
 
         </div>
 
+        <!-- TODO: should be removed -->
         <div class="narrowscreen">
 
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-navigation" aria-expanded="false" aria-controls="#mobile-navigation">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-navigation"
+                  aria-expanded="false" aria-controls="#mobile-navigation">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar top-bar"></span>
             <span class="icon-bar middle-bar"></span>
             <span class="icon-bar bottom-bar"></span>
           </button>
 
-          <a href="https://circleci.com"><img class="logo" src="{{ '/assets/img/logos/logo-wordmark.svg' | prepend: site.baseurl }}" alt="CircleCI Home"></a>
+          <a href="https://circleci.com"><img class="logo" src="{{ '/assets/img/logos/logo-dark-background.png' | prepend: site.baseurl }}"
+                 alt="CircleCI Home"></a>
 
 
           <span class="login">
-            <a href="https://circleci.com/vcs-authorize/" data-hj-masked class="mobile-nav signup visitor-item" data-analytics-location="nav" >Log In</a>
+            <a href="https://circleci.com/vcs-authorize/" data-hj-masked class="mobile-nav signup visitor-item"
+               data-analytics-location="nav">Log In</a>
             <a href="https://circleci.com/dashboard" class="dashboard-link mobile-nav">Go to app</a>
           </span>
 
           <ul class="dropdown-menu2" id="mobile-navigation">
-            <li><a href="https://circleci.com/signup/" data-analytics-action="signup-clicked" data-optimizely="signup_button_clicked" class="btn-primary">Sign Up for Free</a></li>
+            <li><a href="https://circleci.com/signup/" data-analytics-action="signup-clicked" data-optimizely="signup_button_clicked"
+                 class="btn-primary">Sign Up for Free</a></li>
             <li class="border-bottom"><a href="https://circleci.com/product/">Product</a></li>
             <li class="border-bottom"><a href="https://circleci.com/pricing/">Pricing</a></li>
             <li class="border-bottom"><a href="https://circleci.com/enterprise/">Enterprise</a></li>
@@ -93,7 +65,7 @@
                 <li class="subnav-item"><a href="https://circleci.com/docs/2.0/hello-world/">Getting Started</a></li>
                 <li class="subnav-item"><a href="https://circleci.com/docs/">Documentation</a></li>
                 <li class="subnav-item"><a href="https://circleci.com/integrations/">Integrations</a></li>
-                <li class="subnav-item" ><a href="https://circleci.com/orbs/">Orbs</a></li>
+                <li class="subnav-item"><a href="https://circleci.com/orbs/">Orbs</a></li>
                 <li class="subnav-item"><a href="https://circleci.com/docs/api/v1-reference/">API</a></li>
               </ul>
             </li>

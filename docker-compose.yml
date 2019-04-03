@@ -1,10 +1,10 @@
-version: "3"
+version: '2'
 services:
   jekyll:
     command: jekyll serve --incremental --livereload
     image: jekyll/jekyll:3.8.3
     volumes:
-      - "./jekyll:/srv/jekyll"
+      - './jekyll:/srv/jekyll'
     ports:
       - 4000:4000
       - 35729:35729
