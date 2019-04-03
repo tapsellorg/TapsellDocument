@@ -13,6 +13,7 @@
   background: white;
   z-index: 2;
   top: 70px;
+  height: 50px;
 
   #search-box {
     max-width: 1200px;
@@ -50,7 +51,7 @@
   border-bottom: 1px solid $gray-200;
 
   a strong {
-    font-family: "roboto";
+    font-family: 'roboto';
     font-size: $font-size-small;
   }
 
