@@ -1,44 +1,14 @@
 en:
-  - name: Welcome
-    link:
-    icon: docs/welcome.svg
-    children:
-      - name: Introduction
-        link: 2.0/
-        children:
-          - name: CI/CD Overview
-            link: 2.0/about-circleci/
-          - name: Supported Languages
-            link: 2.0/demo-apps/
-          - name: Core Features
-            link: 2.0/features/
-
-  - name: Getting Started
-    icon: docs/start.svg
-    children:
-      - name: Introduction
-        link: 2.0/getting-started/
-        children:
-          - name: Sign Up & Try CircleCI
-            link: 2.0/first-steps/
-          - name: Hello World
-            link: 2.0/hello-world/
-          - name: FAQ
-            link: 2.0/faq/
-
-  - name: Deployment
-    icon: docs/deploy.svg
-    children:
-      - name: Configuring Deploys
-        link: 2.0/deployment-integrations/
-        children:
-          - name: Deploying to AWS ECR/ECS
-            link: 2.0/ecs-ecr/
-          - name: Using Yarn on CircleCI
-            link: 2.0/yarn/
-          - name: Publishing Snap Packages
-            link: 2.0/build-publish-snap-packages/
-          - name: Using Artifactory
-            link: 2.0/artifactory/
-          - name: Publishing Packages to packagecloud
-            link: 2.0/packagecloud/
+  - name: FAQ
+    link: faq
+    icon: docs/reference.svg
+    # children:
+    #   - name: Introduction
+    #     link: 2.0/
+    #     children:
+    #       - name: CI/CD Overview
+    #         link: 2.0/about-circleci/
+fa:
+  - name: سوالات متداول
+    link: faq
+    icon: docs/reference.svg

@@ -21,7 +21,8 @@
 
 					{% if main-item.link %}
 					<a class="{% if current_url == main-item.link %} active {% endif %}"
-						 href="{{ site.baseurl }}/{{ main-item.link }}#section={{ main-item.name | slugify }}" data-proofer-ignore>{{ display_name}}</a>
+						 href="{{ site.baseurl }}/{{ main-item.link }}{% if page.lang == 'en'%}/{% endif%}#section={{ main-item.name | slugify }}"
+						 data-proofer-ignore>{{ display_name}}</a>
 					{% else %}
 					<span class="main-nav-item-text nav-span">{{ display_name }}</span>
 					{% endif %}

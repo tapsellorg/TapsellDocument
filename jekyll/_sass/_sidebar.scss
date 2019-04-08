@@ -11,13 +11,12 @@ $sidebar-spacing-base: 5px;
 
 .sidebar {
   background: #f7f7f7;
-  font-family: 'roboto';
   height: 92vh;
-  padding: 30px 24px 60px 16px;
+  @include ltr-doRTL(padding, 30px 24px 60px 16px);
   position: absolute;
   bottom: 0;
   width: 260px;
-  border-right: 1px solid $gray-200;
+  @include ltr-doRTL(border-right, 1px solid $gray-200);
   overflow-y: scroll;
 
   &::-webkit-scrollbar-track {
@@ -59,12 +58,12 @@ $sidebar-spacing-base: 5px;
     .list-wrap {
       display: flex;
       align-items: center;
-      margin: 0 0 20px 0;
+      margin: 0 0 20px;
       position: relative;
       cursor: pointer;
       .icon {
         flex: 0 0 auto;
-        margin-right: 9px;
+        @include ltr-doRTL(margin-right, 9px);
       }
       .main-nav-item-text {
         flex: 1 0 auto;
@@ -73,7 +72,7 @@ $sidebar-spacing-base: 5px;
         flex: 0 0 auto;
         transform: rotate(90deg);
         transition: transform 400ms;
-        margin-left: 8px;
+        @include ltr-doRTL(margin-left, 8px);
       }
     }
 
@@ -87,7 +86,12 @@ $sidebar-spacing-base: 5px;
     &.closed {
       .list-wrap {
         .arrow {
-          transform: rotate(0deg);
+          @include rtl {
+            transform: rotate(180deg);
+          }
+          @include ltr {
+            transform: rotate(0deg);
+          }
         }
       }
       .subnav {
@@ -100,12 +104,12 @@ $sidebar-spacing-base: 5px;
     text-transform: uppercase;
     font-size: $font-size-micro;
     font-weight: $font-weight-bold;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
     letter-spacing: 0.5px;
   }
   .subnav-item {
     font-weight: 400;
-    margin: $sidebar-spacing-base 0 $sidebar-spacing-base $spacing-small-horizontal;
+    @include ltr-doRTL(margin, $sidebar-spacing-base 0 $sidebar-spacing-base $spacing-small-horizontal);
   }
 
   ul {
@@ -117,7 +121,7 @@ $sidebar-spacing-base: 5px;
       a,
       span.nav-span {
         color: $body-text-color;
-        margin-right: 30px;
+        @include ltr-doRTL(margin-right, 30px);
         display: inline-block;
       }
     }
@@ -137,18 +141,17 @@ $sidebar-spacing-base: 5px;
     display: block;
     width: 100%;
     padding: $spacing-small-vertical 16px;
-
     &.hidden {
       display: none;
     }
 
     span {
       display: inline-block;
-      margin-left: $spacing-small-horizontal;
+      @include ltr-doRTL(margin-left, $spacing-small-horizontal);
     }
 
     .arrow {
-      float: right;
+      @include ltr-doRTL(float, right);
       margin-top: 5px;
       transform: rotate(90deg);
     }
@@ -156,9 +159,9 @@ $sidebar-spacing-base: 5px;
 
   .mobile-sidebar {
     @extend .sidebar;
-    padding-right: 16px;
+    @include ltr-doRTL(padding-right, 16px);
     width: 100%;
-    left: 0;
+    @include ltr-doRTL(left, 0);
     top: 182px;
     z-index: 2;
 

@@ -54,7 +54,8 @@
     </div>
     <div class="row">
       <div class="col-md-2 col-xs-4">
-        <img src="{{site.baseurl}}/assets/img/logos/logo-wordmark.svg" class="logo-small margin-top-small" alt="circleci">
+        <img src="{{ '/assets/img/logos/logo-dark-background.png' | prepend: site.baseurl }}" class="logo-small margin-top-small"
+             alt="{{site.global_vars.footer_logo_alt}}">
       </div>
       <div class="col-md-4 col-md-offset-6 col-xs-offset-0 col-xs-8">
         <div class="text-center-small-float-right">
@@ -68,14 +69,14 @@
         <div class="margin-top-small margin-bottom-small text-center-small-float-left">
           <nav>
             <ul class="horizontal blue">
-              <li><a href="https://circleci.com/terms-of-service/">Terms of Service</a></li>
-              <li><a href="https://circleci.com/privacy/">Privacy Policy</a></li>
-              <li><a href="https://circleci.com/security/">Security</a></li>
+              <li><a href="{{site.global_vars.terms_url}}">{{site.t[page.lang].footer.terms}}</a></li>
+              <li><a href="mailto:{{site.global_vars.contact_email}}" target="_blank"><span>{{site.t[page.lang].footer.contact}}</span></a>
+              </li>
             </ul>
           </nav>
         </div>
         <div class="margin-top-small margin-bottom-small text-center-small-float-right">
-          <span>Copyright © {{ site.time | date: '%Y' }} Circle Internet Services, Inc., All Rights Reserved.</span>
+          <span>{{site.t[page.lang].footer.copyright}} {{ site.time | date: '%Y' }}.</span>
         </div>
       </div>
     </div>

@@ -1,0 +1,92 @@
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+@function str-replace-two-strings($string, $s1: left, $s2: right) {
+  $string: str-replace($string, $s1, x_x_x_x);
+  $string: str-replace($string, $s2, $s1);
+  $string: str-replace($string, x_x_x_x, $s2);
+  @return $string;
+}
+
+@mixin rtl {
+  html[dir='rtl'] & {
+    @content;
+  }
+}
+@mixin ltr {
+  html:not([dir='rtl']) & {
+    @content;
+  }
+}
+
+@mixin rtl-doLTR($property, $value) {
+  @include rtl {
+    #{$property}: $value;
+  }
+
+  @if str-index($property, right) or str-index($property, left) {
+    @include ltr {
+      #{str-replace-two-strings($property)}: $value;
+    }
+  } @else if ($property == padding or $property == margin) and length($value) == 4 {
+    @include ltr {
+      #{$property}: nth($value, 1) nth($value, 4) nth($value, 3) nth($value, 2);
+    }
+  } @else if ($property == border-radius) and length($value) == 4 {
+    @include ltr {
+      #{$property}: nth($value, 2) nth($value, 1) nth($value, 4) nth($value, 3);
+    }
+  } @else if ($property == text-align) and (str-index($value, left) or str-index($value, right)) {
+    @include ltr {
+      #{$property}: str-replace-two-strings($value);
+    }
+  } @else if ($property == direction) {
+    @include ltr {
+      #{$property}: str-replace-two-strings($value, ltr, rtl);
+    }
+  } @else if ($property == float) {
+    @include ltr {
+      #{$property}: str-replace-two-strings($value, right, left);
+    }
+  } @else {
+    @error "none of rtl-doLTR conditions matched for property: #{$property}, value: #{$value}";
+  }
+}
+
+@mixin ltr-doRTL($property, $value) {
+  @include ltr {
+    #{$property}: $value;
+  }
+
+  @if str-index($property, right) or str-index($property, left) {
+    @include rtl {
+      #{str-replace-two-strings($property)}: $value;
+    }
+  } @else if ($property == padding or $property == margin) and length($value) == 4 {
+    @include rtl {
+      #{$property}: nth($value, 1) nth($value, 4) nth($value, 3) nth($value, 2);
+    }
+  } @else if ($property == border-radius) and length($value) == 4 {
+    @include rtl {
+      #{$property}: nth($value, 2) nth($value, 1) nth($value, 4) nth($value, 3);
+    }
+  } @else if ($property == text-align) and (str-index($value, left) or str-index($value, right)) {
+    @include rtl {
+      #{$property}: str-replace-two-strings($value);
+    }
+  } @else if ($property == direction) {
+    @include rtl {
+      #{$property}: str-replace-two-strings($value, ltr, rtl);
+    }
+  } @else if ($property == float) {
+    @include rtl {
+      #{$property}: str-replace-two-strings($value, right, left);
+    }
+  } @else {
+    @error "none of ltr-doRTL conditions matched for property: #{$property}, value: #{$value}";
+  }
+}

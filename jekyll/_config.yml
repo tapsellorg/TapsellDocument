@@ -1,39 +1,36 @@
 # Site settings
-title: "CircleCI Documentation"
-email: docs@cirleci.com
-description: > # this means to ignore newlines until "baseurl:"
-  The documentation site for CircleCI, the fastest testing platform on the
-  Internet.
+title: 'Metrix Documentation'
+email: info@metrix.ir
+description: Metrix is a mobile marketing measurement platform that unifies mobile attribution and analytics into one powerful platform
 
-baseurl: "" # the subpath of your site, e.g. /blog
-gh_url: "https://github.com/circleci/circleci-docs"
+baseurl: '' # the subpath of your site, e.g. /blog
 
 plugins:
   - jekyll-assets
   - jekyll-polyglot
-  # - jekyll-multiple-languages-plugin
+  - jekyll-toc
 
-languages: ["en", "fa"]
-default_lang: "fa"
-exclude_from_localizations: ["javascript", "images", "css"]
+languages: ['en', 'fa']
+default_lang: 'fa'
+exclude_from_localizations: ['javascript', 'images', 'css']
 parallel_localization: true
 
-algolia:
-  application_id: U0RXNGRK45
-  index_name: documentation
-  settings:
-    highlightPreTag: '<strong>'
-    highlightPostTag: '</strong>'
-    attributesToSnippet: [
-      'content:80',
-      'headings',
-      'title'
-    ]
-    attributesToHighlight: [
-      'content:80',
-      'headings',
-      'title'
-    ]
+# algolia:
+#   application_id: U0RXNGRK45
+#   index_name: documentation
+#   settings:
+#     highlightPreTag: '<strong>'
+#     highlightPostTag: '</strong>'
+#     attributesToSnippet: [
+#       'content:80',
+#       'headings',
+#       'title'
+#     ]
+#     attributesToHighlight: [
+#       'content:80',
+#       'headings',
+#       'title'
+#     ]
 
 sass:
   sass_dir: _sass
@@ -48,11 +45,8 @@ liquid:
 collections:
   # jekyll processes in alpha order...
   docs:
-    permalink: "/:collection/:path/"
+    permalink: '/:collection/:path/'
     output: true
-
-twitter_username: circleci
-github_username: circleci
 
 # defaults:
 #   -
@@ -90,3 +84,30 @@ global_vars:
   docs_url: https://docs.metrix.ir
   site_name: Metrix
   get_demo_url: https://dashboard.metrix.ir/login/demo
+  terms_url: https://dashboard.metrix.ir/login/terms
+  header_logo_alt: Metrix Docs
+  contact_email: info@metrix.ir
+  footer_logo_alt: Metrix
+
+# Translations
+t:
+  en:
+    nav:
+      home: Home
+      dashboard: Dashboard
+      get_demo: Get a Demo
+      blog: Blog
+    footer:
+      terms: Terms of Service
+      contact: Contact Us
+      copyright: Designed and Developed by Metrix - Iran
+  fa:
+    nav:
+      home: خانه
+      dashboard: داشبورد
+      get_demo: دریافت دمو
+      blog: وبلاگ
+    footer:
+      terms: قوانین
+      contact: تماس با ما
+      copyright: طراحی و توسعه توسط متریکس - ایران

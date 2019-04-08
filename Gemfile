@@ -6,7 +6,7 @@ gem 'jekyll', "3.8.4"
 gem 'html-proofer', "3.9.1"
 
 gem 'jekyll-assets'
-# gem "jekyll-multiple-languages-plugin"
+gem 'jekyll-toc'
 # jekyll-assets depends on sprockets, which depends on rack, which has two
 # security vulnerabilities prior to 2.0.6.
 # https://nvd.nist.gov/vuln/detail/CVE-2018-16471
@@ -14,6 +14,6 @@ gem 'jekyll-assets'
 gem "rack", ">= 2.0.6"
 
 group :jekyll_plugins do
-  gem "jekyll-polyglot"
+  gem 'jekyll-polyglot'
   gem 'jekyll-algolia', '~> 1.0'
 end
