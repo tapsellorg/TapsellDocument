@@ -11,3 +11,4 @@ jekyll/_includes/app.html
 run-results/
 node_modules/
 jekyll/vendor/bundle/ruby
+docs/

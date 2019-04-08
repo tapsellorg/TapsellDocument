@@ -27,11 +27,10 @@
 				{% if page.page-type == "index" %}<h2>{{ page.title }}</h2>{% endif %}
 				<article>
 					{% if page.page-type != "index" and page.page-type != "homepage" %}<h1 class="article-title">{{ page.title }}</h1>{% endif %}
-					{{ content | toc }}
 					{% if page.untranslated %}
 					{% include translation_in_progress.html %}
 					{% endif %}
-					{{ content }}
+					{{ content | toc }}
 					{% if page.collection != 'cci1' and page.page-type != "index" and page.layout == "classic-docs" or page.layout == "enterprise" %}
 					{% endif %}
 				</article>

@@ -1,0 +1,116 @@
+# Site settings
+title: 'Metrix Documentation'
+email: info@metrix.ir
+description: Metrix is a mobile marketing measurement platform that unifies mobile attribution and analytics into one powerful platform
+
+source: jekyll
+destination: docs
+
+baseurl: '/docs' # the subpath of your site, e.g. /blog
+
+plugins:
+  - jekyll-assets
+  - jekyll-polyglot
+  - jekyll-toc
+
+languages: ['en', 'fa']
+default_lang: 'fa'
+exclude_from_localizations: ['javascript', 'images', 'css']
+parallel_localization: true
+
+# algolia:
+#   application_id: U0RXNGRK45
+#   index_name: documentation
+#   settings:
+#     highlightPreTag: '<strong>'
+#     highlightPostTag: '</strong>'
+#     attributesToSnippet: [
+#       'content:80',
+#       'headings',
+#       'title'
+#     ]
+#     attributesToHighlight: [
+#       'content:80',
+#       'headings',
+#       'title'
+#     ]
+
+sass:
+  sass_dir: _sass
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+liquid:
+  error_mode: strict
+
+collections:
+  # jekyll processes in alpha order...
+  docs:
+    permalink: '/:collection/:path/'
+    output: true
+
+# defaults:
+#   -
+#     scope:
+#       path: ""
+#       type: "cci2"
+#     values:
+#       lang: "en"
+
+#   -
+#     scope:
+#       path: ""
+#       type: "cci2_ja"
+#     values:
+#       lang: "ja"
+
+#   -
+#     scope:
+#       path: ""
+#     values:
+#       hide: false
+#       search: true
+
+# segment: 'mAJ9W2SwLHgmJtFkpaXWCbwEeNk9D8CZ'
+
+# analytics:
+#   events:
+#     go_button_clicked: go-button-clicked
+# rollbar_env: development
+
+global_vars:
+  landing_url: https://metrix.ir
+  dashboard_url: https://dashboard.metrix.ir
+  blog_url: https://blog.metrix.ir
+  docs_url: https://metrix.ir/docs
+  site_name: Metrix
+  get_demo_url: https://dashboard.metrix.ir/login/demo
+  terms_url: https://dashboard.metrix.ir/login/terms
+  header_logo_alt: Metrix Docs
+  contact_email: info@metrix.ir
+  footer_logo_alt: Metrix
+
+# Translations
+t:
+  en:
+    nav:
+      home: Home
+      dashboard: Dashboard
+      get_demo: Get a Demo
+      blog: Blog
+    footer:
+      terms: Terms of Service
+      contact: Contact Us
+      copyright: Designed and Developed by Metrix - Iran
+  fa:
+    nav:
+      home: خانه
+      dashboard: داشبورد
+      get_demo: دریافت دمو
+      blog: وبلاگ
+    footer:
+      terms: قوانین
+      contact: تماس با ما
+      copyright: طراحی و توسعه توسط متریکس - ایران
