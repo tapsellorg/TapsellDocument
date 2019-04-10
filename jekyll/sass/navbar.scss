@@ -6,7 +6,7 @@
     width: 100%;
     top: 0;
     color: #ffffff;
-    height: 70px;
+    height: map-get($header, height);
 
     .widescreen {
       position: relative;

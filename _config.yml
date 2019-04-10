@@ -12,6 +12,7 @@ plugins:
   - jekyll-assets
   - jekyll-polyglot
   - jekyll-toc
+  - jekyll-postcss
 
 languages: ['en', 'fa']
 default_lang: 'fa'
@@ -36,7 +37,8 @@ parallel_localization: true
 #     ]
 
 sass:
-  sass_dir: _sass
+  sass_dir: sass
+  style: compressed
 
 markdown: kramdown
 kramdown:
@@ -79,6 +81,23 @@ collections:
 #   events:
 #     go_button_clicked: go-button-clicked
 # rollbar_env: development
+exclude:
+  - frasco.config.js
+  - Gemfile
+  - Gemfile.lock
+  - gulp_tasks
+  - gulpfile.js
+  - LICENSE
+  - node_modules
+  - npm-debug.log
+  - package.json
+  - package-lock.json
+  - README.md
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - yarn.lock
 
 global_vars:
   landing_url: https://metrix.ir

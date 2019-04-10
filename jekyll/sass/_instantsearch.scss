@@ -12,8 +12,8 @@
   width: 100%;
   background: white;
   z-index: 2;
-  top: 70px;
-  height: 50px;
+  top: map-get($header, height);
+  height: map-get($searchbar, height);
 
   #search-box {
     max-width: 1200px;

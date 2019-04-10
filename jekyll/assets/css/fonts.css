@@ -65,3 +65,7 @@
     url('../fonts/iransans/IRANSansWebFaNum.ttf') format('truetype'),
     url('../fonts/iransans/IRANSansWebFaNum.eot') format('embedded-opentype');
 }
+
+.social-container {
+  transform: translate(20px);
+}

@@ -13,20 +13,21 @@
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
 	<link href="{{ '/assets/img/logos/favicon.png' | prepend: site.baseurl }}" rel="icon" type="image/png" />
+
+	<!-- Styles -->
 	<link rel="stylesheet" href="{{ "/assets/css/fonts.css" | prepend: site.baseurl }}" />
 	<link rel="stylesheet" href="{{ "/assets/css/site.css" | prepend: site.baseurl }}" />
 	<link rel="stylesheet" href="{{ "/assets/css/spacing.css" | prepend: site.baseurl }}" />
 	<link rel="stylesheet" href="{{ "/assets/css/buttons.css" | prepend: site.baseurl }}" />
-	<!-- <link rel="stylesheet" href="{{ "/assets/css/navbar.css" | prepend: site.baseurl }}" /> -->
 	<link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}" />
 	<link rel="stylesheet" href="{{ "/assets/css/jquery.navgoco.css" | prepend: site.baseurl }}" type="text/css" media="screen" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-	<!-- End  -->
 	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" />
 	<link rel='stylesheet' href="{{ "/assets/css/mobile.css" | prepend: site.baseurl }}" media="screen and (max-width: 800px)" />
-	<link rel="stylesheet" href="{{ "/assets/css/footer.css" | prepend: site.baseurl }}" type="text/css" media="screen" />
 	<!-- TODO: What is this? -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+	<!-- End Styles -->
+
 	<!-- TODO: Page title format. Metrix should be in global vars -->
 	<title>{% if page.title %}{{ page.title | escape }} - Metrix{% else %}{{ site.title | escape }} - Metrix{% endif %}</title>
 	{% include segment.html %}

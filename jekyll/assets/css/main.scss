@@ -2,6 +2,7 @@
 ---
 
 @import 'mixins';
+@import 'vars';
 @import 'variables';
 @import 'navbar';
 @import 'sidebar';
@@ -19,6 +20,7 @@ body {
   @include ltr {
     background: linear-gradient(to right, #f7f7f7 0%, #f7f7f7 50%, #fff 50%, #fff 100%);
   }
+  padding-top: map-get($header, height);
   font-family: $font-family;
 }
 h1,
@@ -223,3 +225,5 @@ code {
 body > img:last-of-type {
   display: none;
 }
+
+@import 'footer';
