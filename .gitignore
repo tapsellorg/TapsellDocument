@@ -28,3 +28,8 @@ doc/
 .DS_Store
 .idea
 .secret
+
+# Frasco build files
+js/*
+css/*
+images/*
