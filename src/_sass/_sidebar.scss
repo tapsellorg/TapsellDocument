@@ -120,7 +120,7 @@ $sidebar-spacing-base: 5px;
 		li {
 			a,
 			span.nav-span {
-				color: $body-text-color;
+				color: map-get($body, color);
 				@include ltr-doRTL(margin-right, 30px);
 				display: inline-block;
 			}

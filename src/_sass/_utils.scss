@@ -1,0 +1,16 @@
+.mr-ltr-2 {
+	@include rtl {
+		margin-left: 0.5rem;
+	}
+	@include ltr {
+		margin-right: 0.5rem;
+	}
+}
+.ml-ltr-2 {
+	@include rtl {
+		margin-right: 0.5rem;
+	}
+	@include ltr {
+		margin-left: 0.5rem;
+	}
+}
