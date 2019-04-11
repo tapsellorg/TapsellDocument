@@ -1,33 +1,30 @@
 // Colors for EVERYTHING (alphabetical)
-$body-text-color: #555;
 $heading-color: #333;
-$nav-bg-color: #FBFBFB;
-$nav-border-color: #CCC;
-$link-text-color: #27A0B6;
-$link-hover-color: #36D4ED;
-$blue: #36D4ED;
-$blue-100: #5194DF;
+$nav-bg-color: #fbfbfb;
+$nav-border-color: #ccc;
+$blue: #36d4ed;
+$blue-100: #5194df;
 $black-light: #343434;
 $black-text: #161616;
-$gray-100: #F7F7F7;
+$gray-100: #f7f7f7;
 $gray-200: #e2e0e0;
 $gray-dark: #898989;
 
 // Screen Sizes
-$screen-xs:                  480px;
-$screen-xs-min:              $screen-xs;
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
 
 // Small screen / tablet
-$screen-sm:                  768px;
-$screen-sm-min:              $screen-sm;
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
 
 // Medium screen / desktop
-$screen-md:                  992px;
-$screen-md-min:              $screen-md;
+$screen-md: 992px;
+$screen-md-min: $screen-md;
 
 // Large screen / wide desktop
-$screen-lg:                  1200px;
-$screen-lg-min:              $screen-lg;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
 
 // General Sizing
 $spacing-small-horizontal: 12px;
@@ -54,6 +51,6 @@ $font-size-h4: 20px;
 $font-size-h5: 18px;
 
 // Font Weights
-$font-weight-base: 400; 
+$font-weight-base: 400;
 $font-weight-thin: 100;
 $font-weight-bold: 600;

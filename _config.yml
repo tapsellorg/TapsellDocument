@@ -41,6 +41,8 @@ parallel_localization: true
 # jekyll-minifier settings
 jekyll-minifier:
   exclude: 'feed.xml'
+  uglifier_args:
+    harmony: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
