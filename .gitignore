@@ -30,6 +30,9 @@ doc/
 .secret
 
 # Frasco build files
+js/
 js/*
+css/
 css/*
+images/
 images/*
