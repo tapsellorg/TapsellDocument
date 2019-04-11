@@ -1,0 +1,101 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: 'Frasco: Jekyll Starter Project'
+email: your-email@domain.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Quick starter project for Jekyll including full setup for gulp, Sass, Autoprefixer, Bourbon/Neat/Bitters, Browserify, imagemin, Browsersync, PostCSS etc.
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://metrix.ir' # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: Metrix_ir
+github_username: metrixorg
+
+# Build settings
+markdown: kramdown
+# theme: minima
+plugins:
+  # - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-polyglot
+  - jekyll-toc
+  - jekyll-minifier
+
+# jekyll-polyglot settings
+languages: ['en', 'fa']
+default_lang: 'fa'
+exclude_from_localizations: ['javascript', 'images', 'css']
+parallel_localization: true
+
+# jekyll-minifier settings
+jekyll-minifier:
+  exclude: 'feed.xml'
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - frasco.config.js
+  - Gemfile
+  - Gemfile.lock
+  - gulp_tasks
+  - gulpfile.js
+  - LICENSE
+  - node_modules
+  - npm-debug.log
+  - package.json
+  - package-lock.json
+  - README.md
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - yarn.lock
+  - assets/fonts/flaticon/font/flaticon.html
+
+# Global Variables
+global_vars:
+  landing_url: https://metrix.ir
+  dashboard_url: https://dashboard.metrix.ir
+  blog_url: https://blog.metrix.ir
+  docs_url: https://metrix.ir/docs
+  site_name: Metrix
+  get_demo_url: https://dashboard.metrix.ir/login/demo
+  terms_url: https://dashboard.metrix.ir/login/terms
+  header_logo_alt: Metrix Docs
+  contact_email: info@metrix.ir
+  footer_logo_alt: Metrix
+
+# Translations
+t:
+  en:
+    nav:
+      home: Home
+      dashboard: Dashboard
+      get_demo: Get a Demo
+      blog: Blog
+    footer:
+      terms: Terms of Service
+      contact: Contact Us
+      copyright: Designed and Developed by Metrix - Iran
+  fa:
+    nav:
+      home: خانه
+      dashboard: داشبورد
+      get_demo: دریافت دمو
+      blog: وبلاگ
+    footer:
+      terms: قوانین
+      contact: تماس با ما
+      copyright: طراحی و توسعه توسط متریکس - ایران
