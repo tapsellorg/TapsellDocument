@@ -1,6 +1,5 @@
 // = require sidebar.js
 import $ from 'jquery';
-// compiles an object of parameters relevant for analytics event tracking.
 // takes an optional DOM element and uses additional information if present.
 // window.analyticsTrackProps = function(el) {
 //   let trackOpts = {
