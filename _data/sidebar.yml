@@ -1,6 +1,6 @@
 en:
   - name: FAQ
-    link: faq
+    # link: faq
     icon: m-help
     # children:
     #   - name: Introduction
@@ -9,6 +9,14 @@ en:
     #       - name: CI/CD Overview
     #         link: 2.0/about-circleci/
 fa:
+  - name: اتریبیوشن
+    link: /attribution
+    icon: m-attribution
+
+  - name: رخدادها
+    link: /events
+    icon: m-event
+
   - name: سوالات متداول
-    link: faq
+    link: /faq
     icon: m-help

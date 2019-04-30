@@ -18,7 +18,7 @@
 			&[id]:before {
 				content: '';
 				display: block;
-				$top-margin: map-get($header, height) + map-get($searchbar, height);
+				$top-margin: map-get($header, height) + map-get($searchbar, height) + 20px;
 				margin-top: -($top-margin);
 				height: ($top-margin);
 				visibility: hidden;

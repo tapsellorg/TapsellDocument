@@ -21,7 +21,7 @@
 
 					{% if main-item.link %}
 					<a class="{% if current_url == main-item.link %} active {% endif %}"
-						 href="{{ site.baseurl }}/{{ main-item.link }}{% if page.lang == 'en'%}/{% endif%}" data-proofer-ignore>
+						 href="{{ site.baseurl }}{{ main-item.link }}{% if page.lang == 'en'%}/{% endif%}" data-proofer-ignore>
 						<span>{{ display_name }}</span>
 					</a>
 					{% else %}
@@ -29,7 +29,7 @@
 					{% endif %}
 
 					{% if main-item.children %}
-					<i class="arrow flaticon-right-chevron"></i>
+					<i class="arrow flaticon-m-right-chevron"></i>
 					{% endif %}
 				</div>
 
