@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تنظیمات اتریبیوشن
 lang: fa
-permalink: /attribution/index.html
+permalink: /faq/attribution/index.html
 toc: true # table of contents
 ---
 
