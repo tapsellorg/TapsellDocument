@@ -9,14 +9,16 @@ en:
     #       - name: CI/CD Overview
     #         link: 2.0/about-circleci/
 fa:
-  - name: اتریبیوشن
-    link: /attribution
-    icon: m-attribution
-
-  - name: رخدادها
-    link: /events
-    icon: m-event
+  
 
   - name: سوالات متداول
     link: /faq
     icon: m-help
+    children: 
+      - name: اتریبیوشن
+        link: /faq/attribution
+        # icon: m-attribution
+
+      - name: رخدادها
+        link: /faq/events
+        # icon: m-event
