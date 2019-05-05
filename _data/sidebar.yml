@@ -43,6 +43,11 @@ fa:
         link: faq/callbacks
         # icon: m-callbacks
 
+      - name: مقابله با تقلب
+        link: faq/fraud-prevention
+        # icon: m-fraud-prevention
+        
+
   - name: مستندات فنی
     link: /docs
     icon: m-docs
