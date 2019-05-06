@@ -1,4 +1,10 @@
-# ثبت نام و ثبت اپلیکیشن
+---
+layout: classic-docs
+title: ثبت اپلیکیشن در داشبورد
+lang: fa
+permalink: /faq/set-up-app/index.html
+toc: true # table of contents
+---
 
 ## چطور ثبت نام کنم؟
 

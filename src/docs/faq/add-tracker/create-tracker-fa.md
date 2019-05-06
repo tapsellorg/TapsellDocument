@@ -1,5 +1,10 @@
-
-# ساخت و مدیریت ترکر
+---
+layout: classic-docs
+title: ساخت و مدیریت ترکر
+lang: fa
+permalink: /faq/create-tracker/index.html
+toc: true # table of contents
+----
 
 ## چطور ترکر (Tracker) بسازم؟
 

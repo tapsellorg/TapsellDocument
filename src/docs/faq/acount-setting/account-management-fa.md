@@ -1,4 +1,10 @@
-# مدیریت حساب
+---
+layout: classic-docs
+title: مدیریت حساب 
+lang: fa
+permalink: /faq/acoount-setting/index.html
+toc: true # table of contents
+---
 
 ## چطور می‌توانم به بقیه دسترسی مشاهده یا کار با داشبورد بدهم؟
 

@@ -1,4 +1,10 @@
-# Callback
+---
+layout: classic-docs
+title: کال‌بک
+lang: fa
+permalink: /faq/callback/index.html
+toc: true # table of contents
+---
 
 ## اگر بخواهم نصب‌ها یا رخدادها را به صورت سیستماتیک دریافت کنم چه‌کار کنم؟
 
