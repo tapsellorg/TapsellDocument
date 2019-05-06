@@ -20,7 +20,7 @@ import { getUrlVars } from '../utils';
       // fullscreen sidenav expansion
       const sidenavAutoExpand = parent => {
         const element = parent.querySelector('[data-section=' + localStorage.sidenavActive + ']');
-        if (element.classList.contains('closed')) {
+        if (element && element.classList.contains('closed')) {
           element.classList.remove('closed');
         }
       };
@@ -30,7 +30,7 @@ import { getUrlVars } from '../utils';
 
       // for mobile sidebar, if sidebar is set, display proper item
       let mobileCurrentElement = mobileSidebar.querySelector('[data-id=' + localStorage.sidenavActive + ']');
-      if (mobileCurrentElement.classList.contains('hidden')) {
+      if (mobileSidebarDefault && mobileCurrentElement.classList.contains('hidden')) {
         mobileCurrentElement.classList.remove('hidden');
         mobileSidebarDefault.classList.add('hidden');
       }
@@ -70,7 +70,7 @@ import { getUrlVars } from '../utils';
     window.addEventListener('resize', setSidebar);
 
     // allowing opening/closing of subnav elements
-    let mainNavItems = Array.from(document.querySelectorAll('#.sidebar .main-nav-item'));
+    let mainNavItems = Array.from(document.querySelectorAll('#sidebar .main-nav-item'));
     let mobileNavItems = Array.from(document.querySelectorAll('.mobile-sidebar .main-nav-item'));
 
     function enableAccordion(array) {

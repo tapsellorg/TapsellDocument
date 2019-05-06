@@ -1,5 +1,5 @@
 en:
- - name: FAQ
+  - name: FAQ
     # link: faq
     icon: m-help
     # children:
@@ -9,66 +9,63 @@ en:
     #       - name: CI/CD Overview
     #         link: 2.0/about-circleci/
 fa:
-  
-
   - name: سوالات متداول
     link: /faq
     icon: m-help
     children:
       - name: سؤالات عمومی
         link: /faq/general-q
-        # icon: m-general q
 
+        # icon: m-general q
       - name: ثبت اپلیکیشن در داشبورد
         link: /faq/getting-started
-        # icon: m-getting started
 
+        # icon: m-getting started
       - name: مدیریت حساب
         link: /faq/account-setting
-       # icon: m-account-setting
 
+        # icon: m-account-setting
       - name: رخدادها
         link: /faq/events
-        # icon: m-event
 
+        # icon: m-event
       - name: ترکرها
         link: /faq/trackers
+
         # icon: m-trackers
- 
       - name: اتریبیوشن
         link: /faq/attribution
-        # icon: m-attribution
 
+        # icon: m-attribution
       - name: کال‌بک‌ها
         link: /faq/callbacks
-        # icon: m-callbacks
 
+        # icon: m-callbacks
       - name: مقابله با تقلب
         link: /faq/fraud-prevention
         # icon: m-fraud-prevention
-        
 
   - name: مستندات فنی
     link: /sdk
     icon: m-docs
-    children: 
+    children:
       - name: پیاده‌سازی SDK
         link: /docs/sdk-integration
         # icon: m-sdk-integration
-          children:
-            - name: iOS
-              link: /docs/sdk-integration-ios
-              # icon: m-sdk-integration-iOS
+        children:
+          - name: iOS
+            link: /docs/sdk-integration-ios
 
-            - name: Android
-              link: /docs/sdk-integration-android
-              # icon: m-sdk-integration-android
+            # icon: m-sdk-integration-iOS
+          - name: Android
+            link: /docs/sdk-integration-android
 
-            - name: Unity
-              link: /docs/sdk-intergration-unity
-              # icon: m-sdk-integration-unity
+            # icon: m-sdk-integration-android
+          - name: Unity
+            link: /docs/sdk-intergration-unity
 
-            - name: React Native
-              link: /docs/sdk-integration-react-native
-              # icon: m-sdk-integration-react-native
+            # icon: m-sdk-integration-unity
+          - name: React Native
+            link: /docs/sdk-integration-react-native
+            # icon: m-sdk-integration-react-native
 
