@@ -11,8 +11,9 @@ toc: true # table of contents
 
 ## متریکس چه نوع تقلب‌هایی را شناسایی می‌کند؟
 داشبورد متریکس می‌تواند چهار نوع تقلب موبایلی را شناسایی کند:
-- RI AIP   Rejected Install - Anonymous IP
-- RI TME   Rejected Install - Too Many Engagements
+
+- RI AIP  Rejected Install - Anonymous IP
+- RI TME  Rejected Install - Too Many Engagements
 - RI CI   Rejected Install - Click Injection
 - RI DO   Rejected Install - Distribution Outlier
 
