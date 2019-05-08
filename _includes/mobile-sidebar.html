@@ -29,9 +29,9 @@
       {% assign sidenav = site.data.sidenav[lang] %}
 
       {% for main-item in sidenav %}
-      <ul>
-        <li class="main-nav-item closed" data-section="{{ main-item.name | slugify }}">
-          <div class="list-wrap">
+      <ul class="sidebar-list">
+        <li class="sidebar-main-item closed" data-section="{{ main-item.name | slugify }}">
+          <div class="main-item-parent">
             {% if main-item.icon %}
             <!-- {-% asset '{{ main-item.icon }}' class=icon %} -->
             {% endif %}
@@ -56,7 +56,7 @@
           </div>
 
           {% if main-item.children %}
-          <ul class="subnav">
+          <ul class="main-item-children">
             {% for item in main-item.children %}
             {% if item.name %}
             {% if item.i18n_name %}
@@ -64,7 +64,7 @@
             {% else %}
             {% assign display_name = item.name %}
             {% endif %}
-            <li class="nav-item"><a class="{% if page.url == item.link %} active {% endif %}"
+            <li class="child-item"><a class="{% if page.url == item.link %} active {% endif %}"
                  href="{{ site.baseurl }}/{{ item.link }}#section={{ main-item.name | slugify }}" data-proofer-ignore>{{ display_name }}</a>
             </li>
             {% endif %}

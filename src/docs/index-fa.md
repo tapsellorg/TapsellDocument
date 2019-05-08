@@ -18,7 +18,7 @@ permalink: /
 <!-- <hr class="hidden-xs" />
 
 <div class="row">
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-12 col-sm-6">
     <h2>Get Started</h2>
     <p>Get started with {{ site.global_vars.site_name }} automated builds.</p>
     <ul>
@@ -29,7 +29,7 @@ permalink: /
       <li><a href="/docs/2.0/orb-intro/">Orbs</a></li>
     </ul>
   </div>
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-12 col-sm-6">
     <h2>Examples</h2>
     <p>Check out some of our popular examples.</p>
     <ul>
@@ -40,10 +40,10 @@ permalink: /
       <li><a href="/docs/2.0/using-orbs/">Using Orbs</a></li>
     </ul>
   </div>
-  <div class="col-xs-12">
+  <div class="col-12">
     <hr />
   </div>
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-12 col-sm-6">
     <h2>Config</h2>
     <p>Set up and debug your build configuration.</p>
     <ul>
@@ -54,7 +54,7 @@ permalink: /
       <li><a href="/docs/2.0/reusing-config/">Reusing Config</a></li>
     </ul>
   </div>
-  <div class="col-xs-12 col-sm-6">
+  <div class="col-12 col-sm-6">
     <h2>Workflows</h2>
     <p>{{ site.global_vars.site_name }} Workflows are used to schedule and sequence jobs.</p>
     <ul>

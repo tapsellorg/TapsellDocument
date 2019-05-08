@@ -70,12 +70,12 @@ import { getUrlVars } from '../utils';
     window.addEventListener('resize', setSidebar);
 
     // allowing opening/closing of subnav elements
-    let mainNavItems = Array.from(document.querySelectorAll('#sidebar .main-nav-item'));
-    let mobileNavItems = Array.from(document.querySelectorAll('.mobile-sidebar .main-nav-item'));
+    let mainNavItems = Array.from(document.querySelectorAll('#sidebar .sidebar-main-item'));
+    let mobileNavItems = Array.from(document.querySelectorAll('.mobile-sidebar .sidebar-main-item'));
 
     function enableAccordion(array) {
       array.forEach(function(item) {
-        let listWrap = item.querySelector('.list-wrap');
+        let listWrap = item.querySelector('.main-item-parent');
         listWrap.addEventListener('click', function() {
           if (item.classList.contains('closed')) {
             item.classList.remove('closed');

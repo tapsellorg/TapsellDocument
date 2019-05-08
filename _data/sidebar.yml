@@ -14,7 +14,7 @@ fa:
     icon: m-help
     children:
       - name: سؤالات عمومی
-        link: /faq/general-q
+        link: /faq/general-questions
 
         # icon: m-general q
       - name: ثبت اپلیکیشن در داشبورد
@@ -48,19 +48,19 @@ fa:
   - name: مستندات فنی
     link: /sdk
     icon: m-docs
-    children: 
+    children:
       - name: iOS
         link: /sdk/ios
-        # icon: m-sdk-integration
 
+        # icon: m-sdk-integration
       - name: Android
         link: /sdk/android
-        # icon: m-sdk-integration-android
 
+        # icon: m-sdk-integration-android
       - name: Unity
         link: /sdk/unity
-        # icon: m-sdk-integration-unity
 
+        # icon: m-sdk-integration-unity
       - name: React Native
         link: /sdk/react-native
         # icon: m-sdk-integration-react-native
