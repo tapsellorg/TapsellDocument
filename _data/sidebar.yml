@@ -16,34 +16,26 @@ fa:
       - name: سؤالات عمومی
         link: /faq/general-questions
 
-        # icon: m-general q
       - name: ثبت اپلیکیشن در داشبورد
         link: /faq/getting-started
 
-        # icon: m-getting started
       - name: مدیریت حساب
         link: /faq/account-setting
 
-        # icon: m-account-setting
       - name: رخدادها
         link: /faq/events
 
-        # icon: m-event
       - name: ترکرها
         link: /faq/trackers
 
-        # icon: m-trackers
       - name: اتریبیوشن
         link: /faq/attribution
 
-        # icon: m-attribution
       - name: کال‌بک‌ها
         link: /faq/callbacks
 
-        # icon: m-callbacks
       - name: مقابله با تقلب
         link: /faq/fraud-prevention
-        # icon: m-fraud-prevention
 
   - name: مستندات فنی
     link: /sdk
@@ -52,16 +44,11 @@ fa:
       - name: iOS
         link: /sdk/ios
 
-        # icon: m-sdk-integration
       - name: Android
         link: /sdk/android
 
-        # icon: m-sdk-integration-android
       - name: Unity
         link: /sdk/unity
 
-        # icon: m-sdk-integration-unity
       - name: React Native
         link: /sdk/react-native
-        # icon: m-sdk-integration-react-native
-
