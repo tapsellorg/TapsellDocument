@@ -2,7 +2,7 @@
 layout: classic-docs
 title: مدیریت حساب 
 lang: fa
-permalink: /faq/acoount-setting/index.html
+permalink: /faq/account-setting/index.html
 toc: true # table of contents
 ---
 
@@ -29,4 +29,4 @@ toc: true # table of contents
 نکته مهم این است که بعد از درخواست دمو و تأیید، برای کاربر موردنظر، یک سازمان ساخته می‌شود و خودش **مدیر** یا **admin** آن تعریف می‌شود. از این پس کاربران دیگر می‌توانند توسط این فرد یا *admin* به سازمان اضافه شوند.
 درصورتی که گزینه سفارشی (custom) انتخاب شود، لازم است دسترسی عضور جدید به هریک از اپلیکیشن‌ها نیز مشخص شود. در اینجا نیز درصورت انتخاب حالت *سفارشی* یا *custom* امکان دسترسی به برخی ترکرها ممکن می‌شود.
 براساس نیاز اپلیکیشن و کسب‌وکار خود مشابه شکل زیر انتخاب کنید:
-<img src="./../../../../access-level.jpg)/>
+<img src="/doc-images/access-level.jpg"/>
