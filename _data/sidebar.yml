@@ -52,23 +52,19 @@ fa:
     link: /sdk
     icon: m-docs
     children: 
-      - name: پیاده‌سازی SDK
-        link: /docs/sdk-integration
+      - name: iOS
+        link: /sdk/ios
         # icon: m-sdk-integration
-          children:
-            - name: iOS
-              link: /docs/sdk-integration-ios
-              # icon: m-sdk-integration-iOS
 
-            - name: Android
-              link: /docs/sdk-integration-android
-              # icon: m-sdk-integration-android
+      - name: Android
+        link: /sdk/android
+        # icon: m-sdk-integration-android
 
-            - name: Unity
-              link: /docs/sdk-intergration-unity
-              # icon: m-sdk-integration-unity
+      - name: Unity
+        link: /sdk/unity
+        # icon: m-sdk-integration-unity
 
-            - name: React Native
-              link: /docs/sdk-integration-react-native
-              # icon: m-sdk-integration-react-native
+      - name: React Native
+        link: /sdk/react-native
+        # icon: m-sdk-integration-react-native
 
