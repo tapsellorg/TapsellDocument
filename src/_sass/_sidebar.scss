@@ -88,7 +88,7 @@ $sidebar-spacing-base: 5px;
 
 			.main-item-children {
 				overflow: hidden;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 				@include rtl-doLTR(margin-right, 25px);
 				.child-item {
 					font-size: 12px;
