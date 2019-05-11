@@ -1,5 +1,13 @@
-﻿<div dir="rtl">
-<h2>فهرست</h2>
+﻿---
+layout: classic-docs
+title: SDK iOS
+lang: fa
+permalink: /sdk/ios/index.html
+toc: false # table of contents
+---
+
+## فهرست
+
 <a href=#example-apps>برنامه‌هاي نمونه</a><br>
 <a href=#basic-integration>پياده سازي</a><br>
 <a href=#sdk-add>افزودن SDK به پروژه</a><br>
@@ -15,7 +23,7 @@
 <a href=#di-idfa>شناسه تبليغاتي iOS</a><br>
 <a href=#di-mxid>شناسه متريکس</a><br>
 <a href=#pre-installed-trackers>ردگيرهاي پيش‌نصب</a><br>
-</div>
+
 <h2 id=project_setup dir="rtl"> تنظيمات اوليه در پروژه</h2>
 <div dir="rtl">
 داخل پوشه examples برنامه‌هاي نمونه وجود دارند. مي‌توانيد هر کدام از پروژه‌هاي Xcode را باز کرده تا نحوه استفاده از SDK متريکس را مشاهده کنيد.
@@ -29,7 +37,8 @@
 شما مي‌توانيد SDK متريکس را به عنوان يک framework به پروژه خود اضافه کنيد.
 </div>
 
- `MetrixSdk.framework.zip`
+`MetrixSdk.framework.zip`
+
 <div dir="rtl">از iOS 8 اپل فريم‌ورکهاي پويا (dynamic frameworks يا embedded frameworks) را معرفي کرده است. اگر برنامه‌ شما iOSهاي با نسخه 8 يا بالاتر را هدف‌گذاري کرده است، مي‌توانيد از فريم‌ورک پوياي متريکس استفاده کنيد.</div>
 
 <h3 id=basic-integration dir="rtl"> افزودن فريم‌ورک هاي iOS</h3>
@@ -40,13 +49,13 @@
 فرم‌ورک‌هاي AdSupport.framework و iAd.framework و CoreTelephony.framework را انتخاب کنيد.<br/>
 وضعيت فريم‌ورکها را به Optional تغيير دهيد.</p>
 
-
 <h3 id="sdk-integrate" dir="rtl">يکپارچه سازي SDK در برنامه خود</h3>
 <p dir="rtl">بايد از عبارت زير براي import استفاده کنيد.</p>
 
 ```objc
 #import <MetrixSdk/Metrix.h>
 ```
+
 <h3 id="basic-setup" dir="rtl">راه اندازي اوليه</h3>
 <div dir="rtl">در Project Navigatorُ فايل منبع application delegate خود را انتخاب کنيد. عبارت import مناسب را در بالاي فايل وارد کنيد و سپس متد زير را در متدهاي didFinishLaunching يا didFinishLaunchingWithOptions فراخواني کنيد.</div>
 
@@ -68,7 +77,7 @@ MXConfig *metrixConfig = [MXConfig configWithAppId:yourAppId
 <div dir="rtl">**نکته**: راه‌ اندازي SDK به اين شکل بسيار مهم است. در غير اين صورت ممکن است باعث مشکلات مختلف شود.<br/>
 مقدار {YourAppId} را با مقدار Metrix App Id خود جايگزين کنيد.<br/>
 بسته به اين که برنامه خود را براي تست يا محصول نهايي خروجي ميگيريد، بايد مقدار environment را يکي از موارد زير قرار دهيد: 
-</div> 
+</div>
 
 ```objc
 NSString *environment = MXEnvironmentSandbox;
@@ -88,6 +97,7 @@ NSString *environment = MXEnvironmentProduction;
 MXCustomEvent *event = [MXCustomEvent newEvent:@"mySlug" attributes:myAttributes metrics:myMetrics];
 [Metrix trackCustomEvent:event];
 ```
+
 <div dir="rtl">
 براي يک رويداد سفارشي ميتوانيد به تعداد دلخواه attribute و metric خاص سناريو خود بسازيد، به عنوان مثال فرض کنيد در يک برنامه خريد آنلاين مي‌خواهيد يک رويداد سفارشي بسازيد:
 </div>
@@ -104,6 +114,7 @@ NSMutableDictionary *myMetrics = [[NSMutableDictionary alloc] init];
 	myAttributes[@"price"] = @(100000);
 	myAttributes[@"purchase_time"] = current_time;
 ```
+
 <h2 id="screen-flow" dir="rtl">ردگيري جريان صفحات</h2>
 <div dir="rtl">
 شما ميتوانيد جريان حرکت کاربران خود در صفحات برنامه خود را با متريکس ردگيري کنيد. براي اين کار بايد به هنگام ورود به هر صفحه (در viewWillAppear يا viewDidApear) متد زير را فراخواني کنيد:
@@ -112,6 +123,7 @@ NSMutableDictionary *myMetrics = [[NSMutableDictionary alloc] init];
 ```objc
 [Metrix trackScreen:@"HomePage"];
 ```
+
 <h2 id="device-ids" dir="rtl">شناسه‌هاي دستگاه</h2>
 <div dir="rtl">
 SDK متريکس امکان دسترسي به برخي شناسه‌هاي دستگاه را فراهم مي‌کند.
@@ -125,6 +137,7 @@ SDK متريکس امکان دسترسي به برخي شناسه‌هاي دس�
 ```objc
 NSString *idfa = [Metrix idfa];
 ```
+
 <h3 id="di-mxid" dir="rtl">شناسه متريکس</h3>
 <div dir="rtl">
 براي هر دستگاهي که برنامه شما را نصب ميکند، سرور متريکس يک شناسه يکتا (mxid) توليد ميکند.<br/>
@@ -135,17 +148,19 @@ NSString *idfa = [Metrix idfa];
 ```objc
 NSString *mxid = [Metrix mxid];
 ```
+
 <h2 id="pre-installed-trackers" dir="rtl">ردگيرهاي پيش‌نصب</h2>
 <div dir="rtl">
 با استفاده از اين تابع مي‌توانيد با استفاده از يک `trackerToken` که از پنل آن را دريافت مي‌کنيد، براي همه‌ي رويدادها يک `tracker` پيش‌فرض را قرار دهيد.<br>
 براي اين کار app delegate برنامه خود را باز کرده و trackerToken را براي MXConfig خود قرار دهيد:
 </div>
 
-  ```objc
-  MXConfig *metrixConfig = [MXConfig configWithAppId:yourAppId environment:environment];
-  [metrixConfig setTrackerToken:@"{TrackerToken}"];
-  [Metrix appDidLaunch:metrixConfig];
-  ```
+```objc
+MXConfig *metrixConfig = [MXConfig configWithAppId:yourAppId environment:environment];
+[metrixConfig setTrackerToken:@"{TrackerToken}"];
+[Metrix appDidLaunch:metrixConfig];
+```
+
   <div dir="rtl">
 بعد از اجراي برنامه بايد لاگي به اين شکل در XCode ببينيد:  
 </div>

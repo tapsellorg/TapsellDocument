@@ -1,4 +1,13 @@
+---
+layout: classic-docs
+title: SDK React Native
+lang: fa
+permalink: /sdk/react-native/index.html
+toc: false # table of contents
+---
+
 ## MetrixSDK React Native Doc [![npm version](https://badge.fury.io/js/%40metrixorg%2Freact-native-metrix.svg)](https://badge.fury.io/js/%40metrixorg%2Freact-native-metrix)
+
 <div dir="rtl">
 
 <h2>فهرست</h2>
@@ -26,22 +35,21 @@
 <a style="padding-right:2em" href=#setAttributionListener>۴.۱۶. دریافت اطلاعات کمپین</a><br>
 <a style="padding-right:2em" href=#setDefaultTracker>۴.۱۷. مشخص کردن Pre-installed Tracker</a><br>
 
-
-
 <h2 id=project_setup> تنظیمات اولیه در پروژه</h2>
   
 ۱.به محل پروژه react native خود بروید و در commad-line دستورهای زیر را به ترتیب وارد کنید :  
 <div dir="ltr">
 
     npm install @metrixorg/react-native-metrix --save
+
 </div>
 <div dir="ltr">
 
     react-native link @metrixorg/react-native-metrix
+
 </div>
 
 <h2> نصب به صورت دستی</h2>
-
 
 #### iOS
 
@@ -51,35 +59,35 @@
 
 ۳. فایل `node_modules/@metrixorg/react-native-metrix/ios/MetrixSdk.framework` را در `[your projct's path]/ios` کپی کنید.
 
-۴. در قسمت `project navigatior` پروژه خود را انتخاب کنید در تب `Build Phases` بخش `Link Binary with Libraries` باید `libRCTMetrixReactNative.a` و ` add other ➜ [your projct's path]/MetrixSdk.framewrok` اضافه نمایید.
+۴. در قسمت `project navigatior` پروژه خود را انتخاب کنید در تب `Build Phases` بخش `Link Binary with Libraries` باید `libRCTMetrixReactNative.a` و `add other ➜ [your projct's path]/MetrixSdk.framewrok` اضافه نمایید.
 
 ۵. در تب `General` ← `Embeded Binaries` ← `+` باید فایل `MetrixSdk.framework` را اضافه نماید.
 
-
 #### Android
 
-۱. برای کتابخانه `Metrix` لازم است تا دسترسی‌های زیر را به فایل `AndroidManifest.xml` اضافه کنید:  
+۱. برای کتابخانه `Metrix` لازم است تا دسترسی‌های زیر را به فایل `AndroidManifest.xml` اضافه کنید:
 
 <div dir=ltr>
 
-    <uses-permission android:name="android.permission.INTERNET" />  
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->  
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->  
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
+
 </div>
 
-(دو permission دوم اختیاری است)  
- 
+(دو permission دوم اختیاری است)
+
  <h2 id=install_referrer>۲. دریافت اطلاعات Install Referrer</h2>
 
 برای افزایش دقت تشخیص اتریبیوشن نصب‌های اپلیکیشن شما، متریکس نیازمند اطلاعاتی درباره `referrer` نصب اپلیکیشن است. این اطلاعات می‌تواند از طریق سرویس ارائه شده توسط کتابخانه **Google Play Referrer API** و یا دریافت **Google Play Store intent** با استفاده از یک **broadcast receiver** به دست آید.
 
 **نکته مهم:** سرویس **Google Play Referrer API** به تازگی توسط گوگل و با هدف فراهم کردن دقیق یک راه امن و مطمئن برای دریافت اطلاعات `referrer` نصب ارائه شده و این قابلیت را به سرویس‌دهندگان پلتفرم‌های اتریبیوشن می‌دهد تا با تقلب click injection مبازه کنند. به همین دلیل متریکس نیز به همه توسعه‌دهندگان استفاده از این سرویس را توصیه می‌کند. در مقابل، روش **Google Play Store intent** یک مسیر با ضریب امنیت کمتر برای به‌دست آوردن اطلاعات `referrer`نصب ارائه می‌دهد که البته به صورت موازی با **Google Play Referrer API** به طور موقت پشتیبانی می‌شود،اما در آینده‌ای نزدیک منسوخ خواهد شد.
 
-
 <h3 id=google_play_store_intent> تنظیمات Google Play Store intent</h3>
 
 برای دریافت intent `INSTALL_REFERRER` از Google Play باید یک `broadcast receiver` آن را دریافت کند، اگر از `broadcast receiver` سفارشی خود استفاده نمی‌کنید میتوانید با قرار دادن `receiver` زیر در تگ `application` فایل `AndroidManifest.xml` آن را دریافت کنید.
+
   <div dir="ltr">
 
     <receiver
@@ -94,6 +102,7 @@
 </div>
 
 چنان چه چندین کتابخانه برای دریافت intent `INSTALL_REFERRER` دارید، می‌توانید با قرار دادن کلاس سفارشی خود در `receiver` مانند زیر عمل کنید:
+
   <div dir="ltr">
 
     <receiver
@@ -108,6 +117,7 @@
 </div>
 
 و کد کلاس `InstallReceiver` به صورت زیر می‌شود:
+
   <div dir="ltr">
 
     public class InstallReceiver extends BroadcastReceiver {
@@ -120,36 +130,36 @@
         new CampaignTrackingReceiver().onReceive(context, intent);
        }
     }
+
 </div>
 
-
-
-  
 <h2 id=integration>راه‌اندازی و پیاده‌سازی sdk در اپلیکیشن اندروید:</h2>
 
 <h3 id=application_setup>تنظیمات اولیه در اپلیکیشن:</h3>
 
 ۱. باید کتابخانه متریکس را در کلاس `React.Component` ریکت نیتیو `initialize` کنید.
 
-
 ۲. ابتدا ماژول متریکس را به کد خود اضافه کنید:
+
 <div dir="ltr">
 
     import Metrix from "@metrixorg/react-native-metrix";
+
 </div>
 
 ۳. سپس برای مقداردهی اولیه ، تابع زیر را با ورودی کلید اپ خود صدا بزنید.
 توجه نمایید که حتما داخل متد `constructor` کامپوننت اصلی پروژه خود متد زیر را صدا بزنید.
+
 <div dir=ltr>
 
     Metrix.initialize("app id");
 
 </div>
 
-
 <img src="https://storage.backtory.com/metricx/images/init.png"/>
 
 `APP_ID`: کلید اپلیکیشن شما که از پنل متریکس آن را دریافت می‌کنید.
+
 <h2 id=methods>امکانات کتابخانه متریکس</h2>
 
 <h3 id=session_event_description>۱. توضیح مفاهیم رویداد (event) و نشست (session)</h3>
@@ -167,6 +177,7 @@
     Metrix.enableLocationListening();
 
     Metrix.disableLocationListening();
+
 </div>
 
 <h3 id=setEventUploadThreshold>۳. تعیین سقف تعداد رویدادها برای ارسال به سمت سرور</h3>
@@ -174,6 +185,7 @@
 <div dir=ltr>
 
     Metrix.setEventUploadThreshold(50);
+
 </div>
 (مقدار پیش‌فرض این تابع در کتابخانه ۳۰ رویداد است.)<br>
 
@@ -182,6 +194,7 @@
 <div dir=ltr>
 
     Metrix.setEventUploadMaxBatchSize(100);
+
 </div>
 (مقدار پیش‌فرض این تابع در کتابخانه ۱۰۰ رویداد است.)<br>
 
@@ -190,6 +203,7 @@
 <div dir=ltr>
 
     Metrix.setEventMaxCount(1000);
+
 </div>
 (مقدار پیش‌فرض این تابع در کتابخانه ۱۰۰۰ رویداد است.)<br>
 
@@ -198,6 +212,7 @@
 <div dir=ltr>
 
     Metrix.setEventUploadPeriodMillis(30000);
+
 </div>
 (مقدار پیش‌فرض این تابع در کتابخانه ۳۰ ثانیه است.)<br>
 
@@ -206,6 +221,7 @@
 <div dir=ltr>
 
     Metrix.setSessionTimeoutMillis(1800000);
+
 </div>
 (مقدار پیش‌فرض این تابع در کتابخانه ۳۰ دقیقه است.)<br>
 
@@ -224,6 +240,7 @@
 <div dir=ltr>
 
     Metrix.setLogLevel(3);
+
 </div>
 
 (مقدار پیش‌فرض این تابع در کتابخانه `INFO` است.)<br>
@@ -245,6 +262,7 @@
 <div dir=ltr>
 
     Metrix.setFlushEventsOnClose(false);
+
 </div>
 (مقدار پیش‌فرض این تابع در کتابخانه true است.)<br>
 
@@ -255,6 +273,7 @@
     Metrix.getSessionNum(function(sessionNum){
     //TODO
     });
+
 </div>
 
 <h3 id=newEvent>۱۲. ساختن یک رویداد سفارشی</h3>
@@ -265,6 +284,7 @@
 <div dir=ltr>
 
     Metrix.newEvent(“my_event_slug");
+
 </div>
 
 ورودی این تابع از جنس String است و همان نامکی است که داشبورد دریافت می‌کنید.<br>
@@ -287,50 +307,57 @@
     metrics["perchase_time"] = current_time;
 
     Metrix.newEvent("purchase_event_slug", attributes, metrics);
+
 </div>
 
 ورودی‌های متد newEvent بدین شرح هستند:<br>
+
 - <b>ورودی اول:</b> نامک رویداد مورد نظر شما که از جنس String است و آن را از داشبورد متریکس دریافت می‌کنید.<br>
 - <b>ورودی دوم:</b> یک `Map<String, String>` که ویژگی‌های یک رویداد را مشخص می‌کند.<br>
-- <b>ورودی سوم:</b> یک `Map<String, Object> ` که شامل ویژگی‌های قابل اندازه گیری هستند. مقادیر پشتیبانی شده در کتابخانه متریکس یکی از مقادیر <br>زیر است:
-    1. Integer
-    2. Float
-    3. Double 
-    4. Long
-    5. Sting
-    6. Boolean
+- <b>ورودی سوم:</b> یک `Map<String, Object>` که شامل ویژگی‌های قابل اندازه گیری هستند. مقادیر پشتیبانی شده در کتابخانه متریکس یکی از مقادیر <br>زیر است:
+  1. Integer
+  2. Float
+  3. Double
+  4. Long
+  5. Sting
+  6. Boolean
 
 <h3 id=setUserAttributes>۱۳. مشخص کردن Attribute‌های پیش‌فرض همه‌ی رویدادها</h3>
 
 با استفاده از این تابع می‌توانید به تعداد دلخواه `Attribute` به همه‌ی رویدادهای خود اضافه کنید:<br>
+
 <div dir=ltr>
 
     var attributes = {};
     attributes["manufacturer"] = "Nike";
 
     Metrix.addUserAttributes(attributes);
+
 </div>
 
 <h3 id=setUserMetrics>۱۴. مشخص کردن Metric‌های پیش‌فرض همه‌ی رویدادها</h3>
 
 با استفاده از این تابع می‌توانید به تعداد دلخواه `Metric` به همه‌ی رویدادهای خود اضافه کنید:<br>
+
 <div dir=ltr>
 
     var metrics = {};
     metrics["perchase_time"] = current_time;
 
     Metrix.setUserMetrics(metrics);
+
 </div>
 
 <h3 id=setScreenFlowsAutoFill>۱۵. نگهداری حرکات کاربر در صفحات مختلف در اپلیکیشن</h3>
 
 با اضافه کردن تابع زیر به `constructor` صفحات خود میتوانید از حرکت کاربر بین صفحات اطلاع پیدا کنید:<br>
+
 <div dir=ltr>
 
     Metrix.screenDisplayed("First Screen");
+
 </div>
 
-  
 <h3 id=setAttributionListener>۱۶. دریافت اطلاعات کمپین</h3>  
   
 با مقداردهی این تابعه میتوانید اطلاعات کمپین تبلیغاتی که در ترکر خود در پنل قرار داده اید را دریافت کنید.<br>  
@@ -367,10 +394,11 @@
 <h3 id=setDefaultTracker>۱۷. مشخص کردن Pre-installed Tracker</h3>
 
 با استفاده از این تابع می‌توانید با استفاده از یک `trackerToken` که از پنل آن را دریافت می‌کنید، برای همه‌ی رویدادها یک `tracker` پیش‌فرض را قرار دهید:<br>
+
 <div dir=ltr>
 
     Metrix.setDefaultTracker(trackerToken);
-</div>
 
+</div>
 
 </div>

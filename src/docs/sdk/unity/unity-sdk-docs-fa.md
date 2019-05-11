@@ -1,4 +1,12 @@
-## MetrixSDK Unity Doc  
+---
+layout: classic-docs
+title: SDK unity
+lang: fa
+permalink: /sdk/unity/index.html
+toc: false # table of contents
+---
+
+## MetrixSDK Unity Doc
 
 <div dir="rtl">  
   
@@ -26,14 +34,13 @@
   
   
   
-<h2 id=project_setup> تنظیمات اولیه در پروژه</h2>  
+<h2 id=project_setup> تنظیمات اولیه در پروژه</h2>
 
-۱. ابتدا  کتابخانه‌ متریکس  را  از [این  لینک](https://storage.backtory.com/metricx/sdk-unity/MetrixSDK-v0.8.5.unitypackage) دانلود  کنید  و  در  پروژه  خود import کنید.
+۱. ابتدا کتابخانه‌ متریکس را از [این لینک](https://storage.backtory.com/metricx/sdk-unity/MetrixSDK-v0.8.5.unitypackage) دانلود کنید و در پروژه خود import کنید.
 
-۲. سپس  دیپندنسی  های  زیر  راه  به  بلاک dependencies فایل
+۲. سپس دیپندنسی های زیر راه به بلاک dependencies فایل
 
-`Asset/Plugins/Android/mainTemplate.gradle` اضافه  کنید.
-
+`Asset/Plugins/Android/mainTemplate.gradle` اضافه کنید.
 
 <div dir=ltr>  
   
@@ -53,8 +60,7 @@
 
     implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 
-
-</div>  
+</div>
 
 ۳. آپشن زیر را به بلاک `android` فایل `Asset/Plugins/Android/mainTemplate.gradle` اپلیکیشن خود اضافه کنید:
 
@@ -64,11 +70,12 @@
         targetCompatibility = "8"
         sourceCompatibility = "8"
     }
+
 </div>
 
-۴.اگر از پروگارد برای ماینیفای کردن اپلیکیشن خود استفاده میکنید تنظیمات زیر را به `Asset/Plugins/Android/proguard-user.txt` پروژه خود اضافه کنید:  
-  
-<div dir=ltr>  
+۴.اگر از پروگارد برای ماینیفای کردن اپلیکیشن خود استفاده میکنید تنظیمات زیر را به `Asset/Plugins/Android/proguard-user.txt` پروژه خود اضافه کنید:
+
+<div dir=ltr>
 
     #Unity Player
     -keep class com.unity3d.player.** { *; }
@@ -99,38 +106,38 @@
 
     # Top-level functions that can only be used by Kotlin.
     -dontwarn retrofit2.-KotlinExtensions
-    
+
     # With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
     # and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
     -if interface * { @retrofit2.http.* <methods>; }
     -keep,allowobfuscation interface <1>
-    
+
     #OkHttp
     # A resource is loaded with a relative path so the package of this class must be preserved.
     -keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
-    
+
     # Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.
     -dontwarn org.codehaus.mojo.animal_sniffer.*
-    
+
     # OkHttp platform used only on JVM and when Conscrypt dependency is available.
     -dontwarn okhttp3.internal.platform.ConscryptPlatform
-    
-    
-    
+
+
+
     #Gson
     # Gson specific classes
     -dontwarn sun.misc.**
     #-keep class com.google.gson.stream.** { *; }
-    
+
     # Prevent proguard from stripping interface information from TypeAdapterFactory,
     # JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
     -keep class * implements com.google.gson.TypeAdapterFactory
     -keep class * implements com.google.gson.JsonSerializer
     -keep class * implements com.google.gson.JsonDeserializer
-    
+
     #referral
     -keep public class com.android.installreferrer.** { *; }
-    
+
     #gms
     -keep class com.google.android.gms.** { *; }
     -dontwarn android.content.pm.PackageInfo
@@ -148,7 +155,6 @@
 </div>  
   
 (دو permission دوم اختیاری است)  
-  
 
 
 <h2 id=install_referrer>۲. دریافت اطلاعات Install Referrer</h2>
@@ -157,10 +163,10 @@
 
 **نکته مهم:** سرویس **Google Play Referrer API** به تازگی توسط گوگل و با هدف فراهم کردن دقیق یک راه امن و مطمئن برای دریافت اطلاعات `referrer` نصب ارائه شده و این قابلیت را به سرویس‌دهندگان پلتفرم‌های اتریبیوشن می‌دهد تا با تقلب click injection مبازه کنند. به همین دلیل متریکس نیز به همه توسعه‌دهندگان استفاده از این سرویس را توصیه می‌کند. در مقابل، روش **Google Play Store intent** یک مسیر با ضریب امنیت کمتر برای به‌دست آوردن اطلاعات `referrer`نصب ارائه می‌دهد که البته به صورت موازی با **Google Play Referrer API** به طور موقت پشتیبانی می‌شود،اما در آینده‌ای نزدیک منسوخ خواهد شد.
 
-
 <h3 id=google_play_store_intent> تنظیمات Google Play Store intent</h3>
 
 برای دریافت intent `INSTALL_REFERRER` از Google Play باید یک `broadcast receiver` آن را دریافت کند، اگر از `broadcast receiver` سفارشی خود استفاده نمی‌کنید میتوانید با قرار دادن `receiver` زیر در تگ `application` فایل `AndroidManifest.xml` آن را دریافت کنید.
+
   <div dir="ltr">
 
     <receiver
@@ -174,21 +180,18 @@
 
 </div>
 
-
 <h2 id=integration>راه‌اندازی و پیاده‌سازی sdk در اپلیکیشن اندروید:</h2>  
   
 <h3 id=application_setup>تنظیمات اولیه در اپلیکیشن:</h3>  
   کتابخانه  متریکس  را  در  ابتدای  برنامه‌ی  خود  به  این  روش initialize کنید:
 
-  
-
 <div dir=ltr>  
   
     Metrix.Initialize("APP_ID");
-</div>  
+</div>
 
-`APP_ID`: کلید اپلیکیشن شما که از پنل متریکس آن را دریافت می‌کنید.  
-  
+`APP_ID`: کلید اپلیکیشن شما که از پنل متریکس آن را دریافت می‌کنید.
+
 <h2 id=methods>امکانات کتابخانه متریکس</h2>  
   
 <h3 id=session_event_description>۱. توضیح مفاهیم رویداد (event) و نشست (session)</h3>  
@@ -264,6 +267,7 @@
 <div dir=ltr>
 
     Metrix.SetLogLevel(3);
+
 </div>
 
 (مقدار پیش‌فرض این تابع در کتابخانه `INFO` است.)<br>
@@ -305,14 +309,16 @@
     Metrix.NewEvent(“my_event_slug");  
 </div>  
   
-ورودی این تابع از جنس String است<br>  
+ورودی این تابع از جنس String است<br>
 
 <h3 id=setScreenFlowsAutoFill>۱۳. نگهداری حرکات کاربر در صفحات مختلف در اپلیکیشن</h3>
 
 با اضافه کردن تابع زیر صفحات خود میتوانید از حرکت کاربر بین صفحات اطلاع پیدا کنید:<br>
+
 <div dir=ltr>
 
     Metrix.ScreenDisplayed("First Screen");
+
 </div>
   
 <h3 id=setDefaultTracker>۱۴. مشخص کردن Pre-installed Tracker</h3>  
