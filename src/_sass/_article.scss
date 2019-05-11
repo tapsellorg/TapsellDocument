@@ -104,5 +104,18 @@
 				max-width: 90%;
 			}
 		}
+
+		.highlighter-rouge {
+			pre,
+			code {
+				direction: ltr;
+				text-align-last: left;
+			}
+			pre {
+				background: #f6f6f6;
+				padding: 12px;
+				border-left: 2px solid #ddd;
+			}
+		}
 	}
 }
