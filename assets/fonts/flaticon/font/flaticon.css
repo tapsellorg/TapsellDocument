@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 30/04/2019 05:18
+  	Creation date: 11/05/2019 17:36
   	*/
 
 @font-face {
@@ -36,5 +36,4 @@ margin-left: 20px;
 .flaticon-m-up-chevron:before { content: "\f103"; }
 .flaticon-m-down-chevron:before { content: "\f104"; }
 .flaticon-m-right-chevron:before { content: "\f105"; }
-.flaticon-m-event:before { content: "\f106"; }
-.flaticon-m-attribution:before { content: "\f107"; }
+.flaticon-m-sdk:before { content: "\f106"; }

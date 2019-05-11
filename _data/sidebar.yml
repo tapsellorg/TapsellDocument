@@ -10,7 +10,6 @@ en:
     #         link: 2.0/about-circleci/
 fa:
   - name: سوالات متداول
-    link: /faq
     icon: m-help
     children:
       - name: سؤالات عمومی
@@ -38,8 +37,7 @@ fa:
         link: /faq/fraud-prevention
 
   - name: مستندات فنی
-    link: /sdk
-    icon: m-docs
+    icon: m-sdk
     children:
       - name: iOS
         link: /sdk/ios

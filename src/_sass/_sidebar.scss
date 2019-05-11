@@ -65,10 +65,10 @@ $sidebar-spacing-base: 5px;
 		.sidebar-main-item {
 			.main-item-parent {
 				font-weight: bold;
-				font-size: 14px;
+				font-size: 15px;
 				display: flex;
 				align-items: center;
-				margin: 0 0 20px;
+				margin: 0 0 12px;
 				position: relative;
 				cursor: pointer;
 				.icon {
@@ -77,6 +77,8 @@ $sidebar-spacing-base: 5px;
 				}
 				.main-item-text {
 					flex: 1 0 auto;
+					color: map-get($body, color);
+					display: inline-block;
 				}
 				.arrow {
 					flex: 0 0 auto;
@@ -91,7 +93,7 @@ $sidebar-spacing-base: 5px;
 				margin-bottom: 10px;
 				@include rtl-doLTR(margin-right, 25px);
 				.child-item {
-					font-size: 12px;
+					font-size: 13px;
 					font-weight: normal;
 					margin: 0 0 10px;
 					letter-spacing: 0.5px;

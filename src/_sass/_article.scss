@@ -106,16 +106,28 @@
 		}
 
 		.highlighter-rouge {
-			pre,
-			code {
-				direction: ltr;
-				text-align-last: left;
-			}
-			pre {
-				background: #f6f6f6;
-				padding: 12px;
-				border-left: 2px solid #ddd;
+			font-size: 18px;
+			.highlight {
+				pre,
+				code {
+					color: #ffffff;
+					margin: 0;
+					padding: 0;
+					direction: ltr;
+					text-align: left;
+				}
+				.rouge-gutter {
+					padding: 5px 20px 5px 10px;
+					background: rgba(#ffffff, 0.1);
+					.lineno {
+						color: #888;
+						text-align: right;
+						background: transparent !important;
+					}
+				}
 			}
 		}
 	}
 }
+
+@import 'syntax-highlighter-monokai.css';
