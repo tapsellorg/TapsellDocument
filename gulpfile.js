@@ -13,6 +13,9 @@ Object.keys(config.tasks).forEach(function(key) {
   }
 });
 
+// adding doc images task
+tasks.push('doc_images');
+
 /**
  * Default task, running just `gulp` will minify the images,
  * compile the sass, bundle the js, launch BrowserSync, and

@@ -19,3 +19,19 @@ gulp.task('imagemin', function() {
     )
     .pipe(gulp.dest(config.assets + '/' + config.imagemin.dest));
 });
+
+// doc images
+gulp.task('doc_images', function() {
+  return gulp
+    .src(config.assets + '/' + config.imagemin.docImagesSrc + '/**/*')
+    .pipe(plumber())
+    .pipe(newer(config.assets + '/' + config.imagemin.docImagesDest))
+    .pipe(
+      imagemin({
+        progressive: config.imagemin.progressive,
+        svgoPlugins: config.imagemin.svgoPlugins,
+        use: [pngquant()]
+      })
+    )
+    .pipe(gulp.dest(config.assets + '/' + config.imagemin.docImagesDest));
+});

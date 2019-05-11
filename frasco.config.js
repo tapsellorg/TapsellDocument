@@ -37,7 +37,9 @@ module.exports = {
     src: 'assets/_images',
     dest: 'images',
     progressive: true,
-    svgoPlugins: [{ removeViewBox: false }]
+    svgoPlugins: [{ removeViewBox: false }],
+    docImagesSrc: 'assets/doc-images',
+    docImagesDest: 'images'
   },
 
   jekyll: {

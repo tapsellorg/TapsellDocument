@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "prettier.tabWidth": 2,
+  "editor.wordWrapColumn": 140,
+  "prettier.printWidth": 140,
+  "html.format.wrapLineLength": 140,
+  "html.format.wrapAttributes": "aligned-multiple",
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true,
+  "prettier.tslintIntegration": false,
+  "files.exclude": {
+    "images": true,
+    "css": true,
+    "js": true,
+    ".bundle": true,
+    "vendor": true
+  }
+}
