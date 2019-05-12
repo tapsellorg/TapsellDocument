@@ -2,7 +2,7 @@
 layout: classic-docs
 title: ساخت و مدیریت ترکر
 lang: fa
-permalink: /faq/create-tracker/index.html
+permalink: /faq/trackers/index.html
 toc: true # table of contents
 ----
 
