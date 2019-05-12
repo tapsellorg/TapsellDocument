@@ -2,7 +2,7 @@
 layout: classic-docs
 title: کال‌بک
 lang: fa
-permalink: /faq/callback/index.html
+permalink: /faq/callbacks/index.html
 toc: true # table of contents
 ---
 

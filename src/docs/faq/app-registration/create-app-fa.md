@@ -2,7 +2,7 @@
 layout: classic-docs
 title: ثبت اپلیکیشن در داشبورد
 lang: fa
-permalink: /faq/set-up-app/index.html
+permalink: /faq/setup-app/index.html
 toc: true # table of contents
 ---
 
@@ -21,3 +21,5 @@ toc: true # table of contents
 ## چطور اپلیکیشنم را در متریکس ثبت کنم؟
 
 پس از ورود به اکانت خود، کافیست روی «افزودن اپ» / 'Create an app' کلیک کرده و مشخصات آن را وارد کرده و روی ایجاد / Create کلیک کنید.
+
+<img src="/images/AppRegistration.png" alt="create application"/>
