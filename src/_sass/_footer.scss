@@ -10,6 +10,14 @@
 		bottom: 0;
 		width: 100%;
 	}
+	hr.dark {
+		border-color: $black-light;
+	}
+	li,
+	span {
+		text-transform: initial;
+		font-size: $font-size-base;
+	}
 	a {
 		color: #f3f3f3;
 		&:focus,

@@ -2,7 +2,7 @@
 layout: classic-docs
 title: مدیریت حساب
 lang: fa
-permalink: /faq/account-setting/index.html
+permalink: /faq/account-settings/index.html
 toc: true # table of contents
 ---
 

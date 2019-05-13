@@ -8,10 +8,8 @@
 @import 'header';
 
 @import 'variables';
-// @import './old-should-remove/site';
 @import './old-should-remove/spacing';
 @import './old-should-remove/buttons';
-@import './old-should-remove/syntax';
 @import './old-should-remove/jquery.navgoco';
 @import './old-should-remove/mobile';
 @import 'sidebar';
@@ -53,22 +51,6 @@
 	max-width: $logo-width-small;
 }
 
-.text-blue {
-	color: $blue;
-}
-
-hr.dark {
-	border-color: $black-light;
-}
-
-footer {
-	li,
-	span {
-		text-transform: initial;
-		font-size: $font-size-base;
-	}
-}
-
 // Search bar
 #site-search {
 	padding-bottom: 30px;
@@ -92,44 +74,9 @@ footer {
 @import 'article';
 
 div.align-center {
-}
-div.align-center img {
-	max-width: 90%;
-	text-align: center;
-}
-
-// Homepage
-body.homepage {
-	.article-container {
-		@media screen and (max-width: $screen-sm) {
-			padding: 30px 16px;
-			width: 100%;
-		}
-		padding: 60px 48px;
-		width: calc(100% - 260px);
-	}
-
-	article {
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-	}
-
-	div.category-section {
-		padding: 15px 10px 20px;
-		width: 50%;
+	img {
+		max-width: 90%;
 		text-align: center;
-		.logo {
-			width: 60px;
-		}
-
-		h2 {
-			font-size: 1.5rem;
-		}
-
-		li a {
-			font-size: 0.875rem;
-		}
 	}
 }
 
@@ -150,9 +97,7 @@ body.homepage {
 	grid-template-columns: 50% 50%;
 }
 
-/* A fix for https://github.com/circleci/circleci-docissue1978 */
-body > img:last-of-type {
-	display: none;
-}
-
 @import 'footer';
+
+// Pages
+@import 'pages/home';

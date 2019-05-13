@@ -2,7 +2,7 @@
 layout: classic-docs
 title: رخدادها
 lang: fa
-permalink: /faq/events/index.html
+permalink: /faq/in-app-events/index.html
 toc: true # table of contents
 ---
 

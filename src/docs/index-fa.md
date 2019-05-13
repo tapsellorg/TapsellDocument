@@ -8,62 +8,65 @@ permalink: /
 
 <!-- Don't forget to also update per-language index.html e.g. /ja/index.html -->
 
-<h1>به مستندات {{ site.global_vars.site_name }} خوش‌آمدید</h1>
+<h2>به مستندات {{ site.global_vars.site_name }} خوش آمدید</h2>
 از منوی سمت راست می‌توانید به بخش‌های مختلف مستندات دسترسی پیدا کنید.
-
-تازه شروع کرده‌اید؟
-ما اینجاییم تا به سؤالات شما پاسخ دهیم.
-از ثبت اپلیکیشن گرفته تا تعریف ترکر و تنظیم پنجره اتریبیوشن
-
-<!-- <hr class="hidden-xs" />
 
 <div class="row">
   <div class="col-12 col-sm-6">
-    <h2>Get Started</h2>
-    <p>Get started with {{ site.global_vars.site_name }} automated builds.</p>
-    <ul>
-      <li><a href="/docs/2.0/first-steps/">Sign Up & Try</a></li>
-      <li><a href="/docs/2.0/getting-started/">Your First Green Build</a></li>
-      <li><a href="/docs/2.0/hello-world/">Hello World</a></li>
-      <li><a href="/docs/2.0/faq/">FAQ</a></li>
-      <li><a href="/docs/2.0/orb-intro/">Orbs</a></li>
-    </ul>
+    <div class="home-card">
+      <h2>داشبورد</h2>
+      <ul>
+        <li><a href="/faq/setup-app/">ثبت اپلیکیشن در داشبورد</a></li>
+        <li><a href="/faq/attribution-settings/">تنظیمات اتریبیوشن</a></li>
+        <li><a href="/faq/general-questions/">سوالات متداول</a></li>
+      </ul>
+    </div>
   </div>
   <div class="col-12 col-sm-6">
-    <h2>Examples</h2>
-    <p>Check out some of our popular examples.</p>
-    <ul>
-      <li><a href="/docs/2.0/example-configs/">Open Source Projects that use {{ site.global_vars.site_name }}</a></li>
-      <li><a href="/docs/2.0/postgres-config/">Database Config Examples</a></li>
-      <li><a href="/docs/2.0/sample-config/">Sample config.yml Files</a></li>
-      <li><a href="/docs/2.0/tutorials/">Tutorials and Sample Apps</a></li>
-      <li><a href="/docs/2.0/using-orbs/">Using Orbs</a></li>
-    </ul>
-  </div>
-  <div class="col-12">
-    <hr />
+    <div class="home-card">
+      <h2>مدیریت حساب</h2>
+      <ul>
+        <li><a href="/faq/account-settings/">مدیریت اعضای سازمان</a></li>
+      </ul>
+    </div>
   </div>
   <div class="col-12 col-sm-6">
-    <h2>Config</h2>
-    <p>Set up and debug your build configuration.</p>
-    <ul>
-      <li><a href="{{ site.baseurl }}/2.0/configuration-reference/">Configuration Reference</a></li>
-      <li><a href="{{ site.baseurl }}/2.0/writing-yaml/">Writing YAML</a></li>
-      <li><a href="{{ site.baseurl }}/2.0/env-vars/">Using Environment Variables</a></li>
-      <li><a href="{{ site.baseurl }}/2.0/ssh-access-jobs/">Debugging with SSH</a></li>
-      <li><a href="/docs/2.0/reusing-config/">Reusing Config</a></li>
-    </ul>
+    <div class="home-card">
+      <h2>پیاده‌سازی SDK</h2>
+      <ul>
+        <li><a href="/sdk/android/">Android</a></li>
+        <li><a href="/sdk/iOS/">iOS</a></li>
+        <li><a href="/sdk/react-native/">React Native</a></li>
+        <li><a href="/sdk/unity/">Unity</a></li>
+      </ul>
+    </div>
   </div>
   <div class="col-12 col-sm-6">
-    <h2>Workflows</h2>
-    <p>{{ site.global_vars.site_name }} Workflows are used to schedule and sequence jobs.</p>
-    <ul>
-      <li><a href="/docs/2.0/workflows/">Using Workflows to Schedule Jobs</a></li>
-      <li><a href="/docs/2.0/workflows/#workflows-configuration-examples">Example Configs</a></li>
-      <li><a href="/docs/2.0/workflows/#scheduling-a-workflow">Scheduling a Workflow</a></li>
-      <li><a href="/docs/2.0/workflows/#using-contexts-and-filtering-in-your-workflows">Using Contexts and Filtering in Your Workflows</a>
-      </li>
-      <li><a href="/docs/2.0/creating-orbs/">Creating Orbs</a></li>
-    </ul>
+    <div class="home-card">
+      <h2>مدیریت ترکرها</h2>
+      <ul>
+        <li><a href="/faq/attribution/">اتریبیوشن</a></li>
+        <li><a href="/faq/in-app-events/">رخدادهای درون برنامه‌ای</a></li>
+        <li><a href="/faq/callbacks/">مدیریت کال‌بک‌ها</a></li>
+      </ul>
+    </div>
   </div>
-</div> -->
+  <div class="col-12 col-sm-6">
+    <div class="home-card">
+      <h2>مقابله با تقلب</h2>
+      <ul>
+        <li><a href="/faq/fraud-prevention/">مقابله با تقلب</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- <div class="col-12 col-sm-6">
+    <div class="home-card">
+      <h2>آنالیتیکز</h2>
+      <ul>
+        <li><a href="/faq/retention/">بازگشت</a></li>
+        <li><a href="/sdk/events/">رخدادها</a></li>
+        <li><a href="/sdk/usage/">کاربرد</a></li>
+      </ul>
+    </div>
+  </div> -->
+</div>

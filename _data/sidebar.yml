@@ -13,25 +13,25 @@ fa:
     link: /faq
     icon: m-help
     children:
-      - name: سؤالات عمومی
+      - name: سوالات عمومی
         link: /faq/general-questions
 
       - name: ثبت اپلیکیشن در داشبورد
         link: /faq/setup-app
 
       - name: مدیریت حساب
-        link: /faq/account-setting
+        link: /faq/account-settings
 
-      - name: رخدادها
-        link: /faq/events
-
-      - name: ترکرها
-        link: /faq/trackers
+      - name: رخدادهای درون برنامه‌ای
+        link: /faq/in-app-events
 
       - name: اتریبیوشن
         link: /faq/attribution
 
-      - name: کال‌بک‌ها
+      - name: مدیریت اتریبیوشن
+        link: /faq/attribution-settings
+
+      - name: مدیریت کال‌بک‌ها
         link: /faq/callbacks
 
       - name: مقابله با تقلب

@@ -1,15 +1,14 @@
 ---
 layout: classic-docs
-title: ساخت و مدیریت ترکر
+title: مدیریت ترکرها
 lang: fa
-permalink: /faq/trackers/index.html
+permalink: /faq/attribution/index.html
 toc: true # table of contents
 ---
 
 ## چطور ترکر (Tracker) بسازم؟
 
 پس از ورود به حساب کاربری، روی علامت سه‌نقطه گوشه بالای عنوان اپلیکیشن کلیک کرده و وارد صفحه تنظیمات شوید. در منوی «ترکرها» / **trackers** روی دکمه «افزودن ترکر» / **add tracker** کلیک کنید و فیلدهای مربوطه را تکمیل کنید.
-
 
 <img src="/images/create-tracker.png" alt="tracker generation window"/>
 
