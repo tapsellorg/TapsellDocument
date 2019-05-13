@@ -34,7 +34,7 @@ toc: true # table of contents
 
 بايد از عبارت زير براي import استفاده کنيد.
 
-```
+```objc
 #import <MetrixSdk/Metrix.h>
 ```
 
@@ -42,7 +42,7 @@ toc: true # table of contents
 
 در Project Navigatorُ فايل منبع application delegate خود را انتخاب کنيد. عبارت import مناسب را در بالاي فايل وارد کنيد و سپس متد زير را در متدهاي didFinishLaunching يا didFinishLaunchingWithOptions فراخواني کنيد.
 
-```
+```objc
 #import "Metrix.h"
 // or #import <Metrix/Metrix.h>
 // or #import <MetrixSdk/Metrix.h>
@@ -63,7 +63,7 @@ MXConfig *metrixConfig = [MXConfig configWithAppId:yourAppId
 
 بسته به اين که برنامه خود را براي تست يا محصول نهايي خروجي ميگيريد، بايد مقدار environment را يکي از موارد زير قرار دهيد:
 
-```
+```objc
 NSString *environment = MXEnvironmentSandbox;
 NSString *environment = MXEnvironmentProduction;
 ```
@@ -77,31 +77,31 @@ NSString *environment = MXEnvironmentProduction;
 با استفاده از اين تابع مي‌توانيد يک رويداد سفارشي بسازيد. براي اين کار شما در ابتدا بايد در داشبورد متريکس از قسمت مديريت رخدادها، رخداد موردنظر خود را ثبت کنيد و نامک (slug) آن را بعنوان نام رخداد در sdk استفاده کنيد.
 ابتدا بايد يک رويداد سفارشي بسازيد
 
-```
+```objc
 MXCustomEvent *event = [MXCustomEvent newEvent:@"mySlug" attributes:myAttributes metrics:myMetrics];
 [Metrix trackCustomEvent:event];
 ```
 
 براي يک رويداد سفارشي ميتوانيد به تعداد دلخواه attribute و metric خاص سناريو خود بسازيد، به عنوان مثال فرض کنيد در يک برنامه خريد آنلاين مي‌خواهيد يک رويداد سفارشي بسازيد:
 
-```
+```objc
 NSMutableDictionary *myAttribures = [[NSMutableDictionary alloc] init];
-	myAttributes[@"first_name"] = @"Ali";
-	myAttributes[@"last_name"] = @"Bagheri";
-	myAttributes[@"manufacturer"] = @"Nike";
-	myAttributes[@"product_name"] = @"shirt";
-	myAttributes[@"type"] = @"sport";
-	myAttributes[@"size"] = @"large";
+    myAttributes[@"first_name"] = @"Ali";
+    myAttributes[@"last_name"] = @"Bagheri";
+    myAttributes[@"manufacturer"] = @"Nike";
+    myAttributes[@"product_name"] = @"shirt";
+    myAttributes[@"type"] = @"sport";
+    myAttributes[@"size"] = @"large";
 NSMutableDictionary *myMetrics = [[NSMutableDictionary alloc] init];
-	myAttributes[@"price"] = @(100000);
-	myAttributes[@"purchase_time"] = current_time;
+    myAttributes[@"price"] = @(100000);
+    myAttributes[@"purchase_time"] = current_time;
 ```
 
 ## ردگيري جريان صفحات
 
 شما ميتوانيد جريان حرکت کاربران خود در صفحات برنامه خود را با متريکس ردگيري کنيد. براي اين کار بايد به هنگام ورود به هر صفحه (در viewWillAppear يا viewDidApear) متد زير را فراخواني کنيد:
 
-```
+```objc
 [Metrix trackScreen:@"HomePage"];
 ```
 
@@ -115,7 +115,7 @@ SDK متريکس امکان دسترسي به برخي شناسه‌هاي دس�
 
 براي به دست آوردن اين شناسه کافي است متد زير را فراخواني کنيد:
 
-```
+```objc
 NSString *idfa = [Metrix idfa];
 ```
 
@@ -127,7 +127,7 @@ NSString *idfa = [Metrix idfa];
 
 براي به دست آوردن اين شناسه ميتوانيد به شکل زير عمل کنيد:
 
-```
+```objc
 NSString *mxid = [Metrix mxid];
 ```
 
@@ -137,7 +137,7 @@ NSString *mxid = [Metrix mxid];
 
 براي اين کار app delegate برنامه خود را باز کرده و trackerToken را براي MXConfig خود قرار دهيد:
 
-```
+```objc
 MXConfig *metrixConfig = [MXConfig configWithAppId:yourAppId environment:environment];
 [metrixConfig setTrackerToken:@"{TrackerToken}"];
 [Metrix appDidLaunch:metrixConfig];
@@ -145,6 +145,6 @@ MXConfig *metrixConfig = [MXConfig configWithAppId:yourAppId environment:environ
 
 بعد از اجراي برنامه بايد لاگي به اين شکل در XCode ببينيد:
 
-```
+```objc
 Tracker token: 'abc123'
 ```
