@@ -13,37 +13,6 @@
           </ul>
         </div>
         <div class="col-md-2 col-sm-3 col-6">
-          <h6>Support</h6>
-          <ul class="list-unstyled">
-            <li><a href="https://circleci.com/docs/">Documentation</a></li>
-            <li><a href="https://support.circleci.com/hc/en-us" target="_blank">Get Support</a></li>
-            <li><a href="https://status.circleci.com/" target="_blank">CircleCI Status</a></li>
-            <li><a href="https://discuss.circleci.com/" target="_blank">Community Forums</a></li>
-            <li><a href="https://circleci.com/support/premium-support/">Premium Support</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 col-sm-3 col-6">
-          <h6>Resources</h6>
-          <ul class="list-unstyled">
-            <li><a href="https://circleci.com/blog/">Blog</a></li>
-            <li><a href="https://circleci.com/customers/">Case Studies</a></li>
-            <li><a href="https://circleci.com/resources/#videos">Videos</a></li>
-            <li><a href="https://circleci.com/resources/#webinars">Webinars</a></li>
-            <li><a href="https://circleci.com/resources/#white-papers">White Papers</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 col-sm-3 col-6">
-          <h6>Company</h6>
-          <ul class="list-unstyled">
-            <li><a href="https://circleci.com/about/">About Us</a></li>
-            <li><a href="https://circleci.com/jobs/">Jobs</a></li>
-            <li><a href="https://circleci.com/about/team/">Team</a></li>
-            <li><a href="https://circleci.com/contact/">Contact Us</a></li>
-            <li><a href="https://circleci.com/partners/">Partner With Us</a></li>
-            <li><a href="https://circleci.com/newsroom/">Newsroom</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2 col-sm-3 col-6">
           <h6>Getting Started</h6>
           <ul>
             <li><a href="https://circleci.com/continuous-integration/">What is CI?</a></li>
@@ -59,7 +28,7 @@
         </div>
       </div>
       <div class="col-auto">
-        <img src="{{ '/images/logos/logo-dark-background.png' | prepend: site.baseurl }}" class="logo-small margin-top-small"
+        <img src="{{ '/images/logos/logo-dark-background.png' | relative_url }}" class="logo-small margin-top-small"
              alt="{{site.global_vars.footer_logo_alt}}">
       </div>
     </div>
@@ -83,4 +52,4 @@
   </div>
 </footer>
 
-<script src="/js/bundle.js?v={{ 'now' | date:'%s' }}" type="text/javascript"></script>
+<script src="{{ site.baseurl }}/js/bundle.js?v={{ 'now' | date:'%s' }}" type="text/javascript"></script>

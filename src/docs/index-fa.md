@@ -35,7 +35,7 @@ permalink: /
       <h2>پیاده‌سازی SDK</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/sdk/android/">Android</a></li>
-        <li><a href="{{ site.baseurl }}/sdk/iOS/">iOS</a></li>
+        <li><a href="{{ site.baseurl }}/sdk/ios/">iOS</a></li>
         <li><a href="{{ site.baseurl }}/sdk/react-native/">React Native</a></li>
         <li><a href="{{ site.baseurl }}/sdk/unity/">Unity</a></li>
       </ul>

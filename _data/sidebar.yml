@@ -37,7 +37,7 @@ fa:
         link: /faq/fraud-prevention
 
   - name: مستندات فنی
-    icon: m-docs
+    icon: m-sdk
     children:
       - name: iOS
         link: /sdk/ios
