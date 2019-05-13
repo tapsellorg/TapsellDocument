@@ -15,7 +15,7 @@ toc: true # table of contents
 `Asset/Plugins/Android/mainTemplate.gradle` اضافه کنید.
 
 ```groovy
-implementation fileTree(dir: 'libs', include: [‘*.jar'])
+implementation fileTree(dir: 'libs', include: ['*.jar'])
 
 implementation 'com.android.installreferrer:installreferrer:1.0'
 
