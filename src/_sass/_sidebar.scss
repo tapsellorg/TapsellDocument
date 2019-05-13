@@ -57,7 +57,7 @@ $sidebar-spacing-base: 5px;
 		padding: 0;
 		a {
 			color: map-get($body, color);
-			display: inline-block;
+			display: block;
 		}
 	}
 
