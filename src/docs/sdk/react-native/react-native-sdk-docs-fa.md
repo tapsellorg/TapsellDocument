@@ -34,7 +34,7 @@ react-native link @metrixorg/react-native-metrix
 
 1. برای کتابخانه `Metrix` لازم است تا دسترسی‌های زیر را به فایل `AndroidManifest.xml` اضافه کنید:
 
-```
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
@@ -53,7 +53,7 @@ react-native link @metrixorg/react-native-metrix
 
 برای دریافت intent `INSTALL_REFERRER` از Google Play باید یک `broadcast receiver` آن را دریافت کند، اگر از `broadcast receiver` سفارشی خود استفاده نمی‌کنید میتوانید با قرار دادن `receiver` زیر در تگ `application` فایل `AndroidManifest.xml` آن را دریافت کنید.
 
-```
+```xml
 <receiver
 android:name="ir.metrix.sdk.MetrixReferrerReceiver"
 android:permission="android.permission.INSTALL_PACKAGES"
@@ -67,7 +67,7 @@ android:exported="true" >
 
 چنان چه چندین کتابخانه برای دریافت intent `INSTALL_REFERRER` دارید، می‌توانید با قرار دادن کلاس سفارشی خود در `receiver` مانند زیر عمل کنید:
 
-```
+```xml
 <receiver
 android:name="com.your.app.InstallReceiver"
 android:permission="android.permission.INSTALL_PACKAGES"
@@ -80,7 +80,7 @@ android:exported="true" >
 
 و کد کلاس `InstallReceiver` به صورت زیر می‌شود:
 
-```
+```java
 public class InstallReceiver extends BroadcastReceiver {
 @Override
 public void onReceive(Context context, Intent intent) {
@@ -108,7 +108,7 @@ import Metrix from "@metrixorg/react-native-metrix";
 ۳. سپس برای مقداردهی اولیه ، تابع زیر را با ورودی کلید اپ خود صدا بزنید.
 توجه نمایید که حتما داخل متد `constructor` کامپوننت اصلی پروژه خود متد زیر را صدا بزنید.
 
-```
+```javascript
 Metrix.initialize("app id");
 ```
 
@@ -132,7 +132,7 @@ Metrix.initialize("app id");
 
 می‌توانید با استفاده از دو تابع زیر به کتابخانه متریکس اعلام کنید که در رویدادها اطلاعات مربوط به مکان کاربر را به همراه دیگر اطلاعات ارسال کند یا نکند. (برای اینکه این متد به درستی عمل کند دسترسی‌های اختیاری که بالاتر ذکر شد باید فعال باشند)
 
-```
+```javascript
 Metrix.enableLocationListening();
 
 Metrix.disableLocationListening();
@@ -142,7 +142,7 @@ Metrix.disableLocationListening();
 
 با استفاده از تابع زیر می‌توانید مشخص کنید که هر موقع تعداد رویدادهای ذخیره شده شما به تعداد مورد نظر شما رسید کتابخانه رویدادها را برای سرور ارسال کند:
 
-```
+```javascript
 Metrix.setEventUploadThreshold(50);
 ```
 
@@ -152,7 +152,7 @@ Metrix.setEventUploadThreshold(50);
 
 با استفاده از این تابع می‌توانید حداکثر تعداد رویداد ارسالی در هر درخواست را به شکل زیر مشخص کنید:
 
-```
+```javascript
 Metrix.setEventUploadMaxBatchSize(100);
 ```
 
@@ -162,7 +162,7 @@ Metrix.setEventUploadMaxBatchSize(100);
 
 با استفاده از تابع زیر می‌توانید مشخص کنید که حداکثر تعداد رویدادهای ذخیر شده در کتابخانه متریکس چقدر باشد (به عنوان مثال اگر دستگاه کاربر اتصال خود به اینترنت را از دست داد رویدادها تا مقداری که شما مشخص می‌کنید در کتابخانه ذخیره خواهند شد) و اگر تعداد رویدادهای ذخیره شده در کتابخانه از این مقدار بگذرد رویدادهای قدیمی توسط sdk نگهداری نشده و از بین می‌روند:
 
-```
+```javascript
 Metrix.setEventMaxCount(1000);
 ```
 
@@ -172,7 +172,7 @@ Metrix.setEventMaxCount(1000);
 
 با استفاده از این تابع می‌توانید مشخص کنید که درخواست آپلود رویدادها بعد از گذشت چند میلی‌ثانیه فرستاده شود:
 
-```
+```javascript
 Metrix.setEventUploadPeriodMillis(30000);
 ```
 
@@ -182,7 +182,7 @@ Metrix.setEventUploadPeriodMillis(30000);
 
 با استفاده از این تابع می‌توانید حد نشست‌ها را در اپلیکیشن خود مشخص کنید که هر نشست حداکثر چند ثانیه محاسبه شود. به عنوان مثال اگر مقدار این تابع را ۱۰۰۰۰ وارد کنید اگر کاربر در اپلیکیشن ۷۰ ثانیه تعامل داشته باشد، کتابخانه متریکس این تعامل را ۷ نشست محاسبه می‌کند.
 
-```
+```javascript
 Metrix.setSessionTimeoutMillis(1800000);
 ```
 
@@ -192,7 +192,7 @@ Metrix.setSessionTimeoutMillis(1800000);
 
 توجه داشته باشید که موقع release اپلیکیشن خود مقدار این تابع را false قرار دهید:
 
-```
+```javascript
 Metrix.enableLogging(true);
 ```
 
@@ -202,7 +202,7 @@ Metrix.enableLogging(true);
 
 با استفاده از این تابع می‌توانید مشخص کنید که چه سطحی از لاگ‌ها در `logcat` چاپ شود، به عنوان مثال دستور زیر همه‌ی سطوح لاگ‌ها به جز `VERBOSE` در `logcat` نمایش داده شود:
 
-```
+```javascript
 Metrix.setLogLevel(3);
 ```
 
@@ -210,7 +210,7 @@ Metrix.setLogLevel(3);
 
 نکته : مقدار متناظر با `Log Level`
 
-```
+```javascript
 VERBOSE = 2;
 DEBUG = 3;
 INFO = 4;
@@ -223,7 +223,7 @@ ASSERT = 7;
 
 با استفاده از این تابع می‌توانید مشخص کنید که زمانی که اپلیکیشن بسته می‌شود همه رویدادهای ذخیره شده در کتابخانه ارسال شود یا نشود:
 
-```
+```javascript
 Metrix.setFlushEventsOnClose(false);
 ```
 
@@ -233,7 +233,7 @@ Metrix.setFlushEventsOnClose(false);
 
 با استفاده از این تابع می‌توانید از شماره نشست (session) جاری اطلاع پیدا کنید:
 
-```
+```javascript
 Metrix.getSessionNum(function(sessionNum){
     //TODO
 });
@@ -247,15 +247,15 @@ Metrix.getSessionNum(function(sessionNum){
 
 ۱. یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
-```
-Metrix.newEvent(“my_event_slug");
+```javascript
+Metrix.newEvent("my_event_slug");
 ```
 
 ورودی این تابع از جنس String است و همان نامکی است که داشبورد دریافت می‌کنید.
 
 ۲. یک رویداد سفارشی با تعداد دلخواه attribute و metric خاص سناریو خود بسازید، به عنوان مثال فرض کنید در یک برنامه خرید آنلاین می‌خواهید یک رویداد سفارشی بسازید:
 
-```
+```javascript
 var attributes = {};
 attributes["first_name"]= "Ali";
 attributes["last_name"] = "Bagheri";
@@ -285,7 +285,7 @@ Metrix.newEvent("purchase_event_slug", attributes, metrics);
 
 ۱. یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
-```
+```javascript
 Metrix.newRevenue("my_event_slug", 12000, 0, "2");
 ```
 
@@ -305,7 +305,7 @@ Metrix.newRevenue("my_event_slug", 12000, 0, "2");
 
 با استفاده از این تابع می‌توانید به تعداد دلخواه `Attribute` به همه‌ی رویدادهای خود اضافه کنید:
 
-```
+```javascript
 var attributes = {};
 attributes["manufacturer"] = "Nike";
 
@@ -316,7 +316,7 @@ Metrix.addUserAttributes(attributes);
 
 با استفاده از این تابع می‌توانید به تعداد دلخواه `Metric` به همه‌ی رویدادهای خود اضافه کنید:
 
-```
+```javascript
 var metrics = {};
 metrics["perchase_time"] = current_time;
 
@@ -327,7 +327,7 @@ Metrix.setUserMetrics(metrics);
 
 با اضافه کردن تابع زیر به `constructor` صفحات خود میتوانید از حرکت کاربر بین صفحات اطلاع پیدا کنید:
 
-```
+```javascript
 Metrix.screenDisplayed("First Screen");
 ```
 
@@ -335,7 +335,7 @@ Metrix.screenDisplayed("First Screen");
 
 با مقداردهی این تابعه میتوانید اطلاعات کمپین تبلیغاتی که در ترکر خود در پنل قرار داده اید را دریافت کنید.
 
-```
+```javascript
 Metrix.setOnAttributionChangedListener(
     (attributionModel)=>{
           //TODO
@@ -365,6 +365,6 @@ Metrix.setOnAttributionChangedListener(
 
 با استفاده از این تابع می‌توانید با استفاده از یک `trackerToken` که از پنل آن را دریافت می‌کنید، برای همه‌ی رویدادها یک `tracker` پیش‌فرض را قرار دهید:
 
-```
+```javascript
 Metrix.setDefaultTracker(trackerToken);
 ```
