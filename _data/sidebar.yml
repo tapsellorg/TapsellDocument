@@ -10,13 +10,14 @@ en:
     #         link: 2.0/about-circleci/
 fa:
   - name: سوالات متداول
+    link: /faq
     icon: m-help
     children:
       - name: سؤالات عمومی
         link: /faq/general-questions
 
       - name: ثبت اپلیکیشن در داشبورد
-        link: /faq/getting-started
+        link: /faq/setup-app
 
       - name: مدیریت حساب
         link: /faq/account-setting
@@ -37,7 +38,8 @@ fa:
         link: /faq/fraud-prevention
 
   - name: مستندات فنی
-    icon: m-sdk
+    link: /sdk
+    icon: m-docs
     children:
       - name: iOS
         link: /sdk/ios
