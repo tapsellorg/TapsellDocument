@@ -13,7 +13,7 @@ toc: true # table of contents
 
 ۱. ابتدا تنظیمات زیر را در قسمت `repositories` فایل `gradle` کل پروژه اضافه کنید:
 
-```
+```groovy
 allprojects{
     repositories {
 
@@ -28,13 +28,13 @@ allprojects{
 
 ۲. کتاب خانه زیر را در قسمت `dependencies` فایل `gradle` اپلیکیشن خود اضافه کنید:
 
-```
+```groovy
 implementation 'ir.metrix:metrix:0.9.0'
 ```
 
 ۳. آپشن زیر را به بلاک `android` فایل `gradle` اپلیکیشن خود اضافه کنید:
 
-```
+```groovy
 compileOptions {
     targetCompatibility = "8"
     sourceCompatibility = "8"
@@ -106,20 +106,20 @@ compileOptions {
 
 ۵. متریکس برای تشخیص دستگاه های یکتا از **google advertising id** استفاده می‌کند، برای اینکه متریکس بتواند از این ویژگی استفاده کند باید طبق زیر کتابخانه آن را به قسمت `dependencies` فایل `build.gradle` اضافه کنید:
 
-```
+```groovy
 implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 ```
 
 اگر پروژه شما از ورژن قبل‌تر از ورژن ۷ کتابخانه‌ی `play-servicses-analytics` استفاده می‌کند، باید بخش زیر را به تگ `application` فایل `AndroidManifest.xml` خود اضافه کنید
 
-```
+```xml
 <meta-data android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
 ```
 
 ۶. برای کتابخانه `Metrix` لازم است تا دسترسی‌های زیر را به فایل `AndroidManifest.xml` اضافه کنید:
 
-```
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
@@ -138,7 +138,7 @@ implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 
 برای استفاده ازین ویژگی Google Play باید کتابخانه زیر را اضافه کنید:
 
-```
+```groovy
 implementation 'com.android.installreferrer:installreferrer:1.0'
 ```
 
@@ -152,7 +152,7 @@ implementation 'com.android.installreferrer:installreferrer:1.0'
 
 برای دریافت intent `INSTALL_REFERRER` از Google Play باید یک `broadcast receiver` آن را دریافت کند، اگر از `broadcast receiver` سفارشی خود استفاده نمی‌کنید میتوانید با قرار دادن `receiver` زیر در تگ `application` فایل `AndroidManifest.xml` آن را دریافت کنید.
 
-```
+```xml
 <receiver
 android:name="ir.metrix.sdk.MetrixReferrerReceiver"
 android:permission="android.permission.INSTALL_PACKAGES"
@@ -165,7 +165,7 @@ android:exported="true" >
 
 چنان چه چندین کتابخانه برای دریافت intent `INSTALL_REFERRER` دارید، می‌توانید با قرار دادن کلاس سفارشی خود در `receiver` مانند زیر عمل کنید:
 
-```
+```xml
 <receiver
 android:name="com.your.app.InstallReceiver"
 android:permission="android.permission.INSTALL_PACKAGES"
@@ -178,7 +178,7 @@ android:exported="true" >
 
 و کد کلاس `InstallReceiver` به صورت زیر می‌شود:
 
-```
+```java
 public class InstallReceiver extends BroadcastReceiver {
 @Override
 public void onReceive(Context context, Intent intent) {
@@ -205,7 +205,7 @@ public void onReceive(Context context, Intent intent) {
 
 ۳. با استفاده از `Attribute` زیر کلاس `Application` خود را در `AndroidManifest.xml` اضافه کنید:
 
-```
+```xml
 <application
     android:name=“.MyApplication”
     ... >
@@ -217,7 +217,7 @@ public void onReceive(Context context, Intent intent) {
 
 ۴. در متد `onCreate` کلاس `Application` خود، مطابق قطعه کد زیر sdk متریکس را `initialize` کنید:
 
-```
+```java
 import ir.metrix.sdk.Metrix;
 
 public class MyApplication extends Application {
@@ -254,7 +254,7 @@ public class MyApplication extends Application {
 
 می‌توانید با استفاده از دو تابع زیر به کتابخانه متریکس اعلام کنید که در رویدادها اطلاعات مربوط به مکان کاربر را به همراه دیگر اطلاعات ارسال کند یا نکند. (برای اینکه این متد به درستی عمل کند دسترسی‌های اختیاری که بالاتر ذکر شد باید فعال باشند)
 
-```
+```java
 Metrix.getInstance().enableLocationListening();
 
 Metrix.getInstance().disableLocationListening();
@@ -264,7 +264,7 @@ Metrix.getInstance().disableLocationListening();
 
 با استفاده از تابع زیر می‌توانید مشخص کنید که هر موقع تعداد رویدادهای ذخیره شده شما به تعداد مورد نظر شما رسید کتابخانه رویدادها را برای سرور ارسال کند:
 
-```
+```java
 Metrix.getInstance().setEventUploadThreshold(50);
 ```
 
@@ -274,7 +274,7 @@ Metrix.getInstance().setEventUploadThreshold(50);
 
 با استفاده از این تابع می‌توانید حداکثر تعداد رویداد ارسالی در هر درخواست را به شکل زیر مشخص کنید:
 
-```
+```java
 Metrix.getInstance().setEventUploadMaxBatchSize(100);
 ```
 
@@ -284,7 +284,7 @@ Metrix.getInstance().setEventUploadMaxBatchSize(100);
 
 با استفاده از تابع زیر می‌توانید مشخص کنید که حداکثر تعداد رویدادهای ذخیر شده در کتابخانه متریکس چقدر باشد (به عنوان مثال اگر دستگاه کاربر اتصال خود به اینترنت را از دست داد رویدادها تا مقداری که شما مشخص می‌کنید در کتابخانه ذخیره خواهند شد) و اگر تعداد رویدادهای ذخیره شده در کتابخانه از این مقدار بگذرد رویدادهای قدیمی توسط sdk نگهداری نشده و از بین می‌روند:
 
-```
+```java
 Metrix.getInstance().setEventMaxCount(1000);
 ```
 
@@ -294,7 +294,7 @@ Metrix.getInstance().setEventMaxCount(1000);
 
 با استفاده از این تابع می‌توانید مشخص کنید که درخواست آپلود رویدادها بعد از گذشت چند میلی‌ثانیه فرستاده شود:
 
-```
+```java
 Metrix.getInstance().setEventUploadPeriodMillis(30000);
 ```
 
@@ -304,7 +304,7 @@ Metrix.getInstance().setEventUploadPeriodMillis(30000);
 
 با استفاده از این تابع می‌توانید حد نشست‌ها را در اپلیکیشن خود مشخص کنید که هر نشست حداکثر چند ثانیه محاسبه شود. به عنوان مثال اگر مقدار این تابع را ۱۰۰۰۰ وارد کنید اگر کاربر در اپلیکیشن ۷۰ ثانیه تعامل داشته باشد، کتابخانه متریکس این تعامل را ۷ نشست محاسبه می‌کند.
 
-```
+```java
 Metrix.getInstance().setSessionTimeoutMillis(1800000);
 ```
 
@@ -314,7 +314,7 @@ Metrix.getInstance().setSessionTimeoutMillis(1800000);
 
 توجه داشته باشید که موقع release اپلیکیشن خود مقدار این تابع را false قرار دهید:
 
-```
+```java
 Metrix.getInstance().enableLogging(true);
 ```
 
@@ -324,7 +324,7 @@ Metrix.getInstance().enableLogging(true);
 
 با استفاده از این تابع می‌توانید مشخص کنید که چه سطحی از لاگ‌ها در `logcat` چاپ شود، به عنوان مثال دستور زیر همه‌ی سطوح لاگ‌ها به جز `VERBOSE` در `logcat` نمایش داده شود:
 
-```
+```java
 Metrix.getInstance().setLogLevel(Log.DEBUG);
 ```
 
@@ -334,7 +334,7 @@ Metrix.getInstance().setLogLevel(Log.DEBUG);
 
 با استفاده از این تابع می‌توانید مشخص کنید که زمانی که اپلیکیشن بسته می‌شود همه رویدادهای ذخیره شده در کتابخانه ارسال شود یا نشود:
 
-```
+```java
 Metrix.getInstance().setFlushEventsOnClose(false);
 ```
 
@@ -344,7 +344,7 @@ Metrix.getInstance().setFlushEventsOnClose(false);
 
 با استفاده از این تابع می‌توانید از شماره نشست (session) جاری اطلاع پیدا کنید:
 
-```
+```java
 Metrix.getInstance().getSessionNum();
 ```
 
@@ -356,7 +356,7 @@ Metrix.getInstance().getSessionNum();
 
 ۱. یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
-```
+```java
 Metrix.getInstance().newEvent(“my_event_slug");
 ```
 
@@ -364,7 +364,7 @@ Metrix.getInstance().newEvent(“my_event_slug");
 
 ۲. یک رویداد سفارشی با تعداد دلخواه attribute و metric خاص سناریو خود بسازید، به عنوان مثال فرض کنید در یک برنامه خرید آنلاین می‌خواهید یک رویداد سفارشی بسازید:
 
-```
+```java
 Map<String, String> attributes = new HashMap<>();
 attributes.put("first_name", "Ali");
 attributes.put("last_name", "Bagheri");
@@ -393,7 +393,7 @@ Metrix.getInstance().newEvent("purchase_event_slug", attributes, metrics);
 
 یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
-```
+```java
 Metrix.getInstance().newRevenue("my_event_slug", 12000, MetrixCurrency.IRR, "2");
 ```
 
@@ -409,7 +409,7 @@ Metrix.getInstance().newRevenue("my_event_slug", 12000, MetrixCurrency.IRR, "2")
 
 با استفاده از این تابع می‌توانید به تعداد دلخواه `Attribute` به همه‌ی رویدادهای خود اضافه کنید:
 
-```
+```java
 Map<String, String> attributes = new HashMap<>();
 attributes.put("manufacturer", "Nike");
 
@@ -420,7 +420,7 @@ Metrix.getInstance().addUserAttributes(attributes);
 
 با استفاده از این تابع می‌توانید به تعداد دلخواه `Metric` به همه‌ی رویدادهای خود اضافه کنید:
 
-```
+```java
 Map<String, Object> metrics = new HashMap<>();
 metrics.put("purchase_time", current_time);
 
@@ -431,7 +431,7 @@ Metrix.getInstance().setUserMetrics(metrics);
 
 با استفاده از این تابع می‌توانید به کتابخانه متریکس اطلاع بدهید که تشخیص بدهد کاربر از کدام `Activity`/`Fragment` به کدام `Activity`/`Fragment` می‌رود و این داده‌ها را به صورت اتوماتیک ذخیره کند:
 
-```
+```java
 Metrix.getInstance().setScreenFlowsAutoFill(true);
 ```
 
@@ -441,7 +441,7 @@ Metrix.getInstance().setScreenFlowsAutoFill(true);
 
 با استفاده از این تابع می‌توانید متوجه شوید که مقدار `screenFlow` در کتابخانه متریکس چیست:
 
-```
+```java
 Metrix.getInstance().isScreenFlowsAutoFill();
 ```
 
@@ -449,7 +449,7 @@ Metrix.getInstance().isScreenFlowsAutoFill();
 
 با مقداردهی این تابعه میتوانید اطلاعات کمپین تبلیغاتی که در ترکر خود در پنل قرار داده اید را دریافت کنید.
 
-```
+```java
 Metrix.getInstance().setOnAttributionChangedListener(new OnAttributionChangedListener() {
 @Override
     public void onAttributionChanged(AttributionModel attributionModel) {
@@ -477,6 +477,6 @@ attributionModel.getAttributionStatus() # وضعیت کاربر در کمپین 
 
 با استفاده از این تابع می‌توانید با استفاده از یک `trackerToken` که از پنل آن را دریافت می‌کنید، برای همه‌ی رویدادها یک `tracker` پیش‌فرض را قرار دهید:
 
-```
+```java
 Metrix.getInstance().setDefaultTracker(trackerToken);
 ```
