@@ -14,7 +14,7 @@ toc: true # table of contents
 
 `Asset/Plugins/Android/mainTemplate.gradle` اضافه کنید.
 
-```
+```groovy
 implementation fileTree(dir: 'libs', include: [‘*.jar'])
 
 implementation 'com.android.installreferrer:installreferrer:1.0'
@@ -34,7 +34,7 @@ implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 
 ۳. آپشن زیر را به بلاک `android` فایل `Asset/Plugins/Android/mainTemplate.gradle` اپلیکیشن خود اضافه کنید:
 
-```
+```groovy
 compileOptions {
     targetCompatibility = "8"
     sourceCompatibility = "8"
@@ -113,7 +113,7 @@ compileOptions {
 
 ۵. دسترسی های زیر را به فایل `AndroidManifest.xml` موجود در فولدر `Plugins/Android` پروژه خود اضافه کنید:
 
-```
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
@@ -132,7 +132,7 @@ compileOptions {
 
 برای دریافت intent `INSTALL_REFERRER` از Google Play باید یک `broadcast receiver` آن را دریافت کند، اگر از `broadcast receiver` سفارشی خود استفاده نمی‌کنید میتوانید با قرار دادن `receiver` زیر در تگ `application` فایل `AndroidManifest.xml` آن را دریافت کنید.
 
-```
+```xml
 <receiver
 android:name="ir.metrix.sdk.MetrixReferrerReceiver"
 android:permission="android.permission.INSTALL_PACKAGES"
@@ -149,7 +149,7 @@ android:exported="true" >
 
 کتابخانه متریکس را در ابتدای برنامه‌ی خود به این روش initialize کنید:
 
-```
+```csharp
 Metrix.Initialize("APP_ID");
 ```
 
@@ -173,7 +173,7 @@ Metrix.Initialize("APP_ID");
 
 می‌توانید با استفاده از دو تابع زیر به کتابخانه متریکس اعلام کنید که در رویدادها اطلاعات مربوط به مکان کاربر را به همراه دیگر اطلاعات ارسال کند یا نکند. (برای اینکه این متد به درستی عمل کند دسترسی‌های اختیاری که بالاتر ذکر شد باید فعال باشند)
 
-```
+```csharp
 Metrix.EnableLocationListening();
 
 Metrix.DisableLocationListening();
@@ -183,7 +183,7 @@ Metrix.DisableLocationListening();
 
 با استفاده از تابع زیر می‌توانید مشخص کنید که هر موقع تعداد رویدادهای ذخیره شده شما به تعداد مورد نظر شما رسید کتابخانه رویدادها را برای سرور ارسال کند:
 
-```
+```csharp
 Metrix.SetEventUploadThreshold(50);
 ```
 
@@ -193,7 +193,7 @@ Metrix.SetEventUploadThreshold(50);
 
 با استفاده از این تابع می‌توانید حداکثر تعداد رویداد ارسالی در هر درخواست را به شکل زیر مشخص کنید:
 
-```
+```csharp
 Metrix.SetEventUploadMaxBatchSize(100);
 ```
 
@@ -203,7 +203,7 @@ Metrix.SetEventUploadMaxBatchSize(100);
 
 با استفاده از تابع زیر می‌توانید مشخص کنید که حداکثر تعداد رویدادهای ذخیر شده در کتابخانه متریکس چقدر باشد (به عنوان مثال اگر دستگاه کاربر اتصال خود به اینترنت را از دست داد رویدادها تا مقداری که شما مشخص می‌کنید در کتابخانه ذخیره خواهند شد) و اگر تعداد رویدادهای ذخیره شده در کتابخانه از این مقدار بگذرد رویدادهای قدیمی توسط sdk نگهداری نشده و از بین می‌روند:
 
-```
+```csharp
 Metrix.SetEventMaxCount(1000);
 ```
 
@@ -213,7 +213,7 @@ Metrix.SetEventMaxCount(1000);
 
 با استفاده از این تابع می‌توانید مشخص کنید که درخواست آپلود رویدادها بعد از گذشت چند میلی‌ثانیه فرستاده شود:
 
-```
+```csharp
 Metrix.SetEventUploadPeriodMillis(30000);
 ```
 
@@ -223,7 +223,7 @@ Metrix.SetEventUploadPeriodMillis(30000);
 
 با استفاده از این تابع می‌توانید حد نشست‌ها را در اپلیکیشن خود مشخص کنید که هر نشست حداکثر چند ثانیه محاسبه شود. به عنوان مثال اگر مقدار این تابع را ۱۰۰۰۰ وارد کنید اگر کاربر در اپلیکیشن ۷۰ ثانیه تعامل داشته باشد، کتابخانه متریکس این تعامل را ۷ نشست محاسبه می‌کند.
 
-```
+```csharp
 Metrix.SetSessionTimeoutMillis(1800000);
 ```
 
@@ -233,7 +233,7 @@ Metrix.SetSessionTimeoutMillis(1800000);
 
 توجه داشته باشید که موقع release اپلیکیشن خود مقدار این تابع را false قرار دهید:
 
-```
+```csharp
 Metrix.EnableLogging(true);
 ```
 
@@ -243,7 +243,7 @@ Metrix.EnableLogging(true);
 
 با استفاده از این تابع می‌توانید مشخص کنید که چه سطحی از لاگ‌ها در `logcat` چاپ شود، به عنوان مثال دستور زیر همه‌ی سطوح لاگ‌ها به جز `VERBOSE` در `logcat` نمایش داده شود:
 
-```
+```csharp
 Metrix.SetLogLevel(3);
 ```
 
@@ -251,7 +251,7 @@ Metrix.SetLogLevel(3);
 
 نکته : مقدار متناظر با `Log Level`
 
-```
+```csharp
 VERBOSE = 2;
 DEBUG = 3;
 INFO = 4;
@@ -264,7 +264,7 @@ ASSERT = 7;
 
 با استفاده از این تابع می‌توانید مشخص کنید که زمانی که اپلیکیشن بسته می‌شود همه رویدادهای ذخیره شده در کتابخانه ارسال شود یا نشود:
 
-```
+```csharp
 Metrix.SetFlushEventsOnClose(false);
 ```
 
@@ -274,7 +274,7 @@ Metrix.SetFlushEventsOnClose(false);
 
 با استفاده از این تابع می‌توانید از شماره نشست (session) جاری اطلاع پیدا کنید:
 
-```
+```csharp
 Metrix.GetSessionNum();
 ```
 
@@ -286,8 +286,8 @@ Metrix.GetSessionNum();
 
 ۱. یک رویداد سفارشی که فقط یک اسم مشخص دارد بسازید:
 
-```
-Metrix.NewEvent(“my_event_slug");
+```csharp
+Metrix.NewEvent("my_event_slug");
 ```
 
 ورودی این تابع از جنس String است
@@ -300,7 +300,7 @@ Metrix.NewEvent(“my_event_slug");
 
 ۱. یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
-```
+```csharp
 Metrix.NewRevenue("my_event_slug", 12000, 0, "2");
 ```
 
@@ -320,7 +320,7 @@ Metrix.NewRevenue("my_event_slug", 12000, 0, "2");
 
 با اضافه کردن تابع زیر صفحات خود میتوانید از حرکت کاربر بین صفحات اطلاع پیدا کنید:
 
-```
+```csharp
 Metrix.ScreenDisplayed("First Screen");
 ```
 
@@ -328,6 +328,6 @@ Metrix.ScreenDisplayed("First Screen");
 
 با استفاده از این تابع می‌توانید با استفاده از یک `trackerToken` که از پنل آن را دریافت می‌کنید، برای همه‌ی رویدادها یک `tracker` پیش‌فرض را قرار دهید:
 
-```
+```csharp
 Metrix.SetDefaultTracker("trackerToken");
 ```
