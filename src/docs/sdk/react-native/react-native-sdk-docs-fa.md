@@ -12,11 +12,8 @@ toc: true # table of contents
 
 ۱.به محل پروژه react native خود بروید و در commad-line دستورهای زیر را به ترتیب وارد کنید :
 
-```
+```bash
 npm install @metrixorg/react-native-metrix --save
-```
-
-```
 react-native link @metrixorg/react-native-metrix
 ```
 
@@ -101,15 +98,15 @@ public void onReceive(Context context, Intent intent) {
 
 ۲. ابتدا ماژول متریکس را به کد خود اضافه کنید:
 
-```
-import Metrix from "@metrixorg/react-native-metrix";
+```javascript
+import Metrix from '@metrixorg/react-native-metrix';
 ```
 
 ۳. سپس برای مقداردهی اولیه ، تابع زیر را با ورودی کلید اپ خود صدا بزنید.
 توجه نمایید که حتما داخل متد `constructor` کامپوننت اصلی پروژه خود متد زیر را صدا بزنید.
 
 ```javascript
-Metrix.initialize("app id");
+Metrix.initialize('app id');
 ```
 
 <img src="https://storage.backtory.com/metricx/images/init.png"/>
@@ -234,8 +231,8 @@ Metrix.setFlushEventsOnClose(false);
 با استفاده از این تابع می‌توانید از شماره نشست (session) جاری اطلاع پیدا کنید:
 
 ```javascript
-Metrix.getSessionNum(function(sessionNum){
-    //TODO
+Metrix.getSessionNum(function(sessionNum) {
+  //TODO
 });
 ```
 
@@ -248,7 +245,7 @@ Metrix.getSessionNum(function(sessionNum){
 ۱. یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
 ```javascript
-Metrix.newEvent("my_event_slug");
+Metrix.newEvent('my_event_slug');
 ```
 
 ورودی این تابع از جنس String است و همان نامکی است که داشبورد دریافت می‌کنید.
@@ -257,18 +254,18 @@ Metrix.newEvent("my_event_slug");
 
 ```javascript
 var attributes = {};
-attributes["first_name"]= "Ali";
-attributes["last_name"] = "Bagheri";
-attributes["manufacturer"] = "Nike";
-attributes["product_name"] = "shirt";
-attributes["type"] = "sport";
-attributes["size"] = "large";
+attributes['first_name'] = 'Ali';
+attributes['last_name'] = 'Bagheri';
+attributes['manufacturer'] = 'Nike';
+attributes['product_name'] = 'shirt';
+attributes['type'] = 'sport';
+attributes['size'] = 'large';
 
 var metrics = {};
-metrics["price"] = 100000;
-metrics["perchase_time"] = current_time;
+metrics['price'] = 100000;
+metrics['perchase_time'] = current_time;
 
-Metrix.newEvent("purchase_event_slug", attributes, metrics);
+Metrix.newEvent('purchase_event_slug', attributes, metrics);
 ```
 
 ورودی‌های متد newEvent بدین شرح هستند:
@@ -286,7 +283,7 @@ Metrix.newEvent("purchase_event_slug", attributes, metrics);
 ۱. یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
 ```javascript
-Metrix.newRevenue("my_event_slug", 12000, 0, "2");
+Metrix.newRevenue('my_event_slug', 12000, 0, '2');
 ```
 
 ورودی اول همان نامکی است که از داشبورد دریافت می‌کنید.
@@ -307,7 +304,7 @@ Metrix.newRevenue("my_event_slug", 12000, 0, "2");
 
 ```javascript
 var attributes = {};
-attributes["manufacturer"] = "Nike";
+attributes['manufacturer'] = 'Nike';
 
 Metrix.addUserAttributes(attributes);
 ```
@@ -318,7 +315,7 @@ Metrix.addUserAttributes(attributes);
 
 ```javascript
 var metrics = {};
-metrics["perchase_time"] = current_time;
+metrics['perchase_time'] = current_time;
 
 Metrix.setUserMetrics(metrics);
 ```
@@ -328,7 +325,7 @@ Metrix.setUserMetrics(metrics);
 با اضافه کردن تابع زیر به `constructor` صفحات خود میتوانید از حرکت کاربر بین صفحات اطلاع پیدا کنید:
 
 ```javascript
-Metrix.screenDisplayed("First Screen");
+Metrix.screenDisplayed('First Screen');
 ```
 
 ### ۱۷. دریافت اطلاعات کمپین
@@ -336,11 +333,9 @@ Metrix.screenDisplayed("First Screen");
 با مقداردهی این تابعه میتوانید اطلاعات کمپین تبلیغاتی که در ترکر خود در پنل قرار داده اید را دریافت کنید.
 
 ```javascript
-Metrix.setOnAttributionChangedListener(
-    (attributionModel)=>{
-          //TODO
-    });
-
+Metrix.setOnAttributionChangedListener(attributionModel => {
+  //TODO
+});
 ```
 
 مدل `attributionModel` اطلاعات زیر را در اختیار شما قرار میدهد.

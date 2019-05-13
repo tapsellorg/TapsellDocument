@@ -460,12 +460,12 @@ Metrix.getInstance().setOnAttributionChangedListener(new OnAttributionChangedLis
 
 مدل `AttributionModel` اطلاعات زیر را در اختیار شما قرار میدهد.
 
-```
-attributionModel.getAcquisitionAd() # نام تبلیغ
-attributionModel.getAcquisitionAdSet() # گروه تبلیغاتی
-attributionModel.getAcquisitionCampaign() # کمپین تبلیغاتی
-attributionModel.getAcquisitionSource() # شبکه تبلیغاتی
-attributionModel.getAttributionStatus() # وضعیت کاربر در کمپین را مشخص میکند و فقط چهار مقدار زیر را برمیگرداند
+```java
+attributionModel.getAcquisitionAd() // نام تبلیغ
+attributionModel.getAcquisitionAdSet() // گروه تبلیغاتی
+attributionModel.getAcquisitionCampaign() // کمپین تبلیغاتی
+attributionModel.getAcquisitionSource() // شبکه تبلیغاتی
+attributionModel.getAttributionStatus() // وضعیت کاربر در کمپین را مشخص میکند و فقط چهار مقدار زیر را برمیگرداند
 ```
 
 1. `ATTRIBUTED` اتربیوت شده
