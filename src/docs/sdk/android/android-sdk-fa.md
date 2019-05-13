@@ -357,7 +357,7 @@ Metrix.getInstance().getSessionNum();
 ۱. یک رویداد سفارشی که فقط یک نامک مشخص دارد و آن را از داشبورد متریکس میگیرد، بسازید:
 
 ```java
-Metrix.getInstance().newEvent(“my_event_slug");
+Metrix.getInstance().newEvent("my_event_slug");
 ```
 
 ورودی این تابع از جنس String است و همان نامکی است که داشبورد دریافت می‌کنید.
