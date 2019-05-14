@@ -18,7 +18,7 @@ permalink: /
       <ul>
         <li><a href="{{ site.baseurl }}/faq/setup-app/">ثبت اپلیکیشن در داشبورد</a></li>
         <li><a href="{{ site.baseurl }}/faq/attribution-settings/">تنظیمات اتریبیوشن</a></li>
-        <li><a href="{{ site.baseurl }}/faq/general-questions/">سوالات متداول</a></li>
+        <li><a href="{{ site.baseurl }}/faq/general-questions/">سوالات عمومی</a></li>
       </ul>
     </div>
   </div>
@@ -55,13 +55,13 @@ permalink: /
     <div class="home-card">
       <h2>مقابله با تقلب</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/faq/fraud-prevention/">مقابله با تقلب</a></li>
+        <li><a href="{{ site.baseurl }}/faq/fraud-prevention/">گزارش‌های تقلب موبایلی</a></li>
       </ul>
     </div>
   </div>
   <!-- <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h2>آنالیتیکز</h2>
+      <h2>آنالیتیکس</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/faq/retention/">بازگشت</a></li>
         <li><a href="{{ site.baseurl }}/sdk/events/">رخدادها</a></li>
