@@ -1,13 +1,12 @@
 @charset "UTF-8";
 @import 'bootstrap';
 @import 'fonts';
+@import 'variables';
 @import 'mixins';
-@import 'vars';
 @import 'utils';
 @import 'general';
 @import 'header';
 
-@import 'variables';
 @import './old-should-remove/spacing';
 @import './old-should-remove/buttons';
 @import './old-should-remove/jquery.navgoco';
@@ -16,14 +15,6 @@
 @import 'instantsearch';
 
 // General
-.main-body {
-	overflow: auto;
-	display: flex;
-	max-width: 1200px;
-	margin: 0 auto;
-	background: #fff;
-	min-height: calc(100vh - 200px);
-}
 
 #hits-template {
 	display: block;

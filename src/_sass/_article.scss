@@ -1,11 +1,12 @@
 .article-container {
-	float: left;
-	@media screen and (max-width: $screen-sm) {
+	@include not-md {
 		padding: 30px 16px;
-		width: 100%;
+		flex: 1 1 100%;
 	}
-	padding: 60px 48px;
-	width: calc(100% - 260px);
+	padding: 40px 45px;
+	// width: calc(100% - 260px);
+	flex: 1 0 map-get($screens, md) - map-get($sidebar, width);
+	min-width: 0;
 
 	article {
 		h1,

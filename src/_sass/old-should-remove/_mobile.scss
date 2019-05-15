@@ -31,31 +31,4 @@
 	#nav-button.open {
 		left: 240px;
 	}
-
-	.sidebar {
-		position: fixed;
-		top: 70px;
-		bottom: 0;
-		left: -240px;
-		width: 240px;
-		color: #000000;
-		overflow-y: auto;
-		transition: left 0.3s ease-in-out;
-		z-index: 10;
-	}
-	.sidebar.open {
-		left: 0;
-	}
-
-	// Article
-	div.article-container {
-		width: 100%;
-	}
-
-	// Really small mobile, think iPhone 5 or earlier
-	@media screen and (max-width: 500px) {
-		body.homepage div.category-section {
-			width: 100%;
-		}
-	}
 }

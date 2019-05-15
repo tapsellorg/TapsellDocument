@@ -35,3 +35,29 @@ a {
 		text-decoration: none;
 	}
 }
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #666;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #999;
+	height: 50px;
+	border-radius: 5px;
+}
+
+.main-body {
+	overflow: auto;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+	background: #fff;
+	min-height: calc(100vh - 200px);
+}
