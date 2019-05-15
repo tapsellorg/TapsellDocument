@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body class="{% if page.page-type == "index" or page.page-type == "homepage" %}homepage{% endif %}">
+<body class="{% if page.page-type == 'index' or page.page-type == 'homepage' %}homepage{% endif %}">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSP8JD3" height="0" width="0"
 						style="display:none;visibility:hidden"></iframe></noscript>
@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="outer">
-		{% include global-nav.html %}
+		{% include header.html %}
 		{% include main-searchbar.html %}
 		{% include mobile-sidebar.html %}
 		<div class="hits-target"></div>
@@ -35,7 +35,7 @@
 				</article>
 			</div>
 		</div>
-		{% include global-footer.html %}
+		{% include footer.html %}
 		<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script> -->
 	</div>
 </body>
