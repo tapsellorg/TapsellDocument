@@ -31,7 +31,7 @@ allprojects{
 2. Add the following library to the `dependencies` section of your `gradle` file:
 
 ```
-implementation 'ir.metrix:metrix:0.8.5'
+implementation 'ir.metrix:metrix:0.9.1'
 ```
 
 3. Add the following options to the `android` block of your application's `gradle` file:
