@@ -29,7 +29,7 @@ allprojects{
 ۲. کتاب خانه زیر را در قسمت `dependencies` فایل `gradle` اپلیکیشن خود اضافه کنید:
 
 ```groovy
-implementation 'ir.metrix:metrix:0.9.0'
+implementation 'ir.metrix:metrix:0.9.1'
 ```
 
 ۳. آپشن زیر را به بلاک `android` فایل `gradle` اپلیکیشن خود اضافه کنید:
