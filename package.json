@@ -14,7 +14,8 @@
     "imagemin": "bundle exec gulp imagemin",
     "production": "bundle exec gulp --jekyllEnv='production' --mode='production'",
     "sass": "bundle exec gulp sass",
-    "watch": "bundle exec gulp watch"
+    "watch": "bundle exec gulp watch",
+    "deploy": "git checkout prod && git merge master"
   },
   "repository": {
     "type": "git",
