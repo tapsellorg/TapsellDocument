@@ -2,11 +2,10 @@
 layout: classic-docs
 page-type: homepage
 title: به مستندات متریکس خوش‌آمدید
+description: متریکس یک پلتفرم هوشمند آنالیز موبایل مارکتینگ در ایران است که امکان شناسایی منابع،‌ کانال‌ها و کمپین‌های تبلیغاتی جذب کاربر را فراهم می‌کند و سرویس آنالتیکز متریکس نیز رفتار کاربران را تحلیل و ارزیابی می‌کند
 lang: fa
 permalink: /
 ---
-
-<!-- Don't forget to also update per-language index.html e.g. /ja/index.html -->
 
 <h2>به مستندات {{ site.global_vars.site_name }} خوش آمدید</h2>
 از منوی سمت راست می‌توانید به بخش‌های مختلف مستندات دسترسی پیدا کنید.
