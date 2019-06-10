@@ -8,86 +8,86 @@ toc: true # table of contents
 
 <!-- [![CircleCI](https://circleci.com/gh/metrixorg/MetrixSDK-AndroidSample.svg?style=svg)](https://circleci.com/gh/metrixorg/MetrixSDK-AndroidSample)
 [ ![Download](https://api.bintray.com/packages/metrixorg/maven/metrix-sdk-android/images/download.svg) ](https://bintray.com/metrixorg/maven/metrix-sdk-android/_latestVersion) -->
-  
-  
+
 ## Basic integration
-  
-1. To start with, add the following settings in the `repositories` section of the `gradle` file:  
-  
+
+1\. To start with, add the following settings in the `repositories` section of the `gradle` file:
+
 ```groovy
-allprojects{  
-    repositories {  
-  
-    ...  
-  
-        maven {  
-            url 'https://dl.bintray.com/metrixorg/maven'  
-        }  
-    }  
-}  
+allprojects{
+    repositories {
+
+    ...
+
+        maven {
+            url 'https://dl.bintray.com/metrixorg/maven'
+        }
+    }
+}
 ```
-  
-2. Add the following library to the `dependencies` section of your `gradle` file:  
+
+2\. Add the following library to the `dependencies` section of your `gradle` file:
+
 ```groovy
 implementation 'ir.metrix:metrix:0.9.1'
 ```
 
-3. Add the following settings to your project's `Proguard` file:  
-  
-```  
--keepattributes Signature  
--keepattributes *Annotation*  
--keepattributes EnclosingMethod  
--keepattributes InnerClasses  
-  
--keepclassmembers enum * { *; }  
--keep class **.R$* { *; }  
--keep interface ir.metrix.sdk.NoProguard  
--keep class * implements ir.metrix.sdk.NoProguard { *; }  
--keep interface * extends ir.metrix.sdk.NoProguard { *; }  
+3\. Add the following settings to your project's `Proguard` file:
+
+```
+-keepattributes Signature
+-keepattributes *Annotation*
+-keepattributes EnclosingMethod
+-keepattributes InnerClasses
+
+-keepclassmembers enum * { *; }
+-keep class **.R$* { *; }
+-keep interface ir.metrix.sdk.NoProguard
+-keep class * implements ir.metrix.sdk.NoProguard { *; }
+-keep interface * extends ir.metrix.sdk.NoProguard { *; }
 -keep class ir.metrix.sdk.network.model.** { *; }
 
-# retrofit  
-# Retain service method parameters when optimizing.  
--keepclassmembers,allowshrinking,allowobfuscation interface * {  
-    @retrofit2.http.* <methods>;  
-}  
-  
-# Ignore JSR 305 annotations for embedding nullability information.  
--dontwarn javax.annotation.**  
-  
-# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.  
--dontwarn kotlin.Unit  
-  
-# Top-level functions that can only be used by Kotlin.  
--dontwarn retrofit2.-KotlinExtensions  
-  
-# With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy  
-# and replaces all potential values with null. Explicitly keeping the interfaces prevents this.  
--if interface * { @retrofit2.http.* <methods>; }  
--keep,allowobfuscation interface <1>  
-  
-#OkHttp  
-# A resource is loaded with a relative path so the package of this class must be preserved.  
--keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase  
-  
-# Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.  
--dontwarn org.codehaus.mojo.animal_sniffer.*  
-  
-# OkHttp platform used only on JVM and when Conscrypt dependency is available.  
--dontwarn okhttp3.internal.platform.ConscryptPlatform  
-  
-  
-  
-#Gson  
-# Gson specific classes  
--dontwarn sun.misc.**  
-#-keep class com.google.gson.stream.** { *; }  
-  
-# Prevent proguard from stripping interface information from TypeAdapterFactory,  
-# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)  
--keep class * implements com.google.gson.TypeAdapterFactory  
--keep class * implements com.google.gson.JsonSerializer  
+# retrofit
+# Retain service method parameters when optimizing.
+-keepclassmembers,allowshrinking,allowobfuscation interface * {
+    @retrofit2.http.* <methods>;
+}
+
+# Ignore JSR 305 annotations for embedding nullability information.
+-dontwarn javax.annotation.**
+
+# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.
+-dontwarn kotlin.Unit
+
+# Top-level functions that can only be used by Kotlin.
+-dontwarn retrofit2.-KotlinExtensions
+
+# With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
+# and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
+-if interface * { @retrofit2.http.* <methods>; }
+-keep,allowobfuscation interface <1>
+
+#OkHttp
+# A resource is loaded with a relative path so the package of this class must be preserved.
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+
+# Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.
+-dontwarn org.codehaus.mojo.animal_sniffer.*
+
+# OkHttp platform used only on JVM and when Conscrypt dependency is available.
+-dontwarn okhttp3.internal.platform.ConscryptPlatform
+
+
+
+#Gson
+# Gson specific classes
+-dontwarn sun.misc.**
+#-keep class com.google.gson.stream.** { *; }
+
+# Prevent proguard from stripping interface information from TypeAdapterFactory,
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
 -keep class * implements com.google.gson.JsonDeserializer
 #gms
 -keep class com.google.android.gms.** { *; }
@@ -95,9 +95,7 @@ implementation 'ir.metrix:metrix:0.9.1'
 -dontwarn android.content.pm.PackageInfo
 ```
 
-
-4. Since the 1st of August of 2014, apps in the Google Play Store must use the  [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)  to uniquely identify devices. To allow the Metrix SDK to use the Google Advertising ID, you must integrate the  [Google Play Services](http://developer.android.com/google/play-services/setup.html). If you haven't done this yet, follow these steps:
-
+4\. Since the 1st of August of 2014, apps in the Google Play Store must use the [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) to uniquely identify devices. To allow the Metrix SDK to use the Google Advertising ID, you must integrate the [Google Play Services](http://developer.android.com/google/play-services/setup.html). If you haven't done this yet, follow these steps:
 
 - Open the `build.gradle` file of your app and find the `dependencies` block. Add the following line:
 
@@ -107,16 +105,15 @@ implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 
 **Note**: The Metrix SDK is not tied to any specific version of the `play-services-analytics` part of the Google Play Services library, so feel free to always use the latest version of it (or whichever you might need).
 
-  - **Skip this step if you are using version 7 or later of Google Play Services**: In the Package Explorer open the `AndroidManifest.xml` of your Android project. Add the following `meta-data` tag inside the `<application>` element.
+- **Skip this step if you are using version 7 or later of Google Play Services**: In the Package Explorer open the `AndroidManifest.xml` of your Android project. Add the following `meta-data` tag inside the `<application>` element.
 
-      ```xml
-      <meta-data android:name="com.google.android.gms.version"
-                 android:value="@integer/google_play_services_version" />
-      ```
+  ```xml
+  <meta-data android:name="com.google.android.gms.version"
+             android:value="@integer/google_play_services_version" />
+  ```
 
+5\. Please add the following permissions, which the Metrix SDK needs, if they are not already present in your `AndroidManifest.xml` file:
 
-5. Please add the following permissions, which the Metrix SDK needs, if they are not already present in your `AndroidManifest.xml` file:
-  
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -124,7 +121,7 @@ implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
 ```
 
-(Two last permissions are optional)  
+(Two last permissions are optional)
 
 ## Install Referrer
 
@@ -132,9 +129,9 @@ In order to correctly attribute an install of your app to its source, Metrix nee
 
 **Important**: The Google Play Referrer API is newly introduced by Google with the express purpose of providing a more reliable and secure way of obtaining install referrer information and to aid attribution providers in the fight against click injection. It is **strongly advised** that you support this in your application. The Google Play Store intent is a less secure way of obtaining install referrer information. It will continue to exist in parallel with the new Google Play Referrer API temporarily, but it is set to be deprecated in future.
 
-### Google Play Referrer API 
+### Google Play Referrer API
 
-In order to support this in your app, please make sure you have the following line added to your  `build.gradle`  file:
+In order to support this in your app, please make sure you have the following line added to your `build.gradle` file:
 
 ```groovy
 implementation 'com.android.installreferrer:installreferrer:1.0'
@@ -150,7 +147,8 @@ Also, make sure that you have paid attention to the Proguard chapter and that yo
 
 ### Google Play Store intent
 
-The Google Play Store  `INSTALL_REFERRER`  intent should be captured with a broadcast receiver. If you are  **not using your own broadcast receiver**  to receive the  `INSTALL_REFERRER`  intent, add the following  `receiver`  tag inside the  `application` tag in your  `AndroidManifest.xml`.
+The Google Play Store `INSTALL_REFERRER` intent should be captured with a broadcast receiver. If you are **not using your own broadcast receiver** to receive the `INSTALL_REFERRER` intent, add the following `receiver` tag inside the `application` tag in your `AndroidManifest.xml`.
+
 ```xml
 <receiver
     android:name="ir.metrix.sdk.MetrixReferrerReceiver"
@@ -161,23 +159,27 @@ The Google Play Store  `INSTALL_REFERRER`  intent should be captured with a broa
     </intent-filter>
 </receiver>
 ```
+
 We use this broadcast receiver to retrieve the install referrer and pass it to our backend.
 
-If you are already using a multiple broadcast receiver for the  `INSTALL_REFERRER`  intent, follow below to add the Metrix broadcast receiver.
- If you have implemented your own broadcast receiver like this
- ```java
-public class InstallReceiver extends BroadcastReceiver {
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        // Metrix
-        new MetrixReferrerReceiver().onReceive(context, intent);
+If you are already using a multiple broadcast receiver for the `INSTALL_REFERRER` intent, follow below to add the Metrix broadcast receiver.
+If you have implemented your own broadcast receiver like this
 
-        // Google Analytics
-        new CampaignTrackingReceiver().onReceive(context, intent);
-    }
+```java
+public class InstallReceiver extends BroadcastReceiver {
+   @Override
+   public void onReceive(Context context, Intent intent) {
+       // Metrix
+       new MetrixReferrerReceiver().onReceive(context, intent);
+
+       // Google Analytics
+       new CampaignTrackingReceiver().onReceive(context, intent);
+   }
 }
 ```
-then add class to recevier in `applicaton` tag in `AndroidManifest.xml` file 
+
+then add class to recevier in `applicaton` tag in `AndroidManifest.xml` file
+
 ```xml
 <receiver
     android:name="com.your.app.InstallReceiver"
@@ -188,87 +190,93 @@ then add class to recevier in `applicaton` tag in `AndroidManifest.xml` file
     </intent-filter>
 </receiver>
 ```
+
 ## Implement the SDK in your project
 
 ### Initial configuration in the app
 
 You need to initialize the Metrix SDK in `onCreate` method of your `Application`. If you do not already have a class `Application` in your project, create this class as below:
-1. Create a class that inherits from the `Application` class:
+
+1\. Create a class that inherits from the `Application` class:
 
 <img src="https://storage.backtory.com/tapsell-server/metrix/doc/screenshots/Metrix-Application-Class.png"/>  
   
-2. Open the `AndriodManifest.xml` file and go to`<application>` tag.
-3. Using `Attribute` subclass, add `Application` to `AndroidManifest.xml` file:
+2\. Open the `AndriodManifest.xml` file and go to`<application>` tag.
+3\. Using `Attribute` subclass, add `Application` to `AndroidManifest.xml` file:
 
 ```xml
-    <application  
-        android:name=“.MyApplication”  
-        ... >  
-  
+    <application
+        android:name=“.MyApplication”
+        ... >
+
     </application>
-```    
-    
+```
+
 <img src="https://storage.backtory.com/tapsell-server/metrix/doc/screenshots/Metrix-Application-Manifest.png">  
   
-4. In `onCreate` method of your `Application` class, initialize Metrix according to the codes below:
-```java 
-import ir.metrix.sdk.Metrix;  
+4\. In `onCreate` method of your `Application` class, initialize Metrix according to the codes below:
 
-public class MyApplication extends Application {  
-  
-    @Override  
-    public void onCreate() {  
-        super.onCreate();  
-        Metrix.initialize(this, “app id”);  
-    }  
-}  
-``` 
-  
-Replace `APP_ID` with your application id. You can find that in your Metrix dashboard.  
+```java
+import ir.metrix.sdk.Metrix;
+
+public class MyApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Metrix.initialize(this, "app id");
+    }
+}
+```
+
+Replace `APP_ID` with your application id. You can find that in your Metrix dashboard.
 
 ### About the application class and initialization in this class
 
-Android gives developers the ability to run methods before the creation of any `activity` in the application class. Because counting the `session`, gathering `screen-flows` between `activities` and many other features of the SDK required them to work properly.  
-  
+Android gives developers the ability to run methods before the creation of any `activity` in the application class. Because counting the `session`, gathering `screen-flows` between `activities` and many other features of the SDK required them to work properly.
+
 ## Additional features
 
 ### Events and sessions
 
 In each interaction that the user has with the app, Metrix sends this interaction to the server as an **event**. In Metrix, a **session** is a specific timeframe during which the user interacted with the app.
-  
+
 There are three types of events in Metrix:
-  
+
 **1. Session Start:** The time a session starts.
 **2. Session Stop:** The time of a session ends.
 **3. Custom:** Depending on your application logic and the interactiion that the user has with your app, you can create and send custom events as below:
-  
+
 **Tip:** To use library facilities and call the methods provided by the SDK, you must get `MetrixClient` using `getInstance` and then choose your desired method.
 
 ### Enable location listening
 
-Using the following functions, you can inform Metrix that you wish to send information about the location of the user (In order for these methods to work properly, the optional permissions explained earlier must be enabled). 
+Using the following functions, you can inform Metrix that you wish to send information about the location of the user (In order for these methods to work properly, the optional permissions explained earlier must be enabled).
 
-```java  
-Metrix.getInstance().enableLocationListening();  
-  
-Metrix.getInstance().disableLocationListening();  
-``` 
-  
+```java
+Metrix.getInstance().enableLocationListening();
+
+Metrix.getInstance().disableLocationListening();
+```
+
 ### Limitation in number of events to upload
 
 Using the following function, you can specify that each time the number of your buffered events reaches the threshold, the Metrix SDK should send them to the server:
-  
+
 ```java
-Metrix.getInstance().setEventUploadThreshold(50);  
-``` 
+Metrix.getInstance().setEventUploadThreshold(50);
+```
+
 (The default value is 30 events.)
 
 ### Limitation in number of events to send per request
+
 Using this function, you can specify the maximum number of out-going events per request as shown below:
 
 ```java
-Metrix.getInstance().setEventUploadMaxBatchSize(100);  
+Metrix.getInstance().setEventUploadMaxBatchSize(100);
 ```
+
 (The default value is 100 events.)
 
 ### Limitation in number of events to buffer on the device
@@ -276,17 +284,19 @@ Metrix.getInstance().setEventUploadMaxBatchSize(100);
 Using the following function, you can specify the maximum number of events that are buffered in the SDK (for example, if the user's device loses internet connection, the events will be buffered in the library until there is a chance to send the events and empty the buffer) and if the number of buffered events in the library passes this amount, old events are destroyed by SDK to make space for new events:
 
 ```java
-Metrix.getInstance().setEventMaxCount(1000);  
+Metrix.getInstance().setEventMaxCount(1000);
 ```
+
 (The default value is 100 events.)
 
 ### The time interval for sending events
 
-By using this function, you can specify the timeout period of requests for sending events: 
-  
+By using this function, you can specify the timeout period of requests for sending events:
+
 ```java
-Metrix.getInstance().setEventUploadPeriodMillis(30000);  
+Metrix.getInstance().setEventUploadPeriodMillis(30000);
 ```
+
 (The default value is 30 seconds.)
 
 ### The session timeout
@@ -294,8 +304,9 @@ Metrix.getInstance().setEventUploadPeriodMillis(30000);
 Using this function, you can specify the limit of session length in your application in unit of miliseconds. For example, if this value is 10,000 and the user interacts with the application for 70 seconds, Metrix calculates this interaction as seven sessions.
 
 ```java
-Metrix.getInstance().setSessionTimeoutMillis(1800000);  
+Metrix.getInstance().setSessionTimeoutMillis(1800000);
 ```
+
 (The default value is 30 minutes.)
 
 ### Log management
@@ -303,8 +314,9 @@ Metrix.getInstance().setSessionTimeoutMillis(1800000);
 Note that you should set this value to `false` before the release of your application:
 
 ```java
-Metrix.getInstance().enableLogging(true);  
+Metrix.getInstance().enableLogging(true);
 ```
+
 (The default value is true.)
 
 ### Set LogLevel
@@ -312,7 +324,7 @@ Metrix.getInstance().enableLogging(true);
 Using this function, you can specify what level of logs to be printed in `logcat`, for example, the following command will display all logs except `VERBOSE` in `logcat`:
 
 ```java
-Metrix.getInstance().setLogLevel(Log.DEBUG);  
+Metrix.getInstance().setLogLevel(Log.DEBUG);
 ```
 
 (The default value is `Log.INFO`.)
@@ -324,6 +336,7 @@ Using this function, you can specify wether when the application is closed, all 
 ```java
 Metrix.getInstance().setFlushEventsOnClose(false);
 ```
+
 (The default value is true.)
 
 ### Current session number
@@ -331,24 +344,24 @@ Metrix.getInstance().setFlushEventsOnClose(false);
 Using this function, you can find the current session number:
 
 ```java
-Metrix.getInstance().getSessionNum();  
+Metrix.getInstance().getSessionNum();
 ```
 
 ### Custom events
 
-You can use Metrix to track any event in your app. Suppose you want to track every tap on a button. You would have to create a new event slug in the Events Management section of your dashboard. Let's say that event slug is `abc123`. In your button's onClick method you could then add the following lines to track the click.  
+You can use Metrix to track any event in your app. Suppose you want to track every tap on a button. You would have to create a new event slug in the Events Management section of your dashboard. Let's say that event slug is `abc123`. In your button's onClick method you could then add the following lines to track the click.
 
 You can call this function in two ways:
-  
-1. Make a custom event that has only one specified name:
+
+1\. Make a custom event that has only one specified name:
 
 ```java
-Metrix.getInstance().newEvent("abc123");  
-```  
+Metrix.getInstance().newEvent("abc123");
+```
 
 The input of this function is a String.
 
-2. Create a custom event with a specific number of attributes and metrics, for example, suppose you want to create a custom event in an online purchase program:
+2\. Create a custom event with a specific number of attributes and metrics, for example, suppose you want to create a custom event in an online purchase program:
 
 ```java
 Map<String, String> attributes = new HashMap<>();
@@ -357,23 +370,22 @@ attributes.put("last_name", "Bagheri");
 attributes.put("manufacturer", "Nike");
 attributes.put("product_name", "shirt");
 attributes.put("type", "sport");
-attributes.put("size", "large");  
+attributes.put("size", "large");
 
 Map<String, Object> metrics = new HashMap<>();
 metrics.put("price", 100000);
-metrics.put("purchase_time", current_time);  
+metrics.put("purchase_time", current_time);
 
 Metrix.getInstance().newEvent("purchase_event_slug", attributes, metrics);
-```  
+```
 
 The variables for the `newEvent` method are as follows:
-  
-- **First variable:**The event slug which is a String you receive from the Metrix dashboard.
-  
-- **Second variable:** A Map `<String, String>` that specifies the attributes of an event.
-  
-- **Third variable:** A Map `<String, Double>` that contains measurable metrics.
 
+- **First variable:**The event slug which is a String you receive from the Metrix dashboard.
+
+- **Second variable:** A Map `<String, String>` that specifies the attributes of an event.
+
+- **Third variable:** A Map `<String, Double>` that contains measurable metrics.
 
 ### Track Revenue
 
@@ -390,17 +402,17 @@ Using this function, you can add arbitrary `Attributes` to all events of the use
 ```java
 Map<String, String> attributes = new HashMap<>();
 attributes.put("manufacturer", "Nike");
-Metrix.getInstance().addUserAttributes(attributes);  
+Metrix.getInstance().addUserAttributes(attributes);
 ```
 
 ### Specify the default metrics for user
 
 Using this function, you can add arbitrary `Metrics` to all events of the user:
-  
+
 ```java
-Map<String, Object> metrics = new HashMap<>();  
-metrics.put("purchase_time", current_time);  
-Metrix.getInstance().setUserMetrics(metrics);  
+Map<String, Object> metrics = new HashMap<>();
+metrics.put("purchase_time", current_time);
+Metrix.getInstance().setUserMetrics(metrics);
 ```
 
 ### Enable the process of storing the user flow
@@ -408,17 +420,17 @@ Metrix.getInstance().setUserMetrics(metrics);
 Using this function, you can inform Metrix to gather information about user's flow in each `Activity`/`Fragment` and these details should be stored automatically:
 
 ```java
-Metrix.getInstance().setScreenFlowsAutoFill(true);  
+Metrix.getInstance().setScreenFlowsAutoFill(true);
 ```
 
 (The default value is false.)
-  
+
 ### Find out the value of screenFlow
 
 Using this function, you can read the `screenFlow` value in Metrix:
 
 ```java
-Metrix.getInstance().isScreenFlowsAutoFill();  
+Metrix.getInstance().isScreenFlowsAutoFill();
 ```
 
 ### Get User attribution
@@ -426,10 +438,10 @@ Metrix.getInstance().isScreenFlowsAutoFill();
 In case you want to access info about your user's current attribution when ever you need it, you can make a call to the following method of the Metrix instance:
 
 ```java
-Metrix.getInstance().setOnAttributionChangedListener(new OnAttributionChangedListener() {  
-    @Override  
-      public void onAttributionChanged(AttributionModel attributionModel) {  
-          //TODO  
+Metrix.getInstance().setOnAttributionChangedListener(new OnAttributionChangedListener() {
+    @Override
+      public void onAttributionChanged(AttributionModel attributionModel) {
+          //TODO
        }
     });
 ```
@@ -445,19 +457,16 @@ Here is a quick summary of `AttributionModel` properties:
 `attributionModel.getAcquisitionSource()`: The network/source grouping level of the current attribution.
 
 `attributionModel.getAttributionStatus()`: Specifies the status of the user in the campaign and returns only the four values below:
-  
-1- `ATTRIBUTED`  
-  
-2- `NOT_ATTRIBUTED_YET`  
-  
-3- `ATTRIBUTION_NOT_NEEDED`  
-  
-4- `UNKNOWN`  
-  
+
+1. `ATTRIBUTED`
+2. `NOT_ATTRIBUTED_YET`
+3. `ATTRIBUTION_NOT_NEEDED`
+4. `UNKNOWN`
+
 ### Pre-installed trackers
 
 If you want to use the Metrix SDK to recognize users whose devices came with your app pre-installed, open your app delegate and set the default tracker of your config. Replace `trackerToken` with the tracker token you created in the dashboard. Please note that the Dashboard displays a tracker URL (including http://tracker.metrix.ir/). In your source code, you should specify only the six-character token and not the entire URL.
 
 ```java
-Metrix.getInstance().setDefaultTracker(trackerToken);  
+Metrix.getInstance().setDefaultTracker(trackerToken);
 ```
