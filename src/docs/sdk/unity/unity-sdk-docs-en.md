@@ -14,102 +14,93 @@ Open your project in the Unity Editor and navigate to Assets → Import Package 
 2\. Add the following libraries to the `dependencies` section of your `Asset/Plugins/Android/mainTemplate.gradle` file:
 
 ```groovy
-
-    implementation fileTree(dir: 'libs', include: [‘*.jar'])
-
-    implementation 'com.android.installreferrer:installreferrer:1.0'
-
-    implementation 'com.google.code.gson:gson:2.8.5'
-
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
-
-    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
-
-    implementation 'com.google.android.gms:play-services-analytics:16.0.7'
-
+implementation fileTree(dir: 'libs', include: [‘*.jar'])
+implementation 'com.android.installreferrer:installreferrer:1.0'
+implementation 'com.google.code.gson:gson:2.8.5'
+implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 ```
 
 3\. If you are using Proguard, add these lines to your `Proguard` file:
 
 ```
-    #Unity Player
-    -keep class com.unity3d.player.** { *; }
+#Unity Player
+-keep class com.unity3d.player.** { *; }
 
-    -keepattributes Signature
-    -keepattributes *Annotation*
-    -keepattributes EnclosingMethod
-    -keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes *Annotation*
+-keepattributes EnclosingMethod
+-keepattributes InnerClasses
 
-    -keepclassmembers enum * { *; }
-    -keep class **.R$* { *; }
-    -keep interface ir.metrix.sdk.NoProguard
-    -keep class * implements ir.metrix.sdk.NoProguard { *; }
-    -keep interface * extends ir.metrix.sdk.NoProguard { *; }
-    -keep class ir.metrix.sdk.network.model.** { *; }
+-keepclassmembers enum * { *; }
+-keep class **.R$* { *; }
+-keep interface ir.metrix.sdk.NoProguard
+-keep class * implements ir.metrix.sdk.NoProguard { *; }
+-keep interface * extends ir.metrix.sdk.NoProguard { *; }
+-keep class ir.metrix.sdk.network.model.** { *; }
 
-    # retrofit
-    # Retain service method parameters when optimizing.
-    -keepclassmembers,allowshrinking,allowobfuscation interface * {
+# retrofit
+# Retain service method parameters when optimizing.
+-keepclassmembers,allowshrinking,allowobfuscation interface * {
     @retrofit2.http.* <methods>;
-    }
+}
 
-    # Ignore JSR 305 annotations for embedding nullability information.
-    -dontwarn javax.annotation.**
+# Ignore JSR 305 annotations for embedding nullability information.
+-dontwarn javax.annotation.**
 
-    # Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.
-    -dontwarn kotlin.Unit
+# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.
+-dontwarn kotlin.Unit
 
-    # Top-level functions that can only be used by Kotlin.
-    -dontwarn retrofit2.-KotlinExtensions
+# Top-level functions that can only be used by Kotlin.
+-dontwarn retrofit2.-KotlinExtensions
 
-    # With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
-    # and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
-    -if interface * { @retrofit2.http.* <methods>; }
-    -keep,allowobfuscation interface <1>
+# With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
+# and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
+-if interface * { @retrofit2.http.* <methods>; }
+-keep,allowobfuscation interface <1>
 
-    #OkHttp
-    # A resource is loaded with a relative path so the package of this class must be preserved.
-    -keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+#OkHttp
+# A resource is loaded with a relative path so the package of this class must be preserved.
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
 
-    # Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.
-    -dontwarn org.codehaus.mojo.animal_sniffer.*
+# Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.
+-dontwarn org.codehaus.mojo.animal_sniffer.*
 
-    # OkHttp platform used only on JVM and when Conscrypt dependency is available.
-    -dontwarn okhttp3.internal.platform.ConscryptPlatform
+# OkHttp platform used only on JVM and when Conscrypt dependency is available.
+-dontwarn okhttp3.internal.platform.ConscryptPlatform
 
 
 
-    #Gson
-    # Gson specific classes
-    -dontwarn sun.misc.**
-    #-keep class com.google.gson.stream.** { *; }
+#Gson
+# Gson specific classes
+-dontwarn sun.misc.**
+#-keep class com.google.gson.stream.** { *; }
 
-    # Prevent proguard from stripping interface information from TypeAdapterFactory,
-    # JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
-    -keep class * implements com.google.gson.TypeAdapterFactory
-    -keep class * implements com.google.gson.JsonSerializer
-    -keep class * implements com.google.gson.JsonDeserializer
+# Prevent proguard from stripping interface information from TypeAdapterFactory,
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
 
-    #referral
-    -keep public class com.android.installreferrer.** { *; }
+#referral
+-keep public class com.android.installreferrer.** { *; }
 
-    #gms
-    -keep class com.google.android.gms.** { *; }
-    -dontwarn android.content.pm.PackageInfo
+#gms
+-keep class com.google.android.gms.** { *; }
+-dontwarn android.content.pm.PackageInfo
 
 ```
 
 4\. Please add the following permissions, which the Metrix SDK needs, if they are not already present in your `AndroidManifest.xml` file in `Plugins/Android` folder:
 
 ```xml
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
 ```
 
 (Two last permissions are optional)
@@ -284,7 +275,7 @@ The input of this function is String.
 If your users can generate revenue by tapping on advertisements or making in-app purchases, you can track those revenues too with events. You can also add an optional order ID to avoid tracking duplicate revenues. By doing so, the last ten order IDs will be remembered and revenue events with duplicate order IDs are skipped. This is especially useful for tracking in-app purchases. You can see an example below where a tap is worth 12,000 IRR:
 
 ```csharp
-    Metrix.NewRevenue("my_event_slug", 12000, 0, "2");
+Metrix.NewRevenue("my_event_slug", 12000, 0, "2");
 ```
 
 The first parameter is the slug you get from the dashboard.
