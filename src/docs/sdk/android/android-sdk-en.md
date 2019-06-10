@@ -14,17 +14,17 @@ toc: true # table of contents
   
 1. To start with, add the following settings in the `repositories` section of the `gradle` file:  
   
-```groovy  
-    allprojects{  
-        repositories {  
+```groovy
+allprojects{  
+    repositories {  
   
-        ...  
+    ...  
   
-            maven {  
-                url 'https://dl.bintray.com/metrixorg/maven'  
-            }  
+        maven {  
+            url 'https://dl.bintray.com/metrixorg/maven'  
         }  
     }  
+}  
 ```
   
 2. Add the following library to the `dependencies` section of your `gradle` file:  
@@ -35,76 +35,77 @@ implementation 'ir.metrix:metrix:0.9.1'
 3. Add the following settings to your project's `Proguard` file:  
   
 ```  
-    -keepattributes Signature  
-    -keepattributes *Annotation*  
-    -keepattributes EnclosingMethod  
-    -keepattributes InnerClasses  
+-keepattributes Signature  
+-keepattributes *Annotation*  
+-keepattributes EnclosingMethod  
+-keepattributes InnerClasses  
   
-    -keepclassmembers enum * { *; }  
-    -keep class **.R$* { *; }  
-    -keep interface ir.metrix.sdk.NoProguard  
-    -keep class * implements ir.metrix.sdk.NoProguard { *; }  
-    -keep interface * extends ir.metrix.sdk.NoProguard { *; }  
-    -keep class ir.metrix.sdk.network.model.** { *; }
+-keepclassmembers enum * { *; }  
+-keep class **.R$* { *; }  
+-keep interface ir.metrix.sdk.NoProguard  
+-keep class * implements ir.metrix.sdk.NoProguard { *; }  
+-keep interface * extends ir.metrix.sdk.NoProguard { *; }  
+-keep class ir.metrix.sdk.network.model.** { *; }
 
-    # retrofit  
-    # Retain service method parameters when optimizing.  
-    -keepclassmembers,allowshrinking,allowobfuscation interface * {  
-        @retrofit2.http.* <methods>;  
-    }  
+# retrofit  
+# Retain service method parameters when optimizing.  
+-keepclassmembers,allowshrinking,allowobfuscation interface * {  
+    @retrofit2.http.* <methods>;  
+}  
   
-    # Ignore JSR 305 annotations for embedding nullability information.  
-    -dontwarn javax.annotation.**  
+# Ignore JSR 305 annotations for embedding nullability information.  
+-dontwarn javax.annotation.**  
   
-    # Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.  
-    -dontwarn kotlin.Unit  
+# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.  
+-dontwarn kotlin.Unit  
   
-    # Top-level functions that can only be used by Kotlin.  
-    -dontwarn retrofit2.-KotlinExtensions  
+# Top-level functions that can only be used by Kotlin.  
+-dontwarn retrofit2.-KotlinExtensions  
   
-    # With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy  
-    # and replaces all potential values with null. Explicitly keeping the interfaces prevents this.  
-    -if interface * { @retrofit2.http.* <methods>; }  
-    -keep,allowobfuscation interface <1>  
+# With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy  
+# and replaces all potential values with null. Explicitly keeping the interfaces prevents this.  
+-if interface * { @retrofit2.http.* <methods>; }  
+-keep,allowobfuscation interface <1>  
   
-    #OkHttp  
-    # A resource is loaded with a relative path so the package of this class must be preserved.  
-    -keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase  
+#OkHttp  
+# A resource is loaded with a relative path so the package of this class must be preserved.  
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase  
   
-    # Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.  
-    -dontwarn org.codehaus.mojo.animal_sniffer.*  
+# Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.  
+-dontwarn org.codehaus.mojo.animal_sniffer.*  
   
-    # OkHttp platform used only on JVM and when Conscrypt dependency is available.  
-    -dontwarn okhttp3.internal.platform.ConscryptPlatform  
+# OkHttp platform used only on JVM and when Conscrypt dependency is available.  
+-dontwarn okhttp3.internal.platform.ConscryptPlatform  
   
   
   
-    #Gson  
-    # Gson specific classes  
-    -dontwarn sun.misc.**  
-    #-keep class com.google.gson.stream.** { *; }  
+#Gson  
+# Gson specific classes  
+-dontwarn sun.misc.**  
+#-keep class com.google.gson.stream.** { *; }  
   
-    # Prevent proguard from stripping interface information from TypeAdapterFactory,  
-    # JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)  
-    -keep class * implements com.google.gson.TypeAdapterFactory  
-    -keep class * implements com.google.gson.JsonSerializer  
-    -keep class * implements com.google.gson.JsonDeserializer
-    #gms
-    -keep class com.google.android.gms.** { *; }
-    
-    -dontwarn android.content.pm.PackageInfo
+# Prevent proguard from stripping interface information from TypeAdapterFactory,  
+# JsonSerializer, JsonDeserializer instances (so they can be used in @JsonAdapter)  
+-keep class * implements com.google.gson.TypeAdapterFactory  
+-keep class * implements com.google.gson.JsonSerializer  
+-keep class * implements com.google.gson.JsonDeserializer
+#gms
+-keep class com.google.android.gms.** { *; }
+
+-dontwarn android.content.pm.PackageInfo
 ```
+
 
 4. Since the 1st of August of 2014, apps in the Google Play Store must use the  [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en)  to uniquely identify devices. To allow the Metrix SDK to use the Google Advertising ID, you must integrate the  [Google Play Services](http://developer.android.com/google/play-services/setup.html). If you haven't done this yet, follow these steps:
 
 
 - Open the `build.gradle` file of your app and find the `dependencies` block. Add the following line:
 
-      ```groovy
-      implementation 'com.google.android.gms:play-services-analytics:16.0.7'
-      ```
+```groovy
+implementation 'com.google.android.gms:play-services-analytics:16.0.7'
+```
 
-      **Note**: The Metrix SDK is not tied to any specific version of the `play-services-analytics` part of the Google Play Services library, so feel free to always use the latest version of it (or whichever you might need).
+**Note**: The Metrix SDK is not tied to any specific version of the `play-services-analytics` part of the Google Play Services library, so feel free to always use the latest version of it (or whichever you might need).
 
   - **Skip this step if you are using version 7 or later of Google Play Services**: In the Package Explorer open the `AndroidManifest.xml` of your Android project. Add the following `meta-data` tag inside the `<application>` element.
 
@@ -116,11 +117,11 @@ implementation 'ir.metrix:metrix:0.9.1'
 
 5. Please add the following permissions, which the Metrix SDK needs, if they are not already present in your `AndroidManifest.xml` file:
   
-```xml  
-    <uses-permission android:name="android.permission.INTERNET" />  
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->  
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->  
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!--optional-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--optional-->
 ```
 
 (Two last permissions are optional)  
@@ -211,16 +212,16 @@ You need to initialize the Metrix SDK in `onCreate` method of your `Application`
   
 4. In `onCreate` method of your `Application` class, initialize Metrix according to the codes below:
 ```java 
-    import ir.metrix.sdk.Metrix;  
+import ir.metrix.sdk.Metrix;  
+
+public class MyApplication extends Application {  
   
-    public class MyApplication extends Application {  
-  
-        @Override  
-        public void onCreate() {  
-            super.onCreate();  
-            Metrix.initialize(this, “app id”);  
-        }  
+    @Override  
+    public void onCreate() {  
+        super.onCreate();  
+        Metrix.initialize(this, “app id”);  
     }  
+}  
 ``` 
   
 Replace `APP_ID` with your application id. You can find that in your Metrix dashboard.  
