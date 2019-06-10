@@ -32,7 +32,7 @@ implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
 implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 ```
 
-۳.اگر از پروگارد برای ماینیفای کردن اپلیکیشن خود استفاده میکنید تنظیمات زیر را به `Asset/Plugins/Android/proguard-user.txt` پروژه خود اضافه کنید:
+۳. اگر از پروگارد برای ماینیفای کردن اپلیکیشن خود استفاده میکنید تنظیمات زیر را به `Asset/Plugins/Android/proguard-user.txt` پروژه خود اضافه کنید:
 
 ```
 #Unity Player
