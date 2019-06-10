@@ -12,7 +12,8 @@ toc: true # table of contents
 1. Download the latest version from [our releases page](https://storage.backtory.com/metricx/sdk-unity/MetrixSDK-v0.9.1.unitypackage).
 Open your project in the Unity Editor and navigate to Assets → Import Package → Custom Package and select the downloaded Unity package file.
   
-2. Add the following libraries to the `dependencies` section of your `Asset/Plugins/Android/mainTemplate.gradle` file:  
+2. Add the following libraries to the `dependencies` section of your `Asset/Plugins/Android/mainTemplate.gradle` file:
+
 ```groovy
 
     implementation fileTree(dir: 'libs', include: [‘*.jar'])
@@ -31,9 +32,9 @@ Open your project in the Unity Editor and navigate to Assets → Import Package 
 
     implementation 'com.google.android.gms:play-services-analytics:16.0.7'
 
-```  
-
+```
   
+
 3. If you are using Proguard, add these lines to your `Proguard` file: 
   
 ```      
