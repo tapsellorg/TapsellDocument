@@ -135,14 +135,12 @@ In order to support this in your app, please make sure you have the following li
 
 ```groovy
 implementation 'com.android.installreferrer:installreferrer:1.0'
-
 ```
 
 Also, make sure that you have paid attention to the Proguard chapter and that you have added all the rules mentioned in it, especially the one needed for this feature:
 
 ```
 -keep public class com.android.installreferrer.** { *; }
-
 ```
 
 ### Google Play Store intent
