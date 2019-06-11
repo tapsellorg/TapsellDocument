@@ -27,6 +27,7 @@ pod 'MetrixSdk', '1.0.1'
 
 همچنین شما مي‌توانيد SDK متريکس را به عنوان يک framework به پروژه خود اضافه کنيد.
 
+از [اینجا](https://github.com/metrixorg/MetrixSDK-iOS) دانلود نماید.
 `MetrixSdk.framework.zip`
 از iOS 8 اپل فريم‌ورکهاي پويا (dynamic frameworks يا embedded frameworks) را معرفي کرده است. اگر برنامه‌ شما iOSهاي با نسخه 8 يا بالاتر را هدف‌گذاري کرده است، مي‌توانيد از فريم‌ورک پوياي متريکس استفاده کنيد.
 
