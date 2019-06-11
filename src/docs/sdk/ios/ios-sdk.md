@@ -8,7 +8,7 @@ toc: true # table of contents
 
 ## تنظيمات اوليه در پروژه
 
-در [اینجا](https://github.com/metrixorg/MetrixSDK-iOS) پروژه نمونه وجود دارد می‌توانید نحوه استفاده از متریکس را در این پروژه ببینید.
+در [اینجا](https://github.com/metrixorg/MetrixSDK-iOSSample) پروژه نمونه وجود دارد می‌توانید نحوه استفاده از متریکس را در این پروژه ببینید.
 
 ### پياده‌سازي
 
