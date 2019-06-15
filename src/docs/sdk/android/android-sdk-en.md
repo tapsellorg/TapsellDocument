@@ -29,7 +29,7 @@ allprojects{
 2\. Add the following library to the `dependencies` section of your `gradle` file:
 
 ```groovy
-implementation 'ir.metrix:metrix:0.9.1'
+implementation 'ir.metrix:metrix:0.9.2'
 ```
 
 3\. Add the following settings to your project's `Proguard` file:
@@ -42,10 +42,10 @@ implementation 'ir.metrix:metrix:0.9.1'
 
 -keepclassmembers enum * { *; }
 -keep class **.R$* { *; }
--keep interface ir.metrix.sdk.NoProguard
--keep class * implements ir.metrix.sdk.NoProguard { *; }
--keep interface * extends ir.metrix.sdk.NoProguard { *; }
--keep class ir.metrix.sdk.network.model.** { *; }
+
+#Metrix
+-keep class ir.metrix.sdk.** { *; }
+
 
 # retrofit
 # Retain service method parameters when optimizing.
