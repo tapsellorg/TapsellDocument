@@ -21,7 +21,7 @@ toc: true # table of contents
 
 (دو permission دوم اختیاری است)
 
-## ۲. دریافت اطلاعات Install Referrer
+## دریافت اطلاعات Install Referrer
 
 برای افزایش دقت تشخیص اتریبیوشن نصب‌های اپلیکیشن شما، متریکس نیازمند اطلاعاتی درباره `referrer` نصب اپلیکیشن است. این اطلاعات می‌تواند از طریق سرویس ارائه شده توسط کتابخانه **Google Play Referrer API** و یا دریافت **Google Play Store intent** با استفاده از یک **broadcast receiver** به دست آید.
 
