@@ -192,7 +192,7 @@ attributes["product_name"] =  "shirt";
 attributes["type"] =  "sport";
 attributes["size"] =  "large";
 
-Map<String, Double> metrics = new Map<>();
+Map<String, Double> metrics = new Map();
 metrics["price"] =  100000.0;
 
 Metrix.newEvent("purchase_event_slug", attributes, metrics);
