@@ -222,7 +222,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Metrix.initialize(this, "app id");
+        Metrix.initialize(this, "APP_ID");
     }
 }
 ```

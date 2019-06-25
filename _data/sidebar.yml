@@ -50,3 +50,6 @@ fa:
 
       - name: React Native
         link: /sdk/react-native
+
+      - name: Flutter
+        link: /sdk/flutter
