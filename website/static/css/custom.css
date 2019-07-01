@@ -5,262 +5,312 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-  html {
-    direction: rtl;
-  }
+@font-face {
+  font-family: noto;
+  src: url(../font/NotoNaskhArabic-Regular.ttf);
+  font-weight: normal;
+}
 
-  body {
-    direction: rtl;
-  }
+html {
+  font-family: noto;
+  direction: rtl;
+}
 
-  .postHeaderTitle {
-    direction: rtl;
-  }
+body {
+  font-family: noto;
+  direction: rtl;
+}
 
-  .hljs {
-    direction: ltr;
-    text-align: left;
-  }
+/**
+ * Copyright (c) 2017-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
-  blockquote {
-    border-right: 8px solid #ffe564;
-    border-left: 0px solid #00000000;
-    padding: 15px 15px 15px 30px;
-  }
+/* "Copy" code block button */
 
-  .collapsible .arrow {
-    float: left;
-    margin-left: 8px;
-    transform: rotate(-90deg);
-  }
+pre {
+  position: relative;
+}
 
-  .collapsible .arrow.rotate {
-    transform: rotate(-180deg);
-  }
-  
-  .mainContainer .wrapper {
-    text-align: right;
-  }
+pre .btnIcon {
+  direction: ltr;
+  position: absolute;
+  top: 4px;
+  z-index: 2;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0;
+  color: #fff;
+  background-color: transparent;
+  height: 30px;
+  transition: all 0.25s ease-out;
+}
 
+pre .btnIcon:hover {
+  text-decoration: none;
+}
+
+.btnIcon__body {
+  align-items: center;
+  display: flex;
+}
+
+.btnIcon svg {
+  fill: currentColor;
+  margin-right: 0.4em;
+}
+
+.btnIcon__label {
+  font-size: 11px;
+}
+
+.btnClipboard {
+  right: 10px;
+}
+
+.hash-link {
+  margin-right: -20px;
+  padding-left: 4px;
+  margin-left: 0;
+  padding-right: 0
+}
+
+.postHeaderTitle {
+  direction: rtl;
+}
+
+.hljs {
+  direction: ltr;
+  text-align: left;
+}
+
+blockquote {
+  border-right: 8px solid #ffe564;
+  border-left: 0px solid #00000000;
+  padding: 15px 15px 15px 30px;
+}
+
+.collapsible .arrow {
+  float: left;
+  margin-left: 8px;
+  transform: rotate(-90deg);
+}
+
+.collapsible .arrow.rotate {
+  transform: rotate(-180deg);
+}
+
+.mainContainer .wrapper {
+  text-align: right;
+}
+
+.docs-next {
+  float: left;
+}
+
+.docs-prev {
+  float: right;
+}
+
+@media only screen and (max-width: 735px) {
   .docs-next {
-    float: left;
-  }
-  
-  .docs-prev {
+    clear: both;
     float: right;
+    margin: 10px 0;
   }
-
-  @media only screen and (max-width: 735px) {
-    .docs-next {
-      clear: both;
-      float: right;
-      margin: 10px 0;
-    }
-
-    .docs-prev {
-      margin: 10px 0;
-      float: left;
-    }
-
-    .arrow-next {
-      float: left;
-      margin-right: 10px;
-    }
-  
-    .arrow-prev {
-      float: right;
-      margin-left: 10px;
-    }
-  }
-
-  .mainContainer .wrapper .post .docPagination .pagingNext {
+  .docs-prev {
+    margin: 10px 0;
     float: left;
-    text-align: left;
-  }  
+  }
+  .arrow-next {
+    float: left;
+    margin-right: 10px;
+  }
+  .arrow-prev {
+    float: right;
+    margin-left: 10px;
+  }
+}
 
-  .testimonials img {
-    border-radius: 50%;
-  }
-  
-  table td:first-child > code {
-    white-space: nowrap;
-  }
-  
-  .showcase {
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
+.mainContainer .wrapper .post .docPagination .pagingNext {
+  float: left;
+  text-align: left;
+}
+
+.testimonials img {
+  border-radius: 50%;
+}
+
+table td:first-child>code {
+  white-space: nowrap;
+}
+
+.showcase {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.showcase .link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.showcase .link:hover {
+  text-decoration: underline;
+}
+
+.showcase .link .caption {
+  line-height: 20px;
+  height: 20px;
+}
+
+.showcase .link img {
+  max-height: 110px;
+  padding: 20px;
+  width: 110px;
+  align-self: center;
+}
+
+@media only screen and (max-width: 735px) {
   .showcase .link {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 180px;
-    margin: 5px;
-    padding: 5px;
+    height: 134px;
   }
-  
-  .showcase .link:hover {
-    text-decoration: underline;
-  }
-  
-  .showcase .link .caption {
-    line-height: 20px;
-    height: 20px;
-  }
-  
   .showcase .link img {
-    max-height: 110px;
+    max-height: 64px;
     padding: 20px;
-    width: 110px;
-    align-self: center;
+    width: 64px;
   }
-  
-  @media only screen and (max-width: 735px) {
-    .showcase .link {
-      height: 134px;
-    }
-  
-    .showcase .link img {
-      max-height: 64px;
-      padding: 20px;
-      width: 64px;
-    }
+}
+
+.announcement {
+  background-color: #20232a;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 48px;
+  margin: 0 auto -40px;
+  text-align: center;
+}
+
+.announcement-inner {
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.index-hero {
+  background-color: #2b3137;
+  padding: 48px;
+}
+
+.index-hero-inner {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.index-hero-project-tagline {
+  color: #fff;
+  font-size: 64px;
+  margin: 0;
+}
+
+.index-hero-project-keywords {
+  color: $primaryColor
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
   }
-  
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.index-hero-logo {
+  animation-duration: 2s;
+  animation-name: jackInTheBox;
+  float: right;
+  margin-top: 20px;
+  padding: 20px;
+  padding-right: 0;
+}
+
+.index-ctas {
+  margin-top: 24px;
+}
+
+.index-ctas-get-started-button {
+  border-radius: 8px;
+  border-width: 2px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 24px;
+  padding: 18px 36px;
+}
+
+.index-ctas-github-button {
+  vertical-align: sub;
+}
+
+@media only screen and (max-width: 768px) {
   .announcement {
-    background-color: #20232a;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 48px;
-    margin: 0 auto -40px;
+    font-size: 18px;
+    padding: 20px;
+  }
+  .index-hero {
+    padding: 20px;
+  }
+  .index-hero-inner {
+    padding: 0;
+  }
+  .index-hero-project-tagline {
+    font-size: 36px;
     text-align: center;
   }
-  
-  .announcement-inner {
-    margin: 0 auto;
-    max-width: 768px;
-  }
-  
-  .index-hero {
-    background-color: #2b3137;
-    padding: 48px;
-  }
-  
-  .index-hero-inner {
-    margin: 0 auto;
-    max-width: 1100px;
-    padding: 0 20px;
-  }
-  
-  .index-hero-project-tagline {
-    color: #fff;
-    font-size: 64px;
-    margin: 0;
-  }
-  
-  .index-hero-project-keywords {
-    color: $primaryColor;
-  }
-  
-  @keyframes jackInTheBox {
-    from {
-      opacity: 0;
-      transform: scale(0.1) rotate(30deg);
-      transform-origin: center bottom;
-    }
-  
-    50% {
-      transform: rotate(-10deg);
-    }
-  
-    70% {
-      transform: rotate(3deg);
-    }
-  
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
   .index-hero-logo {
-    animation-duration: 2s;
-    animation-name: jackInTheBox;
-    float: right;
-    margin-top: 20px;
-    padding: 20px;
-    padding-right: 0;
+    display: block;
+    float: none;
+    margin: 0 auto;
   }
-  
   .index-ctas {
-    margin-top: 24px;
+    text-align: center;
   }
-  
-  .index-ctas-get-started-button {
-    border-radius: 8px;
-    border-width: 2px;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    margin-right: 24px;
-    padding: 18px 36px;
-  }
-  
   .index-ctas-github-button {
-    vertical-align: sub;
+    display: none;
   }
-  
-  @media only screen and (max-width: 768px) {
-    .announcement {
-      font-size: 18px;
-      padding: 20px;
-    }
-  
-    .index-hero {
-      padding: 20px;
-    }
-  
-    .index-hero-inner {
-      padding: 0;
-    }
-  
-    .index-hero-project-tagline {
-      font-size: 36px;
-      text-align: center;
-    }
-  
-    .index-hero-logo {
-      display: block;
-      float: none;
-      margin: 0 auto;
-    }
-  
-    .index-ctas {
-      text-align: center;
-    }
-  
-    .index-ctas-github-button {
-      display: none;
-    }
+}
+
+.imageAlignTop .blockImage {
+  max-width: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+  .gridBlock .blockElement.imageAlignTop {
+    margin-bottom: 80px;
   }
-  
-  .imageAlignTop .blockImage {
-    max-width: 60%;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .gridBlock .blockElement.imageAlignTop {
-      margin-bottom: 80px;
-    }
-  }
-  
-  .docImage {
-    margin: 3rem auto;
-    max-width: 400px;
-  }
-  
+}
+
+.docImage {
+  margin: 3rem auto;
+  max-width: 400px
+}
