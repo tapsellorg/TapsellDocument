@@ -21,6 +21,21 @@ body {
   direction: rtl;
 }
 
+@media only screen and (min-width: 1024px) {
+
+  .docMainWrapper > *:first-child {
+    margin-right: 0;
+    margin-left: 24px;
+  }
+
+  .docMainWrapper > *:last-child {
+    margin-left: 0;
+    margin-right: 24px;
+  }
+
+  
+}
+
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
  *
