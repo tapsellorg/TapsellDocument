@@ -10,7 +10,7 @@ toc: true # table of contents
 
 پس از ورود به حساب کاربری، روی علامت سه‌نقطه گوشه بالای عنوان اپلیکیشن کلیک کرده و وارد صفحه تنظیمات شوید. در منوی «ترکرها» / **trackers** روی دکمه «افزودن ترکر» / **add tracker** کلیک کنید و فیلدهای مربوطه را تکمیل کنید.
 
-<img src="/images/create-tracker.png" alt="tracker generation window"/>
+<img src="{{ '/images/create-tracker.png' | relative_url }}" alt="tracker generation window"/>
 
 ## هنگام ساخت ترکر جدید، لینک‌های ریدایرکت چطور باید تکمیل شوند؟
 
