@@ -29,19 +29,10 @@ allprojects{
 ۲. کتاب خانه زیر را در قسمت `dependencies` فایل `gradle` اپلیکیشن خود اضافه کنید:
 
 ```groovy
-implementation 'ir.metrix:metrix:0.9.1'
+implementation 'ir.metrix:metrix:0.9.2'
 ```
 
-۳. آپشن زیر را به بلاک `android` فایل `gradle` اپلیکیشن خود اضافه کنید:
-
-```groovy
-compileOptions {
-    targetCompatibility = "8"
-    sourceCompatibility = "8"
-}
-```
-
-۴. تنظیمات زیر را به `Proguard` پروژه خود اضافه کنید:
+۳. تنظیمات زیر را به `Proguard` پروژه خود اضافه کنید:
 
 ```
 -keepattributes Signature
@@ -51,10 +42,10 @@ compileOptions {
 
 -keepclassmembers enum * { *; }
 -keep class **.R$* { *; }
--keep interface ir.metrix.sdk.NoProguard
--keep class * implements ir.metrix.sdk.NoProguard { *; }
--keep interface * extends ir.metrix.sdk.NoProguard { *; }
--keep class ir.metrix.sdk.network.model.** { *; }
+
+#Metrix
+-keep class ir.metrix.sdk.** { *; }
+
 
 # retrofit
 # Retain service method parameters when optimizing.
@@ -104,7 +95,7 @@ compileOptions {
 -dontwarn android.content.pm.PackageInfo
 ```
 
-۵. متریکس برای تشخیص دستگاه های یکتا از **google advertising id** استفاده می‌کند، برای اینکه متریکس بتواند از این ویژگی استفاده کند باید طبق زیر کتابخانه آن را به قسمت `dependencies` فایل `build.gradle` اضافه کنید:
+۴. متریکس برای تشخیص دستگاه های یکتا از **google advertising id** استفاده می‌کند، برای اینکه متریکس بتواند از این ویژگی استفاده کند باید طبق زیر کتابخانه آن را به قسمت `dependencies` فایل `build.gradle` اضافه کنید:
 
 ```groovy
 implementation 'com.google.android.gms:play-services-analytics:16.0.7'
@@ -117,7 +108,7 @@ implementation 'com.google.android.gms:play-services-analytics:16.0.7'
         android:value="@integer/google_play_services_version" />
 ```
 
-۶. برای کتابخانه `Metrix` لازم است تا دسترسی‌های زیر را به فایل `AndroidManifest.xml` اضافه کنید:
+۵. برای کتابخانه `Metrix` لازم است تا دسترسی‌های زیر را به فایل `AndroidManifest.xml` اضافه کنید:
 
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -225,7 +216,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Metrix.initialize(this, “app id”);
+        Metrix.initialize(this, "APP_ID");
     }
 }
 ```
