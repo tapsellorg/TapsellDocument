@@ -92,7 +92,7 @@ global_vars:
   docs_url: https://metrix.ir/docs
   site_name: Metrix
   get_demo_url: https://dashboard.metrix.ir/login/demo
-  terms_url: https://dashboard.metrix.ir/login/terms
+  terms_url: https://metrix.ir/terms
   header_logo_alt: Metrix Docs
   contact_email: info@metrix.ir
   footer_logo_alt: Metrix
