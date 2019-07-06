@@ -25,7 +25,9 @@ public class MyApplication extends Application {
 در فایل `AndroidManifest.xml` باید کلاسی که ساختید را مطابق کد زیر به تگ `application` اضافه کنید.
 
 ```xml
-android:name=".MyApplication"
+<application
+    android:name=".MyApplication"
+    >
 ```
 
 ### مقداردهی تپسل
