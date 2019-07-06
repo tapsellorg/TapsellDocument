@@ -1,7 +1,8 @@
 {
   "docs": {
-    "اندروید": ["standard_banner"],
-    "یونیتی": ["doc2"],
+    "اندروید": ["android_initialize"],
+    "یونیتی": ["doc1"],
+    "جی اس": ["doc2"],
     "بیسیک": ["doc3"]
   },
   "docs-other": {
