@@ -48,6 +48,11 @@ body {
   padding: 8px 20px 0 0;
 }
 
+.arrow-next, .arrow-prev {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
  *
