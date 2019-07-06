@@ -86,7 +86,7 @@ const siteConfig = {
   scripts: [
     'https://buttons.github.io/buttons.js',
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
-    '/js/code-blocks-buttons.js',
+    '/TapsellDocument/js/code-blocks-buttons.js',
   ],
 
   // On page navigation for the current documentation page.
