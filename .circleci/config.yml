@@ -8,6 +8,7 @@ aliases:
         - master
 
 version: 2
+
 jobs:
   deploy-website:
     docker:
@@ -26,7 +27,8 @@ jobs:
 
 workflows:
   version: 2
+
   build_and_deploy:
     jobs:
-      - deploy-website:
+      - deploy-website
         filters: *filter-only-master
