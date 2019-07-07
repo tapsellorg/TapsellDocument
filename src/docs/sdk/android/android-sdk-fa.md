@@ -471,3 +471,9 @@ attributionModel.getAttributionStatus() // وضعیت کاربر در کمپین
 ```java
 Metrix.getInstance().setDefaultTracker(trackerToken);
 ```
+### ۲۰. امضاء sdk
+
+اگر شما قابلیت sdk signature در دشبورد خود فعال کنید و به app secret ها دسترسی دارید برای استفاده از آن از متد زیر استفاده کنید:
+```java
+Metrix.getInstastance().setAppSecret(secretId, info1, info2, info3, info4);
+```
