@@ -1,6 +1,6 @@
 {
   "docs": {
-    "اندروید": ["android_initialize"],
+    "اندروید": ["android_initialize", "android_rewarded_interstitial"],
     "یونیتی": ["doc1"],
     "جی اس": ["doc2"],
     "بیسیک": ["doc3"]
