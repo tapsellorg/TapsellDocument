@@ -20,6 +20,14 @@ body {
   font-family: noto;
   direction: rtl;
 }
+table {
+  display: table;
+}
+
+table th,
+table td {
+  text-align: center;
+}
 
 @media only screen and (min-width: 1024px) {
 
