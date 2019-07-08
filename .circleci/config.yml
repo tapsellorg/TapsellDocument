@@ -2,6 +2,10 @@ version: 2
 
 jobs:
   deploy-website:
+    branches:
+      only:
+        - master
+        
     docker:
       # specify the version you desire here
       - image: circleci/node:8.11.1
