@@ -29,7 +29,7 @@ allprojects{
 ۲. کتاب خانه زیر را در قسمت `dependencies` فایل `gradle` اپلیکیشن خود اضافه کنید:
 
 ```groovy
-implementation 'ir.metrix:metrix:0.9.2'
+implementation 'ir.metrix:metrix:0.10.0'
 ```
 
 ۳. تنظیمات زیر را به `Proguard` پروژه خود اضافه کنید:
