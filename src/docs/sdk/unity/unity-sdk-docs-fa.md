@@ -8,7 +8,7 @@ toc: true # table of contents
 
 ## تنظیمات اولیه در پروژه
 
-۱. ابتدا کتابخانه‌ متریکس را از [این لینک](https://storage.backtory.com/metricx/sdk-unity/MetrixSDK-v0.9.2.unitypackage) دانلود کنید و در پروژه خود import کنید.
+۱. ابتدا کتابخانه‌ متریکس را از [این لینک](https://storage.backtory.com/metricx/sdk-unity/MetrixSDK-v0.11.0.unitypackage) دانلود کنید و در پروژه خود import کنید.
 
 ۲. دسترسی های زیر را به فایل `AndroidManifest.xml` موجود در فولدر `Plugins/Android` پروژه خود اضافه کنید:
 

@@ -8,7 +8,7 @@ toc: true # table of contents
 
 ## Basic integration
 
-1\. Download the latest version from [our releases page](https://storage.backtory.com/metricx/sdk-unity/MetrixSDK-v0.9.2.unitypackage).
+1\. Download the latest version from [our releases page](https://storage.backtory.com/metricx/sdk-unity/MetrixSDK-v0.11.0.unitypackage).
 Open your project in the Unity Editor and navigate to Assets → Import Package → Custom Package and select the downloaded Unity package file.
 
 2\. Please add the following permissions, which the Metrix SDK needs, if they are not already present in your `AndroidManifest.xml` file in `Plugins/Android` folder:
