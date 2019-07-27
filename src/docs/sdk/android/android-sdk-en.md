@@ -468,6 +468,7 @@ If you want to use the Metrix SDK to recognize users whose devices came with you
 ```java
 Metrix.getInstance().setDefaultTracker(trackerToken);
 ```
+<<<<<<< HEAD
 ### Sdk signature
 An account manager must activate the Metrix SDK Signature.
 
@@ -477,3 +478,119 @@ An App Secret is set by calling setAppSecret on your config instance:
 ```java
 Metrix.getInstastance().setAppSecret(secretId, info1, info2, info3, info4);
 ```
+=======
+## Deep linking
+
+### Deep linking Overview
+
+If you are using Metrix tracker URLs with deeplinking enabled, it is possible to receive information about the deeplink URL and its content. Users may interact with the URL regardless of whether they have your app installed on their device (standard deep linking scenario) or not (deferred deep linking scenario). In the standard deep linking scenario, the Android platform natively offers the possibility for you to receive deep link content information. The Android platform does not automatically support deferred deep linking scenario; in this case, the Metrix SDK offers the mechanism you need to get the information about the deep link content.
+
+### Standard deep linking scenario
+
+If a user has your app installed and you want it to launch after they engage with an Metrix tracker URL with the `deep_link` parameter in it, enable deeplinking in your app. This is done by choosing a desired **unique scheme name**. You'll assign it to the activity you want to launch once your app opens following a user selecting the tracker URL in the`AndroidManifest.xml` file. Add the `intent-filter` section to your desired activity definition in the manifest file and assign an `android:scheme` property value with the desired scheme name:
+
+```xml
+<activity
+    android:name=".MainActivity"
+    android:configChanges="orientation|keyboardHidden"
+    android:label="@string/app_name"
+    android:screenOrientation="portrait">
+
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="metrixExample" />
+    </intent-filter>
+</activity>
+```
+Deeplink content information within your desired activity is delivered via the `Intent` object, via either the activity's `onCreate` or `onNewIntent` methods. Once you've launched your app and have triggered one of these methods, you will be able to receive the actual deeplink passed in the `deep_link` parameter in the click URL. You can then use this information to conduct some additional logic in your app.
+
+You can extract deeplink content from either two methods like so:
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    Intent intent = getIntent();
+    Uri data = intent.getData();
+}
+```
+
+```java
+@Override
+protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+
+    Uri data = intent.getData();
+}
+```
+
+### Deferred deep linking scenario
+
+Deferred deeplinking scenario occurs when a user clicks on an Metrix tracker URL with a `deep_link` parameter contained in it, but does not have the app installed on the device at click time. When the user clicks the URL, they will be redirected to the Play Store to download and install your app. After opening it for the first time, `deep_link` parameter content will be delivered to your app.
+
+The Metrix SDK opens the deferred deep link by default. There is no extra configuration needed.
+
+#### Deferred deep linking callback
+
+If you wish to control if the Metrix SDK will open the deferred deep link, you can do it with a callback method in the config object.
+
+
+```java
+Metrix.getInstance().setOnDeeplinkResponseListener(new OnDeeplinkResponseListener() {
+    @Override
+    public boolean launchReceivedDeeplink(Uri deeplink) {
+        // ...
+        if (shouldMetrixSdkLaunchTheDeeplink(deeplink)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+});
+```
+
+After the Metrix SDK receives the deep link information from our backend, the SDK will deliver you its content via the listener and expect the `boolean` return value from you. This return value represents your decision on whether or not the Metrix SDK should launch the activity to which you have assigned the scheme name from the deeplink (like in the standard deeplinking scenario).
+
+If you return `true`, we will launch it, triggering the scenario described in the Standard deep linking scenario chapter. If you do not want the SDK to launch the activity, return `false` from the listener, and (based on the deep link content) decide on your own what to do next in your app.
+
+### Reattribution via deeplinks
+
+Metrix enables you to run re-engagement campaigns with deeplinks. For more information.
+
+If you are using this feature, you need to make one additional call to the Metrix SDK in your app for us to properly reattribute your users.
+
+Once you have received the deeplink content in your app, add a call to the `Metrix.getInstance().appWillOpenUrl(Uri)` method. By making this call, the Metrix SDK will send information to the Metrix backend to check if there is any new attribution information inside of the deeplink. If your user is reattributed due to a click on the Metrix tracker URL with deeplink content.
+
+Here's how the call to `Metrix.getInstance().appWillOpenUrl(Uri)` should look:
+
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    Intent intent = getIntent();
+    Uri data = intent.getData();
+    Metrix.getInstance().appWillOpenUrl(data);
+}
+```
+
+```java
+@Override
+protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+
+    Uri data = intent.getData();
+    Metrix.getInstance().appWillOpenUrl(data);
+}
+```
+>>>>>>> deeplink

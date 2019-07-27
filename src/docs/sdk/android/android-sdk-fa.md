@@ -471,9 +471,97 @@ attributionModel.getAttributionStatus() // وضعیت کاربر در کمپین
 ```java
 Metrix.getInstance().setDefaultTracker(trackerToken);
 ```
+<<<<<<< HEAD
 ### ۲۰. امضاء sdk
 
 اگر شما قابلیت sdk signature در دشبورد خود فعال کنید و به app secret ها دسترسی دارید برای استفاده از آن از متد زیر استفاده کنید:
 ```java
 Metrix.getInstastance().setAppSecret(secretId, info1, info2, info3, info4);
+=======
+## Deep linking
+### توضیحات
+اگر شما از ترکر های که دیپ‌لینک در آنها فعال است استفاده کنید، می‌توانیداطلاعات url دیپ‌لینک و محتوای آن را دریافت کنید. دستگاه بر اساس نصب بودن اپلیکیشن (سناریو استاندارد) یا نصب نبودن اپلیکیشن (سناریو deferred) واکنش نشان میدهد.
+در صورت نصب بودن اپلیکیشن شما اطلاعات دیپ‌لینک به اپلیکیشن شما ارسال می‌شود.
+پلتفرم اندروید به صورت اتماتیک سناریو deferred را پشتیبانی نمیکند در این صورت متریکس سناریو مخصوص به خود را دارد تا بتواند اطلاعات دیپ‌لینک را به اپلیکیشن ارسال کند.
+### سناریو استاندارد
+اگر کاربران شما اپلیکیشن شما را نصب داشته باشند و شما بخواهید بعد از کلیک بر روی لینک دیپ‌لینک صفحه خاصی از اپلیکیشن شما باز شود ابتدا باید یک scheme name یکتا انتخاب کنید.
+سپس آن را باید به اکتیویتی که قصد دارید در صورت کلیک بر روی دیپ‌لینک کلیک شد اجرا شود نسبت دهید برای این منظور به فایل `AndroinManifest.xml` رفته و بخش `intent-filter` را به اکتیویتی مورد نظر اضافه کنید همچنین scheme name مورد نظر خود را نیز قرار دهید مانند زیر:
+```xml
+<activity
+    android:name=".MainActivity"
+    android:configChanges="orientation|keyboardHidden"
+    android:label="@string/app_name"
+    android:screenOrientation="portrait">
+
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="metrixEample" />
+    </intent-filter>
+</activity>
+```
+اطلاعات دیپ‌لینک در اکتیویتی که آن را تعریف کردید توست یک آبجکت `Intent` درمتد های `onCreate`و `newIntent` قابل دسترس است.
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    Intent intent = getIntent();
+    Uri data = intent.getData();
+}
+```
+```java
+@Override
+protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+
+    Uri data = intent.getData();
+}
+```
+
+### سناریو deferred
+
+این سناریو زمانی رخ می‌هد که کاربر روی دیپ‌لینک کلیک می‌کند ولی اپلیکیشن شما را در زمانی که کلیک کرده روی دستگاه خود نصب نکرده است. وقتی کاربر کلیک کرد به گوگل پلی استور هدایت می‌شود تا اپلیکیشن شما را نصب کند وقتی اپلیکیشن شما را نصب کرد و برای اولین بار آن را باز کرد اطلاعات دیپ‌لینک به اپلیکیشن داده می‌شود. 
+متریکس به صورت پیش‌فرض سناریو deferred را پشتیبانی نمی‌کند و نیاز به تنظیم دارد.
+اگر شما قصد دارید که سناریو deferred را کنترل کنیداز طریق کالبک زیر می‌توانید.
+```java
+Metrix.getInstance().setOnDeeplinkResponseListener(new OnDeeplinkResponseListener() {
+    @Override
+    public boolean launchReceivedDeeplink(Uri deeplink) {
+        // ...
+        if (shouldMetrixSdkLaunchTheDeeplink(deeplink)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+});
+```
+بعد از این که متریکس اطلاعات دیپ‌لینک را از بکند خود دریافت کرد محتوای آن را به کالبک بالا پاس میدهد اگر خروجی متد `lunchReceivedDeeplink` مقدار `true` باشد متریکس به صورت اتماتیک سناریو استاندارد را اجرا میکند ولی اگر مقدار خروجی متد `false` باشد متریکس فقط اطلاعات را در این کالبک قرار میدهد تا شما بر اساس آن اکشن مورد نظر خود را انجام دهید.
+
+### ری‌اتربیوت با دیپ‌لینک
+متریکس ابزار ری‌اتربیوت را برای شما در دیپ‌لینک دارد اگر میخواهید از این ابزار استفاده کنید نیاز است یکی از متد های متریکس را بعد از دریافت دیپ‌لینک صدا بزنید.
+اگر شما اطلاعات دیپ‌لینک را در اپلیکیشن دریافت کردید با صدا زدن `Metrix.getInstance().appWillOpenUrl(Uri)` می‌توانید اطلاعات دیپ‌لینک را به بکند متریکس ارسال کنید تا کاربر دوباره ری‌اتربیوت شود.
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    Intent intent = getIntent();
+    Uri data = intent.getData();
+    Metrix.getInstance().appWillOpenUrl(data);
+}
+```
+```java
+@Override
+protected void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+
+    Uri data = intent.getData();
+    Metrix.getInstance().appWillOpenUrl(data);
+}
+>>>>>>> deeplink
 ```
