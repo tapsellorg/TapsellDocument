@@ -234,3 +234,10 @@ Metrix.newRevenue('my_event_slug', 12000, 0, '2');
 ```dart
 Metrix.setDefaultTracker(trackerToken);
 ```
+
+### ۵. امضاء sdk
+
+اگر شما قابلیت sdk signature در دشبورد خود فعال کنید و به app secret ها دسترسی دارید برای استفاده از آن از متد زیر استفاده کنید:
+```dart
+Metrix.setAppSecret(secretId, info1, info2, info3, info4);
+```

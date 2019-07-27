@@ -220,3 +220,15 @@ If you want to use the Metrix SDK to recognize users whose devices came with you
 ```csharp
 Metrix.SetDefaultTracker("trackerToken");
 ```
+
+### Sdk signature
+
+An account manager must activate the Metrix SDK Signature.
+
+If the SDK signature has already been enabled on your account and you have access to App Secrets in your Metrix Dashboard, please use the method below to integrate the SDK signature into your app.
+
+An App Secret is set by calling setAppSecret on your config instance:
+```csharp
+Metrix.SetAppSecret(secretId, info1, info2, info3, info4);
+```
+
