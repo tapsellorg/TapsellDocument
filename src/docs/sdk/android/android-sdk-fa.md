@@ -471,13 +471,14 @@ attributionModel.getAttributionStatus() // وضعیت کاربر در کمپین
 ```java
 Metrix.getInstance().setDefaultTracker(trackerToken);
 ```
-<<<<<<< HEAD
+
 ### ۲۰. امضاء sdk
 
 اگر شما قابلیت sdk signature در دشبورد خود فعال کنید و به app secret ها دسترسی دارید برای استفاده از آن از متد زیر استفاده کنید:
 ```java
 Metrix.getInstastance().setAppSecret(secretId, info1, info2, info3, info4);
-=======
+```
+
 ## Deep linking
 ### توضیحات
 اگر شما از ترکر های که دیپ‌لینک در آنها فعال است استفاده کنید، می‌توانیداطلاعات url دیپ‌لینک و محتوای آن را دریافت کنید. دستگاه بر اساس نصب بودن اپلیکیشن (سناریو استاندارد) یا نصب نبودن اپلیکیشن (سناریو deferred) واکنش نشان میدهد.
@@ -563,5 +564,4 @@ protected void onNewIntent(Intent intent) {
     Uri data = intent.getData();
     Metrix.getInstance().appWillOpenUrl(data);
 }
->>>>>>> deeplink
 ```
