@@ -51,6 +51,4 @@ toc: true # table of contents
 
 برای استفاده از این سرویس، کافی‌ست لینکی که از متریکس دریافت کرده‌اید در این قسمت قرار دهید:
 
-<img src="{{'/images/tracker.gif' | relative_url }}" alt=" add cafe bazaar tracker"/>
-
-
+<img src="{{'/images/tracker.gif' | relative_url }}" alt=" add cafe bazaar tracker" width="500px" />
