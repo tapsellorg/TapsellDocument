@@ -2,11 +2,16 @@ const argv = require('yargs').argv;
 const config = require('../frasco.config.js');
 const cp = require('child_process');
 const gulp = require('gulp');
+const del = require('del');
 
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-const build = Object.keys(config.tasks).filter(key => config.tasks[key] && !['browsersync', 'watch'].includes(key));
-build.push('jekyll-build');
+const build = [
+  'del-site',
+  ...Object.keys(config.tasks).filter(key => config.tasks[key] && !['browsersync', 'watch'].includes(key)),
+  'jekyll-build',
+  'doc_images'
+];
 
 /**
  * Build the Jekyll Site
@@ -26,9 +31,8 @@ gulp.task('jekyll-build', function(done) {
  * Build task, this will minify the images, compile the sass,
  * bundle the js, but not launch BrowserSync and watch files.
  */
-gulp.task('build', build);
 
-/**
- * Test task, this use the build task.
- */
-gulp.task('test', build);
+gulp.task('del-site', function() {
+  return del(config.jekyll.dest);
+});
+gulp.task('build', build);
