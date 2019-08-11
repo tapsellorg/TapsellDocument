@@ -14,7 +14,8 @@ toc: true # table of contents
 
 در اینجا سه انتخاب دارید تا نحوه اتریبیوت کردن کلیک‌ها را تنظیم کنید. روش‌های **تطبیق دستگاه** یا **Device Matching** ، روش **ردپای دستگاه** یا **Device Fingerprinting** و نیز تنظیمات مربوط به **اتریبیوشن مجدد** یا **Reattribution**. توضیح همگی این تنظیمات در کنار نام آنها آمده است. با این حال برای کسب اطلاعات بیشتر درمورد سازوکار هرکدام از این روش‌ها ، این _بلاگ متریکس_ را بخوانید:
 
-https://blog.metrix.ir/attribution-measurement-methods/
+[روش‌های اندازه‌گیری اتریبیوشن](https://blog.metrix.ir/attribution-measurement-methods/
+)
 
 ## گزارش کلیک‌ها، نصب‌ها و رخدادها را چطور برای هر ترکر مشاهده کنم؟
 
@@ -30,4 +31,15 @@ https://blog.metrix.ir/attribution-measurement-methods/
 
 برای مشاهده این قابلیت، در قسمت **Attribution** نحوه نمایش گزارش‌ها را به صورت **Table** قرار دهید و در ستون‌های جدول، آمار مربوط به این فیچرها را مشاهده و دریافت کنید.
 
+در مطلب زیر در مورد این قابلیت داشبورد ترکر متریکس بیشتر بخوانید:
 
+[رصد حذف اپ و نصب مجدد اپ (Uninstall and Reinstall Tracking)
+](https://blog.metrix.ir/uninstall-and-reinstall-tracking/)
+
+## داشبورد متریکس چطور Reattributed Reinstalls را گزارش می‌کند؟
+
+درصورتی که کمپین تبلیغاتی ریتارگتینگ اجرا کرده باشید و بخواهید بدانید کاربرانی که قبلاً اپلیکیشن شما را حذف کرده و دوباره به اپ بازگشته‌اند از کدام منابع جذب شده‌اند می‌توانید با فعال کردن گزینه **reattribution** در پنجره اتریبیوشن، گزارش‌های مربوط به **reattributed reinstall** را مشاهده و دریافت کنید.
+
+در مورد این قابلیت ترکر متریکس، خواندن مطلب زیر را توصیه می‌کنیم:
+
+[رصد نصب‌های مجدد پس از ریتارگتینگ (Reattributed Reinstalls Tracking)](https://blog.metrix.ir/reattributed-reinstall-tracking/)
