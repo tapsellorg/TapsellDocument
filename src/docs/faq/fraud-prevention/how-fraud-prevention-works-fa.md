@@ -26,3 +26,17 @@ toc: true # table of contents
 ## آمار تقلب‌ها در داشبورد چطور محاسبه می‌شود؟
 
 ازآنجایی که مبنای محاسبه اتریبیوشن، آخرین کلیک هست، داشبورد متریکس می کوشد به آخرین کلیکی برسد که تقلب ندارد و آن را اتریبیوت کند، در غیر این صورت، آن را نصب ارگانیک حساب می‌کند. 
+
+توصیه می‌کنیم برای کسب اطلاعات بیشتر در مورد *تقلب موبایلی* مجموعه بلاگ‌های زیر را بخوانید:
+
+[مقدمه‌ای بر نصب تقلبی](https://blog.metrix.ir/what-is-mobile-ad-fraud/)
+
+[بازیگران بازار و جریان پول](https://blog.metrix.ir/install-fraud-mobile-ad-ecosystem/)
+
+[چطور یک نصب شمارش می‌شود؟](https://blog.metrix.ir/install-fraud-how-attribution-works/)
+
+[انواع تقلب موبایلی- قسمت 1](https://blog.metrix.ir/install-fraud-mobile-fraud-types/)
+
+[انواع تقلب موبایلی- قسمت 2](https://blog.metrix.ir/install-fraud-types-mobile-fraud/)
+
+[چطور با تقلب موبایلی مقابله کنیم؟](https://blog.metrix.ir/install-fraud-how-to-prevent-fraud/)
