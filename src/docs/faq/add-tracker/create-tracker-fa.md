@@ -45,10 +45,9 @@ toc: true # table of contents
 برای آشنایی بیشتر مطلب زیر را بخوانید:
 
 https://blog.metrix.ir/pre-install-tacking-in-telegram-ads-with-metrix/
+
 ## چطور می‌توانم ترکر کافه‌بازار را اضافه کنم؟
 
 برای استفاده از این سرویس، کافی‌ست لینکی که از متریکس دریافت کرده‌اید در این قسمت قرار دهید:
 
-<img src="{{'/images/tracker.gif' | relative_url }}" alt=" add cafe bazaar tracker"/>
-
-
+<img src="{{'/images/tracker.gif' | relative_url }}" alt=" add cafe bazaar tracker" width="500px" />
