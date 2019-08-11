@@ -44,7 +44,9 @@ toc: true # table of contents
 
 برای آشنایی بیشتر مطلب زیر را بخوانید:
 
-https://blog.metrix.ir/pre-install-tacking-in-telegram-ads-with-metrix/
+[متریکس چطور نصب‌های مستقیم حاصل از تبلیغات تلگرامی را شمارش می‌کند؟
+](https://blog.metrix.ir/pre-install-tacking-in-telegram-ads-with-metrix/)
+
 ## چطور می‌توانم ترکر کافه‌بازار را اضافه کنم؟
 
 برای استفاده از این سرویس، کافی‌ست لینکی که از متریکس دریافت کرده‌اید در این قسمت قرار دهید:
