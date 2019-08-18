@@ -35,4 +35,5 @@ gulp.task('jekyll-build', function(done) {
 gulp.task('del-site', function() {
   return del(config.jekyll.dest);
 });
+
 gulp.task('build', build);

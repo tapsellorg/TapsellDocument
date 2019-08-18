@@ -10,9 +10,9 @@
   "prettier.tslintIntegration": false,
   "files.exclude": {
     // "images": true,
-    "css": true,
-    "js": true,
-    ".bundle": true,
-    "vendor": true
+    // "css": true,
+    // "js": true,
+    // ".bundle": true,
+    // "vendor": true
   }
 }
