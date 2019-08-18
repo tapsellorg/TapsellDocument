@@ -36,9 +36,10 @@ a {
 	}
 }
 
+$scroll-bar-width: 7px;
 ::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
+	width: $scroll-bar-width;
+	height: $scroll-bar-width;
 }
 
 ::-webkit-scrollbar-track {

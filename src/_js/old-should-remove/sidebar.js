@@ -3,12 +3,7 @@ import { getUrlVars } from '../utils';
 // this improves the visual experience while interacting with the docs site
 (function() {
   window.addEventListener('load', () => {
-    // const footer = document.querySelector('.footer');
     const sidebar = document.querySelector('.sidebar');
-    // let mobileSidebar = document.querySelector('.sidebar-mobile-wrapper');
-    // let mobileSidebarCurrent = mobileSidebar.querySelector('.current-item');
-    // let mobileSidebarDefault = mobileSidebar.querySelector('[data-id="welcome"]');
-    // let mobileSidebarDisplay = mobileSidebar.querySelector('.mobile-sidebar');
 
     // get hash, if it exists
     if (window.location.hash && window.location.hash.indexOf('section') > -1) {
@@ -28,47 +23,7 @@ import { getUrlVars } from '../utils';
       if (window.innerWidth > 768) {
         sidenavAutoExpand(sidebar);
       }
-      // sidenavAutoExpand(mobileSidebar);
-
-      // for mobile sidebar, if sidebar is set, display proper item
-      // let mobileCurrentElement = mobileSidebar.querySelector('[data-id=' + localStorage.sidenavActive + ']');
-      // if (mobileSidebarDefault && mobileCurrentElement.classList.contains('hidden')) {
-      //   mobileCurrentElement.classList.remove('hidden');
-      //   mobileSidebarDefault.classList.add('hidden');
-      // }
     }
-
-    // Show/hide mobile sidebar
-    // mobileSidebarCurrent.addEventListener('click', function() {
-    //   if (mobileSidebarDisplay.classList.contains('hidden')) {
-    //     mobileSidebarDisplay.classList.remove('hidden');
-    //   } else {
-    //     mobileSidebarDisplay.classList.add('hidden');
-    //   }
-    // });
-
-    function setSidebar() {
-      // if footer is in frame, removed fixed style (otherwise add it, if it doesn't exist)
-      // if (footer.getBoundingClientRect().top - window.innerHeight <= 0 && footer.getBoundingClientRect().top >= window.innerHeight) {
-      //   if (sidebar.classList.contains('fixed')) {
-      //     sidebar.classList.remove('fixed');
-      //   }
-      // } else {
-      //   if (!sidebar.classList.contains('fixed')) {
-      //     sidebar.classList.add('fixed');
-      //   }
-      // }
-      // prevents display problems on very large screens with little content
-      // if (footer.getBoundingClientRect().top <= window.innerHeight) {
-      //   sidebar.style.height = footer.getBoundingClientRect().top - 70 + 'px';
-      // } else {
-      //   sidebar.style.height = null;
-      // }
-    }
-
-    window.addEventListener('scroll', setSidebar);
-    window.addEventListener('load', setSidebar);
-    window.addEventListener('resize', setSidebar);
 
     // allowing opening/closing of subnav elements
     let mainNavItems = Array.from(document.querySelectorAll('#sidebar .sidebar-main-item'));
@@ -88,6 +43,5 @@ import { getUrlVars } from '../utils';
     }
 
     enableAccordion(mainNavItems);
-    // enableAccordion(mobileNavItems);
   });
 })();

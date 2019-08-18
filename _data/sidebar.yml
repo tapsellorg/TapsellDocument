@@ -9,8 +9,8 @@ en:
     #       - name: CI/CD Overview
     #         link: 2.0/about-circleci/
 fa:
-  - name: سوالات متداول
-    icon: m-help
+  - name: مستندات
+    icon: m-sdk
     children:
-      - name: سوالات عمومی
-        link: /faq/general-questions
+      - name: اندروید
+        link: /sdk/android

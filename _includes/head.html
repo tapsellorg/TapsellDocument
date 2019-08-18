@@ -11,35 +11,14 @@
 	<meta http-equiv="refresh" content="0; url={{ page.redirect }}">
 	{% endif %}
 
-	<!-- Google Tag Manager -->
-	<script>(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-KSP8JD3');</script>
-	<!-- End Google Tag Manager -->
-
-	<link href="{{ site.baseurl }}/images/logos/favicon.png" rel="icon" type="image/png" />
+	<link href=" {{ site.baseurl }}/images/logos/favicon.png" rel="icon" type="image/png" />
 
 	<!-- Styles -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" /> -->
-	<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css?v={{ 'now' | date:'%s' }}" />
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/fonts/flaticon/font/flaticon.css?v={{ 'now' | date:'%s' }}" />
-	<!-- TODO: What's this? -->
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" /> -->
+	<link rel="stylesheet" href=" {{ site.baseurl }}/css/main.css?v={{ 'now' | date:'%s' }}" />
+	<link rel="stylesheet" href=" {{ site.baseurl }}/assets/fonts/flaticon/font/flaticon.css?v={{ 'now' | date:'%s' }}" />
 	<!-- End Styles -->
 
-	<!-- TODO: Page title format. Metrix should be in global vars -->
-	<title>{% if page.title %}{{ page.title | escape }} - Metrix{% else %}{{ site.title | escape }} - Metrix{% endif %}</title>
+	<title>{% if page.title %}{{ page.title | escape }} - {{site.site_name}}{% else %}{{ site.title | escape }} -
+		{{site.site_name}}{% endif %}</title>
 
-	<!-- Instant Search CDN links /-->
-	<!-- TODO: setup search -->
-	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2/dist/instantsearch.min.css"> -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2"></script> -->
-	<!-- <link rel="stylesheet" type="text/css"
-				href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2/dist/instantsearch-theme-algolia.min.css">
-	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.0/src/js.cookie.min.js"></script> -->
 </head>
