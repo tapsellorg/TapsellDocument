@@ -1,7 +1,6 @@
 en:
-  - name: FAQ
-    # link: faq
-    icon: m-help
+  - name: SDK
+    icon: m-sdk
     # children:
     #   - name: Introduction
     #     link: 2.0/
@@ -9,7 +8,7 @@ en:
     #       - name: CI/CD Overview
     #         link: 2.0/about-circleci/
 fa:
-  - name: مستندات
+  - name: مستندات فنی
     icon: m-sdk
     children:
       - name: اندروید

@@ -7,10 +7,10 @@
 @import 'general';
 @import 'header';
 
-@import './old-should-remove/spacing';
-@import './old-should-remove/buttons';
-@import './old-should-remove/jquery.navgoco';
-@import './old-should-remove/mobile';
+@import './_oldshouldremove/spacing';
+@import './_oldshouldremove/buttons';
+@import './_oldshouldremove/jquery.navgoco';
+@import './_oldshouldremove/mobile';
 @import 'sidebar';
 @import 'instantsearch';
 
@@ -91,4 +91,4 @@ div.align-center {
 @import 'footer';
 
 // Pages
-@import 'pages/home';
+@import 'home';

@@ -36,7 +36,6 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# theme: minima
 plugins:
   # - jekyll-feed
   - jekyll-seo-tag
@@ -61,6 +60,7 @@ jekyll-minifier:
 # to override the default setting.
 exclude:
   - frasco.config.js
+  - webpack.config.js
   - Gemfile
   - Gemfile.lock
   - gulp_tasks
@@ -71,12 +71,15 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor
   - yarn.lock
-  - assets/fonts/flaticon/font/flaticon.html
+  - .jekyll-cache
+  - src/sass
+  - src/js
+  - src/assets
+
+# keep_files:
+#   - assets
 
 # Global Variables
 global_vars:
