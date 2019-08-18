@@ -1,18 +1,17 @@
 @charset "UTF-8";
 @import 'bootstrap';
-@import 'fonts';
-@import 'variables';
-@import 'mixins';
-@import 'utils';
-@import 'general';
-@import 'header';
-
-@import './_oldshouldremove/spacing';
-@import './_oldshouldremove/buttons';
-@import './_oldshouldremove/jquery.navgoco';
-@import './_oldshouldremove/mobile';
-@import 'sidebar';
-@import 'instantsearch';
+@import 'sass/fonts';
+@import 'sass/variables';
+@import 'sass/mixins';
+@import 'sass/utils';
+@import 'sass/general';
+@import 'sass/header';
+@import 'sass/_oldshouldremove/spacing';
+@import 'sass/_oldshouldremove/buttons';
+@import 'sass/_oldshouldremove/jquery.navgoco';
+@import 'sass/_oldshouldremove/mobile';
+@import 'sass/sidebar';
+@import 'sass/instantsearch';
 
 // General
 
@@ -62,7 +61,7 @@
 }
 
 // Article
-@import 'article';
+@import 'sass/article';
 
 div.align-center {
 	img {
@@ -88,7 +87,8 @@ div.align-center {
 	grid-template-columns: 50% 50%;
 }
 
-@import 'footer';
+@import 'sass/footer';
 
 // Pages
-@import 'home';
+@import 'sass/home';
+@import 'sass/syntax-highlighter-monokai';

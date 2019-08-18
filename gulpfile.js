@@ -26,9 +26,9 @@ const paths = {
     allExceptImages: { watch: ['src/assets/**/*', '!src/assets/images', '!src/assets/images/**/*'], dest: 'assets' },
     images: { watch: 'src/assets/images/**/*', dest: 'assets/images' }
   },
-  sass: { watch: 'src/sass/**/*', dest: 'assets/css' },
+  sass: { watch: ['src/sass/**/*', 'src/style.scss'], dest: 'assets', entry: 'src/style.scss' },
   jekyll: { dest: '._jekyll_build_temp' },
-  js: { entry: 'src/js/bundle.js', dest: 'assets/js' },
+  js: { entry: 'src/js/bundle.js', dest: 'assets' },
   dest: '_site'
 };
 
@@ -68,7 +68,7 @@ gulp.task('clear', function() {
  */
 gulp.task('sass', function() {
   return gulp
-    .src(paths.sass.watch)
+    .src(paths.sass.entry)
     .pipe(sass({ outputStyle: config.sass.outputStyle, includePaths: ['node_modules/bootstrap/scss'] }).on('error', sass.logError))
     .pipe(
       postcss([
