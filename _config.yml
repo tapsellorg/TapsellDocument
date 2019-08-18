@@ -1,20 +1,31 @@
 # Welcome to Jekyll!
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
+########### Global Variables ###########
 title: 'Frasco: Jekyll Starter Project'
 email: your-email@domain.com
 description: >-
   Metrix is a mobile marketing measurement platform that unifies mobile attribution and analytics into one powerful platform.
 baseurl: '' # the subpath of your site, e.g. /docs
-url: 'https://metrix.ir' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://metrix.ir'
 twitter_username: Metrix_ir
 github_username: metrixorg
 site_name: Metrix
+global_vars:
+  landing_url: https://metrix.ir
+  dashboard_url: https://dashboard.metrix.ir
+  blog_url: https://blog.metrix.ir
+  docs_url: https://metrix.ir/docs
+  site_name: Metrix
+  get_demo_url: https://dashboard.metrix.ir/login/demo
+  terms_url: https://metrix.ir/terms
+  header_logo_alt: Metrix Docs
+  contact_email: info@metrix.ir
+  footer_logo_alt: Metrix
+
+########### Condfigurations ###########
+
+# Jekyll Configurations: https://jekyllrb.com/docs/configuration/options/
+source: src/jekyll
 
 # Build settings
 markdown: kramdown
@@ -37,7 +48,6 @@ kramdown:
       start_line: 1
 
 plugins:
-  # - jekyll-feed
   - jekyll-seo-tag
   - jekyll-polyglot
   - jekyll-toc
@@ -55,46 +65,7 @@ jekyll-minifier:
   uglifier_args:
     harmony: true
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude:
-  - frasco.config.js
-  - webpack.config.js
-  - Gemfile
-  - Gemfile.lock
-  - gulp_tasks
-  - gulpfile.js
-  - LICENSE
-  - node_modules
-  - npm-debug.log
-  - package.json
-  - package-lock.json
-  - README.md
-  - vendor
-  - yarn.lock
-  - .jekyll-cache
-  - src/sass
-  - src/js
-  - src/assets
-
-# keep_files:
-#   - assets
-
-# Global Variables
-global_vars:
-  landing_url: https://metrix.ir
-  dashboard_url: https://dashboard.metrix.ir
-  blog_url: https://blog.metrix.ir
-  docs_url: https://metrix.ir/docs
-  site_name: Metrix
-  get_demo_url: https://dashboard.metrix.ir/login/demo
-  terms_url: https://metrix.ir/terms
-  header_logo_alt: Metrix Docs
-  contact_email: info@metrix.ir
-  footer_logo_alt: Metrix
-
-# Translations
+########### Translations ###########
 t:
   en:
     nav:

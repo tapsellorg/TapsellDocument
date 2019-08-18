@@ -9,7 +9,6 @@
   "prettier.singleQuote": true,
   "prettier.tslintIntegration": false,
   "files.exclude": {
-    "._jekyll_build_temp": true,
     ".bundle": true,
     "vendor": true
   }
