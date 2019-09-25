@@ -1,4 +1,6 @@
 @charset "UTF-8";
+
+@import 'sass/color';
 @import 'bootstrap';
 @import 'sass/fonts';
 @import 'sass/variables';
@@ -7,11 +9,14 @@
 @import 'sass/general';
 @import 'sass/header';
 @import 'sass/_oldshouldremove/spacing';
-@import 'sass/_oldshouldremove/buttons';
 @import 'sass/_oldshouldremove/jquery.navgoco';
 @import 'sass/_oldshouldremove/mobile';
 @import 'sass/sidebar';
 @import 'sass/instantsearch';
+@import 'sass/footer';
+
+@import 'sass/home';
+@import 'sass/syntax-highlighter-monokai';
 
 // General
 
@@ -86,9 +91,3 @@ div.align-center {
 	display: grid;
 	grid-template-columns: 50% 50%;
 }
-
-@import 'sass/footer';
-
-// Pages
-@import 'sass/home';
-@import 'sass/syntax-highlighter-monokai';

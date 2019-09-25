@@ -9,3 +9,4 @@ permalink: /
 
 <h1>Welcome to {{ site.global_vars.site_name }} Documentation</h1>
 You can access to different parts of documentation from the left sidebar.
+

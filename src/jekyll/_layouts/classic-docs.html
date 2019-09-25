@@ -5,33 +5,33 @@
 
 <body class="{% if page.page-type == 'index' or page.page-type == 'homepage' %}homepage{% endif %}">
 
-	<!-- instant hit template container /-->
-	<div style="display:none;">
-		<div id="hits-template">
-			<h2>Search Results for "<span id="search-term-display"></span>"</h2>
-			<div id="instant-hits"></div>
-		</div>
-	</div>
+  <!-- instant hit template container /-->
+  <div style="display:none;">
+    <div id="hits-template">
+      <h2>Search Results for "<span id="search-term-display"></span>"</h2>
+      <div id="instant-hits"></div>
+    </div>
+  </div>
 
-	<div class="outer">
-		{% include header.html %}
-		{% include main-searchbar.html %}
-		<div class="hits-target"></div>
-		<div class="main-body">
-			{% include sidebar.html %}
-			<div class="article-container docs">
-				{% if page.page-type == "index" %}<h2>{{ page.title }}</h2>{% endif %}
-				<article>
-					{% if page.page-type != "index" and page.page-type != "homepage" %}<h1 class="article-title">{{ page.title }}</h1>{% endif %}
-					{% if page.untranslated %}
-					{% include translation_in_progress.html %}
-					{% endif %}
-					{{ content | toc }}
-				</article>
-			</div>
-		</div>
-		{% include footer.html %}
-	</div>
+  <div class="outer">
+    {% include header.html %}
+    {% include main-searchbar.html %}
+    <div class="hits-target"></div>
+    <div class="main-body">
+      {% include sidebar.html %}
+      <div class="article-container docs">
+        {% if page.page-type == "index" %}<h2>{{ page.title }}</h2>{% endif %}
+        <article>
+          {% if page.page-type != "index" and page.page-type != "homepage" %}<h1 class="article-title">{{ page.title }}</h1>{% endif %}
+          {% if page.untranslated %}
+          {% include translation_in_progress.html %}
+          {% endif %}
+          {{ content | toc }}
+        </article>
+      </div>
+    </div>
+    {% include footer.html %}
+  </div>
 </body>
 
 </html>

@@ -1,32 +1,32 @@
 <header id="header">
-	<div class="container">
-		<div class="header-content">
-			<div class="header-logo">
-				<a class="logo" href="{{site.global_vars.landing_url}}">
-					<img src="{{ '/assets/images/logos/logo-dark-background.png' | prepend: site.baseurl }}" class="logo-image"
-							 alt="{{ site.global_vars.header_logo_alt }}">
-				</a>
-			</div>
+  <div class="container">
+    <div class="header-content">
+      <div class="header-logo">
+        <a class="logo" href="{{site.global_vars.landing_url}}">
+          <img src="{{ '/assets/images/logos/logo-dark-background.png' | prepend: site.baseurl }}" class="logo-image"
+               alt="{{ site.global_vars.header_logo_alt }}">
+        </a>
+      </div>
 
 
-			<nav class="header-nav">
-				<ul class="main-nav">
-					<li class="nav-item">
-						<a href="{{ site.baseurl }}/">
-							<span>{{ site.t[page.lang].nav.home }}</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="{{ site.global_vars.dashboard_url }}" target="_blank">
-							<span>{{ site.t[page.lang].nav.dashboard }}</span>
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="{{ site.global_vars.blog_url }}" target="_blank">
-							<span>{{ site.t[page.lang].nav.blog }}</span>
-						</a>
-					</li>
-					<!-- <li class="default-item nav-item">
+      <nav class="header-nav">
+        <ul class="main-nav">
+          <li class="nav-item">
+            <a href="{{ site.baseurl }}/">
+              <span>{{ site.t[page.lang].nav.home }}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ site.global_vars.dashboard_url }}" target="_blank">
+              <span>{{ site.t[page.lang].nav.dashboard }}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ site.global_vars.blog_url }}" target="_blank">
+              <span>{{ site.t[page.lang].nav.blog }}</span>
+            </a>
+          </li>
+          <!-- <li class="default-item nav-item">
             <a href="https://circleci.com/about/">Company</a>
             <div class="submenu">
               <ul class="subnav">
@@ -34,15 +34,15 @@
               </ul>
             </div>
           </li> -->
-				</ul>
-			</nav>
+        </ul>
+      </nav>
 
-			<div class="header-nav-btns">
-				<a class="req-demo-btn btn-primary small" href="{{site.global_vars.get_demo_url}}" target="_blank">
-					<span>{{site.t[page.lang].nav.get_demo}}</span>
-				</a>
-			</div>
+      <div class="header-nav-btns">
+        <a class="btn btn-primary" href="{{site.global_vars.get_demo_url}}" target="_blank">
+          <span>{{site.t[page.lang].nav.get_demo}}</span>
+        </a>
+      </div>
 
-		</div>
-	</div>
+    </div>
+  </div>
 </header>
