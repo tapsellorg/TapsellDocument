@@ -17,6 +17,8 @@ const named = require('vinyl-named');
 const webpackStream = require('webpack-stream');
 const webpack = require('webpack');
 const browsersync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps');
+const cache = require('gulp-cache');
 
 // requireDir('./gulp_tasks', { recurse: true });
 
@@ -69,6 +71,7 @@ gulp.task('clear', function() {
 gulp.task('sass', function() {
   return gulp
     .src(paths.sass.entry)
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: config.sass.outputStyle, includePaths: ['node_modules/bootstrap/scss'] }).on('error', sass.logError))
     .pipe(
       postcss([
@@ -77,6 +80,7 @@ gulp.task('sass', function() {
         })
       ])
     )
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.dest + '/' + paths.sass.dest));
 });
 
@@ -145,6 +149,10 @@ gulp.task('watch', function() {
     ],
     gulp.series('browser-reload')
   );
+  gulp.watch(paths.dest, function(done) {
+    cache.clearAll();
+    done();
+  });
 });
 
 /**

@@ -6,6 +6,7 @@
   "html.format.wrapLineLength": 140,
   "html.format.wrapAttributes": "aligned-multiple",
   "prettier.useTabs": false,
+  "editor.insertSpaces": true,
   "prettier.singleQuote": true,
   "prettier.tslintIntegration": false,
   "files.exclude": {
