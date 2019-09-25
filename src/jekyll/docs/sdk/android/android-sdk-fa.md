@@ -12,7 +12,7 @@ toc: true # table of contents
 
 در هر تعاملی که کاربر با اپلیکیشن دارد، کتابخانه متریکس این تعامل را در قالب یک **رویداد** برای سرور ارسال می‌کند. تعریف کتابخانه متریکس از یک **نشست**، بازه زمانی مشخصی است که کاربر با اپلیکیشن در تعامل است.
 
-<img src="https://storage.backtory.com/tapsell-server/metrix/doc/screenshots/Metrix-Application-Manifest.png">
+![image-alternative]({{site.baseurl}}/images/image-test.png)
 
 در کتابخانه متریکس سه نوع رویداد داریم:
 
