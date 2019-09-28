@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - checkout
-      - run: apt install gem
+      - run: sudo apt install gem
       - run: gem install bundler
       - run: npm install
       - run: npm run build
