@@ -10,6 +10,7 @@ jobs:
       - checkout
       - run: sudo apt-get install rubygems
       - run: sudo gem install bundler
+      - run: gem install eventmachine -v '1.2.7' --source 'https://rubygems.org/'
       - run: npm install
       - run: npm run build
       - run:
