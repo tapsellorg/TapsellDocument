@@ -22,9 +22,13 @@ jobs:
             npm run build
 
       - run:
+          name: CNAME config
+          command: |
+            echo "docs.tapsell.ir" > _site/CNAME
+
+      - run:
           name: git configure
           command: |
-            npm run build
             git config --global user.email "technical.tapsell@gmail.com"
             git config --global user.name "tapsellCI"
             echo "machine github.com login tapselladnet password $GITHUB_TOKEN" > ~/.netrc
@@ -41,7 +45,7 @@ jobs:
             mv ../_site/* .
 
             git add -A
-            git commit -am "update site"
+            git commit -am "update gh pages"
             git push
 
 workflows:
