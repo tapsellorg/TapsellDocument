@@ -20,7 +20,9 @@ jobs:
       - run:
           name: Deploying to GitHub Pages
           command: |
+            ls -al            
             cd TapsellDocument
+            ls -al
             git checkout gh-pages
 
             rm -rf *
