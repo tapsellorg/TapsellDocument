@@ -1,26 +1,26 @@
 # Welcome to Jekyll!
 
 ########### Global Variables ###########
-title: 'Frasco: Jekyll Starter Project'
-email: your-email@domain.com
+title: 'Tapsell: Smart ad network agency'
+email: technical.tapsell@gmail.com
 description: >-
-  Metrix is a mobile marketing measurement platform that unifies mobile attribution and analytics into one powerful platform.
+  Tapsell, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience.
 baseurl: '' # the subpath of your site, e.g. /docs
-url: 'https://metrix.ir'
-twitter_username: Metrix_ir
-github_username: metrixorg
-site_name: Metrix
+url: 'https://tapsell.ir'
+twitter_username: 
+github_username: tapsellorg
+site_name: Tapsell
 global_vars:
-  landing_url: https://metrix.ir
-  dashboard_url: https://dashboard.metrix.ir
-  blog_url: https://blog.metrix.ir
-  docs_url: https://metrix.ir/docs
-  site_name: Metrix
-  get_demo_url: https://dashboard.metrix.ir/login/demo
-  terms_url: https://metrix.ir/terms
-  header_logo_alt: Metrix Docs
-  contact_email: info@metrix.ir
-  footer_logo_alt: Metrix
+  landing_url: https://tapsell.ir
+  dashboard_url: https://dashboard.tapsell.ir/
+  blog_url: https://college.tapsell.ir/
+  docs_url: https://docs.tapsell.ir/
+  site_name: Tapsell
+  get_demo_url: https://dashboard.tapsell.ir/
+  terms_url: https://tapsell.ir/
+  header_logo_alt: Tapsell Docs
+  contact_email: info@tapsell.ir
+  footer_logo_alt: Tapsell
 
 ########### Condfigurations ###########
 
@@ -76,7 +76,7 @@ t:
     footer:
       terms: Terms of Service
       contact: Contact Us
-      copyright: Designed and Developed by Metrix - Iran
+      copyright: Designed and Developed by Tapsell - Iran
   fa:
     nav:
       home: خانه
@@ -86,4 +86,4 @@ t:
     footer:
       terms: قوانین
       contact: تماس با ما
-      copyright: طراحی و توسعه توسط متریکس - ایران
+      copyright: طراحی و توسعه توسط تپسل - ایران
