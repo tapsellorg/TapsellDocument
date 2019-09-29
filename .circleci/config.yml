@@ -31,7 +31,6 @@ jobs:
           command: |
             git config --global user.email "technical.tapsell@gmail.com"
             git config --global user.name "tapsellCI"
-            echo "machine github.com login tapselladnet password $GITHUB_TOKEN" > ~/.netrc
 
       - run:
           name: Deploying to GitHub Pages
