@@ -26,7 +26,9 @@ jobs:
             git checkout gh-pages
 
             rm -rf *
+            ls -al     
             mv ../_site/* .
+            ls -al     
 
             git add -A
             git commit -am "update site"
