@@ -8,27 +8,37 @@ jobs:
 
     steps:
       - checkout
-      - run: sudo apt-get install ruby-full
-      - run: sudo gem install bundler
+      - run:
+          name: Install Ruby
+          command: |
+            sudo apt-get install ruby-full
+            sudo gem install bundler
+
       - run: npm install
-      - run: npm run build
-      - run: git config --global user.email "technical.tapsell@gmail.com"
-      - run: git config --global user.name "tapsellCI"
-      - run: echo "machine github.com login tapselladnet password $GITHUB_TOKEN" > ~/.netrc
-      - run: git clone git@github.com:tapsellorg/TapsellDocument.git
-      - run: cd TapsellDocument
+
+      - run:
+          name: Build
+          command: |
+            npm run build
+
+      - run:
+          name: git configure
+          command: |
+            npm run build
+            git config --global user.email "technical.tapsell@gmail.com"
+            git config --global user.name "tapsellCI"
+            echo "machine github.com login tapselladnet password $GITHUB_TOKEN" > ~/.netrc
+
       - run:
           name: Deploying to GitHub Pages
           command: |
-            ls -al            
+            git clone git@github.com:tapsellorg/TapsellDocument.git
+
             cd TapsellDocument
-            ls -al
             git checkout gh-pages
 
             rm -rf *
-            ls -al     
             mv ../_site/* .
-            ls -al     
 
             git add -A
             git commit -am "update site"
