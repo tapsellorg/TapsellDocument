@@ -28,7 +28,7 @@ jobs:
             rm -rf *
             mv ../_site/* .
 
-            git add -a
+            git add -A
             git commit -am "update site"
             git push
 
