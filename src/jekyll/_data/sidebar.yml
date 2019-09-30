@@ -8,8 +8,59 @@ en:
     #       - name: CI/CD Overview
     #         link: 2.0/about-circleci/
 fa:
-  - name: مستندات فنی
+  - name: تپسل پلاس
     icon: m-sdk
     children:
-      - name: اندروید
+      - name: Android
+        link: /sdk/android
+        children:
+          - name: اندرویدش
+            link: /sdk/androida
+
+      - name: iOS
+        link: /sdk/android
+        children:
+          - name: asd
+            link: /sdk/androida
+
+      - name: Unity
+        link: /sdk/android
+        children:
+          - name: asd
+            link: /sdk/androida
+
+      - name: Flutter
+        link: /sdk/android
+
+  - name: تپسل
+    icon: m-sdk
+    children:
+      - name: Android
+        link: /tapsell_sdk/android/initialize.html
+        children:
+          - name: راه اندازی
+            link: /tapsell_sdk/android/initialize.html
+
+          - name: جایزه‌ای/بینابینی
+            link: /tapsell_sdk/android/rewarded_interstitial.html
+
+          - name: بنر استاندارد
+            link: /tapsell_sdk/android/standard.html
+
+          - name: اندرویدش
+            link: /sdk/androida
+
+      - name: iOS
+        link: /sdk/android
+        children:
+          - name: asd
+            link: /sdk/androida
+
+      - name: Unity
+        link: /sdk/android
+        children:
+          - name: asd
+            link: /sdk/androida
+
+      - name: Flutter
         link: /sdk/android
