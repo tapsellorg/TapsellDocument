@@ -14,20 +14,29 @@ fa:
       - name: Android
         link: /sdk/android
         children:
-          - name: اندرویدش
-            link: /sdk/androida
+          - name: راه اندازی
+            link: /plus_sdk/android/initialize.html
+
+          - name: آنی/جایزه‌ای
+            link: /plus_sdk/android/rewarded_interstitial.html
+
+          - name: همسان
+            link: /plus_sdk/android/native.html
+
+          - name: استاندارد
+            link: /plus_sdk/android/standard.html
+
+          - name: شبکه‌های تبلیغاتی
+            link: /plus_sdk/android/add_adnetworks.html
+
+          - name: تست
+            link: /plus_sdk/android/adnetworks_test.html
 
       - name: iOS
         link: /sdk/android
-        children:
-          - name: asd
-            link: /sdk/androida
 
       - name: Unity
         link: /sdk/android
-        children:
-          - name: asd
-            link: /sdk/androida
 
       - name: Flutter
         link: /sdk/android
@@ -41,26 +50,20 @@ fa:
           - name: راه اندازی
             link: /tapsell_sdk/android/initialize.html
 
-          - name: جایزه‌ای/بینابینی
+          - name: جایزه‌ای/آنی
             link: /tapsell_sdk/android/rewarded_interstitial.html
 
           - name: بنر استاندارد
             link: /tapsell_sdk/android/standard.html
 
-          - name: اندرویدش
+          - name: بنر همسان
             link: /sdk/androida
 
       - name: iOS
         link: /sdk/android
-        children:
-          - name: asd
-            link: /sdk/androida
 
       - name: Unity
         link: /sdk/android
-        children:
-          - name: asd
-            link: /sdk/androida
 
-      - name: Flutter
+      - name: React Native
         link: /sdk/android
