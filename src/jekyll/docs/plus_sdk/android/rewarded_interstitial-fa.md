@@ -1,12 +1,12 @@
 ---
 layout: classic-docs
-title: پیاده سازی تبلیغات جایزه‌ای
+title: پیاده سازی تبلیغات جایزه‌ای/آنی
 lang: fa
-permalink: /plus_sdk/android/rewarded.html
+permalink: /plus_sdk/android/rewarded_interstitial.html
 toc: true
 ---
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) جایزه‌ای بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ مطابق کد زیر استفاده کنید.
+ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) جایزه‌ای/آنی بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ مطابق کد زیر استفاده کنید.
 
 ### درخواست تبلیغ
 مطابق کد زیر میتوانید با استفاد از متد `TapsellPlus.requestRewardedVideo` درخواست تبلیغ بدهید.
@@ -31,6 +31,8 @@ private void requestAd() {
     });
 }
 ```
+
+برای تبلیغ آنی از متد `TapsellPlus.requestInterstitial` استفاده کنید.
 
 ### نمایش تبلیغ
 بعد از اجرای متد `response` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
