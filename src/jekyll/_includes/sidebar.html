@@ -1,55 +1,54 @@
 <!-- FULL SCREEN /-->
 <div class="sidebar-wrapper">
-	<aside id="sidebar" class="sidebar">
-		{% assign lang = page.lang %}
-		{% assign sidebarItems = site.data.sidebar[lang] %}
-		{% assign current_url = page.url | slice: 1, page.url.size %}
+  <aside id="sidebar" class="sidebar">
+    {% assign lang = page.lang %}
+    {% assign sidebarItems = site.data.sidebar[lang] %}
+    {% assign current_url = page.url | slice: 1, page.url.size %}
 
-		{% for main-item in sidebarItems %}
-		<ul class="sidebar-list">
-			<li class="sidebar-main-item closed" data-section="{{ main-item.name | slugify }}">
-				<div class="main-item-parent">
-					{% if main-item.icon %}
-					<i class="sidebar-main-nav-icon flaticon-{{ main-item.icon }} mr-ltr-2"></i>
-					{% endif %}
+    {% for main-item in sidebarItems %}
+    <ul class="sidebar-list">
+      <li class="sidebar-main-item closed" data-section="{{ main-item.name | slugify }}">
+        <div class="main-item-parent">
+          {% if main-item.icon %}
+          <i class="sidebar-main-nav-icon flaticon-{{ main-item.icon }} mr-ltr-2"></i>
+          {% endif %}
 
-					{% if main-item.link %}
-					<a class="{% if current_url == main-item.link %} active {% endif %}"
-						 href="{{ site.baseurl }}{{ main-item.link }}{% if page.lang == 'en'%}/{% endif%}" data-proofer-ignore>
-						<span>{{ main-item.name }}</span>
-					</a>
-					{% else %}
-					<span class="main-item-text nav-span">{{ main-item.name }}</span>
-					{% endif %}
+          {% if main-item.link %}
+          <a class="{% if current_url == main-item.link %} active {% endif %}"
+             href="{{ site.baseurl }}{{ main-item.link }}{% if page.lang == 'en'%}/{% endif%}" data-proofer-ignore>
+            <span>{{ main-item.name }}</span>
+          </a>
+          {% else %}
+          <span class="main-item-text nav-span">{{ main-item.name }}</span>
+          {% endif %}
 
-					{% if main-item.children %}
-					<i class="arrow flaticon-m-right-chevron"></i>
-					{% endif %}
-				</div>
+          {% if main-item.children %}
+          <i class="arrow flaticon-m-right-chevron"></i>
+          {% endif %}
+        </div>
 
-				{% if main-item.children %}
-				<ul class="main-item-children">
-					{% for item in main-item.children %}
-					{% if item.name %}
-					<li class="child-item"><a class="{% if current_url == item.link %} active {% endif %}"
-							 href="{{ site.baseurl }}{{ item.link }}{% if page.lang == 'en'%}/{% endif%}" data-proofer-ignore>{{ item.name }}</a>
-					</li>
-					{% endif %}
+        {% if main-item.children %}
+        <ul class="main-item-children">
+          {% for item in main-item.children %}
+          {% if item.name %}
+          <li class="child-item"><a class="{% if current_url == item.link %} active {% endif %}"
+               href="{{ site.baseurl }}{{ item.link }}{% if page.lang == 'en' %}/{% endif %}" data-proofer-ignore>{{ item.name }}</a>
+          </li>
+          {% endif %}
 
-					{% if item.children %}
-					<ul>
-						{% for sub-item in item.children %}
-						<li class="subnav-item"><a class="{% if current_url == sub-item.link %} active {% endif %}"
-								 href="{{ site.baseurl }}/{{ sub-item.link }}#section={{ main-item.name | slugify }}"
-								 data-proofer-ignore>{{ sub-item.name }}</a></li>
-						{% endfor %}
-					</ul>
-					{% endif %}
-					{% endfor %}
-				</ul>
-				{% endif %}
-			</li>
-		</ul>
-		{% endfor %}
-	</aside>
+          {% if item.children %}
+          <ul>
+            {% for sub-item in item.children %}
+            <li class="subnav-item"><a class="{% if current_url == sub-item.link %} active {% endif %}"
+                 href="{{ site.baseurl }}{{ sub-item.link }}" data-proofer-ignore>{{ sub-item.name }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+    </ul>
+    {% endfor %}
+  </aside>
 </div>
