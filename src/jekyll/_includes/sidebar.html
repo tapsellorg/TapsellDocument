@@ -40,7 +40,7 @@
 					<ul>
 						{% for sub-item in item.children %}
 						<li class="subnav-item"><a class="{% if current_url == sub-item.link %} active {% endif %}"
-								 href="{{ site.baseurl }}/{{ sub-item.link }}#section={{ main-item.name | slugify }}"
+								 href="{{ site.baseurl }}{{ sub-item.link }}"
 								 data-proofer-ignore>{{ sub-item.name }}</a></li>
 						{% endfor %}
 					</ul>
