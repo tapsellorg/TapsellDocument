@@ -1,5 +1,3 @@
-# Metrix Docs Jekyll Platform
+## Tapsell Docs Platform
 
-## Frasco config:
-
-https://ixkaito.github.io/frasco/
+[![CircleCI](https://circleci.com/gh/tapsellorg/TapsellDocument/tree/master.svg?style=svg)](https://circleci.com/gh/tapsellorg/TapsellDocument/tree/master)
