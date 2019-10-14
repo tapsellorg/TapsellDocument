@@ -22,12 +22,12 @@ maven {
 
 ```gradle
 implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.3.3'
-````
+```
 
 با کمک پراکسی gradle را sync کنید تا تپسل به پروژه اضافه شود.
 
-## مقداردهی اولیه
 
+## مقداردهی اولیه
 در کلاس `application` باید تپسل را راه‌اندازی کنید.
 
 ```java
