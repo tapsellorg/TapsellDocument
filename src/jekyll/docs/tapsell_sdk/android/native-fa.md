@@ -89,7 +89,13 @@ private void requestAd() {
 بعد از اجرای متد `TapsellNativeBannerManager.getAd` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
 
 ```java
+import ir.tapsell.sdk.nativeads.TapsellNativeBannerManager;
+........
 private void showAd() {
-    TapsellPlus.showAd(activity, adHolder, ZONE_ID_NATIVE);
-}
+    TapsellNativeBannerManager.bindAd(
+                CONTEXT,
+                nativeBannerViewManager,
+                ZONE_ID_NATIVE,
+                adId[0]);
+}                
 ```
