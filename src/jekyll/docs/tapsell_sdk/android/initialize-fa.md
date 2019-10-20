@@ -21,7 +21,7 @@ maven {
 خط زیر را به فایل `build.gradle` ماژول برنامه در قسمت `dependencies` اضافه کنید.
 
 ```gradle
-implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.3.3'
+implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.3.7'
 ```
 
 با کمک پراکسی gradle را sync کنید تا تپسل به پروژه اضافه شود.
@@ -41,7 +41,7 @@ public void onCreate() {
 
 > برای آشنایی با کلاس اپلیکیشن میتوانید [این مطلب](../../blog/2019/7/6/ApplicationClass) را مطالعه کنید.
 
-`TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که میسازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
+`TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود متفاوت است و میتوانید از پنل کپی کنید.
 
 ## تنظیمات proguard
 تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.

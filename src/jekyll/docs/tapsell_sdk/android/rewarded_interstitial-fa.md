@@ -17,28 +17,8 @@ toc: true # table of contents
 Tapsell.requestAd(
         CONTEXT,
         ZONE_ID,
-        new TapsellAdRequestOptions(),
-        new TapsellAdRequestListener() {
-            @Override
-            public void onAdAvailable(TapsellAd tapsellAd) {
-            }
-
-            @Override
-            public void onError(String meesage) {
-            }
-
-            @Override
-            public void onNoAdAvailable() {
-            }
-
-            @Override
-            public void onNoNetwork() {
-            }
-
-            @Override
-            public void onExpiring(TapsellAd tapsellAd) {
-            }
-        });
+        OPTIONS,
+        AD_REQUEST_LISTENER);
 ```
 ورودی اول `CONTEXT` میباشد.  
 ورودی دوم `ZONE_ID` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
@@ -77,16 +57,8 @@ options.setCacheType(CACHE_TYPE);
 ```java
 tapsellAd.show(
     CONTEXT,
-    new TapsellShowOptions(),
-    new TapsellAdShowListener() {
-        @Override
-        public void onOpened(TapsellAd tapsellAd) {
-        }
-
-        @Override
-        public void onClosed(TapsellAd tapsellAd) {
-        }
-    });
+    SHOW_OPTIONS,
+    AD_SHOW_LISTENER);
 ```
 
 ورودی اول `CONTEXT` میباشد.  

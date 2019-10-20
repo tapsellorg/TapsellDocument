@@ -16,7 +16,7 @@ toc: true
 import Tapsell, { AdVideo } from 'react-native-tapsell'
 ```
 
-جهت ارسال درخواست تبلیغ هم‌نما، از تابع زیر استفاده کنید.
+جهت ارسال درخواست تبلیغ همسان، از تابع زیر استفاده کنید.
 
 ```javascript
 Tapsell.requestNativeٰVideoAd(zoneId, onAdAvailable, onNoAdAvailable, OnNoNetwork, onError);

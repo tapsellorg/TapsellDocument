@@ -1,8 +1,8 @@
 ---
 layout: classic-docs
-title: راه اندازی تپسل در یونیتی (Android)
+title: راه اندازی تپسل در ReactNative (Android)
 lang: fa
-permalink: /tapsell_sdk/unity/initialize-android.html
+permalink: /tapsell_sdk/react/initialize-android.html
 toc: true # table of contents
 ---
 
@@ -21,7 +21,6 @@ react-native link react-native-tapsell
 
 ```javascript
 import Tapsell from 'react-native-tapsell'
-
 ```
 
 سپس تابع زیر را در یکی از اسکریپت های برنامه ی خود که در ابتدای برنامه اجرا می شود فراخوانی کنید.

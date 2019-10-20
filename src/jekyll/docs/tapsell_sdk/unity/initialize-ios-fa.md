@@ -7,11 +7,6 @@ toc: true # table of contents
 ---
 
 ## دریافت SDK تپسل
-ابتدا فایل `unitypackage` مربوط به SDK تپسل را از آدرس زیر دانلود کرده و در پروژه خود import نمایید.
-[دریافت فایل](https://storage.backtory.com/tapsell-server/sdk/unity/Tapsell-Unity-a3.1.1-i3.0.6.unitypackage)
-
-
-## دریافت SDK تپسل
 فایل zip حاوی فریمورک تپسل را از آدرس زیر دانلود کنید.
 [دریافت فایل](https://storage.backtory.com/tapsell-server/sdk/LatestVersions/tapsell-ios-unity.zip)
 

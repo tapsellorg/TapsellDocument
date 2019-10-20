@@ -27,7 +27,7 @@ toc: true
 </FrameLayout>
 ```
 
-نمونه قالب‌های طراحی شده پیش‌فرض برای نمایش تبلیغات هم‌نما در فایل‌های `tapsell_content_banner_ad_template` و `tapsell_app_installation_banner_ad_template` قابل مشاهده هستند.
+نمونه قالب‌های طراحی شده پیش‌فرض برای نمایش تبلیغات همسان در فایل‌های `tapsell_content_banner_ad_template` و `tapsell_app_installation_banner_ad_template` قابل مشاهده هستند.
 
 اگر قصد تغییر قالب پیش فرض را دارید، یک `layout` دلخواه  بسازید و `id` و نوع بخش‌های مختلف را مطابق جدول زیر تغییر دهید:
 
@@ -63,7 +63,7 @@ TapsellNativeBannerViewManager nativeBannerViewManager = new TapsellNativeBanner
 ```
 
 ### درخواست تبلیغ
-با کمک متد `TapsellNativeBannerManager.getAd` و به روش زیر درخواست تبلیغ بدهید.
+با کمک متد `getAd` و به روش زیر درخواست تبلیغ بدهید.
 
 ```java
 import ir.tapsell.sdk.AdRequestCallback;
@@ -86,7 +86,7 @@ private void requestAd() {
 ```
 
 ### نمایش تبلیغ
-بعد از اجرای متد `TapsellNativeBannerManager.getAd` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
+بعد از اجرای متد `getAd` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
 
 ```java
 import ir.tapsell.sdk.nativeads.TapsellNativeBannerManager;

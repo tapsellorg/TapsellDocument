@@ -22,7 +22,7 @@ toc: true # table of contents
 ```gradle
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'ir.tapsell.sdk:tapsell-sdk-unity:4.3.0'
+    implementation 'ir.tapsell.sdk:tapsell-sdk-unity:4.3.3'
 **DEPS**}
 ```
 
@@ -66,7 +66,6 @@ Assets > Play Services Resolver > Android Resolver > Force Resolve
 
 ```c#
 using TapsellSDK;
-
 ```
 
 سپس تابع زیر را در یکی از اسکریپت های برنامه ی خود که در ابتدای برنامه اجرا می شود فراخوانی کنید.

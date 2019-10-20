@@ -21,6 +21,14 @@ Tapsell.RequestNativeBannerAd(monoBehaviour, zoneId, Action<TapsellNativeBannerA
 ورودی `monoBehaviour`، یک شی از جنس `MonoBehaviour` است که برای دریافت محتوای تبلیغ در پس‌زمینه استفاده می‌شود.  
 ورودی `zoneId`، شناسه تبلیغ‌گاه است که باید آن را از داشبورد تپسل دریافت کنید.
 
+اکشن ها مطابق جدول زیر است و نتیجه درخواست تبلیغ با کمک این بخش برمیگردد.
+
+| عملکرد | متد |
+| - | - |
+| تبلیع آماده نمایش هست و از طریق `TapsellNativeBannerAd` به آن دسترسی دارید و میتوانید نمایش دهید | `onAdRequestFilledAction` |
+| خطایی رخ داده از طریق `TapsellError` میتوانید خطا را ببینید | `onErrorAction` |
+| تبلیغی برای نمایش موجود نیست | `onNoAdAvailableAction` |
+| دسترسی به اینترنت امکان پذیر نیست | `onNoNetworkAction` |
 
 ### نمایش تبلیغ
 برای نمایش تبلیغ، می‌بایست از توابع موجود در کلاس `TapsellNativeBannerAd` استفاده کنید. توضیحات توابع های مختلف این کلاس و خروجی آن‌ها در جدول زیر آمده است.
