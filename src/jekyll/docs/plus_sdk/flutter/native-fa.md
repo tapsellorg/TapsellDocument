@@ -36,9 +36,9 @@ error(zoneId, errorMessage) {
 
 |           function          |     usage     |
 |:---------------------------:|:-------------:|
-|         title  ()        |     عنوان     |
-|      description  ()     |    توضیحات    |
-|         icon  ()         |      آیکن     |
-| landscapeBannerImage  () |   تصویر افقی  |
-|  portraitBannerImage  () |  تصویر عمودی  |
-|     callToAction  (),    | متن دکمه کلیک |
+|         `title()`        |     عنوان     |
+|      `description()`     |    توضیحات    |
+|         `icon()`         |      آیکن     |
+| `landscapeBannerImage()` |   تصویر افقی  |
+|  `portraitBannerImage()` |  تصویر عمودی  |
+|     `callToAction()`    | متن دکمه کلیک |
