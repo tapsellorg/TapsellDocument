@@ -94,3 +94,15 @@ fa:
 
       - name: React Native
         link: /sdk/android
+        children:
+          - name: راه اندازی اندروید
+            link: /tapsell_sdk/react/initialize-android.html
+
+          - name: جایزه‌ای/آنی
+            link: /tapsell_sdk/react/rewarded_interstitial.html
+
+          - name: بنر استاندارد
+            link: /tapsell_sdk/react/standard.html
+
+          - name: بنر همسان
+            link: /tapsell_sdk/react/native.html
