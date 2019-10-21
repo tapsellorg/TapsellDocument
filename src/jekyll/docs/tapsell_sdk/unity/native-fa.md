@@ -21,7 +21,7 @@ Tapsell.RequestNativeBannerAd(monoBehaviour, zoneId, Action<TapsellNativeBannerA
 ورودی `monoBehaviour`، یک شی از جنس `MonoBehaviour` است که برای دریافت محتوای تبلیغ در پس‌زمینه استفاده می‌شود.  
 ورودی `zoneId`، شناسه تبلیغ‌گاه است که باید آن را از داشبورد تپسل دریافت کنید.
 
-اکشن ها مطابق جدول زیر است و نتیجه درخواست تبلیغ با کمک این بخش برمیگردد.
+اکشن‌ها مطابق جدول زیر است و نتیجه درخواست تبلیغ با کمک این بخش برمیگردد.
 
 | عملکرد | متد |
 | - | - |
@@ -31,15 +31,15 @@ Tapsell.RequestNativeBannerAd(monoBehaviour, zoneId, Action<TapsellNativeBannerA
 | دسترسی به اینترنت امکان پذیر نیست | `onNoNetworkAction` |
 
 ### نمایش تبلیغ
-برای نمایش تبلیغ، می‌بایست از توابع موجود در کلاس `TapsellNativeBannerAd` استفاده کنید. توضیحات توابع های مختلف این کلاس و خروجی آن‌ها در جدول زیر آمده است.
+برای نمایش تبلیغ، می‌بایست از توابع موجود در کلاس `TapsellNativeBannerAd` استفاده کنید. توضیحات توابع‌های مختلف این کلاس و خروجی آن‌ها در جدول زیر آمده است.
 
 | تابع | توضیحات |
 | - | - |
-| string GetTitle() | عنوان تبلیغ |
-| string GetCallToAction() | متن دعوت کننده از کاربر به کلیک/نصب |
-| Texture2D GetPortraitBannerImage(string) | تصویر بنر تبلیغ (عمودی) |
-| Texture2D GetLandscapeBannerImage(string) | تصویر بنر تبلیغ (افقی) |
-| Texture2D getIcon(string) | آیکون تبلیغ |
+| `string GetTitle()` | عنوان تبلیغ |
+| `string GetCallToAction()` | متن دعوت کننده از کاربر به کلیک/نصب |
+| `Texture2D GetPortraitBannerImage(string)` | تصویر بنر تبلیغ (عمودی) |
+| `Texture2D GetLandscapeBannerImage(string)` | تصویر بنر تبلیغ (افقی) |
+| `Texture2D getIcon(string)` | آیکون تبلیغ |
   
  **دقت کنید که تبلیغ‌ها ممکن است هردو بنر عمودی و افقی را نداشته باشند.**
 

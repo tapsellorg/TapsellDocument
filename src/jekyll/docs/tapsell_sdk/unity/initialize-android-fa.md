@@ -8,7 +8,7 @@ toc: true # table of contents
 
 
 ## دریافت SDK تپسل
-ابتدا فایل `unitypackage` مربوط به SDK تپسل را از آدرس زیر دانلود کرده و در پروژه خود import نمایید.
+ابتدا فایل `unitypackage` مربوط به SDK تپسل را از آدرس زیر دانلود کرده و مطابق روش گفته شده در مراحل بعد در پروژه خود import نمایید.
 [دریافت فایل](https://github.com/tapsellorg/TapsellSDK-UnitySample/releases/download/v4.3.0.1/Tapsell-Unity-4.3.0.1.unitypackage)
 
 
@@ -17,16 +17,22 @@ toc: true # table of contents
 
 
 ### استفاده از Gradle
-خطوط زیر را در بخش `dependencies` فایل `mainTemplate.gradle` در مسیر `Assets/Plugins/Android` اضافه کنید. توجه داشته باشید که ۲ قسمت `dependencies` وجود دارد، این تغییرات باید در قسمت دوم انجام شود.
+
+هنگام import یونیتی‌پکیج تپسل پلاس تیک قسمت `playServicesResolver` و `TapsellPlusDependencies.xml` را بردارید.
+
+خط زیر را در بخش `dependencies` فایل `mainTemplate.gradle` در مسیر `Assets/Plugins/Android` اضافه کنید. توجه داشته باشید که ۲ قسمت `dependencies` وجود دارد، این تغییرات باید در قسمت دوم انجام شود.
 
 ```gradle
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    ...
     implementation 'ir.tapsell.sdk:tapsell-sdk-unity:4.3.3'
+    ...
 **DEPS**}
 ```
 
-در نسخه‌های قدیمی یونیتی ممکن هست `implementation` شناخته نشود در این صورت از `compile` استفاده کنید.
+در نسخه‌های قدیمی یونیتی ممکن هست `implementation` شناخته نشود در این صورت از `compile` استفاده کنید.  
+  
 هر یک از خطوط زیر که در بخش `allprojects -> repositories` فایل `mainTemplate.gradle` وجود ندارد اضافه کنید.
 
 ```gradle
@@ -42,12 +48,9 @@ allprojects {
 }
 ```
 
-هنگام import یونیتی‌پکیج تپسل پلاس تیک قسمت `playServicesResolver` و `TapsellPlusDependencies.xml` را بردارید.
-
-
 ### استفاده از Resolver
 هنگام import کردن unityPackage تپسل پلاس تیک تمامی قسمت‌ها را بزارید.
-در صورتی که تنظیمات Resolver بر روی حالت `auto-resolution` میباشد، لایبراری های تپسل پلاس به صورت خودکار اضافه میشود. در غیر اینصورت به صورت دستی Resolve را انجام دهید.
+در صورتی که تنظیمات Resolver بر روی حالت `auto-resolution` میباشد، لایبراری‌های تپسل پلاس به صورت خودکار اضافه میشود. در غیر اینصورت به صورت دستی Resolve را انجام دهید.
 فعال یا غیر فعال کردن `auto-resolution` از مسیر زیر انجام میشود.
 
 ```console
@@ -62,13 +65,13 @@ Assets > Play Services Resolver > Android Resolver > Force Resolve
 ```
 
 ## مقداردهی اولیه
-ابتدا برای دسترسی به کدهای تپسل از تکه کد زیر استفاده کنید
+ابتدا برای دسترسی به کدهای تپسل از تکه کد زیر استفاده کنید.
 
 ```c#
 using TapsellSDK;
 ```
 
-سپس تابع زیر را در یکی از اسکریپت های برنامه ی خود که در ابتدای برنامه اجرا می شود فراخوانی کنید.
+سپس تابع زیر را در یکی از اسکریپت‌های برنامه‌ی خود که در ابتدای برنامه اجرا می‌شود فراخوانی کنید.
 
 ```c#
 Tapsell.Initialize(TAPSELL_KEY);
