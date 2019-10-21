@@ -55,11 +55,12 @@ import ir.tapsell.sdk.nativeads.TapsellNativeBannerViewManager;;
 ...
 ViewGroup adContainer = findViewById(R.id.adContainer);
 ...
-TapsellNativeBannerViewManager nativeBannerViewManager = new TapsellNativeBannerManager.Builder()
-                .setParentView(adContainer)
-                .setContentViewTemplate(R.layout.tapsell_content_banner_ad_template)
-                .setAppInstallationViewTemplate(R.layout.tapsell_app_installation_banner_ad_template)
-                .inflateTemplate(CONTEXT);
+TapsellNativeBannerViewManager nativeBannerViewManager = new TapsellNativeBannerManager
+    .Builder()
+    .setParentView(adContainer)
+    .setContentViewTemplate(R.layout.tapsell_content_banner_ad_template)
+    .setAppInstallationViewTemplate(R.layout.tapsell_app_installation_banner_ad_template)
+    .inflateTemplate(CONTEXT);
 ```
 
 ### درخواست تبلیغ
@@ -86,7 +87,7 @@ private void requestAd() {
 ```
 
 ### نمایش تبلیغ
-بعد از اجرای متد `getAd` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
+بعد از اجرای متد `onResponse` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
 
 ```java
 import ir.tapsell.sdk.nativeads.TapsellNativeBannerManager;
