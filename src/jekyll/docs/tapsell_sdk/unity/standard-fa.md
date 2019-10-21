@@ -9,15 +9,20 @@ toc: true # table of contents
 ## ساخت تبلیغگاه
 ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوع استاندارد بسازید.
 
-
 ## درخواست تبلیغ
-جهت نمایش بنر استاندارد، باید محلی برای نمایش آن در صفحه در نظر بگیرید. بنر استاندارد، دارای سایزهای استانداردی است که در SDK تپسل مشخص شده اند. جهت نمایش بنر، از تابع زیر استفاده کنید:
+جهت نمایش بنر استاندارد، باید محلی برای نمایش آن در صفحه در نظر بگیرید. بنر استاندارد، دارای سایزهای استانداردی است که در SDK تپسل مشخص شده‌اند. جهت نمایش بنر، از تابع زیر استفاده کنید:
 
 ```c#
-Tapsell.RequestBannerAd(string zoneId,int bannerType, int horizontalGravity , int verticalGravity, 
-             Action<string> onRequestFilled, Action<string> onNoAdAvailableAction,
-             Action<TapsellError> onErrorAction, Action<string> onNoNetworkAction,
-             Action<string> onHideBannerAction);
+Tapsell.RequestBannerAd(
+	string zoneId,
+	int bannerType, 
+	int horizontalGravity, 
+	int verticalGravity, 
+  Action<string> onRequestFilled,
+	Action<string> onNoAdAvailableAction,
+  Action<TapsellError> onErrorAction, 
+	Action<string> onNoNetworkAction,
+  Action<string> onHideBannerAction);
 ```
 
 مقدار `zoneId` کلیدی است که بعد از ساخت اپلیکیشن در پنل و ثبت یک `zone` از نوع بنری استاندارد دریافت میکنید. ورودی `BannerType` اندازه‌های مختلف را بیان میکند و شامل مقادیر زیر است:
@@ -27,7 +32,7 @@ Tapsell.RequestBannerAd(string zoneId,int bannerType, int horizontalGravity , in
 | `BannerType.BANNER_250x250` | `250x250` |
 | `BannerType.BANNER_300x250` | `300x250` |  
   
-ورودی `horizontalGravity` نشان میدهد که آیا تبلیغ، بالا یا پایین صفحه باشد و شامل `BannerType.TOP`, `BannerType.BUTTOM` می باشد  
+ورودی `horizontalGravity` نشان میدهد که آیا تبلیغ، بالا یا پایین صفحه باشد و شامل `BannerType.TOP`, `BannerType.BUTTOM` می‌باشد  
 
 ورودی `verticalGravity` بیان میکند که تبلیغ از جهت عرضی در کجای صفحه باشد و میتواند شامل مقادیر `BannerType.LEFT`, `BannerType.RIGHT`, `BannerType.CENTER` باشد.
 

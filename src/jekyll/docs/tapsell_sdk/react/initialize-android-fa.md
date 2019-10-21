@@ -17,7 +17,7 @@ react-native link react-native-tapsell
 
 
 ## شروع کار با SDK تپسل
-ابتدا ماژول تپسل را به کد خود اضافه کنید :
+ابتدا ماژول تپسل را به کد خود اضافه کنید:
 
 ```javascript
 import Tapsell from 'react-native-tapsell'

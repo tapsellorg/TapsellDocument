@@ -10,7 +10,7 @@ toc: true
 
 
 ### درخواست تبلیغ
-ابتدا ماژول تپسل و کامپوننت AdVideo را به کد خود اضافه کنید :
+ابتدا ماژول تپسل و کامپوننت AdVideo را به کد خود اضافه کنید:
 
 ```javascript
 import Tapsell, { AdVideo } from 'react-native-tapsell'
@@ -24,14 +24,14 @@ Tapsell.requestNativeٰVideoAd(zoneId, onAdAvailable, onNoAdAvailable, OnNoNetwo
 
 ورودی `zoneId`، شناسه تبلیغ‌گاه است که باید آن را از داشبورد تپسل دریافت کنید.
 
-اکشن های مختلف و شرایط اجرا شدن آن ها در جدول زیر آمده است :
+اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است:
 
 | توضیحات | تابع |
 | - | - |
 | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید | `onError(zoneId : string, error : string)` |
-| زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد. | `onAdAvailable(zoneId : string, adId : string)` |
-| در صورتی که تبلیغی برای نمایش وجود نداشته باشد. | `onNoAdAvailable(zoneId : string)	` |
-| زمانی که دسترسی به شبکه موجود نباشد. | `onNoNetwork(zoneId : string)` |
+| زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد | `onAdAvailable(zoneId : string, adId : string)` |
+| در صورتی که تبلیغی برای نمایش وجود نداشته باشد | `onNoAdAvailable(zoneId : string)	` |
+| زمانی که دسترسی به شبکه موجود نباشد | `onNoNetwork(zoneId : string)` |
 
 
 ### نمایش تبلیغ
@@ -45,11 +45,11 @@ Tapsell.requestNativeٰVideoAd(zoneId, onAdAvailable, onNoAdAvailable, OnNoNetwo
 
 | تابع | توضیحات |
 | - | - |
-| ad_id : string | شناسه تبلیغ |
-| title : string | عنوان تبلیغ |
-| description : string | توضیحات تبلیغ |
-| call_to_action_text : string	 | متن دعوت کننده از کاربر به کلیک/نصب |
-| icon_url | آدرس آیکون تبلیغ |
+| `ad_id : string` | شناسه تبلیغ |
+| `title : string` | عنوان تبلیغ |
+| `description : string` | توضیحات تبلیغ |
+| `call_to_action_text : string`	 | متن دعوت کننده از کاربر به کلیک/نصب |
+| `icon_url` | آدرس آیکون تبلیغ |
   
 
 ### باز کردن تبلیغ
