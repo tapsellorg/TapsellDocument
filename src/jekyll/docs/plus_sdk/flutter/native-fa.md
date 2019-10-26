@@ -42,3 +42,10 @@ error(zoneId, errorMessage) {
 | `landscapeBannerImage()` |   تصویر افقی  |
 |  `portraitBannerImage()` |  تصویر عمودی  |
 |     `callToAction()`    | متن دکمه کلیک |
+
+### باز کردن تبلیغ
+برای باز کردن تبلیغ، هنگامی که کاربر روی آن کلیک می‌کند، از تابع زیر استفاده کنید.
+
+```dart
+TapsellPlus.nativeBannerAdClicked(String ZONE_ID, Function RESPONSE, Function ERROR));
+```
