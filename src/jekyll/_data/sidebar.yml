@@ -37,6 +37,21 @@ fa:
 
       - name: Unity
         link: /sdk/android
+        children:
+          - name: راه اندازی اندروید
+            link: /plus_sdk/unity/initialize-android.html
+
+          - name: راه اندازی ios
+            link: /tapsell_sdk/android/initialize-ios.html
+
+          - name: آنی/جایزه‌ای
+            link: /plus_sdk/unity/rewarded_interstitial.html
+
+          - name: همسان
+            link: /plus_sdk/unity/native.html
+
+          - name: استاندارد
+            link: /plus_sdk/unity/standard.html
 
       - name: Flutter
         link: /sdk/android
