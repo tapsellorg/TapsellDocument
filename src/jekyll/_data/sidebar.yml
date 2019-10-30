@@ -53,6 +53,12 @@ fa:
           - name: استاندارد
             link: /plus_sdk/unity/standard.html
 
+          - name: شبکه‌های تبلیغاتی
+            link: /plus_sdk/unity/add_adnetworks.html
+
+          - name: تست
+            link: /plus_sdk/unity/adnetworks_test.html
+
       - name: Flutter
         link: /sdk/android
         children:
