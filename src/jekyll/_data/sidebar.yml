@@ -42,7 +42,7 @@ fa:
             link: /plus_sdk/unity/initialize-android.html
 
           - name: راه اندازی ios
-            link: /tapsell_sdk/android/initialize-ios.html
+            link: /plus_sdk/android/initialize-ios.html
 
           - name: آنی/جایزه‌ای
             link: /plus_sdk/unity/rewarded_interstitial.html

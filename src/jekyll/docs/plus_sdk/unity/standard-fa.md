@@ -31,7 +31,7 @@ BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر ز�
 | `BANNER_468x60` | `468x60` |  
 | `BANNER_728x90` | `728x90` |  
   
-VERTICAL_GRAVITY و HORIZONTAL_GRAVITY موقعیت قرار گیری بنر در صفحه هست و میتواند مقادیر زیر باشد.
+`VERTICAL_GRAVITY` و `HORIZONTAL_GRAVITY` موقعیت قرار گیری بنر در صفحه هست و میتواند مقادیر زیر باشد.
 
 ```c#
 Gravity.TOP - Gravity.BOTTOM - Gravity.LEFT - Gravity.RIGHT - Gravity.CENTER
@@ -40,7 +40,7 @@ Gravity.TOP - Gravity.BOTTOM - Gravity.LEFT - Gravity.RIGHT - Gravity.CENTER
 
 
 ### تعریف `Callback` برای درخواست
-مطابق کد زیر میتوانید برای درخواست تبلیغ `listener` تعریف کنید.
+مطابق کد زیر میتوانید برای درخواست تبلیغ listener تعریف کنید.
 
 ```c#
 Tapsell.RequestBannerAd (bannerZoneId,BannerType.BANNER_320x50, Gravity.BOTTOM, Gravity.CENTER,
