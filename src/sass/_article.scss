@@ -1,133 +1,135 @@
 .article-container {
-	@include not-md {
-		padding: 30px 16px;
-		flex: 1 1 100%;
-	}
-	padding: 40px 45px;
-	// width: calc(100% - 260px);
-	flex: 1 0 map-get($screens, md) - map-get($sidebar, width);
-	min-width: 0;
+  @include not-md {
+    padding: 30px 16px;
+    flex: 1 1 100%;
+  }
+  padding: 40px 45px;
+  flex: 1 0 map-get($screens, md) - map-get($sidebar, width);
+  min-width: 0;
 
-	article {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			// prevent anchor links from being under the global nav
-			&[id]:before {
-				content: '';
-				display: block;
-				$top-margin: map-get($header, height) + map-get($searchbar, height) + 20px;
-				margin-top: -($top-margin);
-				height: ($top-margin);
-				visibility: hidden;
-			}
-			.anchor-link {
-				display: none;
-				@include rtl-doLTR(margin-right, 7px);
-				font-size: 20px;
-			}
-			&:hover {
-				.anchor-link {
-					display: initial;
-				}
-			}
-		}
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			a {
-				padding-left: 5px;
-				color: #27a0b6;
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
+  article {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      // prevent anchor links from being under the global nav
+      &[id]:before {
+        content: '';
+        display: block;
+        $top-margin: map-get($header, height) + map-get($searchbar, height) + 20px;
+        margin-top: -($top-margin);
+        height: ($top-margin);
+        visibility: hidden;
+      }
 
-		h1 {
-			font-size: 2rem;
-		}
-		h2 {
-			font-size: 1.4rem;
-			margin-top: 1.5rem;
-			margin-bottom: 1rem;
-		}
-		h3 {
-			margin-top: 10px;
-			font-size: 1.2rem;
-		}
-		h4 {
-			font-size: 1.1rem;
-		}
-		h5 {
-		}
-		h6 {
-		}
-		p {
-			margin-bottom: 1rem;
-			line-height: 1.9;
-			text-align: justify;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
+      .anchor-link {
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.2s;
+        display: inline-block;
+        @include rtl-doLTR(margin-right, -30px);
+      }
+      &:hover {
+        .anchor-link {
+          opacity: 1;
+        }
+      }
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      a {
+        padding-left: 5px;
+        color: #27a0b6;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
 
-		.article-title {
-			border-bottom: 2px solid #eee;
-			padding-bottom: 10px;
-		}
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+    h4 {
+      font-size: 1.1rem;
+    }
+    h5 {
+    }
+    h6 {
+    }
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.9;
+      text-align: justify;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
-		// toc
-		.section-nav {
-			margin: 25px 0;
-		}
+    .article-title {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
 
-		.anchor {
-			display: none;
-		}
+    // toc
+    .section-nav {
+      margin: 25px 0;
+    }
 
-		img {
-			margin: 15px auto;
-			max-width: 100%;
-			display: block;
-		}
+    .anchor {
+      display: none;
+    }
 
-		span.align-center {
-			display: block;
-			text-align: center;
+    img {
+      margin: 15px auto;
+      max-width: 100%;
+      display: block;
+    }
 
-			img {
-				max-width: 90%;
-			}
-		}
+    span.align-center {
+      display: block;
+      text-align: center;
 
-		.highlighter-rouge {
-			font-size: 18px;
-			margin-bottom: 1rem;
-			.highlight {
-				pre,
-				code {
-					color: #ffffff;
-					margin: 0;
-					padding: 0;
-					direction: ltr;
-					text-align: left;
-				}
-				.rouge-gutter {
-					padding: 5px 20px 5px 10px;
-					// background: rgba(#ffffff, 0.1);
-					.lineno {
-						color: #888;
-						text-align: right;
-						background: transparent !important;
-					}
-				}
-			}
-		}
-	}
+      img {
+        max-width: 90%;
+      }
+    }
+
+    .highlighter-rouge {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      .highlight {
+        pre,
+        code {
+          color: #ffffff;
+          margin: 0;
+          padding: 0;
+          direction: ltr;
+          text-align: left;
+        }
+        .rouge-gutter {
+          padding: 5px 20px 5px 10px;
+          // background: rgba(#ffffff, 0.1);
+          .lineno {
+            color: #888;
+            text-align: right;
+            background: transparent !important;
+          }
+        }
+      }
+    }
+  }
 }

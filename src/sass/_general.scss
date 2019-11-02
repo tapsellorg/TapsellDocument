@@ -1,17 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
-	color: map-get($body, color);
-	display: block;
-	width: 100%;
-	@include rtl {
-		background: linear-gradient(to left, #f7f7f7 0%, #f7f7f7 50%, #fff 50%, #fff 100%);
-		text-align: right;
-		direction: rtl;
-	}
-	@include ltr {
-		background: linear-gradient(to right, #f7f7f7 0%, #f7f7f7 50%, #fff 50%, #fff 100%);
-	}
-	padding-top: map-get($header, height);
-	font-family: $font-family;
+  color: map-get($body, color);
+  display: block;
+  width: 100%;
+  @include rtl {
+    background: linear-gradient(to left, #f7f7f7 0%, #f7f7f7 50%, #fff 50%, #fff 100%);
+    text-align: right;
+    direction: rtl;
+  }
+  @include ltr {
+    background: linear-gradient(to right, #f7f7f7 0%, #f7f7f7 50%, #fff 50%, #fff 100%);
+  }
+  padding-top: map-get($header, height);
+  font-family: $font-family;
 }
 h1,
 h2,
@@ -19,46 +22,46 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-family;
-	font-weight: 500;
+  font-family: $font-family;
+  font-weight: 500;
 }
 p {
-	font-family: $font-family;
-	color: map-get($body, color);
+  font-family: $font-family;
+  color: map-get($body, color);
 }
 
 a {
-	color: $link-text-color;
+  color: $link-text-color;
 
-	&:hover {
-		color: $link-hover-color;
-		text-decoration: none;
-	}
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
 }
 
 $scroll-bar-width: 7px;
 ::-webkit-scrollbar {
-	width: $scroll-bar-width;
-	height: $scroll-bar-width;
+  width: $scroll-bar-width;
+  height: $scroll-bar-width;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #666;
-	border-radius: 10px;
+  background-color: #666;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #999;
-	height: 50px;
-	border-radius: 5px;
+  background-color: #999;
+  height: 50px;
+  border-radius: 5px;
 }
 
 .main-body {
-	overflow: auto;
-	display: flex;
-	flex-wrap: wrap;
-	max-width: 1200px;
-	margin: 0 auto;
-	background: #fff;
-	min-height: calc(100vh - 200px);
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: calc(100vh - 200px);
 }

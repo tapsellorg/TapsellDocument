@@ -1,6 +1,6 @@
 en:
   - name: SDK
-    icon: m-sdk
+    icon: picon-phone-settings
     # children:
     #   - name: Introduction
     #     link: 2.0/
@@ -9,7 +9,7 @@ en:
     #         link: 2.0/about-circleci/
 fa:
   - name: مستندات فنی
-    icon: m-sdk
+    icon: picon-phone-settings
     children:
       - name: اندروید
         link: /sdk/android

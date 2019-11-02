@@ -1,0 +1,13 @@
+<div class="article-container docs">
+  <article>
+    {% if page.hideTitle != true %}
+    <h1 class="article-title">{{ page.title }}</h1>
+    {% endif %}
+
+    {% if page.untranslated %}
+    {% include translation_in_progress.html %}
+    {% endif %}
+
+    {{ content | toc }}
+  </article>
+</div>

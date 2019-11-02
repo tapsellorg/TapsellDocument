@@ -75,6 +75,10 @@ $(document).ready(function() {
   $('article h1, article h2, article h3, article h4, article h5, article h6')
     .filter('[id]')
     .each(function() {
-      $(this).append('<a class="anchor-link" href="#' + $(this).attr('id') + '"><i class="fa fa-link"></i></a>');
+      $(this).prepend(`
+        <a class="anchor-link" href="#${$(this).attr('id')}">
+          <i class="picon-link"></i>
+        </a>
+      `);
     });
 });
