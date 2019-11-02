@@ -26,12 +26,15 @@ const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 const paths = {
   assets: {
     allExceptImages: { watch: ['src/assets/**/*', '!src/assets/images', '!src/assets/images/**/*'], dest: 'assets' },
-    images: { watch: 'src/assets/images/**/*', dest: 'assets/images' }
+    images: { watch: 'src/assets/images/**/*', dest: 'assets/images' },
   },
   sass: { watch: ['src/sass/**/*', 'src/style.scss'], dest: 'assets', entry: 'src/style.scss' },
-  jekyll: { dest: '._jekyll_build_temp' },
+  jekyll: {
+    dest: '._jekyll_build_temp',
+    watch: ['src/jekyll', '_config*.yml'],
+  },
   js: { entry: 'src/js/bundle.js', dest: 'assets' },
-  dest: '_site'
+  dest: '_site',
 };
 
 /**
@@ -76,8 +79,8 @@ gulp.task('sass', function() {
     .pipe(
       postcss([
         autoprefixer({
-          browsers: config.sass.autoprefixer.browsers
-        })
+          browsers: config.sass.autoprefixer.browsers,
+        }),
       ])
     )
     .pipe(sourcemaps.write('.'))
@@ -104,7 +107,7 @@ gulp.task('imagemin', function() {
       imagemin({
         progressive: config.imagemin.progressive,
         svgoPlugins: config.imagemin.svgoPlugins,
-        use: [pngquant()]
+        use: [pngquant()],
       })
     )
     .pipe(gulp.dest(dest));
@@ -135,20 +138,7 @@ gulp.task('watch', function() {
   watch(paths.assets.images.watch, gulp.series('imagemin'));
   watch(paths.sass.watch, gulp.series('sass'));
   watch(paths.assets.allExceptImages.watch, gulp.series('assets'));
-  watch(
-    [
-      '!./node_modules/**/*',
-      '!./README.md',
-      '!' + paths.dest + '/**/*',
-      '!' + paths.jekyll.dest + '/**/*',
-      '_config*.yml',
-      './**/*.html',
-      './**/*.md',
-      './**/*.markdown',
-      '_data/**/*'
-    ],
-    gulp.series('browser-reload')
-  );
+  watch(paths.jekyll.watch, gulp.series('browser-reload'));
   gulp.watch(paths.dest, function(done) {
     cache.clearAll();
     done();
@@ -164,8 +154,8 @@ gulp.task('browsersync', function() {
     port: config.port,
     browser: browser,
     server: {
-      baseDir: paths.dest
-    }
+      baseDir: paths.dest,
+    },
   });
 });
 
