@@ -8,9 +8,9 @@
   "prettier.useTabs": false,
   "editor.insertSpaces": true,
   "prettier.singleQuote": true,
-  "prettier.tslintIntegration": false,
   "files.exclude": {
     ".bundle": true,
     "vendor": true
-  }
+  },
+  "prettier.disableLanguages": ["vue", "html"]
 }
