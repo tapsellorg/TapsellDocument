@@ -2,7 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: map-get($body, color);
   display: block;
   width: 100%;
   @include rtl {
@@ -27,7 +26,6 @@ h6 {
 }
 p {
   font-family: $font-family;
-  color: map-get($body, color);
 }
 
 a {

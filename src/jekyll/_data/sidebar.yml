@@ -1,15 +1,14 @@
 en:
-  - name: SDK
-    icon: picon-phone-settings
-    # children:
-    #   - name: Introduction
-    #     link: 2.0/
-    #     children:
-    #       - name: CI/CD Overview
-    #         link: 2.0/about-circleci/
-fa:
-  - name: مستندات فنی
-    icon: picon-phone-settings
+  - name: First level
+    icon: picon-link
     children:
-      - name: اندروید
-        link: /sdk/android
+      - name: Secondary level
+        children:
+          - name: Tertiary level
+fa:
+  - name: سطح اول
+    icon: picon-link
+    children:
+      - name: سطح دوم
+        children:
+          - name: سطح سوم

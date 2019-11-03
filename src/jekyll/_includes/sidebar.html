@@ -10,7 +10,7 @@
       <li class="sidebar-main-item closed" data-section="{{ main-item.name | slugify }}">
         <div class="main-item-parent">
           {% if main-item.icon %}
-          <i class="sidebar-main-nav-icon flaticon-{{ main-item.icon }} mr-ltr-2"></i>
+          <i class="main-item-icon {{ main-item.icon }} mr-ltr-2"></i>
           {% endif %}
 
           {% if main-item.link %}
@@ -23,7 +23,7 @@
           {% endif %}
 
           {% if main-item.children %}
-          <i class="arrow picon-right-chevron"></i>
+          <i class="main-item-arrow picon-right-chevron"></i>
           {% endif %}
         </div>
 
@@ -37,9 +37,9 @@
           {% endif %}
 
           {% if item.children %}
-          <ul>
+          <ul class="child-item-children">
             {% for sub-item in item.children %}
-            <li class="subnav-item"><a class="{% if current_url == sub-item.link %} active {% endif %}"
+            <li class="subchild-item"><a class="{% if current_url == sub-item.link %} active {% endif %}"
                  href="{{ site.baseurl }}{{ sub-item.link }}" data-proofer-ignore>{{ sub-item.name }}</a></li>
             {% endfor %}
           </ul>
