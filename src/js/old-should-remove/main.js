@@ -75,10 +75,27 @@ $(document).ready(function() {
   $('article h1, article h2, article h3, article h4, article h5, article h6')
     .filter('[id]')
     .each(function() {
-      $(this).prepend(`
-        <a class="anchor-link" href="#${$(this).attr('id')}">
+      // Remove id and set on a.anchor
+      const id = $(this).attr('id');
+      $(this).removeAttr('id');
+      $(this)
+        .children('.anchor')
+        .attr('id', id);
+
+      /**
+       * Reorder elements
+       * and add a.anchor-link
+       */
+      $(this).append(
+        `<a class="anchor-link" href="#${id}">
           <i class="picon-link"></i>
-        </a>
-      `);
+         </a>`,
+        $(this)
+          .contents()
+          .detach()
+          .toArray()
+          .reverse()
+      );
+      $(this).prepend();
     });
 });

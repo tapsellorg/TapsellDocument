@@ -21,28 +21,30 @@
       h5,
       h6 {
         // prevent anchor links from being under the global nav
-        &[id]:before {
-          content: '';
+        .anchor {
           display: block;
-          $top-margin: map-get($header, height) + map-get($searchbar, height) + 20px;
+          $top-margin: map-get($header, height) + map-get($searchbar, height) + 45px;
           margin-top: -($top-margin);
           height: ($top-margin);
           visibility: hidden;
         }
 
-        .anchor {
-          display: none;
-        }
-
+        position: relative;
+        @include rtl-doLTR(margin-right, -30px);
+        @include rtl-doLTR(padding-right, 30px);
         .anchor-link {
+          position: absolute;
+          @include rtl-doLTR(right, 0);
           font-size: 16px;
+          top: 50%;
+          transform: translateY(-50%);
           opacity: 0;
           transition: opacity 0.2s;
-          display: inline-block;
-          color: #27a0b6;
+          color: theme-color(primary);
           width: 25px;
-          @include rtl-doLTR(margin-right, -30px);
           text-decoration: none;
+          display: inline-flex;
+          align-items: center;
         }
         &:hover {
           .anchor-link {
