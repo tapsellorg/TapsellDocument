@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import 'sass/color';
+@import 'sass/bootstrap-config';
 @import 'bootstrap';
 @import 'sass/fonts';
 @import 'sass/variables';
@@ -16,63 +16,63 @@
 @import 'sass/footer';
 
 @import 'sass/home';
-@import 'sass/syntax-highlighter-monokai';
+@import 'sass/syntax-base16.solarized.light';
 
 // General
 
 #hits-template {
-	display: block;
-	max-width: 1180px;
-	margin: 50px auto 0 auto;
+  display: block;
+  max-width: 1180px;
+  margin: 50px auto 0 auto;
 }
 
 .text-center-small-float-right {
-	float: right;
-	@media screen and (max-width: $screen-sm) {
-		text-align: center;
-		float: none;
-	}
+  float: right;
+  @media screen and (max-width: $screen-sm) {
+    text-align: center;
+    float: none;
+  }
 }
 
 .text-center-small-float-left {
-	float: left;
-	@media screen and (max-width: $screen-sm) {
-		text-align: center;
-		float: none;
-	}
+  float: left;
+  @media screen and (max-width: $screen-sm) {
+    text-align: center;
+    float: none;
+  }
 }
 
 .logo-small {
-	max-width: $logo-width-small;
+  max-width: $logo-width-small;
 }
 
 // Search bar
 #site-search {
-	padding-bottom: 30px;
+  padding-bottom: 30px;
 
-	input {
-		margin: 0;
-		padding: 0 1em;
-	}
+  input {
+    margin: 0;
+    padding: 0 1em;
+  }
 
-	.algolia-autocomplete {
-		width: 100%;
-	}
+  .algolia-autocomplete {
+    width: 100%;
+  }
 
-	.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
-		left: 0 !important;
-		right: none !important;
-	}
+  .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
+    left: 0 !important;
+    right: none !important;
+  }
 }
 
 // Article
 @import 'sass/article';
 
 div.align-center {
-	img {
-		max-width: 90%;
-		text-align: center;
-	}
+  img {
+    max-width: 90%;
+    text-align: center;
+  }
 }
 
 /***** Widgets ****************************************************************/
@@ -80,14 +80,14 @@ div.align-center {
 //*****************************************************************************/
 
 .alert-danger a {
-	color: #843534;
-	font-weight: bold;
+  color: #843534;
+  font-weight: bold;
 }
 /***** End - Widgets **********************************************************/
 //
 //*****************************************************************************/
 
 .list-2cols {
-	display: grid;
-	grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }

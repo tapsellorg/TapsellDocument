@@ -1,5 +1,5 @@
 <head>
-  {% if page.url contains '/archive/' %}
+  {% if page.noindex == true %}
   <meta name="robots" content="noindex, nofollow" />
   {% endif %}
   <meta charset="UTF-8">
@@ -18,8 +18,6 @@
   <link rel="mask-icon" href=" {{ site.baseurl }}/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
-
-  <!-- TODO: Open Graph -->
 
   <!-- Styles -->
   <link rel="stylesheet" href=" {{ site.baseurl }}/assets/style.css?v={{ 'now' | date:'%s' }}" />

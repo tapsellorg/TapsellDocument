@@ -1,133 +1,197 @@
 .article-container {
-	@include not-md {
-		padding: 30px 16px;
-		flex: 1 1 100%;
-	}
-	padding: 40px 45px;
-	// width: calc(100% - 260px);
-	flex: 1 0 map-get($screens, md) - map-get($sidebar, width);
-	min-width: 0;
+  @include not-md {
+    padding: 30px 16px;
+    flex: 1 1 100%;
+  }
+  padding: 48px;
+  flex: 1 0 map-get($screens, md) - map-get($sidebar, width);
+  min-width: 0;
 
-	article {
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			// prevent anchor links from being under the global nav
-			&[id]:before {
-				content: '';
-				display: block;
-				$top-margin: map-get($header, height) + map-get($searchbar, height) + 20px;
-				margin-top: -($top-margin);
-				height: ($top-margin);
-				visibility: hidden;
-			}
-			.anchor-link {
-				display: none;
-				@include rtl-doLTR(margin-right, 7px);
-				font-size: 20px;
-			}
-			&:hover {
-				.anchor-link {
-					display: initial;
-				}
-			}
-		}
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			a {
-				padding-left: 5px;
-				color: #27a0b6;
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
+  article {
+    .article-title {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
 
-		h1 {
-			font-size: 2rem;
-		}
-		h2 {
-			font-size: 1.4rem;
-			margin-top: 1.5rem;
-			margin-bottom: 1rem;
-		}
-		h3 {
-			margin-top: 10px;
-			font-size: 1.2rem;
-		}
-		h4 {
-			font-size: 1.1rem;
-		}
-		h5 {
-		}
-		h6 {
-		}
-		p {
-			margin-bottom: 1rem;
-			line-height: 1.9;
-			text-align: justify;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
+    .article-content {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        // prevent anchor links from being under the global nav
+        .anchor {
+          display: block;
+          $top-margin: map-get($header, height) + map-get($searchbar, height) + 45px;
+          margin-top: -($top-margin);
+          height: ($top-margin);
+          visibility: hidden;
+        }
 
-		.article-title {
-			border-bottom: 2px solid #eee;
-			padding-bottom: 10px;
-		}
+        position: relative;
+        @include rtl-doLTR(margin-right, -30px);
+        @include rtl-doLTR(padding-right, 30px);
+        .anchor-link {
+          position: absolute;
+          @include rtl-doLTR(right, 0);
+          font-size: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 0;
+          transition: opacity 0.2s;
+          color: theme-color(primary);
+          width: 25px;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+        }
+        &:hover {
+          .anchor-link {
+            opacity: 1;
+          }
+        }
+      }
 
-		// toc
-		.section-nav {
-			margin: 25px 0;
-		}
+      h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        margin-top: 10px;
+        font-size: 1.2rem;
+      }
+      h4 {
+        font-size: 1.1rem;
+      }
+      h5 {
+      }
+      h6 {
+      }
+      li,
+      p {
+        line-height: 1.9;
+      }
+      ul,
+      ol,
+      dl,
+      p {
+        margin-bottom: 1rem;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      table {
+        @extend .table;
+        @extend .table-bordered;
+        @extend .table-striped;
+      }
 
-		.anchor {
-			display: none;
-		}
+      // toc
+      .section-nav {
+        margin: 25px 0;
+      }
 
-		img {
-			margin: 15px auto;
-			max-width: 100%;
-			display: block;
-		}
+      img {
+        margin: 15px auto;
+        max-width: 100%;
+        display: block;
+      }
 
-		span.align-center {
-			display: block;
-			text-align: center;
+      span.align-center {
+        display: block;
+        text-align: center;
 
-			img {
-				max-width: 90%;
-			}
-		}
+        img {
+          max-width: 90%;
+        }
+      }
 
-		.highlighter-rouge {
-			font-size: 18px;
-			margin-bottom: 1rem;
-			.highlight {
-				pre,
-				code {
-					color: #ffffff;
-					margin: 0;
-					padding: 0;
-					direction: ltr;
-					text-align: left;
-				}
-				.rouge-gutter {
-					padding: 5px 20px 5px 10px;
-					// background: rgba(#ffffff, 0.1);
-					.lineno {
-						color: #888;
-						text-align: right;
-						background: transparent !important;
-					}
-				}
-			}
-		}
-	}
+      pre,
+      code {
+        direction: ltr;
+        text-align: left;
+      }
+      code.highlighter-rouge {
+        background: rgba(0, 0, 0, 0.05);
+        color: rgba(0, 0, 0, 0.8);
+        display: inline-block;
+        border-radius: 3px;
+        padding: 2px 6px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      div.highlighter-rouge {
+        font-size: 18px;
+        margin: 2rem 0;
+        direction: ltr;
+        text-align: left;
+        div.highlight {
+          padding: 15px;
+          background: #f5f5f5;
+          border-radius: 5px;
+          border: 1px solid #e6e6e6;
+          transition: all 0.2s;
+          box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.1);
+          &:hover {
+            background: #fbfbfb;
+          }
+          pre {
+            padding: 0;
+            margin: 0;
+          }
+          .rouge-gutter {
+            padding: 5px 20px 5px 10px;
+            .lineno {
+              color: #888;
+              text-align: right;
+              background: transparent !important;
+            }
+          }
+        }
+      }
+
+      blockquote {
+        margin: 32px -24px;
+        padding: 24px;
+        border: 2px solid theme-color(primary);
+        position: relative;
+        border-radius: 3px;
+        background: #f9f9f9;
+
+        &[data-title] {
+          padding-top: 38px;
+          &:before {
+            content: attr(data-title);
+            position: absolute;
+            top: 0;
+            line-height: 1;
+            background: theme-color(primary);
+            padding: 4px 8px;
+            background: #673ab7;
+            color: #fff;
+            right: 24px;
+            border-radius: 0 0 3px 3px;
+            min-width: 50px;
+            text-align: center;
+          }
+        }
+
+        @each $color in ('red', 'blue', 'green', 'purple', 'gray', 'orange') {
+          &[data-color='#{$color}'] {
+            border-color: theme-color($color);
+            &[data-title] {
+              &:before {
+                background: theme-color($color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

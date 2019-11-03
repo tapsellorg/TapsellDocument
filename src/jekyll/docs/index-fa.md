@@ -1,8 +1,8 @@
 ---
 layout: classic-docs
-page-type: homepage
 title: مستندات تپسل 
 description: شبکه هوشمند تبلیغات دیجیتال
+hideTitle: true
 lang: fa
 permalink: /
 ---
