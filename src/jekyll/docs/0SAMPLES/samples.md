@@ -52,9 +52,14 @@ footnote[^1].
 
 
 > با استفاده از سینتکس blockquote مارک داون، می‌تونی از این باکس‌ها بسازی.
+> 
 > ضمنا می‌تونی رنگش رو از بین رنگ‌های زیر انتخاب کنی
+> 
 > red, green, orange, purple, blue, gray
+> 
 > با استفاده از data-title می‌تونی بالای باکس هر چی خواستی بنویسی
+> 
+> ```{:data-title="توجه" data-color="gray"}```
 {:data-title="توجه" data-color="gray"}
 
 
