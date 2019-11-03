@@ -64,4 +64,20 @@ $scroll-bar-width: 7px;
   margin: 0 auto;
   background: #fff;
   min-height: calc(100vh - 200px);
+  padding: 0;
+}
+
+.rtl {
+  direction: rtl !important;
+}
+.ltr {
+  direction: ltr !important;
+}
+.text-rtl {
+  direction: rtl !important;
+  text-align: right !important;
+}
+.text-ltr {
+  direction: ltr !important;
+  text-align: left !important;
 }

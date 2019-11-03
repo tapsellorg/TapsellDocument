@@ -13,8 +13,8 @@
     </div>
   </div>
 
-  <div class="outer">
-    {% include header.html %}
+  {% include header.html %}
+  <main class="outer">
     {% include main-searchbar.html %}
     <div class="hits-target"></div>
     <div class="main-body">
@@ -22,7 +22,7 @@
       {% include doc-article.html %}
     </div>
     {% include footer.html %}
-  </div>
+  </main>
 </body>
 
 </html>

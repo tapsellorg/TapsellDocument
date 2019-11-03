@@ -12,5 +12,9 @@
     ".bundle": true,
     "vendor": true
   },
-  "prettier.disableLanguages": ["vue", "html"]
+  "prettier.disableLanguages": [
+    "vue",
+    "html",
+    "markdown"
+  ]
 }
