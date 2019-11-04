@@ -1,9 +1,11 @@
 .article-container {
+  $article-padding: 48px;
+  $article-padding-not-md: 20px;
   @include not-md {
-    padding: 30px 16px;
+    padding: $article-padding-not-md;
     flex: 1 1 100%;
   }
-  padding: 48px;
+  padding: $article-padding;
   flex: 1 0 map-get($screens, md) - map-get($sidebar, width);
   min-width: 0;
 
@@ -156,12 +158,15 @@
       }
 
       blockquote {
-        margin: 32px -24px;
+        margin: 32px (-($article-padding / 2));
         padding: 24px;
         border: 2px solid theme-color(primary);
         position: relative;
         border-radius: 3px;
         background: #f9f9f9;
+        @include not-md {
+          margin: 32px (-($article-padding-not-md / 2));
+        }
 
         &[data-title] {
           padding-top: 38px;
@@ -190,6 +195,19 @@
               }
             }
           }
+        }
+      }
+
+      .footnotes {
+        display: block;
+        padding: 30px $article-padding;
+        border-top: 1px solid #bbb;
+        background: #f3f3f3;
+        margin: 32px (-$article-padding) (-$article-padding);
+        @include not-md {
+          margin: 32px (-$article-padding-not-md) (-$article-padding-not-md);
+          padding-right: $article-padding-not-md;
+          padding-left: $article-padding-not-md;
         }
       }
     }
