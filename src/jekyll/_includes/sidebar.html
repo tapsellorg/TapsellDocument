@@ -31,18 +31,19 @@
         <ul class="main-item-children">
           {% for item in main-item.children %}
           {% if item.name %}
-          <li class="child-item"><a class="{% if current_url == item.link %} active {% endif %}"
+          <li class="child-item">
+            <a class="{% if current_url == item.link %} active {% endif %}"
                href="{{ site.baseurl }}{{ item.link }}{% if page.lang == 'en' %}/{% endif %}" data-proofer-ignore>{{ item.name }}</a>
-          </li>
-          {% endif %}
 
-          {% if item.children %}
-          <ul class="child-item-children">
-            {% for sub-item in item.children %}
-            <li class="subchild-item"><a class="{% if current_url == sub-item.link %} active {% endif %}"
-                 href="{{ site.baseurl }}{{ sub-item.link }}" data-proofer-ignore>{{ sub-item.name }}</a></li>
-            {% endfor %}
-          </ul>
+            {% if item.children %}
+              <ul class="child-item-children">
+                {% for sub-item in item.children %}
+                  <li class="subchild-item"><a class="{% if current_url == sub-item.link %} active {% endif %}"
+                    href="{{ site.baseurl }}{{ sub-item.link }}" data-proofer-ignore>{{ sub-item.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
           {% endif %}
           {% endfor %}
         </ul>
