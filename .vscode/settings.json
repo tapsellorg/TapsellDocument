@@ -7,6 +7,5 @@
   "files.exclude": {
     ".bundle": true,
     "vendor": true
-  },
-  "prettier.disableLanguages": ["vue", "html", "markdown"]
+  }
 }
