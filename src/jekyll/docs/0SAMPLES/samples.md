@@ -36,6 +36,7 @@ protected void onNewIntent(Intent intent) {
     Metrix.getInstance().appWillOpenUrl(data);
 }
 ```
+{:data-higlight-lines="3,6"}
 
 ## Footnote
 

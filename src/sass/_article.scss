@@ -154,6 +154,17 @@
               background: transparent !important;
             }
           }
+
+          .highlight-line-code {
+            display: block;
+            height: 20px;
+            margin-bottom: -20px;
+            background: rgba(0, 253, 0, 0.13);
+            &:before {
+              content: '+';
+              color: #4caf50;
+            }
+          }
         }
       }
 

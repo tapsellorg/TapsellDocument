@@ -114,6 +114,9 @@
                 font-size: 13px;
                 font-weight: normal;
                 margin-bottom: 8px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
                 a {
                   color: #777777;
                 }
