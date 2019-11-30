@@ -80,10 +80,10 @@ function browserReload(done) {
 gulp.task('build', gulp.series(deleteDist, jekyllBuild(), gulp.parallel(imageMin, sass, webpack, assets)));
 
 gulp.task('watch', function() {
-  watch(paths.assets.images.watch, gulp.series(imageMin));
-  watch(paths.sass.watch, gulp.series(sass));
-  watch(paths.assets.allExceptImages.watch, gulp.series(assets));
-  watch(paths.jekyll.watch, gulp.series(browserReload));
+  watch(paths.assets.images.watch, imageMin);
+  watch(paths.sass.watch, sass);
+  watch(paths.assets.allExceptImages.watch, assets);
+  watch(paths.jekyll.watch, browserReload());
   gulp.watch(paths.dest, function(done) {
     cache.clearAll();
     done();
