@@ -26,7 +26,7 @@ toc: true # table of contents
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     ...
-    implementation 'ir.tapsell.sdk:tapsell-sdk-unity:4.3.3'
+    implementation 'ir.tapsell.sdk:tapsell-sdk-unity:4.3.8'
     ...
 **DEPS**}
 ```
