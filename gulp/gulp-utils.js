@@ -13,6 +13,7 @@ const webpackStream = require('webpack-stream');
 const webpack = require('webpack');
 const cp = require('child_process');
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
+const cleanCSS = require('gulp-clean-css');
 
 const envDevMode = process.env.NODE_ENV === 'development';
 
@@ -28,9 +29,11 @@ module.exports = {
   sass: function(src, dest, devMode = envDevMode) {
     return gulp
       .src(src)
+      .pipe(plumber())
       .pipe(gulpif(devMode, sourcemaps.init()))
       .pipe(gulpSass({ outputStyle: 'compressed', includePaths: ['node_modules/bootstrap/scss'] }).on('error', gulpSass.logError))
       .pipe(postcss([autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] })]))
+      .pipe(cleanCSS())
       .pipe(gulpif(devMode, sourcemaps.write('.')))
       .pipe(gulp.dest(dest));
   },
