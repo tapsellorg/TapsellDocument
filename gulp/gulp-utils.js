@@ -14,6 +14,7 @@ const webpack = require('webpack');
 const cp = require('child_process');
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 const cleanCSS = require('gulp-clean-css');
+const versionNumber = require('gulp-version-number');
 
 const envDevMode = process.env.NODE_ENV === 'development';
 
@@ -24,6 +25,7 @@ module.exports = {
       .pipe(
         gulpif(!devMode, htmlmin({ collapseWhitespace: true, minifyCSS: true, minifyJS: true, minifyURLs: true, removeComments: true }))
       )
+      .pipe(versionNumber({ append: { to: ['css', 'js'] } }))
       .pipe(gulp.dest(dest));
   },
   sass: function(src, dest, { includePaths = [], devMode = envDevMode } = {}) {

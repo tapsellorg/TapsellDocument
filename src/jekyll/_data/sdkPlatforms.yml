@@ -1,7 +1,12 @@
 android:
   sdkVersion: 3.5.2
+  sample: https://github.com
+  github: https://github.com
+  downloadLinks:
+    - link: https://example.com
+      name: لینک دانلود SDK
   versions:
     - version: 3.5.2
-      releaseDate: 1575553909213
+      releaseDate: 1575558424
     - version: 3.5.1
-      releaseDate: 1575553500000
+      releaseDate: 1575553500

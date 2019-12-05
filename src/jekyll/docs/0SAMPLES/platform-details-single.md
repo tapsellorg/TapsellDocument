@@ -10,9 +10,5 @@ sdkPlatform:
   logo: /assets/images/sdk-platforms/android.png
 ---
 
-<pre>
-  {{page.sdkPlatform}}
-</pre>
-<pre>
-  {{site.data.sdkPlatforms[page.sdkPlatform.name]}}
-</pre>
+- a
+- b
