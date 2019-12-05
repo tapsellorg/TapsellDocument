@@ -18,7 +18,7 @@ const cleanCSS = require('gulp-clean-css');
 const envDevMode = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  html: function(src, dest, devMode = envDevMode) {
+  html: function(src, dest, { devMode = envDevMode } = {}) {
     return gulp
       .src(src)
       .pipe(
@@ -26,14 +26,14 @@ module.exports = {
       )
       .pipe(gulp.dest(dest));
   },
-  sass: function(src, dest, devMode = envDevMode) {
+  sass: function(src, dest, { includePaths = [], devMode = envDevMode } = {}) {
     return gulp
       .src(src)
       .pipe(plumber())
       .pipe(gulpif(devMode, sourcemaps.init()))
-      .pipe(gulpSass({ outputStyle: 'compressed', includePaths: ['node_modules/bootstrap/scss'] }).on('error', gulpSass.logError))
+      .pipe(gulpSass({ outputStyle: 'compressed', includePaths }).on('error', gulpSass.logError))
       .pipe(postcss([autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] })]))
-      .pipe(cleanCSS())
+      .pipe(cleanCSS({ inline: ['none'] }))
       .pipe(gulpif(devMode, sourcemaps.write('.')))
       .pipe(gulp.dest(dest));
   },

@@ -12,6 +12,7 @@ const cache = require('gulp-cache');
 const gulpUtils = require('./gulp/gulp-utils');
 
 const paths = {
+  src: 'src/',
   assets: {
     allExceptImages: { watch: ['src/assets/**/*', '!src/assets/images', '!src/assets/images/**/*'], dest: 'assets' },
     images: { watch: 'src/assets/images/**/*', dest: 'assets/images' },
@@ -44,7 +45,7 @@ function deleteDist() {
 }
 
 function sass() {
-  return gulpUtils.sass(paths.sass.entry, paths.dest + '/' + paths.sass.dest);
+  return gulpUtils.sass(paths.sass.entry, paths.dest + '/' + paths.sass.dest, { includePaths: ['node_modules/bootstrap/scss', paths.src] });
 }
 
 function assets() {
