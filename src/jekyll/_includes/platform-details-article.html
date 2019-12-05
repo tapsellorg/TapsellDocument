@@ -1,0 +1,49 @@
+{%- assign platformInfo = site.data.sdkPlatforms[page.sdkPlatform.name] -%}
+{% for v in platformInfo.versions %}
+  {{ v }}
+  {% if v.version == platformInfo.sdkVersion %}
+    {%- assign versionInfo = v -%}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+
+<div class="platform-details-overview">
+  <div class="row">
+    <div class="col-auto">
+      <div class="platform-meta-list">
+        <ul>
+          <li>
+            <span>Version:</span>
+            <span>v</span>
+            <span>{{ platformInfo.sdkVersion }}</span>
+          </li>
+          <li>
+            <span>Date:</span>
+            <span>{{ versionInfo.releaseDate | date: "%a, %b %d, %y" }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="text-left">
+        <div class="platform-logo-container">
+          <img class="platform-logo" src="{{page.sdkPlatform.logo}}" alt=""/>
+        </div>
+        <h1 class="article-title">{{ page.title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+<div class="not-translated-article">
+  {% if page.untranslated %}
+    {% include translation_in_progress.html %}
+  {% endif %}
+</div>
+
+<div class="article-content">
+  {{ content | toc }}
+</div>

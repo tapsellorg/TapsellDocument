@@ -7,18 +7,22 @@
         </div>
       </div>
       <div class="col-auto">
-        <img src="{{ '/assets/images/logos/logo-dark-background.png' | relative_url }}" class="logo-small margin-top-small"
-            alt="{{site.global_vars.footer_logo_alt}}">
+        <img
+          src="{{ '/assets/images/logos/logo-dark-background.png' | relative_url }}"
+          class="logo-small margin-top-small"
+          alt="{{site.global_vars.footer_logo_alt}}"
+        />
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <hr class="dark m-0">
+        <hr class="dark m-0" />
         <div class="footer-nav-container">
           <nav class="footer-nav">
             <ul class="footer-nav-list">
               <li><a href="{{site.global_vars.terms_url}}">{{site.t[page.lang].footer.terms}}</a></li>
-              <li><a href="mailto:{{site.global_vars.contact_email}}" target="_blank"><span>{{site.t[page.lang].footer.contact}}</span></a>
+              <li>
+                <a href="mailto:{{site.global_vars.contact_email}}" target="_blank"><span>{{site.t[page.lang].footer.contact}}</span></a>
               </li>
             </ul>
           </nav>
