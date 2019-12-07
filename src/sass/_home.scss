@@ -1,24 +1,37 @@
 .home-card {
   padding: 25px 20px;
-  margin: 10px -5px;
-  border: 1px solid #eee;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
-  border-top: 3px solid theme-color('primary');
+  margin: 25px -5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 3px 18px -8px rgba(0, 0, 0, 0.14);
+  transition: all 0.2s ease;
+  background: linear-gradient(180deg, #fff, #f9f9f9);
   a {
     color: theme-color('primary');
   }
 
   > h2 {
-    font-size: 20px;
-    &:first-child {
-      margin-top: 0;
-    }
+    padding: 0 0 0 !important;
+    margin: -35px 25px 25px !important;
+    color: theme-color-level('primary', 4);
+    background: #fff;
+    font-size: 1.4rem;
+    text-align: center;
   }
 
   > ul {
     font-size: 16px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+}
+
+.home-card-group:hover {
+  .home-card {
+    box-shadow: 0 3px 18px -12px rgba(0, 0, 0, 0.1);
+    &:hover {
+      box-shadow: 0 8px 26px -10px rgba(0, 0, 0, 0.2);
     }
   }
 }

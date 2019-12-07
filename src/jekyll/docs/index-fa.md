@@ -9,7 +9,7 @@ permalink: /
 
 <h2>به مستندات {{ site.global_vars.site_name }} خوش آمدید</h2>
 
-<div class="row">
+<div class="row home-card-group">
   <div class="col-12 col-sm-6">
 <div class="home-card">
   <h2>داشبورد</h2>
