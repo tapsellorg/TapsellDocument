@@ -14,7 +14,7 @@
           <img class="platform-logo" src="{{page.sdkPlatform.logo}}" alt=""/>
         </div>
         <div class="col">
-          <div class="pl-4">
+          <div class="pl-ltr-4">
             <div>
               <h1 class="platform-title">{{ page.title }}</h1>
             </div>
@@ -24,7 +24,7 @@
                 <li>
                   <div class="meta-item">
                     <span class="meta-label">Version</span>
-                    <div class="meta-value">
+                    <div class="meta-value ltr">
                       <span>v</span>
                       <span>{{ platformInfo.sdkVersion }}</span>
                     </div>
@@ -88,4 +88,27 @@
 
 <div class="article-content">
   {{ content | toc }}
+</div>
+
+<hr class="platform-details-sep">
+
+<div class="release-notes">
+  <h2 class="mb-3">تغییرات نسخه‌ها:</h2>
+  {% for v in platformInfo.versions %}
+    <div class="release-note-item">
+      <h3 id="v{{v.version}}">
+        <a class="anchor" href="v{{v.version}}"></a>
+        <span class="d-inline-block">{{v.releaseDate | date: "%Y %B %d" }}</span>
+        -
+        <span class="d-inline-block ltr">v{{v.version}}</span>
+      </h3>
+      <ul class="rn-item-changelog">
+        {% for cl in v.changelog %}
+          <li>
+            <span class="d-inline-block ltr">{{cl.message}}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
 </div>

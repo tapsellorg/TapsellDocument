@@ -1,6 +1,4 @@
 .platform-details-overview {
-  direction: ltr;
-  text-align: left;
   margin-bottom: 24px;
   .platform-logo-container {
     width: 190px;
@@ -12,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 0 0;
+    @include ltr-doRTL(margin, 0 auto 0 0);
 
     .platform-logo {
       max-width: 100%;
@@ -30,10 +28,9 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    // text-align: right;
     display: flex;
     > li {
-      margin-right: 6px;
+      @include ltr-doRTL(margin-right, 6px);
       margin-bottom: 3px;
       .meta-item {
         display: inline-flex;
@@ -67,9 +64,9 @@
     margin-top: 8px;
     display: flex;
     > * {
-      margin-right: 6px;
+      @include ltr-doRTL(margin-right, 6px);
       &:last-child {
-        margin-right: 0;
+        @include ltr-doRTL(margin-right, 0);
       }
     }
   }
@@ -93,4 +90,10 @@
   border-top-style: dashed;
   margin: 38px 0;
   border-top-color: #dddddd;
+}
+
+.release-notes {
+  .release-note-item {
+    margin-bottom: 20px;
+  }
 }
