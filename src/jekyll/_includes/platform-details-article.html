@@ -1,0 +1,114 @@
+{%- assign platformInfo = site.data.sdkPlatforms[page.sdkPlatform.name] -%}
+{% for v in platformInfo.versions %}
+  {% if v.version == platformInfo.sdkVersion %}
+    {%- assign versionInfo = v -%}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<div class="platform-details-overview">
+  <div class="row">
+    <div class="col">
+      <div class="row no-gutters align-items-end">
+        <div class="col-auto platform-logo-container">
+          <img class="platform-logo" src="{{page.sdkPlatform.logo}}" alt=""/>
+        </div>
+        <div class="col">
+          <div class="pl-ltr-4">
+            <div>
+              <h1 class="platform-title">{{ page.title }}</h1>
+            </div>
+
+            <div>
+              <ul class="platform-meta-list">
+                <li>
+                  <div class="meta-item">
+                    <span class="meta-label">Version</span>
+                    <div class="meta-value ltr">
+                      <span>v</span>
+                      <span>{{ platformInfo.sdkVersion }}</span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="meta-item">
+                    <span class="meta-label">Release Date</span>
+                    <span class="meta-value">{{ versionInfo.releaseDate | date: "%Y-%m-%d" }}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {% if platformInfo.downloadLinks or platformInfo.sample %}
+              <div class="download-links">
+                {% if platformInfo.sample %}
+                  <a href="{{platformInfo.sample}}" target="_blank">
+                    <button class="btn btn-outline-blue">
+                      <span>Sample Project</span>
+                      <i class="picon-link"></i>
+                    </button>
+                  </a>
+                {% endif %}
+
+                {% for dl in platformInfo.downloadLinks %}
+                  <a class="download-link" href="{{dl.link}}" target="_blank">
+                    <button class="btn btn-outline-primary">
+                      <span>{{dl.name}}</span>
+                    </button>
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+
+            {% if platformInfo.github %}
+              <div class="github-link">
+                <span class="github-link-label">Repository:</span>
+                <a href="{{platformInfo.github}}" target="_blank">
+                  <span>Github Link</span>
+                  <i class="picon-link"></i>
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-auto"></div>
+  </div>
+</div>
+
+<div class="not-translated-article">
+  {% if page.untranslated %}
+    {% include translation_in_progress.html %}
+  {% endif %}
+</div>
+
+<hr class="platform-details-sep">
+
+<div class="article-content">
+  {{ content | toc }}
+</div>
+
+<hr class="platform-details-sep">
+
+<div class="release-notes">
+  <h2 class="mb-3">تغییرات نسخه‌ها:</h2>
+  {% for v in platformInfo.versions %}
+    <div class="release-note-item">
+      <h3 id="v{{v.version}}">
+        <a class="anchor" href="v{{v.version}}"></a>
+        <span class="d-inline-block">{{v.releaseDate | date: "%Y %B %d" }}</span>
+        -
+        <span class="d-inline-block ltr">v{{v.version}}</span>
+      </h3>
+      <ul class="rn-item-changelog">
+        {% for cl in v.changelog %}
+          <li>
+            <span class="d-inline-block ltr">{{cl.message}}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

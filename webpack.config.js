@@ -11,48 +11,28 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env']
-            }
-          }
-        ]
+        use: [{ loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } }],
       },
       {
         test: /\.scss$/,
         use: [
           { loader: 'style-loader' },
           { loader: 'css-loader' },
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: ['node_modules/']
-            }
-          }
-        ]
+          { loader: 'sass-loader', options: { includePaths: ['node_modules/'] } },
+        ],
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'fonts/'
-            }
-          }
-        ]
+        use: [{ loader: 'file-loader', options: { name: '[name].[ext]', outputPath: 'fonts/' } }],
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
@@ -61,32 +41,18 @@ module.exports = {
           {
             loader: 'image-webpack-loader',
             options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 65
-              },
-              // optipng.enabled: false will disable optipng
-              optipng: {
-                enabled: false
-              },
-              pngquant: {
-                quality: '65-90',
-                speed: 4
-              },
-              gifsicle: {
-                interlaced: false
-              },
-              // the webp option will enable WEBP
-              webp: {
-                quality: 75
-              }
-            }
-          }
-        ]
-      }
-    ]
+              mozjpeg: { progressive: true, quality: 65 },
+              optipng: { enabled: false },
+              pngquant: { quality: '65-90', speed: 4 },
+              gifsicle: { interlaced: false },
+              webp: { quality: 75 },
+            },
+          },
+        ],
+      },
+    ],
   },
   optimization: {
-    minimizer: isDevMode ? [] : [new UglifyJsPlugin({ cache: true, parallel: true })]
-  }
+    minimizer: isDevMode ? [] : [new UglifyJsPlugin({ cache: true, parallel: true })],
+  },
 };

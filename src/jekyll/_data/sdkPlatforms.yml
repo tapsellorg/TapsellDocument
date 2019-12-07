@@ -1,0 +1,24 @@
+android:
+  sdkVersion: 3.5.2
+  sample: https://github.com
+  github: https://github.com
+  downloadLinks:
+    - link: https://example.com
+      name: لینک دانلود SDK
+  versions:
+    - version: 3.5.2
+      releaseDate: 1575558424
+      changelog:
+        - message: Fix role filter support in the Members page
+        - message: Fix broken wiki page
+    - version: 3.5.1
+      releaseDate: 1575553500
+      changelog:
+        - message: Fix calendar encoding issue with accents
+        - message: Fix calendar .ics import
+        - message: Fix calendar backend saving date issue
+        - message: Fix calendar event issue on multiple-months events
+        - message: Fix child theme language files not loaded
+        - message: Fix wiki extension dropdown broken when having more than 10 categories
+        - message: Fix push notification extension when no storage URL was provided
+        - message: Fix filterRole sorter in the Members directory

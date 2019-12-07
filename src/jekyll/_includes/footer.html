@@ -1,55 +1,36 @@
 <footer id="footer" class="footer">
-	<div class="container">
-		<div class="row">
-			<!-- <nav>
-        <div class="col-md-2 col-sm-3 col-6">
-          <h6>Product</h6>
-          <ul class="list-unstyled">
-            <li><a href="https://circleci.com/product/">Overview</a></li>
-            <li><a href="https://circleci.com/pricing/">Pricing</a></li>
-            <li><a href="https://circleci.com/integrations/">Integrations</a></li>
-            <li><a href="https://circleci.com/enterprise/">Enterprise</a></li>
-            <li><a href="https://circleci.com/changelog/">Changelog</a></li>
-          </ul>
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-auto">
+        <div>
+          {% include social-buttons.html %}
         </div>
-        <div class="col-md-2 col-sm-3 col-6">
-          <h6>Getting Started</h6>
-          <ul>
-            <li><a href="https://circleci.com/continuous-integration/">What is CI?</a></li>
-            <li><a href="https://circleci.com/docs/2.0/">How to get started on CircleCI</a></li>
-          </ul>
+      </div>
+      <div class="col-auto">
+        <img
+          src="{{ '/assets/images/logos/logo-dark-background.png' | relative_url }}"
+          class="logo-small margin-top-small"
+          alt="{{site.global_vars.footer_logo_alt}}"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="dark m-0" />
+        <div class="footer-nav-container">
+          <nav class="footer-nav">
+            <ul class="footer-nav-list">
+              <li><a href="{{site.global_vars.terms_url}}">{{site.t[page.lang].footer.terms}}</a></li>
+              <li>
+                <a href="mailto:{{site.global_vars.contact_email}}" target="_blank"><span>{{site.t[page.lang].footer.contact}}</span></a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </nav> -->
-		</div>
-		<div class="row justify-content-between">
-			<div class="col-auto">
-				<div>
-					{% include social-buttons.html %}
-				</div>
-			</div>
-			<div class="col-auto">
-				<img src="{{ '/assets/images/logos/logo-dark-background.png' | relative_url }}" class="logo-small margin-top-small"
-						 alt="{{site.global_vars.footer_logo_alt}}">
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<hr class="dark m-0">
-				<div class="footer-nav-container">
-					<nav class="footer-nav">
-						<ul class="footer-nav-list">
-							<li><a href="{{site.global_vars.terms_url}}">{{site.t[page.lang].footer.terms}}</a></li>
-							<li><a href="mailto:{{site.global_vars.contact_email}}" target="_blank"><span>{{site.t[page.lang].footer.contact}}</span></a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="margin-top-small margin-bottom-small text-center-small-float-right">
-					<span>{{site.t[page.lang].footer.copyright}} {{ site.time | date: '%Y' }}.</span>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="margin-top-small margin-bottom-small text-center-small-float-right">
+          <span>{{site.t[page.lang].footer.copyright}} {{ site.time | date: '%Y' }}.</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
-
-<script src=" {{ site.baseurl }}/assets/bundle.js?v={{ 'now' | date:'%s' }}" type="text/javascript"></script>

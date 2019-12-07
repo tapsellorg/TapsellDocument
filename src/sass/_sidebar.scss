@@ -73,19 +73,53 @@
         }
 
         .main-item-children {
+          position: relative;
           overflow: hidden;
-          @include rtl-doLTR(margin, 12px 25px 0 0);
+          @include rtl-doLTR(padding, 12px 25px 0 0);
+          &:before {
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: 9px;
+            bottom: 0;
+            width: 1px;
+            background: rgba(#000000, 0.08);
+          }
+          &:last-child {
+            .child-item {
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
           .child-item {
             font-size: 15px;
-            margin: 0 0 10px;
-          }
-          .child-item-children {
-            @include rtl-doLTR(margin, 12px 25px 0 0);
-            .subchild-item {
-              font-size: 13px;
-              font-weight: normal;
-              a {
-                color: #777777;
+            margin: 0 0 15px;
+            > a {
+              margin: 0 0 10px;
+            }
+            .child-item-children {
+              @include rtl-doLTR(padding-right, 25px);
+              position: relative;
+              &:before {
+                content: "";
+                position: absolute;
+                top: 1px;
+                right: 9px;
+                bottom: 0;
+                width: 1px;
+                background: rgba(0, 0, 0, 0.05);
+              }
+              .subchild-item {
+                font-size: 13px;
+                font-weight: normal;
+                margin-bottom: 8px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                a {
+                  color: #777777;
+                }
               }
             }
           }

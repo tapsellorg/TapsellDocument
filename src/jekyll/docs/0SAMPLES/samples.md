@@ -36,6 +36,9 @@ protected void onNewIntent(Intent intent) {
     Metrix.getInstance().appWillOpenUrl(data);
 }
 ```
+{:data-higlight-lines="3,6"}
+
+## Footnote
 
 This is a text with a
 footnote[^1].
@@ -65,3 +68,15 @@ footnote[^1].
 
 اگر شما می‌خواهید اپلیکیشن خود را در استور های مختلف مانند کافه بازار، گوگل پلی و … منتشر کنید، با استفاده از متد زیر می‌توانید مشاهده کنید که کاربر از کدام استور ( مثلا کافه بازار، گوگل پلی، مایکت، اول مارکت و وبسایت … ) اپلیکیشن را نصب کرده اند و منبع نصب های ارگانیک خود را شناسایی کنید
 {:.ltr-text}
+
+## دکمه
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+<button type="button" class="btn btn-link">Link</button>

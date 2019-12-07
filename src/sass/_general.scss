@@ -79,3 +79,65 @@ $scroll-bar-width: 7px;
   direction: ltr !important;
   text-align: left !important;
 }
+
+@each $font-size in (14, 16, 18, 20, 22, 26, 32) {
+  .fz-#{$font-size} {
+    font-size: $font-size * 1px !important;
+  }
+}
+
+@for $i from 0 to 6 {
+  $lr-list: (
+    l: r,
+    r: l,
+  );
+
+  @each $x, $o-x in $lr-list {
+    .m#{$x}-ltr-#{$i} {
+      @include rtl {
+        @extend .m#{$o-x}-#{$i};
+      }
+
+      @include ltr {
+        @extend .m#{$x}-#{$i};
+      }
+    }
+
+    .m#{$x}-rtl-#{$i} {
+      @include ltr {
+        @extend .m#{$o-x}-#{$i};
+      }
+
+      @include rtl {
+        @extend .m#{$x}-#{$i};
+      }
+    }
+
+    .p#{$x}-ltr-#{$i} {
+      @include rtl {
+        @extend .p#{$o-x}-#{$i};
+      }
+
+      @include ltr {
+        @extend .p#{$x}-#{$i};
+      }
+    }
+  }
+}
+
+$right-left-opposite-list: (
+  right: left,
+  left: right,
+);
+
+@each $dir, $opposite-dir in $right-left-opposite-list {
+  .text-#{$dir}-ltr {
+    @include rtl {
+      @extend .text-#{$opposite-dir};
+    }
+
+    @include ltr {
+      @extend .text-#{$dir};
+    }
+  }
+}
