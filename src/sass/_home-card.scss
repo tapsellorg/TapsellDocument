@@ -17,6 +17,22 @@
     background: #fff;
     font-size: 1.4rem;
     text-align: center;
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      top: 9px;
+      width: 45px;
+      height: 1px;
+    }
+    &:before {
+      right: -35px;
+      background: linear-gradient(90deg, #{theme-color-level('primary', -5)}, transparent);
+    }
+    &:after {
+      left: -35px;
+      background: linear-gradient(-90deg, #{theme-color-level('primary', -5)}, transparent);
+    }
   }
 
   > ul {
