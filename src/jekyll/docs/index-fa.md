@@ -9,7 +9,7 @@ permalink: /
 
 <h3>مستندات پیاده سازی تپسل پلاس</h3>
 
-<div class="row" markdown="0">
+<div class="row home-card-group" markdown="0">
   <div class="col-12 col-sm-6">
     <div class="home-card">
       <h3>Android</h3>
@@ -54,7 +54,7 @@ permalink: /
 
 <h3>مستندات پیاده سازی تپسل</h3>
 
-<div class="row" markdown="0">
+<div class="row home-card-group" markdown="0">
   <div class="col-12 col-sm-6">
     <div class="home-card">
       <h3>Android</h3>
@@ -102,7 +102,7 @@ permalink: /
 
 <h3>مستندات پیاده سازی پلاگین‌های غیر رسمی تپسل</h3>
 
-<div class="row" markdown="0">
+<div class="row home-card-group" markdown="0">
   <div class="col-12 col-sm-6">
     <div class="home-card">
       <h3>Cordova</h3>
