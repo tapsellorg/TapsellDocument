@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?5ipuka');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?5ipuka#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?5ipuka') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?5ipuka') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?5ipuka##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?k8dowd');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?k8dowd#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?k8dowd') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?k8dowd') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?k8dowd##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -50,6 +50,16 @@
 .picon-down-chevron {
   &:before {
     content: $picon-down-chevron; 
+  }
+}
+.picon-publisher {
+  &:before {
+    content: $picon-publisher; 
+  }
+}
+.picon-advertiser {
+  &:before {
+    content: $picon-advertiser; 
   }
 }
 

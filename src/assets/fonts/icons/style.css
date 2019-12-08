@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'pegah-doc-jekyll-icons';
-  src:  url('fonts/pegah-doc-jekyll-icons.eot?5ipuka');
-  src:  url('fonts/pegah-doc-jekyll-icons.eot?5ipuka#iefix') format('embedded-opentype'),
-    url('fonts/pegah-doc-jekyll-icons.ttf?5ipuka') format('truetype'),
-    url('fonts/pegah-doc-jekyll-icons.woff?5ipuka') format('woff'),
-    url('fonts/pegah-doc-jekyll-icons.svg?5ipuka#pegah-doc-jekyll-icons') format('svg');
+  font-family: 'picon-doc-tapsell';
+  src:  url('fonts/picon-doc-tapsell.eot?k8dowd');
+  src:  url('fonts/picon-doc-tapsell.eot?k8dowd#iefix') format('embedded-opentype'),
+    url('fonts/picon-doc-tapsell.ttf?k8dowd') format('truetype'),
+    url('fonts/picon-doc-tapsell.woff?k8dowd') format('woff'),
+    url('fonts/picon-doc-tapsell.svg?k8dowd#picon-doc-tapsell') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 
 [class^="picon-"], [class*=" picon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'pegah-doc-jekyll-icons' !important;
+  font-family: 'picon-doc-tapsell' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -39,4 +39,10 @@
 }
 .picon-down-chevron:before {
   content: "\f104";
+}
+.picon-publisher:before {
+  content: "\e901";
+}
+.picon-advertiser:before {
+  content: "\e906";
 }
