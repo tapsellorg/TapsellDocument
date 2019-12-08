@@ -12,7 +12,7 @@ permalink: /
 <div class="row home-card-group" markdown="0">
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Android</h3>
+      <h2>Android</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/faq/setup-app/">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample">پروژه نمونه</a></li>
@@ -22,7 +22,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>iOS</h3>
+      <h2>iOS</h2>
       <ul>
         <li><a href="">مستندات</a></li>
         <li><a href="">پروژه نمونه</a></li>
@@ -32,7 +32,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Unity</h3>
+      <h2>Unity</h2>
       <ul>
         <li><a href="">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-UnitySample">پروژه نمونه</a></li>
@@ -42,7 +42,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Flutter</h3>
+      <h2>Flutter</h2>
       <ul>
         <li><a href="">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample">پروژه نمونه</a></li>
@@ -57,7 +57,7 @@ permalink: /
 <div class="row home-card-group" markdown="0">
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Android</h3>
+      <h2>Android</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=681">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-AndroidSample">پروژه نمونه Java</a></li>
@@ -69,7 +69,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>iOS</h3>
+      <h2>iOS</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=1379">مستندات</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellSDK_Swift_Sample">پروژه نمونه Swift</a></li>
@@ -80,7 +80,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>ReactNative</h3>
+      <h2>ReactNative</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=1713">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-ReactNativePlugin">پروژه نمونه</a></li>
@@ -91,7 +91,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Unity</h3>
+      <h2>Unity</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=746">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-UnitySample">پروژه نمونه</a></li>
@@ -105,7 +105,7 @@ permalink: /
 <div class="row home-card-group" markdown="0">
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Cordova</h3>
+      <h2>Cordova</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=774">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-CordovaSample">پروژه نمونه</a></li>
@@ -116,7 +116,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>B4A</h3>
+      <h2>B4A</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=835">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-B4ASample">پروژه نمونه</a></li>
@@ -127,7 +127,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Game Maker</h3>
+      <h2>Game Maker</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=942">مستندات</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellSDK_GameMaker_Sample">پروژه نمونه</a></li>
@@ -137,7 +137,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Construct2</h3>
+      <h2>Construct2</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=1100">مستندات</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellConstruct2PluginSample">پروژه نمونه</a></li>
@@ -148,7 +148,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Adobe Air</h3>
+      <h2>Adobe Air</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=1340">مستندات</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellSDK_FlashBuilder_Sample">پروژه نمونه</a></li>
@@ -158,7 +158,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Cocos2D</h3>
+      <h2>Cocos2D</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=1890">مستندات</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellSDK_Cocos2Dx_Cpp_Sample">پروژه نمونه ++C</a></li>
@@ -170,7 +170,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Xamarin</h3>
+      <h2>Xamarin</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=2013">مستندات</a></li>
         <li><a href="https://github.com/hermamitr/TapsellSDK_v3_Xamarin">پروژه نمونه</a></li>
@@ -180,7 +180,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Unreal Engine</h3>
+      <h2>Unreal Engine</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=2245">مستندات</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellSDK_UnrealEngine_Sample">پروژه نمونه</a></li>
@@ -190,7 +190,7 @@ permalink: /
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
-      <h3>Qt</h3>
+      <h2>Qt</h2>
       <ul>
         <li><a href="https://answers.tapsell.ir/?page_id=2572">مستندات</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellSDK_Qt_Sample">پروژه نمونه</a></li>
