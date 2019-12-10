@@ -1,14 +1,16 @@
 en:
-  - name: First level
-    icon: picon-link
-    children:
-      - name: Secondary level
-        children:
-          - name: Tertiary level
+  - children:
+      - children:
+          - name: wefTertiary level
+        name: fewSecondary level
+    icon: picon-linke
+    name: First levelewfweg
 fa:
-  - name: سطح اول
-    icon: picon-link
-    children:
-      - name: سطح دوم
-        children:
+  - children:
+      - children:
           - name: سطح سوم
+        name: سطح دوم
+    icon: picon-link
+    name: سطح اول
+  - icon: testico
+    name: Test
