@@ -1,0 +1,19 @@
+backend:
+  name: gitlab
+  repo: project-templates/frontend-boilerplates/doc-jekyll # Path to your GitLab repository
+  auth_type: implicit # Required for implicit grant
+  app_id: 654fe55c5eae8bf3a0a201511b551bf10a44daca2ad0ca40c4b84cb5130e182e # Application ID from your GitLab settings
+  api_root: https://git.tapsell.ir/api/v4
+  base_url: https://git.tapsell.ir
+  auth_endpoint: oauth/authorize
+media_folder: 'src/jekyll/images'
+collections:
+  - name: 'data'
+    label: 'Data'
+    files:
+      - label: 'Sidebar'
+        name: 'sidebar'
+        file: 'src/jekyll/_data/sidebar.yml'
+        extension: yml
+        fields:
+          - { label: English, name: en, widget: text }
