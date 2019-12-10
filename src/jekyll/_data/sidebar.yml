@@ -1,14 +1,4 @@
-en:
-  - name: First level
-    icon: picon-link
-    children:
-      - name: Secondary level
-        children:
-          - name: Tertiary level
-fa:
-  - name: سطح اول
-    icon: picon-link
-    children:
-      - name: سطح دوم
-        children:
-          - name: سطح سوم
+en: >-
+  List [ Map { "name": "First test", "icon": "picon-link", "children": List [
+  Map { "name": "Secondary level", "children": List [ Map { "name": "Tertiary
+  level" } ] } ] } ]
