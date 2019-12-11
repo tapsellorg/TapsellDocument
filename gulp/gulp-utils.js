@@ -60,7 +60,7 @@ module.exports = {
       .pipe(gulp.dest(dest));
   },
   runJekyllCommand: function(dest) {
-    return function(done) {
+    return function buildJekyll(done) {
       let jekyllConfig = '_config.yml';
       const jekyllDevConfig = '_config_development.yml';
       const jekyllProdConfig = '';

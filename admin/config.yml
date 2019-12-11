@@ -10,10 +10,65 @@ media_folder: 'src/jekyll/images'
 collections:
   - name: 'data'
     label: 'Data'
+    delete: false
     files:
       - label: 'Sidebar'
+        delete: false
         name: 'sidebar'
         file: 'src/jekyll/_data/sidebar.yml'
         extension: yml
         fields:
-          - { label: English, name: en, widget: text }
+          - label: English
+            name: en
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Children
+                name: children
+                widget: list
+                allow_add: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Children
+                    name: children
+                    widget: list
+                    allow_add: true
+                    fields:
+                      - label: Name
+                        name: name
+                        widget: string
+          - label: Persian
+            name: fa
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Children
+                name: children
+                widget: list
+                allow_add: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Children
+                    name: children
+                    widget: list
+                    allow_add: true
+                    fields:
+                      - label: Name
+                        name: name
+                        widget: string
