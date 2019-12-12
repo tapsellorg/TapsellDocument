@@ -74,6 +74,9 @@ collections:
     delete: true
     create: true
     folder: src/jekyll/docs
+    identifier_field: permalink
+    summary: '{{fields.title}} {{fields.permalink}}'
+    slug: '{{fields.permalink}}'
     editor:
       preview: false
     fields:
