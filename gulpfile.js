@@ -82,17 +82,16 @@ function setupBrowserSync(done) {
   });
 }
 
-gulp.task('build', gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, webpack, assets, admin)));
+gulp.task('build', gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, webpack, assets)));
 
 gulp.task('watch', function() {
   watch(paths.assets.images.watch, imageMin);
   watch(paths.sass.watch, sass);
   watch(paths.assets.allExceptImages.watch, assets);
   watch(paths.jekyll.watch, jekyllBuild);
-  watch(paths.admin.watch, admin);
 });
 
 gulp.task(
   'default',
-  gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, assets), gulp.parallel(setupBrowserSync, webpack, admin, 'watch'))
+  gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, assets), gulp.parallel(setupBrowserSync, webpack, 'watch'))
 );
