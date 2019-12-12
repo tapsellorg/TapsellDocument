@@ -87,6 +87,13 @@
     p {
       margin-bottom: 1rem;
     }
+
+    ol {
+      @include rtl {
+        list-style-type: persian;
+      }
+    }
+
     table {
       @extend .table;
       @extend .table-bordered;
