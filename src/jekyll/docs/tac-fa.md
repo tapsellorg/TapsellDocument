@@ -1,9 +1,9 @@
 ---
 layout: classic-docs
 title: قوانین و ضوابط استفاده از تپسل
-lang: fa
-permalink: /terms_and_condition.html
 toc: true
+permalink: /terms_and_condition/index.html
+lang: fa
 ---
 
 ## تعاریف
