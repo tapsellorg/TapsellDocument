@@ -1,11 +1,8 @@
 backend:
   name: gitlab
-  repo: project-templates/frontend-boilerplates/doc-jekyll # Path to your GitLab repository
+  repo: my-personal-work-life/tapsell-doc-temporary # Path to your GitLab repository
   auth_type: implicit # Required for implicit grant
-  app_id: 654fe55c5eae8bf3a0a201511b551bf10a44daca2ad0ca40c4b84cb5130e182e # Application ID from your GitLab settings
-  api_root: https://git.tapsell.ir/api/v4
-  base_url: https://git.tapsell.ir
-  auth_endpoint: oauth/authorize
+  app_id: 7e9b2cbccdf26d85c7bad0c1cd9ff423f641e7b026e16be56c65ae65e91dbb23 # Application ID from your GitLab settings
 media_folder: 'src/jekyll/images'
 collections:
   - name: 'data'
