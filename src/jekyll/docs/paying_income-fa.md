@@ -1,9 +1,9 @@
 ---
 layout: classic-docs
 title: پرداخت درآمد ناشرین
-lang: fa
-permalink: /paying_income.html
 toc: false
+permalink: /paying-income/index.html
+lang: fa
 ---
 
 جهت پرداخت درآمد‌های ناشران، باید اطلاعات حساب کاربری اعم از: کد ملی، کد پستی و آدرس و … تکمیل و دقیق باشد.  

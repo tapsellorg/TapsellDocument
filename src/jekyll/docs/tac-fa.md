@@ -2,7 +2,7 @@
 layout: classic-docs
 title: قوانین و ضوابط استفاده از تپسل
 toc: true
-permalink: /terms_and_condition/index.html
+permalink: /terms-and-condition/index.html
 lang: fa
 ---
 
