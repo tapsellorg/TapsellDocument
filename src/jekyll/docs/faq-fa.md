@@ -1,9 +1,9 @@
 ---
 layout: classic-docs
 title: سوالات متداول
-lang: fa
-permalink: /faq.html
 toc: true
+permalink: /faq/index.html
+lang: fa
 ---
 
 # فنی
