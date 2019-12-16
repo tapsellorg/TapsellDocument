@@ -1,24 +1,30 @@
 android:
-  sdkVersion: 3.5.2
-  sample: https://github.com
-  github: https://github.com
+  sdkVersion: 4.4.0-beta
+  sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
+  github: https://github.com/tapsellorg/TapsellSDK-AndroidSample
   downloadLinks:
-    - link: https://example.com
+    - link: #
       name: لینک دانلود SDK
   versions:
-    - version: 3.5.2
-      releaseDate: 1575558424
+    - version: 4.4.0-beta
+      releaseDate: 1576494856
       changelog:
-        - message: Fix role filter support in the Members page
-        - message: Fix broken wiki page
-    - version: 3.5.1
-      releaseDate: 1575553500
+        - message: SDK  ریفکتور
+        - message: حذف ریکوئست های اضافی
+        - message: Memory leak حذف
+
+
+
+plusAndroid:
+  sdkVersion: 1.0.12
+  sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
+  github: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
+  downloadLinks:
+    - link: #
+      name: لینک دانلود SDK
+  versions:
+    - version: 1.0.12
+      releaseDate: 1575285256
       changelog:
-        - message: Fix calendar encoding issue with accents
-        - message: Fix calendar .ics import
-        - message: Fix calendar backend saving date issue
-        - message: Fix calendar event issue on multiple-months events
-        - message: Fix child theme language files not loaded
-        - message: Fix wiki extension dropdown broken when having more than 10 categories
-        - message: Fix push notification extension when no storage URL was provided
-        - message: Fix filterRole sorter in the Members directory
+        - message: ConsentDialog برطرف کردن مشکل 
+        - message: برطرف کردن خطاهای گزارش شده

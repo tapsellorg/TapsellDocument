@@ -2,7 +2,7 @@
 layout: classic-docs
 title: سایر شبکه‌های تبلیغاتی
 lang: fa
-permalink: /plus_sdk/android/add_adnetworks.html
+permalink: /plus_sdk/android/add_adnetworks/index.html
 toc: true
 ---
 

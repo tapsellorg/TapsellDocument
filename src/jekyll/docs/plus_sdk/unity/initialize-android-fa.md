@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل پلاس در یونیتی (Android)
 lang: fa
-permalink: /plus_sdk/unity/initialize-android.html
+permalink: /plus_sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 

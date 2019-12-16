@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تبلیغات جایزه‌ای و آنی در ReactNative
 lang: fa
-permalink: /tapsell_sdk/react/rewarded_interstitial.html
+permalink: /tapsell_sdk/react/rewarded_interstitial/index.html
 toc: true # table of contents
 ---
 

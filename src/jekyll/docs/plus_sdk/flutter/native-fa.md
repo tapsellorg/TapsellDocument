@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات همسان
 lang: fa
-permalink: /plus_sdk/flutter/native.html
+permalink: /plus_sdk/flutter/native/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه

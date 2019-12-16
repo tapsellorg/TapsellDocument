@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل پلاس در یونیتی (iOS)
 lang: fa
-permalink: /plus_sdk/unity/initialize-ios.html
+permalink: /plus_sdk/unity/initialize-ios/index.html
 toc: true # table of contents
 ---
 

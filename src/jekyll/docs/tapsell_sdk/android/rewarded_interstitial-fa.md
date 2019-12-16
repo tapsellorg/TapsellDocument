@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تبلیغات جایزه‌ای و آنی در اندروید
 lang: fa
-permalink: /tapsell_sdk/android/rewarded_interstitial.html
+permalink: /tapsell_sdk/android/rewarded_interstitial/index.html
 toc: true # table of contents
 ---
 >پیاده سازی تبلیغات جایزه‌ای و آنی (هم ویدیو‌ و هم بنری) به یک صورت است. فقط کافی است نوع تبلیغگاه را از پنل انتخاب کنید.

@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تست شبکه‌های تبلیغاتی
 lang: fa
-permalink: /plus_sdk/android/adnetworks_test.html
+permalink: /plus_sdk/android/adnetworks_test/index.html
 toc: true
 ---
 * برای اطمینان از صحت عملکرد adNetwrokهایی که اضافه کردید از `zoneId` مربوط به هرکدام استفاده کنید. هر `zoneId` مربوط به یک adNetwork و یک نوع تبلیغ هست و تبلیغ حالت تست نمایش داده میشود.

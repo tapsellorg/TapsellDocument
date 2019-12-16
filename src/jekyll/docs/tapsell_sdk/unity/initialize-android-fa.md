@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل در یونیتی (Android)
 lang: fa
-permalink: /tapsell_sdk/unity/initialize-android.html
+permalink: /tapsell_sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 

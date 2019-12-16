@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل پلاس در اندروید
 lang: fa
-permalink: /plus_sdk/android/initialize.html
+permalink: /plus_sdk/android/initialize/index.html
 toc: true
 ---
 

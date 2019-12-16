@@ -2,7 +2,7 @@
 layout: classic-docs
 title: بنر استاندارد در اندروید
 lang: fa
-permalink: /tapsell_sdk/android/standard.html
+permalink: /tapsell_sdk/android/standard/index.html
 toc: true # table of contents
 ---
 

@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات همسان در یونیتی
 lang: fa
-permalink: /tapsell_sdk/unity/native.html
+permalink: /tapsell_sdk/unity/native/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه

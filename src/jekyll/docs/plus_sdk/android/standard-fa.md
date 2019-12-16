@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات بنر استاندارد
 lang: fa
-permalink: /plus_sdk/android/standard.html
+permalink: /plus_sdk/android/standard/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه

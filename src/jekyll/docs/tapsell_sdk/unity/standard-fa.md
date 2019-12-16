@@ -2,7 +2,7 @@
 layout: classic-docs
 title: بنر استاندارد در یونیتی
 lang: fa
-permalink: /tapsell_sdk/unity/standard.html
+permalink: /tapsell_sdk/unity/standard/index.html
 toc: true # table of contents
 ---
 

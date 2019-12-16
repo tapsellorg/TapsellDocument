@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات جایزه‌ای/آنی
 lang: fa
-permalink: /plus_sdk/android/rewarded_interstitial.html
+permalink: /plus_sdk/android/rewarded_interstitial/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه

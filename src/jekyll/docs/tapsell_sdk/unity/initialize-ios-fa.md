@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل در یونیتی (iOS)
 lang: fa
-permalink: /tapsell_sdk/unity/initialize-ios.html
+permalink: /tapsell_sdk/unity/initialize-ios/index.html
 toc: true # table of contents
 ---
 

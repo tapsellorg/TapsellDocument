@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات همسان
 lang: fa
-permalink: /tapsell_sdk/android/native.html
+permalink: /tapsell_sdk/android/native/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه

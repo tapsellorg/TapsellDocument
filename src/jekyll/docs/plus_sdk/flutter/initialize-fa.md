@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل پلاس در فلاتر (اندروید)
 lang: fa
-permalink: /plus_sdk/flutter/initialize.html
+permalink: /plus_sdk/flutter/initialize/index.html
 toc: true
 ---
 

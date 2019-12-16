@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل در اندروید
 lang: fa
-permalink: /tapsell_sdk/android/initialize.html
+permalink: /tapsell_sdk/android/initialize/index.html
 toc: true # table of contents
 ---
 

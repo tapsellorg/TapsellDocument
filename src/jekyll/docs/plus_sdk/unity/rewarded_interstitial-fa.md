@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تبلیغات جایزه‌ای و آنی در یونیتی
 lang: fa
-permalink: /plus_sdk/unity/rewarded_interstitial.html
+permalink: /plus_sdk/unity/rewarded_interstitial/index.html
 toc: true # table of contents
 ---
 
