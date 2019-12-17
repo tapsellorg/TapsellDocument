@@ -2,7 +2,7 @@
 layout: classic-docs
 title: سوالات متداول تبلیغ‌دهندگان
 toc: true
-permalink: /FAQ/index.html
+permalink: /advertisers-faq/index.html
 lang: fa
 ---
 # 1.	انوع تبلیغات در تپسل؟
