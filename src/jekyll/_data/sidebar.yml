@@ -114,7 +114,7 @@ fa:
             link: /tapsell_sdk/unity/native
 
       - name: React Native
-        link: /sdk/android
+        link: /tapsell_sdk/react/main
         children:
           - name: راه اندازی اندروید
             link: /tapsell_sdk/react/initialize-android
