@@ -70,7 +70,9 @@ const admin = gulp.parallel(
     return gulpUtils.copy(paths.admin.entry, `${paths.dest}/${paths.admin.dest}`);
   },
   function adminJsWebpack() {
-    return gulpUtils.webpack(paths.adminJs.entry, `${paths.dest}/${paths.adminJs.dest}`);
+    return gulpUtils.webpack(paths.adminJs.entry, `${paths.dest}/${paths.adminJs.dest}`, {
+      customWebpackConfig: { performance: { hints: false } },
+    });
   }
 );
 
@@ -82,7 +84,7 @@ function setupBrowserSync(done) {
   });
 }
 
-gulp.task('build', gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, webpack, assets, admin)));
+gulp.task('build', gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, webpack, assets), admin));
 
 gulp.task('watch', function() {
   watch(paths.assets.images.watch, imageMin);
