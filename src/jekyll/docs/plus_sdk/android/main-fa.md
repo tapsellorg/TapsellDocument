@@ -15,4 +15,3 @@ sdkPlatform:
 - [استاندارد]({{site.baseurl}}/plus_sdk/android/standard)
 - [شبکه‌های تبلیغاتی]({{site.baseurl}}/plus_sdk/android/add_adnetworks)
 - [تست]({{site.baseurl}}/plus_sdk/android/adnetworks_test)
-

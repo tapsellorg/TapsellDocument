@@ -1,10 +1,6 @@
-android:
+tapsellAndroid:
   sdkVersion: 4.4.0-beta
   sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
-  github: https://github.com/tapsellorg/TapsellSDK-AndroidSample
-  downloadLinks:
-    - link: #
-      name: لینک دانلود SDK
   versions:
     - version: 4.4.0-beta
       releaseDate: 1576494856
@@ -14,17 +10,58 @@ android:
         - message: Memory leak حذف
 
 
+tapsellUnity:
+  sdkVersion: 4.3.8
+  sample: https://github.com/tapsellorg/TapsellSDK-UnitySample
+  downloadLinks:
+    - link: https://github.com/tapsellorg/TapsellSDK-UnitySample/releases/download/v4.3.0.1/Tapsell-Unity-4.3.0.1.unitypackage
+      name: لینک دانلود Unity Package
+  versions:
+    - version: 4.3.8
+      releaseDate: 1575198856
+      changelog:
+        - message: برطرف کردن خطاهای گزارش شده
+
+
+tapsellReact:
+  sdkVersion: 4.1.7
+  sample: https://github.com/tapsellorg/TapsellSDK-ReactNativeSample
+  versions:
+    - version: 4.1.7
+      releaseDate: 1552808735
+      changelog:
+        - message: برطرف کردن خطاهای گزارش شده
+
 
 plusAndroid:
   sdkVersion: 1.0.12
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
-  github: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
-  downloadLinks:
-    - link: #
-      name: لینک دانلود SDK
   versions:
     - version: 1.0.12
       releaseDate: 1575285256
       changelog:
         - message: ConsentDialog برطرف کردن مشکل 
+        - message: برطرف کردن خطاهای گزارش شده
+
+
+plusFlutter:
+  sdkVersion: 1.0.0
+  sample: https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample
+  versions:
+    - version: 1.0.0
+      releaseDate: 1569928456
+      changelog:
+        - message: SDK اولین ورژن از
+
+
+plusUnity:
+  sdkVersion: 1.0.12
+  sample: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample
+  downloadLinks:
+    - link: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample/releases/download/v2.1/TapsellPlusUnity-v2.1.unitypackage
+      name: لینک دانلود Unity Package
+  versions:
+    - version: 1.0.12
+      releaseDate: 1575285256
+      changelog:
         - message: برطرف کردن خطاهای گزارش شده

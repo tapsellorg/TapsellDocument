@@ -36,13 +36,13 @@ fa:
         link: /sdk/android
 
       - name: Unity
-        link: /sdk/android
+        link: /plus_sdk/unity/main
         children:
           - name: راه اندازی اندروید
             link: /plus_sdk/unity/initialize-android
 
           - name: راه اندازی ios
-            link: /plus_sdk/android/initialize-ios
+            link: /plus_sdk/unity/initialize-ios
 
           - name: آنی/جایزه‌ای
             link: /plus_sdk/unity/rewarded_interstitial
@@ -60,7 +60,7 @@ fa:
             link: /plus_sdk/unity/adnetworks_test
 
       - name: Flutter
-        link: /sdk/android
+        link: /plus_sdk/flutter/main
         children:
           - name: راه اندازی
             link: /plus_sdk/flutter/initialize
@@ -81,7 +81,7 @@ fa:
     icon: m-sdk
     children:
       - name: Android
-        link: /tapsell_sdk/android/initialize
+        link: /tapsell_sdk/android/main
         children:
           - name: راه اندازی
             link: /tapsell_sdk/android/initialize
@@ -96,10 +96,10 @@ fa:
             link: /tapsell_sdk/android/native
 
       - name: iOS
-        link: /sdk/android
+        link: #
 
       - name: Unity
-        link: /sdk/android
+        link: /tapsell_sdk/unity/main
         children:
           - name: راه اندازی اندروید
             link: /tapsell_sdk/unity/initialize-android
@@ -118,6 +118,9 @@ fa:
         children:
           - name: راه اندازی اندروید
             link: /tapsell_sdk/react/initialize-android
+
+          - name: راه اندازی iOS
+            link: /tapsell_sdk/react/initialize-ios
 
           - name: جایزه‌ای/آنی
             link: /tapsell_sdk/react/rewarded_interstitial
