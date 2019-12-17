@@ -45,7 +45,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-polyglot
   - jekyll-toc
-  - jekyll-minifier
 
 # jekyll-polyglot settings
 languages: ['en', 'fa']
