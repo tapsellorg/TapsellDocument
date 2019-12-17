@@ -34,7 +34,7 @@ module.exports = {
       .pipe(plumber())
       .pipe(gulpif(devMode, sourcemaps.init()))
       .pipe(gulpSass({ outputStyle: 'compressed', includePaths }).on('error', gulpSass.logError))
-      .pipe(postcss([autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] })]))
+      .pipe(postcss([autoprefixer()]))
       .pipe(cleanCSS({ inline: ['none'] }))
       .pipe(gulpif(devMode, sourcemaps.write('.')))
       .pipe(gulp.dest(dest));
@@ -50,8 +50,8 @@ module.exports = {
       .pipe(imagemin())
       .pipe(gulp.dest(dest));
   },
-  webpack: function(src, dest) {
-    const webpackConfig = require('../webpack.config');
+  webpack: function(src, dest, { customWebpackConfig = {} } = {}) {
+    const webpackConfig = { ...require('../webpack.config'), ...customWebpackConfig };
     return gulp
       .src(src)
       .pipe(plumber())
