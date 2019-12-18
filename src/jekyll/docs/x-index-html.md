@@ -65,7 +65,7 @@ lang: fa
 
 # مشخصات بنر و ویدیو قابل استفاده در تبلیغات تپسل؟
 
-![](/src/jekyll/images/size-banner.jpg)
+![](/images/size-banner.jpg)
 
 # بلافاصله بعد از ساخت کمپین می‌توان آن را شروع کرد؟
 
