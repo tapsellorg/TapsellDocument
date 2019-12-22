@@ -14,7 +14,7 @@ permalink: /
     <div class="home-card">
       <h2>Android</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/plus_sdk/android/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/plus-sdk/android/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample">پروژه نمونه</a></li>
       </ul>
     </div>
@@ -25,7 +25,8 @@ permalink: /
       <h2>iOS</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/invalid-page">مستندات</a></li>
-        <li><a href="">پروژه نمونه</a></li>
+        <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-SwiftSample">پروژه نمونه Swift</a></li>
+        <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-ObjectiveCSample">پروژه نمونه Objective C</a></li>
       </ul>
     </div>
   </div>
@@ -34,7 +35,7 @@ permalink: /
     <div class="home-card">
       <h2>Unity</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/plus_sdk/unity/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/plus-sdk/unity/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-UnitySample">پروژه نمونه</a></li>
       </ul>
     </div>
@@ -44,7 +45,7 @@ permalink: /
     <div class="home-card">
       <h2>Flutter</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/plus_sdk/flutter/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/plus-sdk/flutter/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin">Source Code</a></li>
       </ul>
@@ -59,7 +60,7 @@ permalink: /
     <div class="home-card">
       <h2>Android</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/tapsell_sdk/android/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/tapsell-sdk/android/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-AndroidSample">پروژه نمونه Java</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-KotlinSample">پروژه نمونه Kotlin</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-EclipseSample">پروژه نمونه Eclipse</a></li>
@@ -82,7 +83,7 @@ permalink: /
     <div class="home-card">
       <h2>ReactNative</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/tapsell_sdk/react/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/tapsell-sdk/react/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-ReactNativePlugin">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-ReactNativeSample">Source Code</a></li>
       </ul>
@@ -93,7 +94,7 @@ permalink: /
     <div class="home-card">
       <h2>Unity</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/tapsell_sdk/unity/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/tapsell-sdk/unity/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-UnitySample">پروژه نمونه</a></li>
       </ul>
     </div>
@@ -140,8 +141,8 @@ permalink: /
       <h2>Construct2</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/invalid-page">مستندات</a></li>
-        <li><a href="https://github.com/tapselladnet/TapsellConstruct2PluginSample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapselladnet/TapsellSDK_Construct2_Cordova_Sample">پروژه نمونه Cordova</a></li>
+        <li><a href="https://github.com/tapselladnet/TapsellConstruct2PluginSample">Source Code</a></li>
       </ul>
     </div>
   </div>

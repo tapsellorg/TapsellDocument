@@ -12,121 +12,121 @@ fa:
     icon: m-sdk
     children:
       - name: Android
-        link: /plus_sdk/android/main
+        link: /plus-sdk/android/main
         children:
           - name: راه اندازی
-            link: /plus_sdk/android/initialize
+            link: /plus-sdk/android/initialize
 
           - name: آنی/جایزه‌ای
-            link: /plus_sdk/android/rewarded_interstitial
+            link: /plus-sdk/android/rewarded-interstitial
 
           - name: همسان
-            link: /plus_sdk/android/native
+            link: /plus-sdk/android/native
 
           - name: استاندارد
-            link: /plus_sdk/android/standard
+            link: /plus-sdk/android/standard
 
           - name: شبکه‌های تبلیغاتی
-            link: /plus_sdk/android/add_adnetworks
+            link: /plus-sdk/android/add-adnetworks
 
           - name: تست
-            link: /plus_sdk/android/adnetworks_test
+            link: /plus-sdk/android/adnetworks-test
 
       - name: iOS
         link: /sdk/android
 
       - name: Unity
-        link: /plus_sdk/unity/main
+        link: /plus-sdk/unity/main
         children:
           - name: راه اندازی اندروید
-            link: /plus_sdk/unity/initialize-android
+            link: /plus-sdk/unity/initialize-android
 
           - name: راه اندازی ios
-            link: /plus_sdk/unity/initialize-ios
+            link: /plus-sdk/unity/initialize-ios
 
           - name: آنی/جایزه‌ای
-            link: /plus_sdk/unity/rewarded_interstitial
+            link: /plus-sdk/unity/rewarded-interstitial
 
           - name: همسان
-            link: /plus_sdk/unity/native
+            link: /plus-sdk/unity/native
 
           - name: استاندارد
-            link: /plus_sdk/unity/standard
+            link: /plus-sdk/unity/standard
 
           - name: شبکه‌های تبلیغاتی
-            link: /plus_sdk/unity/add_adnetworks
+            link: /plus-sdk/unity/add-adnetworks
 
           - name: تست
-            link: /plus_sdk/unity/adnetworks_test
+            link: /plus-sdk/unity/adnetworks-test
 
       - name: Flutter
-        link: /plus_sdk/flutter/main
+        link: /plus-sdk/flutter/main
         children:
           - name: راه اندازی
-            link: /plus_sdk/flutter/initialize
+            link: /plus-sdk/flutter/initialize
 
           - name: آنی/جایزه‌ای
-            link: /plus_sdk/flutter/rewarded_interstitial
+            link: /plus-sdk/flutter/rewarded-interstitial
 
           - name: همسان
-            link: /plus_sdk/flutter/native
+            link: /plus-sdk/flutter/native
 
           - name: شبکه‌های تبلیغاتی
-            link: /plus_sdk/flutter/add_adnetworks
+            link: /plus-sdk/flutter/add-adnetworks
 
           - name: تست
-            link: /plus_sdk/flutter/adnetworks_test
+            link: /plus-sdk/flutter/adnetworks-test
 
   - name: تپسل
     icon: m-sdk
     children:
       - name: Android
-        link: /tapsell_sdk/android/main
+        link: /tapsell-sdk/android/main
         children:
           - name: راه اندازی
-            link: /tapsell_sdk/android/initialize
+            link: /tapsell-sdk/android/initialize
 
           - name: جایزه‌ای/آنی
-            link: /tapsell_sdk/android/rewarded_interstitial
+            link: /tapsell-sdk/android/rewarded-interstitial
 
           - name: بنر استاندارد
-            link: /tapsell_sdk/android/standard
+            link: /tapsell-sdk/android/standard
 
           - name: بنر همسان
-            link: /tapsell_sdk/android/native
+            link: /tapsell-sdk/android/native
 
       - name: iOS
         link: #
 
       - name: Unity
-        link: /tapsell_sdk/unity/main
+        link: /tapsell-sdk/unity/main
         children:
           - name: راه اندازی اندروید
-            link: /tapsell_sdk/unity/initialize-android
+            link: /tapsell-sdk/unity/initialize-android
 
           - name: جایزه‌ای/آنی
-            link: /tapsell_sdk/unity/rewarded_interstitial
+            link: /tapsell-sdk/unity/rewarded-interstitial
 
           - name: بنر استاندارد
-            link: /tapsell_sdk/unity/standard
+            link: /tapsell-sdk/unity/standard
 
           - name: بنر همسان
-            link: /tapsell_sdk/unity/native
+            link: /tapsell-sdk/unity/native
 
       - name: React Native
-        link: /tapsell_sdk/react/main
+        link: /tapsell-sdk/react/main
         children:
           - name: راه اندازی اندروید
-            link: /tapsell_sdk/react/initialize-android
+            link: /tapsell-sdk/react/initialize-android
 
           - name: راه اندازی iOS
-            link: /tapsell_sdk/react/initialize-ios
+            link: /tapsell-sdk/react/initialize-ios
 
           - name: جایزه‌ای/آنی
-            link: /tapsell_sdk/react/rewarded_interstitial
+            link: /tapsell-sdk/react/rewarded-interstitial
 
           - name: بنر استاندارد
-            link: /tapsell_sdk/react/standard
+            link: /tapsell-sdk/react/standard
 
           - name: بنر همسان
-            link: /tapsell_sdk/react/native
+            link: /tapsell-sdk/react/native
