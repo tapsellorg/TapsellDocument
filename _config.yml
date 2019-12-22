@@ -17,7 +17,7 @@ global_vars:
   docs_url: https://docs.tapsell.ir/
   site_name: Tapsell
   get_demo_url: https://dashboard.tapsell.ir/
-  terms_url: https://tapsell.ir/
+  terms_url: https://docs.tapsell.ir/terms-and-condition/
   header_logo_alt: Tapsell Docs
   contact_email: info@tapsell.ir
   footer_logo_alt: Tapsell
