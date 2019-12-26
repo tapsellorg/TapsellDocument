@@ -1,5 +1,5 @@
 {
-  "name": "frasco",
+  "name": "doc-tapsell",
   "version": "0.8.17",
   "description": "Jekyll starter project including full setup for gulp, Sass, Autoprefixer, PostCSS, webpack, imagemin, Browsersync etc.",
   "main": "gulpfile.js",
@@ -9,26 +9,7 @@
     "build": "gulp build --jekyllEnv=production --mode=production",
     "postversion": "git push && git push --tags"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ixkaito/frasco.git"
-  },
-  "keywords": [
-    "Autoprefixer",
-    "Browsersync",
-    "gulp",
-    "imagemin",
-    "Jekyll",
-    "PostCSS",
-    "Sass",
-    "Webpack"
-  ],
-  "author": "Kite",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ixkaito/frasco/issues"
-  },
-  "homepage": "https://ixkaito.github.io/frasco",
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
