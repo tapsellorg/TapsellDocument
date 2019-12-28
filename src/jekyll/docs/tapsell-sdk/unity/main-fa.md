@@ -6,7 +6,7 @@ permalink: /tapsell-sdk/unity/main/index.html
 toc: true
 sdkPlatform:
   name: tapsellUnity
-  logo: /images/sdk-platforms/android.png
+  logo: /images/sdk-platforms/unity.png
 ---
 
 - [راه اندازی - Android]({{site.baseurl}}/tapsell-sdk/unity/initialize-android)

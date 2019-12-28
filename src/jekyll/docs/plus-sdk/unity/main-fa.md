@@ -6,7 +6,7 @@ permalink: /plus-sdk/unity/main/index.html
 toc: true
 sdkPlatform:
   name: plusUnity
-  logo: /images/sdk-platforms/android.png
+  logo: /images/sdk-platforms/unity.png
 ---
 
 - [راه اندازی - Android]({{site.baseurl}}/plus-sdk/unity/initialize-android)

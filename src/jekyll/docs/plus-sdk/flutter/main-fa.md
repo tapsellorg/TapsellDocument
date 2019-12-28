@@ -6,7 +6,7 @@ permalink: /plus-sdk/flutter/main/index.html
 toc: true
 sdkPlatform:
   name: plusFlutter
-  logo: /images/sdk-platforms/android.png
+  logo: /images/sdk-platforms/flutter.png
 ---
 
 - [راه اندازی]({{site.baseurl}}/plus-sdk/flutter/initialize)
