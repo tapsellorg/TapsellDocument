@@ -23,15 +23,29 @@ tapsellUnity:
         - message: برطرف کردن خطاهای گزارش شده
 
 
-tapsellReact:
-  sdkVersion: 4.1.7
-  sample: https://github.com/tapsellorg/TapsellSDK-ReactNativeSample
+tapsellB4A:
+  sdkVersion: 4.0.4
+  sample: https://github.com/tapselladnet/Tapsell_B4A_Library
+  downloadLinks:
+    - link: https://storage.backtory.com/tapsell-server/sdk/b4a/TapsellB4A_v4.0.4.zip
+      name: لینک دانلود B4A Package
   versions:
-    - version: 4.1.7
-      releaseDate: 1552808735
+    - version: 4.0.4
+      releaseDate: 1543306502
       changelog:
         - message: برطرف کردن خطاهای گزارش شده
 
+
+tapsellAndroid:
+  sdkVersion: 4.4.0-beta
+  sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
+  versions:
+    - version: 4.4.0-beta
+      releaseDate: 1576494856
+      changelog:
+        - message: SDK  ریفکتور
+        - message: حذف ریکوئست های اضافی
+        - message: Memory leak حذف
 
 plusAndroid:
   sdkVersion: 1.0.12

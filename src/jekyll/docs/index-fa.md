@@ -119,7 +119,7 @@ permalink: /
     <div class="home-card">
       <h2>B4A</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/invalid-page">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/tapsell-sdk/b4a/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-B4ASample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-B4APlugin">Source Code</a></li>
       </ul>
