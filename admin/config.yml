@@ -1,8 +1,6 @@
 backend:
-  name: gitlab
-  repo: my-personal-work-life/tapsell-doc-temporary # Path to your GitLab repository
-  auth_type: implicit # Required for implicit grant
-  app_id: 7e9b2cbccdf26d85c7bad0c1cd9ff423f641e7b026e16be56c65ae65e91dbb23 # Application ID from your GitLab settings
+  name: github
+  repo: tapsellorg/TapsellDocument
 media_folder: 'src/jekyll/images'
 public_folder: '/images'
 collections:
