@@ -41,10 +41,10 @@ const jekyllBuild = gulp.series(
 
 const deleteDist = gulp.parallel(
   function deleteDestinationFolder() {
-    return del(paths.dest);
+    return del(paths.dest, { suppressErrors: true });
   },
   function deleteJekyllTempFolder() {
-    return del(paths.jekyll.dest);
+    return del(paths.jekyll.dest, { suppressErrors: true });
   }
 );
 
