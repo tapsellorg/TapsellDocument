@@ -7,7 +7,6 @@ const gulp = require('gulp');
 const del = require('del');
 const watch = require('gulp-watch');
 const browsersync = require('browser-sync').create();
-const cache = require('gulp-cache');
 
 const gulpUtils = require('./gulp/gulp-utils');
 
