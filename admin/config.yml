@@ -1,0 +1,117 @@
+backend:
+  name: gitlab
+  repo: my-personal-work-life/tapsell-doc-temporary # Path to your GitLab repository
+  auth_type: implicit # Required for implicit grant
+  app_id: 7e9b2cbccdf26d85c7bad0c1cd9ff423f641e7b026e16be56c65ae65e91dbb23 # Application ID from your GitLab settings
+media_folder: 'src/jekyll/images'
+public_folder: '/images'
+collections:
+  - name: 'data'
+    label: 'Data'
+    delete: false
+    files:
+      - label: 'Sidebar'
+        delete: false
+        name: 'sidebar'
+        file: 'src/jekyll/_data/sidebar.yml'
+        extension: yml
+        fields:
+          - label: English
+            name: en
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Children
+                name: children
+                widget: list
+                allow_add: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Children
+                    name: children
+                    widget: list
+                    allow_add: true
+                    fields:
+                      - label: Name
+                        name: name
+                        widget: string
+          - label: Persian
+            name: fa
+            widget: list
+            allow_add: true
+            fields:
+              - label: Name
+                name: name
+                widget: string
+              - label: Icon
+                name: icon
+                widget: string
+              - label: Children
+                name: children
+                widget: list
+                allow_add: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Children
+                    name: children
+                    widget: list
+                    allow_add: true
+                    fields:
+                      - label: Name
+                        name: name
+                        widget: string
+  - name: docs
+    label: Documentations
+    delete: true
+    create: true
+    folder: src/jekyll/docs
+    identifier_field: permalink
+    summary: '{{fields.title}} {{fields.permalink}}'
+    slug: '{{fields.permalink}}'
+    editor:
+      preview: false
+    fields:
+      - name: layout
+        label: Layout
+        widget: select
+        options: ['classic-docs', 'platform-details']
+        requied: true
+        default: classic-docs
+      - name: title
+        label: Title
+        widget: string
+        requied: true
+      - name: toc
+        label: Table of Contents
+        widget: boolean
+        default: true
+        requied: true
+      - name: permalink
+        label: Permalink
+        widget: string
+        requied: true
+        pattern:
+          [
+            '^\/([a-zA-Z0-9\-]+\/)*([a-zA-Z0-9\-]+)\/index\.html$',
+            'Must start with "/" and end with "index.html". Example: /faq/index.html',
+          ]
+      - name: lang
+        label: Language
+        widget: select
+        options: ['fa', 'en']
+        requied: true
+        default: fa
+      - name: body
+        label: Body
+        widget: markdown
+        requied: true

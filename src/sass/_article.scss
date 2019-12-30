@@ -87,6 +87,13 @@
     p {
       margin-bottom: 1rem;
     }
+
+    ol {
+      @include rtl {
+        list-style-type: persian;
+      }
+    }
+
     table {
       @extend .table;
       @extend .table-bordered;
@@ -123,7 +130,7 @@
       color: rgba(0, 0, 0, 0.8);
       display: inline-block;
       border-radius: 3px;
-      padding: 2px 6px;
+      padding: 0px 4px;
       border: 1px solid rgba(0, 0, 0, 0.05);
     }
     div.highlighter-rouge {
