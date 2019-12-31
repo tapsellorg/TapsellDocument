@@ -7,7 +7,7 @@ description: >-
   Tapsell, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience.
 baseurl: '' # the subpath of your site, e.g. /docs
 url: 'https://tapsell.ir'
-twitter_username: 
+twitter_username:
 github_username: tapsellorg
 site_name: Tapsell
 global_vars:
@@ -17,8 +17,11 @@ global_vars:
   docs_url: https://docs.tapsell.ir/
   site_name: Tapsell
   get_demo_url: https://dashboard.tapsell.ir/
-  terms_url: https://docs.tapsell.ir/tac/
+  terms_url: https://docs.tapsell.ir/terms-and-condition/
+  paying_income_url: https://docs.tapsell.ir/paying-income/
   header_logo_alt: Tapsell Docs
+  faq_url: https://docs.tapsell.ir/faq/
+  faq_advertisers_url: https://docs.tapsell.ir/faq/advertiser/
   contact_email: info@tapsell.ir
   footer_logo_alt: Tapsell
 
@@ -77,6 +80,9 @@ t:
       get_demo: دریافت دمو
       blog: وبلاگ
     footer:
-      terms: قوانین
+      terms: قوانین و ضوابط
       contact: تماس با ما
+      faq_advertisers: سوالات متداول تبلیغ‌دهندگان
+      faq: سوالات متداول
+      paying_income: پرداخت درآمد
       copyright: طراحی و توسعه توسط تپسل - ایران
