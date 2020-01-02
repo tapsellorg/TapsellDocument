@@ -17,9 +17,9 @@ global_vars:
   docs_url: https://docs.tapsell.ir/
   site_name: Tapsell
   get_demo_url: https://dashboard.tapsell.ir/
+  header_logo_alt: Tapsell Docs
   terms_url: https://docs.tapsell.ir/terms-and-condition/
   paying_income_url: https://docs.tapsell.ir/paying-income/
-  header_logo_alt: Tapsell Docs
   faq_url: https://docs.tapsell.ir/faq/
   faq_advertisers_url: https://docs.tapsell.ir/faq/advertiser/
   contact_email: info@tapsell.ir

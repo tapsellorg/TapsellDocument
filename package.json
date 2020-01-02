@@ -1,14 +1,33 @@
 {
-  "name": "doc-tapsell",
-  "version": "0.8.17",
-  "description": "Jekyll starter project including full setup for gulp, Sass, Autoprefixer, PostCSS, webpack, imagemin, Browsersync etc.",
+  "name": "tapsell-document",
+  "version": "1.0.0",
+  "description": "Tapsell Documents",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp --mode=development",
+    "start": "gulp",
     "build": "gulp build --mode=production",
     "postversion": "git push && git push --tags"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tapsellorg/TapsellDocument"
+  },
+  "keywords": [
+    "Tapsell",
+    "C#",
+    "Java",
+    "Javascript",
+    "Dart",
+    "Flutter",
+    "Kotlin",
+    "Objective-C",
+    "Swift"
+  ],
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tapsellorg/TapsellDocument/issues"
+  },
+  "homepage": "https://docs.tapsell.ir/",
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
