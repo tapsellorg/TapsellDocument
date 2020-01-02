@@ -4,7 +4,6 @@
   "description": "Jekyll starter project including full setup for gulp, Sass, Autoprefixer, PostCSS, webpack, imagemin, Browsersync etc.",
   "main": "gulpfile.js",
   "scripts": {
-    "preinstall": "bundle install --path vendor/bundle",
     "start": "gulp",
     "build": "gulp build --jekyllEnv=production --mode=production",
     "postversion": "git push && git push --tags"
