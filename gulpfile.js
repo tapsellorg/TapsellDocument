@@ -17,7 +17,7 @@ const paths = {
     images: { watch: 'src/assets/images/**/*', dest: 'assets/images' },
   },
   sass: { watch: ['src/sass/**/*', 'src/style.scss'], dest: 'assets', entry: 'src/style.scss' },
-  jekyll: { dest: '._jekyll_build_temp', watch: ['src/jekyll', '_config*.yml'] },
+  jekyll: { dest: '._jekyll_build_temp', watch: ['src/jekyll/**/*', '!src/jekyll/{.jekyll-cache,.jekyll-cache/**}', '_config.yml'] },
   js: { entry: 'src/js/bundle.js', dest: 'assets' },
   admin: { entry: ['admin/**/*', '!admin/admin.js'], watch: ['admin/**/*', '!admin/admin.js'], dest: 'admin' },
   adminJs: { entry: ['admin/admin.js'], watch: ['admin/admin.js'], dest: 'admin' },
@@ -86,10 +86,11 @@ function setupBrowserSync(done) {
 gulp.task('build', gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, webpack, assets), admin));
 
 gulp.task('watch', function() {
-  watch(paths.assets.images.watch, imageMin);
-  watch(paths.sass.watch, sass);
-  watch(paths.assets.allExceptImages.watch, assets);
-  watch(paths.jekyll.watch, jekyllBuild);
+  gulp.watch(paths.assets.images.watch, imageMin);
+  gulp.watch(paths.sass.watch, sass);
+  gulp.watch(paths.assets.allExceptImages.watch, assets);
+  gulp.watch(paths.jekyll.watch, jekyllBuild);
+  gulp.watch(paths.admin.watch, admin);
 });
 
 gulp.task(
