@@ -89,10 +89,9 @@ gulp.task('watch', function() {
   gulp.watch(paths.sass.watch, sass);
   gulp.watch(paths.assets.allExceptImages.watch, assets);
   gulp.watch(paths.jekyll.watch, jekyllBuild);
-  gulp.watch(paths.admin.watch, admin);
 });
 
 gulp.task(
   'default',
-  gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, assets), gulp.parallel(setupBrowserSync, webpack, admin, 'watch'))
+  gulp.series(deleteDist, jekyllBuild, gulp.parallel(imageMin, sass, assets), gulp.parallel(setupBrowserSync, webpack, 'watch'))
 );
