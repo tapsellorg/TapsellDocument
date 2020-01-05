@@ -4,8 +4,8 @@
   "description": "Tapsell Documents",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build --mode=production",
+    "start": "bundle exec gulp",
+    "build": "bundle exec gulp build --mode=production",
     "postversion": "git push && git push --tags"
   },
   "repository": {
