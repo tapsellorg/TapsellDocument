@@ -5,7 +5,6 @@ process.env.NODE_ENV = mode === 'development' || mode === 'production' ? mode : 
 const config = require('./frasco.config.js');
 const gulp = require('gulp');
 const del = require('del');
-const watch = require('gulp-watch');
 const browsersync = require('browser-sync').create();
 
 const gulpUtils = require('./gulp/gulp-utils');
