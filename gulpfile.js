@@ -5,7 +5,6 @@ process.env.NODE_ENV = mode === 'development' || mode === 'production' ? mode : 
 const config = require('./frasco.config.js');
 const gulp = require('gulp');
 const del = require('del');
-const watch = require('gulp-watch');
 const browsersync = require('browser-sync').create();
 
 const gulpUtils = require('./gulp/gulp-utils');
@@ -90,7 +89,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.sass.watch, sass);
   gulp.watch(paths.assets.allExceptImages.watch, assets);
   gulp.watch(paths.jekyll.watch, jekyllBuild);
-  gulp.watch(paths.admin.watch, admin);
 });
 
 gulp.task(
