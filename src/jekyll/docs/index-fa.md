@@ -24,7 +24,7 @@ permalink: /
     <div class="home-card">
       <h2>iOS</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/invalid-page">مستندات</a></li>
+        <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-iOS-Releases/releases">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-SwiftSample">پروژه نمونه Swift</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-ObjectiveCSample">پروژه نمونه Objective C</a></li>
       </ul>

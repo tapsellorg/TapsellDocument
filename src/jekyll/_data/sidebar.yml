@@ -33,7 +33,7 @@ fa:
             link: /plus-sdk/android/adnetworks-test
 
       - name: iOS
-        link: /sdk/android
+        link: https://github.com/tapsellorg/TapsellPlusSDK-iOS-Releases/releases
 
       - name: Unity
         link: /plus-sdk/unity/main
@@ -96,7 +96,7 @@ fa:
             link: /tapsell-sdk/android/native
 
       - name: iOS
-        link: #
+        link: /invalid-page
 
       - name: Unity
         link: /tapsell-sdk/unity/main
