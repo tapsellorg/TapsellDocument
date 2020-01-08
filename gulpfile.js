@@ -17,7 +17,6 @@ const paths = {
   },
   sass: { watch: ['src/sass/**/*', 'src/style.scss'], dest: 'assets', entry: 'src/style.scss' },
   jekyll: { dest: '._jekyll_build_temp', watch: ['src/jekyll/**/*', '!src/jekyll/{.jekyll-cache,.jekyll-cache/**}', '_config.yml'] },
-  js: { entry: 'src/js/bundle.js', dest: 'assets' },
   admin: { entry: ['admin/**/*', '!admin/admin.js'], watch: ['admin/**/*', '!admin/admin.js'], dest: 'admin' },
   adminJs: { entry: ['admin/admin.js'], watch: ['admin/admin.js'], dest: 'admin' },
   dest: '_site',
@@ -60,19 +59,12 @@ function imageMin() {
 }
 
 function webpack() {
-  return gulpUtils.webpack(paths.js.entry, `${paths.dest}/${paths.js.dest}`);
+  return gulpUtils.webpack('src/js/bundle.js', '_site/');
 }
 
-const admin = gulp.parallel(
-  function copyAdmin() {
-    return gulpUtils.copy(paths.admin.entry, `${paths.dest}/${paths.admin.dest}`);
-  },
-  function adminJsWebpack() {
-    return gulpUtils.webpack(paths.adminJs.entry, `${paths.dest}/${paths.adminJs.dest}`, {
-      customWebpackConfig: { performance: { hints: false } },
-    });
-  }
-);
+const admin = gulp.parallel(function copyAdmin() {
+  return gulpUtils.copy(paths.admin.entry, `${paths.dest}/${paths.admin.dest}`);
+});
 
 function setupBrowserSync(done) {
   return browsersync.init({
