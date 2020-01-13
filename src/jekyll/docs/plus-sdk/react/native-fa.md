@@ -13,7 +13,7 @@ toc: true
 با روش زیر درخواست تبلیغ بدهید.
 
 ```javascript
-TapsellPlus.requestNative(zoneId, onAdAvailable onError);
+TapsellPlus.requestNative(zoneId, onAdAvailable, onError);
 ```
 
 ورودی `zoneId`، شناسه تبلیغ‌گاه است که باید آن را از داشبورد تپسل دریافت کنید.
