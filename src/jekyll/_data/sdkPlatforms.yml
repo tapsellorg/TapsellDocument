@@ -1,13 +1,21 @@
 tapsellAndroid:
-  sdkVersion: 4.4.0-beta
+  sdkVersion: 4.4.0
   sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
   versions:
+    - version: 4.4.0
+      releaseDate: 1578765030
+      changelog:
+        - message: بهبود کار با تردها
+
     - version: 4.4.0-beta
       releaseDate: 1576494856
       changelog:
-        - message: SDK  ریفکتور
-        - message: حذف ریکوئست های اضافی
-        - message: Memory leak حذف
+        - message: بهبود کار با تردها
+        - message: بهبود عملکرد تبلیغان آنی و جایزه‌ای
+        - message: تغییر api تبلیغات جایزه‌ای و آنی
+        - message: حل مشکلات اندروید ۱۰
+        - message: حل مشکل تبلیغات کش شده
+        - message: سایر بهبودهای جزئی
 
 
 tapsellUnity:
@@ -35,17 +43,6 @@ tapsellB4A:
       changelog:
         - message: برطرف کردن خطاهای گزارش شده
 
-
-tapsellAndroid:
-  sdkVersion: 4.4.0-beta
-  sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
-  versions:
-    - version: 4.4.0-beta
-      releaseDate: 1576494856
-      changelog:
-        - message: SDK  ریفکتور
-        - message: حذف ریکوئست های اضافی
-        - message: Memory leak حذف
 
 plusAndroid:
   sdkVersion: 1.0.12

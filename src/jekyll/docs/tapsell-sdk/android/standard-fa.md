@@ -22,7 +22,7 @@ toc: true # table of contents
 ```
 
 مقدار `ZONE_ID` شناسه تبلیغ‌گاه هست که از پنل به آن دسترسی دارید.  
-مقدار `BANNER_SIZE` مشخص کننده اندازه بنر هست که از سطون `xml` جدول زیر میتوانید مقادیر قابل قبول را ببینید.
+مقدار `BANNER_SIZE` مشخص کننده اندازه بنر هست که از سطون `xml` جدول زیر می‌توانید مقادیر قابل قبول را ببینید.
 
 | `java` | `xml` |
 | - | - |
@@ -32,7 +32,7 @@ toc: true # table of contents
 | `TapsellBannerType.BANNER_300x250` | `banner_300x250` |
 
 ## درخواست تبلیغ
-با روش زیر میتوانید تبلیغ را نمایش دهید.
+با روش زیر می‌توانید تبلیغ را نمایش دهید.
 ```java
 TapsellBannerView banner = findViewById(R.id.banner);
 banner.loadAd(CONTEXT, ZONE_ID, BANNER_SIZE);
@@ -40,10 +40,10 @@ banner.loadAd(CONTEXT, ZONE_ID, BANNER_SIZE);
 باید متد `loadAd` از ویوای که در فایل `xml` از نوع `TapsellBannerView` ساختید را صدا بزنید.  
  ورودی اول `context` هست.  
  ورودی دوم شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
- ورودی سوم سایز بنری هست که میخواهید نمایش بدهید، و از ستون `java` جدول بالا میتوانید مقادیر قابل قبول را به دست بیاورید. 
+ ورودی سوم سایز بنری هست که میخواهید نمایش بدهید، و از ستون `java` جدول بالا می‌توانید مقادیر قابل قبول را به دست بیاورید. 
 
 ### تعریف `listener` برای درخواست
-مطابق کد زیر میتوانید برای درخواست تبلیغ `listener` تعریف کنید.
+مطابق کد زیر می‌توانید برای درخواست تبلیغ `listener` تعریف کنید.
 
 ```java
 banner.setEventListener(new TapsellBannerViewEventListener() {
@@ -76,16 +76,16 @@ banner.setEventListener(new TapsellBannerViewEventListener() {
 | جواب درخواست برگشته و تبلیغ نمایش داده میشود | `onRequestFilled` |
 | تبلیغی برای نمایش موجود نیست | `onNoAdAvailable` |
 | امکان برقراری ارتباط با سرور نیست | `onNoNetwork` |
-| خطایی رخ داده متن خطا را میتوانید از `meesage` ببینید | `onError` |
+| خطایی رخ داده متن خطا را می‌توانید از `meesage` ببینید | `onError` |
 | هنگام مخفی شدن بنر صدا زده میشود | `onHideBannerView` |
 
 ## مخفی کردن بنر
-با روش زیر میتوانید بنر نمایش داده شده را مخفی کنید.
+با روش زیر می‌توانید بنر نمایش داده شده را مخفی کنید.
 
 ```java
 banner.hideBannerView();
 ```
-با روش زیر میتوانید بنر مخفی شده رانمایش دهید.
+با روش زیر می‌توانید بنر مخفی شده رانمایش دهید.
 
 ```java
 banner.showBannerView();

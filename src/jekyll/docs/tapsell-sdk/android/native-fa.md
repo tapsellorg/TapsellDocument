@@ -42,7 +42,7 @@ toc: true
 |    clickable view    |     `tapsell_nativead_cta_view`     | `View`  |
 
 
-* در صورتی که در طراحی دکمه‌ای برای کلیک کردن وجود ندارد میتوانید از **clickable view** استفاده کنید.
+* در صورتی که در طراحی دکمه‌ای برای کلیک کردن وجود ندارد می‌توانید از **clickable view** استفاده کنید.
 * نوع ویوها میتواند از نوع‌های گفته شده ارث بری کرده باشند.
 
 
@@ -87,7 +87,7 @@ private void requestAd() {
 ```
 
 ### نمایش تبلیغ
-بعد از اجرای متد `onResponse` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
+بعد از اجرای متد `onResponse` تبلیغ آماده نمایش است و می‌توانید مطابق روش زیر نمایش دهید.
 
 ```java
 import ir.tapsell.sdk.nativeads.TapsellNativeBannerManager;
