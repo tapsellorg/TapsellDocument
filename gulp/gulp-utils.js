@@ -71,7 +71,7 @@ module.exports = {
         jekyllConfig += jekyllDevConfig ? ',' + jekyllDevConfig : '';
       }
       return cp
-        .spawn(jekyll, ['build', '--config', jekyllConfig, '--destination', dest], { stdio: 'inherit', env: process.env })
+        .spawn(jekyll, ['build', '--config', jekyllConfig, '--destination', dest, '--trace'], { stdio: 'inherit', env: process.env })
         .on('close', done);
     };
   },
