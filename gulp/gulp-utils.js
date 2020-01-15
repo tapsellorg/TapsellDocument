@@ -64,7 +64,7 @@ module.exports = {
       let jekyllConfig = '_config.yml';
       const jekyllDevConfig = '_config_development.yml';
       const jekyllProdConfig = '';
-      if (process.env.NODE_ENV == 'production') {
+      if (process.env.NODE_ENV === 'production') {
         process.env.JEKYLL_ENV = 'production';
         jekyllConfig += jekyllProdConfig ? ',' + jekyllProdConfig : '';
       } else {

@@ -3,9 +3,5 @@
   "editor.wordWrapColumn": 140,
   "html.format.wrapLineLength": 140,
   "html.format.wrapAttributes": "aligned-multiple",
-  "editor.insertSpaces": true,
-  "files.exclude": {
-    ".bundle": true,
-    "vendor": true
-  }
+  "editor.insertSpaces": true
 }
