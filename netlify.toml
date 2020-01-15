@@ -1,0 +1,9 @@
+# Production context:
+# master branch
+[context.production]
+  command = "bundle install && npm i && npm run build"
+
+# Specific branch context:
+# Staging branch
+[context.staging]
+  command = "bundle install && npm i && npm run build"
