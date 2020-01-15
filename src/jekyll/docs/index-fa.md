@@ -7,7 +7,7 @@ lang: fa
 permalink: /
 ---
 
-<h1>به مستندات تپسل خوش آمدید</h1>
+<h1>به بخش مستندات تپسل خوش آمدید</h1>
 
 <div class="row clickable-box-group" markdown="0">
   <div class="col-12 col-sm-6">
@@ -16,7 +16,7 @@ permalink: /
         <i class="picon-publisher"></i>
       </div>
       <h2 class="clickable-box-title">پابلیشر</h2>
-      <p class="clickable-box-desc">توضیحات بخش پابلیشر</p>
+      <p class="clickable-box-desc">نمایش دهنده‌ی تبلیغات تپسل</p>
       <button class="clickable-box-button btn btn-primary mt-3">ورود به بخش پابلیشرها</button>
     </a>
   </div>
@@ -25,8 +25,8 @@ permalink: /
       <div class="clickable-box-icon">
         <i class="picon-advertiser"></i>
       </div>
-      <h2 class="clickable-box-title">تبلیغ‌دهنده</h2>
-      <p class="clickable-box-desc">توضیحات بخش تبلیغ‌دهنده</p>
+      <h2 class="clickable-box-title">تبلیغ دهنده</h2>
+      <p class="clickable-box-desc">تبلیغ کننده در پلتفرم تپسل</p>
       <button class="clickable-box-button btn btn-secondary mt-3">ورود به بخش تبلیغ‌دهنده‌ها</button>
     </a>
   </div>

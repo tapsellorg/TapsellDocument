@@ -1,13 +1,13 @@
 $enable-rounded: true;
 $enable-shadows: true;
-$enable-gradients: true;
+$enable-gradients: false;
 $enable-transitions: true;
 $body-bg: #fff;
 $body-color: #444;
 
 $theme-colors: (
-  'primary': #129c35,
-  'secondary': #ef4b56,
+  'primary': #219c12,
+  'secondary': #009688,
   'danger': #ee1505,
   'warning': #ffc107,
   'success': #4caf50,
