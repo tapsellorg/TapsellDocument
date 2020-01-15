@@ -4,7 +4,7 @@ title: مستندات تپسل
 description: شبکه هوشمند تبلیغات دیجیتال
 hideTitle: true
 lang: fa
-permalink: /
+permalink: /faq/publisher/index.html
 ---
 
 <h3>مستندات پیاده سازی تپسل پلاس</h3>
