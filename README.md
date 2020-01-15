@@ -1,5 +1,20 @@
 # Metrix Docs Jekyll Platform
 
-## Frasco config:
+## Installation
 
-https://ixkaito.github.io/frasco/
+```bash
+bundle install
+npm install
+```
+
+## Usage
+
+```bash
+npm start
+```
+
+## Build
+
+```bash
+npm run build
+```
