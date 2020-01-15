@@ -45,9 +45,16 @@ tapsellB4A:
 
 
 plusAndroid:
-  sdkVersion: 1.0.12
+  sdkVersion: 1.1.0
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
   versions:
+    - version: 1.1.0
+      releaseDate: 1578848400
+      changelog:
+        - message: بهبود کار با تردها
+        - message: استفاده از نسخه 4.4.0 تپسل
+        - message: استفاده از consumer proguard
+
     - version: 1.0.12
       releaseDate: 1575285256
       changelog:
@@ -66,12 +73,19 @@ plusFlutter:
 
 
 plusUnity:
-  sdkVersion: 1.0.12
+  sdkVersion: 1.1.0
   sample: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample
   downloadLinks:
     - link: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample/releases/download/v2.1/TapsellPlusUnity-v2.1.unitypackage
       name: لینک دانلود Unity Package
   versions:
+    - version: 1.1.0
+      releaseDate: 1578848400
+      changelog:
+        - message: بهبود کار با تردها
+        - message: استفاده از نسخه 4.4.0 تپسل
+        - message: استفاده از consumer proguard
+
     - version: 1.0.12
       releaseDate: 1575285256
       changelog:
