@@ -15,12 +15,12 @@ permalink: /
       <div class="clickable-box-icon">
         <i class="picon-publisher"></i>
       </div>
-      <h2 class="clickable-box-title">پابلیشر</h2>
-      <p class="clickable-box-desc">نمایش دهنده‌ی تبلیغات تپسل</p>
+      <h2 class="clickable-box-title">صاحب رسانه</h2>
+      <p class="clickable-box-desc">از تپسل کسب درآمد می کنم و نمایش دهنده‌ی تبلیغات تپسل در اپلیکیشن‌های خود هستم.</p>
       <div class="row mt-3">
         <div class="col-6">
           <a href="/faq/publisher">
-            <button class="clickable-box-button btn btn-primary">سوالات متداول<br>پابلیشرها</button>
+            <button class="clickable-box-button btn btn-primary">سوالات متداول<br>صاحبان رسانه</button>
           </a>
         </div>
         <div class="col-6">
@@ -37,9 +37,9 @@ permalink: /
         <i class="picon-advertiser"></i>
       </div>
       <h2 class="clickable-box-title">تبلیغ دهنده</h2>
-      <p class="clickable-box-desc">تبلیغ کننده در پلتفرم تپسل</p>
+      <p class="clickable-box-desc">می‌خواهم برای کسب و کار خود در پلتفرم تپسل کمپین تبلیغاتی تعریف کنم.</p>
       <a href="/faq/advertiser">
-        <button class="clickable-box-button btn btn-secondary mt-3">سوالات متداول تبلیغ‌دهنده‌ها</button>
+        <button class="clickable-box-button btn btn-secondary">سوالات متداول تبلیغ‌دهنده‌ها</button>
       </a>
     </div>
   </div>
