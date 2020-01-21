@@ -63,7 +63,6 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
-          mangle: { toplevel: true, properties: {} },
           output: { comments: false },
         },
         extractComments: false,
