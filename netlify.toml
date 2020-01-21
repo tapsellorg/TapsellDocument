@@ -1,0 +1,19 @@
+# Production context:
+# master branch
+[context.production]
+  command = "bundle install && npm i && npm run build"
+
+# Specific branch context:
+# Staging branch
+[context.staging]
+  command = "bundle install && npm i && npm run build"
+
+[[redirects]]
+  from = "/faq"
+  to = "/faq/publisher"
+[[redirects]]
+  from = "/faq/publishers"
+  to = "/faq/publisher"
+[[redirects]]
+  from = "/faq/advertisers"
+  to = "/faq/advertiser"

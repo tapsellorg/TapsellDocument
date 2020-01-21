@@ -13,19 +13,21 @@ permalink: /__doc-jekyll-clickable-boxes.html
   <div class="col-12 col-sm-6">
     <a href="#" class="clickable-box">
       <div class="clickable-box-icon">
-        <i class="picon-mobile"></i>
+        <i class="picon-publisher"></i>
       </div>
-      <h2 class="clickable-box-title">پابلیشرها</h2>
-      <p class="clickable-box-desc">توضیحات بخش پابلیشرها</p>
+      <h2 class="clickable-box-title">پابلیشر</h2>
+      <p class="clickable-box-desc">توضیحات بخش پابلیشر</p>
+      <button class="clickable-box-button btn btn-primary mt-3">ورود به بخش پابلیشرها</button>
     </a>
   </div>
   <div class="col-12 col-sm-6">
     <a href="#" class="clickable-box">
       <div class="clickable-box-icon">
-        <i class="picon-ad"></i>
+        <i class="picon-advertiser"></i>
       </div>
       <h2 class="clickable-box-title">تبلیغ‌دهنده</h2>
       <p class="clickable-box-desc">توضیحات بخش تبلیغ‌دهنده</p>
+      <button class="clickable-box-button btn btn-secondary mt-3">ورود به بخش تبلیغ‌دهنده‌ها</button>
     </a>
   </div>
 </div>

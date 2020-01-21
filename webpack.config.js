@@ -5,6 +5,13 @@ const isDevMode = mode === 'development';
 module.exports = {
   mode,
   watch: isDevMode,
+  entry: {
+    'assets/bundle': './src/js/bundle.js',
+    ...(!isDevMode ? { 'admin/admin': './admin/admin.js' } : {}),
+  },
+  output: {
+    filename: '[name].js',
+  },
   module: {
     rules: [
       {
@@ -53,6 +60,13 @@ module.exports = {
   },
   optimization: {
     minimize: !isDevMode,
-    minimizer: [new TerserPlugin()],
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          output: { comments: false },
+        },
+        extractComments: false,
+      }),
+    ],
   },
 };
