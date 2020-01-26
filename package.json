@@ -61,6 +61,7 @@
     "imagemin-pngquant": "^8.0.0",
     "jquery": "^3.4.1",
     "natives": "^1.1.6",
+    "plop": "^2.5.3",
     "popper.js": "^1.16.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.3.1",
