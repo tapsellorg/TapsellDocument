@@ -34,7 +34,7 @@ $(document).ready(function() {
       return this.innerText === '$$';
     })
     .each(function() {
-      console.log('TCL: item', this);
+      // console.log('TCL: item', this);
       this.innerText = '';
       this.classList.add('highlight-line-code');
       this.classList.remove('err');
