@@ -6,7 +6,8 @@
   "scripts": {
     "start": "bundle exec gulp",
     "build": "bundle exec gulp build --mode=production",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "plop": "plop"
   },
   "repository": {
     "type": "git",
