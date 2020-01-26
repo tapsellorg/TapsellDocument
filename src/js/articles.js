@@ -8,10 +8,9 @@ $(document).ready(function() {
       // Remove id and set on a.anchor
       const id = $(this).attr('id');
       $(this).removeAttr('id');
-      $(this)
-        .children('.anchor')
-        .attr('id', id);
-
+      const anchor = $(this).children('.anchor');
+      anchor.attr('id', id);
+      anchor.remove();
       /**
        * Reorder elements
        * and add a.anchor-link
@@ -23,8 +22,8 @@ $(document).ready(function() {
         $(this)
           .contents()
           .detach()
-          .toArray()
-          .reverse()
+          .toArray(),
+        anchor
       );
       $(this).prepend();
     });
@@ -34,7 +33,7 @@ $(document).ready(function() {
       return this.innerText === '$$';
     })
     .each(function() {
-      console.log('TCL: item', this);
+      // console.log('TCL: item', this);
       this.innerText = '';
       this.classList.add('highlight-line-code');
       this.classList.remove('err');
