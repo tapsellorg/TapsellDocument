@@ -2,7 +2,7 @@ tapsellAndroid:
   sdkVersion: 4.4.2
   sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
   versions:
-    - version: 4.4.1
+    - version: 4.4.2
       releaseDate: 1580076000
       changelog:
         - message: برطرف کردن کرش در صورت init نشدن sdk
