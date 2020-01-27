@@ -56,7 +56,7 @@ permalink: /sdk/index.html
     <div class="home-card">
       <h2>ReactNative</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/plus-sdk/react/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/plus-sdk/reactnative/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-ReactNativeSample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin">Source Code</a></li>
       </ul>
@@ -95,7 +95,7 @@ permalink: /sdk/index.html
     <div class="home-card">
       <h2>ReactNative</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/tapsell-sdk/react/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/tapsell-sdk/reactnative/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-ReactNativePlugin">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellSDK-ReactNativeSample">Source Code</a></li>
       </ul>

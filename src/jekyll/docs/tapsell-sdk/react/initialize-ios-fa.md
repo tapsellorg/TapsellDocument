@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل در ReactNative (iOS)
 lang: fa
-permalink: /tapsell-sdk/react/initialize-ios/index.html
+permalink: /tapsell-sdk/reactnative/initialize-ios/index.html
 toc: true # table of contents
 ---
 

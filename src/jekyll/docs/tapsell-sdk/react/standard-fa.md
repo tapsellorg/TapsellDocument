@@ -2,7 +2,7 @@
 layout: classic-docs
 title: بنر استاندارد در React Native
 lang: fa
-permalink: /tapsell-sdk/react/standard/index.html
+permalink: /tapsell-sdk/reactnative/standard/index.html
 toc: true # table of contents
 ---
 

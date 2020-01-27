@@ -114,19 +114,19 @@ fa:
             link: /tapsell-sdk/unity/native
 
       - name: React Native
-        link: /tapsell-sdk/react/main
+        link: /tapsell-sdk/reactnative/main
         children:
           - name: راه اندازی اندروید
-            link: /tapsell-sdk/react/initialize-android
+            link: /tapsell-sdk/reactnative/initialize-android
 
           - name: راه اندازی iOS
-            link: /tapsell-sdk/react/initialize-ios
+            link: /tapsell-sdk/reactnative/initialize-ios
 
           - name: جایزه‌ای/آنی
-            link: /tapsell-sdk/react/rewarded-interstitial
+            link: /tapsell-sdk/reactnative/rewarded-interstitial
 
           - name: بنر استاندارد
-            link: /tapsell-sdk/react/standard
+            link: /tapsell-sdk/reactnative/standard
 
           - name: بنر همسان
-            link: /tapsell-sdk/react/native
+            link: /tapsell-sdk/reactnative/native

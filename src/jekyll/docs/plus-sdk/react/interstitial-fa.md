@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تبلیغات آنی در ReactNative
 lang: fa
-permalink: /plus-sdk/react/interstitial/index.html
+permalink: /plus-sdk/reactnative/interstitial/index.html
 toc: true # table of contents
 ---
 

@@ -2,7 +2,7 @@
 layout: classic-docs
 title: راه اندازی تپسل پلاس در ReactNative (Android)
 lang: fa
-permalink: /plus-sdk/react/initialize-android/index.html
+permalink: /plus-sdk/reactnative/initialize-android/index.html
 toc: true # table of contents
 ---
 

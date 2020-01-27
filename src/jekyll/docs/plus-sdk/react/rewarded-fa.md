@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تبلیغات جایزه‌ای در ReactNative
 lang: fa
-permalink: /plus-sdk/react/rewarded/index.html
+permalink: /plus-sdk/reactnative/rewarded/index.html
 toc: true # table of contents
 ---
 

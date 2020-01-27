@@ -116,7 +116,7 @@ plusUnity:
         - message: برطرف کردن خطاهای گزارش شده
 
 
-plusReact:
+plusReactnative:
   sdkVersion: 1.0.3
   sample: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativeSample
   versions:

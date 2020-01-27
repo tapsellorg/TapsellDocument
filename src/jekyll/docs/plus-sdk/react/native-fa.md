@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات همسان در React Native
 lang: fa
-permalink: /plus-sdk/react/native/index.html
+permalink: /plus-sdk/reactnative/native/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه
