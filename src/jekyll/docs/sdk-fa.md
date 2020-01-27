@@ -45,7 +45,7 @@ permalink: /sdk/index.html
     <div class="home-card">
       <h2>Flutter</h2>
       <ul>
-        <li><a href="{{ site.baseurl }}/plus-sdk/react/main">مستندات</a></li>
+        <li><a href="{{ site.baseurl }}/plus-sdk/flutter/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin">Source Code</a></li>
       </ul>
