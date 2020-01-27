@@ -21,7 +21,7 @@ maven {
 خط زیر را به فایل `build.gradle` ماژول برنامه در قسمت `dependencies` اضافه کنید.
 
 ```gradle
-    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.4.1'
+    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.4.2'
 ```
 
 با کمک پراکسی gradle را sync کنید تا تپسل به پروژه اضافه شود.
