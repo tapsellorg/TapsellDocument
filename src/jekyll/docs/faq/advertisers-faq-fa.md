@@ -2,7 +2,7 @@
 layout: classic-docs
 title: سوالات متداول تبلیغ‌دهندگان
 toc: true
-permalink: /faq/advertiser/index.html
+permalink: /faq/advertiser/
 lang: fa
 ---
 
