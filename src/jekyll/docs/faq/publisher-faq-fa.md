@@ -2,7 +2,7 @@
 layout: classic-docs
 title: سوالات متداول
 toc: true
-permalink: /faq/publisher/index.html
+permalink: /faq/publisher/
 lang: fa
 ---
 
