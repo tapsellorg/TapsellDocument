@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پرداخت درآمد ناشرین
 toc: false
-permalink: /paying-income/index.html
+permalink: /paying-income/
 lang: fa
 ---
 
