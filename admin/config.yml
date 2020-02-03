@@ -3,6 +3,7 @@ backend:
   repo: tapsellorg/TapsellDocument
 media_folder: 'src/jekyll/images'
 public_folder: '/images'
+publish_mode: editorial_workflow
 collections:
   - name: 'data'
     label: 'Data'
@@ -75,7 +76,7 @@ collections:
     folder: src/jekyll/docs/faq
     identifier_field: permalink
     summary: '{{fields.title}} •• {{fields.lang}} •• {{fields.permalink}}'
-    slug: '{{fields.permalink}}-{{fields.lang}}'
+    slug: '{{slug}}-{{fields.lang}}'
     preview_path: '/faq/{{fields.permalink}}'
     editor:
       preview: false
