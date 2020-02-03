@@ -76,7 +76,7 @@ collections:
     folder: src/jekyll/docs/faq
     identifier_field: permalink
     summary: '{{fields.title}} •• {{fields.lang}} •• {{fields.permalink}}'
-    slug: '{{slug}}-{{fields.lang}}'
+    slug: '{{fields.permalink}}-{{fields.lang}}'
     preview_path: '/faq/{{fields.permalink}}'
     editor:
       preview: false
