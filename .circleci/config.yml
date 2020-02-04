@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Install Ruby
           command: |
-            gem list bundler
+            gem install bundler -v 2.1.4
             bundle install
 
       - run: npm install
