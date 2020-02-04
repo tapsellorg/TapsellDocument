@@ -4,16 +4,13 @@ jobs:
   deploy-website:        
     docker:
       # specify the version you desire here
-      - image: circleci/node:12.14.1
+      - image: circleci/ruby:2.4-node
 
     steps:
       - checkout
       - run:
           name: Install Ruby
           command: |
-            sudo apt-get install ruby-full
-            sudo gem install bundler
-            ruby -v
             bundle install
 
       - run: npm install
