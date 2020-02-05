@@ -5,7 +5,6 @@ toc: true
 permalink: /faq/advertiser/
 lang: fa
 ---
-
 # انواع تبلیغات در تپسل؟
 
 ## CPCV
@@ -50,7 +49,7 @@ lang: fa
 
 # تعرفه تبلیغات در تپسل؟
 
-![](/images/size-banner.jpg)
+![](/images/تعرفه.jpg)
 
 # بیدینگ به چه معناست؟
 
