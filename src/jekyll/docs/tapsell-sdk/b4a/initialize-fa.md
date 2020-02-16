@@ -48,14 +48,10 @@ toc: true # table of contents
 
 
 ```xml
-AddManifestText(
-    ....
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    ....
-'End of default text.
+AddPermission(android.permission.INTERNET)
+AddPermission(android.permission.ACCESS_NETWORK_STATE)
+
 AddApplicationText(
-    <!-- Required Activity -->
     <activity
         android:name="ir.tapsell.sdk.TapsellAdActivity"
         android:configChanges="keyboardHidden|orientation|screenSize"/>
