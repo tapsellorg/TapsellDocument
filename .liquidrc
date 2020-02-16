@@ -6,6 +6,11 @@
       "end": "endcomment"
     },
     {
+      "type": "liquid",
+      "begin": "capture",
+      "end": "endcapture"
+    },
+    {
       "type": "html",
       "begin": "script",
       "end": "script"
