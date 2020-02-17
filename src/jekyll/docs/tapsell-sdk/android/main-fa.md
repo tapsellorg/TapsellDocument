@@ -13,3 +13,4 @@ sdkPlatform:
 - [جایزه‌ای/آنی]({{site.baseurl}}/tapsell-sdk/android/rewarded-interstitial)
 - [بنر همسان]({{site.baseurl}}/tapsell-sdk/android/native)
 - [بنر استاندارد]({{site.baseurl}}/tapsell-sdk/android/standard)
+- [VAST]({{site.baseurl}}/tapsell-sdk/android/vast)
