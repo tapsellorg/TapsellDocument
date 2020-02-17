@@ -1,5 +1,5 @@
 tapsellAndroid:
-  sdkVersion: 4.4.2
+  sdkVersion: 4.5.0
   sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
   releaseNotesFile: releases/tapsell-android.md
 
@@ -25,10 +25,12 @@ plusAndroid:
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
   releaseNotesFile: releases/plus-android.md
 
+
 plusFlutter:
   sdkVersion: 1.0.0
   sample: https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample
-  
+
+
 plusUnity:
   sdkVersion: 1.1.1
   sample: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample
@@ -36,6 +38,7 @@ plusUnity:
   downloadLinks:
     - link: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample/releases/download/v2.1/TapsellPlusUnity-v2.1.unitypackage
       name: لینک دانلود Unity Package
+
 
 plusReactnative:
   sdkVersion: 1.0.3
