@@ -1,7 +1,7 @@
 ---
 layout: platform-details
 title: Tapsell Android SDK
-lang: fa
+lang: en
 permalink: /tapsell-sdk/android/main/index.html
 toc: true
 sdkPlatform:
