@@ -1,12 +1,16 @@
 en:
-  - name: SDK
+  - name: Tapsell
     icon: m-sdk
-    # children:
-    #   - name: Introduction
-    #     link: 2.0/
-    #     children:
-    #       - name: CI/CD Overview
-    #         link: 2.0/about-circleci/
+    children:
+      - name: Android
+        link: /tapsell-sdk/android/main
+        children:
+          - name: Initialize
+            link: /tapsell-sdk/android/initialize
+
+          - name: Rewarded/Interstitial
+            link: /tapsell-sdk/android/rewarded-interstitial
+
 fa:
   - name: تپسل پلاس
     icon: m-sdk
