@@ -24,19 +24,12 @@ dependencies {
 
     //for chartboost
     implementation 'com.chartboost:chartboost-sdk:8.1.0'
-
-    //for facebook
-    implementation 'com.facebook.android:audience-network-sdk:5.3.0'
-    implementation 'com.facebook.android:facebook-android-sdk:5.2.0'
     
     //for adcolony
     implementation 'com.adcolony:sdk:3.3.11'
     
     //for applovin
     implementation 'com.applovin:applovin-sdk:9.7.2'
-    
-    //for vungle
-    implementation 'com.vungle:publisher-sdk-android:6.4.11'
     .....
 }
 ```
