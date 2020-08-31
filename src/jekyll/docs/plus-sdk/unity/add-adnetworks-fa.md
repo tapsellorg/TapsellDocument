@@ -23,25 +23,18 @@ dependencies {
     implementation 'com.unity3d.ads:unity-ads:3.0.0'
 
     //for chartboost
-    implementation 'ir.tapsell.sdk:chartboost-sdk-android:7.3.1'
-
-    //for facebook
-    implementation 'com.facebook.android:audience-network-sdk:5.3.0'
-    implementation 'com.facebook.android:facebook-android-sdk:5.2.0'
+    implementation 'com.chartboost:chartboost-sdk:8.1.0'
     
     //for adcolony
     implementation 'com.adcolony:sdk:3.3.11'
     
     //for applovin
     implementation 'com.applovin:applovin-sdk:9.7.2'
-    
-    //for vungle
-    implementation 'com.vungle:publisher-sdk-android:6.4.11'
     .....
 }
 ```
 
-برای adcolony لازم هست ریپازیتوری زیر به build.gradle پروژه اضافه شود.
+برای adcolony و chartboost لازم هست ریپازیتوری‌های زیر به build.gradle پروژه اضافه شوند.
 
 ```gradle
 allprojects {  
@@ -49,6 +42,9 @@ allprojects {
         ....
         maven {  
             url  "https://adcolony.bintray.com/AdColony"
+        }
+        maven {
+            url "https://chartboostmobile.bintray.com/Chartboost"
         }
         ....
     }  
