@@ -67,6 +67,11 @@ allprojects {
 ```
 
 ### استفاده از Resolver
+ابتدا فایل [external-dependency-manager-1.2.156.unitypackage](https://github.com/googlesamples/unity-jar-resolver/releases) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:
+\
+[مستندات گوگل](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage) 
+
+سپس unityPackage تپسل پلاس را import کنید.
 هنگام import کردن unityPackage تپسل پلاس تیک تمامی قسمت‌ها را بزارید.
 در صورتی که تنظیمات Resolver بر روی حالت `auto-resolution` میباشد، لایبراری‌های تپسل پلاس به صورت خودکار اضافه میشود. در غیر اینصورت به صورت دستی Resolve را انجام دهید.
 فعال یا غیر فعال کردن `auto-resolution` از مسیر زیر انجام میشود.
