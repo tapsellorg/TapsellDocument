@@ -8,8 +8,11 @@ toc: true # table of contents
 
 
 ## دریافت SDK تپسل
-ابتدا فایل `unitypackage` مربوط به SDK تپسل پلاس را از آدرس زیر دانلود کرده و مطابق روش گفته شده در مراحل بعد در پروژه خود import نمایید.  
-[دریافت فایل](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample/releases/download/v2.1/TapsellPlusUnity-v2.1.unitypackage)
+ابتدا روش مورد نظر خود جهت اضافه کردن کتابخانه به پروژه را با مطالعه‌ی توضیحات پایین انتخاب نمایید. سپس فایل `unitypackage` مربوط به SDK تپسل پلاس را که برای روش انتخاب شده است را از آدرس‌های زیر دانلود کرده و مطابق روش گفته شده در مراحل بعد در پروژه خود import نمایید.  
+[دریافت فایل برای روش Gradle مربوط به توزیع یونیتی ۲۰۱۹](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.3/TapsellPlusUnity2019EDM-v2.3.unitypackage) 
+[دریافت فایل برای روش Gradle مربوط به توزیع یونیتی ۲۰۱۸](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018/releases/download/v2.3/TapsellPlusUnity2018Gradle-v2.3.unitypackage) 
+[دریافت فایل برای روش Resolver مربوط به توزیع یونیتی ۲۰۱۹](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.3/TapsellPlusUnity2019Gradle-v2.3.unitypackage) 
+[دریافت فایل برای روش Resolver مربوط به توزیع یونیتی ۲۰۱۸](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018/releases/download/v2.3/TapsellPlusUnity2018EDM-v2.3.unitypackage)
 
 
 ## تنظیمات اولیه Sdk
