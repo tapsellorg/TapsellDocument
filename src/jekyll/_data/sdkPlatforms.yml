@@ -32,13 +32,8 @@ plusFlutter:
 
 
 plusUnity:
-  sdkVersion: 1.1.1
-  sample: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample
+  sdkVersion: 2.3
   releaseNotesFile: releases/plus-unity.md 
-  downloadLinks:
-    - link: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample/releases/download/v2.1/TapsellPlusUnity-v2.1.unitypackage
-      name: لینک دانلود Unity Package
-
 
 plusReactnative:
   sdkVersion: 1.0.3
