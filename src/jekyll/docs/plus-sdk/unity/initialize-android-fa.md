@@ -13,6 +13,8 @@ toc: true # table of contents
 \
 [دریافت فایل برای روش Gradle مربوط به توزیع یونیتی ۲۰۱۸](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018/releases/download/v2.3/TapsellPlusUnity2018Gradle-v2.3.unitypackage)
 \
+[دریافت فایل برای روش Gradle مربوط به توزیع یونیتی ۲۰۱۷](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2017/releases/download/v2.3/TapsellPlusUnity2017Gradle-v2.3.unitypackage)
+\
 [دریافت فایل برای روش Resolver مربوط به توزیع یونیتی ۲۰۱۹](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.3/TapsellPlusUnity2019EDM-v2.3.unitypackage)
 \
 [دریافت فایل برای روش Resolver مربوط به توزیع یونیتی ۲۰۱۸](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018/releases/download/v2.3/TapsellPlusUnity2018EDM-v2.3.unitypackage)
