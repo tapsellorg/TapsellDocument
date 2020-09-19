@@ -50,6 +50,7 @@ Tapsell.showAd(adOptions, onOpened, onClosed);
 ```javascript
 {
   ad_id: String,
+  zone_id: String,
   back_disabled: Boolean,
   immersive_mode: Boolean,
   rotation_mode: Number,
@@ -60,6 +61,7 @@ Tapsell.showAd(adOptions, onOpened, onClosed);
 | توضیحات | متغیر |
 | - | - |
 | شناسه تبلیغی که نمایش داده می‌شود | `ad_id` |
+| شناسه تبلیغ‌گاهی که نمایش داده می‌شود | `zone_id` |
 | در هنگام پخش تبلیغ دکمه‌ی بازگشت گوشی فعال باشد یا خیر | `back_disabled (Boolean)	` |
 | فعال‌سازی حالت Immersive در هنگام پخش تبلیغ (فقط در اندروید) | `immersive_mode(Boolean)	` |
 | تنظیمات حالت چرخش موبایل | `rotation_mode (Number)	` |
