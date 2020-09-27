@@ -85,7 +85,7 @@ Tapsell.showAd(CONTEXT,
             @Override
             public void onRewarded(boolean completed) {
 
-              // Call S2S API If completed variable is True
+              // Now S2S Service Returns True If completed variable Is True
             }
         });
 ```
