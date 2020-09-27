@@ -16,7 +16,7 @@ lang: fa
 http://api.tapsell.ir/v2/suggestions/validate-suggestion
 ```
 
-درخواست ارسال شده باید بصورت `POST` بوده و محتوای ارسالی بصورت `json` باشد. `(Content-Type:application/json)`
+درخواست ارسال شده باید بصورت `POST` و محتوای ارسالی بصورت `json` باشد. `(Content-Type:application/json)`
 
 > ناشرینی که قصد استفاده از سیستم صحت سنجی تبلیغات تپسل را دارند میبایست درخواست خود را از طریق تماس تلفنی یا ارسال ایمیل به آدرس info@tapsell.ir به واحد فنی تپسل اطلاع دهند.
 
@@ -28,16 +28,52 @@ http://api.tapsell.ir/v2/suggestions/validate-suggestion
 }
 ```
 
-مقدار `SUGGESTION_ID` را در کال‌بک `onAdShowFinished` به کمک روش زیر می‌توانید دریافت کنید.
+مقدار `SUGGESTION_ID` را در کال‌بک `onAdAvailable` به کمک روش زیر می‌توانید دریافت کنید.
 
 ```java
-Tapsell.setRewardListener(new TapsellRewardListener() {
-    @Override
-    public void onAdShowFinished(final TapsellAd ad, final boolean completed) {
-        suggestionId = ad.getAd().getSuggestionId().toString();
-    }
-});
+Tapsell.requestAd(CONTEXT,
+        ZONE_ID,
+        new TapsellAdRequestOptions(),
+        new TapsellAdRequestListener() {
+            @Override
+            public void onAdAvailable(String adId) {
+              suggustionId = adId;
+            }
+
+            @Override
+            public void onError(String message) {
+            }
+        });
 ```
+
+همچنین برای اطلاع از وضعیت دریافت جایزه می‌توانید از کال‌بک `onRewarded` استفاده نمایید.
+```java
+Tapsell.showAd(CONTEXT,
+        ZONE_ID,
+        AD_ID,
+        new TapsellShowOptions(),
+        new TapsellAdShowListener() {
+            @Override
+            public void onOpened() {
+            }
+
+            @Override
+            public void onClosed() {
+            }
+
+            @Override
+            public void onError(String message) {
+            }
+
+            @Override
+            public void onRewarded(boolean completed) {
+
+              // Call S2S API If completed variable is True
+            }
+        });
+```
+
+
 پاسخ برگردانده شده به درخواست ارسال شده نیز بصورت `json` و مطابق نمونه‌ی زیر است.
 
 ```json
