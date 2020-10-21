@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 ## تنظیمات Network Security Configuration
 در صورتی که اپلیکیشن شما درخواست‌های http ارسال می‌کند، در مسیر `res/xml` پروژه‌ی خود یک فایل به نام`network_security_config.xml` بسازید.
 
-- اگر تمام ارتباطات اپلیکیشن شما از طریق پروتوکل http برقرار می‌شود، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
+- اگر تمام ارتباطات اپلیکیشن شما از طریق پروتوکل http برقرار می‌شود، خطوط زیر را به فایل `network_security_config.xml` اضافه کنید:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 </network-security-config>
 ```
 
-- اگر اپلیکیشن شما به تعداد محدودی از domainها بسته‌های http ارسال می‌کند، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
+- اگر اپلیکیشن شما به تعداد محدودی از domainها بسته‌های http ارسال می‌کند، خطوط زیر را به فایل `network_security_config.xml` اضافه کنید:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 </network-security-config>
 ```
 
- در آخر به فایل `AndroidManifest.xml`  اپلیکیشن خود خطوط زیر را اضافه کنید:
+ در آخر به تگ application در فایل `AndroidManifest.xml` اپلیکیشن خود attribute `android:networkSecurityConfig` را مطابق خطوط زیر اضافه کنید:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 </manifest>
 ```
 
- و در صورت وجود خط زیر در `AndroidManifest.xml` آن را حذف کنید:
+ و در صورت وجود attribute زیر در تگ application در`AndroidManifest.xml` آن را حذف کنید:
 
 ```xml
 <application
