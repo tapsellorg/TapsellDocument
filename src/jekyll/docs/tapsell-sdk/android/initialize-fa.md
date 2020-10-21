@@ -48,3 +48,45 @@ public void onCreate() {
 
 
 اکنون می‌توانید با توجه به نیاز خود و توضیحات به هر نوع تبلیغ، تبلیغ مورد نظر را نمایش دهید.
+
+## تنظیمات Network Security Configuration
+در صورتی که اپلیکیشن شما درخواست‌های http ارسال می‌کند، در مسیر `res/xml` پروژه‌ی خود یک فایل به نام`network_security_config.xml` بسازید.
+
+- اگر تمام ارتباطات اپلیکیشن شما از طریق پروتوکل http برقرار می‌شود، خطوط زیر را به فایل `network_security_config.xml` اضافه کنید:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <base-config cleartextTrafficPermitted="true"/>
+  </base-config>
+</network-security-config>
+```
+
+- اگر اپلیکیشن شما به تعداد محدودی از domainها بسته‌های http ارسال می‌کند، خطوط زیر را به فایل `network_security_config.xml` اضافه کنید:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <domain-config cleartextTrafficPermitted="true"/>
+    <domain includeSubdomains="true"><!—your subdomain--></domain>
+  </domain-config>
+</network-security-config>
+```
+
+ در آخر به تگ application در فایل `AndroidManifest.xml` ،اپلیکیشن خود attribute `android:networkSecurityConfig` را مطابق خطوط زیر اضافه کنید:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+    <application 
+        android:networkSecurityConfig="@xml/network_security_config">
+    </application>
+</manifest>
+```
+
+ و در صورت وجود attribute زیر در تگ application در `AndroidManifest.xml` آن را حذف کنید:
+
+```xml
+<application
+         android:usesCleartextTraffic="true">
+```
