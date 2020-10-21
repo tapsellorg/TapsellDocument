@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 </network-security-config>
 ```
 
- در آخر به تگ application در فایل `AndroidManifest.xml` ،اپلیکیشن خود attribute `android:networkSecurityConfig` را مطابق خطوط زیر اضافه کنید:
+در آخر به تگ application در فایل `AndroidManifest.xml` اپلیکیشن خود، attribute `android:networkSecurityConfig` را مطابق خطوط زیر اضافه کنید:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 </manifest>
 ```
 
- و در صورت وجود attribute زیر در تگ application در `AndroidManifest.xml` آن را حذف کنید:
+ و در صورت وجود attribute زیر در تگ application در`AndroidManifest.xml` آن را حذف کنید:
 
 ```xml
 <application
