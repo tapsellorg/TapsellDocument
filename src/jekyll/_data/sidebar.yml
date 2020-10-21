@@ -137,3 +137,5 @@ fa:
 
           - name: بنر همسان
             link: /tapsell-sdk/reactnative/native
+      - name: سیستم صحت سنجی
+        link: /s2s

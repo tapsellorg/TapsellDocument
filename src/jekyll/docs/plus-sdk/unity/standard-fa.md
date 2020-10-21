@@ -37,30 +37,6 @@ BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر ز�
 Gravity.TOP - Gravity.BOTTOM - Gravity.LEFT - Gravity.RIGHT - Gravity.CENTER
 ```
 
-
-
-### تعریف `Callback` برای درخواست
-مطابق کد زیر میتوانید برای درخواست تبلیغ listener تعریف کنید.
-
-```c#
-Tapsell.RequestBannerAd (bannerZoneId,BannerType.BANNER_320x50, Gravity.BOTTOM, Gravity.CENTER,
-	(string zoneId)=>{
-		Debug.Log("Action: onBannerRequestFilledAction");
-	},
-	(string zoneId)=>{
-		Debug.Log("Action: onNoBannerAdAvailableAction");
-	},
-	(TapsellError tapsellError)=>{
-		Debug.Log("Action: onBannerAdErrorAction");
-	},
-	(string zoneId)=>{
-		Debug.Log("Action: onNoNetworkAction");
-	}, 
-	(string zoneId)=>{
-		Debug.Log("Action: onHideBannerAction");
-	});
-```
-
 ## مخفی کردن و نمایش بنر
 به صورت پیش فرض زمانی که تبلیغات بنری دریافت میشود به صفحه اضافه میگردد و Visible می‌شود. اگر بنا به هر دلیلی می‌خواهید بنر را مخفی کنید یا بنر مخفی شده را نمایش دهید از این کد استفاده کنید:
 
