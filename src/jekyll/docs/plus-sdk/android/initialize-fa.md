@@ -70,9 +70,9 @@ public class MainActivity extends AppCompatActivity {
 تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
 
 ## تنظیمات Network Security Configuration
-در صورتی که اپلیکیشن شما درخواست¬های http ارسال می¬کند، در مسیر `res/xml` پروژه خود یک فایل به نام`network_security_config.xml` بسازید.
+در صورتی که اپلیکیشن شما درخواست‌های http ارسال می‌کند، در مسیر `res/xml` پروژه‌ی خود یک فایل به نام`network_security_config.xml` بسازید.
 
-- اگر تمام ارتباطات اپلیکیشن شما از طریق پروتوکل http برقرار می¬شود، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
+- اگر تمام ارتباطات اپلیکیشن شما از طریق پروتوکل http برقرار می‌شود، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 </network-security-config>
 ```
 
-- اگر اپلیکیشن شما به تعداد محدودی از domainها بسته¬های http ارسال می¬کند، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
+- اگر اپلیکیشن شما به تعداد محدودی از domainها بسته‌های http ارسال می‌کند، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -97,14 +97,14 @@ public class MainActivity extends AppCompatActivity {
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<manifest ... >
+<manifest>
     <application 
         android:networkSecurityConfig="@xml/network_security_config">
     </application>
 </manifest>
 ```
 
- و در صورت وجود خط زیر در `AndroidManifest.xml` آن¬ را حذف کنید:
+ و در صورت وجود خط زیر در `AndroidManifest.xml` آن را حذف کنید:
 
 ```xml
 <application
