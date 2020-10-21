@@ -68,3 +68,45 @@ public class MainActivity extends AppCompatActivity {
 
 ## تنظیمات proguard
 تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
+
+## تنظیمات Network Security Configuration
+در صورتی که اپلیکیشن شما درخواست¬های http ارسال می¬کند، در مسیر `res/xml` پروژه خود یک فایل به نام`network_security_config.xml` بسازید.
+
+- اگر تمام ارتباطات اپلیکیشن شما از طریق پروتوکل http برقرار می¬شود، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <base-config cleartextTrafficPermitted="true"/>
+  </base-config>
+</network-security-config>
+```
+
+- اگر اپلیکیشن شما به تعداد محدودی از domainها بسته¬های http ارسال می¬کند، خطوط زیر را به فایل `network_security_config.xml` که ایجاد کردید اضافه کنید:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+  <domain-config cleartextTrafficPermitted="true"/>
+    <domain includeSubdomains="true"><!—your subdomain--></domain>
+  </domain-config>
+</network-security-config>
+```
+
+ در آخر به فایل `AndroidManifest.xml`  اپلیکیشن خود خطوط زیر را اضافه کنید:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest ... >
+    <application 
+        android:networkSecurityConfig="@xml/network_security_config">
+    </application>
+</manifest>
+```
+
+ و در صورت وجود خط زیر در `AndroidManifest.xml` آن¬ را حذف کنید:
+
+```xml
+<application
+         android:usesCleartextTraffic="true">
+```
