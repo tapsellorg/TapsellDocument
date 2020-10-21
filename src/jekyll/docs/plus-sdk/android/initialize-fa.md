@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 </manifest>
 ```
 
- و در صورت وجود attribute زیر در تگ application در`AndroidManifest.xml` آن را حذف کنید:
+ و در صورت وجود attribute زیر در تگ application در `AndroidManifest.xml` آن را حذف کنید:
 
 ```xml
 <application
