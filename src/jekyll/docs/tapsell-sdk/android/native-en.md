@@ -6,7 +6,7 @@ permalink: /tapsell-sdk/android/native/index.html
 toc: true
 ---
 ### Creating a Zone
-First, create a native zone from the [Tapsell Panel](https://dashboard.tapsell.ir/) and use the `zoneId` when requesting and or showing an ad.
+First, create a native zone from the [Tapsell panel](https://dashboard.tapsell.ir/) and use the `zoneId` when requesting and or showing an ad.
 
 ### Creating an AdHolder
 You should add a ViewGroup to the page in which you want to show the native ad as space for displaying it. In other words, you need to create an ad container.

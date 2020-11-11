@@ -1,8 +1,8 @@
 ---
 layout: classic-docs
 page-type: homepage
-title: Welcome to Metrix Documentation
-description: Metrix is a mobile marketing measurement platform that unifies mobile attribution and analytics into one powerful platform
+title: Welcome to Tapsell Documentation
+description: Tapsell is a mobile marketing measurement platform that unifies mobile attribution and analytics into one powerful platform
 lang: en
 permalink: /
 ---

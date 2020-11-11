@@ -5,11 +5,23 @@ en:
       - name: Android
         link: /tapsell-sdk/android/main
         children:
-          - name: Initialize
+          - name: Initialization
             link: /tapsell-sdk/android/initialize
 
           - name: Rewarded/Interstitial
             link: /tapsell-sdk/android/rewarded-interstitial
+
+          - name: Native Banner
+            link: /tapsell-sdk/android/native
+          
+          - name: Standard Banner
+            link: /tapsell-sdk/android/standard
+            
+          - name: Vast
+            link: /tapsell-sdk/android/vast
+            
+          
+
 
 fa:
   - name: تپسل پلاس
