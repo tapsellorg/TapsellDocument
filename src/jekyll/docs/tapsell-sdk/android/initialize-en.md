@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: Import Tapsell SDK
+title: Initialization of Tapsell SDK
 lang: en
 permalink: /tapsell-sdk/android/initialize/index.html
 toc: true # table of contents
