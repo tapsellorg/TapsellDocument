@@ -10,7 +10,7 @@ toc: true # table of contents
 First, create a standard zone from the [Tapsell panel](https://dashboard.tapsell.ir/).
 
 ## Adding to Layout
-مشابه روش زیر تبلیغ را به layout خود اضافه کنید.
+Add the banner ad to your layout using the following lines of code:
 
 ```xml
 <ir.tapsell.sdk.bannerads.TapsellBannerView
@@ -21,8 +21,8 @@ First, create a standard zone from the [Tapsell panel](https://dashboard.tapsell
     app:tapsell_zone_id="ZONE_ID" />
 ```
 
-مقدار `ZONE_ID` شناسه تبلیغ‌گاه هست که از پنل به آن دسترسی دارید.  
-مقدار `BANNER_SIZE` مشخص کننده اندازه بنر هست که از سطون `xml` جدول زیر می‌توانید مقادیر قابل قبول را ببینید.
+You can find the value of `ZONE_ID` in your Tapsell panel.  
+The value of `BANNER_SIZE` determines the size of the banner. You can see the acceptable values for it in the `xml` column of the table below:
 
 | `java` | `xml` |
 | - | - |
@@ -32,18 +32,18 @@ First, create a standard zone from the [Tapsell panel](https://dashboard.tapsell
 | `TapsellBannerType.BANNER_300x250` | `banner_300x250` |
 
 ## Requesting Ads
-با روش زیر می‌توانید تبلیغ را نمایش دهید.
+You can use the following lines of code to show the ad:
 ```java
 TapsellBannerView banner = findViewById(R.id.banner);
 banner.loadAd(CONTEXT, ZONE_ID, BANNER_SIZE);
 ```
-باید متد `loadAd` از ویوای که در فایل `xml` از نوع `TapsellBannerView` ساختید را صدا بزنید.  
- ورودی اول `context` هست.  
- ورودی دوم شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
- ورودی سوم سایز بنری هست که میخواهید نمایش بدهید، و از ستون `java` جدول بالا می‌توانید مقادیر قابل قبول را به دست بیاورید. 
+You have to call the `loadAd` method in the view you made in the `xml` file, which is of the `TapsellBannerView` type.
+The first argument is `context`.  
+The second argument is the zone id you made in the panel.
+The third argument is the size of the banner you want to display. You can see the acceptable values for it in the `java` column of the table above.
 
-### تعریف `listener` برای درخواست
-مطابق کد زیر می‌توانید برای درخواست تبلیغ `listener` تعریف کنید.
+### Defining a Listener for Requesting Ads
+You can define a `listener` for requesting an ad using the code below:
 
 ```java
 banner.setEventListener(new TapsellBannerViewEventListener() {
@@ -69,23 +69,23 @@ banner.setEventListener(new TapsellBannerViewEventListener() {
 });
 ```
 
-کاربرد هر متد مطابق جدول زیر است.
+The functionality of each method is explained in the table below:
 
-| کاربرد | متد |
+| Functionality | Method |
 | - | - |
-| جواب درخواست برگشته و تبلیغ نمایش داده میشود | `onRequestFilled` |
-| تبلیغی برای نمایش موجود نیست | `onNoAdAvailable` |
-| امکان برقراری ارتباط با سرور نیست | `onNoNetwork` |
-| خطایی رخ داده متن خطا را می‌توانید از `meesage` ببینید | `onError` |
-| هنگام مخفی شدن بنر صدا زده میشود | `onHideBannerView` |
+| The response of the request is returned and the ad is displayed | `onRequestFilled` |
+| There are no ads available | `onNoAdAvailable` |
+| Connection error | `onNoNetwork` |
+|  It is called when an error occurs during the process of showing the ad | `onError` |
+|  It is called when the banner is hidden | `onHideBannerView` |
 
-## مخفی کردن بنر
-با روش زیر می‌توانید بنر نمایش داده شده را مخفی کنید.
+## Hiding the Banner
+You can hide the shown banner using the line below:
 
 ```java
 banner.hideBannerView();
 ```
-با روش زیر می‌توانید بنر مخفی شده رانمایش دهید.
+You can show the hidden banner using the line below:
 
 ```java
 banner.showBannerView();
