@@ -42,23 +42,22 @@ The details of `TapsellAdRequestListener` methods is shown in the table below:
 | An error has occured and you can see the error message in the `message` variable | `onError` | 
 
 ### Request Options
-با روش زیر می‌توانید نوع `cache` شدن ویدیو را با کمک ورودی `options` را تغییر دهید.  
+You can change the way a video is cached with the help of the argument `options`, such as the lines below:
 ```java
 TapsellAdRequestOptions options = new TapsellAdRequestOptions();
 options.setCacheType(CACHE_TYPE);
 ```
-مقدار `CACHE_TYPE` میتواند برابر مقادیر زیر باشد.
+The `CACHE_TYPE` attribute can take the values below:
 
-| توضیحات | مقدار |
+| Description | Value |
 | - | - |
-| هنگام نمایش تبلیغ، شروع به دانلود ویدیو میکند | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
-| قبل از نمایش تبلیغ، ویدیو را دانلود میکند | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
+| It starts to download the video while showing the ad | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
+| It downloads the video before showing the ad | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
 
->تنها زمانی از `CACHE_TYPE_CACHED` استفاده کنید که احتمال دیدن ویدیو توسط کاربر زیاد باشد، تا مصرف اینترنت بالا نرود.
+>To lower the data usage, only use the `CACHE_TYPE_CACHED` option when the probability of user watching the ad is high.
 
 ## Showing Ads
-You can show the add using the following lines of code:
-To get open, close, error and reward callbacks you can use overloaded showAd method with callbacks.
+You can start showing the ad using the following lines of code:
 
 ```java
 Tapsell.showAd(CONTEXT,
@@ -84,23 +83,23 @@ Tapsell.showAd(CONTEXT,
         });
 ```
 
-ورودی اول `CONTEXT` میباشد.  
-ورودی دوم شناسه تبلیغ‌گاه است.
-ورودی سوم شناسه تبلیغ که در زمان درخواست تبلیغ توسط متد `onAdAvailable` داده شده است.
-ورودی سوم از نوع `TapsellShowOptions` است. تنظیمات زمان نمایش تبلیغ را از این طریق می‌توانید انجام بدهید.  
-ورودی چهارم از نوع `TapsellAdShowListener` است. مراحل نمایش تبلیغ را از این طریق می‌توانید دریافت کنید.  
+The first argument is `CONTEXT`. 
+The second argument is `ZONE_ID`, which you used to request an ad.  
+The third argument is `AD_ID`, which you get in the `onAdAvailable` callback method.
+The fourth argument is `TapsellShowOptions` that you can use to configure how to show your ad.  
+The fifth argument is `TapsellAdShowListener` that you can use to follow the steps of showing the ad.  
 
-متدهای `TapsellAdShowListener` مطابق جدول زیر است.
+The `TapsellAdShowListener` methods are shown in the table below:
 
-| عملکرد | متد |
+| Functionality | Method |
 | - | - |
-| هنگام باز شدن تبلیغ صدا زده میشود. | `onOpened` |
-| هنگام بسته شدن تبلیغ صدا زده میشود. | `onClosed` |
-| زمانی که خطایی در پروسه نمایش تبلیغ پیش بیاید صدا زده میشود. | `onError` |
-| وضعیت دریافت جایزه در تبلیغات جایزه‌ای را نشان میدهد. | `onRewarded` |
+| It is called when the ad is opened | `onOpened` |
+| It is called when the ad is closed | `onClosed` |
+| It is called when an error occurs during the process of showing the ad | `onError` |
+| It shows the status of receiving the rewarded in the rewarded ads | `onRewarded` |
 
 ### Show Options
-تنظیمات زمان نمایش را می‌توانید مطابق روش زیر با کمک ورودی `showOptions` تغییر دهید.
+You can configure how to show your ad with the help of the `showOptions` argument.
 ```java
 TapsellShowOptions showOptions = new TapsellShowOptions();
 showOptions.setBackDisabled(true|false);
@@ -108,27 +107,27 @@ showOptions.setImmersiveMode(true|false);
 showOptions.setShowDialog(true|false);
 showOptions.setRotationMode(ROTATION_MODE);
 ```
-به هر یک از متدهای بالا می‌توانید مقدار `true` یا `false` را بدهید تا آن قابلیت فعال یا غیر فعال بشود. مقادیر قابل انتخاب برای `setRotationMode` پایینتر توضیح داده شده‌اند.  
+You can give each of the methods above `true` or `false` to enable or disable that functionality. The possible values for `ROTATION_MODE` is explained further down.
 
-کاربرد هر یک از این متدها مطابق جدول زیر است.
+The functionality of each method is explained in the table below:
 
-| عملکرد | متد |
+| Functionality | Method |
 | - | - |
-| غیر فعال کردن دکمه بازگشت در هنگام نمایش. | `setBackDisabled` |
-| فعال کردن حالت Immersive هنگام نمایش. | `setImmersiveMode` |
-| نمایش دیالوگ اخطار هنگام بستن تبلیغ قبل از اتمام ویدیو. | `setShowDialog` |
-| تعیین جهت گوشی هنگام نمایش. | `setRotationMode` |
+| Disabling the back button while showing the ad | `setBackDisabled` |
+| Enabling the immersive mode while showing the ad | `setImmersiveMode` |
+| Showing a warning dialog while closing the ad before it finishes showing | `setShowDialog` |
+| Determining the rotation mode of the phone when the ad is displayed | `setRotationMode` |
   
   
-مقادیری که می‌توانید به `setRotationMode` بدهید مطابق جدول زیر است.
+The `setRotationMode` attribute can take the values below:
 
-| توضیحات | مقدار |
+| Description | Value |
 | - | - |
-| عمودی | `TapsellShowOptions.ROTATION_LOCKED_PORTRAIT` |
-| افقی | `TapsellShowOptions.ROTATION_LOCKED_LANDSCAPE` |
-| بر اساس وضعیت گوشی | `TapsellShowOptions.ROTATION_UNLOCKED` |
-| عمودی برعکس | `TapsellShowOptions.ROTATION_LOCKED_REVERSED_PORTRAIT` |
-| افقی برعکس | `TapsellShowOptions.ROTATION_LOCKED_REVERSED_LANDSCAPE` |
+| Vertical | `TapsellShowOptions.ROTATION_LOCKED_PORTRAIT` |
+| Horizontal | `TapsellShowOptions.ROTATION_LOCKED_LANDSCAPE` |
+| Based on the state of the phone | `TapsellShowOptions.ROTATION_UNLOCKED` |
+| Reversed vertical | `TapsellShowOptions.ROTATION_LOCKED_REVERSED_PORTRAIT` |
+| Reversed horizontal | `TapsellShowOptions.ROTATION_LOCKED_REVERSED_LANDSCAPE` |
 
 ## Getting The Result of Rewarded Ads
-در تبلیغات جایزه‌ای در صورتی که متفییر `completed` در متد `onRewarded` هنگام نمایش تبلیغ `true` باشد می‌توانید جایزه را به کاربر بدهید.
+If the `completed` variable in the `rewarded` method is `true` in the rewarded ads, you can give the user her/his reward.
