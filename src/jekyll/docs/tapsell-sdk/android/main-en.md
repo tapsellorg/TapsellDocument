@@ -11,3 +11,6 @@ sdkPlatform:
 
 - [Initialize]({{site.baseurl}}/tapsell-sdk/android/initialize)
 - [Rewarded/Interstitial]({{site.baseurl}}/tapsell-sdk/android/rewarded-interstitial)
+- [Native Banner]({{site.baseurl}}/tapsell-sdk/android/native)
+- [Standard Banner]({{site.baseurl}}/tapsell-sdk/android/standard)
+- [VAST]({{site.baseurl}}/tapsell-sdk/android/vast)
