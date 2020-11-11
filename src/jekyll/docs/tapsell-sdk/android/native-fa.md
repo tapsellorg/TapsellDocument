@@ -5,11 +5,11 @@ lang: fa
 permalink: /tapsell-sdk/android/native/index.html
 toc: true
 ---
-### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+### Creating a Zone
+First, create a native zone from the [Tapsell Panel](https://dashboard.tapsell.ir/) and use the `zoneId` when requesting and or showing an ad.
 
-### ساخت AdHolder
-در صفحه‌ای که قصد دارید بنر همسان نمایش بدهید باید یک `ViewGroup` به عنوان فضایی که قصد دارید تبلیغات در آن نمایش داده شود اضافه کنید (adContainer).
+### Creating an AdHolder
+You should add a ViewGroup to the page in which you want to show the native ad as space for displaying it. In other words, you need to create an ad container.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -27,10 +27,9 @@ toc: true
 </FrameLayout>
 ```
 
-نمونه قالب‌های طراحی شده پیش‌فرض برای نمایش تبلیغات همسان در فایل‌های `tapsell_content_banner_ad_template` و `tapsell_app_installation_banner_ad_template` قابل مشاهده هستند.
+Sample preview template designed to display native ads can be found in `tapsell_content_banner_ad_template` and `tapsell_app_installation_banner_ad_template` files.
 
-اگر قصد تغییر قالب پیش فرض را دارید، یک `layout` دلخواه  بسازید و `id` و نوع بخش‌های مختلف را مطابق جدول زیر تغییر دهید:
-
+if you want to change the default template, create a `layout` and change the `id` and the type of different sections, shown in the table below:
 |       view       |              id              | type  |
 |:------------:|:----------------------------:|:-:|
 |     logo     |     `tapsell_nativead_logo`    | `ImageView`  |
@@ -42,12 +41,12 @@ toc: true
 |    clickable view    |     `tapsell_nativead_cta_view`     | `View`  |
 
 
-* در صورتی که در طراحی دکمه‌ای برای کلیک کردن وجود ندارد می‌توانید از **clickable view** استفاده کنید.
-* نوع ویوها میتواند از نوع‌های گفته شده ارث بری کرده باشند.
+* If there is no button for clicking you can use **clickable view**.
+* View types could be inheriting from the aforementioned types.
 
 
 
-مطابق قطعه کد زیر `adContainer` و شناسه layout تبلیغ را به تپسل بدهید تا یک `TapsellNativeBannerViewManager` بسازید.
+Give the ad container and the id of the layout to Tapsell to create a `TapsellNativeBannerViewManager` such as the following code:
 
 ```java
 import ir.tapsell.sdk.nativeads.TapsellNativeBannerManager;
@@ -63,8 +62,8 @@ TapsellNativeBannerViewManager nativeBannerViewManager = new TapsellNativeBanner
     .inflateTemplate(CONTEXT);
 ```
 
-### درخواست تبلیغ
-با کمک متد `getAd` و به روش زیر درخواست تبلیغ بدهید.
+### Requesting Ads
+use the `getAd` method to request an ad. For example:
 
 ```java
 import ir.tapsell.sdk.AdRequestCallback;
@@ -86,8 +85,8 @@ private void requestAd() {
 }
 ```
 
-### نمایش تبلیغ
-بعد از اجرای متد `onResponse` تبلیغ آماده نمایش است و می‌توانید مطابق روش زیر نمایش دهید.
+### Showing Ads
+After the onResponse method is called, the requested ad is ready to be displayed. You can show the add using the following lines of code:
 
 ```java
 import ir.tapsell.sdk.nativeads.TapsellNativeBannerManager;
