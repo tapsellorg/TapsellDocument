@@ -1,8 +1,8 @@
 ---
 layout: classic-docs
-title: SDK Android
+title: Standard Banner
 lang: en
-permalink: /sdk/android/index.html
+permalink: /tapsell-sdk/android/standard/index.html
 toc: true # table of contents
 ---
 
