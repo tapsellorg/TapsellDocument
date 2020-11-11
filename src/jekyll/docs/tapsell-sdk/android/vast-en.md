@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: پیاده سازی تبلیغات VAST
+title: Implementing VAST Ads
 lang: en
 permalink: /tapsell-sdk/android/vast/index.html
 toc: true
