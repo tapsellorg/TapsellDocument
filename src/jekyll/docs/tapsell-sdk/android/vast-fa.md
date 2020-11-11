@@ -9,8 +9,8 @@ toc: true
 ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) از نوع VAST (پیش نمایشی/preroll) بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 ### درخواست و نمایش تبلیغ
-برای نمایش تبلیغات VAST لازمه از کتابخونه IMA گوگل استفاده کنید.  
-مستندات کتابخونه IMA را می‌تونید از [این لینک](https://developers.google.com/interactive-media-ads/docs/sdks/android) ببنید.  
+برای نمایش تبلیغات VAST لازم است از کتابخانه IMA گوگل استفاده کنید.  
+مستندات کتابخانه IMA را می‌توانید از [این لینک](https://developers.google.com/interactive-media-ads/docs/sdks/android) ببینید.  
 
 در IMA برای نمایش تبلیغ به `ad tag url` نیاز دارید. برای این منظور می‌توانید از روش زیر استفاده کنید.
 

@@ -1,20 +1,20 @@
 ---
 layout: classic-docs
 title: پیاده سازی تبلیغات VAST
-lang: fa
+lang: en
 permalink: /tapsell-sdk/android/vast/index.html
 toc: true
 ---
-### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) از نوع VAST (پیش نمایشی/preroll) بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+### Creating a Zone
+First, create a zone from the [Tapsell panel](https://dashboard.tapsell.ir/) of type VAST (preroll) and use the `zoneId` when requesting or showing an ad.
 
-### درخواست و نمایش تبلیغ
-برای نمایش تبلیغات VAST لازمه از کتابخونه IMA گوگل استفاده کنید.  
-مستندات کتابخونه IMA را می‌تونید از [این لینک](https://developers.google.com/interactive-media-ads/docs/sdks/android) ببنید.  
+### Requesting and Showing Ads
+To show VAST ads you need to use the Google IMA library.
+You can read the IMA documentations at [this link](https://developers.google.com/interactive-media-ads/docs/sdks/android).  
 
-در IMA برای نمایش تبلیغ به `ad tag url` نیاز دارید. برای این منظور می‌توانید از روش زیر استفاده کنید.
+To show ads in IMA you need an `ad tag url`. You can use the following lines to get your `ad tag url`:
 
 ```java
 Tapsell.getVastTag(ZONE_ID)
 ```
-بقیه مراحل پیاده سازی را مطابق مستندات IMA پیش بروید.  
+You can do the rest of the implementation following the IMA documentations.

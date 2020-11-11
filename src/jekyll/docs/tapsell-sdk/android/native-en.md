@@ -30,6 +30,7 @@ You should add a ViewGroup to the page in which you want to show the native ad a
 Sample preview template designed to display native ads can be found in `tapsell_content_banner_ad_template` and `tapsell_app_installation_banner_ad_template` files.
 
 if you want to change the default template, create a `layout` and change the `id` and the type of different sections, shown in the table below:
+
 |       view       |              id              | type  |
 |:------------:|:----------------------------:|:-:|
 |     logo     |     `tapsell_nativead_logo`    | `ImageView`  |
