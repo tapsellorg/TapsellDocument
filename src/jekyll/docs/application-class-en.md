@@ -1,18 +1,18 @@
 ---
 layout: classic-docs
-title: کلاس Application
+title: Application Class
 toc: false
 permalink: /application-class/index.html
-lang: fa
+lang: en
 ---
 
-کلاسی که از `android.app.Application` اکستند شده باشد. این کلاس قبل از همه اکتیویتی‌ها اجرا میشود و جای مناسبی برای مقدار دهی اولیه میباشد. بهتر است تپسل را در این کتابخانه `initialize` کنید.
+A class that is extended from `application`. This class runs before any other class and is a proper place for initialization. You should initialize Tapsell in this class.
 
-## افزودن کلاس Application
-مطابق روش زیر میتوانید به برنامه خود این کلاس را اضافه کنید.
+## Adding the Application Class
+Follow the structions below to add the application class to your application.
 
-### ساخت کلاس Application
-ابتدا یک کلاس با نام دلخواه مثلا `MyApplication` به پروژه خود اضافه کنید و آنرا از `android.app.Application` اکستند کنید. سپس مطابق کد زیر متد `onCreate` را `Override` کنید.
+### Creating the Application Class
+First create a class with any name you like such as `MyApplication`and add it to your project. This class should extend `android.app.Application` class. Then `Override` the `onCreate` method, using the following lines of code:
 
 ```java
 import android.app.Application;
@@ -25,8 +25,8 @@ public class MyApplication extends Application {
 }
 ```
 
-### تنظیمات Manifest
-در فایل `AndroidManifest.xml` باید کلاسی که ساختید را مطابق کد زیر به تگ `application` اضافه کنید.
+### Manifest Settings
+Add the name of the application class you just made to the `application` tag in the `AndroidManifest.xml` file. Such as the code below:
 
 ```xml
 <application
@@ -34,8 +34,8 @@ public class MyApplication extends Application {
     >
 ```
 
-### مقداردهی تپسل
-اکنون کلاس `application` به برنامه اضافه شده، میتوانید تپسل را در متد `onCreate` مقدار دهی کنید.
+### Tapsell Initialization
+Now that the `application` class is added to your project you can initialize Tapsell in the `onCreate` method of your applicaton class.
 
 ```java
 import ir.tapsell.sdk.Tapsell;
