@@ -25,9 +25,9 @@
             </a>
           </li>
           <li class="nav-item">
-            {% assign lang_url = '/en' %}
-            {% if page.lang == 'en' %}{% assign lang_url = '/' %}{% endif %}
-            <a href="{{ lang_url }}">
+            {% assign lang_url = '' %}
+            {% if page.lang == 'fa' %}{% assign lang_url = 'en' %}{% endif %}
+            <a href="{{ site.global_vars.docs_url | append: lang_url }}">
               <span>{{ site.t[page.lang].nav.switch_lang }}</span>
             </a>
           </li>
