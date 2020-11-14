@@ -1,7 +1,8 @@
 tapsellAndroid:
   sdkVersion: 4.5.0
   sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
-  releaseNotesFile: releases/tapsell-android.md
+  releaseNotesFileFa: releases/tapsell-android-fa.md
+  releaseNotesFileEn: releases/tapsell-android-en.md
 
 
 tapsellUnity:
