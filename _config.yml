@@ -69,7 +69,7 @@ t:
       dashboard: Dashboard
       get_demo: Get a Demo
       blog: Blog
-             switch_lang: فارسی
+      switch_lang: فارسی
     footer:
       terms: Terms of Service
       contact: Contact Us
