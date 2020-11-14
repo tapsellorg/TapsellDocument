@@ -95,10 +95,10 @@
 {% assign lang = page.lang %}
 {% capture releaseNotes %}
 {% if lang == 'en' and platformInfo.releaseNotesFileEn %}
-  {% include {{platformInfo.releaseNotesFileEn}} %}
+{% include {{platformInfo.releaseNotesFileEn}} %}
 {% endif %}
 {% if lang == 'fa' and platformInfo.releaseNotesFileFa %}
-  {% include {{platformInfo.releaseNotesFileFa}} %}
+{% include {{platformInfo.releaseNotesFileFa}} %}
 {% endif %}
 {% endcapture %}
 
