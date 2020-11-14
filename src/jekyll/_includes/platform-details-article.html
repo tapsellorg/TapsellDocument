@@ -92,9 +92,18 @@
 
 <hr class="platform-details-sep">
 
-{% if platformInfo.releaseNotesFile %}
+{% assign lang = page.lang %}
+{% capture releaseNotes %}
+  {% if lang == 'en' and platformInfo.releaseNotesFileEn %}
+    {% include {{platformInfo.releaseNotesFileEn}} %}
+  {% endif %}
+  {% if lang == 'fa' and platformInfo.releaseNotesFileFa %}
+    {% include {{platformInfo.releaseNotesFileFa}} %}
+  {% endif %}
+{% endcapture %}
+
+{% if releaseNotes %}
   <div class="release-notes">
-    {% capture releaseNotes %}{% include {{platformInfo.releaseNotesFile}} %}{% endcapture %}
     {{ releaseNotes | markdownify }}
   </div>
 {% endif %}
