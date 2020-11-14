@@ -24,6 +24,13 @@
               <span>{{ site.t[page.lang].nav.blog }}</span>
             </a>
           </li>
+          <li class="nav-item">
+            {% assign lang_url = '/en' %}
+            {% if page.lang == 'en' %}{% assign lang_url = '/' %}{% endif %}
+            <a href="{{ lang_url }}">
+              <span>{{ site.t[page.lang].nav.switch_lang }}</span>
+            </a>
+          </li>
         </ul>
       </nav>
 
