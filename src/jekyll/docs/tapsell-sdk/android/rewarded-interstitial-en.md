@@ -34,7 +34,7 @@ The second argument is the `ZONE_ID` which you can get from your panel.
 The third argument `OPTIONS` is of type `TapsellAdRequestOptions`. You can configure your ad request with this argument.
 The fourth argument is `TapsellAdRequestListener`.
   
-The details of `TapsellAdRequestListener` methods is shown in the table below:
+The details of `TapsellAdRequestListener` methods are shown in the table below:
 
 | Functionality | Method |
 | - | - |

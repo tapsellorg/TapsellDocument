@@ -6,10 +6,10 @@ permalink: /tapsell-sdk/android/initialize/index.html
 toc: true # table of contents
 ---
 
-In order to use Tapsell you first need to follow the steps below to add Tapsell to your project.
+In order to use Tapsell, you first need to follow the steps below to add Tapsell to your project.
 
 ## Gradle Config
-You can import the Tapsell SDK with a Gradle dependency that points to Tapsell's Maven repository. To use this repository, you need to reference it in the project-level `build.gradle` file, In `allprojects -> repositories` section.
+You can import the Tapsell SDK with a Gradle dependency that points to Tapsell's Maven repository. To use this repository, you need to reference it in the project-level `build.gradle` file, in the `allprojects -> repositories` section.
 
 ```gradle
 maven {
@@ -41,12 +41,12 @@ You can get your `tapsell-key` from [Tapsell Dashboard](http://dashboard.tapsell
 
 
 ## Proguard Configuration
-Get the `proguard.properties` file from this [this link](https://github.com/tapsellorg/TapsellSDK-AndroidSample/blob/master/app/proguard-rules.pro) link and add it to the proguard properties of your app module.
+Get the `proguard.properties` file from [this link](https://github.com/tapsellorg/TapsellSDK-AndroidSample/blob/master/app/proguard-rules.pro) and add it to the proguard properties of your app module.
 
 ## Network Security Configuration
 In case your application uses the HTTP protocol, in the `res/xml` path of your project create a file named `network_security_config.xml`.
 
-- If all the connections made by your application use the HTTP protocol add the following lines to `network_security_config.xml`:
+- If all the connections made by your application use the HTTP protocol, add the following lines to `network_security_config.xml`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
