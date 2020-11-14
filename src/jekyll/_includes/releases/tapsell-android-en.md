@@ -1,4 +1,4 @@
-## تغییرات نسخه‌ها:
+## Release Notes:
 
 ### v4.5.0 - 2020/2/17
 * Changes in VAST (preroll) API
