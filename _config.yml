@@ -69,6 +69,7 @@ t:
       dashboard: Dashboard
       get_demo: Get a Demo
       blog: Blog
+             switch_lang: فارسی
     footer:
       terms: Terms of Service
       contact: Contact Us
@@ -79,6 +80,7 @@ t:
       dashboard: داشبورد
       get_demo: دریافت دمو
       blog: کالج تپسل
+   switch_lang: English
     footer:
       terms: قوانین و ضوابط
       contact: تماس با ما
