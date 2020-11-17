@@ -1,5 +1,9 @@
 ## Release Notes:
 
+### v4.6.0 - 2020/11/17
+* Deprecated initialization methods removed
+* Fixed reported bugs
+
 ### v4.5.0 - 2020/2/17
 * Changes in VAST (preroll) API
 * Changing the gson version and solving the build problem

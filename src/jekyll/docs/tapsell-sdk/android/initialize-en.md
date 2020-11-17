@@ -19,7 +19,7 @@ maven {
 Then add the following lines to the dependencies section of your app-level `build.gradle` file.
 
 ```gradle
-implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.5.0'
+implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.6.0'
 ```
 
 Finally, sync Gradle using a proxy.

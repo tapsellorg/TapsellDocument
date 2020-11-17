@@ -21,7 +21,7 @@ maven {
 خط زیر را به فایل `build.gradle` ماژول برنامه در قسمت `dependencies` اضافه کنید.
 
 ```gradle
-    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.5.0'
+    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.6.0'
 ```
 
 با کمک پراکسی gradle را sync کنید تا تپسل به پروژه اضافه شود.
@@ -38,7 +38,7 @@ public void onCreate() {
     Tapsell.initialize(application, TAPSELL_KEY);
 }
 ```
-
+- از نسخه‌ی 4.6.0 به بعد،مقداردهی اولیه‌ی تپسل تنها می‌تواند از طریق کلاس `application` صورت بگیرد
 > برای آشنایی با کلاس اپلیکیشن می‌توانید [این مطلب]({{site.baseurl}}/application-class) را مطالعه کنید.
 
 `TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود متفاوت است و میتوانید از پنل کپی کنید.
