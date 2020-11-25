@@ -45,8 +45,9 @@ adImage.texture = nativeAd.landscapeBannerImage;
 ```
 
 ### باز کردن تبلیغ
-برای باز کردن تبلیغ می‌باید هر کدام از GameObjectهایی که در مرحله‌ی پیش ایجاد کرده‌اید را از طریق متدهای زیر به تپسل‌پلاس معرفی کنید. 
+برای باز کردن تبلیغ می‌باید ابتدا به هر کدام از GameObjectهایی که در مرحله‌ی پیش ایجاد کرده‌اید، یک Component از جنس Box Collider اضافه کنید و سپس Game Object را از طریق متدهای زیر به تپسل‌پلاس معرفی کنید. 
 
+> دقت کنید که برای هر کدام از Game Objectها تیک Raycast Target را زده باشید به جز Button که تیک Raycast Target را از کامپوننت Image آن باید بردارید.
 
 | Method | Register |
 | - | - |
@@ -60,3 +61,12 @@ adImage.texture = nativeAd.landscapeBannerImage;
 nativeAd.RegisterImageGameObject(adImage.gameObject);
 ...
 ```
+
+برای راهنمایی بیش‌تر می‌توانید از پروژه‌های نمونه‌ی ما بر روی Github استفاده نمایید.
+<!-- [پروژه‌ی نمونه مناسب برای Unity 2020](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020/releases/download/v2.3/TapsellPlusUnity2020Gradle-v2.3.unitypackage)
+\ -->
+[پروژه‌ی نمونه مناسب برای Unity 2019](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019)
+<!-- \
+[پروژه‌ی نمونه مناسب برای Unity 2018](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018/releases/download/v2.3/TapsellPlusUnity2018Gradle-v2.3.unitypackage)
+\
+[پروژه‌ی نمونه مناسب برای Unity 2017](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2017/releases/download/v2.3/TapsellPlusUnity2017Gradle-v2.3.unitypackage) -->
