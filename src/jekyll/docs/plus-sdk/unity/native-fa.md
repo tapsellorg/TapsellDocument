@@ -65,7 +65,7 @@ nativeAd.RegisterImageGameObject(adImage.gameObject);
 برای راهنمایی بیش‌تر می‌توانید از پروژه‌های نمونه‌ی ما بر روی Github استفاده نمایید.
 <!-- [پروژه‌ی نمونه مناسب برای Unity 2020](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020/releases/download/v2.3/TapsellPlusUnity2020Gradle-v2.3.unitypackage)
 \ -->
-[پروژه‌ی نمونه مناسب برای Unity 2019](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019)
+<!-- [پروژه‌ی نمونه مناسب برای Unity 2019](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019) -->
 <!-- \
 [پروژه‌ی نمونه مناسب برای Unity 2018](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018/releases/download/v2.3/TapsellPlusUnity2018Gradle-v2.3.unitypackage)
 \
