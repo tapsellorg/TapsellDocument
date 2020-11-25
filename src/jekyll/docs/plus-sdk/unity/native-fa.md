@@ -17,6 +17,7 @@ TapsellPlus.requestNativeBanner (CONTEXT, ZONE_ID,
     (TapsellPlusNativeBannerAd result) => {
       Debug.Log ("on response");
       //showing ad
+      nativeAd = result;
     },
     (TapsellError error) => {
       Debug.Log ("Error " + error.message);
@@ -25,22 +26,37 @@ TapsellPlus.requestNativeBanner (CONTEXT, ZONE_ID,
 ```
 
 ### نمایش تبلیغ
-متغیر برگردانده شده در on response محتویات تبلیغ هست و برای نمایش تبلیغ باید مطابق جدول زیر ازش استفاده کنید.
+متغیر برگردانده شده در onRequestResponse() محتوای تبلیغ بوده و برای نمایش هر کدام، می‌بایستی آن را در یک GameObject استفاده نمایید.
 
 
-| function | usage |
-| - | - |
-| `getTitle()` | عنوان تبلیغ |
-| `getDescription()` | توضیحات |
-| `getIcon()` | آیکن |
-| `getLandscapeBannerImage()` | تصویر افقی |
-| `getPortraitBannerImage()` | تصویر عمودی |
-| `getCallToAction()` | متن دکمه کلیک |
+| Variable | Type | Usage |
+| - | - | - |
+| `title` | string | عنوان تبلیغ |
+| `description`| string | توضیحات |
+| `landscapeBannerImage`| Texture2D | تصویر تبلیغ |
+| `callToActionText` | string | متن دکمه کلیک |
 
+به عنوان مثال اگر یک GameObject از نوع RawImage به نام adImage در اختیار دارید، به کمک تکه کد زیر می‌توانید تصویر تبلیغ را در آن نمایش دهید:
+```c#
+...
+// Get nativeAd in onRequestRespons
+adImage.texture = nativeAd.landscapeBannerImage;
+...
+```
 
 ### باز کردن تبلیغ
-برای باز کردن تبلیغ، هنگامی که کاربر روی آن کلیک می‌کند، از تابع زیر استفاده کنید.
+برای باز کردن تبلیغ می‌باید هر کدام از GameObjectهایی که در مرحله‌ی پیش ایجاد کرده‌اید را از طریق متدهای زیر به تپسل‌پلاس معرفی کنید. 
+
+
+| Method | Register |
+| - | - |
+| `RegisterHeadlineTextGameObject` | عنوان تبلیغ |
+| `RegisterBodyTextGameObject` | توضیحات |
+| `RegisterImageGameObject` | تصویر تبلیغ |
+| `RegisterCallToActionGameObject` | متن دکمه کلیک |
 
 ```c#
-nativeAd.clicked ();
+...
+nativeAd.RegisterImageGameObject(adImage.gameObject);
+...
 ```
