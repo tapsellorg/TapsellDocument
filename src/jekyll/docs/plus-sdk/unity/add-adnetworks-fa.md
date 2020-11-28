@@ -17,16 +17,16 @@ toc: true
 dependencies {
     .......
     //for adMob
-    implementation 'com.google.android.gms:play-services-ads:17.2.1'
+    implementation 'com.google.android.gms:play-services-ads:19.5.0'
 
     //for unityAds
-    implementation 'com.unity3d.ads:unity-ads:3.0.0'
+    implementation 'com.unity3d.ads:unity-ads:3.5.1'
 
     //for chartboost
     implementation 'com.chartboost:chartboost-sdk:8.1.0'
     
     //for adcolony
-    implementation 'com.adcolony:sdk:3.3.11'
+    implementation 'com.adcolony:sdk:4.3.0'
     
     //for applovin
     implementation 'com.applovin:applovin-sdk:9.7.2'
@@ -50,3 +50,5 @@ allprojects {
     }  
 }
 ```
+
+> دقت کنید که برای استفاده از شبکه تبلیغاتی Unity Ads می‌بایستی Min SDK پروژه را ۱۹ قرار دهید در غیر این صورت از API Level 16 توسط تپسل‌پلاس پشنیبانی می‌شود.
