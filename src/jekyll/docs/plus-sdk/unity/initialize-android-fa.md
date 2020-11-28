@@ -50,7 +50,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     ...
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:1.1.3'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:1.2.1'
     ...
 **DEPS**}
 ```
