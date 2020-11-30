@@ -1,7 +1,7 @@
 ## Release Notes:
 
 ### v4.6.1 - 2020/11/28
-* Fixed a proble in manifest
+* Fixed the problem with the manifest file
 
 ### v4.6.0 - 2020/11/17
 * Deprecated initialization methods removed
