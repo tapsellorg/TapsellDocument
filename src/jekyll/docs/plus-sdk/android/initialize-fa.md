@@ -7,7 +7,7 @@ toc: true
 ---
 
 
-ابتدا کتابخانه TapsellPlus را مطابق روش زیر به پروژه اضافه کنید سپس هر adNetwork که تپسل پلاس پشتیبانی میکند و مایل هستید را مطابق توضیحات به پروژه اضافه کنید. در انتها با روش‌های تست مطمئن شوید که adNetwork مورد نظر به درستی کار میکند.
+ابتدا کتاب‌خانه TapsellPlus را مطابق روش زیر به پروژه اضافه کنید. سپس هر adNetwork که مایل هستید و تپسل پلاس پشتیبانی می‌کند را مطابق توضیحات به پروژه اضافه کنید. در انتها با روش‌های تست مطمئن شوید که adNetwork مورد نظر به درستی کار می‌کند.
 
 ## تنظیمات Gradle
 ریپازیتوری تپسل را به فایل `build.gradle` اصلی پروژه اضافه کنید.
@@ -29,7 +29,7 @@ allprojects {
 ```gradle
 dependencies {
     ....
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:1.1.3'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:1.2.2'
     ....
 }
 ```
