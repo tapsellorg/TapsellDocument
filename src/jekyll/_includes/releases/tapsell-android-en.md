@@ -1,5 +1,8 @@
 ## Release Notes:
 
+### v4.6.2 - 2020/12/07
+* Minor bug fixes
+
 ### v4.6.1 - 2020/11/28
 * Fixed the problem with the manifest file
 
