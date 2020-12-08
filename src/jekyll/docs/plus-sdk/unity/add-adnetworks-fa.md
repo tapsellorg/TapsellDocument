@@ -60,7 +60,7 @@ allprojects {
 }
 ```
 
-## تنظیمات Reslover
+## تنظیمات Resolver
 هر شبکه‌ی تبلیغاتی که مایل هستید را مطابق الگوی زیر در فایل TapsellPlusDependencies.xml قرار دهید.
 
 ```xml
