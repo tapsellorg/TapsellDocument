@@ -24,7 +24,7 @@ tapsellB4A:
 plusAndroid:
   sdkVersion: 1.2.2
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
-  releaseNotesFile: releases/plus-android.md
+  releaseNotesFileFa: releases/tapsell-android-fa.md
 
 
 plusFlutter:
@@ -34,7 +34,7 @@ plusFlutter:
 
 plusUnity:
   sdkVersion: 2.5
-  releaseNotesFile: releases/plus-unity.md 
+  releaseNotesFileFa: releases/plus-unity.md 
 
 plusReactnative:
   sdkVersion: 1.0.3
