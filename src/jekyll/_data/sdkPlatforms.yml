@@ -12,6 +12,9 @@ tapsellUnity:
     - link: https://github.com/tapsellorg/TapsellSDK-UnitySample/releases/download/v4.3.0.1/Tapsell-Unity-4.3.0.1.unitypackage
       name: لینک دانلود Unity Package
 
+tapsellReact:
+  sdkVersion: 4.6.2
+  sample: https://github.com/tapsellorg/TapsellSDK-ReactNativeSample-New
 
 tapsellB4A:
   sdkVersion: 4.0.4
