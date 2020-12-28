@@ -6,11 +6,8 @@ tapsellAndroid:
 
 
 tapsellUnity:
-  sdkVersion: 4.3.8
-  sample: https://github.com/tapsellorg/TapsellSDK-UnitySample
-  downloadLinks:
-    - link: https://github.com/tapsellorg/TapsellSDK-UnitySample/releases/download/v4.3.0.1/Tapsell-Unity-4.3.0.1.unitypackage
-      name: لینک دانلود Unity Package
+  sdkVersion: 4.6.2
+  releaseNotesFileFa: releases/tapsell-unity.md 
 
 tapsellReact:
   sdkVersion: 4.6.2
