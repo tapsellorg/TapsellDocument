@@ -36,7 +36,7 @@ android {
 
 ### استفاده از Gradle
 
-هنگام import یونیتی‌پکیج تپسل پلاس تیک قسمت `playServicesResolver` و `TapsellPlusDependencies.xml` را بردارید.
+unityPackage مربوط به Gradle تپسل پلاس را import کنید.
 
 خط زیر را در بخش `dependencies` فایل `mainTemplate.gradle` در مسیر `Assets/Plugins/Android` اضافه کنید. توجه داشته باشید که ۲ قسمت `dependencies` وجود دارد، این تغییرات باید در قسمت دوم انجام شود.
 
