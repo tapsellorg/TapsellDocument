@@ -101,3 +101,12 @@ Tapsell.Initialize(TAPSELL_KEY);
 `TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که میسازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
 
 اکنون میتوانید با توجه به نیاز خود و توضیحات به هر نوع تبلیغ، تبلیغ مورد نظر را نمایش دهید.
+
+## پروژه‌ی نمونه
+برای راهنمایی بیش‌تر می‌توانید از پروژه‌های نمونه‌ی ما بر روی Github استفاده نمایید.
+
+* [پروژه‌ی نمونه مناسب برای Unity 2020](https://github.com/tapsellorg/TapsellSdk-UnitySample2020)
+
+* [پروژه‌ی نمونه مناسب برای Unity 2019](https://github.com/tapsellorg/TapsellSdk-UnitySample2019)
+
+* [پروژه‌ی نمونه مناسب برای Unity 2018](https://github.com/tapsellorg/TapsellSdk-UnitySample2018)
