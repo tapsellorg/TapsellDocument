@@ -71,7 +71,7 @@ allprojects {
 \
 [مستندات گوگل](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage) 
 
-سپس unityPackage تپسل پلاس را import کنید.
+سپس unityPackage مربوط به EDM تپسل پلاس را import کنید.
 هنگام import کردن unityPackage تپسل پلاس تیک تمامی قسمت‌ها را بزنید.
 در صورتی که تنظیمات Resolver بر روی حالت `auto-resolution` میباشد، لایبراری‌های تپسل پلاس به صورت خودکار اضافه میشود. در غیر اینصورت به صورت دستی Resolve را انجام دهید.
 فعال یا غیر فعال کردن `auto-resolution` از مسیر زیر انجام میشود.
