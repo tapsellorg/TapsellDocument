@@ -8,11 +8,28 @@ toc: true # table of contents
 
 
 ## دریافت SDK تپسل
-ابتدا فایل `unitypackage` مربوط به SDK تپسل را از آدرس زیر دانلود کرده و مطابق روش گفته شده در مراحل بعد در پروژه خود import نمایید.
-[دریافت فایل](https://github.com/tapsellorg/TapsellSDK-UnitySample/releases/download/v4.3.0.1/Tapsell-Unity-4.3.0.1.unitypackage)
+ابتدا روش مورد نظر خود جهت اضافه کردن کتابخانه به پروژه را با مطالعه‌ی توضیحات این صفحه انتخاب نمایید. سپس یکی از فایل‌های `unitypackage` مربوط به SDK تپسل را از آدرس‌های زیر دانلود کرده و مطابق روش گفته شده در مراحل بعد در پروژه خود import نمایید.  
+* [دریافت فایل برای روش Gradle مربوط به توزیع یونیتی ۲۰۲۰](https://github.com/tapsellorg/TapsellSdk-UnitySample2020/releases/download/v4.6.2/TapsellUnity2020Gradle-v4.6.2.unitypackage)
+* [دریافت فایل برای روش Gradle مربوط به توزیع یونیتی ۲۰۱۹](https://github.com/tapsellorg/TapsellSdk-UnitySample2019/releases/download/v4.6.2/TapsellUnity2019Gradle-v4.6.2.unitypackage)
+* [دریافت فایل برای روش Gradle مربوط به توزیع یونیتی ۲۰۱۸](https://github.com/tapsellorg/TapsellSdk-UnitySample2018/releases/download/v4.6.2/TapsellUnity2018Gradle-v4.6.2.unitypackage)
+* [دریافت فایل برای روش Resolver مربوط به توزیع یونیتی ۲۰۲۰](https://github.com/tapsellorg/TapsellSdk-UnitySample2020/releases/download/v4.6.2/TapsellUnity2020EDM-v4.6.2.unitypackage)
+* [دریافت فایل برای روش Resolver مربوط به توزیع یونیتی ۲۰۱۹](https://github.com/tapsellorg/TapsellSdk-UnitySample2019/releases/download/v4.6.2/TapsellUnity2019EDM-v4.6.2.unitypackage)
+* [دریافت فایل برای روش Resolver مربوط به توزیع یونیتی ۲۰۱۸](https://github.com/tapsellorg/TapsellSdk-UnitySample2018/releases/download/v4.6.2/TapsellUnity2018EDM-v4.6.2.unitypackage)
 
 
 ## تنظیمات اولیه Sdk
+از player settings قسمت publishing settings تیک custom gradle template را بزنید.
+خطوط زیر را در بخش android فایل mainTemplate.gradle در صورتی که وجود ندارد اضافه کنید.
+
+```gradle
+android {
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+```
+
 برای اضافه کردن کتابخانه‌های مورد نیاز ۲ روش وجود دارد از هرکدام که مایل هستید استفاده کنید.
 
 
