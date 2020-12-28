@@ -43,7 +43,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     ...
-    implementation 'ir.tapsell.sdk:tapsell-sdk-unity:4.3.8'
+    implementation 'ir.tapsell.sdk:tapsell-sdk-unity:4.6.2'
     ...
 **DEPS**}
 ```
@@ -66,7 +66,11 @@ allprojects {
 ```
 
 ### استفاده از Resolver
-هنگام import کردن unityPackage تپسل تیک تمامی قسمت‌ها را بگذارید.
+ابتدا فایل [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/releases) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:
+\
+[مستندات گوگل](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage) 
+
+هنگام import کردن unityPackage تپسل تیک تمامی قسمت‌ها را بگذارید. سپس unityPackage تپسل را import کنید.
 در صورتی که تنظیمات Resolver بر روی حالت `auto-resolution` میباشد، لایبراری‌های تپسل به صورت خودکار اضافه میشود. در غیر اینصورت به صورت دستی Resolve را انجام دهید.
 فعال یا غیر فعال کردن `auto-resolution` از مسیر زیر انجام میشود.
 
