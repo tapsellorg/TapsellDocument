@@ -70,7 +70,7 @@ allprojects {
 \
 [مستندات گوگل](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage) 
 
-هنگام import کردن unityPackage تپسل تیک تمامی قسمت‌ها را بگذارید. سپس unityPackage تپسل را import کنید.
+unityPackage تپسل را import کنید. هنگام import کردن unityPackage تپسل تیک تمامی قسمت‌ها را بگذارید. 
 در صورتی که تنظیمات Resolver بر روی حالت `auto-resolution` میباشد، لایبراری‌های تپسل به صورت خودکار اضافه میشود. در غیر اینصورت به صورت دستی Resolve را انجام دهید.
 فعال یا غیر فعال کردن `auto-resolution` از مسیر زیر انجام میشود.
 
