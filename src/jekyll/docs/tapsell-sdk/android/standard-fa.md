@@ -17,8 +17,7 @@ toc: true # table of contents
     android:id="@+id/banner"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:tapsell_banner_type="BANNER_SIZE"
-    app:tapsell_zone_id="ZONE_ID" />
+    app:tapsell_banner_type="BANNER_SIZE" />
 ```
 
 مقدار `ZONE_ID` شناسه تبلیغ‌گاه هست که از پنل به آن دسترسی دارید.  
