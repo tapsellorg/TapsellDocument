@@ -90,3 +90,14 @@ banner.hideBannerView();
 ```java
 banner.showBannerView();
 ```
+
+## از بین بردن بنر
+با روش زیر، هنگام خروج از Activity بنر را از بین ببرید تا در پس زمینه تبلیغ بارگذاری نکند.
+
+```java
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        tapsellBannerView.destroy();
+    }
+```
