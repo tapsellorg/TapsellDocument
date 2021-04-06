@@ -100,7 +100,7 @@ fa:
         link: /tapsell-sdk/android/main
         children:
           - name: راه اندازی
-            link: /tapsell-sdk/android/initialize
+            link: /tapsell-sdk/android/initialize-fa
 
           - name: جایزه‌ای/آنی
             link: /tapsell-sdk/android/rewarded-interstitial
