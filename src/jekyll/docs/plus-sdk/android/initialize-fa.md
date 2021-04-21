@@ -16,10 +16,11 @@ toc: true
 allprojects {  
     repositories {
         ....
-        maven {  
-            url 'https://dl.bintray.com/tapsellorg/maven'  
-        }
-        ....
+        mavenCentral()
+
+        // برای قبل از نسخه‌ی ۱.۲.۳
+        maven { url 'https://dl.bintray.com/tapsellorg/maven' }
+
     }  
 }
 ```
@@ -29,7 +30,7 @@ allprojects {
 ```gradle
 dependencies {
     ....
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:1.2.3-rc4'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:1.2.5'
     ....
 }
 ```

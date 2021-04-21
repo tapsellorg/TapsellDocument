@@ -13,13 +13,16 @@ You can import the Tapsell SDK with a Gradle dependency that points to Tapsell's
 
 ```gradle
 maven {
-    url 'https://dl.bintray.com/tapsellorg/maven'
+    mavenCentral()
+
+    // Before v4.5.4
+    maven { url 'https://dl.bintray.com/tapsellorg/maven' }
 }
 ```
 Then add the following lines to the dependencies section of your app-level `build.gradle` file.
 
 ```gradle
-implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.6.2'
+implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.6.4'
 ```
 
 Finally, sync Gradle using a proxy.
