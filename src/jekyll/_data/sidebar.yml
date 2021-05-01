@@ -93,6 +93,24 @@ fa:
           - name: تست
             link: /plus-sdk/flutter/adnetworks-test
 
+      - name: React Native
+        link: /plus-sdk/reactnative/main
+        children:
+          - name: راه اندازی
+            link: /plus-sdk/reactnative/initialize-android
+
+          - name: آنی/جایزه‌ای
+            link: /plus-sdk/reactnative/rewarded
+
+          - name: همسان
+            link: /plus-sdk/reactnative/native
+
+          - name: شبکه‌های تبلیغاتی
+            link: /plus-sdk/reactnative/add-adnetworks
+          
+          - name: تست
+            link: /plus-sdk/reactnative/adnetworks-test
+
   - name: تپسل
     icon: m-sdk
     children:
