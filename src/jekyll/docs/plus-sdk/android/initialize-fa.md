@@ -73,13 +73,14 @@ public class MainActivity extends AppCompatActivity {
 تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
 
 ## دسترسی‌ها
-کتابخانه‌ی تپسل پلاس به جز اینترنت و WAKE_LOCK دسترسی دیگری از کاربر نمی‌گیرد. امّا به منظور بهبود عملکرد کتابخانه برای نمایش تبلیغات متناسب با هر کاربر می‌توانید دسترسی زیر را به اپلیکیشن خود اضافه نمایید. همچنین می‌بایستی [دسترسی در زمان اجرا](https://developer.android.com/training/permissions/requesting) برای این مورد را نیز از کاربر بگیرید.
+کتابخانه‌ی تپسل‌پلاس به جز اینترنت و WAKE_LOCK دسترسی دیگری از کاربر نمی‌گیرد. امّا به منظور بهبود عملکرد کتابخانه برای نمایش تبلیغات متناسب با هر کاربر می‌توانید دسترسی زیر را به اپلیکیشن خود اضافه نمایید. همچنین می‌بایستی [دسترسی در زمان اجرا](https://developer.android.com/training/permissions/requesting) برای این مورد را نیز از کاربر بگیرید.
 ```xml
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
-این دسترسی صرفا برای دریافت Network Type کاربر بوده و استفاده‌ی دیگری از آن نمی‌شود. در صورتی که با اضافه کردن این دسترسی قصد انتشار اپلیکیشن خود در پلی استور را دارید می‌بایستی Privacy Policy خود را تغییر دهید. (می‌توانید از [این لینک](https://stackoverflow.com/questions/41234205/warnings-your-apk-is-using-permissions-that-require-a-privacy-policy-android-p) کمک بگیرید )
-در صورتی که قصد گرفتن این دسترسی را ندارید می‌توانید با افزودن تکه کد زیر به فایل AndroidManifest.xml آن را
-حذف نمایید.
+این دسترسی صرفا برای دریافت Network Type کاربر بوده و استفاده‌ی دیگری از آن نمی‌شود. در صورتی که با اضافه کردن این دسترسی قصد انتشار اپلیکیشن خود در پلی استور را دارید می‌بایستی Privacy Policy خود را تغییر دهید. (می‌توانید از [این لینک](https://stackoverflow.com/questions/41234205/warnings-your-apk-is-using-permissions-that-require-a-privacy-policy-android-p) کمک بگیرید).
+
+در صورتی که از نسخه‌های قبل از ۱.۲.۶ استفاده می‌کنید و قصد گرفتن این دسترسی را ندارید می‌توانید با افزودن تکه کد زیر به فایل AndroidManifest.xml آن را
+حذف نمایید (در نسخه‌های ۱.۲.۶ به بعد این دسترسی به طور پیش‌فرض وجود ندارد و نیازی به حذف کردن آن نیست).
 ```xml
 <uses-permission android:name="android.permission.READ_PHONE_STATE"
 	tools:node="remove" />
