@@ -1,6 +1,6 @@
 ## تغییرات نسخه‌ها:
 
-### V4.6.5 - 2021/05/04
+### v4.6.5 - 2021/05/04
 * [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
 * حذف دسترسی PHONE_STATE
 
