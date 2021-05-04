@@ -2,7 +2,7 @@
 
 ### v4.6.5 - 2021/05/04
 * [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
-* حذف دسترسی PHONE_STATE
+* [حذف دسترسی PHONE_STATE](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3%DB%8C%D9%87%D8%A7)
 
 ### v4.6.3-rc5 - 2021/1/02
 * مطابقت با اندروید 11
