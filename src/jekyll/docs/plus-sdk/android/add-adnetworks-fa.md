@@ -32,7 +32,7 @@ dependencies {
     }
     
     //for adcolony
-    implementation 'com.adcolony:sdk:4.3.0'
+    implementation 'com.adcolony:sdk:4.5.0'
     implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
         exclude group: 'com.android.support'
     }
@@ -49,12 +49,16 @@ dependencies {
 allprojects {  
     repositories {
         ....
-        maven {  
-            url  "https://adcolony.bintray.com/AdColony"
-        }
-        maven {
-            url "https://chartboostmobile.bintray.com/Chartboost"
-        }
+
+        mavenCentral()
+
+        // for v1.2.3-rc4 and before
+        //maven {  
+        //    url  "https://adcolony.bintray.com/AdColony"
+        //}
+        //maven {
+        //    url "https://chartboostmobile.bintray.com/Chartboost"
+        //}
         ....
     }  
 }
