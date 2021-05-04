@@ -1,5 +1,10 @@
 ## تغییرات نسخه‌ها:
 
+### v1.2.6 - 2021/05/04
+* [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.tapsell.ir/plus-sdk/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
+* تغییر نسخه‌ی AdColony به ۴.۵.۰
+* [نغییر در محل انتشار شبکه‌های تبلیغاتی AdColony و Chartboost به mavenCentral](https://docs.tapsell.ir/plus-sdk/android/add-adnetworks/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
+
 ### v1.2.3-rc4 - 2021/1/02
 * مطابقت با اندروید 11
 * استفاده از نسخه rc5-4.6.3 تپسل
