@@ -13,15 +13,19 @@ toc: true # table of contents
 خطوط زیر را به فایل `build.gradle` کل پروژه در قسمت `allprojects -> repositories` اضافه کنید.
 
 ```gradle
-maven {
-    url 'https://dl.bintray.com/tapsellorg/maven'
-}
+
+mavenCentral()
+
+// for v4.6.3-rc5 and before
+// maven {
+//    url 'https://dl.bintray.com/tapsellorg/maven'
+//}
 ```
 
 خط زیر را به فایل `build.gradle` ماژول برنامه در قسمت `dependencies` اضافه کنید.
 
 ```gradle
-    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.6.3-rc5'
+    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.6.5'
 ```
 
 با کمک پراکسی gradle را sync کنید تا تپسل به پروژه اضافه شود.
