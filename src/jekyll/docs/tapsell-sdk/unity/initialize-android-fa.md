@@ -58,9 +58,12 @@ allprojects {
         google()
         jcenter()
 
-        maven {
-            url 'https://dl.bintray.com/tapsellorg/maven'
-        }
+        mavenCentral()
+
+        // for v4.5.0 and before
+        //maven {  
+        //    url 'https://dl.bintray.com/tapsellorg/maven'  
+        //}
     }
 }
 ```
