@@ -44,7 +44,7 @@ unityPackage مربوط به Gradle تپسل پلاس را import کنید.
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     ...
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:1.2.1'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:1.2.6'
     ...
 **DEPS**}
 ```
@@ -59,9 +59,12 @@ allprojects {
         google()
         jcenter()
 
-        maven {
-            url 'https://dl.bintray.com/tapsellorg/maven'
-        }
+        mavenCentral()
+
+        // for v1.2.3-rc4 and before
+        //maven {  
+        //    url 'https://dl.bintray.com/tapsellorg/maven'  
+        //}
     }
 }
 ```
