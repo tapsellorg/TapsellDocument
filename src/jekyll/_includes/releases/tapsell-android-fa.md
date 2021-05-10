@@ -1,5 +1,16 @@
 ## تغییرات نسخه‌ها:
 
+### v4.7.0 - 2021/05/10
+* بهبود پخش تبلیغات Playable
+* ایجاد امکان باز شدن اتوماتیک مودال کافه بازار در تبلیغات ویدئویی و بنر آنی
+* حل برخی از مشکلات گزارش شده
+* سایر بهبودهای جزئی
+* افزایش minSdkVersion از 14 به 16
+* به روزرسانی dependencyهای استفاده شده:
+    * نسخه Retrofit از 2.5.0 به 2.6.4
+    * نسخه Glide از 4.11.0 به 4.12.0
+    * نسخه Gson از 2.6.2 به 2.6.4
+
 ### v4.6.5 - 2021/05/04
 * [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
 * [حذف دسترسی PHONE_STATE](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3%DB%8C%D9%87%D8%A7)
