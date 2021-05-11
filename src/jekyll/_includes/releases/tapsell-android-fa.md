@@ -9,7 +9,7 @@
 * به روزرسانی dependencyهای استفاده شده:
     * نسخه Retrofit از 2.5.0 به 2.6.4
     * نسخه Glide از 4.11.0 به 4.12.0
-    * نسخه Gson از 2.6.2 به 2.6.4
+    * نسخه retrofit2:converter-gson از 2.6.2 به 2.6.4
 
 ### v4.6.5 - 2021/05/04
 * [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
