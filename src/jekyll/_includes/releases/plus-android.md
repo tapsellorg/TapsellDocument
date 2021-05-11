@@ -1,6 +1,6 @@
 ## تغییرات نسخه‌ها:
 
-### v1.2.6 - 2021/05/10
+### v2.1.0 - 2021/05/10
 * بهبود عملکرد و رفع برخی مشکلات جزئی
 * [حذف دسترسی PHONE_STATE](https://docs.tapsell.ir/plus-sdk/android/initialize/#%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3%DB%8C%D9%87%D8%A7)
 * [پشتیبانی از تپسل نسخه‌ی ۴.۷.۰](https://docs.tapsell.ir/tapsell-sdk/android/main/#v470---20210510)
