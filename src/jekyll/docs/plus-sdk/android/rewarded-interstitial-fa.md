@@ -21,9 +21,11 @@ private void requestAd() {
         new AdRequestCallback() {
             @Override
             public void response(String responseId) {
+                super.response(responseId);
+                
                 //Ad is ready to show
                 //Put the ad's responseId to your responseId variable
-                rewardedResponseId = s;
+                rewardedResponseId = responseId;
             }
 
             @Override
@@ -48,7 +50,7 @@ private void requestAd() {
 ```java
 import ir.tapsell.plus.AdShowListener;
 .......
-TapsellPlus.showRewardedVideoAd(this, rewardedResponseId,
+TapsellPlus.showRewardedVideoAd(CONTEXT, rewardedResponseId,
                 new AdShowListener() {
                     @Override
                     public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
