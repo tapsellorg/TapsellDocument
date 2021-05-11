@@ -7,7 +7,7 @@ toc: true
 ---
 
 
-ابتدا کتاب‌خانه TapsellPlus را مطابق روش زیر به پروژه اضافه کنید. سپس هر adNetwork که مایل هستید و تپسل پلاس پشتیبانی می‌کند را مطابق توضیحات به پروژه اضافه کنید. در انتها با روش‌های تست مطمئن شوید که adNetwork مورد نظر به درستی کار می‌کند.
+ابتدا کتابخانه‌ی TapsellPlus را مطابق روش زیر به پروژه‌ی خود اضافه کنید. سپس هر شبکه‌ی تبلیغاتی که مایل هستید و تپسل پلاس پشتیبانی می‌کند را مطابق توضیحات بخش شبکه‌های تبلیغاتی به پروژه‌ی خود اضافه نمایید. در انتها با اطلاعات موجود در بخش تست، مطمئن شوید که شبکه‌ی مورد نظر به درستی کار می‌کند.
 
 ## تنظیمات Gradle
 ریپازیتوری تپسل را به فایل `build.gradle` اصلی پروژه اضافه کنید.
@@ -32,7 +32,7 @@ allprojects {
 ```gradle
 dependencies {
     ....
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:1.2.6'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:2.1.0'
     ....
 }
 ```
@@ -61,7 +61,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ...
-        TapsellPlus.initialize(this, TAPSELL_KEY);
+        TapsellPlus.initialize(this, BuildConfig.TAPSELL_KEY,
+				new TapsellPlusInitListener() {
+            @Override
+            public void onInitializeSuccess(AdNetworks adNetworks) {
+                Log.d("onInitializeSuccess", adNetworks.name());
+            }
+
+            @Override
+            public void onInitializeFailed(AdNetworks adNetworks,
+						AdNetworkError adNetworkError) {
+                Log.e("onInitializeFailed", "ad network: " + adNetworks.name() + ", error: " +	adNetworkError.getErrorMessage());
+            }
+        });
         ...
     }
 }
@@ -72,12 +84,22 @@ public class MainActivity extends AppCompatActivity {
 ## تنظیمات proguard
 تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
 
+## تنظیمات مربوط به GDPR
+
+از آن‌جا که کتابخانه‌ی تپسل پلاس قوانین GDPR را در خصوص نمایش تبلیغات شخصی‌سازی شده رعایت می‌کند، به طور پیش فرض اگر کاربر با IP یکی از کشورهای مشمول این قانون از اپلیکیشن شما استفاده کند، دیالوگی در این خصوص به کاربر نمایش می‌دهد.
+اگر تمایل دارید تا به جای تصمیم کاربر، خودتان دسترسی لازم را تعیین کنید می‌توانید از تکه کد زیر استفاده نمایید. توجه داشته باشید که این تکه کد می‌بایستی پس از Initialize شدن تپسل پلاس و پیش از درخواست تبلیغ صدا زده شود تا نتیجه‌ی آن در درخواست شما اعمال شده باشد. مقدار true‌ به این معنی است که شما حق استفاده از اطلاعات جهت نمایش تبلیغ شخصی‌سازی شده را به شبکه‌های تبلیغاتی داده‌اید.
+
+```java
+TapsellPlus.setGDPRConsent(this, true);
+```
+
 ## دسترسی‌ها
 کتابخانه‌ی تپسل‌پلاس به جز اینترنت و WAKE_LOCK دسترسی دیگری از کاربر نمی‌گیرد. امّا به منظور بهبود عملکرد کتابخانه برای نمایش تبلیغات متناسب با هر کاربر می‌توانید دسترسی زیر را به اپلیکیشن خود اضافه نمایید. همچنین می‌بایستی [دسترسی در زمان اجرا](https://developer.android.com/training/permissions/requesting) برای این مورد را نیز از کاربر بگیرید.
 ```xml
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
-این دسترسی صرفا برای دریافت Network Type کاربر بوده و استفاده‌ی دیگری از آن نمی‌شود. در صورتی که با اضافه کردن این دسترسی قصد انتشار اپلیکیشن خود در پلی استور را دارید می‌بایستی Privacy Policy خود را تغییر دهید. (می‌توانید از [این لینک](https://stackoverflow.com/questions/41234205/warnings-your-apk-is-using-permissions-that-require-a-privacy-policy-android-p) کمک بگیرید).
+این دسترسی صرفا برای دریافت Network Type کاربر بوده و استفاده‌ی دیگری از آن نمی‌شود.
+ در صورتی که با اضافه کردن این دسترسی قصد انتشار اپلیکیشن خود در پلی استور را دارید می‌بایستی Privacy Policy خود را تغییر دهید. (می‌توانید از [این لینک](https://stackoverflow.com/questions/41234205/warnings-your-apk-is-using-permissions-that-require-a-privacy-policy-android-p) کمک بگیرید).
 
 در صورتی که از نسخه‌های قبل از ۱.۲.۶ استفاده می‌کنید و قصد گرفتن این دسترسی را ندارید می‌توانید با افزودن تکه کد زیر به فایل AndroidManifest.xml آن را
 حذف نمایید (در نسخه‌های ۱.۲.۶ به بعد این دسترسی به طور پیش‌فرض وجود ندارد و نیازی به حذف کردن آن نیست).
