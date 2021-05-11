@@ -117,3 +117,18 @@ private void showAd() {
                 });
 }
 ```
+
+### حذف تبلیغ
+در پایان چرخه‌ی حیات اکتیویتی، می‌بایستی متد زیر را صدا بزنید:
+```java
+private void destroyAd() {
+    TapsellPlus.destroyNativeBanner(CONTEXT, nativeAdResponseId);
+}
+
+// For example in Activity's onDestory method
+@Override
+protected void onDestroy() {
+    destroyAd();
+    super.onDestroy();
+}
+```
