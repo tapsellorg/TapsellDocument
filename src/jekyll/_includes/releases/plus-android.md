@@ -1,5 +1,19 @@
 ## تغییرات نسخه‌ها:
 
+### v1.2.6 - 2021/05/10
+* بهبود عملکرد و رفع برخی مشکلات جزئی
+* [حذف دسترسی PHONE_STATE](https://docs.tapsell.ir/plus-sdk/android/initialize/#%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3%DB%8C%D9%87%D8%A7)
+* [پشتیبانی از تپسل نسخه‌ی ۴.۷.۰](https://docs.tapsell.ir/tapsell-sdk/android/main/#v470---20210510)
+* پشتیبانی از UnityAds نسخه‌ی ۳.۷.۱
+* پشتیبانی از AdMob نسخه‌ی ۱۹.۸.۰
+* پشتیبانی از Gradle نسخه‌ی ۶.۷.۱
+* پشتیبانی از Android Gradle Plugin نسخه‌ی ۴.۲.۰
+* پشتیبانی از بنر استاندارد و تبلیغ آنی در UnityAds
+* رفع مشکل GDPR در AdMob
+* به‌روزرسانی قوانین Proguard
+* [تغییر کلاس rootView در تبلیغ همسان به com.google.android.gms.ads.nativead.NativeAdView](https://docs.tapsell.ir/plus-sdk/android/native/#%D8%B3%D8%A7%D8%AE%D8%AA-adholder)
+* [تغییر کلاس media view در تبلیغ همسان به ir.tapsell.plus.adNetworks.admob.AdMobMediaView](https://docs.tapsell.ir/plus-sdk/android/native/#%D8%B3%D8%A7%D8%AE%D8%AA-adholder)
+
 ### v1.2.6 - 2021/05/04
 * [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.tapsell.ir/plus-sdk/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
 * تغییر نسخه‌ی AdColony به ۴.۵.۰
