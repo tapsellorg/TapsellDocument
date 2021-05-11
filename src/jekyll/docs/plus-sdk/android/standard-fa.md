@@ -6,10 +6,39 @@ permalink: /plus-sdk/android/standard/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) بنر استاندارد بسازید و `zoneId` را زمان نمایش تبلیغ استفاده کنید.
+ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) بنر استاندارد بسازید و `zoneId` را زمان درخواست تبلیغ استفاده کنید.
+
+### درخواست تبلیغ
+مطابق کد زیر می‌توانید با استفاد از متد TapsellPlus.requestStandardBannerAd  درخواست تبلیغ بدهید.
+
+```java
+TapsellPlus.requestStandardBannerAd(
+                CONTEXT, ZONE_ID_STANDARD_BANNER,
+                TapsellPlusBannerType.BANNER_320x50,
+                new AdRequestCallback() {
+                    @Override
+                    public void response(String responseId) {
+                        super.response(responseId);
+                        
+                        //Ad is ready to show
+                        //Put the ad's responseId to your responseId variable
+                        standardBannerResponseId = responseId;
+                    }
+
+                    @Override
+                    public void error(@NonNull String message) {
+                    }
+                });
+```
+
+>اگر تمایل دارید در کالبک error مجددا درخواست تبلیغ کنید، حتما این کار را به کمک متغیری به
+عنوان شمارنده انجام دهید. زیرا به کمک آن متغیر می‌توانید محدودیت تعداد دفعات را برای
+درخواست لحاظ کنید. به عنوان مثال وقتی این جایگاه تبلیغاتی را از پنل غیرفعال نمودید، اگر بدون
+محدود کردن دفعات، هر بار در کالبک error مجددا درخواست تبلیغ دهید، برنامه‌تان در یک حلقه‌ی
+بی‌نهایت می‌افتد و عملکرد آن مختل می‌شود.
 
 ### نمایش تبلیغ
-در صفحه‌ای که می‌خواهید تبلیغ نمایش داده شود یک `viewGrop` اضافه کنید.
+در صفحه‌ای که می‌خواهید تبلیغ نمایش داده شود یک `ViewGroup` اضافه کنید.
 
 ```xml
 <RelativeLayout
@@ -20,29 +49,46 @@ toc: true
     android:gravity="center" />
 ```
 
-مطابق کد زیر `zoneId` و view‌ای که معرفی کردید را به تپسل‌پلاس بدهید.
-
+بعد از اجرای متد `response` تبلیغ آماده نمایش است و می‌توانید مطابق روش زیر نمایش دهید.
 ```java
-ViewGroup bannerContainer = findViewById(R.id.standardBanner);
+TapsellPlus.showStandardBannerAd(CONTEXT, standardBannerResponseId,
+                findViewById(R.id.standardBanner),
+                new AdShowListener() {
+                    @Override
+                    public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
+                        super.onOpened(tapsellPlusAdModel);
+                    }
 
-TapsellPlus.showBannerAd(
-        context, 
-        bannerContainer,
-        ZONE_ID_STANDARD_BANNER,
-        TapsellPlusBannerType.BANNER_320x50,
-        new AdRequestCallback() {
-            @Override
-            public void response() {
-            }
-
-            @Override
-            public void error(String message) {
-            }
-});
+                    @Override
+                    public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
+                        super.onError(tapsellPlusErrorModel);
+                    }
+                });
 ```
 
->اگر تمایل دارید در کالبک error مجددا درخواست تبلیغ کنید، حتما این کار را به کمک متغیری به
-عنوان شمارنده انجام دهید. زیرا به کمک آن متغیر می‌توانید محدودیت تعداد دفعات را برای
-درخواست لحاظ کنید. به عنوان مثال وقتی این جایگاه تبلیغاتی را از پنل غیرفعال نمودید، اگر بدون
-محدود کردن دفعات، هر بار در کالبک error مجددا درخواست تبلیغ دهید، برنامه‌تان در یک حلقه‌ی
-بی‌نهایت می‌افتد و عملکرد آن مختل می‌شود.
+### حذف تبلیغ
+در پایان چرخه‌ی حیات اکتیویتی یا هر زمان که قصد داشتید تبلیغ بسته شود، می‌بایستی متد زیر را صدا بزنید:
+```java
+private void destroyAd() {
+    TapsellPlus.destroyStandardBanner(this, standardBannerResponseId, findViewById(R.id.standardBanner));
+}
+
+// For example in Activity's onDestory method
+@Override
+protected void onDestroy() {
+    destroyAd();
+    super.onDestroy();
+}
+```
+
+### سایز بنرها
+تمامی سایزهای قابل پشتیبانی در تپسل پلاس در کلاس TapsellPlusBannerType قرار دارند.
+
+|       سایز       |              شبکه‌ی قابل پشتیبانی              |
+|:------------:|:----------------------------:|:-:|
+|     BANNER_320x50     |     تپسل، AdMob، AppLovin، UnityAds    |
+|     BANNER_320x100    |   تپسل، AdMob    |
+|     BANNER_250x250    |  تپسل  |
+|     BANNER_300x250    | تپسل، AdMob، AppLovin |
+|     BANNER_468x60     |    AdMob، UnityAds   |
+|     BANNER_728x90     |   AdMob، AppLovin، UnityAds |

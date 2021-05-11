@@ -83,10 +83,6 @@ private void requestAd() {
 
                     @Override
                     public void error(@NonNull String message) {
-                        if (isDestroyed())
-                            return;
-
-                        Log.e(TAG, "error: " + message);
                     }
                 });
 }
