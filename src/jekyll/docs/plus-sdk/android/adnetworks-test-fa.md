@@ -11,8 +11,6 @@ toc: true
 
 * هنگام تست باید از ip خارج ایران (فیلتر شکن) استفاده کنید.
 
-* برای عملکرد صحیح حالت تست باید یکبار برنامه باز و بسته شود. همچنین در دومین درخواست، تبلیغ  adNetwork مورد نظر نمایش داده میشود.
-
 * تست را در حالت build release هم انجام دهید.
 
 برای تست از این `appId` استفاده کنید.
@@ -40,6 +38,8 @@ TapsellPlus.initialize(
 |    Admob    |     Standard     |`5cfaaa4ae8d17f0001ffb295`|
 |    Admob    |     Native     |`5d123c9968287d00019e1a94`|
 |    Unity Ads    |     Rewarded Video     |`5cfaa8eae8d17f0001ffb291`|
+|    Unity Ads    |     Interstitial     |`608d1c1c2d8e7e0001348111`|
+|    Unity Ads    |     Standard     |`608d20a7fb661b000190bfe4`|
 |    Chartboost    |     Rewarded Video     |`5cfaa8cee8d17f0001ffb290`|
 |    AdColony    |     Rewarded Video     |`5d3362766de9f600013662d5`|
 |    AdColony    |     Interstitial     |`5d336289e985d50001427acf`|
