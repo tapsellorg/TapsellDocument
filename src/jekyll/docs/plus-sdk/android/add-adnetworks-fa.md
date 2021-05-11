@@ -17,14 +17,14 @@ toc: true
 dependencies {
     .......
     //for adMob
-    implementation 'com.google.android.gms:play-services-ads:19.6.0'
+    implementation 'com.google.android.gms:play-services-ads:19.8.0'
 
     //for unityAds
-    implementation 'com.unity3d.ads:unity-ads:3.5.1'
+    implementation 'com.unity3d.ads:unity-ads:3.7.1'
 
     //for chartboost
-    implementation 'com.chartboost:chartboost-sdk:8.1.0'
-    implementation ("com.google.android.gms:play-services-base:17.5.0"){
+    implementation 'com.chartboost:chartboost-sdk:8.2.0'
+    implementation ("com.google.android.gms:play-services-base:17.6.0"){
         exclude group: 'com.android.support'
     }
     implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
@@ -38,7 +38,7 @@ dependencies {
     }
     
     //for applovin
-    implementation 'com.applovin:applovin-sdk:9.7.2'
+    implementation 'com.applovin:applovin-sdk:9.15.3'
     .....
 }
 ```
@@ -51,6 +51,7 @@ allprojects {
         ....
 
         mavenCentral()
+        jcenter()
 
         // for v1.2.3-rc4 and before
         //maven {  
