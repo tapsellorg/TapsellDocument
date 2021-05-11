@@ -36,14 +36,14 @@ toc: true
 | ad indicator |  `tapsell_nativead_sponsored`  | `View`  |
 |  description | `tapsell_nativead_description` | `TextView`  |
 |    banner    |    `tapsell_nativead_banner`   | `ir.tapsell.sdk.nativeads.views.RatioImageView`  |
-|  media view  |`tapsell_nativead_banner_admob` | `ir.tapsell.plus.imp.admob.AdMobMediaView`  |
+|  media view  |`tapsell_nativead_banner_admob` | `ir.tapsell.plus.adNetworks.admob.AdMobMediaView`  |
 |    button    |     `tapsell_nativead_cta`     | `TextView`  |
 |    clickable view    |     `tapsell_nativead_cta_view`     | `View`  |
 
 
 * در صورتی که در طراحی دکمه‌ای برای کلیک کردن وجود ندارد میتوانید از **clickable view** استفاده کنید.
 * نوع ویوها میتواند از نوع‌های گفته شده ارث بری کرده باشند.
-* باید ۲ ویو را برای نمایش عکس تبلیغات اختصاص بدهید. یکی از نوع `ir.tapsell.sdk.nativeads.views.RatioImageView` برای تپسل و دیگری از نوع `ir.tapsell.plus.imp.admob.AdMobMediaView` برای AdMob این دو میتواند دقیقا روی هم قرار بگیرد. تپسل پلاس با توجه به تبلیغ آماده نمایش ویو مورد نظر را نمایش میدهد.
+* باید ۲ ویو را برای نمایش عکس تبلیغات اختصاص بدهید. یکی از نوع `ir.tapsell.sdk.nativeads.views.RatioImageView` برای تپسل و دیگری از نوع `ir.tapsell.plus.adNetworks.admob.AdMobMediaView` برای AdMob این دو میتواند دقیقا روی هم قرار بگیرد. تپسل پلاس با توجه به تبلیغ آماده نمایش ویو مورد نظر را نمایش میدهد.
 * می‌توانید از view‌ای که برای این منظور از قبل آماده شده با id زیر استفاده کنید یا به عنوان راهنمایی در ساخت کمک بگیرید.
 `native_banner`
 
