@@ -13,3 +13,4 @@ sdkPlatform:
 - [جایزه‌ای]({{site.baseurl}}/plus-sdk/reactnative/rewarded)
 - [آنی]({{site.baseurl}}/plus-sdk/reactnative/interstitial)
 - [همسان]({{site.baseurl}}/plus-sdk/reactnative/native)
+- [استاندارد]({{site.baseurl}}/plus-sdk/reactnative/standard)

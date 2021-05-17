@@ -12,7 +12,6 @@ toc: true # table of contents
 
 ```console
 npm install react-native-tapsell --save
-react-native link react-native-tapsell
 ```
 
 
@@ -20,7 +19,7 @@ react-native link react-native-tapsell
 ابتدا ماژول تپسل را به کد خود اضافه کنید:
 
 ```javascript
-import Tapsell from 'react-native-tapsell'
+import { TapsellPlus } from 'react-native-tapsell-plus';
 ```
 
 سپس تابع زیر را در یکی از اسکریپت های برنامه ی خود که در ابتدای برنامه اجرا می شود فراخوانی کنید.

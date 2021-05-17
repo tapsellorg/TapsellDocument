@@ -17,32 +17,36 @@ toc: true # table of contents
 با اجرای کد زیر میتوانید درخواست یک تبلیغ بدهید.
 
 ```javascript
-TapsellPlus.requestInterstitial(zoneId, onAdAvailable, onError);
+TapsellPlus.requestInterstitialAd(ZONE_ID)
+  .then((responseId) => {
+    // Save the responseId
+   })
+  .catch(error => {
+    // Error occurred
+  });
 ```
 
-ورودی اول `zoneId` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
-  
-اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است :
-
-| تابع | توضیحات |
-| - | - |
-| `onAdAvailable` | زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد |
-| `onError(error : string)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
+پارامتر
+**responseId**
+که از promise برمیگردد برای نمایش تبلیغ مورد نیاز است. لذا آنرا ذخیره کنید
 
 
 ## نمایش تبلیغ
 با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
 
 ```javascript
-TapsellPlus.showAd(zoneId, onOpened, onClosed, onError);
+TapsellPlus.showInterstitialAd(responseId, onOpened, onClosed, onRewarded, onError);
 ```
 
-ورودی اول `zoneId` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
+مقدار
+`responseId`
+از درخواست بدست می‌آید.
 
 اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است :
 
 | تابع | توضیحات |
 | - | - |
-| `onOpened` | زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد |
-| `onClosed` | زمانی که پنجره تبلیغ بسته شود. این اکشن به منزله پایان تبلیغ نمی‌باشد |
-| `onError(error : string)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
+| `onOpened(data: object)` | فراخوانی در صورتی که تبلیغ باز شود |
+| `onClosed(data: object)` | فراخوانی در صورت بسته شدن پنجره‌ی تبلیغ |
+| `onRewarded(data: object)` | فراخوانی در صورت اتمام نمایش تبلیغ |
+| `onError(error: object)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |

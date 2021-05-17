@@ -53,15 +53,3 @@ TapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgj
 |    Vungle    |     Rewarded Video     |`5d3eb55a7a9b060001892442`|
 |    Vungle    |     Interstitial     |`5d3eb56d3aef7a0001406f86`|
 
-### تست facebook
-زمانی که از facebook استفاده میکنید متنی مشابه زیر در `logcat` پرینت میشود.
-
-```
-When testing your app with Facebook's ad units you must specify the device hashed ID to ensure the delivery of test ads, add the following code before loading an ad: AdSettings.addTestDevice("YOUR_DEVICE_HASH");
-```
-
-برای دیدن تبلیغات تستی فیسبوک مقدار `hash` دستگاه خود را از طریق متد زیر به کتابخانه تپسل بدهید.
-
-```java
-TapsellPlus.addFacebookTestDevice("YOUR_DEVICE_HASH");
-```
