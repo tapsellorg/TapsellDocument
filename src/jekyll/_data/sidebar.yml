@@ -105,6 +105,9 @@ fa:
           - name: همسان
             link: /plus-sdk/reactnative/native
 
+          - name: استاندارد
+            link: /plus-sdk/reactnative/standard
+
           - name: شبکه‌های تبلیغاتی
             link: /plus-sdk/reactnative/add-adnetworks
           
