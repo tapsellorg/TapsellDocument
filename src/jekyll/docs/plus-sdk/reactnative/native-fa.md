@@ -13,21 +13,37 @@ toc: true
 با روش زیر درخواست تبلیغ بدهید.
 
 ```javascript
-TapsellPlus.requestNative(zoneId, onAdAvailable, onError);
+let zoneId = "theZoneIdYouHave";
+TapsellPlus.requestNativeAd(zoneId).then(responseId => {
+  // Save the responseId -- You need it to show the ad
+})
+.catch(error => {
+  // Do on Error
+});
 ```
+خروجی تابع یک
+Promise
+است که در صورت
+resolve
+شدن یک
+**responseId**
+برمیگرداند.
 
-ورودی `zoneId`، شناسه تبلیغ‌گاه است که باید آن را از داشبورد تپسل دریافت کنید.
-
-اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است:
-
-| تابع | توضیحات |
-| - | - |
-| `onError(zoneId : string, error : string)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
-| `onAdAvailable(adData, onAdClicked)` | زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد |
-| `onNoNetwork(zoneId : string)` | زمانی که دسترسی به شبکه موجود نباشد |
+این شناسه برای نمایش تبلیغ مورد نیاز است.
 
 
 ### نمایش تبلیغ
+
+```js
+TapsellPlus.showNativeAd(responseId, onOpened, onError);
+```
+
+| پارامتر | توضیحات |
+| - | - |
+| `responseId` | شناسه‌ی دریافتی از تابع درخواست |
+| `onOpened(data: object)` | در صورت موفقیت آمیز بودن، دیتای لازم با فرمت جدول بعدی در ورودی این کالبک خواهد بود |
+| `onError(errorMessage: object)` | در صورت رخداد هر گونه خطا |
+
 برای نمایش تبلیغ، می‌بایست از فیلدهای موجود در آبجکت `adData` و استفاده کنید.   
 
 
@@ -46,5 +62,5 @@ TapsellPlus.requestNative(zoneId, onAdAvailable, onError);
 برای باز کردن تبلیغ، هنگامی که کاربر روی آن کلیک می‌کند، از تابع زیر استفاده کنید.
 
 ```javascript
-TapsellPlus.nativeAdClicked(zoneId, adId);
+TapsellPlus.nativeAdClicked(responseId);
 ```

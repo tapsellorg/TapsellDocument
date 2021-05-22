@@ -59,3 +59,17 @@ TapsellPlus.showStandardBannerAd(responseId,
 ```js
 TapsellPlus.destroyStandardBannerAd(responseId);
 ```
+
+### نمایش و عدم نمایش بنر (hide/show)
+
+در صورتی که نیاز باشد که تبلیغ **مخفی** شود از توابع زیر برای کنترل این رفتار استفاده کنید
+
+```js
+// To hide
+TapsellPlus.hideStandardBanner();
+
+// To show
+TapsellPlus.displayStandardBanner();
+```
+
+**نکته**: این نوع مخفی‌کردن تاثیری در درخواست تبلیغ ندارد و صرفا visibility تبلیغ عوض می‌شود.

@@ -2,7 +2,7 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
-### 2.1.1 (20, May, 2021)
+### 2.1.1 (22, May, 2021)
 - طراحی مجدد المان‌های داخلی
 - بازنویسی `TapsellPlus.js` با استفاده از کلاس برای خوانایی بیشتر
 - اضافه‌شدن بنر استاندارد

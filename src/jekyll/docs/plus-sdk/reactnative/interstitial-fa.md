@@ -35,7 +35,7 @@ TapsellPlus.requestInterstitialAd(ZONE_ID)
 با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
 
 ```javascript
-TapsellPlus.showInterstitialAd(responseId, onOpened, onClosed, onRewarded, onError);
+TapsellPlus.showInterstitialAd(responseId, onOpened, onClosed, onError);
 ```
 
 مقدار
@@ -48,5 +48,4 @@ TapsellPlus.showInterstitialAd(responseId, onOpened, onClosed, onRewarded, onErr
 | - | - |
 | `onOpened(data: object)` | فراخوانی در صورتی که تبلیغ باز شود |
 | `onClosed(data: object)` | فراخوانی در صورت بسته شدن پنجره‌ی تبلیغ |
-| `onRewarded(data: object)` | فراخوانی در صورت اتمام نمایش تبلیغ |
 | `onError(error: object)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |

@@ -15,7 +15,7 @@ npm install react-native-tapsell-plus --save
 ```
 
 
-## شروع کار با SDK تپسل پلاس
+## شروع کار با پلاگین
 ابتدا ماژول تپسل پلاس را به کد خود اضافه کنید:
 
 ```javascript
