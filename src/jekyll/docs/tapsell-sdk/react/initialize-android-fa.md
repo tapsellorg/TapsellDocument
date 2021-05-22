@@ -19,7 +19,7 @@ npm install react-native-tapsell --save
 ابتدا ماژول تپسل را به کد خود اضافه کنید:
 
 ```javascript
-import { TapsellPlus } from 'react-native-tapsell-plus';
+import Tapsell from 'react-native-tapsell'
 ```
 
 سپس تابع زیر را در یکی از اسکریپت های برنامه ی خود که در ابتدای برنامه اجرا می شود فراخوانی کنید.
