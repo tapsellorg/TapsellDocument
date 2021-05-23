@@ -12,7 +12,6 @@ toc: true # table of contents
 
 ```console
 npm install react-native-tapsell --save
-react-native link react-native-tapsell
 ```
 
 

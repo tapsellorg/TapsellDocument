@@ -8,19 +8,18 @@ toc: true # table of contents
 
 
 ## دریافت SDK تپسل پلاس
-به محل پروژه react native خود بروید و در commad-line دستورهای زیر را به ترتیب وارد کنید :
+برای افزودن پلاگین تپسل‌پلاس به پروژه از کامند زیر استفاده کنید:
 
 ```console
 npm install react-native-tapsell-plus --save
-react-native link react-native-tapsell-plus
 ```
 
 
-## شروع کار با SDK تپسل پلاس
+## شروع کار با پلاگین
 ابتدا ماژول تپسل پلاس را به کد خود اضافه کنید:
 
 ```javascript
-import RNTapsellPlus from 'react-native-tapsell-plus';
+import { TapsellPlus } from 'react-native-tapsell-plus';
 ```
 
 سپس تابع زیر را در یکی از اسکریپت‌های برنامه‌ی خود که در ابتدای برنامه اجرا می‌شود فراخوانی کنید.
