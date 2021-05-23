@@ -2,44 +2,77 @@
 layout: classic-docs
 title: تست شبکه‌های تبلیغاتی
 lang: fa
-permalink: /plus-sdk/reactnative/adnetworks-test/index.html
+permalink: /plus-sdk/reactnative/add-adnetworks/index.html
 toc: true
 ---
 
-* برای اطمینان از صحت عملکرد adNetwrokهایی که اضافه کردید از `zoneId` مربوط به هرکدام استفاده کنید. هر `zoneId` مربوط به یک adNetwork و یک نوع تبلیغ هست و تبلیغ حالت تست نمایش داده میشود.
+سایر شبکه‌های تبلیغاتی را می‌توانید مطابق این آموزش به پروژه اضافه کنید. همچنین با روش‌های تست گفته شده مطمئن شوید به درستی پیاده‌سازی شده‌اند.
 
-* توجه داشته باشید در حالت تست باید از `appId` تست استفاده کنید.
+برای کسب اطلاعات بیشتر در مورد هر ad network می‌توانید با همکاران ما در تیم رسانه از قسمت پشتیبانی صحبت کنید.
 
-* هنگام تست باید از ip خارج ایران (فیلتر شکن) استفاده کنید.
+## تنظیمات Gradle
+در قسمت `dependencies` فایل build.gradle شبکه‌های تبلغاتی که مایل هستید را مطابق زیر اضافه کنید.
 
-* تست را در حالت build release هم انجام دهید.
+> **نکته**: این فایل در آدرس `android/app/build.gradle` موجود است
 
-برای تست از این `appId` استفاده کنید.
+```gradle
+dependencies {
+    .......
+    //for adMob
+    implementation 'com.google.android.gms:play-services-ads:19.8.0'
 
-### شناسه تپسل
+    //for unityAds
+    implementation 'com.unity3d.ads:unity-ads:3.7.1'
 
-```java
-TapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
+    //for chartboost
+    implementation 'com.chartboost:chartboost-sdk:8.2.0'
+    implementation ("com.google.android.gms:play-services-base:17.6.0"){
+        exclude group: 'com.android.support'
+    }
+    implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
+        exclude group: 'com.android.support'
+    }
+    
+    //for adcolony
+    implementation 'com.adcolony:sdk:4.5.0'
+    implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
+        exclude group: 'com.android.support'
+    }
+    
+    //for applovin
+    implementation 'com.applovin:applovin-sdk:9.15.3'
+    .....
+}
 ```
 
-### تبلیغ‌گاه‌ها
+برای adcolony و chartboost لازم است ریپازیتوری‌های زیر به android/build.gradle پروژه اضافه شوند.
 
-برای هر ادنتورک و هر تبلیغ از `zoneId` های زیر برای درخواست و نمایش تبلیغ استفاده کنید. در حال حاضر فقط adType/adNetworkهای زیر قابل استفاده هستند.
-|        Ad Network      |              Ad Type              |ZoneId
-|:------------:|:----------------------------:|:----------------------------:|
-|     Tapsell     |     Rewarded Video    | `5cfaa802e8d17f0001ffb28e`|
-|     Tapsell    |    Interstitial    |`5cfaa942e8d17f0001ffb292`|
-| Tapsell |  Native  |`5cfaa9deaede570001d5553a`|
-|  Tapsell | Standard |`5cfaaa30e8d17f0001ffb294`|
-|    Admob    |    Rewarded Video   |`5cfaa8aee8d17f0001ffb28f`|
-|    Admob    |     Interstitial     |`5cfaa9b0e8d17f0001ffb293`|
-|    Admob    |     Standard     |`5cfaaa4ae8d17f0001ffb295`|
-|    Unity Ads    |     Rewarded Video     |`5cfaa8eae8d17f0001ffb291`|
-|    Unity Ads    |     Interstitial     |`608d1c1c2d8e7e0001348111`|
-|    Unity Ads    |     Standard     |`608d20a7fb661b000190bfe4`|
-|    Chartboost    |     Rewarded Video     |`5cfaa8cee8d17f0001ffb290`|
-|    AdColony    |     Rewarded Video     |`5d3362766de9f600013662d5`|
-|    AdColony    |     Interstitial     |`5d336289e985d50001427acf`|
-|    AppLovin    |     Rewarded Video     |`5d3eb48c3aef7a0001406f84`|
-|    AppLovin    |     Interstitial     |`5d3eb4fa3aef7a0001406f85`|
-|    AppLovin    |     Standard     |`5d3eb5337a9b060001892441`|
+
+
+```gradle
+allprojects {  
+    repositories {
+        ....
+
+        mavenCentral()
+        jcenter()
+
+        // for v1.2.3-rc4 and before
+        //maven {  
+        //    url  "https://adcolony.bintray.com/AdColony"
+        //}
+        //maven {
+        //    url "https://chartboostmobile.bintray.com/Chartboost"
+        //}
+        ....
+    }  
+}
+```
+
+برای استفاده از شبکه‌ی تبلیغاتی Unity Ads می‌بایست minSDK اپلیکیشن خود را ۱۹ قرار دهید. و یا این که خط زیر را به فایل AndroidManifest.xml پروژه‌تان اضافه نمایید.
+
+این خط به منظور جلوگیری از وقوع خطا برای بیلد شدن پروژه‌ی با minSDK کم‌تر از ۱۹ می‌باشد. از آن‌جا که تپسل پلاس به شکل هوشمند مانع نمایش تبلیغ Unity Ads به اندرویدهای با API Level کم‌تر از ۱۹ می‌شود، مشکلی برای آن دسته از کاربرانتان که نسخه‌ی اندروید قدیمی دارند پیش نمی‌آید. امّا حتما لازم است یک بار به روی چنین دستگاه‌هایی شبکه‌ی تبلیغاتی Unity Ads را با استفاده از تبلیغ‌گاه تستی موجود در [این لینک](https://docs.tapsell.ir/plus-sdk/reactnative/adnetworks-test/) تست نمایید.
+
+```xml
+<uses-sdk tools:overrideLibrary="com.unity3d.ads" />
+```

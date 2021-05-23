@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: بنر استاندارد در یونیتی
+title: بنر استاندارد در ReactNative (Android)
 lang: fa
 permalink: /plus-sdk/reactnative/standard/index.html
 toc: true # table of contents
