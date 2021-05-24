@@ -75,7 +75,8 @@ public void onCreate() {
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-  <base-config cleartextTrafficPermitted="true"/>
+  <base-config cleartextTrafficPermitted="true">
+    ...
   </base-config>
 </network-security-config>
 ```
@@ -85,7 +86,7 @@ public void onCreate() {
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-  <domain-config cleartextTrafficPermitted="true"/>
+  <domain-config cleartextTrafficPermitted="true">
     <domain includeSubdomains="true"><!—your subdomain--></domain>
   </domain-config>
 </network-security-config>
