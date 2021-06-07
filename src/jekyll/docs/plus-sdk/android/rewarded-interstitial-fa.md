@@ -20,12 +20,12 @@ private void requestAd() {
         ZONE_ID_REWARDED_VIDEO,
         new AdRequestCallback() {
             @Override
-            public void response(String responseId) {
+            public void response(TapsellPlusAdModel tapsellPlusAdModel) {
                 super.response(responseId);
                 
                 //Ad is ready to show
                 //Put the ad's responseId to your responseId variable
-                rewardedResponseId = responseId;
+                rewardedResponseId = tapsellPlusAdModel.getResponseId();
             }
 
             @Override
