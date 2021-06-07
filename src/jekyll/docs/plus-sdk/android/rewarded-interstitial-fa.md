@@ -21,7 +21,7 @@ private void requestAd() {
         new AdRequestCallback() {
             @Override
             public void response(TapsellPlusAdModel tapsellPlusAdModel) {
-                super.response(responseId);
+                super.response(tapsellPlusAdModel);
                 
                 //Ad is ready to show
                 //Put the ad's responseId to your responseId variable
