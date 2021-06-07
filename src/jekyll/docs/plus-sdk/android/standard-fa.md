@@ -17,12 +17,12 @@ TapsellPlus.requestStandardBannerAd(
                 TapsellPlusBannerType.BANNER_320x50,
                 new AdRequestCallback() {
                     @Override
-                    public void response(String responseId) {
-                        super.response(responseId);
+                    public void response(TapsellPlusAdModel tapsellPlusAdModel) {
+                        super.response(tapsellPlusAdModel);
                         
                         //Ad is ready to show
                         //Put the ad's responseId to your responseId variable
-                        standardBannerResponseId = responseId;
+                        standardBannerResponseId = tapsellPlusAdModel.getResponseId();
                     }
 
                     @Override
