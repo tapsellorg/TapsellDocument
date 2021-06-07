@@ -2,6 +2,10 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+### 2.1.2 (7 Jun, 2021)
+- بروزرسانی لایبرری اندروید به `2.1.2` ((اطلاعات بیشتر)[https://docs.tapsell.ir/plus-sdk/android/main/#%D8%AA%D8%BA%DB%8C%DB%8C%D8%B1%D8%A7%D8%AA-%D9%86%D8%B3%D8%AE%D9%87%D9%87%D8%A7])
+- پشتیبانی از تپسل نسخه‌ی ۴.۷.۱
+
 ### 2.1.1 (22, May, 2021)
 - طراحی مجدد المان‌های داخلی
 - بازنویسی `TapsellPlus.js` با استفاده از کلاس برای خوانایی بیشتر
