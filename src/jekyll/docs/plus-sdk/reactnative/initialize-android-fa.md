@@ -14,6 +14,8 @@ toc: true # table of contents
 npm install react-native-tapsell-plus --save
 ```
 
+[![npm version](https://img.shields.io/npm/v/react-native-tapsell-plus?color=green&label=react-native-tapsell-plus&logo=react)](https://www.npmjs.com/package/react-native-tapsell-plus)
+
 
 ## شروع کار با پلاگین
 ابتدا ماژول تپسل پلاس را به کد خود اضافه کنید:
