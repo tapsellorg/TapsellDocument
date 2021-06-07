@@ -72,12 +72,12 @@ private void requestAd() {
                 ZONE_ID_NATIVE,
                 new AdRequestCallback() {
                     @Override
-                    public void response(String responseId) {
-                        super.response(responseId);
+                    public void response(TapsellPlusAdModel tapsellPlusAdModel) {
+                        super.response(tapsellPlusAdModel);
 
                         //Ad is ready to show
                         //Put the ad's responseId to your responseId variable
-                        nativeAdResponseId = s;
+                        nativeAdResponseId = tapsellPlusAdModel.getResponseId();
                         showAd();
                     }
 
