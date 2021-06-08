@@ -9,7 +9,7 @@ toc: true
 ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) جایزه‌ای/آنی بسازید و `zoneId` را زمان درخواست تبلیغ استفاده کنید.
 
 ### درخواست تبلیغ
-مطابق کد زیر می‌توانید با استفاد از متد TapsellPlus.requestRewardedVideoAd درخواست تبلیغ بدهید.
+مطابق کد زیر می‌توانید با استفاد از متد `TapsellPlus.requestRewardedVideoAd` درخواست تبلیغ بدهید.
 ```java
 import ir.tapsell.plus.AdRequestCallback;
 import ir.tapsell.plus.TapsellPlus;
@@ -45,7 +45,7 @@ private void requestAd() {
 بی‌نهایت می‌افتد و عملکرد آن مختل می‌شود.
 
 ### نمایش تبلیغ
-بعد از اجرای متد `response` و دریافت پارامتر responseId تبلیغ آماده نمایش است و می‌توانید مطابق روش زیر آن را نمایش دهید.
+بعد از اجرای متد `response` و دریافت پارامتر `responseId` تبلیغ آماده نمایش است و می‌توانید مطابق روش زیر آن را نمایش دهید.
 
 ```java
 import ir.tapsell.plus.AdShowListener;
@@ -73,4 +73,4 @@ TapsellPlus.showRewardedVideoAd(CONTEXT, rewardedResponseId,
                     }
                 });
 ```
-برای تبلیغ آنی از متدTapsellPlus. showInterstitialAd  استفاده کنید. همچنین در تبلیغ آنی نیازی به کالبک onReward ندارید و می‌توانید آن را پاک کنید.
+برای تبلیغ آنی از متد `TapsellPlus.showInterstitialAd`  استفاده کنید. همچنین در تبلیغ آنی نیازی به کالبک `onReward` ندارید و می‌توانید آن را پاک کنید.
