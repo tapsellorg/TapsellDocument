@@ -163,4 +163,4 @@ TapsellPlus.SetGdprConsent(true);
 
 * [پروژه‌ی نمونه مناسب برای Unity 2019.4.11f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019)
 
-* [پروژه‌ی نمونه مناسب برای Unity 2018.4.26f1](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018)
+* [پروژه‌ی نمونه مناسب برای Unity 2018.4.26f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018)
