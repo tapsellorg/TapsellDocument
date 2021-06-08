@@ -36,7 +36,8 @@ TapsellPlus.RequestNativeBannerAd(ZoneID,
 
 ```c#
 public void Show () {
-  TapsellPlus.ShowNativeBannerAd(_responseId, CONTEXT,
+  // this: refers to MonoBehaviour
+  TapsellPlus.ShowNativeBannerAd(_responseId, this,
 
 			tapsellPlusNativeBannerAd => {
 				Debug.Log ("onOpenAd " + tapsellPlusNativeBannerAd.zoneId);
