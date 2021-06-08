@@ -10,24 +10,52 @@ toc: true
 
 
 ### درخواست تبلیغ
-با کمک متد `TapsellPlus.requestNativeBanner` و به روش زیر درخواست تبلیغ بدهید.
+با کمک متد `TapsellPlus.RequestNativeBannerAd` و به روش زیر درخواست تبلیغ بدهید.
 
 ```c#
-TapsellPlus.requestNativeBanner (CONTEXT, ZONE_ID,
-    (TapsellPlusNativeBannerAd result) => {
-      Debug.Log ("on response");
-      //showing ad
-      nativeAd = result;
-    },
-    (TapsellError error) => {
-      Debug.Log ("Error " + error.message);
-    }
-  );
+TapsellPlus.RequestNativeBannerAd(ZoneID,
+
+			tapsellPlusAdModel => {
+				Debug.Log ("On Response " + tapsellPlusAdModel.responseId);
+				_responseId = tapsellPlusAdModel.responseId;
+			},
+			error => {
+				Debug.Log ("Error " + error.message);
+			}
+		);
 ```
 
-### نمایش تبلیغ
-متغیر برگردانده شده در onRequestResponse() محتوای تبلیغ بوده و برای نمایش هر کدام، می‌بایستی آن را در یک GameObject استفاده نمایید.
+>اگر تمایل دارید در کالبک error مجددا درخواست تبلیغ کنید، حتما این کار را به کمک متغیری به
+عنوان شمارنده انجام دهید. زیرا به کمک آن متغیر می‌توانید محدودیت تعداد دفعات را برای
+درخواست لحاظ کنید. به عنوان مثال وقتی این جایگاه تبلیغاتی را از پنل غیرفعال نمودید، اگر بدون
+محدود کردن دفعات، هر بار در کالبک error مجددا درخواست تبلیغ دهید، برنامه‌تان در یک حلقه‌ی
+بی‌نهایت می‌افتد و عملکرد آن مختل می‌شود.
 
+### نمایش تبلیغ
+بعد از اجرای متد `response` و دریافت پارامتر `responseId` تبلیغ آماده نمایش است و می‌توانید مطابق روش زیر آن را نمایش دهید.
+
+```c#
+public void Show () {
+  TapsellPlus.ShowNativeBannerAd(_responseId, this,
+
+			tapsellPlusNativeBannerAd => {
+				Debug.Log ("onOpenAd " + tapsellPlusNativeBannerAd.zoneId);
+				adHeadline.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.title);
+				adCallToAction.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.callToActionText);
+				adBody.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.description);
+				adImage.texture = tapsellPlusNativeBannerAd.landscapeBannerImage;
+        
+				tapsellPlusNativeBannerAd.RegisterImageGameObject(adImage.gameObject);
+				tapsellPlusNativeBannerAd.RegisterHeadlineTextGameObject(adHeadline.gameObject);
+				tapsellPlusNativeBannerAd.RegisterCallToActionGameObject(adCallToAction.gameObject);
+				tapsellPlusNativeBannerAd.RegisterBodyTextGameObject(adBody.gameObject);
+			},
+			error => {
+				Debug.Log ("onError " + error.errorMessage);
+			}
+		);
+}
+```
 
 | Variable | Type | Usage |
 | - | - | - |
@@ -35,12 +63,12 @@ TapsellPlus.requestNativeBanner (CONTEXT, ZONE_ID,
 | `description`| string | توضیحات |
 | `landscapeBannerImage`| Texture2D | تصویر تبلیغ |
 | `callToActionText` | string | متن دکمه کلیک |
+| `iconImage` | Texture2D | آیکون تبلیغ |
 
 به عنوان مثال اگر یک GameObject از نوع RawImage به نام adImage در اختیار دارید، به کمک تکه کد زیر می‌توانید تصویر تبلیغ را در آن نمایش دهید:
 ```c#
 ...
-// Get nativeAd in onRequestRespons
-adImage.texture = nativeAd.landscapeBannerImage;
+adImage.texture = tapsellPlusNativeBannerAd.landscapeBannerImage;
 ...
 ```
 
