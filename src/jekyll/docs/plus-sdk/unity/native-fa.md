@@ -36,7 +36,7 @@ TapsellPlus.RequestNativeBannerAd(ZoneID,
 
 ```c#
 public void Show () {
-  TapsellPlus.ShowNativeBannerAd(_responseId, this,
+  TapsellPlus.ShowNativeBannerAd(_responseId, CONTEXT,
 
 			tapsellPlusNativeBannerAd => {
 				Debug.Log ("onOpenAd " + tapsellPlusNativeBannerAd.zoneId);
