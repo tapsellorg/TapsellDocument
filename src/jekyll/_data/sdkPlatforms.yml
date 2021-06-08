@@ -33,7 +33,7 @@ plusFlutter:
 
 
 plusUnity:
-  sdkVersion: 2.5
+  sdkVersion: 2.1.2
   releaseNotesFileFa: releases/plus-unity.md 
 
 plusReactnative:
