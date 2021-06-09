@@ -88,7 +88,7 @@ Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto
 
 ```console
 Assets > Import Package > Custom Package...
-``
+```
 
 ۵. برای اطمینان از اضافه شدن پلاگین تپسل پلاس از طریق منوی زیر اقدام به Resolve کردن کتابخانه‌ها کنید:
 
