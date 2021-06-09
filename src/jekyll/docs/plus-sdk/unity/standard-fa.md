@@ -13,8 +13,6 @@ toc: true # table of contents
 با اجرای کد زیر می‌توانید درخواست یک تبلیغ بدهید.
 
 ```c#
-using TapsellPlus.models;
-...
 TapsellPlus.RequestStandardBannerAd(ZoneID, BANNER_TYPE,
             tapsellPlusAdModel => {
                 Debug.Log ("on response " + tapsellPlusAdModel.responseId);
