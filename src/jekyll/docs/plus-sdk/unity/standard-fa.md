@@ -38,8 +38,6 @@ TapsellPlus.RequestStandardBannerAd(ZoneID, BANNER_TYPE,
 
 
 ```c#
-using TapsellPlus.models;
-...
 TapsellPlus.ShowStandardBannerAd(_responseId, HORIZONTAL_GRAVITY, VERTICAL_GRAVITY,
 
             tapsellPlusAdModel => {
