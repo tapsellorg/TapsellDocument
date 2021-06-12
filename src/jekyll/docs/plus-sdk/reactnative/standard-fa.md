@@ -34,12 +34,15 @@ TapsellPlus.requestStandardBannerAd(ZONE_ID, TapsellPlusBannerType.BANNER_320x50
 
 BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر زیر باشد:
 
-| `BANNER_320x50` | `320x50` |  
-| `BANNER_320x100` | `320x100` |   
-| `BANNER_250x250` | `250x250` |  
-| `BANNER_300x250` | `300x250` |  
-| `BANNER_468x60` | `468x60` |  
-| `BANNER_728x90` | `728x90` |  
+|نوع بنر|اندازه|شبکه‌های پشتیبانی شده|
+|:----------------:|:-------------:|:------------------:|
+| `BANNER_320x50` | `320x50` |       تپسل، AdMob، AppLovin، UnityAds    |
+| `BANNER_320x100` | `320x100` |      تپسل، AdMob    |
+| `BANNER_250x250` | `250x250` |    تپسل  |
+| `BANNER_300x250` | `300x250` |   تپسل، AdMob، AppLovin |
+| `BANNER_468x60` | `468x60` |      AdMob، UnityAds   |
+| `BANNER_728x90` | `728x90` |     AdMob، AppLovin، UnityAds |
+
 
 ## مخفی کردن و نمایش بنر
 برای نمایش بنر با داشتن **responseId** که از درخواست برمیگردد کد زیر را استفاده کنید:
