@@ -5,6 +5,15 @@ lang: fa
 permalink: /tapsell-sdk/unity/native/index.html
 toc: true
 ---
+
+<div class="alert alert-danger" role="alert" dir="rtl" markdown="0">
+  <h4 class="alert-heading">&#9888; هشدار! این SDK دیگر پشتیبانی نمی‌شود &#9888;</h4>
+  <p>به دلیل عدم پشتیبانی از این SDK، برای جلوگیری از بروز اختلال در ارتباط شما با ما، لطفا زین پس از <a href="https://docs.tapsell.ir/plus-sdk/unity/main/">تپسل‌پلاس</a> استفاده نمایید.</p>
+  <hr>
+  <p class="mb-0">نسخه‌های منتشر شده تپسل کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند.</p>
+  <p class="mb-0">در تپسل پلاس شما در کنار تپسل به چندین شبکه‌ی تبلیغاتی (ad-network) خارجی مثل AdMob و ... هم متصل هستید.</p>
+</div>
+
 ### ساخت تبلیغگاه
 ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
