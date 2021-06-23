@@ -82,7 +82,7 @@ fa:
             link: /plus-sdk/flutter/initialize
 
           - name: آنی/جایزه‌ای
-            link: /plus-sdk/flutter/rewarded
+            link: /plus-sdk/flutter/rewarded-interstitial
           
           - name: همسان
             link: /plus-sdk/flutter/native

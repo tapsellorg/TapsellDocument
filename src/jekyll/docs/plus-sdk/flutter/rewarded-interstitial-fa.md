@@ -2,7 +2,7 @@
 layout: classic-docs
 title: تبلیغات جایزه‌ای در Flutter
 lang: fa
-permalink: /plus-sdk/flutter/rewarded/index.html
+permalink: /plus-sdk/flutter/rewarded-interstitial/index.html
 toc: true # table of contents
 ---
 
@@ -44,11 +44,24 @@ final responseId = await TapsellPlus.instance.requestRewardedVideoAd(zoneId);
 | `Future.error<Map<String, String>` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
 
 
+برای درخواست تبلیغ آنی از کد زیر استفاده کنید:
+
+```dart
+final zoneId = "theZoneIdYouHave";
+TapsellPlus.instance.requestInterstitialAd(zoneId).then((responseId) {
+      // SAVE the responseId
+    }
+);
+```
+
+
+
 ## نمایش تبلیغ
 با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
 
 ```dart
-TapsellPlus.instance.showRewardedVideoAd(responseId, onOpened: (map) {
+TapsellPlus.instance.showRewardedVideoAd(responseId,
+    onOpened: (map) {
       // Ad opened
     }, onError: (map) {
       // Ad had error - map contains `error_message`
@@ -74,3 +87,19 @@ Future
 | `onClosed(map: Map<String, String>)` | زمانی که پنجره تبلیغ بسته شود. این اکشن به منزله پایان تبلیغ نمی‌باشد |
 | `onRewarded(map: Map<String, String>)` | زمانی که تبلیغ به طور کامل نمایش داده شده و باید جایزه به کاربر تعلق بگیرد |
 | `onError(error: Map<String, String>)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
+
+
+برای نمایش تبلیغ آنی نیز از کد زیر استفاده کنید:
+
+```dart
+TapsellPlus.instance.showInterstitialAd(responseId,
+    onOpened: (map) {
+      // Ad opened
+    }, onError: (map) {
+      // Ad had error - map contains `error_message`
+    }, onClosed: (map) {
+      // Ad closed
+    }
+);
+```
+
