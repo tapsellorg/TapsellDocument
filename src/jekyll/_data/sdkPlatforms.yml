@@ -28,8 +28,9 @@ plusAndroid:
 
 
 plusFlutter:
-  sdkVersion: 1.0.0
+  sdkVersion: 2.1.2
   sample: https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample
+  releaseNotesFileFa: releases/plus-flutter.md
 
 
 plusUnity:

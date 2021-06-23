@@ -1,62 +1,105 @@
 ---
 layout: classic-docs
-title: پیاده سازی تبلیغات جایزه‌ای/آنی
+title: تبلیغات جایزه‌ای در Flutter
 lang: fa
 permalink: /plus-sdk/flutter/rewarded-interstitial/index.html
-toc: true
+toc: true # table of contents
 ---
-### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) جایزه‌ای/آنی بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
-### درخواست تبلیغ
-مطابق کد زیر میتوانید با استفاد از متد `TapsellPlus.requestRewardedVideo` درخواست تبلیغ بدهید.
+برای پیاده سازی تبلیغات جایزه‌ای به صورت زیر اقدام کنید
+
+
+## ساخت تبلیغگاه
+ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
+
+
+## درخواست تبلیغ
+با اجرای کد زیر می‌توانید درخواست یک تبلیغ بدهید.
+
+متد مورد نظر یک `Future` برمی‌گرداند که این در درون خود یک
+**responseId**
+دارد. از این 
+responseId
+برای نمایش تبلیغ استفاده می‌شود. لذا بایستی آنرا ذخیره کنید.
+
 ```dart
-import 'package:tapsell_plus/tapsell_plus.dart';
+final zoneId = "theZoneIdYouHave";
+TapsellPlus.instance.requestRewardedVideoAd(zoneId).then((responseId) {
+      // SAVE the responseId
+    }
+);
 
-  void requestRewardedVideo() {
-    TapsellPlus.requestRewardedVideo(
-        Constant.TAPSELL_REWARDED_VIDEO,
-        (zoneId) => response(zoneId),
-        (zoneId, errorMessage) => error(zoneId, errorMessage));
-  }
+// Using Async/await
 
-  response(zoneId) {
-    print("success: zone_id = $zoneId");
-  }
-
-  error(zoneId, errorMessage) {
-    print('error caught: zone_id = $zoneId, message = $errorMessage');
-  }
+final responseId = await TapsellPlus.instance.requestRewardedVideoAd(zoneId);
 ```
 
-برای تبلیغ آنی از متد `TapsellPlus.requestInterstitial` استفاده کنید.
+ورودی تابع `zoneId` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
+  
+اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است:
+
+| تابع | توضیحات |
+| - | - |
+| `Future<String>` | در صورتی که تبلیغ بدون مشکل آماده‌ی نمایش شود شناسه‌ی درخواست برمیگردد  |
+| `Future.error<Map<String, String>` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
 
 
-### نمایش تبلیغ
-بعد از اجرای متد `response` تبلیغ آماده نمایش است و میتوانید مطابق روش زیر نمایش دهید.
+برای درخواست تبلیغ آنی از کد زیر استفاده کنید:
 
 ```dart
-  void showRewardedVideo() {
-    TapsellPlus.showAd(Constant.TAPSELL_REWARDED_VIDEO,
-        opened: (zoneId) => opened(zoneId),
-        closed: (zoneId) => closed(zoneId),
-        rewarded: (zoneId) => rewarded(zoneId),
-        error: (zoneId, errorMessage) => error(zoneId, errorMessage));
-  }
+final zoneId = "theZoneIdYouHave";
+TapsellPlus.instance.requestInterstitialAd(zoneId).then((responseId) {
+      // SAVE the responseId
+    }
+);
+```
 
-  opened(zoneId) {
-    print("opened: zone_id = $zoneId");
-  }
 
-  closed(zoneId) {
-    print("closed: zone_id = $zoneId");
-  }
 
-  rewarded(zoneId) {
-    print("rewarded: zone_id = $zoneId");
-  }
+## نمایش تبلیغ
+با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
 
-  error(zoneId, errorMessage) {
-    print('error caught: zone_id = $zoneId, message = $errorMessage');
-  }
-  ```
+```dart
+TapsellPlus.instance.showRewardedVideoAd(responseId,
+    onOpened: (map) {
+      // Ad opened
+    }, onError: (map) {
+      // Ad had error - map contains `error_message`
+    }, onRewarded: (map) {
+      // Ad shown completely
+    }, onClosed: (map) {
+      // Ad closed
+    }
+);
+```
+
+شناسه‌ی
+`responseId`
+برابر مقداری ست که هنگام درخواست تبلیغ از
+Future
+به دست می‌آید
+
+اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است :
+
+| تابع | توضیحات |
+| - | - |
+| `onOpened(map: Map<String, String>)` | زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد |
+| `onClosed(map: Map<String, String>)` | زمانی که پنجره تبلیغ بسته شود. این اکشن به منزله پایان تبلیغ نمی‌باشد |
+| `onRewarded(map: Map<String, String>)` | زمانی که تبلیغ به طور کامل نمایش داده شده و باید جایزه به کاربر تعلق بگیرد |
+| `onError(error: Map<String, String>)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
+
+
+برای نمایش تبلیغ آنی نیز از کد زیر استفاده کنید:
+
+```dart
+TapsellPlus.instance.showInterstitialAd(responseId,
+    onOpened: (map) {
+      // Ad opened
+    }, onError: (map) {
+      // Ad had error - map contains `error_message`
+    }, onClosed: (map) {
+      // Ad closed
+    }
+);
+```
+
