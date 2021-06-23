@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: پیاده سازی تبلیغات همسان در React Native
+title: پیاده سازی تبلیغات همسان در فلاتر
 lang: fa
 permalink: /plus-sdk/flutter/native/index.html
 toc: true
