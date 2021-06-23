@@ -82,10 +82,13 @@ fa:
             link: /plus-sdk/flutter/initialize
 
           - name: آنی/جایزه‌ای
-            link: /plus-sdk/flutter/rewarded-interstitial
-
+            link: /plus-sdk/flutter/rewarded
+          
           - name: همسان
             link: /plus-sdk/flutter/native
+
+          - name: استاندارد
+            link: /plus-sdk/flutter/standard
 
           - name: شبکه‌های تبلیغاتی
             link: /plus-sdk/flutter/add-adnetworks

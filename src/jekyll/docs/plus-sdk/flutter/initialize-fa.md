@@ -12,8 +12,10 @@ toc: true
 
 ```yaml
 dependencies:
-  tapsell_plus: ^1.0.0
+  tapsell_plus: ^2.1.2
 ```
+
+
 
 برای نصب بسته ها از خط فرمان، دستور زیر را اجرا کنید:
 
@@ -24,24 +26,23 @@ flutter pub get
 اکنون کتابخانه TapsellPlus در کد dart قابل دسترس است.
 
 
+> تمام کد‌های لازم با استفاده از کد `TapsellPlus.instance.*` قابل دسترسی‌ست.
+
 ## مقداردهی اولیه
 
 در صفحه اولیه برنامه باید کتابخانه تپسل پلاس را مقداردهی کنید.
 
+> اضافه‌کردن `initialize` در هر جایی ممکن است، اما بهتر است در شروع برنامه این کد فراخوانی شود.
+
 ```dart
 import 'package:tapsell_plus/tapsell_plus.dart';
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
+void main() {
+  runApp(yourApp());
 
-    TapsellPlus.initialize(TAPSELL_KEY);
-
-  }
+  final appId = "TAPSELL_KEY";
+  TapsellPlus.instance.initialize(appId);
 }
 ```
 
 `TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که میسازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
-
-## تنظیمات proguard
-تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
