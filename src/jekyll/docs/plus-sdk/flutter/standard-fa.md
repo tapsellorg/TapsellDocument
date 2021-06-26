@@ -41,7 +41,8 @@ BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر ز�
 
 ```dart
 TapsellPlus.instance.showStandardBannerAd(responseId, TapsellPlusHorizontalGravity.TOP, 
-    TapsellPlusVerticalGravity.RIGHT, onOpened: (map) {
+    TapsellPlusVerticalGravity.RIGHT,
+    margin: EdgeInsets.only(top: 100), onOpened: (map) {
       // Ad opened
     }, onError: (map) {
       // Error when showing ad
@@ -50,6 +51,9 @@ TapsellPlus.instance.showStandardBannerAd(responseId, TapsellPlusHorizontalGravi
 
 | `onOpened(data: Map<String, String>)` | در صورت بازشدن تبلیغ این تابع فراخوانی خواهد شد |  
 | `onError(errorData: Map<String, String>)` | در صورت رخداد هر خطایی این تابع فراخوانی خواهد شد |  
+
+
+
 
 برای از بین بردن این بنر با استفاده از **responseId** استفاده شده برای نمایش تبلیغ اقدام به حذف آن نمایید
 

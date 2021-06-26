@@ -2,6 +2,11 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/blob/master/CHANGELOG.md))
 
+## 2.1.3
+- رفع مشکل نمایش تبلیغ نیتیو
+- اضافه شدن امکان margin به بنر استاندارد
+- بروزرسانی اندروید به `2.1.3-rc01`
+
 ### 2.1.2 (7 Jun, 2021)
 - بازنویسی پلاگین
 - پشتیبانی از **Null safety**
