@@ -42,6 +42,9 @@ fa:
           - name: استاندارد
             link: /plus-sdk/android/standard
 
+          - name: VAST
+            link: /plus-sdk/android/vast
+          
           - name: شبکه‌های تبلیغاتی
             link: /plus-sdk/android/add-adnetworks
 

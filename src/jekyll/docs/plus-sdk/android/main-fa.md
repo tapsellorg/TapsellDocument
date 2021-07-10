@@ -13,5 +13,6 @@ sdkPlatform:
 - [آنی/جایزه‌ای]({{site.baseurl}}/plus-sdk/android/rewarded-interstitial)
 - [همسان]({{site.baseurl}}/plus-sdk/android/native)
 - [استاندارد]({{site.baseurl}}/plus-sdk/android/standard)
+- [VAST]({{site.baseurl}}/plus-sdk/android/vast)
 - [شبکه‌های تبلیغاتی]({{site.baseurl}}/plus-sdk/android/add-adnetworks)
 - [تست]({{site.baseurl}}/plus-sdk/android/adnetworks-test)
