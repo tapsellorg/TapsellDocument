@@ -22,6 +22,21 @@ toc: true
 TapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
 ```
 
+
+> **استفاده از AdMob SDK**  
+> 
+> برای استفاده ادموب بایستی تگ مورد نیاز آنرا در مانیفست قرار دهید. برای اطلاعات بیشتر از نحوه‌ی اجرای این کار به 
+> [مستندات شبکه‌های تبلیغاتی](/plus-sdk/reactnative/add-adnetworks/index.html)
+> مراجعه کنید
+> 
+> برای تست ادموب نیازی به App ID اصلی ندارید و می‌توانید از test app id استفاده کنید:
+> 
+> ```
+> ca-app-pub-3940256099942544~3347511713
+> ```
+
+
+
 ### تبلیغ‌گاه‌ها
 
 برای هر ادنتورک و هر تبلیغ از `zoneId` های زیر برای درخواست و نمایش تبلیغ استفاده کنید. در حال حاضر فقط adType/adNetworkهای زیر قابل استفاده هستند.

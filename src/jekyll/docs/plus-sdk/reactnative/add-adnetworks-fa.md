@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: تست شبکه‌های تبلیغاتی
+title: سایر شبکه‌های تبلیغاتی
 lang: fa
 permalink: /plus-sdk/reactnative/add-adnetworks/index.html
 toc: true
@@ -9,6 +9,47 @@ toc: true
 سایر شبکه‌های تبلیغاتی را می‌توانید مطابق این آموزش به پروژه اضافه کنید. همچنین با روش‌های تست گفته شده مطمئن شوید به درستی پیاده‌سازی شده‌اند.
 
 برای کسب اطلاعات بیشتر در مورد هر ad network می‌توانید با همکاران ما در تیم رسانه از قسمت پشتیبانی صحبت کنید.
+
+
+
+
+> **نکته** برای استفاده از **AdMob**  
+> 
+> برای استفاده از ادنتورک **Google AdMob SDK** (نسخه‌ی 20.0.0 به بعد) بایستی App ID آنرا در مانیفست اپلیکیشن قرار دهید.  
+> لازم به ذکر است در صورت عدم وجود این تگ در مانیفست خطای `The Google Mobile Ads SDK was initialized incorrectly.` رخ خواهد داد
+>
+> برای اضافه کردن App ID ابتدا از یکی از راه‌های زیر این شناسه را از تپسل دریافت کنید:
+> - ارسال ایمیل به `publishers [at] tapsell.ir`
+> - ارسال تیکت به [دپارتمان ناشرین](https://tapsell.deskpro.com/new-ticket)
+> - تماس با شماره تلفن **5-88206893** (داخلی ۳ - ناشرین)
+> 
+> سپس شناسه‌ی مورد نظر را با فرمت زیر در فایل `android/app/src/main/AndroidManifest.xml` قرار دهید:
+> 
+> ```xml
+> <meta-data
+>             android:name="com.google.android.gms.ads.APPLICATION_ID"
+>             android:value="ca-app-pub-x~y"/>
+> ```
+> 
+> به جای `ca-app-pub-x~y` شناسه‌ی خود را قرار دهید
+> 
+> 
+> که در نهایت این تگ در فرمت زیر در مانیفست قرار خواهد گرفت:
+> 
+> ```xml
+> <manifest>
+>     <application>
+>
+>         <!-- Rest of the manifest content -->
+> 
+>         <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+>         <meta-data
+>             android:name="com.google.android.gms.ads.APPLICATION_ID"
+>             android:value="YOUR_APP_ID"/>
+>     </application>
+> </manifest>
+> ```
+
 
 ## تنظیمات Gradle
 در قسمت `dependencies` فایل build.gradle شبکه‌های تبلغاتی که مایل هستید را مطابق زیر اضافه کنید.
@@ -19,7 +60,7 @@ toc: true
 dependencies {
     .......
     //for adMob
-    implementation 'com.google.android.gms:play-services-ads:19.8.0'
+    implementation 'com.google.android.gms:play-services-ads:20.2.0'
 
     //for unityAds
     implementation 'com.unity3d.ads:unity-ads:3.7.1'
