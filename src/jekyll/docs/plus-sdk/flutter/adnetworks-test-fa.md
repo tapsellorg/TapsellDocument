@@ -42,6 +42,7 @@ TapsellPlus.instance.initialize(testAppId);
 |    Chartboost    |     Interstitial     |`60c5b303d756bf0001891f1c`|
 |    AdColony    |     Rewarded Video     |`5d3362766de9f600013662d5`|
 |    AdColony    |     Interstitial     |`5d336289e985d50001427acf`|
+|    AdColony    |     Standard     |`60bf4ef0d40d970001693745`|
 |    AppLovin    |     Rewarded Video     |`5d3eb48c3aef7a0001406f84`|
 |    AppLovin    |     Interstitial     |`5d3eb4fa3aef7a0001406f85`|
 |    AppLovin    |     Standard     |`5d3eb5337a9b060001892441`|
