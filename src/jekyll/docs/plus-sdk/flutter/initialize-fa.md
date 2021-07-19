@@ -12,8 +12,9 @@ toc: true
 
 ```yaml
 dependencies:
-  tapsell_plus: ^1.0.0
+  tapsell_plus: ^2.1.3
 ```
+
 
 برای نصب بسته ها از خط فرمان، دستور زیر را اجرا کنید:
 
@@ -24,24 +25,30 @@ flutter pub get
 اکنون کتابخانه TapsellPlus در کد dart قابل دسترس است.
 
 
+> تمام کد‌های لازم با استفاده از کد `TapsellPlus.instance.*` قابل دسترسی‌ست.
+
 ## مقداردهی اولیه
 
 در صفحه اولیه برنامه باید کتابخانه تپسل پلاس را مقداردهی کنید.
 
+> اضافه‌کردن `initialize` در هر جایی ممکن است، اما بهتر است در شروع برنامه این کد فراخوانی شود.
+
 ```dart
 import 'package:tapsell_plus/tapsell_plus.dart';
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
+void main() {
+  runApp(yourApp());
 
-    TapsellPlus.initialize(TAPSELL_KEY);
-
-  }
+  final appId = "TAPSELL_KEY";
+  TapsellPlus.instance.initialize(appId);
 }
 ```
 
 `TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که میسازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
 
-## تنظیمات proguard
-تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
+## تنظیمات مربوط به GDPR
+از آن‌جا که کتابخانه‌ی تپسل پلاس قوانین GDPR را در خصوص نمایش تبلیغات شخصی‌سازی شده رعایت می‌کند، به طور پیش فرض اگر کاربر با IP یکی از کشورهای مشمول این قانون از اپلیکیشن شما استفاده کند، دیالوگی در این خصوص به کاربر نمایش می‌دهد. اگر تمایل دارید تا به جای تصمیم کاربر، خودتان دسترسی لازم را تعیین کنید می‌توانید از تکه کد زیر استفاده نمایید. توجه داشته باشید که این تکه کد می‌بایستی پس از Initialize شدن تپسل پلاس و پیش از درخواست تبلیغ صدا زده شود تا نتیجه‌ی آن در درخواست شما اعمال شده باشد. مقدار true‌ به این معنی است که شما حق استفاده از اطلاعات جهت نمایش تبلیغ شخصی‌سازی شده را به شبکه‌های تبلیغاتی داده‌اید.
+
+```dart
+TapsellPlus.instance.setGDPRConsent(true);
+```
