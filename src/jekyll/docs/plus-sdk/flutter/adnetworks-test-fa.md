@@ -39,6 +39,7 @@ TapsellPlus.instance.initialize(testAppId);
 |    Unity Ads    |     Interstitial     |`608d1c1c2d8e7e0001348111`|
 |    Unity Ads    |     Standard     |`608d20a7fb661b000190bfe4`|
 |    Chartboost    |     Rewarded Video     |`5cfaa8cee8d17f0001ffb290`|
+|    Chartboost    |     Interstitial     |`60c5b303d756bf0001891f1c`|
 |    AdColony    |     Rewarded Video     |`5d3362766de9f600013662d5`|
 |    AdColony    |     Interstitial     |`5d336289e985d50001427acf`|
 |    AppLovin    |     Rewarded Video     |`5d3eb48c3aef7a0001406f84`|
