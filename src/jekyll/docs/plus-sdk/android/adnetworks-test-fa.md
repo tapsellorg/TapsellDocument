@@ -47,6 +47,7 @@ TapsellPlus.initialize(
 |     Tapsell     |     Rewarded Video    | `5cfaa802e8d17f0001ffb28e`|
 |     Tapsell    |    Interstitial    |`5cfaa942e8d17f0001ffb292`|
 | Tapsell |  Native  |`5cfaa9deaede570001d5553a`|
+| Tapsell |  Native Video  |`60edcf8ad3459c17f019d36b`|
 |  Tapsell | Standard |`5cfaaa30e8d17f0001ffb294`|
 |    Admob    |    Rewarded Video   |`5cfaa8aee8d17f0001ffb28f`|
 |    Admob    |     Interstitial     |`5cfaa9b0e8d17f0001ffb293`|
