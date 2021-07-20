@@ -39,6 +39,9 @@ fa:
           - name: همسان
             link: /plus-sdk/android/native
 
+          - name: ویدئوی همسان
+            link: /plus-sdk/android/native-vid
+
           - name: استاندارد
             link: /plus-sdk/android/standard
 
