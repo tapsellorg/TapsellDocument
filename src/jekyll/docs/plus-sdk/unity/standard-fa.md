@@ -49,14 +49,15 @@ TapsellPlus.ShowStandardBannerAd(_responseId, HORIZONTAL_GRAVITY, VERTICAL_GRAVI
 
 BANNER_TYPE سایز نمایش بنر هست و می‌تواند مقادیر زیر باشد:
 
-|       سایز       |              شبکه‌ی قابل پشتیبانی              |
-|:------------:|:----------------------------:|:-:|
-|     Banner320X50     |     تپسل، AdMob، AppLovin، UnityAds    |
-|     Banner320X100    |   تپسل، AdMob    |
-|     Banner250X250    |  تپسل  |
-|     Banner300X250    | تپسل، AdMob، AppLovin |
-|     Banner468X60     |    AdMob، UnityAds   |
-|     Banner728X90     |   AdMob، AppLovin، UnityAds |
+|نوع بنر|اندازه|شبکه‌های پشتیبانی شده|
+|:----------------:|:-------------:|:------------------:|
+| `Banner320X50` | `320x50` |       تپسل، AdMob، AppLovin، UnityAds، AdColony    |
+| `Banner320X100` | `320x100` |      تپسل، AdMob    |
+| `Banner250X250` | `250x250` |    تپسل  |
+| `Banner300X250` | `300x250` |   تپسل، AdMob، AppLovin، AdColony |
+| `Banner468X60` | `468x60` |      AdMob، UnityAds   |
+| `Banner728X90` | `728x90` |     AdMob، AppLovin، UnityAds، AdColony |
+| `BANNER_160x600` | `160x600` |     AdColony |
   
 `VERTICAL_GRAVITY` و `HORIZONTAL_GRAVITY` موقعیت قرار گیری بنر در صفحه هست و می‌تواند مقادیر زیر باشد.
 
