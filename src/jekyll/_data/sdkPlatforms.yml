@@ -36,10 +36,9 @@ plusFlutter:
   github: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin
 
 plusUnity:
-  sdkVersion: 2.1.2
-  releaseNotesFileFa: releases/plus-unity.md 
-  github: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin
-  issues: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/issues?q=is%3Aissue
+  sdkVersion: 2.1.3
+  releaseNotesFileFa: releases/plus-unity.md
+  issues: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020/issues?q=is%3Aissue
 
 plusReactnative:
   sdkVersion: 2.1.2
