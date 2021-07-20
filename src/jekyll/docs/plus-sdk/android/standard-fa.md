@@ -84,11 +84,12 @@ protected void onDestroy() {
 ### سایز بنرها
 تمامی سایزهای قابل پشتیبانی در تپسل پلاس در کلاس TapsellPlusBannerType قرار دارند.
 
-|       سایز       |              شبکه‌ی قابل پشتیبانی              |
-|:------------:|:----------------------------:|:-:|
-|     BANNER_320x50     |     تپسل، AdMob، AppLovin، UnityAds    |
-|     BANNER_320x100    |   تپسل، AdMob    |
-|     BANNER_250x250    |  تپسل  |
-|     BANNER_300x250    | تپسل، AdMob، AppLovin |
-|     BANNER_468x60     |    AdMob، UnityAds   |
-|     BANNER_728x90     |   AdMob، AppLovin، UnityAds |
+|نوع بنر|اندازه|شبکه‌های پشتیبانی شده|
+|:----------------:|:-------------:|:------------------:|
+| `BANNER_320x50` | `320x50` |       تپسل، AdMob، AppLovin، UnityAds، AdColony    |
+| `BANNER_320x100` | `320x100` |      تپسل، AdMob    |
+| `BANNER_250x250` | `250x250` |    تپسل  |
+| `BANNER_300x250` | `300x250` |   تپسل، AdMob، AppLovin، AdColony |
+| `BANNER_468x60` | `468x60` |      AdMob، UnityAds   |
+| `BANNER_728x90` | `728x90` |     AdMob، AppLovin، UnityAds، AdColony |
+| `BANNER_160x600` | `160x600` |     AdColony |
