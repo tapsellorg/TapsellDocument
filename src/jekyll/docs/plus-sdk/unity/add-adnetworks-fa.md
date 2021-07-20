@@ -62,7 +62,7 @@ dependencies {
     // for UnityAds
     implementation 'com.unity3d.ads:unity-ads:3.7.1'
     // for Chartboost
-    implementation 'com.chartboost:chartboost-sdk:8.2.0'
+    implementation 'com.chartboost:chartboost-sdk:8.2.1'
     // for AdColony
     implementation 'com.adcolony:sdk:4.5.0'
     // for Applovin

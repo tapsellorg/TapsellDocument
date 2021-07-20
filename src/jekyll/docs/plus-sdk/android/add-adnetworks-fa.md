@@ -60,7 +60,7 @@ dependencies {
     implementation 'com.unity3d.ads:unity-ads:3.7.1'
 
     //for chartboost
-    implementation 'com.chartboost:chartboost-sdk:8.2.0'
+    implementation 'com.chartboost:chartboost-sdk:8.2.1'
     implementation ("com.google.android.gms:play-services-base:17.6.0"){
         exclude group: 'com.android.support'
     }
