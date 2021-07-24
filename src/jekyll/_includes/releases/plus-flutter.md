@@ -2,6 +2,11 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/blob/master/CHANGELOG.md))
 
+## 2.1.4
+- [استفاده از نسخه‌ی ۲.۱.۳ تپسل پلاس](https://docs.tapsell.ir/plus-sdk/android/main/#v213---20210721)
+- [استفاده از نسخه‌ی ۴.۷.۲ تپسل](https://docs.tapsell.ir/tapsell-sdk/android/main/#472---20210720)
+- رفع مشکل Null بودن اکتیویتی‌ها
+
 ## 2.1.3
 - رفع مشکل نمایش تبلیغ نیتیو
 - اضافه شدن امکان margin به بنر استاندارد
