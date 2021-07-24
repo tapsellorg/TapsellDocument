@@ -60,13 +60,13 @@ dependencies {
     // for AdMob
     implementation 'com.google.android.gms:play-services-ads:20.2.0'
     // for UnityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.1'
+    implementation 'com.unity3d.ads:unity-ads:3.7.4'
     // for Chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
     // for AdColony
     implementation 'com.adcolony:sdk:4.5.0'
     // for Applovin
-    implementation 'com.applovin:applovin-sdk:9.15.3'
+    implementation 'com.applovin:applovin-sdk:10.3.1'
     .....
 }
 ```
@@ -81,13 +81,13 @@ dependencies {
     // for AdMob
     <androidPackage spec="com.google.android.gms:play-services-ads:20.2.0"/>
     // for UnityAds
-    <androidPackage spec="com.unity3d.ads:unity-ads:3.7.1"/>
+    <androidPackage spec="com.unity3d.ads:unity-ads:3.7.4"/>
     // for Chartboost
     <androidPackage spec="com.chartboost:chartboost-sdk:8.2.0"/>
     // for AdColony
     <androidPackage spec="com.adcolony:sdk:4.5.0"/>
     // for Applovin
-    <androidPackage spec="com.applovin:applovin-sdk:9.15.3"/>
+    <androidPackage spec="com.applovin:applovin-sdk:10.3.1"/>
     ...
   </androidPackages>
 </dependencies>
