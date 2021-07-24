@@ -11,7 +11,7 @@ toc: true # table of contents
 برای اضافه کردن کتابخانه‌های مورد نیاز ۲ روش وجود دارد از هرکدام که مایل هستید استفاده کنید.
 
 ### ۱. استفاده از Gradle
-۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.2/TapsellPlusUnity-Gradle-v2.1.2.unitypackage) دریافت نمایید. 
+۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.3/TapsellPlusUnity-Gradle-v2.1.3.unitypackage) دریافت نمایید. 
 ۲. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر TapsellPlus از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 
 ```console
@@ -34,7 +34,7 @@ Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Te
 ```gradle
 dependencies {
     ...
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.2'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.3'
     ...
 **DEPS**}
 ```
@@ -53,7 +53,7 @@ android {
 
 > دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
 
-۶. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید.
+۶. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید.  
 ```console
 D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
 ```
@@ -71,8 +71,8 @@ android {
 
 ### ۲. استفاده از Resolver
 
-۱. ابتدا فایل [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/releases) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:
-\
+۱. ابتدا فایل [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/releases) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:  
+
 [مستندات گوگل](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage) 
 
 ۲. از طریق منوهای زیر، تیک مربوط به `Jetifier` و `Auto Resolution` را بزنید. (تیک مربوط به `Auto Resolution` اجباری نیست اما برای آن که هر بار مجبور نباشید کتابخانه‌ها را به شکل دستی Resolve کنید بهتر است آن را فعال کنید)
@@ -82,7 +82,7 @@ Assets > External Dependency Manager > Android Resolver > Settings > Use Jetifie
 Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
 ```
 
-۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.2/TapsellPlusUnity-EDM-v2.1.2.unitypackage) دریافت نمایید. 
+۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.3/TapsellPlusUnity-EDM-v2.1.3.unitypackage) دریافت نمایید. 
 
 ۴. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر TapsellPlus از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 
