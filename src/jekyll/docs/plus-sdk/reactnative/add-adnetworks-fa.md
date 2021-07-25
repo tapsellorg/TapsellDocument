@@ -63,10 +63,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:20.2.0'
 
     //for unityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.1'
+    implementation 'com.unity3d.ads:unity-ads:3.7.4'
 
     //for chartboost
-    implementation 'com.chartboost:chartboost-sdk:8.2.0'
+    implementation 'com.chartboost:chartboost-sdk:8.2.1'
     implementation ("com.google.android.gms:play-services-base:17.6.0"){
         exclude group: 'com.android.support'
     }
@@ -81,7 +81,7 @@ dependencies {
     }
     
     //for applovin
-    implementation 'com.applovin:applovin-sdk:9.15.3'
+    implementation 'com.applovin:applovin-sdk:10.3.1'
     .....
 }
 ```
