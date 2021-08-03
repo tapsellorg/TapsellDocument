@@ -51,7 +51,7 @@ The `CACHE_TYPE` attribute can take the values below:
 
 | Description | Value |
 | - | - |
-| It starts to download the video while showing the ad | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
+| It starts to download the video while showing the ad | `TapsellAdRequestOptions.CACHE_TYPE_STREAMED` |
 | It downloads the video before showing the ad | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
 
 >To lower the data usage, only use the `CACHE_TYPE_CACHED` option when the probability of user watching the ad is high.

@@ -56,7 +56,7 @@ options.setCacheType(CACHE_TYPE);
 
 | توضیحات | مقدار |
 | - | - |
-| هنگام نمایش تبلیغ، شروع به دانلود ویدیو میکند | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
+| هنگام نمایش تبلیغ، شروع به دانلود ویدیو میکند | `TapsellAdRequestOptions.CACHE_TYPE_STREAMED` |
 | قبل از نمایش تبلیغ، ویدیو را دانلود میکند | `TapsellAdRequestOptions.CACHE_TYPE_CACHED` |
 
 >تنها زمانی از `CACHE_TYPE_CACHED` استفاده کنید که احتمال دیدن ویدیو توسط کاربر زیاد باشد، تا مصرف اینترنت بالا نرود.
