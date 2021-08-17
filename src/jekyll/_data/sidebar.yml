@@ -120,6 +120,27 @@ fa:
           - name: تست
             link: /plus-sdk/reactnative/adnetworks-test
 
+      - name: Basic 4 Android
+        link: /plus-sdk/b4a/main
+        children:
+          - name: راه اندازی
+            link: /plus-sdk/b4a/initialize
+
+          - name: آنی/جایزه‌ای
+            link: /plus-sdk/b4a/rewarded
+
+          - name: همسان
+            link: /plus-sdk/b4a/native
+
+          - name: استاندارد
+            link: /plus-sdk/b4a/standard
+
+          - name: شبکه‌های تبلیغاتی
+            link: /plus-sdk/b4a/add-adnetworks
+          
+          - name: تست
+            link: /plus-sdk/b4a/adnetworks-test
+
   - name: تپسل
     icon: m-sdk
     children:
