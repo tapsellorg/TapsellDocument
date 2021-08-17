@@ -33,6 +33,7 @@ TapsellPlus.initialize(
 |     Tapsell    |    Interstitial    |`5cfaa942e8d17f0001ffb292`|
 | Tapsell |  Native  |`5cfaa9deaede570001d5553a`|
 |  Tapsell | Standard |`5cfaaa30e8d17f0001ffb294`|
+|  Tapsell | Vast (PreRoll) |`60e441ff537bfb4073746249`| 
 |    Admob    |    Rewarded Video   |`5cfaa8aee8d17f0001ffb28f`|
 |    Admob    |     Interstitial     |`5cfaa9b0e8d17f0001ffb293`|
 |    Admob    |     Standard     |`5cfaaa4ae8d17f0001ffb295`|
