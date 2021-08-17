@@ -19,7 +19,7 @@ toc: true
 ### درخواست و نمایش تبلیغ
 برای نمایش تبلیغات VAST لازم است از کتابخانه IMA گوگل استفاده کنید.  
 مستندات کتابخانه IMA را می‌توانید از [این لینک](https://developers.google.com/interactive-media-ads/docs/sdks/android) ببینید.  
-
+در صورتی که قصد استفاده از یک Video Player به جز ExoPlayer دارید هم می‌توانید از [این لینک](https://developers.google.com/interactive-media-ads/docs/sdks/android/client-side/custom_ad_playback) کمک بگیرید.
 
 در IMA برای نمایش تبلیغ به `ad tag URL` نیاز دارید. برای این منظور می‌توانید از روش زیر استفاده کنید.
 
