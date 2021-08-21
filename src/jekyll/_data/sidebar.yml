@@ -120,7 +120,7 @@ fa:
           - name: تست
             link: /plus-sdk/reactnative/adnetworks-test
 
-      - name: Basic 4 Android
+      - name: Basic4Android
         link: /plus-sdk/b4a/main
         children:
           - name: راه اندازی

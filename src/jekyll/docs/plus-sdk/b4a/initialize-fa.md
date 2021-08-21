@@ -6,30 +6,46 @@ permalink: /plus-sdk/b4a/initialize/index.html
 toc: true # table of contents
 ---
 
+> **نکته‌ی مهم**: در صورت وجود مشکل یا ابهام به [لیست سوالات](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue) مراجعه کنید و در صورت نیاز به پرسش سوال جدید از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues/new) استفاده کنید.
 
-## دریافت SDK تپسل پلاس
-برای افزودن پلاگین تپسل‌پلاس به پروژه از کامند زیر استفاده کنید:
+## دریافت پکیج تپسل پلاس
 
-```console
-npm install react-native-tapsell-plus --save
-```
+پکیج نسخه‌ی نهایی تپسل پلاس را از
+[**این لینک**](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases)
+دریافت کنید.
 
-[![npm version](https://img.shields.io/npm/v/react-native-tapsell-plus?color=green&label=react-native-tapsell-plus&logo=react)](https://www.npmjs.com/package/react-native-tapsell-plus)
+برای مشاهده‌ی تمام نسخه‌های منتشر شده به
+[صفحه‌ی دانلودها](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases)
+مراجعه کنید
+
+## اضافه‌کردن به B4A
+
+> - نسخه‌ی پیشنهادی B4A نسخه‌ی ۱۱.۰ می‌باشد  
+> - از ریسورس‌های پیشنهادی خود B4X برای پروژه‌ی خود استفاده کنید. ([لینک](https://www.b4x.com/b4a.html))
 
 
-## شروع کار با پلاگین
-ابتدا ماژول تپسل پلاس را به کد خود اضافه کنید:
+فایل دانلودی یک
+zip
+است که ابتدا آن‌را اکسترکت خواهید کرد.
 
-```javascript
-import { TapsellPlus } from 'react-native-tapsell-plus';
-```
+محتوای فایل زیپ:  
+- `TapsellPlusB4A.jar`
+- `TapsellPlusB4A.xml`
+- `libs/`
 
-سپس تابع زیر را در یکی از اسکریپت‌های برنامه‌ی خود که در ابتدای برنامه اجرا می‌شود فراخوانی کنید.
+دو فایل
+TapsellPlusB4A
+را در پوشه‌ی
+Libraries
+برنامه‌ی
+B4A
+قرار دهید
 
-```javascript
-TapsellPlus.initialize(APP_KEY);
-```
+سپس پروژه‌ی خود را باز کرده و فولدر
+**libs**
+را بعنوان پوشه‌ی 
+Additional libraries
+به
+B4A
+معرفی کنید.
 
-`APP_KEY` کلید تپسل هست و برای هر اپلیکیشن که می‌سازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
-
-اکنون می‌توانید با توجه به نیاز خود و توضیحات به هر نوع تبلیغ، تبلیغ مورد نظر را نمایش دهید.
