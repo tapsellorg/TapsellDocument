@@ -6,7 +6,7 @@ permalink: /plus-sdk/reactnative/main/index.html
 toc: true
 sdkPlatform:
   name: plusReactnative
-  logo: /images/sdk-platforms/android.png
+  logo: /images/sdk-platforms/rn.png
 ---
 
 - [راه اندازی - Android]({{site.baseurl}}/plus-sdk/reactnative/initialize-android)
