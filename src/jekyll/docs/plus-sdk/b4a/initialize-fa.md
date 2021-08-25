@@ -11,13 +11,11 @@ toc: true # table of contents
 
 ## دریافت پکیج تپسل پلاس
 
-[//]: # (This link must be updated along with the link in "sdkPlatforms.yml" file - This is the download link)
-
 پکیج نسخه‌ی نهایی تپسل پلاس را از
 [**این لینک**](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases/download/2.1.3/TapsellPlusB4A-2.1.3.zip)
 دریافت کنید.
 
-![version](https://img.shields.io/github/v/release/tapsellorg/TapsellPlusSDK-B4APlugin?style=plastic)
+![version](https://img.shields.io/github/v/release/tapsellorg/TapsellPlusSDK-B4aPlugin?label=tapsellplus-b4a&style=plastic)
 
 برای مشاهده‌ی تمام نسخه‌های منتشر شده به
 [صفحه‌ی دانلودها](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases)
