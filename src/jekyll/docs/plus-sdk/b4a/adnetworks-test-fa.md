@@ -21,21 +21,26 @@ toc: true
 ### شناسه تپسل
 
 ```java
-TapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
+tapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
 ```
 
 
 > **استفاده از AdMob SDK**  
 > 
 > برای استفاده ادموب بایستی تگ مورد نیاز آنرا در مانیفست قرار دهید. برای اطلاعات بیشتر از نحوه‌ی اجرای این کار به 
-> [مستندات شبکه‌های تبلیغاتی](/plus-sdk/reactnative/add-adnetworks/index.html)
+> [مستندات شبکه‌های تبلیغاتی](/plus-sdk/b4a/add-adnetworks/index.html)
 > مراجعه کنید
 > 
 > برای تست ادموب نیازی به App ID اصلی ندارید و می‌توانید از test app id استفاده کنید:
 > 
+> در مانیفست خود این خط را برای اضافه‌کردن اپ‌آی‌دی تست اضافه کنید:
+> 
+> ```vb
+>CreateResourceFromFile(Macro, TapsellPlusB4A.AdMobTestAppId)
 > ```
-> ca-app-pub-3940256099942544~3347511713
-> ```
+> این مانیفست در فایل‌های تپسل پلاس برای تست کردن ادموب اضافه شده است.  
+> حتما به ادامه‌ی مستندات بپردازید تا پیاده‌سازی ادنتورک ادموب را نیز انجام دهید
+{:data-title="استفاده از AdMob" data-color="red"}
 
 
 
@@ -55,8 +60,8 @@ TapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgj
 |    Unity Ads    |     Rewarded Video     |`5cfaa8eae8d17f0001ffb291`|
 |    Unity Ads    |     Interstitial     |`608d1c1c2d8e7e0001348111`|
 |    Unity Ads    |     Standard     |`608d20a7fb661b000190bfe4`|
-|    Chartboost    |     Rewarded Video     |`5cfaa8cee8d17f0001ffb290`|
-|    Chartboost    |     Interstitial     |`60c5b303d756bf0001891f1c`|
+|    Chartboost (❌)    |     Rewarded Video     |`5cfaa8cee8d17f0001ffb290`|
+|    Chartboost (❌)  |     Interstitial     |`60c5b303d756bf0001891f1c`|
 |    AdColony    |     Rewarded Video     |`5d3362766de9f600013662d5`|
 |    AdColony    |     Interstitial     |`5d336289e985d50001427acf`|
 |    AdColony    |     Standard     |`60bf4ef0d40d970001693745`|

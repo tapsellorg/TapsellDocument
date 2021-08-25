@@ -1,10 +1,15 @@
 ---
 layout: classic-docs
-title: تبلیغات جایزه‌ای در ReactNative
+title: تبلیغات جایزه‌ای در B4A
 lang: fa
 permalink: /plus-sdk/b4a/rewarded/index.html
 toc: true # table of contents
 ---
+
+
+> برای مشاهد‌ه‌ی نمونه پیاده سازی شده در گیتهاب به [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample/blob/0ed4cf5b1ec275061b20e600a87eae47b29b1c49/tapsell.b4a#L181) مراجعه نمایید
+{:data-title="نمونه‌ی این تبلیغ" data-color="green"}
+
 
 برای پیاده سازی تبلیغات جایزه‌ای به صورت زیر اقدام کنید
 
@@ -13,57 +18,82 @@ toc: true # table of contents
 ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
 
 
+سپس شناسه‌ی تبلیغ مورد نظر را کپی کنید. این شناسه
+(Zone Id)
+را برای درخواست تبلیغ نیاز دارید
+
 ## درخواست تبلیغ
-با اجرای کد زیر می‌توانید درخواست یک تبلیغ بدهید.
 
-متد مورد نظر یک `Promise` برمی‌گرداند که این در درون خود یک
-**responseId**
-دارد. از این 
-responseId
-برای نمایش تبلیغ استفاده می‌شود. لذا بایستی آنرا ذخیره کنید.
+دو راه برای درخواست تبلیغ 
 
-```javascript
-let zoneId = "theZoneIdYouHave";
-TapsellPlus.requestRewardedVideoAd(zoneId).then(responseId => {
-  // Save the responseId -- You need it to show the ad
-})
-.catch(error => {
-  // Do on Error
-});
+- درخواست، گرفتن شناسه‌ی درخواست، نمایش با استفاده از شناسه‌ی درخواست (دو مرحله‌ای)
+- درخواست و نمایش (یک مرحله)
 
-// Using Async/await
+### ۱. درخواست و نمایش تبلیغ (پیشنهادی)
 
-let responseId = await TapsellPlus.requestRewardedVideoAd(zoneId);
+مورد نیاز: **شناسه‌ی تبلیغ یا Zone Id**
+
+از کد زیر برای درخواست تبلیغ استفاده کنید:
+
+```vb
+' Dim tapsellPlus As TapsellPlus (in `Sub Globals`)
+
+
+Dim zoneId As String = "شناسه‌ی تبلیغ"
+tapsellPlus.RequestAndShowRewardedVideoAd(zoneId)
 ```
 
-ورودی اول `zoneId` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
-  
-اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است:
+کالبک‌های مورد استفاده در این تبلیغ:
 
-| تابع | توضیحات |
-| - | - |
-| `Promise.resolve(responseId)` | در صورتی که تبلیغ بدون مشکل آماده‌ی نمایش شود شناسه‌ی درخواست برمیگردد  |
-| `Promise.reject(error)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
+|نام کالبک|شرح|
+|:--:|:--:|
+|`TapsellPlus_OnResponse`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
+|`TapsellPlus_OnOpened`|هنگام باز شدن تبلیغ|
+|`TapsellPlus_OnClosed`|در صورت بسته شدن تبلیغ|
+|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|
 
 
-## نمایش تبلیغ
-با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
+> برای پیاده‌سازی کالبک‌های لازم به [بخش اول](/plus-sdk/b4a/initialize/index.html) مراجعه کنید
 
-```javascript
-TapsellPlus.showRewardedVideoAd(responseId, onOpened, onClosed, onRewarded, onError);
+
+### ۲. درخواست و سپس نمایش تبلیغ
+
+مورد نیاز: **شناسه‌ی تبلیغ یا Zone Id**
+
+از کد زیر برای درخواست تبلیغ استفاده کنید:
+
+```vb
+' Dim tapsellPlus As TapsellPlus (in `Sub Globals`)
+
+
+Dim zoneId As String = "شناسه‌ی تبلیغ"
+tapsellPlus.RequestRewardedVideoAd(zoneId)
 ```
 
-شناسه‌ی
-`responseId`
-برابر مقداری ست که هنگام درخواست تبلیغ از
-promise
-به دست می‌آید
+کالبک‌های مورد استفاده در درخواست:
 
-اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است :
+|نام کالبک|شرح|
+|:--:|:--:|
+|`TapsellPlus_OnResponse`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
+|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|
 
-| تابع | توضیحات |
-| - | - |
-| `onOpened(data: object)` | زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد |
-| `onClosed(data: object)` | زمانی که پنجره تبلیغ بسته شود. این اکشن به منزله پایان تبلیغ نمی‌باشد |
-| `onRewarded(data: object)` | زمانی که تبلیغ به طور کامل نمایش داده شده و باید جایزه به کاربر تعلق بگیرد |
-| `onError(error: object)` | هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید |
+در صورتی که `responseId` حاصل در کالبک برگردد می‌توانید برای نمایش تبلیغ کد زیر را فراخوانی کنید:  
+
+```vb
+' responseId returned from `Sub TapsellPlus_OnResponse` after requesting the ad
+
+tapsellPlus.ShowRewardedVideo(responseId)
+```
+
+> هنگام درخواست تبلیغ باید ترتیب رعایت شود. زیر کالبک `OnResponse` این شناسه‌ها را به یک کالبک ارسال می‌کند و به همین درخواست همزمان برای این حالت پیچیده خواهد شد.
+{:data-title="درخواست همزمان" data-color="orange"}
+
+
+کالبک‌های مورد استفاده در نمایش تبلیغ:
+
+|نام کالبک|شرح|
+|:--:|:--:|
+|`TapsellPlus_OnOpened`|هنگام باز شدن تبلیغ|
+|`TapsellPlus_OnClosed`|در صورت بسته شدن تبلیغ|
+|`TapsellPlus_OnRewarded`|در صورتی که کاربر تمام تبلیغ را ببیند و جایزه تعلق بگیرد|
+|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|

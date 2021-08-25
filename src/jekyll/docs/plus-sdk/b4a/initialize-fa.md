@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: راه اندازی تپسل پلاس در Basic4Android
+title: راه اندازی تپسل پلاس در B4A
 lang: fa
 permalink: /plus-sdk/b4a/initialize/index.html
 toc: true # table of contents
@@ -11,9 +11,13 @@ toc: true # table of contents
 
 ## دریافت پکیج تپسل پلاس
 
+[//]: # (This link must be updated along with the link in "sdkPlatforms.yml" file - This is the download link)
+
 پکیج نسخه‌ی نهایی تپسل پلاس را از
-[**این لینک**](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases)
+[**این لینک**](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases/download/2.1.3/TapsellPlusB4A-2.1.3.zip)
 دریافت کنید.
+
+![version](https://img.shields.io/github/v/release/tapsellorg/TapsellPlusSDK-B4APlugin?style=plastic)
 
 برای مشاهده‌ی تمام نسخه‌های منتشر شده به
 [صفحه‌ی دانلودها](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases)
@@ -58,7 +62,7 @@ B4A
 `TapsellPlusB4A`
 را فعال کنید.
 
-> در صورتی که هنگام فعال کردن کتابخانه پیام خطایی چاپ شد آنرا در [لیست خطاهای احتمالی](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue) جستجو کنید
+> در صورتی که هنگام فعال کردن کتابخانه پیام خطایی چاپ شد آنرا در [لیست خطاهای احتمالی](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue) جست جو کنید
 {:data-title="رخداد خطا" data-color="orange"}
 
 همچنین کتابخانه‌ی
@@ -93,6 +97,39 @@ B4A
 
 پس از این موارد، حال هنگام فعالسازی تپسل پلاس در کد پروژه است:
 
+
+### اضافه‌کردن مانیفست
+
+ابتدا به `Manifest Editor` رفته و کد زیر را اضافه کنید:
+
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.Complete)
+```
+
+> مانیفست `TapsellPlusB4A.Complete` دارای محتوای مورد نیاز برای همه‌ی ادنتورکهاست (شبکه‌های تبلیغاتی همانند ادموب و تپسل)  
+> در صورتی که میخواهید فقط ادنتورک تپسل را استفاده کنید میتوانید در عوض از `TapsellPlusB4A.Essential` استفاده کنید.  
+>
+> در صورت استفاده از Essential برای اضافه‌کردن هر ادنتورک بایستی مانیفست آنرا نیز اضافه کنید  
+> 
+> در بخش [شبکه‌های تبلیغاتی](/plus-sdk/b4a/add-adnetworks/index.html) حول این مورد بیشتر مطالعه کنید
+{:data-title="نکته در مورد مانیفست" data-color="blue"}
+
+### فعالسازی MultiDex
+
+سپس در فایل پروژه خط زیر را در `Region project attributes` قرار دهید:
+
+```vb
+#MultiDex: true
+```
+
+
+> پیاده سازی شده‌ی این مورد در سمپل پروژه از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample/blob/c3db2c060e6cf9d1627c4d4a0aaa397fb8444f23/tapsell.b4a#L25) قابل دسترسی ست.
+{:data-title="مثال در نمونه کد" data-color="green"}
+
+
+
+### اضافه‌کردن کد Initialization
+
 در بخش `Sub Globals` این کد را اضافه کنید:
 
 ```vb
@@ -116,8 +153,15 @@ Sub Activity_Create(FirstTime As Boolean)
 End Sub
 ```
 
+> در صورت موفقیت آمیز بودن این پروسه بعد از چند ثانیه کالبک `TapsellPlus_OnSuccess` صدا زده می‌شود.
+{:data-title="کالبک Initialization" data-color="blue"}
+
 
 ## (اختیاری) تنظیمات اضافه کالبک‌ها
+
+> از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample/blob/0ed4cf5b1ec275061b20e600a87eae47b29b1c49/tapsell.b4a#L155) به پیاده سازی نمونه در گیتهاب مراجعه کنید
+{:data-title="نمونه پیاده سازی" data-color="green"}
+
 
 هنگام درخواست تبلیغ رخدادهای مختلف به شما گزارش داده می‌شود (مانند تکمیل، بسته شدن یا خطا).  
 برای دریافت این اطلاعات بایستی کالبک‌های زیر را در برنامه اضافه کنید:
@@ -174,5 +218,6 @@ AddPermission(android.permission.READ_PHONE_STATE)
 ```
 
 ---
+
 
 برای درخواست تبلیغ به [صفحه‌ی اصلی](/plus-sdk/b4a/main/index.html) مراجعه کنید و تبلیغ مورد نظر را مطابق مستندات بسازید

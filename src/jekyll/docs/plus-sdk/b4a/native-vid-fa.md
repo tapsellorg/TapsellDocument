@@ -1,18 +1,17 @@
 ---
 layout: classic-docs
-title: پیاده سازی تبلیغات همسان در B4A
+title: پیاده سازی تبلیغات ویدئوی همسان
 lang: fa
-permalink: /plus-sdk/b4a/native/index.html
+permalink: /plus-sdk/b4a/native-vid/index.html
 toc: true
 ---
 
-> برای مشاهد‌ه‌ی نمونه پیاده سازی شده در گیتهاب به [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample/blob/0ed4cf5b1ec275061b20e600a87eae47b29b1c49/tapsell.b4a#L183) مراجعه نمایید
+> برای مشاهد‌ه‌ی نمونه پیاده سازی شده در گیتهاب به [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample/blob/c3db2c060e6cf9d1627c4d4a0aaa397fb8444f23/tapsell.b4a#L192) مراجعه نمایید
 {:data-title="نمونه‌ی این تبلیغ" data-color="green"}
 
 
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
-
+ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) ویدئوی همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 
 سپس شناسه‌ی تبلیغ مورد نظر را کپی کنید. این شناسه
@@ -40,7 +39,7 @@ toc: true
 
 Dim zoneId As String = "شناسه‌ی تبلیغ"
 
-tapsellPlus.RequestAndShowNativeAd(zoneId, panel)
+tapsellPlus.RequestAndShowNativeVideoAd(zoneId, panel)
 ```
 
 کالبک‌های مورد استفاده در این تبلیغ:

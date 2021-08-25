@@ -5,7 +5,7 @@ lang: fa
 permalink: /plus-sdk/b4a/main/index.html
 toc: true
 sdkPlatform:
-  name: plusb4a
+  name: plusB4A
   logo: /images/sdk-platforms/b4a.png
 ---
 
@@ -13,4 +13,5 @@ sdkPlatform:
 - [جایزه‌ای]({{site.baseurl}}/plus-sdk/b4a/rewarded)
 - [آنی]({{site.baseurl}}/plus-sdk/b4a/interstitial)
 - [همسان]({{site.baseurl}}/plus-sdk/b4a/native)
+- [ویدئوی همسان]({{site.baseurl}}/plus-sdk/b4a/native-vid)
 - [استاندارد]({{site.baseurl}}/plus-sdk/b4a/standard)
