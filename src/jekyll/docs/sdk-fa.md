@@ -54,6 +54,18 @@ permalink: /sdk/index.html
 
   <div class="col-12 col-sm-6">
     <div class="home-card">
+      <h2>B4A</h2>
+      <ul>
+        <li><a href="{{ site.baseurl }}/plus-sdk/b4a/main">مستندات</a></li>
+        <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-B4ASample">پروژه نمونه</a></li>
+        <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin">Source Code</a></li>
+        <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues">لیست سوالات</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-12 col-sm-6">
+    <div class="home-card">
       <h2>ReactNative</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/plus-sdk/reactnative/main">مستندات</a></li>
