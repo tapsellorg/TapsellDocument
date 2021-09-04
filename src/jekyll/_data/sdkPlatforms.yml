@@ -47,3 +47,13 @@ plusReactnative:
   releaseNotesFileFa: releases/plus-reactnative.md
   github: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin
   issues: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/issues?q=is%3Aissue
+
+plusB4A:
+  sdkVersion: 2.1.3
+  sample: https://github.com/tapsellorg/TapsellPlusSDK-B4ASample
+  releaseNotesFileFa: releases/plus-b4a.md
+  github: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin
+  issues: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue
+  downloadLinks:
+    - link: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases/download/2.1.3/TapsellPlusB4A-2.1.3.zip
+      name: Download package
