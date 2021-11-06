@@ -32,7 +32,7 @@ allprojects {
 ```gradle
 dependencies {
     ....
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:2.1.3'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:2.1.4'
     ....
 }
 ```
@@ -91,6 +91,12 @@ public class MainActivity extends AppCompatActivity {
 
 ```java
 TapsellPlus.setGDPRConsent(this, true);
+```
+
+در صورت نیاز به نمایش مجدد دیالوگ GDPR برای کاربر می‌توانید از کد زیر استفاده نمایید:
+
+```java
+TapsellPlus.showGDPRDialog(/* activity */, this)
 ```
 
 ## دسترسی‌ها
