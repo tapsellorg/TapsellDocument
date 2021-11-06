@@ -96,7 +96,7 @@ TapsellPlus.setGDPRConsent(this, true);
 در صورت نیاز به نمایش مجدد دیالوگ GDPR برای کاربر می‌توانید از کد زیر استفاده نمایید:
 
 ```java
-TapsellPlus.showGDPRDialog(/* activity */, this)
+TapsellPlus.showGDPRDialog(/* activity */ this)
 ```
 
 ## دسترسی‌ها
