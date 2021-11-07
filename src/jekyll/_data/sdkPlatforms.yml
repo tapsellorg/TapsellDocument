@@ -1,5 +1,5 @@
 tapsellAndroid:
-  sdkVersion: 4.7.2
+  sdkVersion: 4.7.3
   sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
   releaseNotesFileFa: releases/tapsell-android-fa.md
   releaseNotesFileEn: releases/tapsell-android-en.md
@@ -23,7 +23,7 @@ tapsellB4A:
 
 
 plusAndroid:
-  sdkVersion: 2.1.3
+  sdkVersion: 2.1.5
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
   releaseNotesFileFa: releases/plus-android.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue
