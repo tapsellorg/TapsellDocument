@@ -19,7 +19,7 @@ permalink: /sdk/index.html
       </ul>
     </div>
   </div>
-  
+
   <div class="col-12 col-sm-6">
     <div class="home-card">
       <h2>Unity</h2>
@@ -74,9 +74,7 @@ permalink: /sdk/index.html
       <h2>Android</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/tapsell-sdk/android/main">مستندات</a></li>
-        <li><a href="https://github.com/tapsellorg/TapsellSDK-AndroidSample">پروژه نمونه Java</a></li>
-        <li><a href="https://github.com/tapsellorg/TapsellSDK-KotlinSample">پروژه نمونه Kotlin</a></li>
-        <li><a href="https://github.com/tapsellorg/TapsellSDK-EclipseSample">پروژه نمونه Eclipse</a></li>
+        <li><a href="https://github.com/tapsellorg/TapsellSDK-AndroidSample">پروژه نمونه</a></li>
       </ul>
     </div>
   </div>
