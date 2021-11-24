@@ -165,37 +165,5 @@ fa:
           - name: VAST
             link: /tapsell-sdk/android/vast
 
-      - name: Unity
-        link: /tapsell-sdk/unity/main
-        children:
-          - name: راه اندازی اندروید
-            link: /tapsell-sdk/unity/initialize-android
-
-          - name: جایزه‌ای/آنی
-            link: /tapsell-sdk/unity/rewarded-interstitial
-
-          - name: بنر استاندارد
-            link: /tapsell-sdk/unity/standard
-
-          - name: بنر همسان
-            link: /tapsell-sdk/unity/native
-
-      - name: React Native
-        link: /tapsell-sdk/reactnative/main
-        children:
-          - name: راه اندازی اندروید
-            link: /tapsell-sdk/reactnative/initialize-android
-
-          - name: راه اندازی iOS
-            link: /tapsell-sdk/reactnative/initialize-ios
-
-          - name: جایزه‌ای/آنی
-            link: /tapsell-sdk/reactnative/rewarded-interstitial
-
-          - name: بنر استاندارد
-            link: /tapsell-sdk/reactnative/standard
-
-          - name: بنر همسان
-            link: /tapsell-sdk/reactnative/native
       - name: سیستم صحت سنجی
         link: /s2s
