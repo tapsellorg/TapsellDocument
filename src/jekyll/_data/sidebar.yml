@@ -54,9 +54,6 @@ fa:
           - name: تست
             link: /plus-sdk/android/adnetworks-test
 
-      - name: iOS
-        link: https://github.com/tapsellorg/TapsellPlusSDK-iOS-Releases/releases
-
       - name: Unity
         link: /plus-sdk/unity/main
         children:
@@ -167,9 +164,6 @@ fa:
 
           - name: VAST
             link: /tapsell-sdk/android/vast
-
-      - name: iOS
-        link: /invalid-page
 
       - name: Unity
         link: /tapsell-sdk/unity/main
