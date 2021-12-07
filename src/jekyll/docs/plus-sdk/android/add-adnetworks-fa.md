@@ -80,7 +80,7 @@ dependencies {
     implementation 'com.applovin:applovin-sdk:10.3.1'
 
 
-    // For Mintegral
+    // For Mintegral - NOTE: Add custom repository (explained after this)
     implementation "com.mbridge.msdk.oversea:videojs:15.6.11"
     implementation "com.mbridge.msdk.oversea:mbbanner:15.6.11"
     implementation "com.mbridge.msdk.oversea:mbjscommon:15.6.11"
