@@ -32,7 +32,7 @@ allprojects {
 ```gradle
 dependencies {
     ....
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:2.1.5'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:2.1.6'
     ....
 }
 ```
