@@ -62,3 +62,6 @@ TapsellPlus.initialize(
 |    AppLovin    |     Rewarded Video     |`5d3eb48c3aef7a0001406f84`|
 |    AppLovin    |     Interstitial     |`5d3eb4fa3aef7a0001406f85`|
 |    AppLovin    |     Standard     |`5d3eb5337a9b060001892441`|
+|    Mintegral    |     Rewarded Video     |`612232e33cf0307ab73e9a3f`|
+|    Mintegral    |     Interstitial     |`612b6f24e2645f79d3f3549e`|
+|    Mintegral    |     Standard     |`615800246cd7ee3cd28f15d6`|
