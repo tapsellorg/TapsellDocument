@@ -11,7 +11,7 @@ toc: true # table of contents
 برای اضافه کردن کتابخانه‌های مورد نیاز ۲ روش وجود دارد از هرکدام که مایل هستید استفاده کنید.
 
 ### ۱. استفاده از Gradle
-۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.6/TapsellPlusUnity-Gradle-v2.1.6.unitypackage) دریافت نمایید. 
+۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.6/TapsellPlusUnity-Gradle-v2.1.6.unitypackage) دریافت نمایید. 
 ۲. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر TapsellPlus از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 
 ```console
