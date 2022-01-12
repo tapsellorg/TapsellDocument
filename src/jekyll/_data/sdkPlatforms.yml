@@ -37,7 +37,7 @@ plusFlutter:
   github: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin
 
 plusUnity:
-  sdkVersion: 2.1.3
+  sdkVersion: 2.1.6
   releaseNotesFileFa: releases/plus-unity.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020/issues?q=is%3Aissue
 

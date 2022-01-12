@@ -51,6 +51,7 @@ toc: true
 
 
 
+
 ## تنظیمات Gradle
 در قسمت `dependencies` در آدرس `Assets\Plugins\Android\mainTemplate.gradle` شبکه‌های تبلیغاتی که مایل هستید را مطابق الگوی زیر اضافه کنید.
 
@@ -58,16 +59,51 @@ toc: true
 dependencies {
     .......
     // for AdMob
-    implementation 'com.google.android.gms:play-services-ads:20.2.0'
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
     // for UnityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.4'
+    implementation 'com.unity3d.ads:unity-ads:3.7.5'
     // for Chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
     // for AdColony
-    implementation 'com.adcolony:sdk:4.5.0'
+    implementation 'com.adcolony:sdk:4.6.5'
     // for Applovin
-    implementation 'com.applovin:applovin-sdk:10.3.1'
+    implementation 'com.applovin:applovin-sdk:10.3.4'
+
+
+
+    // For Mintegral - NOTE: Add custom repository (explained after this)
+    implementation "com.mbridge.msdk.oversea:videojs:15.6.11"
+    implementation "com.mbridge.msdk.oversea:mbbanner:15.6.11"
+    implementation "com.mbridge.msdk.oversea:mbjscommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:playercommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:reward:15.6.11"
+    implementation "com.mbridge.msdk.oversea:videocommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:same:15.6.11"
+    implementation "com.mbridge.msdk.oversea:interstitialvideo:15.6.11"
     .....
+}
+```
+
+
+همچنین بسته به ادنتورک اضافه شده بایستی repository مورد استفاده برای دانلود آنهایی که از mavenCentral استفاده نمی‌کنند، نیز اضافه شود:
+
+```gradle
+allprojects {  
+    repositories {
+        //....
+
+        // TapsellPlus, Tapsell, ...
+        mavenCentral()
+
+        // Old libraries
+        jcenter()
+
+        // Mintegral - This will lead to 403 even with Shecan and FOD. Needs a strong VPN protocol
+        maven {
+            url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+        }
+        
+    }  
 }
 ```
 
@@ -77,18 +113,36 @@ dependencies {
 ```xml
 <dependencies>
   <androidPackages>
+     
+        <!-- AdMob -->
+        <androidPackage spec="com.google.android.gms:play-services-ads:20.4.0"/>
 
-    // for AdMob
-    <androidPackage spec="com.google.android.gms:play-services-ads:20.2.0"/>
-    // for UnityAds
-    <androidPackage spec="com.unity3d.ads:unity-ads:3.7.4"/>
-    // for Chartboost
-    <androidPackage spec="com.chartboost:chartboost-sdk:8.2.0"/>
-    // for AdColony
-    <androidPackage spec="com.adcolony:sdk:4.5.0"/>
-    // for Applovin
-    <androidPackage spec="com.applovin:applovin-sdk:10.3.1"/>
-    ...
+        <!-- UnityAds -->
+        <androidPackage spec="com.unity3d.ads:unity-ads:3.7.5"/>
+
+        <!-- ChartBoost -->
+        <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
+
+        <!-- AdColony -->
+        <androidPackage spec="com.adcolony:sdk:4.6.5"/>
+
+        <!-- AppLovin -->
+        <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
+
+        <!-- Mintegral - make sure you uncomment the custom repository down below -->
+        <androidPackage spec="com.mbridge.msdk.oversea:videojs:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:playercommon:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:reward:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:videocommon:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:same:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:15.6.11"/>
+
+        <repositories>
+            <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->
+            <repository>https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea</repository>
+        </repositories>
   </androidPackages>
 </dependencies>
 ```
