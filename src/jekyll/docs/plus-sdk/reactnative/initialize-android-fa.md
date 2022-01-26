@@ -53,7 +53,7 @@ TapsellPlus.initialize(APP_KEY);
 > برای اطلاعات بیشتر [این بخش](https://reactnative.dev/docs/network#using-fetch) از مستندات ری‌اکت نیتیو را مطالعه کنید.  
 > 
 > راه حل سریع:  
-> عبارت `android:usesCleartextTraffic="false"` را به اتریبیوتهای تگ application در مانیفست اضافه کنید:
+> عبارت `android:usesCleartextTraffic="true"` را به اتریبیوتهای تگ application در مانیفست اضافه کنید:
 > 
 > ```xml
 > <!-- android/app/src/main/AndroidManifest.xml -->
