@@ -2,6 +2,12 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+## 2.1.6 (05, Feb, 2022)
+- رفع مشکل گزارش شده در metro bundler پس از نصب SDK روی react native نسخه های ۰.۶۴.۰ به بالا
+- رفع مشکل کرش در نسخه iOS
+- بروزرسانی نسخه react native به ۰.۶۷.۱ در اپلیکیشن سمپل
+- افزودن پشتیبانی از hermes engine در اپلیکیشن سمپل
+
 ## 2.1.3 (24, July, 2021)
 - [استفاده از نسخه‌ی ۲.۱.۳ تپسل پلاس](https://docs.tapsell.ir/plus-sdk/android/main/#v213---20210721)
 - [استفاده از نسخه‌ی ۴.۷.۲ تپسل](https://docs.tapsell.ir/tapsell-sdk/android/main/#472---20210720)
