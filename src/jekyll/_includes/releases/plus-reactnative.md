@@ -7,6 +7,7 @@
 - رفع مشکل کرش در نسخه iOS
 - بروزرسانی نسخه react native به ۰.۶۷.۱ در اپلیکیشن سمپل
 - افزودن پشتیبانی از hermes engine در اپلیکیشن سمپل
+
 #### Android
 - [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۶](https://docs.tapsell.ir/plus-sdk/android/main/#v216---20220111)
 - [بروزرسانی لایبرری اندروید تپسل به نسخه‌ی ۴.۷.۴](https://docs.tapsell.ir/tapsell-sdk/android/main/#474---20220110)
