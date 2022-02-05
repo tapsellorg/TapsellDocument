@@ -58,13 +58,13 @@ toc: true
 
 ```gradle
 dependencies {
-    .......
+    //.......
     //for adMob
-    implementation 'com.google.android.gms:play-services-ads:20.2.0'
-
+    // For 20.0.0 and later <meta-data> tag is needed
+    // For lower versions meta-data tag is not needed
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
     //for unityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.4'
-
+    implementation 'com.unity3d.ads:unity-ads:3.7.5'
     //for chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
     implementation ("com.google.android.gms:play-services-base:17.6.0"){
@@ -75,14 +75,22 @@ dependencies {
     }
     
     //for adcolony
-    implementation 'com.adcolony:sdk:4.5.0'
+    implementation 'com.adcolony:sdk:4.6.5'
     implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
         exclude group: 'com.android.support'
     }
     
     //for applovin
-    implementation 'com.applovin:applovin-sdk:10.3.1'
-    .....
+    implementation 'com.applovin:applovin-sdk:10.3.4'
+    // For Mintegral - NOTE: Add custom repository (explained after this)
+    implementation "com.mbridge.msdk.oversea:videojs:15.6.11"
+    implementation "com.mbridge.msdk.oversea:mbbanner:15.6.11"
+    implementation "com.mbridge.msdk.oversea:mbjscommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:playercommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:reward:15.6.11"
+    implementation "com.mbridge.msdk.oversea:videocommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:same:15.6.11"
+    implementation "com.mbridge.msdk.oversea:interstitialvideo:15.6.11"
 }
 ```
 
