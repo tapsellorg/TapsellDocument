@@ -82,6 +82,7 @@ dependencies {
     
     //for applovin
     implementation 'com.applovin:applovin-sdk:10.3.4'
+    
     // For Mintegral - NOTE: Add custom repository (explained after this)
     implementation "com.mbridge.msdk.oversea:videojs:15.6.11"
     implementation "com.mbridge.msdk.oversea:mbbanner:15.6.11"
@@ -94,29 +95,31 @@ dependencies {
 }
 ```
 
-برای adcolony و chartboost لازم است ریپازیتوری‌های زیر به android/build.gradle پروژه اضافه شوند.
-
-
+همچنین بسته به ادنتورک اضافه شده بایستی repository مورد استفاده برای دانلود آنهایی که از mavenCentral استفاده نمی‌کنند، نیز اضافه شود:
 
 ```gradle
 allprojects {  
     repositories {
-        ....
+        //....
 
+        // TapsellPlus, Tapsell, ...
         mavenCentral()
+        
+        // Old libraries
         jcenter()
 
-        // for v1.2.3-rc4 and before
-        //maven {  
-        //    url  "https://adcolony.bintray.com/AdColony"
-        //}
-        //maven {
-        //    url "https://chartboostmobile.bintray.com/Chartboost"
-        //}
-        ....
+        // Mintegral - This will lead to 403 even with Shecan and FOD. Needs a strong VPN protocol
+        maven {
+            url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+        }
     }  
 }
 ```
+
+
+> برای اضافه‌کردن **مینتگرال** نیاز به VPN یا پراکسی با پروتکل مناسب مانند Kerio یا OpenVPN دارید. در حال حاضر این سرورها توسط شکن یا FOD پشتیبانی نمی‌شوند
+{:data-title="نکته برای استفاده از مینتگرال" data-color="red"}
+
 
 برای استفاده از شبکه‌ی تبلیغاتی Unity Ads می‌بایست minSDK اپلیکیشن خود را ۱۹ قرار دهید. و یا این که خط زیر را به فایل AndroidManifest.xml پروژه‌تان اضافه نمایید.
 
