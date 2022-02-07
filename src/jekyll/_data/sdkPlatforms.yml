@@ -8,7 +8,7 @@ tapsellAndroid:
 
 tapsellUnity:
   sdkVersion: 4.6.2
-  releaseNotesFileFa: releases/tapsell-unity.md 
+  releaseNotesFileFa: releases/tapsell-unity.md
 
 tapsellReact:
   sdkVersion: 4.6.2
@@ -30,7 +30,7 @@ plusAndroid:
 
 
 plusFlutter:
-  sdkVersion: 2.1.4
+  sdkVersion: 2.1.6
   sample: https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample
   releaseNotesFileFa: releases/plus-flutter.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues?q=is%3Aissue
