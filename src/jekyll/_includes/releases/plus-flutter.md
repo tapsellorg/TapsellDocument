@@ -2,6 +2,18 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/blob/master/CHANGELOG.md))
 
+## 2.1.6 (07, Feb, 2022)
+- رفع مشکل نیتیو بنر AdMob
+- بروزرسانی TargetSDK به 31
+- بهبود خطای درخواست تبلیغ  
+  برای استفاده از این امکان
+  `TapsellPlus.instance.setDebugMode(Log.DEBUG)`
+  را بعد از initialize فراخوانی نمایید
+
+#### Android
+- [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۶](https://docs.tapsell.ir/plus-sdk/android/main/#v216---20220111)
+- [بروزرسانی لایبرری اندروید تپسل به نسخه‌ی ۴.۷.۴](https://docs.tapsell.ir/tapsell-sdk/android/main/#474---20220110)
+
 ## 2.1.4
 - [استفاده از نسخه‌ی ۲.۱.۳ تپسل پلاس](https://docs.tapsell.ir/plus-sdk/android/main/#v213---20210721)
 - [استفاده از نسخه‌ی ۴.۷.۲ تپسل](https://docs.tapsell.ir/tapsell-sdk/android/main/#472---20210720)
