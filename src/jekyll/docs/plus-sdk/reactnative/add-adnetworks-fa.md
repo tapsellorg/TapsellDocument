@@ -58,13 +58,13 @@ toc: true
 
 ```gradle
 dependencies {
-    .......
+    //.......
     //for adMob
-    implementation 'com.google.android.gms:play-services-ads:20.2.0'
-
+    // For 20.0.0 and later <meta-data> tag is needed
+    // For lower versions meta-data tag is not needed
+    implementation 'com.google.android.gms:play-services-ads:20.4.0'
     //for unityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.4'
-
+    implementation 'com.unity3d.ads:unity-ads:3.7.5'
     //for chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
     implementation ("com.google.android.gms:play-services-base:17.6.0"){
@@ -75,40 +75,51 @@ dependencies {
     }
     
     //for adcolony
-    implementation 'com.adcolony:sdk:4.5.0'
+    implementation 'com.adcolony:sdk:4.6.5'
     implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
         exclude group: 'com.android.support'
     }
     
     //for applovin
-    implementation 'com.applovin:applovin-sdk:10.3.1'
-    .....
+    implementation 'com.applovin:applovin-sdk:10.3.4'
+    
+    // For Mintegral - NOTE: Add custom repository (explained after this)
+    implementation "com.mbridge.msdk.oversea:videojs:15.6.11"
+    implementation "com.mbridge.msdk.oversea:mbbanner:15.6.11"
+    implementation "com.mbridge.msdk.oversea:mbjscommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:playercommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:reward:15.6.11"
+    implementation "com.mbridge.msdk.oversea:videocommon:15.6.11"
+    implementation "com.mbridge.msdk.oversea:same:15.6.11"
+    implementation "com.mbridge.msdk.oversea:interstitialvideo:15.6.11"
 }
 ```
 
-برای adcolony و chartboost لازم است ریپازیتوری‌های زیر به android/build.gradle پروژه اضافه شوند.
-
-
+همچنین بسته به ادنتورک اضافه شده بایستی repository مورد استفاده برای دانلود آنهایی که از mavenCentral استفاده نمی‌کنند، نیز اضافه شود:
 
 ```gradle
 allprojects {  
     repositories {
-        ....
+        //....
 
+        // TapsellPlus, Tapsell, ...
         mavenCentral()
+        
+        // Old libraries
         jcenter()
 
-        // for v1.2.3-rc4 and before
-        //maven {  
-        //    url  "https://adcolony.bintray.com/AdColony"
-        //}
-        //maven {
-        //    url "https://chartboostmobile.bintray.com/Chartboost"
-        //}
-        ....
+        // Mintegral - This will lead to 403 even with Shecan and FOD. Needs a strong VPN protocol
+        maven {
+            url  "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea"
+        }
     }  
 }
 ```
+
+
+> برای اضافه‌کردن **مینتگرال** نیاز به VPN یا پراکسی با پروتکل مناسب مانند Kerio یا OpenVPN دارید. در حال حاضر این سرورها توسط شکن یا FOD پشتیبانی نمی‌شوند
+{:data-title="نکته برای استفاده از مینتگرال" data-color="red"}
+
 
 برای استفاده از شبکه‌ی تبلیغاتی Unity Ads می‌بایست minSDK اپلیکیشن خود را ۱۹ قرار دهید. و یا این که خط زیر را به فایل AndroidManifest.xml پروژه‌تان اضافه نمایید.
 

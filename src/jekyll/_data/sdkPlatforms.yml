@@ -8,7 +8,7 @@ tapsellAndroid:
 
 tapsellUnity:
   sdkVersion: 4.6.2
-  releaseNotesFileFa: releases/tapsell-unity.md 
+  releaseNotesFileFa: releases/tapsell-unity.md
 
 tapsellReact:
   sdkVersion: 4.6.2
@@ -42,7 +42,7 @@ plusUnity:
   issues: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020/issues?q=is%3Aissue
 
 plusReactnative:
-  sdkVersion: 2.1.3
+  sdkVersion: 2.1.6
   sample: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativeSample
   releaseNotesFileFa: releases/plus-reactnative.md
   github: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin
