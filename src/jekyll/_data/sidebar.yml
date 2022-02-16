@@ -1,30 +1,31 @@
 en:
   - name: Tapsell Plus
-      icon: m-sdk
-      children:
-        - name: Unity
-          link: /plus-sdk/unity/main
-          children:
-            - name: Android Initialization
-              link: /plus-sdk/unity/initialize-android
+    icon: m-sdk
+    children:
+      - name: Unity
+        link: /plus-sdk/unity/main
+        children:
+          - name: Android Initialization
+            link: /plus-sdk/unity/initialize-android
 
-            - name: iOS Initialization
-              link: /plus-sdk/unity/initialize-ios
+          - name: iOS Initialization
+            link: /plus-sdk/unity/initialize-ios
 
-            - name: Rewarded/Interstitial
-              link: /plus-sdk/unity/rewarded-interstitial
+          - name: Rewarded/Interstitial
+            link: /plus-sdk/unity/rewarded-interstitial
 
-            - name: Native
-              link: /plus-sdk/unity/native
+          - name: Native
+            link: /plus-sdk/unity/native
 
-            - name: Standard
-              link: /plus-sdk/unity/standard
+          - name: Standard
+            link: /plus-sdk/unity/standard
 
-            - name: Ad Networks
-              link: /plus-sdk/unity/add-adnetworks
+          - name: Ad Networks
+            link: /plus-sdk/unity/add-adnetworks
 
-            - name: Test
-              link: /plus-sdk/unity/adnetworks-test
+          - name: Test
+            link: /plus-sdk/unity/adnetworks-test
+
   - name: Tapsell
     icon: m-sdk
     children:
@@ -193,3 +194,4 @@ fa:
 
       - name: سیستم صحت سنجی
         link: /s2s
+
