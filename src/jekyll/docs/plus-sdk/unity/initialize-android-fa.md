@@ -103,7 +103,7 @@ Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradl
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
 ```
 
-۴. 
+۷. 
 اگر تکه کد زیر در آدرس `Assets\Plugins\Android\launcherTemplate.gradle` وجود نداشت آن را اضافه نمایید:
 ```gradle
 android {
@@ -114,12 +114,12 @@ android {
 }
 ```
 
-۵. به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و عبارت `mavenCentral()` را به هر دو بخش `repositories` اضافه نمایید. سپس ورژن `com.android.tools.build:gradle` را به ۳.۶.۰ تغییر دهید.
+۸. به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و عبارت `mavenCentral()` را به هر دو بخش `repositories` اضافه نمایید. سپس ورژن `com.android.tools.build:gradle` را به ۳.۶.۰ تغییر دهید.
 
 
 > دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
 
-۶. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید.
+۹. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید.
 ```console
 D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
 ```
