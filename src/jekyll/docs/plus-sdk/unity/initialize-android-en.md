@@ -51,7 +51,7 @@ android {
 5. Go to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. Then change the version of `com.android.tools.build:gradle` to 3.6.0.
 
 
-> Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from this link to add a version of Gradle that supports Android 11.
+> Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
 6. After adding TepselPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error.
 ```console
@@ -75,17 +75,61 @@ android {
 
 [Google Documentation](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage)
 
-2. 
+2. check `Jetifier` and` Auto Resolution` from the following menus: (Auto Resolution check is optional, but it's better to enable it so that you do not have to resolve libraries manually each time)
 
 ```console
 Assets > External Dependency Manager > Android Resolver > Settings > Use Jetifier
 Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
 ```
 
+3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.3/TapsellPlusUnity-EDM-v2.1.3.unitypackage).
+4. Add the downloaded `unitypackage` to your project as follows: (If the TapsellPlus folder already exists in your project, please remove it).
 
+```console
+Assets > Import Package > Custom Package...
+```
+
+5. Resolve libraries through the following menu to ensure that the Tapsell Plus plugin is added:
 
 ```console
 Assets > External Dependency Manager > Android Resolver > Force Resolve
+```
+
+6. Add your own custom Gradle build file by enabling related checkboxes as follows:
+
+```console
+Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
+Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
+```
+7. Go to `Assets\Plugins\Android\launcherTemplate.gradle`, and add the following code snippet to it if not already added:
+```gradle
+android {
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+```
+
+8. Go to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. Then change the version of `com.android.tools.build:gradle` to 3.6.0.
+
+
+> Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
+
+9. After adding TepselPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error.
+```console
+D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
+```
+To enable MultiDex, go to `Assets\Plugins\Android\launcherTemplate.gradle` and add the following code snippet to it:
+```gradle
+android {
+  ...
+  defaultConfig {
+    ...
+    multiDexEnabled true
+  }
+  ...
+}
 ```
 
 ##Initialization
