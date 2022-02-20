@@ -6,10 +6,10 @@ permalink: /plus-sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 
-##Adding Tapsell Plus Unity package
+## Adding Tapsell Plus Unity package
 There are two ways to add the required libraries, use one of them.
 
-###1. Using Gradle
+### 1. Using Gradle
 1. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.6/TapsellPlusUnity-Gradle-v2.1.6.unitypackage).
 2. Add the downloaded `unitypackage` to your project as follows: (If the TapsellPlus folder already exists in your project, please remove it).
 
@@ -69,7 +69,7 @@ android {
 }
 ```
 
-###2. Using Resolver
+### 2. Using Resolver
 
 1. First, download the [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/releases) file. Then add it to your project according to the description of the following link:
 
@@ -132,7 +132,7 @@ android {
 }
 ```
 
-##Initialization
+## Initialization
 First, use the following code snippet to access Tepsell dependency codes.
 
 ```c#
@@ -151,13 +151,13 @@ TapsellPlus.Initialize(TAPSELLPLUS_KEY,
 
 You can now display the desired ad according to your needs and the description of each type of ad.
 
-##GDPR Configuration
+## GDPR Configuration
 Given that The Tepsel Plus library complies with the GDPR rules for displaying personalized ads, by default if the user uses your application with the IP of one of the countries covered by this law, it will display a dialog to user. If you want to determine the necessary access by yourself, instead of the user's decision, you can use the following code snippet, you can use the following code snippet. Note that this code snippet must be called after Tepsel Plus is initialized and before the ad request is applied to the result of your request. A value of true‌ means that you give ad networks the right to use the information to display personalized advertising.
 ```c#
 TapsellPlus.SetGdprConsent(true);
 ```
 
-##Sample Project
+## Sample Project
 for more information, please refer to the sample projects on Github.
 
 * [Sample project compatible with Unity 2020.3.9f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020)
