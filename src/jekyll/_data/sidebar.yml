@@ -1,4 +1,30 @@
 en:
+  - name: Tapsell Plus
+    icon: m-sdk
+    children:
+      - name: Unity
+        link: /plus-sdk/unity/main
+        children:
+          - name: Android Initialization
+            link: /plus-sdk/unity/initialize-android
+
+          - name: iOS Initialization
+            link: /plus-sdk/unity/initialize-ios
+
+          - name: Rewarded/Interstitial
+            link: /plus-sdk/unity/rewarded-interstitial
+
+          - name: Native
+            link: /plus-sdk/unity/native
+
+          - name: Standard
+            link: /plus-sdk/unity/standard
+
+          - name: Ad Networks
+            link: /plus-sdk/unity/add-adnetworks
+
+          - name: Test
+            link: /plus-sdk/unity/adnetworks-test
   - name: Tapsell
     icon: m-sdk
     children:
@@ -13,14 +39,14 @@ en:
 
           - name: Native Banner
             link: /tapsell-sdk/android/native
-          
+
           - name: Standard Banner
             link: /tapsell-sdk/android/standard
-            
+
           - name: Vast
             link: /tapsell-sdk/android/vast
-            
-          
+
+
 
 
 fa:
@@ -47,7 +73,7 @@ fa:
 
           - name: VAST
             link: /plus-sdk/android/vast
-          
+
           - name: شبکه‌های تبلیغاتی
             link: /plus-sdk/android/add-adnetworks
 
@@ -86,7 +112,7 @@ fa:
 
           - name: آنی/جایزه‌ای
             link: /plus-sdk/flutter/rewarded-interstitial
-          
+
           - name: همسان
             link: /plus-sdk/flutter/native
 
@@ -116,7 +142,7 @@ fa:
 
           - name: شبکه‌های تبلیغاتی
             link: /plus-sdk/reactnative/add-adnetworks
-          
+
           - name: تست
             link: /plus-sdk/reactnative/adnetworks-test
 
@@ -131,7 +157,7 @@ fa:
 
           - name: همسان
             link: /plus-sdk/b4a/native
-            
+
           - name: ویدئوی همسان
             link: /plus-sdk/b4a/native-vid
 
@@ -140,7 +166,7 @@ fa:
 
           - name: شبکه‌های تبلیغاتی
             link: /plus-sdk/b4a/add-adnetworks
-          
+
           - name: تست
             link: /plus-sdk/b4a/adnetworks-test
 
