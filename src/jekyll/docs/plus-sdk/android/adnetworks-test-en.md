@@ -5,11 +5,11 @@ lang: fa
 permalink: /plus-sdk/android/adnetworks-test/index.html
 toc: true
 ---
-* To make sure of the safety of the Adnetworks you added use `ZoneId` relevant to every of them. every `ZoneID` refers to one adnetwork and one kind of Ad and the ad shows on testing mode.
+* To make sure of the Performance accuracy of the Adnetworks that  you added, use `ZoneId` relevant to each  of them. every `ZoneID` refers to one adnetwork and one Ad type and the ad shows on testing mode.
    
-* Pay attention that you must use test`s appId on testing mode
+* Pay attention that you must use test`s `appId` on testing mode
 
-* When testing you must not use iran`s IP
+* When testing you must not use Iran`s IP
 
 * Do testing on build release mode
 
@@ -25,10 +25,10 @@ TapsellPlus.initialize(
 
 > **Using Admob Sdk**  
 > 
->  For using Admob you must put its needed Tag in manifest. for more information about the program refer to
+>  For using Admob you must put its needed Tag in manifest. for more information about the implementation refer to
 > [Adnetworks documentation](/plus-sdk/android/add-adnetworks/index.html)
 > 
-> you do not need the original `appId` for testing Admob and you can use test `appId`
+> you do not need the original `appId` for testing Admob and you can use test appId
 >
 > 
 > ```
@@ -40,7 +40,7 @@ TapsellPlus.initialize(
 
 ### AdZones
 
-For every Adnetwork and any Ad use the Following ZoneIDs for requisition and showing Ad. At the moment only the following Ad Type are usable.
+For every Adnetwork and any Ad use the Following ZoneIDs for request and show Ad. At the moment only the following AdTypes/adNetworks are usable.
 
 |        Ad Network      |              Ad Type              |ZoneId
 |:------------:|:----------------------------:|:----------------------------:|
