@@ -70,7 +70,6 @@ dependencies {
     def supportedChartboost = "8.2.1"
     implementation("com.chartboost:chartboost-sdk:$supportedChartboost")
 
-    // May be needed
     implementation ("com.google.android.gms:play-services-base:17.6.0"){
         exclude group: 'com.android.support'
     }
