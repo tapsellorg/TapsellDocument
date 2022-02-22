@@ -6,7 +6,7 @@ permalink: /plus-sdk/android/add-adnetworks/index.html
 toc: true
 ---
 
-If you attend to add more ad networks to your project, this page help so through it.
+If you want to add more ad networks to your project, this page help so through it.
 
 Here's a list of ad networks that are supported by TapsellPlus.
 
