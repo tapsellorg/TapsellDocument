@@ -5,7 +5,7 @@ en:
       - name: Android
         link: /plus-sdk/android/main
         children:
-          - name: Android Initialization
+          - name: Initialization
             link: /plus-sdk/android/initialize
 
           - name: Rewarded/Interstitial
