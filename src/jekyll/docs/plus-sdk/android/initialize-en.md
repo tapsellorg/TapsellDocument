@@ -13,17 +13,16 @@ First of all you will need to setup and import TapsellPlus into your project.
 
 In app(module)/`build.gradle`:
 
-```gradle
+```groovy
 dependencies {
-    // ....
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:2.1.6'
-    // ....
+    def tapsellPlus = "2.1.6"
+    implementation("ir.tapsell.plus:tapsell-plus-sdk-android:$tapsellPlus")
 }
 ```
 
-Also add this in `android {}`:
+Also add JAVA8 support in `android {}`:
 
-```gradle
+```groovy
 compileOptions {
   sourceCompatibility JavaVersion.VERSION_1_8
   targetCompatibility JavaVersion.VERSION_1_8
@@ -37,33 +36,32 @@ And do a Gradle sync.
 Use `TapsellPlus.initialize(context)` in the beginning of your app's entry point:
 
 ```java
-import ir.tapsell.plus.TapsellPlus;
+String tapsellPlusKey = "YOUR_TAPSELL_PLUS_APP_ID";
 
-public class MainActivity extends AppCompatActivity {
+TapsellPlus.initialize(this, tapsellPlusKey,
+		new TapsellPlusInitListener() {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ...
-        TapsellPlus.initialize(this, TAPSELL_KEY,
-				new TapsellPlusInitListener() {
-            @Override
-            public void onInitializeSuccess(AdNetworks adNetworks) {
-                Log.d("onInitializeSuccess", adNetworks.name());
-            }
-
-            @Override
-            public void onInitializeFailed(AdNetworks adNetworks,
-						AdNetworkError adNetworkError) {
-                Log.e("onInitializeFailed", "ad network: " + adNetworks.name() + ", error: " +	adNetworkError.getErrorMessage());
-            }
-        });
-        ...
+    public void onInitializeSuccess(AdNetworks adNetworks) {
+        // Init successful
     }
-}
+    @Override
+    public void onInitializeFailed(AdNetworks adNetworks,
+				AdNetworkError adNetworkError) {
+        // Error in initialization - Use provided parameters to see why
+    }
+});
 ```
 
-Get `TAPSELL_KEY` from [Tapsell dashboard](https://dashboard.tapsell.ir/) after building the app
+Get `tapsellPlusKey` from [Tapsell dashboard](https://dashboard.tapsell.ir/) after building the app
+
+> Also, you may want to activate **debug mode** to get some additional logs and information (specially when ad requests fail):
+>
+> ```java
+> TapsellPlus.setDebugMode(Log.DEBUG);
+> ```
+{:data-title="Debug Mode" data-color="green"}
+
+
 
 
 ## GDPR 
@@ -71,13 +69,15 @@ Get `TAPSELL_KEY` from [Tapsell dashboard](https://dashboard.tapsell.ir/) after 
 If GDPR matters to your product you need to consider applying it for the SDK to be able to use full functionality:
 
 ```java
-TapsellPlus.setGDPRConsent(this, true);
+Activity activity = this;
+TapsellPlus.setGDPRConsent(activity, true);
 ```
 
 You can show a default dialog for that as well:
 
 ```java
-TapsellPlus.showGDPRDialog(/* activity */ this)
+Activity activity = this;
+TapsellPlus.showGDPRDialog(activity);
 ```
 
 ## Optional permission

@@ -13,7 +13,7 @@ According to the following code, you can request Ad using the `TapsellPlus.reque
 ```java
 import ir.tapsell.plus.AdRequestCallback;
 import ir.tapsell.plus.TapsellPlus;
-.......
+
 private void requestAd() {
     TapsellPlus.requestRewardedVideoAd(
         CONTEXT,
@@ -30,18 +30,20 @@ private void requestAd() {
 
             @Override
             public void error(String message) {
+                // Error when requesting. Either handle it or retry
             }
 
     });
 }
 ```
 
-use `TapsellPlus.requestInterstitialAd` for interstitial Ad .
+Use `TapsellPlus.requestInterstitialAd` for interstitial Ad instead.
 
-> if you want to request again in error Callback, Be sure to do this with the help of a variable as a Counter.
-Because with the help of that variable you can set a limit on the number of times for request.
-For example, when you disable this adZone from the panel and if you request again each time in error Callback , without limiting the number of times, 
-Your program will fall into an infinite loop and its performance will get disrupted
+> If you want to request again in error Callback, Be sure to do this with the help of a variable as a Counter.
+> Because with the help of that variable you can set a limit on the number of times for request.
+> For example, when you disable this adZone from the panel and if you request again each time in error Callback , without limiting the number of times, 
+> Your program will fall into an infinite loop and its performance will get disrupted
+{:data-title="Retry requests" data-color="green"}
 
 ### Show Ad
 After Calling the `response` method and getting the `responseId` parameter, the Ad is ready to be shown and you can display it as the following
@@ -50,26 +52,27 @@ After Calling the `response` method and getting the `responseId` parameter, the 
 import ir.tapsell.plus.AdShowListener;
 .......
 TapsellPlus.showRewardedVideoAd(CONTEXT, rewardedResponseId,
-                new AdShowListener() {
-                    @Override
-                    public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.onOpened(tapsellPlusAdModel);
-                    }
+    new AdShowListener() {
+        @Override
+        public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
+            super.onOpened(tapsellPlusAdModel);
+        }
 
-                    @Override
-                    public void onClosed(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.onClosed(tapsellPlusAdModel);
-                    }
+        @Override
+        public void onClosed(TapsellPlusAdModel tapsellPlusAdModel) {
+            super.onClosed(tapsellPlusAdModel);
+        }
 
-                    @Override
-                    public void onRewarded(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.onRewarded(tapsellPlusAdModel);
-                    }
+        @Override
+        public void onRewarded(TapsellPlusAdModel tapsellPlusAdModel) {
+            super.onRewarded(tapsellPlusAdModel);
+        }
 
-                    @Override
-                    public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
-                        super.onError(tapsellPlusErrorModel);
-                    }
-                });
+        @Override
+        public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
+            super.onError(tapsellPlusErrorModel);
+        }
+    });
 ```
-for interstitial Ad use `TapsellPlus.showInterstitialAd` method. also  you don`t need `onReward` CallBack in interstitial Ad and you can clear that.
+
+For showing an Interstitial ad use `TapsellPlus.showInterstitialAd`. Also you may want to remove `onRewarded` callback since it will not be called for Interstitial Ads.
