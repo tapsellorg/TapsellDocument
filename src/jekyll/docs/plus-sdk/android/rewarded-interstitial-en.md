@@ -38,9 +38,9 @@ private void requestAd() {
 
 use `TapsellPlus.requestInterstitialAd` for interstitial Ad .
 
-> if you want to request again in Callback error, Be sure to do this with the help of a variable as a Counter.
+> if you want to request again in error Callback, Be sure to do this with the help of a variable as a Counter.
 Because with the help of that variable you can set a limit on the number of times for request.
-For example, when you disable this adZone from the panel and if you request again each time in Callback error, without limiting the number of times, 
+For example, when you disable this adZone from the panel and if you request again each time in error Callback , without limiting the number of times, 
 Your program will fall into an infinite loop and its performance will get disrupted
 
 ### Show Ad
