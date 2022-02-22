@@ -26,6 +26,7 @@ plusAndroid:
   sdkVersion: 2.1.6
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
   releaseNotesFileFa: releases/plus-android.md
+  releaseNotesFileEn: releases/plus-android-en.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue
 
 
