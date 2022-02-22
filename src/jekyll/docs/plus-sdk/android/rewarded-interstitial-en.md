@@ -1,7 +1,7 @@
 ---
 layout: classic-docs
-title: پیاده سازی تبلیغات جایزه‌ای/آنی
-lang: fa
+title: Implementing rewarded-interstitial Ads
+lang: en
 permalink: /plus-sdk/android/rewarded-interstitial/index.html
 toc: true
 ---

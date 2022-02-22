@@ -1,7 +1,7 @@
 ---
 layout: classic-docs
-title: پیاده سازی تبلیغات VAST
-lang: fa
+title: Implementing Vast Ads
+lang: en
 permalink: /plus-sdk/android/vast/index.html
 toc: true
 ---

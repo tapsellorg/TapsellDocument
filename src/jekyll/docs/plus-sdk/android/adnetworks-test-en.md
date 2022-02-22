@@ -1,7 +1,7 @@
 ---
 layout: classic-docs
-title: تست شبکه‌های تبلیغاتی
-lang: fa
+title: Testing Adnetworks
+lang: en
 permalink: /plus-sdk/android/adnetworks-test/index.html
 toc: true
 ---
