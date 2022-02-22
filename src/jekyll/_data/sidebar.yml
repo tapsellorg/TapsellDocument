@@ -2,6 +2,32 @@ en:
   - name: Tapsell Plus
     icon: m-sdk
     children:
+      - name: Android
+        link: /plus-sdk/android/main
+        children:
+          - name: Android Initialization
+            link: /plus-sdk/android/initialize
+
+          - name: Rewarded/Interstitial
+            link: /plus-sdk/android/rewarded-interstitial
+
+          - name: Native
+            link: /plus-sdk/android/native
+
+          - name: Native Video
+            link: /plus-sdk/android/native-vid
+
+          - name: Standard
+            link: /plus-sdk/android/standard
+
+          - name: Vast
+            link: /plus-sdk/android/vast
+
+          - name: Ad Networks
+            link: /plus-sdk/android/add-adnetworks
+
+          - name: Test
+            link: /plus-sdk/android/adnetworks-test
       - name: Unity
         link: /plus-sdk/unity/main
         children:
