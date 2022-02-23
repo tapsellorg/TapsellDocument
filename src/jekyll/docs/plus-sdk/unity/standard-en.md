@@ -28,6 +28,7 @@ TapsellPlus.RequestStandardBannerAd(ZoneID, BANNER_TYPE,
 > Because you can set a limit on the number of times to request by using that variable. 
 > For example, when you disable this ad position from the panel, if you request again each time in error Callback without limiting the number of times,
 > your app will fall into an infinite loop and its performance will be disrupted.
+> {:data-title="Retry requests" data-color="green"}
 
 ### Showing Ads
 
