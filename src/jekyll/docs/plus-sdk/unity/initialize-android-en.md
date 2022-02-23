@@ -55,7 +55,7 @@ There are two ways to add the required libraries, use one of them.
 
     > Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
-6. After adding TepselPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error.
+6. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error.
     
     ```console
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
