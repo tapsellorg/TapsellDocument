@@ -1,11 +1,10 @@
 ---
-layout: classic-docs
-title: تست شبکه‌های تبلیغاتی
-lang: fa
-permalink: /plus-sdk/unity/adnetworks-test/index.html
-toc: true
+layout: classic-docs title: تست شبکه‌های تبلیغاتی lang: fa permalink: /plus-sdk/unity/adnetworks-test/index.html toc:
+true
 ---
-* برای اطمینان از صحت عملکرد adNetwrokهایی که اضافه کردید از `zoneId` مربوط به هرکدام استفاده کنید. هر `zoneId` مربوط به یک adNetwork و یک نوع تبلیغ هست و تبلیغ حالت تست نمایش داده میشود.
+
+* برای اطمینان از صحت عملکرد adNetwrokهایی که اضافه کردید از `zoneId` مربوط به هرکدام استفاده کنید. هر `zoneId` مربوط به
+  یک adNetwork و یک نوع تبلیغ هست و تبلیغ حالت تست نمایش داده میشود.
 
 * توجه داشته باشید در حالت تست باید از `appId` تست استفاده کنید.
 
@@ -17,10 +16,10 @@ toc: true
 
 ### شناسه تپسل
 
-```java
-TapsellPlus.initialize(
-    CONTEXT,
-    "alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
+```c#
+TapsellPlus.Initialize(TAPSELLPLUS_KEY,
+            adNetworkName => Debug.Log(adNetworkName + " Initialized Successfully."),
+            error => Debug.Log(error.ToString()));
 ```
 
 
@@ -34,12 +33,14 @@ TapsellPlus.initialize(
 > برای تست ادموب نیازی به App ID اصلی ندارید و می‌توانید از test app id استفاده کنید:
 > 
 > ```
+
 > ca-app-pub-3940256099942544~3347511713
 > ```
 
 ### تبلیغ‌گاه‌ها
 
-برای هر ادنتورک و هر تبلیغ از `zoneId` های زیر برای درخواست و نمایش تبلیغ استفاده کنید. در حال حاضر فقط adType/adNetworkهای زیر قابل استفاده هستند.
+برای هر ادنتورک و هر تبلیغ از `zoneId` های زیر برای درخواست و نمایش تبلیغ استفاده کنید. در حال حاضر فقط
+adType/adNetworkهای زیر قابل استفاده هستند.
 
 |        Ad Network      |              Ad Type              |ZoneId
 |:------------:|:----------------------------:|:----------------------------:|
