@@ -46,7 +46,7 @@ Use `TapsellPlus.requestInterstitialAd` for interstitial Ad instead.
 {:data-title="Retry requests" data-color="green"}
 
 ### Show Ad
-After Calling the `response` method and getting the `responseId` parameter, the Ad is ready to be shown and you can display it as the following
+After Calling the `response` method and getting the `responseId` parameter, the Ad is ready to be shown, and you can display it as the following
 
 ```java
 import ir.tapsell.plus.AdShowListener;
