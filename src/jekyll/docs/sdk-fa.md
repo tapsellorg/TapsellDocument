@@ -16,6 +16,7 @@ permalink: /sdk/index.html
       <ul>
         <li><a href="{{ site.baseurl }}/plus-sdk/android/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample">پروژه نمونه</a></li>
+        <li><a href="/faq/plus-sdk/android/">سوالات متداول</a></li>
       </ul>
     </div>
   </div>
