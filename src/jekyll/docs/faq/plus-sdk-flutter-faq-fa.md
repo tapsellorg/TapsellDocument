@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: سوالات متداول Flutter
+title: خطاهای فنی رایج در Flutter
 toc: true
 permalink: /faq/plus-sdk/flutter/
 lang: fa
