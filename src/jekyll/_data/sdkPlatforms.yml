@@ -28,6 +28,7 @@ plusAndroid:
   releaseNotesFileFa: releases/plus-android.md
   releaseNotesFileEn: releases/plus-android-en.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue
+  faq: /faq/plus-sdk/android/
 
 
 plusFlutter:
