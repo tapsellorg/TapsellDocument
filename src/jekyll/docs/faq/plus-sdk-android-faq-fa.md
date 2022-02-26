@@ -6,11 +6,10 @@ permalink: /faq/plus-sdk/android/
 lang: fa
 ---
 
-<details>
-  <summary>Question?</summary>
-  Response:
-</details>
+#### Question 1?
 
+*   [Adele](#)
+*   [Agnes](#)
 
 ## مشکل ۱
 
