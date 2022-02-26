@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: سوالات متداول B4A
+title: خطاهای فنی رایج در B4A
 toc: true
 permalink: /faq/plus-sdk/b4a/
 lang: fa

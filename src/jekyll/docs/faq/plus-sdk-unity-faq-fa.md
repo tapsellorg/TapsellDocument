@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: سوالات متداول Unity
+title: خطاهای فنی رایج در Unity
 toc: true
 permalink: /faq/plus-sdk/unity/
 lang: fa

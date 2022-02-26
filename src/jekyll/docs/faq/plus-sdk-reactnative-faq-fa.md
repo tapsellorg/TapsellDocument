@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: سوالات متداول React Native
+title: خطاهای فنی رایج در React Native
 toc: true
 permalink: /faq/plus-sdk/reactnative/
 lang: fa

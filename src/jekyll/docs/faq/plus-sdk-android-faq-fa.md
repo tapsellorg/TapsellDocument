@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: سوالات متداول اندروید
+title: خطاهای فنی رایج در اندروید
 toc: true
 permalink: /faq/plus-sdk/android/
 lang: fa
