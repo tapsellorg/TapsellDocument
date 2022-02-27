@@ -6,6 +6,9 @@ permalink: /plus-sdk/reactnative/initialize-android/index.html
 toc: true # table of contents
 ---
 
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/reactnative/) مراجعه کنید.
+{:data-title="نکته Build پروژه" data-color="red"}
+
 > خطاهای رایج و احتمالی کاربران را می‌توانید در [**GitHub issues**](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/issues?q=is%3Aissue) ریپازیتوری پلاگین مشاهده کنید.
 {:data-title="خطاها و مشکلات" data-color="orange"}
 
