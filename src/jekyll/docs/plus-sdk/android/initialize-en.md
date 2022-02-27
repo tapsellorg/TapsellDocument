@@ -6,6 +6,10 @@ permalink: /plus-sdk/android/initialize/index.html
 toc: true
 ---
 
+> If there is a problem or ambiguity, refer to [common issues] ({{site.baseurl}}/faq/plus-sdk/android/).
+{:data-title="Project build note" data-color="red"}
+
+
 First of all you will need to setup and import TapsellPlus into your project.
 
 
