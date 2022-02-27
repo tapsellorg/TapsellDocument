@@ -6,7 +6,7 @@ permalink: /plus-sdk/b4a/initialize/index.html
 toc: true # table of contents
 ---
 
-> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/b4a/) مراجعه کنید یا صفحه ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue) استفاده کنید.
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/b4a/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue) را بررسی نمایید.
 {:data-title="نکته Build پروژه" data-color="red"}
 
 ## دریافت پکیج تپسل پلاس
