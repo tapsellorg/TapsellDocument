@@ -6,6 +6,9 @@ permalink: /plus-sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/unity/) مراجعه کنید.
+{:data-title="نکته Build پروژه" data-color="red"}
+
 
 ## اضافه کردن Unity Package تپسل پلاس
 برای اضافه کردن کتابخانه‌های مورد نیاز ۲ روش وجود دارد از هرکدام که مایل هستید استفاده کنید.
