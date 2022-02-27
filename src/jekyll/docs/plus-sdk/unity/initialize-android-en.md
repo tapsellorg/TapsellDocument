@@ -6,6 +6,9 @@ permalink: /plus-sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 
+> If there is a problem or ambiguity, refer to [common issues]({{site.baseurl}}/faq/plus-sdk/unity/).
+{:data-title="Project build note" data-color="red"}
+
 ## Adding Tapsell Plus Unity package
 There are two ways to add the required libraries, use one of them.
 
