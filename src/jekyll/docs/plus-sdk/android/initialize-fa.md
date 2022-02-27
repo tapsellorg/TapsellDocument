@@ -6,7 +6,7 @@ permalink: /plus-sdk/android/initialize/index.html
 toc: true
 ---
 
-> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/android/) مراجعه کنید.
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/android/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue) را بررسی نمایید.
 {:data-title="نکته Build پروژه" data-color="red"}
 
 ابتدا کتابخانه‌ی TapsellPlus را مطابق روش زیر به پروژه‌ی خود اضافه کنید. سپس هر شبکه‌ی تبلیغاتی که مایل هستید و تپسل پلاس پشتیبانی می‌کند را مطابق توضیحات بخش شبکه‌های تبلیغاتی به پروژه‌ی خود اضافه نمایید. در انتها با اطلاعات موجود در بخش تست، مطمئن شوید که شبکه‌ی مورد نظر به درستی کار می‌کند.
