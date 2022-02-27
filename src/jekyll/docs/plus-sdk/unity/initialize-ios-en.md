@@ -6,6 +6,9 @@ permalink: /plus-sdk/unity/initialize-ios/index.html
 toc: true # table of contents
 ---
 
+> If there is a problem or ambiguity, refer to [common issues]({{site.baseurl}}/faq/plus-sdk/unity/).
+{:data-title="Project build note" data-color="red"}
+
 ## Cocoapods installation
 Tepsell Plus has been published on `Cocoapods` for easy use. If you have not yet installed Cocoapods on your system, you can do this with the following command:
 
