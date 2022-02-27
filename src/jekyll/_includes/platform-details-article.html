@@ -44,15 +44,6 @@
                   </a>
                 {% endif %}
 
-            {% if platformInfo.faq %}
-                  <a href="{{platformInfo.faq}}" class='mx-4' target="_blank">
-                    <button class="btn btn-outline-info">
-                      <span>FAQ</span>
-                      <i class="picon-link"></i>
-                    </button>
-                  </a>
-            {% endif %}
-
                 {% for dl in platformInfo.downloadLinks %}
                   <a class="download-link" href="{{dl.link}}" target="_blank">
                     <button class="btn btn-outline-primary">
@@ -82,6 +73,17 @@
                 </a>
               </div>
             {% endif %}
+
+            {% if platformInfo.faq %}
+              <div class="github-link">
+                <span class="github-link-label">خطاهای فنی رایج</span>
+                <a href="{{platformInfo.faq}}" target="_blank">
+                  <span>Common issues</span>
+                  <i class="picon-link"></i>
+                </a>
+              </div>
+            {% endif %}
+
           </div>
         </div>
       </div>
