@@ -7,7 +7,7 @@ toc: true
 ---
 
 
-> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/flutter/) مراجعه کنید.
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/flutter/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues?q=is%3Aissue) را بررسی نمایید.
 {:data-title="نکته Build پروژه" data-color="red"}
 
 ## اضافه کردن کتابخانه به پروژه
