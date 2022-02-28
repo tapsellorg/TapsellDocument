@@ -6,7 +6,7 @@ permalink: /plus-sdk/android/initialize/index.html
 toc: true
 ---
 
-> If there is a problem or ambiguity, refer to [common issues]({{site.baseurl}}/faq/plus-sdk/android/).
+> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/android/) or check the [GitHub Issues](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?Q=is%3Aissue) page.
 {:data-title="Project build note" data-color="red"}
 
 
