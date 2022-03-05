@@ -3,7 +3,7 @@ layout: classic-docs
 title: Native Banner in Unity
 lang: en
 permalink: /plus-sdk/unity/native/index.html
-toc: true
+toc: true # table of contents
 ---
 
 ### Creating a Zone
