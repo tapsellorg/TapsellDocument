@@ -5,8 +5,8 @@ lang: en
 permalink: /plus-sdk/unity/main/index.html
 toc: true
 sdkPlatform:
-name: plusUnity
-logo: /images/sdk-platforms/unity.png
+  name: plusUnity
+  logo: /images/sdk-platforms/unity.png
 ---
 
 - [Initialization - Android]({{site.baseurl}}/plus-sdk/unity/initialize-android)
