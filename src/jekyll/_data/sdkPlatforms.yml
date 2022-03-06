@@ -28,7 +28,7 @@ plusAndroid:
   releaseNotesFileFa: releases/plus-android.md
   releaseNotesFileEn: releases/plus-android-en.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue
-
+  faq: /faq/plus-sdk/android/
 
 plusFlutter:
   sdkVersion: 2.1.6
@@ -36,11 +36,14 @@ plusFlutter:
   releaseNotesFileFa: releases/plus-flutter.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues?q=is%3Aissue
   github: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin
+  faq: /faq/plus-sdk/flutter/
 
 plusUnity:
   sdkVersion: 2.1.6
   releaseNotesFileFa: releases/plus-unity.md
+  releaseNotesFileEn: releases/plus-unity-en.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020/issues?q=is%3Aissue
+  faq: /faq/plus-sdk/unity/
 
 plusReactnative:
   sdkVersion: 2.1.6
@@ -48,6 +51,7 @@ plusReactnative:
   releaseNotesFileFa: releases/plus-reactnative.md
   github: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin
   issues: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/issues?q=is%3Aissue
+  faq: /faq/plus-sdk/reactnative/
 
 plusB4A:
   sdkVersion: 2.1.3
@@ -55,6 +59,7 @@ plusB4A:
   releaseNotesFileFa: releases/plus-b4a.md
   github: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin
   issues: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue
+  faq: /faq/plus-sdk/b4a/
   downloadLinks:
     - link: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases/download/2.1.3/TapsellPlusB4A-2.1.3.zip
       name: Download package

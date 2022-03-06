@@ -6,6 +6,9 @@ permalink: /plus-sdk/unity/initialize-ios/index.html
 toc: true # table of contents
 ---
 
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/unity/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?q=is%3Aissue) را بررسی نمایید.
+{:data-title="نکته Build پروژه" data-color="red"}
+
 ## نصب Cocoapods
 تپسل پلاس برای استفاده هرچه ساده تر بروی `Cocoapods` متشر شده است. در صورتی که تا به حال Cocoapods را روی سیستم تان نصب نکرده اید، می­توانید با دستور زیر این کار را انجام دهید:
 

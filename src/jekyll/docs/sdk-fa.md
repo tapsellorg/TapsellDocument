@@ -16,6 +16,7 @@ permalink: /sdk/index.html
       <ul>
         <li><a href="{{ site.baseurl }}/plus-sdk/android/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample">پروژه نمونه</a></li>
+        <li><a href="/faq/plus-sdk/android/">خطاهای فنی رایج</a></li>
       </ul>
     </div>
   </div>
@@ -26,6 +27,7 @@ permalink: /sdk/index.html
       <ul>
         <li><a href="{{ site.baseurl }}/plus-sdk/unity/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-UnitySample">پروژه نمونه</a></li>
+        <li><a href="/faq/plus-sdk/unity/">خطاهای فنی رایج</a></li>
       </ul>
     </div>
   </div>
@@ -37,6 +39,7 @@ permalink: /sdk/index.html
         <li><a href="{{ site.baseurl }}/plus-sdk/flutter/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin">Source Code</a></li>
+        <li><a href="/faq/plus-sdk/flutter/">خطاهای فنی رایج</a></li>
       </ul>
     </div>
   </div>
@@ -49,6 +52,7 @@ permalink: /sdk/index.html
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-B4ASample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin">Source Code</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues">لیست سوالات</a></li>
+        <li><a href="/faq/plus-sdk/b4a/">خطاهای فنی رایج</a></li>
       </ul>
     </div>
   </div>
@@ -60,6 +64,7 @@ permalink: /sdk/index.html
         <li><a href="{{ site.baseurl }}/plus-sdk/reactnative/main">مستندات</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-ReactNativeSample">پروژه نمونه</a></li>
         <li><a href="https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin">Source Code</a></li>
+        <li><a href="/faq/plus-sdk/reactnative/">خطاهای فنی رایج</a></li>
       </ul>
     </div>
   </div>

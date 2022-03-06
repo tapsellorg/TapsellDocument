@@ -37,7 +37,7 @@
               <div class="download-links">
                 {% if platformInfo.sample %}
                   <a href="{{platformInfo.sample}}" target="_blank">
-                    <button class="btn btn-outline-blue">
+                    <button class="btn btn-outline-primary">
                       <span>Sample Project</span>
                       <i class="picon-link"></i>
                     </button>
@@ -73,6 +73,17 @@
                 </a>
               </div>
             {% endif %}
+
+            {% if platformInfo.faq %}
+              <div class="github-link">
+                <span class="github-link-label">خطاهای فنی رایج:</span>
+                <a href="{{platformInfo.faq}}" target="_blank">
+                  <span>Common issues</span>
+                  <i class="picon-link"></i>
+                </a>
+              </div>
+            {% endif %}
+
           </div>
         </div>
       </div>

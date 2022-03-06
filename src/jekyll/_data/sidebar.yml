@@ -106,6 +106,9 @@ fa:
           - name: تست
             link: /plus-sdk/android/adnetworks-test
 
+          - name: خطاهای فنی رایج
+            link: /faq/plus-sdk/android/
+
       - name: Unity
         link: /plus-sdk/unity/main
         children:
@@ -130,6 +133,9 @@ fa:
           - name: تست
             link: /plus-sdk/unity/adnetworks-test
 
+          - name: خطاهای فنی رایج
+            link: /faq/plus-sdk/unity/
+
       - name: Flutter
         link: /plus-sdk/flutter/main
         children:
@@ -151,6 +157,9 @@ fa:
           - name: تست
             link: /plus-sdk/flutter/adnetworks-test
 
+          - name: خطاهای فنی رایج
+            link: /faq/plus-sdk/flutter/
+
       - name: React Native
         link: /plus-sdk/reactnative/main
         children:
@@ -171,6 +180,9 @@ fa:
 
           - name: تست
             link: /plus-sdk/reactnative/adnetworks-test
+
+          - name: خطاهای فنی رایج
+            link: /faq/plus-sdk/reactnative/
 
       - name: Basic4Android
         link: /plus-sdk/b4a/main
@@ -195,6 +207,9 @@ fa:
 
           - name: تست
             link: /plus-sdk/b4a/adnetworks-test
+
+          - name: خطاهای فنی رایج
+            link: /faq/plus-sdk/b4a/
 
   - name: تپسل
     icon: m-sdk

@@ -6,6 +6,9 @@ permalink: /plus-sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 
+> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/unity/) or check the [GitHub Issues](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?Q=is%3Aissue) page.
+{:data-title="Project build note" data-color="red"}
+
 ## Adding Tapsell Plus Unity package
 There are two ways to add the required libraries, use one of them.
 
@@ -50,10 +53,10 @@ There are two ways to add the required libraries, use one of them.
     }
     ```
 
-5. Go to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. Then change the version of `com.android.tools.build:gradle` to 3.6.0.
+5. If you are using Unity version 2019 and below, please refer to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. Then change the version of `com.android.tools.build:gradle` to 3.6.0.
 
 
-    > Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
+    > Note that using version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project only when you are using Unity version 2019 and below. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
 6. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error.
     

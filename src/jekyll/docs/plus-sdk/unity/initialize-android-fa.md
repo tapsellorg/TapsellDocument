@@ -6,6 +6,9 @@ permalink: /plus-sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/unity/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?q=is%3Aissue) را بررسی نمایید.
+{:data-title="نکته Build پروژه" data-color="red"}
+
 
 ## اضافه کردن Unity Package تپسل پلاس
 برای اضافه کردن کتابخانه‌های مورد نیاز ۲ روش وجود دارد از هرکدام که مایل هستید استفاده کنید.
@@ -48,10 +51,10 @@ android {
 }
 ```
 
-۵. به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و عبارت `mavenCentral()` را به هر دو بخش `repositories` اضافه نمایید. سپس ورژن `com.android.tools.build:gradle` را به ۳.۶.۰ تغییر دهید.
+۵. اگر از نسخه یونیتی ۲۰۱۹ و پایین‌تر استفاده می‌کنید لطفا به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و عبارت `mavenCentral()` را به هر دو بخش `repositories` اضافه نمایید. سپس ورژن `com.android.tools.build:gradle` را به ۳.۶.۰ تغییر دهید.
 
 
-> دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
+> دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin تنها در صورتیکه از نسخه یونیتی ۲۰۱۹ و پایین‌تر استفاده میکنید الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
 
 ۶. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید.  
 ```console

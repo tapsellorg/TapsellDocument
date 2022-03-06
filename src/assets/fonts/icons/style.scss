@@ -25,37 +25,42 @@
 
 .picon-right-chevron {
   &:before {
-    content: $picon-right-chevron; 
+    content: $picon-right-chevron;
   }
 }
 .picon-up-chevron {
   &:before {
-    content: $picon-up-chevron; 
+    content: $picon-up-chevron;
   }
 }
 .picon-link {
   &:before {
-    content: $picon-link; 
+    content: $picon-link;
   }
 }
 .picon-left-chevron {
   &:before {
-    content: $picon-left-chevron; 
+    content: $picon-left-chevron;
   }
 }
 .picon-down-chevron {
   &:before {
-    content: $picon-down-chevron; 
+    content: $picon-down-chevron;
   }
 }
 .picon-publisher {
   &:before {
-    content: $picon-publisher; 
+    content: $picon-publisher;
   }
 }
 .picon-advertiser {
   &:before {
-    content: $picon-advertiser; 
+    content: $picon-advertiser;
+  }
+}
+.picon-question {
+  &:before {
+    content: $picon-question;
   }
 }
 
