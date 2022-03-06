@@ -47,3 +47,6 @@
 .picon-advertiser:before {
   content: "\e906";
 }
+.picon-question:before {
+  content: "\ea09";
+}
