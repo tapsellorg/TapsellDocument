@@ -2,7 +2,7 @@
 layout: classic-docs
 title: خطاهای فنی رایج در اندروید
 toc: true
-permalink: /faq/plus-sdk/android/
+permalink: /faq/plus-sdk/flutter/
 lang: fa
 ---
 
