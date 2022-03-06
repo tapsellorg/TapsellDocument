@@ -2,7 +2,7 @@
 layout: classic-docs
 title: خطاهای فنی رایج در اندروید
 toc: true
-permalink: /faq/plus-sdk/unity/
+permalink: /faq/plus-sdk/android/
 lang: fa
 ---
 
