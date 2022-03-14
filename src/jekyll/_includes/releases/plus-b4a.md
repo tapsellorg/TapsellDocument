@@ -3,7 +3,7 @@
 ### v2.1.4
 - اضافه شدن امکان فرستادن چندین درخواست به صورت همزمان
 - رفع مشکل کالبک `OnRewarded`
-- اصافه شدن `zoneId` به کالبک های `OnResponse` و `onRewarded` و `OnOpened` و `OnClosed`
+- اضافه شدن `zoneId` به کالبک های `OnResponse` و `onRewarded` و `OnOpened` و `OnClosed`
   ```vb
   'before:
   TapsellPlus_OnRewarded(responseId as String)
