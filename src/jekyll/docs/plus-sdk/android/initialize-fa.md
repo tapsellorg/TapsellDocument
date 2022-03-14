@@ -83,6 +83,14 @@ public class MainActivity extends AppCompatActivity {
 
 `TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که میسازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
 
+> برای مشاهده‌ی جزئی‌تر لاگ‌ها در لایبرری از کد
+> ```java
+> TapsellPlus.setDebugMode(Log.DEBUG)
+> ```
+> استفاده کنید. هنگام درخواست یا نمایش هرگونه خطایی با جزئیات دقیق‌تر نمایش داده می‌شود.
+{:data-title="Debug mode" data-color="blue"}
+
+
 ## تنظیمات proguard
 تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
 
