@@ -47,10 +47,10 @@ tapsellPlus.RequestAndShowNativeAd(zoneId, panel)
 
 |نام کالبک|شرح|
 |:--:|:--:|
-|`TapsellPlus_OnResponse`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
-|`TapsellPlus_OnOpened`|هنگام باز شدن تبلیغ|
-|`TapsellPlus_OnClosed`|در صورت بسته شدن تبلیغ|
-|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|
+|`TapsellPlus_OnResponse(zoneId as String, responseId as String)`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
+|`TapsellPlus_OnOpened(zoneId as String, responseId as String)`|هنگام باز شدن تبلیغ|
+|`TapsellPlus_OnClosed(zoneId as String, responseId as String)`|در صورت بسته شدن تبلیغ|
+|`TapsellPlus_OnError(error as String)`|در صورت وجود هر گونه خطا در این مراحل|
 
 
 > برای پیاده‌سازی کالبک‌های لازم به [بخش اول](/plus-sdk/b4a/initialize/index.html) مراجعه کنید

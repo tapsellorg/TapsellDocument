@@ -47,25 +47,25 @@ tapsellPlus.RequestAndShowStandardBanner(zoneId, tapsellPlus.BANNER_320x50, pane
 
 BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر زیر باشد:
 
-|نوع بنر|اندازه|شبکه‌های پشتیبانی شده|
-|:----------------:|:-------------:|:------------------:|
-| `tapsellPlus.BANNER_320x50` | `320x50` |       تپسل، AdMob، AppLovin، UnityAds، AdColony    |
-| `tapsellPlus.BANNER_320x100` | `320x100` |      تپسل، AdMob    |
-| `tapsellPlus.BANNER_250x250` | `250x250` |    تپسل  |
-| `tapsellPlus.BANNER_300x250` | `300x250` |   تپسل، AdMob، AppLovin، AdColony |
-| `tapsellPlus.BANNER_468x60` | `468x60` |      AdMob، UnityAds   |
-| `tapsellPlus.BANNER_728x90` | `728x90` |     AdMob، AppLovin، UnityAds، AdColony |
-| `tapsellPlus.BANNER_160x600` | `160x600` |     AdColony |
+|           نوع بنر            |  اندازه   |           شبکه‌های پشتیبانی شده           |
+|:----------------------------:|:---------:|:-----------------------------------------:|
+| `tapsellPlus.BANNER_320x50`  | `320x50`  | تپسل، AdMob، AppLovin، UnityAds، AdColony |
+| `tapsellPlus.BANNER_320x100` | `320x100` |                تپسل، AdMob                |
+| `tapsellPlus.BANNER_250x250` | `250x250` |                   تپسل                    |
+| `tapsellPlus.BANNER_300x250` | `300x250` |      تپسل، AdMob، AppLovin، AdColony      |
+| `tapsellPlus.BANNER_468x60`  | `468x60`  |              AdMob، UnityAds              |
+| `tapsellPlus.BANNER_728x90`  | `728x90`  |    AdMob، AppLovin، UnityAds، AdColony    |
+| `tapsellPlus.BANNER_160x600` | `160x600` |                 AdColony                  |
 
 
 کالبک‌های مورد استفاده در این تبلیغ:
 
 |نام کالبک|شرح|
 |:--:|:--:|
-|`TapsellPlus_OnResponse`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
-|`TapsellPlus_OnOpened`|هنگام باز شدن تبلیغ|
-|`TapsellPlus_OnClosed`|در صورت بسته شدن تبلیغ|
-|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|
+|`TapsellPlus_OnResponse(zoneId as String, responseId as String)`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
+|`TapsellPlus_OnOpened(zoneId as String, responseId as String)`|هنگام باز شدن تبلیغ|
+|`TapsellPlus_OnClosed(zoneId as String, responseId as String)`|در صورت بسته شدن تبلیغ|
+|`TapsellPlus_OnError(error as String)`|در صورت وجود هر گونه خطا در این مراحل|
 
 
 > برای پیاده‌سازی کالبک‌های لازم به [بخش اول](/plus-sdk/b4a/initialize/index.html) مراجعه کنید
@@ -89,8 +89,8 @@ tapsellPlus.RequestStandardBannerAd(zoneId, tapsellPlus.BANNER_320x50)
 
 |نام کالبک|شرح|
 |:--:|:--:|
-|`TapsellPlus_OnResponse`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
-|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|
+|`TapsellPlus_OnResponse(zoneId as String, responseId as String)`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
+|`TapsellPlus_OnError(error as String)`|در صورت وجود هر گونه خطا در این مراحل|
 
 در صورتی که `responseId` حاصل در کالبک برگردد می‌توانید برای نمایش تبلیغ کد زیر را فراخوانی کنید:  
 
@@ -105,8 +105,8 @@ tapsellPlus.ShowStandardBannerAd(responseId, panel)
 
 |نام کالبک|شرح|
 |:--:|:--:|
-|`TapsellPlus_OnOpened`|هنگام باز شدن تبلیغ|
-|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|
+|`TapsellPlus_OnOpened(zoneId as String, responseId as String)`|هنگام باز شدن تبلیغ|
+|`TapsellPlus_OnError(error as String)`|در صورت وجود هر گونه خطا در این مراحل|
 
 
 
@@ -118,7 +118,7 @@ tapsellPlus.ShowStandardBannerAd(responseId, panel)
 pan.Visible = True ' or False
 ```
 
-برای از بین بردن بنر (سمت نیتیو) بایستی با داشتن `responseId` (که از هنگام درخواست در `TapsellPlus_OnResponse` برمی‌گردد) اقدام به نابودی بنر کنید:
+برای از بین بردن بنر (سمت نیتیو) بایستی با داشتن `responseId` و `zoneId` (که از هنگام درخواست در `TapsellPlus_OnResponse` برمی‌گردد) اقدام به نابودی بنر کنید:
 
 ```vb
 ' responseId is received through `TapsellPlus_OnResponse` after requesting standard banner
