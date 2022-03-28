@@ -17,7 +17,7 @@ Add it in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedAdmob = "20.4.0"
+    def supportedAdmob = "20.6.0"
     implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 }
 ```

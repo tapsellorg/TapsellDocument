@@ -31,17 +31,17 @@ allprojects {
 
 خط زیر را به فایل `build.gradle` ماژول برنامه در قسمت `dependencies` اضافه کنید.
 
-```gradle
+```groovy
 dependencies {
-    ....
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-android:2.1.6'
-    ....
+    // ...
+    
+    implementation("ir.tapsell.plus:tapsell-plus-sdk-android:2.1.7")
 }
 ```
 
 همچنین اگر در قسمت android این قسمت وجود ندارد اضافه‌اش کنید.
 
-```gradle
+```groovy
 compileOptions {
   sourceCompatibility JavaVersion.VERSION_1_8
   targetCompatibility JavaVersion.VERSION_1_8

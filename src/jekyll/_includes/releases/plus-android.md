@@ -1,4 +1,10 @@
 ## تغییرات نسخه‌ها:
+
+### v2.1.7 - 2022/03/28
+- بروزرسانی AdMob به `20.6.0` و رفع [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
+- Minor bug fixes
+- رفع مشکل `SSLException` در اندرویدهای ۴.۴ و ماقبل
+
 ### v2.1.6 - 2022/01/11
 * پشتیبانی از Tapsell **4.7.4**
 * رفع مشکل نیتیو بنر AdMob

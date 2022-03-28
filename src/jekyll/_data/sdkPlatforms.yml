@@ -23,7 +23,7 @@ tapsellB4A:
 
 
 plusAndroid:
-  sdkVersion: 2.1.6
+  sdkVersion: 2.1.7
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
   releaseNotesFileFa: releases/plus-android.md
   releaseNotesFileEn: releases/plus-android-en.md
