@@ -1,4 +1,9 @@
 ## Tapsell plus native Changelog
+
+### 2.1.7 (2022/03/28)
+- Update AdMob to `20.6.0` which fixes [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
+- Minor bug fixes
+
 ### 2.1.6 (2022/01/11)
 
 - Update `Tapsell` adNetwork to **4.7.4**
