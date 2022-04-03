@@ -8,7 +8,7 @@
 
 #### Android
 - [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۷](https://docs.tapsell.ir/plus-sdk/android/main/#v217---20220328)
-- بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲ [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41))
+- بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲ [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
 
 
 ## 2.1.6 (05, Feb, 2022)
