@@ -62,7 +62,7 @@ dependencies {
     //for adMob
     // For 20.0.0 and later <meta-data> tag is needed
     // For lower versions meta-data tag is not needed
-    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
     //for unityAds
     implementation 'com.unity3d.ads:unity-ads:3.7.5'
     //for chartboost
