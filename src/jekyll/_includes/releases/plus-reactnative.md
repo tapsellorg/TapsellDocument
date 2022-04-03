@@ -2,6 +2,8 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+## 2.1.7 (03, April, 2022)
+
 ## 2.1.6 (05, Feb, 2022)
 - رفع مشکل گزارش شده در metro bundler پس از نصب SDK روی react native نسخه های ۰.۶۴.۰ به بالا
 - رفع مشکل کرش در نسخه iOS
