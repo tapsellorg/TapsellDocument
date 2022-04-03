@@ -2,7 +2,7 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/blob/master/CHANGELOG.md))
 
-### 2.1.7 - 2022/04/04
+## 2.1.7 - 2022/04/04
 - بروزرسانی Admob به `20.6.0`
 - رفع خطای نتورک در اندرویدهای قدیمی
 - [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی 2.1.7](https://docs.tapsell.ir/plus-sdk/android/main/#v217---20220328) 
