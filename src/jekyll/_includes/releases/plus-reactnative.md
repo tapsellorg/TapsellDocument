@@ -3,12 +3,12 @@
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
 ## 2.1.7 (03, April, 2022)
-- رفع مشکل SSLFactory بر روی اندروید های ۴.۴ به پایین
+- رفع مشکل `SSLException` بر روی اندروید های ۴.۴ به پایین
 - بروزرسانی نسخه react native به ۰.۶۷.۴ و نسخه react به ۱۸.۰.۰ در اپلیکیشن سمپل
 
 #### Android
 - [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۷](https://docs.tapsell.ir/plus-sdk/android/main/#v217---20220328)
-- بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲
+- بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲ [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41))
 
 
 ## 2.1.6 (05, Feb, 2022)
