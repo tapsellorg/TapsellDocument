@@ -1,5 +1,10 @@
 ## تغییرات نسخه‌ها:
 
+### v2.1.7 - 2022/04/04
+* [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۷](https://docs.tapsell.ir/plus-sdk/android/main/#v217---20220328)
+* رفع مشکل `SSLException` بر روی اندروید های ۴.۴ به پایین
+* بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲ [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41))
+
 ### v2.1.6 - 2022/01/12
 * پشتیبانی از Tapsell **4.7.4**
 * رفع مشکل نیتیو بنر AdMob
