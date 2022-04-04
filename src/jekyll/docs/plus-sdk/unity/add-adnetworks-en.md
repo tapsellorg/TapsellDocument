@@ -49,7 +49,7 @@ In the `dependencies` section at` Assets\Plugins\Android\mainTemplate.gradle`, a
 dependencies {
     .......
     // for AdMob
-    implementation 'com.google.android.gms:play-services-ads:20.4.0'
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
     // for UnityAds
     implementation 'com.unity3d.ads:unity-ads:3.7.5'
     // for Chartboost
