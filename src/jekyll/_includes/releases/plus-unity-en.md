@@ -1,5 +1,11 @@
 ## Tapsell plus Unity Changelog
 
+### v2.1.7 - 2022/04/04
+* [Using Tapsell Plus version 2.1.7](/plus-sdk/android/main/#v217---20220328)
+* Update AdMob to `20.6.0` and AppSetId to 16.0.2 which fixes [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
+* Fix `SSL Exception` prior to Android 4.4
+* Minor bug fixes
+
 ### v2.1.6 - 2022/01/12
 * Using the Tapsell version 4.7.4
 * Fixed native banner issue
