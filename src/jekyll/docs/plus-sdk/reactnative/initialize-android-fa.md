@@ -26,7 +26,7 @@ npm install react-native-tapsell-plus --save
 > // <prj_root>/android/build.gradle
 > 
 > dependencies { 
->   classpath("com.android.tools.build:gradle:4.1.1") // Use a version higher than 3.5.x
+>   classpath("com.android.tools.build:gradle:4.1.3") // Use a version higher than 3.5.x
 > }
 > ```
 > در صورت پایین بودن ورژن با خطاهای کامپایل همانند `Manifest merger failed with multiple errors, see logs` روبرو خواهید شد.
