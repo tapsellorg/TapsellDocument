@@ -2,7 +2,7 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
-## 2.1.7 (03, April, 2022)
+## 2.1.7 - 2022/04/03
 - رفع مشکل `SSLException` بر روی اندروید های ۴.۴ به پایین
 - بروزرسانی نسخه react native به ۰.۶۷.۴ و نسخه react به ۱۸.۰.۰ در اپلیکیشن سمپل
 
