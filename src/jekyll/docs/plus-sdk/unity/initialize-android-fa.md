@@ -14,7 +14,7 @@ toc: true # table of contents
 برای اضافه کردن کتابخانه‌های مورد نیاز ۲ روش وجود دارد از هرکدام که مایل هستید استفاده کنید.
 
 ### ۱. استفاده از Gradle
-۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.6/TapsellPlusUnity-Gradle-v2.1.6.unitypackage) دریافت نمایید. 
+۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.7/TapsellPlusUnity-Gradle-v2.1.7.unitypackage) دریافت نمایید. 
 ۲. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر TapsellPlus از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 
 ```console
@@ -37,7 +37,7 @@ Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Te
 ```gradle
 dependencies {
     ...
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.6'
+    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.7'
     ...
 **DEPS**}
 ```
@@ -85,7 +85,7 @@ Assets > External Dependency Manager > Android Resolver > Settings > Use Jetifie
 Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
 ```
 
-۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.3/TapsellPlusUnity-EDM-v2.1.3.unitypackage) دریافت نمایید. 
+۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.7/TapsellPlusUnity-EDM-v2.1.7.unitypackage) دریافت نمایید. 
 
 ۴. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر TapsellPlus از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 

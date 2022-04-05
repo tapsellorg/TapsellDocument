@@ -13,7 +13,7 @@ toc: true # table of contents
 There are two ways to add the required libraries, use one of them.
 
 ### 1. Using Gradle
-1. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.6/TapsellPlusUnity-Gradle-v2.1.6.unitypackage).
+1. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.7/TapsellPlusUnity-Gradle-v2.1.7.unitypackage).
 2. Add the downloaded `unitypackage` to your project as follows: (If the TapsellPlus folder already exists in your project, please remove it).
 
     ```
@@ -37,7 +37,7 @@ There are two ways to add the required libraries, use one of them.
     ```gradle
     dependencies {
         ...
-        implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.6'
+        implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.7'
         ...
     **DEPS**}
     ```
@@ -90,7 +90,7 @@ There are two ways to add the required libraries, use one of them.
     Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
     ```
 
-3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.3/TapsellPlusUnity-EDM-v2.1.3.unitypackage).
+3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.7/TapsellPlusUnity-EDM-v2.1.7.unitypackage).
 4. Add the downloaded `unitypackage` to your project as follows: (If the TapsellPlus folder already exists in your project, please remove it).
 
     ```console
