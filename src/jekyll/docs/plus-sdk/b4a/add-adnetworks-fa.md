@@ -60,9 +60,9 @@ toc: true
 
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```
+```py
 # Region  Project Attributes 
-    AdditionalJar: com.google.android.gms:play-services-ads-lite
+    #AdditionalJar: com.google.android.gms:play-services-ads-lite
 
 #End Region
 ```
@@ -76,9 +76,9 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
 ### AdColony
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```
+```py
 # Region  Project Attributes 
-    AdditionalJar: adcolony-4.6.5.aar
+    #AdditionalJar: adcolony-4.6.5.aar
 
 #End Region
 ```
@@ -92,9 +92,9 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
 ### AppLovin
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```
+```py
 # Region  Project Attributes 
-    AdditionalJar: applovin-sdk-10.3.4.aar
+    #AdditionalJar: applovin-sdk-10.3.4.aar
 
 #End Region
 ```
@@ -115,9 +115,9 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AppLovin)
 ### UnityAds
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```
+```py
 # Region  Project Attributes
-    AdditionalJar: unity-ads-3.7.5.aar
+    #AdditionalJar: unity-ads-3.7.5.aar
 
 #End Region
 ```
@@ -147,3 +147,24 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.UnityAds)
   tools:overrideLibrary="com.unity3d.ads" />
 ```
 
+## Mintegral
+
+در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
+
+```py
+# Region  Project Attributes
+    #AdditionalJar: mintegral-interstitialvideo-15.7.41.aar
+	#AdditionalJar: mintegral-mbbanner-15.7.41.aar
+	#AdditionalJar: mintegral-mbjscommon-15.7.41.aar
+	#AdditionalJar: mintegral-playercommon-15.7.41.aar
+	#AdditionalJar: mintegral-reward-15.7.41.aar
+	#AdditionalJar: mintegral-same-15.7.41.aar
+	#AdditionalJar: mintegral-videocommon-15.7.41.aar
+	#AdditionalJar: mintegral-videojs-15.7.41.aar
+#End Region
+```
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
+
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.Mintegral)
+```
