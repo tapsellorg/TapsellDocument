@@ -42,7 +42,7 @@ toc: true
 > 
 > به جای `ADMOB_ID` شناسه‌ی خود را قرار دهید  
 >
-> در صورت وجود ` TapsellPlusB4A.AdMobTestAppId` در مانیفست آنرا حتما حذف کنید.
+> در صورت وجود `TapsellPlusB4A.AdMobTestAppId` در مانیفست آنرا حتما حذف کنید.
 {:data-title="استفاده از AdMob" data-color="red"}
 
 
