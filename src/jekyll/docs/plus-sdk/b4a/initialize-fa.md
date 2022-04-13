@@ -12,7 +12,7 @@ toc: true # table of contents
 ## دریافت پکیج تپسل پلاس
 
 پکیج نسخه‌ی نهایی تپسل پلاس را از
-[**این لینک**](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases/download/2.1.4/TapsellPlusB4A-2.1.4.zip)
+[**این لینک**](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases/download/2.1.7/TapsellPlusB4A-2.1.7.zip)
 دریافت کنید.
 
 ![version](https://img.shields.io/github/v/release/tapsellorg/TapsellPlusSDK-B4aPlugin?label=tapsellplus-b4a&style=plastic)
@@ -101,16 +101,12 @@ B4A
 ابتدا به `Manifest Editor` رفته و کد زیر را اضافه کنید:
 
 ```vb
-CreateResourceFromFile(Macro, TapsellPlusB4A.Complete)
+CreateResourceFromFile(Macro, TapsellPlusB4A.Essential)
 ```
 
-> مانیفست `TapsellPlusB4A.Complete` دارای محتوای مورد نیاز برای همه‌ی ادنتورکهاست (شبکه‌های تبلیغاتی همانند ادموب و تپسل)  
-> در صورتی که میخواهید فقط ادنتورک تپسل را استفاده کنید میتوانید در عوض از `TapsellPlusB4A.Essential` استفاده کنید.  
->
-> در صورت استفاده از Essential برای اضافه‌کردن هر ادنتورک بایستی مانیفست آنرا نیز اضافه کنید  
-> 
-> در بخش [شبکه‌های تبلیغاتی](/plus-sdk/b4a/add-adnetworks/index.html) حول این مورد بیشتر مطالعه کنید
-{:data-title="نکته در مورد مانیفست" data-color="blue"}
+> مانیفست `TapsellPlusB4A.Essential` مواد ضروری برای تپسل پلاس و بدون هیچ ادنتورکی جز تپسل را اضافه می‌کند.  
+> برای اضافه کردن ادنتورک‌ها بایستی مانیفست آنها را نیز اضافه کنید که در [شبکه‌های تبلیغاتی](/plus-sdk/b4a/add-adnetworks/index.html) در مورد آنها خواهید خواند.
+{:data-title="نکته‌ی مهم در مورد مانیفست" data-color="blue"}
 
 ### فعالسازی MultiDex
 
@@ -152,8 +148,11 @@ End Sub
 ```
 
 > در صورت موفقیت آمیز بودن این پروسه بعد از چند ثانیه کالبک `TapsellPlus_OnSuccess` صدا زده می‌شود.
-{:data-title="کالبک Initialization" data-color="blue"}
+{:data-title="کالبک Initialization" data-color="green"}
 
+
+با استفاده از کد `tapsellPlus.SetDebugMode(3)` می‌توانید لاگ‌های کالبک را هنگام بروز خطا، بصورت واضح‌تر مشاهده نمایید.
+{:data-title="DebugMode برای لاگ‌های بهتر" data-color="blue"}
 
 ## (اختیاری) تنظیمات اضافه کالبک‌ها
 
@@ -170,28 +169,31 @@ Sub TapsellPlus_OnSuccess
 	Log("TapsellPlus is initialized successfully")
 End Sub
 
-Sub TapsellPlus_OnResponse(responseId As String)
+Sub TapsellPlus_OnResponse(zoneId As String, responseId As String)
 	' Save the responseId - This is needed if you call request, THEN show (not requetsAndShow)
 	Log("Requesting ad successfull. ResponseId (that must be saved) is: " & responseId)
 End Sub
 
-Sub TapsellPlus_OnClosed(responseId As String)
+Sub TapsellPlus_OnClosed(zoneId As String, responseId As String)
 	Log("An Ad was close. It's responseId is: " & responseId)
 End Sub
 
-Sub TapsellPlus_OnOpened(responseId As String)
+Sub TapsellPlus_OnOpened(zoneId As String, responseId As String)
 	Log("An Ad was opened. ResponseId of ad: " & responseId)
 End Sub
 
-Sub TapsellPlus_OnRewarded(responseId As String)
+Sub TapsellPlus_OnRewarded(zoneId As String, responseId As String)
 	Log("Rewarded ad has seen compoletely. You can reward the user: " & responseId) 
-  ' WARNING: Currently has issues and will not be called
 End Sub
 
 Sub TapsellPlus_OnError(error As String)
 	Log("An Error occurred when either initializing, requesting or showing ad Ad. Error is: " & error)
 End Sub
 ```
+
+از نسخه‌ی ۲.۱.۴ به بعد به کالبک‌ها ZoneId نیز اضافه شده است. هنگام استفاده پارامتر کالبک‌ها را درست قرار دهید
+{:data-title="کالبک‌های تبلیغ" data-color="orange"}
+
 
 پس از اضافه کردن کدها برنامه را اجرا کنید. بایستی این اجرا بدون هیچ خطایی باشد و برنامه اجرا شود.  
 در صورت رخداد هر نوع خطایی به [لیست خطاها](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue) مراجعه کنید.  
