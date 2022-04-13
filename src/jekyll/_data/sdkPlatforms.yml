@@ -54,7 +54,7 @@ plusReactnative:
   faq: /faq/plus-sdk/reactnative/
 
 plusB4A:
-  sdkVersion: 2.1.4
+  sdkVersion: 2.1.7
   sample: https://github.com/tapsellorg/TapsellPlusSDK-B4ASample
   releaseNotesFileFa: releases/plus-b4a.md
   github: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin
