@@ -15,3 +15,5 @@ sdkPlatform:
 - [همسان]({{site.baseurl}}/plus-sdk/b4a/native)
 - [ویدئوی همسان]({{site.baseurl}}/plus-sdk/b4a/native-vid)
 - [استاندارد]({{site.baseurl}}/plus-sdk/b4a/standard)
+- [شبکه‌های تبلیغاتی]({{site.baseurl}}/plus-sdk/b4a/add-adnetworks)
+- [تست]({{site.baseurl}}/plus-sdk/b4a/adnetworks-test)

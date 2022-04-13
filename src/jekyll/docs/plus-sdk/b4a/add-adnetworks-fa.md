@@ -12,9 +12,23 @@ toc: true
 برای کسب اطلاعات بیشتر در مورد هر ad network می‌توانید با همکاران ما در تیم رسانه از قسمت پشتیبانی صحبت کنید.
 
 
-### Tapsell AdNetwork
+> قبل از اقدام برای اضافه‌کردن ادنتورک‌ها مطمئن شوید که مانیفست `TapsellPlusB4A.Essential` را به مانیفست خود اضافه کرده‌اید.
+{:data-title="مانیفست مورد نیاز" data-color="orange"}
+
+
+شما هنگام دانلود پکیج فایل‌های لازم را برای پشتیبانی از ادنتورک‌ها دانلود کرده‌اید و آنها بایستی در
+`Additional libs`
+قرار گرفته باشند.
+
+حال برای استفاده از آنها بایستی فایل `AAR` یا `Jar` آنها به پروژه اضافه شوند (و همچنین مانیفست)
+
+> در [پروژه‌ی نمونه‌ی تپسل پلاس](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample) می‌توانید دقیق و با جزئیات پیاده‌سازی مانیفست را در Manifest editor آن مشاهده کنید
+{:data-title="نمونه‌ی پیاده‌سازی شده‌ی مانیفست" data-color="blue"}
+
+## Tapsell AdNetwork
 این ادنتورک به طور پیش‌فرض اضافه شده است. برای استفاده از آن نیازی به کاری ندارید
-### AdMob
+
+## AdMob
 
 
 > **نکته** برای استفاده از **AdMob**  
@@ -38,19 +52,8 @@ toc: true
 > 
 > به جای `ADMOB_ID` شناسه‌ی خود را قرار دهید  
 >
-> در صورت وجود ` TapsellPlusB4A.AdMobTestAppId` در مانیفست آنرا حتما حذف کنید.
+> در صورت وجود `TapsellPlusB4A.AdMobTestAppId` در مانیفست آنرا حتما حذف کنید.
 {:data-title="استفاده از AdMob" data-color="red"}
-
-
-## اضافه‌کردن پشتیبانی از ادنتورک‌ها
-شما هنگام دانلود پکیج فایل‌های لازم را برای پشتیبانی از ادنتورک‌ها دانلود کرده‌اید و آنها بایستی در
-`Additional libs`
-قرار گرفته باشند.
-
-حال برای استفاده از آنها بایستی فایل `AAR` یا `Jar` آنها به پروژه اضافه شوند (و همچنین مانیفست)
-
-> در [پروژه‌ی نمونه‌ی تپسل پلاس](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample) می‌توانید دقیق و با جزئیات پیاده‌سازی مانیفست را در Manifest editor آن مشاهده کنید
-{:data-title="نمونه‌ی پیاده‌سازی شده‌ی مانیفست" data-color="blue"}
 
 
 
@@ -63,50 +66,65 @@ toc: true
 #End Region
 ```
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
-### AdColony
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
+```
+
+## AdColony
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
 ```py
 # Region  Project Attributes 
-    #AdditionalJar: adcolony-4.5.0.aar
+    #AdditionalJar: adcolony-4.6.5.aar
 
 #End Region
 ```
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
-### AppLovin
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
+```
+
+## AppLovin
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
 ```py
 # Region  Project Attributes 
-    #AdditionalJar: applovin-sdk-10.3.1.aar
+    #AdditionalJar: applovin-sdk-10.3.4.aar
 
 #End Region
 ```
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
-### Chartboost
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.AppLovin)
+```
+
+## Chartboost
 
 > ادنتورک چارت‌بوست در نسخه‌ی فعلی در B4A قابل استفاده نیست.
 {:data-title="چارت‌بوست در B4A" data-color="red"}
 
 
 
-### UnityAds
+## UnityAds
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
 ```py
 # Region  Project Attributes
-    #AdditionalJar: unity-ads-3.7.4.aar
+    #AdditionalJar: unity-ads-3.7.5.aar
 
 #End Region
 ```
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.UnityAds)
+```
 
 برای استفاده از شبکه‌ی تبلیغاتی Unity Ads می‌بایست minSDK اپلیکیشن خود را ۱۹ قرار دهید. و یا این که خط زیر را به  Manifest editor پروژه‌تان اضافه نمایید.
 
@@ -128,3 +146,24 @@ toc: true
   tools:overrideLibrary="com.unity3d.ads" />
 ```
 
+## Mintegral
+
+در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
+
+```py
+# Region  Project Attributes
+    #AdditionalJar: mintegral-interstitialvideo-15.7.41.aar
+	#AdditionalJar: mintegral-mbbanner-15.7.41.aar
+	#AdditionalJar: mintegral-mbjscommon-15.7.41.aar
+	#AdditionalJar: mintegral-playercommon-15.7.41.aar
+	#AdditionalJar: mintegral-reward-15.7.41.aar
+	#AdditionalJar: mintegral-same-15.7.41.aar
+	#AdditionalJar: mintegral-videocommon-15.7.41.aar
+	#AdditionalJar: mintegral-videojs-15.7.41.aar
+#End Region
+```
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
+
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.Mintegral)
+```
