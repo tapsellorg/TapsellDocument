@@ -12,8 +12,12 @@ toc: true
 برای کسب اطلاعات بیشتر در مورد هر ad network می‌توانید با همکاران ما در تیم رسانه از قسمت پشتیبانی صحبت کنید.
 
 
+> قبل از اقدام برای اضافه‌کردن ادنتورک‌ها مطمئن شوید که مانیفست `TapsellPlusB4A.Essential` را به مانیفست خود اضافه کرده‌اید.
+{:data-title="مانیفست مورد نیاز" data-color="orange"}
+
 ### Tapsell AdNetwork
 این ادنتورک به طور پیش‌فرض اضافه شده است. برای استفاده از آن نیازی به کاری ندارید
+
 ### AdMob
 
 
@@ -56,38 +60,50 @@ toc: true
 
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```py
+```
 # Region  Project Attributes 
-    #AdditionalJar: com.google.android.gms:play-services-ads-lite
+    AdditionalJar: com.google.android.gms:play-services-ads-lite
 
 #End Region
 ```
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
+
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
+```
 
 ### AdColony
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```py
+```
 # Region  Project Attributes 
-    #AdditionalJar: adcolony-4.5.0.aar
+    AdditionalJar: adcolony-4.6.5.aar
 
 #End Region
 ```
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
+
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
+```
 
 ### AppLovin
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```py
+```
 # Region  Project Attributes 
-    #AdditionalJar: applovin-sdk-10.3.1.aar
+    AdditionalJar: applovin-sdk-10.3.4.aar
 
 #End Region
 ```
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
+
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.AppLovin)
+```
 
 ### Chartboost
 
@@ -99,14 +115,17 @@ toc: true
 ### UnityAds
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
-```py
+```
 # Region  Project Attributes
-    #AdditionalJar: unity-ads-3.7.4.aar
+    AdditionalJar: unity-ads-3.7.5.aar
 
 #End Region
 ```
+همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
-همچنین از وجود `TapsellPlusB4A.Complete` در مانیفست خود اطمینان حاصل کنید
+```vb
+CreateResourceFromFile(Macro, TapsellPlusB4A.UnityAds)
+```
 
 برای استفاده از شبکه‌ی تبلیغاتی Unity Ads می‌بایست minSDK اپلیکیشن خود را ۱۹ قرار دهید. و یا این که خط زیر را به  Manifest editor پروژه‌تان اضافه نمایید.
 
