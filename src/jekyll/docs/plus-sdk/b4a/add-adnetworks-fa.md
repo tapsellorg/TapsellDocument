@@ -15,10 +15,20 @@ toc: true
 > قبل از اقدام برای اضافه‌کردن ادنتورک‌ها مطمئن شوید که مانیفست `TapsellPlusB4A.Essential` را به مانیفست خود اضافه کرده‌اید.
 {:data-title="مانیفست مورد نیاز" data-color="orange"}
 
-### Tapsell AdNetwork
+
+شما هنگام دانلود پکیج فایل‌های لازم را برای پشتیبانی از ادنتورک‌ها دانلود کرده‌اید و آنها بایستی در
+`Additional libs`
+قرار گرفته باشند.
+
+حال برای استفاده از آنها بایستی فایل `AAR` یا `Jar` آنها به پروژه اضافه شوند (و همچنین مانیفست)
+
+> در [پروژه‌ی نمونه‌ی تپسل پلاس](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample) می‌توانید دقیق و با جزئیات پیاده‌سازی مانیفست را در Manifest editor آن مشاهده کنید
+{:data-title="نمونه‌ی پیاده‌سازی شده‌ی مانیفست" data-color="blue"}
+
+## Tapsell AdNetwork
 این ادنتورک به طور پیش‌فرض اضافه شده است. برای استفاده از آن نیازی به کاری ندارید
 
-### AdMob
+## AdMob
 
 
 > **نکته** برای استفاده از **AdMob**  
@@ -46,17 +56,6 @@ toc: true
 {:data-title="استفاده از AdMob" data-color="red"}
 
 
-## اضافه‌کردن پشتیبانی از ادنتورک‌ها
-شما هنگام دانلود پکیج فایل‌های لازم را برای پشتیبانی از ادنتورک‌ها دانلود کرده‌اید و آنها بایستی در
-`Additional libs`
-قرار گرفته باشند.
-
-حال برای استفاده از آنها بایستی فایل `AAR` یا `Jar` آنها به پروژه اضافه شوند (و همچنین مانیفست)
-
-> در [پروژه‌ی نمونه‌ی تپسل پلاس](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample) می‌توانید دقیق و با جزئیات پیاده‌سازی مانیفست را در Manifest editor آن مشاهده کنید
-{:data-title="نمونه‌ی پیاده‌سازی شده‌ی مانیفست" data-color="blue"}
-
-
 
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
@@ -73,7 +72,7 @@ toc: true
 CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
 ```
 
-### AdColony
+## AdColony
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
 ```py
@@ -89,7 +88,7 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
 CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
 ```
 
-### AppLovin
+## AppLovin
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
 ```py
@@ -105,14 +104,14 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
 CreateResourceFromFile(Macro, TapsellPlusB4A.AppLovin)
 ```
 
-### Chartboost
+## Chartboost
 
 > ادنتورک چارت‌بوست در نسخه‌ی فعلی در B4A قابل استفاده نیست.
 {:data-title="چارت‌بوست در B4A" data-color="red"}
 
 
 
-### UnityAds
+## UnityAds
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
 ```py
