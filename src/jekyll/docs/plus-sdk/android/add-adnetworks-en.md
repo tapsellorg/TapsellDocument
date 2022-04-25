@@ -11,7 +11,7 @@ If you want to add more ad networks to your project, this page helps you through
 Here's a list of ad networks that are supported by TapsellPlus.
 
 ## Google AdMob
-> Supported version: `20.4.0`
+> Supported version: `20.6.0`
 
 Add it in gradle (in `app/build.gradle`):
 
