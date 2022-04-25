@@ -33,7 +33,7 @@ toc: true
 
 > **نکته** برای استفاده از **AdMob**  
 > 
-> برای استفاده از ادنتورک **Google AdMob SDK** بایستی App ID آنرا در مانیفست اپلیکیشن قرار دهید.  
+> ۱. برای استفاده از ادنتورک **Google AdMob SDK** بایستی App ID آنرا در مانیفست اپلیکیشن قرار دهید.  
 > لازم به ذکر است در صورت عدم وجود این تگ در مانیفست خطای `The Google Mobile Ads SDK was initialized incorrectly.` رخ خواهد داد
 >
 > برای اضافه کردن App ID ابتدا از یکی از راه‌های زیر این شناسه را از تپسل دریافت کنید (پیش از دریافت شناسه، شرایط فعال‌سازی شبکه‌های تبلیغاتی خارجی را در [این لینک](https://tapsell.ir/tapsellplus/) مطالعه نمایید):
@@ -53,7 +53,19 @@ toc: true
 > به جای `ADMOB_ID` شناسه‌ی خود را قرار دهید  
 >
 > در صورت وجود `TapsellPlusB4A.AdMobTestAppId` در مانیفست آنرا حتما حذف کنید.
-{:data-title="استفاده از AdMob" data-color="red"}
+> 
+> ۲. برای استفاده از ادنتورک **Google AdMob SDK** لازم است وابستگی `play-services-ads` را به صورت زیر در بخش `Region  Project Attributes` قرار دهید.
+> ```py
+> # Region  Project Attributes
+>     #AdditionalJar: com.google.android.gms:play-services-ads-lite
+> #End Region
+> ```
+> در غیر اینصورت با خطای `Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView` مواجه می‌شوید.
+> همچنین لازم است محتوای زیر را به `Manifest editor` پروژه اضافه کنید
+> ```vb
+> CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
+>```
+>{:data-title="استفاده از AdMob" data-color="red"}
 
 
 

@@ -24,3 +24,17 @@ lang: fa
 اگر زمان نمایش تبلیغ این خطا رو مشاهده کردید، مطمئن شوید که Id ای که به تابع به عنوان ورودی به تابع می دهید دقیقا با مقداری که از response درخواست تبلیغ گرفتید یکسان باشد. 
 اگر زمان درخواست تبلیغ این خطا را مشاهده کردید احتمال این که شبکه تبلیغاتی به درستی برای شما فعال نشده باشد است. 
 در این صورت مسئله را با تیم پشتیبانی در میان بگذارید
+
+
+## خطای Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView
+
+این خطا زمانی اتفاق می‌افتد که از ادنتورک AdMob در پرژه خود استفاده کرده باشید، اما وابستگی `play-services-ads` را به پروژه اضافه نکرده باشید. برای رفع آن لازم است تا این وابستگی را به صورت زیر در بخش `Region  Project Attributes` اضافه کنید.
+> ```py
+> # Region  Project Attributes
+>     #AdditionalJar: com.google.android.gms:play-services-ads-lite
+> #End Region
+> ```
+> همچنین لازم است محتوای زیر را به `Manifest editor` پروژه اضافه کنید
+> ```vb
+> CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
+>```
