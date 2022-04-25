@@ -10,6 +10,14 @@ If you want to add more ad networks to your project, this page helps you through
 
 > ** Tip ** to use ** AdMob **
 > 
+> Add it in gradle (in `app/build.gradle`):
+>
+>```groovy
+> dependencies {
+>     def supportedAdmob = "20.6.0"
+>     implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
+> }
+>```
 > You need to provide "AdMob application ID" as a **manifest meta-data** to be able to use it in the app.
 > It should be noted that if this tag does not exist in the manifest, the error `The Google Mobile Ads SDK was initialized incorrectly.` will occur.
 >
