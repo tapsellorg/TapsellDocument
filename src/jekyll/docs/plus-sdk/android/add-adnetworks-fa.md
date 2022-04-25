@@ -44,7 +44,7 @@ toc: true
 > </manifest>
 > ```
 >
-> ۲. برای استفاده از ادنتورک **Google AdMob SDK** لازم است وابستگی `play-services-ads` را به صورت زیر در `build.gradle` قرار دهید.
+> ۲. برای استفاده از ادنتورک **Google AdMob SDK** لازم است وابستگی `play-services-ads` را به صورت زیر در `app/build.gradle` قرار دهید.
 > ```groovy
 > dependencies {
 >    def supportedAdmob = "20.6.0"
