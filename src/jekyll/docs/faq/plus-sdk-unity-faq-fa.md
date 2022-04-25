@@ -75,3 +75,14 @@ lang: fa
 
 زمانی که که درخواست تبلیغ می دهید Sdk اگر لیست شبکه ها تبلیغاتی رو ذخیره نداشته باشد، سعی میکند که از سرور بگیرد. اگر این مرحله هم با موفقیت انجام نشود (به دلیل قطع شدن اینترنت) این خطا رو  Sdk نمایش می دهد
 
+
+## خطای Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView
+
+این خطا زمانی اتفاق می‌افتد که از ادنتورک AdMob در پرژه خود استفاده کرده باشید، اما وابستگی `play-services-ads` را به پروژه اضافه نکرده باشید. برای رفع آن لازم است تا این وابستگی را به صورت زیر در فایل `Assets\Plugins\Android\mainTemplate.gradle` اضافه کنید.
+> ```groovy
+> dependencies {
+>    def supportedAdmob = "20.6.0"
+>    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
+> }
+> ```
+
