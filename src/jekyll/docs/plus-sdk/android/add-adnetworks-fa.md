@@ -46,7 +46,10 @@ toc: true
 >
 > ۲. برای استفاده از ادنتورک **Google AdMob SDK** لازم است وابستگی `play-services-ads` را به صورت زیر در `build.gradle` قرار دهید.
 > ```groovy
-> implementation "com.google.android.gms:play-services-ads:20.6.0"
+> dependencies {
+>    def supportedAdmob = "20.6.0"
+>    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
+> }
 > ```
 > در غیر اینصورت با خطای `Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView` مواجه می‌شوید.
 
