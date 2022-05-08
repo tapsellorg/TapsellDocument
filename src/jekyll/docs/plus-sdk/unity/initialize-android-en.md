@@ -64,7 +64,7 @@ There are two ways to add the required libraries, use one of them.
 
     > Note that using version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project only when you are using Unity version 2019 and below. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
-7. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error.
+7. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android minSDK version API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
     
     ```console
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
@@ -73,6 +73,11 @@ There are two ways to add the required libraries, use one of them.
     To enable MultiDex, go to `Assets\Plugins\Android\launcherTemplate.gradle` and add the following code snippet to it:
 
     ```gradle
+    dependencies {
+      def multidex_version = "2.0.1"
+      implementation "androidx.multidex:multidex:$multidex_version" // 2.0.1
+    }
+   
     android {
       ...
       defaultConfig {
@@ -82,6 +87,35 @@ There are two ways to add the required libraries, use one of them.
       ...
     }
     ```
+   Then Go to `Assets\Plugins\Android\AndroidManifest.xml` and apply one of the `a.`,` b.`, or `c.` Depending on your project's implementation:
+   
+   a. If you haven't already added the `Application` class to your project, add the following code snippet to your `AndroidManifest.xml`:
+    ```xml
+    <application
+      android:name="androidx.multidex.MultiDexApplication" >
+    <!--  ...-->
+    </application>
+    ```
+   b. Otherwise, If you have already added the `Application` class to your project, and you have configured it in your `AndroidManifest.xml` , Go to your `Application` class and extend it from `MultiDexApplication` as follows:
+    ```java
+     public class MainApplication extends MultiDexApplication {
+      // your code
+     }
+    ```
+   c. But, If you extend the `Application` class from another class, and you can't extend it from `MultiDexApplication`, you can `override` the `attachBaseContext` method as follows:
+    ```java
+     public class MainApplication extends SomeOtherApplication {
+      // your code
+
+        @Override
+        protected void attachBaseContext(Context base) {
+            super.attachBaseContext(base);
+            MultiDex.install(this);
+        }
+    }
+   ```
+   You can also refer to [official documentation](https://developer.android.com/studio/build/multidex) for more information. 
+   
 
 ### 2. Using Resolver
 
@@ -139,12 +173,20 @@ There are two ways to add the required libraries, use one of them.
 
     > Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
-10. After adding TepselPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error.
+10. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android minSDK version API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
+
     ```console
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
     ```
-To enable MultiDex, go to `Assets\Plugins\Android\launcherTemplate.gradle` and add the following code snippet to it:
+
+    To enable MultiDex, go to `Assets\Plugins\Android\launcherTemplate.gradle` and add the following code snippet to it:
+
     ```gradle
+    dependencies {
+      def multidex_version = "2.0.1"
+      implementation "androidx.multidex:multidex:$multidex_version" // 2.0.1
+    }
+   
     android {
       ...
       defaultConfig {
@@ -154,6 +196,35 @@ To enable MultiDex, go to `Assets\Plugins\Android\launcherTemplate.gradle` and a
       ...
     }
     ```
+    Then Go to `Assets\Plugins\Android\AndroidManifest.xml` and apply one of the `a.`,` b.`, or `c.` Depending on your project's implementation:
+
+    a. If you haven't already added the `Application` class to your project, add the following code snippet to your `AndroidManifest.xml`:
+    ```xml
+    <application
+     android:name="androidx.multidex.MultiDexApplication" >
+    <!--  ...-->
+    </application>
+    ```
+    b. Otherwise, If you have already added the `Application` class to your project, and you have configured it in your `AndroidManifest.xml` , Go to your `Application` class and extend it from `MultiDexApplication` as follows:
+    ```java
+    public class MainApplication extends MultiDexApplication {
+    // your code
+    }
+    ```
+    c. But, If you extend the `Application` class from another class, and you can't extend it from `MultiDexApplication`, you can `override` the `attachBaseContext` method as follows:
+    ```java
+    public class MainApplication extends SomeOtherApplication {
+    // your code
+    
+            @Override
+            protected void attachBaseContext(Context base) {
+                super.attachBaseContext(base);
+                MultiDex.install(this);
+            }
+        }
+    ``` 
+   You can also refer to [official documentation](https://developer.android.com/studio/build/multidex) for more information. 
+   
 
 ## Initialization
 First, use the following code snippet to access Tepsell dependency codes.

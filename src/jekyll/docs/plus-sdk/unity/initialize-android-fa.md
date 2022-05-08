@@ -91,7 +91,7 @@ android {
   <!--  ...-->
 </application>
 ```
-ب) در غیر اینصورت اگر قبلا از کلاس `Application` در پروژه خود استفاده کرده اید و آن را در `manifest` معرفی کرده‌اید، وارد کلاس `Application` شده و آن را از کلاس `MultiDexApplication` ارث بری کنید. تغییرات مورد نیاز را همانند کد زیر اعمال کنید:
+ب) در غیر اینصورت اگر قبلا از کلاس `Application` در پروژه خود استفاده کرده اید و آن را در `AndroidManifest.xml` معرفی کرده‌اید، وارد کلاس `Application` شده و آن را از کلاس `MultiDexApplication` ارث بری کنید. تغییرات مورد نیاز را همانند کد زیر اعمال کنید:
 ```java
 public class MainApplication extends MultiDexApplication {
   // your code
