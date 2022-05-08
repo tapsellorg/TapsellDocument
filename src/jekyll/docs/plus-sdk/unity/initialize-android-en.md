@@ -64,7 +64,7 @@ There are two ways to add the required libraries, use one of them.
 
     > Note that using version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project only when you are using Unity version 2019 and below. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
-7. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android minSDK version API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
+7. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android `minSDKVersion` API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
     
     ```console
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
@@ -173,7 +173,7 @@ There are two ways to add the required libraries, use one of them.
 
     > Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
-10. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android minSDK version API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
+10. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android `minSDKVersion` API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
 
     ```console
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
