@@ -63,12 +63,17 @@ android {
 
 > دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin تنها در صورتیکه از نسخه یونیتی ۲۰۱۹ و پایین‌تر استفاده میکنید الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
 
-۷. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید.  
+۱۰. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید. در صورتیکه از `minSdkVersion` نسخه‌ی ۲۱ یا بالاتر استفاده میکنید، MultiDex به صورت پیش فرض فعال است. در غیر اینصورت لازم است آن را به صورت دستی به پروژه خو داضافه نمایید.
 ```console
 D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
 ```
-نحوه‌ی فعال‌سازی MultiDex به این ترتیب است که به آدرس `Assets\Plugins\Android\launcherTemplate.gradle` بروید و تکه کد زیر را به آن اضافه نمایید:
+نحوه‌ی فعال‌سازی MultiDex به این ترتیب است که به آدرس `Assets\Plugins\Android\launcherTemplate.gradle` بروید و کدهای زیر را به آن اضافه نمایید:
 ```gradle
+dependencies {
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version" // 2.0.1
+}
+
 android {
   ...
   defaultConfig {
@@ -78,6 +83,35 @@ android {
   ...
 }
 ```
+سپس به فایل `Assets\Plugins\Android\AndroidManifest.xml` مراجعه کنید و یکی از روش های `الف`، `ب` و `ج` را مطابق پیاده‌سازی خود اعمال نمایید.
+الف) در صورتیکه قبلا از کلاس `Application` در پروژه خود استفاده نکرده اید، خط زیر را در تگ `application` اضافه کنید:
+```xml
+<application
+  android:name="androidx.multidex.MultiDexApplication" >
+  <!--  ...-->
+</application>
+```
+ب) در غیر اینصورت اگر قبلا از کلاس `Application` در پروژه خود استفاده کرده اید و آن را در `manifest` معرفی کرده‌اید، وارد کلاس `Application` شده و آن را از کلاس `MultiDexApplication` ارث بری کنید. تغییرات مورد نیاز را همانند کد زیر اعمال کنید:
+```java
+public class MainApplication extends MultiDexApplication {
+  // your code
+}
+```
+ج) اما در صورتیکه کلاس `Application` خود را از کلاس دیگری ارث بری نموده‌اید و امکان ارث بری از کلاس `MultiDexApplication` وجود ندارد، میتوانید متود `attachBaseContext` را به صورت زیر در کلاس خود `override` نمایید و تغییرات لازم را اعمال نمایید:
+```java
+public class MainApplication extends SomeOtherApplication {
+    // your code
+    
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+}
+```
+برای راهنمایی بهتر می‌توانید به [مستندات رسمی اندروید](https://developer.android.com/studio/build/multidex) مراجعه نمایید.
+
+
 
 ### ۲. استفاده از Resolver
 
@@ -182,9 +216,8 @@ public class MainApplication extends SomeOtherApplication {
     }
 }
 ```
-
-
 برای راهنمایی بهتر می‌توانید به [مستندات رسمی اندروید](https://developer.android.com/studio/build/multidex) مراجعه نمایید.
+
 
 ## مقداردهی اولیه
 ابتدا برای دسترسی به کدهای تپسل از تکه کد زیر استفاده کنید.
