@@ -11,6 +11,14 @@ lang: fa
 > **خطای مورد نظر شما در این صفحه مطرح نشده است؟** در [قسمت Issues گیت‌هاب](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?q=is%3Aissue) جستجو کنید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues/new/choose) مطرح کنید.
 {:data-title="نکته" data-color="red"}
 
+## خطای This project uses AndroidX dependencies, but the 'android.useAndroidX' property is not enabled. Set this property to true in the gradle.properties file and retry. The following AndroidX dependencies are detected
+
+  این خطا زمانی اتفاق می‌افتد که پشتیبانی از AndroidX در پروژه شما وجود نداشته باشد. برای رفع آن لازم وارد فایل `Assets\Plugins\Android\mainTemplate.gradle` شده و دو خط کد زیر را به آن اضافه کنید.
+> ```gradle.properties
+> android.useAndroidX=true
+> android.enableJetifier=true
+> ```
+
 ## خطای Activity is Dead
 
  هنگام صدا زدن متد initialize , request و یا Show (تا قبل اینکه  Callback صدا زده بشه) اگر از Activity خارج شوید این خطا رخ می دهد.
