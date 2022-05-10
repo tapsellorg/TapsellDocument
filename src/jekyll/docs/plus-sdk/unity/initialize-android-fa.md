@@ -27,13 +27,17 @@ Assets > Import Package > Custom Package...
 Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Main Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
-Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
 ```
 
-۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradleTemplate.properties` بروید و دو خط زیر را اضفه کنید:
+۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و دو خط زیر را اضفه کنید:
 ```gradle
-android.useAndroidX=true
-android.enableJetifier=true
+    // Android Resolver Repos Start
+    ([rootProject] + (rootProject.subprojects as List)).each {
+    ext {
+    it.setProperty("android.useAndroidX", true)
+    it.setProperty("android.enableJetifier", true)
+    }
+   }
 ```
 
 ۵. به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و :خط کامنت شده‌ی بالای فایل را حذف نمایید
@@ -146,13 +150,17 @@ Assets > External Dependency Manager > Android Resolver > Force Resolve
 ```console
 Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
-Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
 ```
 
-۷. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradleTemplate.properties` بروید و دو خط زیر را اضفه کنید:
+۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و دو خط زیر را اضفه کنید:
 ```gradle
-android.useAndroidX=true
-android.enableJetifier=true
+    // Android Resolver Repos Start
+    ([rootProject] + (rootProject.subprojects as List)).each {
+    ext {
+    it.setProperty("android.useAndroidX", true)
+    it.setProperty("android.enableJetifier", true)
+    }
+   }
 ```
 
 ۸. 

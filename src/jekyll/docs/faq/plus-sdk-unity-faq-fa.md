@@ -14,10 +14,15 @@ lang: fa
 ## خطای This project uses AndroidX dependencies, but the 'android.useAndroidX' property is not enabled. Set this property to true in the gradle.properties file and retry. The following AndroidX dependencies are detected
 
   این خطا زمانی اتفاق می‌افتد که پشتیبانی از AndroidX در پروژه شما وجود نداشته باشد. برای رفع آن لازم وارد فایل `Assets\Plugins\Android\mainTemplate.gradle` شده و دو خط کد زیر را به آن اضافه کنید.
-> ```gradle.properties
-> android.useAndroidX=true
-> android.enableJetifier=true
-> ```
+```gradle
+    // Android Resolver Repos Start
+    ([rootProject] + (rootProject.subprojects as List)).each {
+    ext {
+    it.setProperty("android.useAndroidX", true)
+    it.setProperty("android.enableJetifier", true)
+    }
+   }
+```
 
 ## خطای Activity is Dead
 

@@ -26,13 +26,17 @@ There are two ways to add the required libraries, use one of them.
     Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Main Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
-    Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
     ```
 
-4. To enable AndroidX, go to `Assets\Plugins\Android\gradleTemplate.properties` and add the following code snippet to it:
+4. To enable AndroidX, go to `Assets\Plugins\Android\mainTemplate.gradle` and add the following code snippet to it:
     ```gradle
-    android.useAndroidX=true
-    android.enableJetifier=true
+    // Android Resolver Repos Start
+    ([rootProject] + (rootProject.subprojects as List)).each {
+    ext {
+    it.setProperty("android.useAndroidX", true)
+    it.setProperty("android.enableJetifier", true)
+    }
+   }
     ```
 
 5. Go to `Assets\Plugins\Android\mainTemplate.gradle` and delete the comment line above the file.
@@ -148,13 +152,17 @@ There are two ways to add the required libraries, use one of them.
     ```console
     Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
-    Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
     ```
 
-7. To enable AndroidX, go to `Assets\Plugins\Android\gradleTemplate.properties` and add the following code snippet to it:
+7. To enable AndroidX, go to `Assets\Plugins\Android\mainTemplate.gradle` and add the following code snippet to it:
     ```gradle
-    android.useAndroidX=true
-    android.enableJetifier=true
+    // Android Resolver Repos Start
+    ([rootProject] + (rootProject.subprojects as List)).each {
+    ext {
+    it.setProperty("android.useAndroidX", true)
+    it.setProperty("android.enableJetifier", true)
+    }
+   }
     ```
    
 8. Go to `Assets\Plugins\Android\launcherTemplate.gradle`, and add the following code snippet to it if not already added:
