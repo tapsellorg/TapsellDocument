@@ -29,7 +29,7 @@ Edit > Project Setting... > Player > Publishing Settings > Custom Main Gradle Te
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
 ```
 
-۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و دو خط زیر را اضفه کنید:
+۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و قطعه کد زیر را اضافه کنید:
 ```gradle
     // Android Resolver Repos Start
     ([rootProject] + (rootProject.subprojects as List)).each {
@@ -152,7 +152,7 @@ Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradl
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
 ```
 
-۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و دو خط زیر را اضفه کنید:
+۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و قطعه کد زیر را اضافه کنید:
 ```gradle
     // Android Resolver Repos Start
     ([rootProject] + (rootProject.subprojects as List)).each {
