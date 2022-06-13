@@ -17,7 +17,8 @@ true
 ### شناسه تپسل
 
 ```c#
-TapsellPlus.Initialize(TAPSELLPLUS_KEY,
+const string TestAppId = "alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa";
+TapsellPlus.Initialize(TestAppId,
             adNetworkName => Debug.Log(adNetworkName + " Initialized Successfully."),
             error => Debug.Log(error.ToString()));
 ```
