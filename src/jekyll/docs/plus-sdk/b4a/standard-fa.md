@@ -47,15 +47,16 @@ tapsellPlus.RequestAndShowStandardBanner(zoneId, tapsellPlus.BANNER_320x50, pane
 
 BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر زیر باشد:
 
-|           نوع بنر            |  اندازه   |           شبکه‌های پشتیبانی شده           |
-|:----------------------------:|:---------:|:-----------------------------------------:|
-| `tapsellPlus.BANNER_320x50`  | `320x50`  | تپسل، AdMob، AppLovin، UnityAds، AdColony |
-| `tapsellPlus.BANNER_320x100` | `320x100` |                تپسل، AdMob                |
-| `tapsellPlus.BANNER_250x250` | `250x250` |                   تپسل                    |
-| `tapsellPlus.BANNER_300x250` | `300x250` |      تپسل، AdMob، AppLovin، AdColony      |
-| `tapsellPlus.BANNER_468x60`  | `468x60`  |              AdMob، UnityAds              |
-| `tapsellPlus.BANNER_728x90`  | `728x90`  |    AdMob، AppLovin، UnityAds، AdColony    |
-| `tapsellPlus.BANNER_160x600` | `160x600` |                 AdColony                  |
+|            نوع بنر            |  اندازه   |           شبکه‌های پشتیبانی شده           |
+|:-----------------------------:|:---------:|:-----------------------------------------:|
+|  `tapsellPlus.BANNER_320x50`  | `320x50`  | تپسل، AdMob، AppLovin، UnityAds، AdColony |
+| `tapsellPlus.BANNER_320x100`  | `320x100` |                تپسل، AdMob                |
+| `tapsellPlus.BANNER_250x250`  | `250x250` |                   تپسل                    |
+| `tapsellPlus.BANNER_300x250`  | `300x250` |      تپسل، AdMob، AppLovin، AdColony      |
+|  `tapsellPlus.BANNER_468x60`  | `468x60`  |              AdMob، UnityAds              |
+|  `tapsellPlus.BANNER_728x90`  | `728x90`  |    AdMob، AppLovin، UnityAds، AdColony    |
+| `tapsellPlus.BANNER_160x600`  | `160x600` |                 AdColony                  |
+| `tapsellPlus.BANNER_ADAPTIVE` | `320x50`  |                تپسل، AdMob                |
 
 
 کالبک‌های مورد استفاده در این تبلیغ:
