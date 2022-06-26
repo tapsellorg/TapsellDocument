@@ -60,14 +60,6 @@ TapsellPlus.initialize(APP_KEY);
 > استفاده کنید. هنگام درخواست یا نمایش هرگونه خطایی با جزئیات دقیق‌تر نمایش داده می‌شود.
 {:data-title="Debug mode" data-color="blue"}
 
-> برای مشاهده‌ی جزئی‌تر لاگ‌ها در لایبرری از کد
->
-> ```js
-> TapsellPlus.setDebugMode(3)
-> ```
-> استفاده کنید. هنگام درخواست یا نمایش هرگونه خطایی با جزئیات دقیق‌تر نمایش داده می‌شود.
-{:data-title="Debug mode" data-color="blue"}
-
 > در صورتی که `targetSdkVersion` برابر ۲۸ یا بالاتر باشد هنگام اجرای برنامه در حالت دیباگ (با استفاده از Metro sever) بایستی network-security را در برنامه لحاظ کنید.  
 > برای اطلاعات بیشتر [این بخش](https://reactnative.dev/docs/network#using-fetch) از مستندات ری‌اکت نیتیو را مطالعه کنید.  
 > 
