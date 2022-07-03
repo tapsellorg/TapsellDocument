@@ -2,10 +2,10 @@
 
 ### v2.1.8-alpha03 - 2022/07/03
 * اضافه کردن کتابخانه جدید جهت یکپارچه سازی روش های Gradle و Resolver برای پیاده‌سازی پکیج تپسل
-  - برای اطلاعات بیشتر به (https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases)[لینک دانلود کتابخانه] یا (https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin)[آدرس ریپازیتوری در گیتهاب] مراجعه نمایید
+  - برای اطلاعات بیشتر به [لینک دانلود کتابخانه](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases) یا [آدرس ریپازیتوری در گیتهاب](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin) مراجعه نمایید
 * سازگاری با پکیج GoogleMobileAds-7.1.0 و پکیج GoogleMobileAds-native و تغییرات اضافه شده در GoogleMobileAds-7.0 به بعد
-  - برای مشاهده تغییرات در پیاده سازی تبلیغات Native در GoogleMobileAds-7.0 به بعد، به این [https://developers.google.com/admob/unity/native](لینک) مراجعه نمایید.
-* رفع مشکل گزارش شده در گیتهاب [https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues/9](9#)
+  - برای مشاهده تغییرات در پیاده سازی تبلیغات Native در GoogleMobileAds-7.0 به بعد، به این [لینک](https://developers.google.com/admob/unity/native) مراجعه نمایید.
+* رفع مشکل گزارش شده در گیتهاب [#9](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues/9)
 
 ### v2.1.7 - 2022/04/04
 * [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۷](https://docs.tapsell.ir/plus-sdk/android/main/#v217---20220328)
