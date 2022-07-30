@@ -50,7 +50,7 @@ TapsellPlus.instance.showNativeAd(id, onOpened: (nativeAd) {
 
 
 ```xml
-<!--list_tile_native_ad.xml-->
+<!--native_ad.xml-->
 <com.google.android.gms.ads.nativead.NativeAdView
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
@@ -69,9 +69,8 @@ class AdmobNativeAdFactory(private val context: Context) : GoogleMobileAdsPlugin
         nativeAd: NativeAd,
         customOptions: MutableMap<String, Any>?
     ): NativeAdView {
-        val layout: Int = R.layout.native_ad
         val nativeAdView = LayoutInflater.from(context)
-            .inflate(layout, null) as NativeAdView
+            .inflate(R.layout.native_ad, null) as NativeAdView
             
             // find view id here.
             
