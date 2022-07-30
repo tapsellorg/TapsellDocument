@@ -62,6 +62,7 @@ TapsellPlus.instance.showNativeAd(id, onOpened: (nativeAd) {
 ```
 
 ۲. برای ساختن ویو و متصل کردن آن به ادموب لازم است یک کلاس `AdmobNativeAdFactory` مشابه زیر برای آن بسازید.
+
 ```kt
 class AdmobNativeAdFactory(private val context: Context) : GoogleMobileAdsPlugin.NativeAdFactory {
     override fun createNativeAd(
@@ -110,23 +111,35 @@ override fun cleanUpFlutterEngine(flutterEngine: FlutterEngine) {
 برای register کردن و unregister کردن ویوی های مختلف ادموب در پروژه خود نیاز به تعریف `FACTORY_ID` مخصوص هر ویو دارید. این `FACTORY_ID` بعدا در هنگام نمایش تبلیغ در بخش فلاتر مورد استفاده قرار می‌گیرد.
 
 ۴. اکنون درخواست نمایش تبلیغ را به صورت زیر انجام دهید:
-```dart
+```js
 TapsellPlus.instance.showNativeAd(id, admobFactoryId: factoryId, 
 onOpened: (nativeAd) {
+  
   if (nativeAd is GeneralNativeAdPayload) {
+    
     // Use `nativeAd.ad` object to show the native ad
+    
   } else if (nativeAd is AdMobNativeAdPayload) {
+    
     // Use `NativeAd.ad` object to bind the widget to the admob native ad view
+  
   }
 }, 
 onLoaded: (nativeAd) {
+  
   if (nativeAd is AdMobNativeAdPayload) {
+    
      // You can ensure that admob ad view is loaded here to notify the UI to show the ad widget
+  
   } else if (nativeAd is AdMobNativeAdViewPayload) {
+    
     // pass `nativeAd.nativeAdView` as ad object to the admob `AdWidget`
+  
   }
 }, onError: (errorPayload) {
+  
    // Error when getting ad info
+  
 });
 ```
 
