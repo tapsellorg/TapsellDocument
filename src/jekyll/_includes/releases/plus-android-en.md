@@ -1,5 +1,7 @@
 ## Tapsell plus native Changelog
 
+### 2.1.8 (2022/11/21)
+
 ### 2.1.7 (2022/03/28)
 - Update AdMob to `20.6.0` which fixes [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
 - Minor bug fixes

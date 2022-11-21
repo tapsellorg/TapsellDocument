@@ -1,5 +1,7 @@
 ## تغییرات نسخه‌ها:
 
+### v2.1.8 - 2022/11/21
+
 ### v2.1.7 - 2022/03/28
 - بروزرسانی AdMob به `20.6.0` و رفع [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
 - Minor bug fixes
