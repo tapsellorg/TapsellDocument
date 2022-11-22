@@ -1,5 +1,14 @@
 ## Tapsell plus native Changelog
 
+### 2.1.8 (2022/11/21)
+- Added dynamic configs for `backPressed` final banner in video ads
+- Add dynamic configs for back alert dialog in videos
+- Update UnityAds to V4.3.0 and fix deprecations based on ([UnityAds API](https://docs.unity.com/ads/UnityAPI.html))
+- Update targetSDK version to 33
+
+#### Flutter
+- Add support for Admob Native ad in plugin. For more information see [Flutter Admob Native Docs](https://docs.tapsell.ir/plus-sdk/flutter/native/)
+
 ### 2.1.7 (2022/03/28)
 - Update AdMob to `20.6.0` which fixes [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
 - Minor bug fixes
