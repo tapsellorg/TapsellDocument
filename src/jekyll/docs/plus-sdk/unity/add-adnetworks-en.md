@@ -55,7 +55,7 @@ If you want to add more ad networks to your project, this page helps you through
       </androidPackages>
     </dependencies>
     ```
-2Build & Run your project
+2. Build & Run your project
 
 ## Using Admob in TapsellPlus v2.1.7 and lower
 
