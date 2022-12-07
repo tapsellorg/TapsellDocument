@@ -11,7 +11,8 @@ toc: true # table of contents
 
 
 ## اضافه کردن Unity Package تپسل پلاس
-برای اضافه کردن کتابخانه‌های مورد نیاز ۲ روش وجود دارد از هرکدام که مایل هستید استفاده کنید.
+برای اضافه کردن تپسل پلاس ۲ روش وجود دارد. در صورتیکه تمایل به استفاده از کتابخانه جدید تپسل پلاس (از نسخه ۲.۱.۸ یا بالاتر) را دارید، لطفا از روش ۲ (Resolver) استفاده نمایید.
+
 
 ### ۱. استفاده از Gradle
 ۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.7/TapsellPlusUnity-Gradle-v2.1.7.unitypackage) دریافت نمایید. 
@@ -27,17 +28,13 @@ Assets > Import Package > Custom Package...
 Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Main Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
+Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
 ```
 
-۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و قطعه کد زیر را اضافه کنید:
+۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradle.properties` بروید و قطعه کد زیر را اضافه کنید:
 ```gradle
-    // Android Resolver Repos Start
-    ([rootProject] + (rootProject.subprojects as List)).each {
-    ext {
-    it.setProperty("android.useAndroidX", true)
-    it.setProperty("android.enableJetifier", true)
-    }
-   }
+android.useAndroidX=true
+android.enableJetifier=true
 ```
 
 ۵. به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و :خط کامنت شده‌ی بالای فایل را حذف نمایید
@@ -131,9 +128,9 @@ Assets > External Dependency Manager > Android Resolver > Settings > Use Jetifie
 Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
 ```
 
-۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.7/TapsellPlusUnity-EDM-v2.1.7.unitypackage) دریافت نمایید. 
+۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.1.8/tapsell-plus-unity-2.1.8.unitypackage) دریافت نمایید. 
 
-۴. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر TapsellPlus از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
+۴. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر `TapsellPlusSDK` از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 
 ```console
 Assets > Import Package > Custom Package...
@@ -150,17 +147,13 @@ Assets > External Dependency Manager > Android Resolver > Force Resolve
 ```console
 Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
+Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
 ```
 
-۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\mainTemplate.gradle` بروید و قطعه کد زیر را اضافه کنید:
+۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradle.properties` بروید و قطعه کد زیر را اضافه کنید:
 ```gradle
-    // Android Resolver Repos Start
-    ([rootProject] + (rootProject.subprojects as List)).each {
-    ext {
-    it.setProperty("android.useAndroidX", true)
-    it.setProperty("android.enableJetifier", true)
-    }
-   }
+android.useAndroidX=true
+android.enableJetifier=true
 ```
 
 ۸. 
@@ -174,7 +167,7 @@ android {
 }
 ```
 
-۹. به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و عبارت `mavenCentral()` را به هر دو بخش `repositories` اضافه نمایید. سپس ورژن `com.android.tools.build:gradle` را به ۳.۶.۰ تغییر دهید.
+۹. به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و عبارت `mavenCentral()` را به هر دو بخش `repositories` اضافه نمایید. سپس ورژن `com.android.tools.build:gradle` را به ۴.۲.۲ تغییر دهید.
 
 
 > دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
@@ -256,6 +249,8 @@ TapsellPlus.SetGdprConsent(true);
 
 ## پروژه‌ی نمونه
 برای راهنمایی بیش‌تر می‌توانید از پروژه‌های نمونه‌ی ما بر روی Github استفاده نمایید.
+
+* [پروژه‌ی نمونه مناسب برای Unity 2021.3.5f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin)
 
 * [پروژه‌ی نمونه مناسب برای Unity 2020.3.9f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020)
 

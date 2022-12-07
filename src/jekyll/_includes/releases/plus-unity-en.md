@@ -1,5 +1,12 @@
 ## Tapsell plus Unity Changelog
 
+### v2.1.8 - 2022/12/07
+* Added new TapsellPlus Unity package to integrate both Gradle & Resolver methods for implementation of Tapsell package.
+  - Refer to [package download link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases) or [Github repository](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin) for more information.
+* Using GoogleMobileAds-7.3.1 & GoogleMobileAds-native and other changes from GoogleMobileAds-7.0 and above versions.
+  - check out this [link](https://developers.google.com/admob/unity/native) to see changes in native ads implementation from GoogleMobileAds-7.0 and above versions.
+* Fixed reported GitHub issue [#9](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues/9)
+
 ### v2.1.7 - 2022/04/04
 * [Using Tapsell Plus version 2.1.7](/plus-sdk/android/main/#v217---20220328)
 * Update AdMob to `20.6.0` and AppSetId to 16.0.2 which fixes [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)

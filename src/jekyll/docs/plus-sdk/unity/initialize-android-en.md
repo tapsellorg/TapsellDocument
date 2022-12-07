@@ -10,7 +10,7 @@ toc: true # table of contents
 {:data-title="Project build note" data-color="red"}
 
 ## Adding Tapsell Plus Unity package
-There are two ways to add the required libraries, use one of them.
+There are two ways to add the required libraries, use method 2 (Resolver) for TapsellPlus v2.1.8 or above.
 
 ### 1. Using Gradle
 1. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.7/TapsellPlusUnity-Gradle-v2.1.7.unitypackage).
@@ -26,17 +26,13 @@ There are two ways to add the required libraries, use one of them.
     Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Main Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
+    Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
     ```
 
-4. To enable AndroidX, go to `Assets\Plugins\Android\mainTemplate.gradle` and add the following code snippet to it:
+4. To enable AndroidX, go to `Assets\Plugins\Android\gradle.properties` and add the following code snippet to it:
     ```gradle
-    // Android Resolver Repos Start
-    ([rootProject] + (rootProject.subprojects as List)).each {
-    ext {
-    it.setProperty("android.useAndroidX", true)
-    it.setProperty("android.enableJetifier", true)
-    }
-   }
+    android.useAndroidX=true
+    android.enableJetifier=true
     ```
 
 5. Go to `Assets\Plugins\Android\mainTemplate.gradle` and delete the comment line above the file.
@@ -134,8 +130,8 @@ There are two ways to add the required libraries, use one of them.
     Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
     ```
 
-3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/v2.1.7/TapsellPlusUnity-EDM-v2.1.7.unitypackage).
-4. Add the downloaded `unitypackage` to your project as follows: (If the TapsellPlus folder already exists in your project, please remove it).
+3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.1.8-alpha04/tapsell-plus-unity-2.1.8.unitypackage).
+4. Add the downloaded `unitypackage` to your project as follows: (If the `TapsellPlusSDK` folder already exists in your project, please remove it).
 
     ```console
     Assets > Import Package > Custom Package...
@@ -152,17 +148,13 @@ There are two ways to add the required libraries, use one of them.
     ```console
     Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
+    Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
     ```
 
-7. To enable AndroidX, go to `Assets\Plugins\Android\mainTemplate.gradle` and add the following code snippet to it:
+7. To enable AndroidX, go to `Assets\Plugins\Android\gradle.properties` and add the following code snippet to it:
     ```gradle
-    // Android Resolver Repos Start
-    ([rootProject] + (rootProject.subprojects as List)).each {
-    ext {
-    it.setProperty("android.useAndroidX", true)
-    it.setProperty("android.enableJetifier", true)
-    }
-   }
+    android.useAndroidX=true
+    android.enableJetifier=true
     ```
    
 8. Go to `Assets\Plugins\Android\launcherTemplate.gradle`, and add the following code snippet to it if not already added:
@@ -176,7 +168,7 @@ There are two ways to add the required libraries, use one of them.
     }
     ```
 
-9. Go to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. Then change the version of `com.android.tools.build:gradle` to 3.6.0.
+9. Go to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. Then change the version of `com.android.tools.build:gradle` to 4.2.2.
 
 
     > Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
@@ -249,7 +241,7 @@ Then call the following function in one of your application scripts that runs at
                 error => Debug.Log(error.ToString()));
     ```
 
-`TAPSELLPLUS_KEY` is the key of Tepsel Plus and it is created in [Tepsel panel](https://dashboard.tapsell.ir/) for every application you create and you can copy it from the panel.
+`TAPSELLPLUS_KEY` is the key of TepsellPlus and it is created in [Tepsell panel](https://dashboard.tapsell.ir/) for every application you create and you can copy it from the panel.
 
 You can now display the desired ad according to your needs and the description of each type of ad.
 
@@ -261,6 +253,8 @@ Given that The Tepsel Plus library complies with the GDPR rules for displaying p
 
 ## Sample Project
 for more information, please refer to the sample projects on Github.
+
+* [Sample project compatible with Unity 2021.3.5f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin)
 
 * [Sample project compatible with Unity 2020.3.9f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020)
 

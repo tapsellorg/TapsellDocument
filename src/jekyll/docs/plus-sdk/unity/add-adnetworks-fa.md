@@ -10,7 +10,60 @@ toc: true
 
 برای کسب اطلاعات بیشتر در مورد هر شبکه‌ی تبلیغاتی می‌توانید با همکاران ما در تیم رسانه از قسمت پشتیبانی صحبت کنید.
 
+## افزودن شبکه های تبلیغاتی در تپسل پلاس ۲.۱.۸ به بالا
+### اضافه کردن ادموب
+۱. ابتدا `unitypackage` نسخه ۷.۱.۰ گوگل ادموب را از [این لینک](https://github.com/googleads/googleads-mobile-unity/releases) دریافت نمایید.
+> نکته: لطفا از نسخه ۷.۱.۰ ادموب استفاده نمایید. زیرا نسخه های ۷.۲.۰ و ۷.۳.۰ و ۷.۳.۱ باگ وجود دارد. برای بررسی بهتر می‌توانید [مشکل گیتهاب](https://github.com/googleads/googleads-mobile-unity/issues/2262) یا [این تیکت](https://groups.google.com/g/google-admob-ads-sdk/c/821dMZCTCpg) را بررسی کنید.
+> لطفا از اضافه کردن فایل های iOS در هنگام افزودن کتابخانه ادموب، خودداری کنید تا از بروز خطا های بیلد جلوگیری شود
 
+۲. سپس `unitypackage` مربوط به تبلیغات نیتیو ادموب را از [این لینک](https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage) دریافت نمایید.
+
+۳. سپس اپ آیدی گوگل خود را از مسیر `Assets/GoogleMobileAds/Settings`، مطابق عکس زیر اضافه کنید
+![GoogleAppID](https://user-images.githubusercontent.com/38072572/206126452-e7235200-510a-42cb-8565-0bfa3beb378f.png)
+
+۴. پروژه خود را بیلد و سپس اجرا کنید
+
+### اضافه کردن یونیتی ادز و سایر شبکه های تبلیغاتی
+۱. فایل `Assets\TapsellPlus\Editor\TapsellPlusDependencies.xml` را باز کنید و ادنتورک مد نظر خود را مطابق زیر اضافه کنید
+ ```xml
+    <dependencies>
+      <androidPackages>
+    
+            <!-- AdMob -->
+            <androidPackage spec="com.google.android.gms:play-services-ads:21.0.0"/>
+    
+            <!-- UnityAds -->
+            <androidPackage spec="com.unity3d.ads:unity-ads:4.3.0"/>
+    
+            <!-- ChartBoost -->
+            <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
+    
+            <!-- AdColony -->
+            <androidPackage spec="com.adcolony:sdk:4.6.5"/>
+    
+            <!-- AppLovin -->
+            <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
+    
+            <!-- Mintegral - make sure you uncomment the custom repository down below -->
+            <androidPackage spec="com.mbridge.msdk.oversea:videojs:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:reward:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:same:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:15.6.11"/>
+    
+            <repositories>
+                <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->
+                <repository>https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea</repository>
+            </repositories>
+      </androidPackages>
+    </dependencies>
+```
+۲. پروژه خود را بیلد و سپس اجرا کنید
+
+## افزودن شبکه های تبلیغاتی در تپسل پلاس ۲.۱.۷ به پایین
 
 > **نکات مهم** برای استفاده از **AdMob**  
 > 
