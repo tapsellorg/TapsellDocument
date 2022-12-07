@@ -14,6 +14,7 @@ toc: true
 ### اضافه کردن ادموب
 ۱. ابتدا `unitypackage` نسخه ۷.۱.۰ گوگل ادموب را از [این لینک](https://github.com/googleads/googleads-mobile-unity/releases) دریافت نمایید.
 > نکته: لطفا از نسخه ۷.۱.۰ ادموب استفاده نمایید. زیرا نسخه های ۷.۲.۰ و ۷.۳.۰ و ۷.۳.۱ باگ وجود دارد. برای بررسی بهتر می‌توانید [مشکل گیتهاب](https://github.com/googleads/googleads-mobile-unity/issues/2262) یا [این تیکت](https://groups.google.com/g/google-admob-ads-sdk/c/821dMZCTCpg) را بررسی کنید.
+> لطفا از اضافه کردن فایل های iOS در هنگام افزودن کتابخانه ادموب، خودداری کنید تا از بروز خطا های بیلد جلوگیری شود
 
 ۲. سپس `unitypackage` مربوط به تبلیغات نیتیو ادموب را از [این لینک](https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage) دریافت نمایید.
 
