@@ -41,13 +41,13 @@ You need to contact support to get a **producation admob key** for actual usage.
 
 
 ## Unity ads
-> Supported version: `3.7.5`
+> Supported version: `4.3.0`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedUnityAds = "3.7.5"
+    def supportedUnityAds = "4.3.0"
     implementation("com.unity3d.ads:unity-ads:$supportedUnityAds")
 }
 ```

@@ -74,7 +74,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
 
     // For unityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.5'
+    implementation 'com.unity3d.ads:unity-ads:4.3.0'
 
     // For chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
