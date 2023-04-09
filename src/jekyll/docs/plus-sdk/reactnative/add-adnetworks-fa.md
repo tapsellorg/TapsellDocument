@@ -73,7 +73,7 @@ dependencies {
     // For lower versions meta-data tag is not needed
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
     //for unityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.5'
+    implementation 'com.unity3d.ads:unity-ads:4.3.0'
     //for chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
     implementation ("com.google.android.gms:play-services-base:17.6.0"){

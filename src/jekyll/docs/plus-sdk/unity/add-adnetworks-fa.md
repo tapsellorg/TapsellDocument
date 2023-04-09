@@ -122,7 +122,7 @@ dependencies {
     // for AdMob
     implementation 'com.google.android.gms:play-services-ads:20.6.0'
     // for UnityAds
-    implementation 'com.unity3d.ads:unity-ads:3.7.5'
+    implementation 'com.unity3d.ads:unity-ads:4.3.0'
     // for Chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
     // for AdColony
@@ -179,7 +179,7 @@ allprojects {
         <androidPackage spec="com.google.android.gms:play-services-ads:20.6.0"/>
 
         <!-- UnityAds -->
-        <androidPackage spec="com.unity3d.ads:unity-ads:3.7.5"/>
+        <androidPackage spec="com.unity3d.ads:unity-ads:4.3.0"/>
 
         <!-- ChartBoost -->
         <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
