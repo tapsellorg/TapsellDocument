@@ -6,16 +6,21 @@ permalink: /mediation/android/
 toc: true
 ---
 
+<br/>
+
 # Tapsell Mediation
 
 Tapsell Mediation, is a Mediated solution helping businesses increase their mobile apps' revenue with the inclusion of other supported Programmatic & Mediated Ad Solutions.
 
+<br/>
+
 ## Getting Started
+---
 
 Integrating the Tapsell SDK into your app is the first step toward displaying ads and earning revenue. 
 Once you've integrated the SDK, you can choose an ad format (such as native or rewarded video) and follow the steps to implement it.
 
-### Before You Begin:
+### Before You Begin
 
 To prepare your app, complete the following steps:
 
@@ -135,7 +140,7 @@ allprojects {
 
 No additional configuration needed.
 
-### Set Initialization Listener:
+### Set Initialization Listener
 
 You can set a listener to be notified of the SDK's initialization. The `onInitializationComplete` will
 be called once all the mediation adapters are initialized.
@@ -155,7 +160,10 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+<br/>
+
 ## Implementing Ad Formats
+---
 
 The Tapsell SDK is now imported and you're ready to implement an ad. Tapsell offers a number of 
 different ad formats, so you can choose the one that best fits your app's user experience.
