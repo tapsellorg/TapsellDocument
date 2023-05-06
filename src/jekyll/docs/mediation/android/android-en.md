@@ -472,7 +472,7 @@ enum AdShowCompletionState {
 
 ### Rewarded
 
-Rewarded ads are full-screen that reward users for watching short videos and interacting with 
+Rewarded ads are full-screen ads that reward users for watching short videos and interacting with 
 playable ads and surveys. They are used for monetizing free-to-play apps.
 
 This guide shows you how to integrate rewarded ads from Tapsell into your Android app.
@@ -537,7 +537,7 @@ public class MainActivity extends AppCompatActivity {
 
 #### Show The Loaded Rewarded Ad
 
-Once the interstitial ad is successfully loaded, the next step is to show the ad.
+Once the rewarded ad is successfully loaded, the next step is to show the ad.
 To do so simply call the `showRewardedVideoAd()` static method in Tapsell class
 passing the `adId` received in `onSuccess` method of the `RequestResultListener`.
 
