@@ -64,6 +64,7 @@ The Tapsell Mediation SDK currently supports the following 3rd-party programmati
 * Chartboost
 * Mintegral
 * UnityAds
+* Wortise
 
 To integrate, add the adapter dependency you need to your module's app-level `build.gradle`:
 
@@ -74,6 +75,7 @@ implementation "ir.tapsell.mediation.adapter:applovin:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:chartboost:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:mintegral:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:unityads:$tapsellVersion"
+implementation "ir.tapsell.mediation.adapter:wortise:$tapsellVersion"
 ```
 
 #### Additional Configuration
@@ -136,9 +138,21 @@ allprojects {
 }
 ```
 
-- AdColony
+- UnityAds
 
 No additional configuration needed.
+
+- Wortise
+
+In your project-level `build.gradle` file, include Wortise Maven repository:
+
+```groovy
+allprojects {
+    repositories {
+      maven { url 'https://maven.wortise.com/artifactory/public' }
+    }
+}
+```
 
 ### Set Initialization Listener
 
