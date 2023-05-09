@@ -46,7 +46,7 @@ dependencies {
 android {
     defaultConfig {
         manifestPlaceholders = [
-                TapsellAppKey: "YOUR_APP_ID",
+                TapsellMediationAppKey: "YOUR_APP_ID",
         ]
     }
 }
@@ -93,7 +93,7 @@ Add a manifest placeholder inside your module's app-level `build.gradle` providi
 android {
     defaultConfig {
         manifestPlaceholders = [
-                TapsellAdmobSignature: "YOUR_APP_SIGNATURE",
+                TapsellMediationAdmobAdapterSignature: "YOUR_APP_SIGNATURE",
         ]
     }
 }
@@ -108,7 +108,7 @@ Add a manifest placeholder inside your module's app-level `build.gradle` providi
 android {
     defaultConfig {
         manifestPlaceholders = [
-                TapsellApplovinSignature: "YOUR_APP_SIGNATURE",
+                TapsellMediationApplovinAdapterSignature: "YOUR_APP_SIGNATURE",
         ]
     }
 }
