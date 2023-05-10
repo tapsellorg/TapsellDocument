@@ -35,12 +35,14 @@ Follow the steps below to be able to use the Tapsell Mediation in your applicati
 
 #### Import the Tapsell Mediation Unity plugin
 
-Use [this](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_v1.0.0-beta02.01.unitypackage)
-link to download the latest version of Tapsell Mediation plugin and import it as a custom package to your project.
+Download the following packages and import them as custom packages to your project.
+
+- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_v1.0.0-beta02.01.unitypackage)
+- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_LegacyAdapter_v1.0.0-beta02.01.unitypackage)
 
 <img src="/images/mediation-unity-import1.jpg" alt="import-package" />
 
-Make sure all of the files are selected and click **Import**.
+For each package, Make sure all of the files are selected and click **Import**.
 
 <img src="/images/mediation-unity-import2.png" alt="import-package" />
 
