@@ -753,12 +753,12 @@ Review the sample below for more details:
 
 ```java
 NativeAdView.Builder(YOUR_CONTAINER_VIEW) // NativeAdViewContainer
-    .withLogo(YOUR_LOGO_VIEW) // NativeImage
-    .withTitle(YOUR_TITLE_VIEW) // NativeText
-    .withSponsored(YOUR_SPONSORED_TEXT_VIEW) // NativeText
-    .withDescription(YOUR_DESCRIPTION_VIEW) // NativeText
-    .withCtaButton(YOUR_CTA_VIEW) // NativeButton
-    .withMedia(YOUR_MEDIA_VIEW) // NativeMedia
+    .withLogo(YOUR_LOGO_VIEW) // ImageView
+    .withTitle(YOUR_TITLE_VIEW) // TextView
+    .withSponsored(YOUR_SPONSORED_TEXT_VIEW) // TextView
+    .withDescription(YOUR_DESCRIPTION_VIEW) // TextView
+    .withCtaButton(YOUR_CTA_VIEW) // Button
+    .withMedia(YOUR_MEDIA_VIEW) // FrameLayout
     .build()
 ```
 
