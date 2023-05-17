@@ -34,7 +34,7 @@ that is needed later in this guide.
 
 ```groovy
 dependencies {
-    def tapsellVersion = "1.0.0-beta02"
+    def tapsellVersion = "1.0.0-beta03"
     implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
     implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
 }
@@ -64,7 +64,6 @@ The Tapsell Mediation SDK currently supports the following 3rd-party programmati
 * Chartboost
 * Mintegral
 * UnityAds
-* Wortise
 
 To integrate, add the adapter dependency you need to your module's app-level `build.gradle`:
 
@@ -75,7 +74,6 @@ implementation "ir.tapsell.mediation.adapter:applovin:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:chartboost:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:mintegral:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:unityads:$tapsellVersion"
-implementation "ir.tapsell.mediation.adapter:wortise:$tapsellVersion"
 ```
 
 #### Additional Configuration
@@ -142,17 +140,6 @@ allprojects {
 
 No additional configuration needed.
 
-- Wortise
-
-In your project-level `build.gradle` file, include Wortise Maven repository:
-
-```groovy
-allprojects {
-    repositories {
-      maven { url 'https://maven.wortise.com/artifactory/public' }
-    }
-}
-```
 
 ### Set Initialization Listener
 
@@ -449,7 +436,7 @@ AdStateListener.Interstitial listener = new AdStateListener.Interstitial() {
 
     @Override
     public void onAdClosed(AdShowCompletionState completionState) {
-        // Code to be executed when the fullscreen ad is clised by the user.
+        // Code to be executed when the full-screen ad is clicked by the user.
     }
     
     @Override
@@ -563,7 +550,7 @@ AdStateListener.Rewarded listener = new AdStateListener.Rewarded() {
 
     @Override
     public void onAdClosed(AdShowCompletionState completionState) {
-        // Code to be executed when the fullscreen ad is clised by the user.
+        // Code to be executed when the full-screen ad is clicked by the user.
     }
     
     @Override
@@ -599,35 +586,13 @@ This guide shows you how to integrate native ads from Tapsell into your Android 
 
 #### Add Tapsell Native Views To Your Layout
 
-The first step toward displaying a native ad is to create your ad layout using the views provided by
-the Tapsell SDK. Note that the design and format of the ad layout is completely in your own hands to
-match your app's design, but you must use the following Android views:
+The first step toward displaying a native ad is to create your ad layout using the same views you use in your application. Note that the design and format of the ad layout is completely in your own hands to match your app's design. The only thing you need to consider in your 
+layout design is that you must put all your ad layout views inside a `NativeAdViewContainer`, provided by Tapsell SDK:
 
 - ir.tapsell.mediation.ad.views.ntv.**NativeAdViewContainer**
 
     A custom Android `FrameLayout` that must be used as the parent view of the native ad item views. All your ad views providing the content of the ad,
 like title view, logo view and so on, must be placed inside a `NativeAdViewContainer` view. 
-
-
-- ir.tapsell.mediation.ad.views.ntv.**NativeText**
-
-    A custom Android `TextView` that must be used for the views showing the ad title, ad description and ad sponsored text.
-
-
-- ir.tapsell.mediation.ad.views.ntv.**NativeImage**
-
-    A custom Android `ImageView` that must be used for the view showing the ad logo image.
-
-
-- ir.tapsell.mediation.ad.views.ntv.**NativeButton**
-
-    A custom Android `Button` that must be used for the view showing the ad CTA button.
-
-
-- ir.tapsell.mediation.ad.views.ntv.**NativeMedia**
-
-    A custom Android `FrameLayout` that must be used for the view showing the ad media, i.e., banner or video depending on the ad type.
-
 
 Here's an example that shows an ad layout inside the activity layout:
 
@@ -647,32 +612,32 @@ Here's an example that shows an ad layout inside the activity layout:
         android:layout_height="match_parent">
 
         <!-- logo view -->
-        <ir.tapsell.mediation.ad.views.ntv.NativeImage
+        <ImageView
             android:id="@+id/tapsell_native_ad_logo"
             ... />
         
         <!-- title view -->  
-        <ir.tapsell.mediation.ad.views.ntv.NativeText
+        <TextView
             android:id="@+id/tapsell_native_ad_title"
             ... />
 
         <!-- description view -->
-        <ir.tapsell.mediation.ad.views.ntv.NativeText
+        <TextView
             android:id="@+id/tapsell_native_ad_description"
             ... />
 
         <!-- sponsored text view -->
-        <ir.tapsell.mediation.ad.views.ntv.NativeText
+        <TextView
             android:id="@+id/tapsell_native_ad_sponsored"
             ... />
 
         <!-- CTA button view -->
-        <ir.tapsell.mediation.ad.views.ntv.NativeButton
+        <Button
             android:id="@+id/tapsell_native_ad_cta"
             ... />
         
         <!-- media view -->
-        <ir.tapsell.mediation.ad.views.ntv.NativeMedia
+        <FrameLayout
             android:id="@+id/tapsell_native_ad_media"
             ... />
       
@@ -681,9 +646,7 @@ Here's an example that shows an ad layout inside the activity layout:
 </ir.tapsell.mediation.ad.views.ntv.NativeAdViewContainer>
 ```
 
-As an alternative to adding the ad layout directly to the activity layout, 
-you can only place the `NativeAdViewContainer` and have your ad layout in a separate layout file, 
-attaching it programmatically. See the sample below:
+As an alternative to adding the ad layout directly to the activity layout, you can only place the `NativeAdViewContainer` and have your ad layout in a separate layout file, attaching it programmatically. See the sample below:
 
 ```xml
 <!----------------------- activity_main.xml -------------------------->
