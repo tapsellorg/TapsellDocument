@@ -19,6 +19,12 @@ Tapsell Mediation, is a Mediated solution helping businesses increase their mobi
 Integrating the Tapsell SDK into your app is the first step toward displaying ads and earning revenue. 
 Once you've integrated the SDK, you can choose an ad format (such as banner or rewarded video) and follow the steps to implement it.
 
+> **Note:** Tapsell Mediation currently targets Android platform only.
+
+### Prerequisites
+
+- Use Unity 2021 or higher
+
 ### Before You Begin
 
 To prepare your app, complete the following steps:
@@ -37,8 +43,8 @@ Follow the steps below to be able to use the Tapsell Mediation in your applicati
 
 Download the following packages and import them as custom packages to your project.
 
-- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_v1.0.0-beta02.01.unitypackage)
-- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_LegacyAdapter_v1.0.0-beta02.01.unitypackage)
+- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_v1.0.0-beta02.01.unitypackage)
+- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_LegacyAdapter_v1.0.0-beta02.01.unitypackage)
 
 <img src="/images/mediation-unity-import1.jpg" alt="import-package" />
 
@@ -78,13 +84,12 @@ No additional configuration or code is needed to initialize the SDK.
 
 The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
-* [**AdColony**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_AdColonyAdapter_v1.0.0-beta02.01.unitypackage)
-* [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_AdMobAdapter_v1.0.0-beta02.01.unitypackage)
-* [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_ApplovinAdapter_v1.0.0-beta02.01.unitypackage)
-* [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_ChartboostAdapter_v1.0.0-beta02.01.unitypackage)
-* [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_MintegralAdapter_v1.0.0-beta02.01.unitypackage)
-* [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_UnityAdsAdapter_v1.0.0-beta02.01.unitypackage)
-* [**Wortise**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta02%2301/TapsellMediation_WortiseAdapter_v1.0.0-beta02.01.unitypackage)
+* [**AdColony**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_AdColonyAdapter_v1.0.0-beta02.01.unitypackage)
+* [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_AdMobAdapter_v1.0.0-beta02.01.unitypackage)
+* [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_ApplovinAdapter_v1.0.0-beta02.01.unitypackage)
+* [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_ChartboostAdapter_v1.0.0-beta02.01.unitypackage)
+* [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_MintegralAdapter_v1.0.0-beta02.01.unitypackage)
+* [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta03%2301/TapsellMediation_UnityAdsAdapter_v1.0.0-beta02.01.unitypackage)
 
 To integrate each SDK, download the corresponding adapter package from the links above and follow the steps below:
 
@@ -123,10 +128,6 @@ No additional configuration needed.
 
 No additional configuration needed.
 
-- Wortise
-
-No additional configuration needed.
-
 <br/>
 
 ## Implementing Ad Formats
@@ -151,13 +152,13 @@ This guide shows you how to integrate banner ads from Tapsell into your Unity An
 
 The first step is to load an ad; simply by calling the `RequestBannerAd()` static method in `Tapsell.Mediation.Tapsell` class.
 
-```csharp
+```c#
 public static void RequestBannerAd(string zoneId, BannerSize bannerSize, IRequestListener listener)
 ```
 
 BannerSize is an optional enum parameter determining the size of the shown ad, with the following values:
 
-```csharp
+```c#
 public enum BannerSize 
 {
   Banner32050, // Default value if the parameter is not provided
@@ -172,7 +173,7 @@ public enum BannerSize
 
 You need to provide a class implementing the `IRequestListener` interface to get the ad load result overriding the success and failure methods:
 
-```csharp
+```c#
 namespace Tapsell.Mediation.Request
 {
     public interface IRequestListener
@@ -187,7 +188,7 @@ namespace Tapsell.Mediation.Request
 
 Alternatively, you can provide your callbacks using C# **Action**s:
 
-```csharp
+```c#
 public static void RequestBannerAd(string zoneId, BannerSize bannerSize, Action<string> onSuccess, Action onFailure)
 ```
 
@@ -198,13 +199,13 @@ That's done with the `ShowBannerAd()` static method in `Tapsell.Mediation.Tapsel
 the `adId` received in `OnSuccess` method of the `IRequestListener` and
 the position of the screen in which you wish to show the ad.
 
-```csharp
+```c#
 public static void ShowBannerAd(string adId, BannerPosition position, IAdStateListener.IBanner listener)
 ```
 
 The `BannerPosition` parameter has an **Enum** type with the following implementation:
 
-```csharp
+```c#
 public enum BannerPosition 
 {
     Top,
@@ -219,7 +220,7 @@ public enum BannerPosition
 The `IAdStateListener.IBanner` optional parameter can be passed to monitor and handle events
 related to displaying your banner ad. The interface has the following implementation:
 
-```csharp
+```c#
 namespace Tapsell.Mediation.Show
 {
     public interface IBanner
@@ -244,7 +245,7 @@ namespace Tapsell.Mediation.Show
 
 Alternatively, you can provide your callbacks using C# **Action**s:
 
-```csharp
+```c#
 public static void ShowBannerAd(string adId, BannerPosition position, Action onImpression, Action onClicked, Action<string> onFailed)
 ```
 
@@ -253,7 +254,7 @@ public static void ShowBannerAd(string adId, BannerPosition position, Action onI
 When you are done showing your banner ad, you should destroy it by calling the following static method in
 `Tapsell.Mediation.Tapsell` class:
 
-```csharp
+```c#
 public static void DestroyBannerAd(string adId)
 ```
 
@@ -273,13 +274,13 @@ To load an interstitial ad, call the `RequestInterstitialAd` static method of `T
 passing in the zone identifier and a `IRequestListener` to receive the loaded ad id
 or possible failure notice.
 
-```csharp
+```c#
 public static void RequestInterstitialAd(string zoneId, IRequestListener listener)
 ```
 
 The `IRequestListener` interface has the following implementation:
 
-```csharp
+```c#
 namespace Tapsell.Mediation.Request
 {
     public interface IRequestListener
@@ -294,7 +295,7 @@ namespace Tapsell.Mediation.Request
 
 Alternatively, you can provide your callbacks using C# **Action**s:
 
-```csharp
+```c#
 public static void RequestInterstitialAd(string zoneId, Action<string> onSuccess, Action onFailure)
 ```
 
@@ -305,14 +306,14 @@ Interstitial ads should be displayed during natural pauses in the flow of an app
 To do so simply call the `ShowInterstitialAd()` static method in `Tapsell.Mediation.Tapsell` class
 passing the `adId` received in `OnSuccess` method of the `IRequestListener`.
 
-```csharp
+```c#
 public static void ShowInterstitialAd(string adId, IAdStateListener.IInterstitial listener)
 ```
 
 The `IAdStateListener.IInterstitial` optional parameter can be passed to monitor and handle events
 related to displaying your interstitial ad. The interface has the following implementation:
 
-```csharp
+```c#
 namespace Tapsell.Mediation.Show
 {
     public interface IInterstitial
@@ -343,13 +344,19 @@ namespace Tapsell.Mediation.Show
 The `ShowCompletionState` passed in `OnAdClosed` callback, indicates whether the ad has been shown completely
 or skipped by the user before completion.
 
-```csharp
+```c#
 public enum ShowCompletionState
 {
     Completed,
     Skipped,
     Unknown
 }
+```
+
+Alternatively, you can provide your callbacks using C# **Action**s:
+
+```c#
+public static void ShowInterstitialAd(string adId, Action onImpression = null, Action onClicked = null, Action<ShowCompletionState> onClosed = null, Action<string> onFailed = null)
 ```
 
 ### Rewarded
@@ -365,13 +372,13 @@ Rewarded ads are loaded by calling the `RequestRewardedVideoAd` static method of
 passing in the zone identifier and a `IRequestListener` to receive the loaded ad id
 or possible failure notice.
 
-```csharp
+```c#
 public static void RequestRewardedVideoAd(string zoneId, IRequestListener listener)
 ```
 
 The `IRequestListener` interface has the following implementation:
 
-```csharp
+```c#
 namespace Tapsell.Mediation.Request
 {
     public interface IRequestListener
@@ -386,7 +393,7 @@ namespace Tapsell.Mediation.Request
 
 Alternatively, you can provide your callbacks using C# **Action**s:
 
-```csharp
+```c#
 public static void RequestRewardedVideoAd(string zoneId, Action<string> onSuccess, Action onFailure)
 ```
 
@@ -396,7 +403,7 @@ Once the rewarded ad is successfully loaded, the next step is to show the ad.
 To do so simply call the `ShowRewardedVideoAd()` static method in `Tapsell.Mediation.Tapsell` class
 passing the `adId` received in `OnSuccess` method of the `IRequestListener`.
 
-```csharp
+```c#
 public static void ShowRewardedVideoAd(string adId, IAdStateListener.IRewardedVideo listener)
 ```
 
@@ -404,7 +411,7 @@ The `IAdStateListener.IRewardedVideo` optional parameter can be passed to monito
 related to displaying your rewarded ad; specially to be notified when the user should be rewarded.
 The interface has the following implementation:
 
-```csharp
+```c#
 namespace Tapsell.Mediation.Show
 {
     public interface IRewardedVideo
@@ -440,7 +447,7 @@ namespace Tapsell.Mediation.Show
 The `ShowCompletionState` passed in `OnAdClosed` callback, indicates whether the ad has been shown completely
 or skipped by the user before completion.
 
-```csharp
+```c#
 public enum ShowCompletionState
 {
     Completed,
@@ -448,3 +455,150 @@ public enum ShowCompletionState
     Unknown
 }
 ```
+
+Alternatively, you can provide your callbacks using C# **Action**s:
+
+```c#
+public static void ShowRewardedVideoAd(string adId, Action onImpression = null, Action onClicked = null, Action<ShowCompletionState> onClosed = null, Action<string> onFailed = null, Action onRewarded = null)
+```
+
+### Native
+
+<br/>
+
+> **Note:** Currently, the only network other than Tapsell legacy supporting native ads in Unity is **Admob**.
+
+This guide shows you how to integrate native ads from Tapsell into your Unity app.
+
+> **Caution:** Native video ads are not supported in Unity.
+
+Native ads match both the form and function of the user experience in which they're placed. They also match the visual design of the app they live within. Tapsell Mediation's native ads format enables publishers to render ads that are seamless with content. You can use this technology to implement highly custom renderings that take full advantage of the native code in Unity apps.
+
+Native ads are shown using the same types of `GameObject`s with which you're already building your apps and can be formatted to match the visual design of the user experience in which they live.
+
+#### Load A Native Ad
+
+To load a native ad, call the `RequestNativeAd` static method of `Tapsell.Mediation.Tapsell` class passing in the zone identifier and a `IRequestListener` to receive the loaded ad id or possible failure notice.
+
+```c#
+public static void RequestNativeAd(string zoneId, IRequestListener listener)
+```
+
+The `IRequestListener` interface has the following implementation:
+
+```c#
+namespace Tapsell.Mediation.Request
+{
+    public interface IRequestListener
+    {
+        // Called when the ad is successfully loaded; providing the ad id needed to show the ad 
+        public void OnSuccess(string adId);
+        // Called when there is no ad available
+        public void OnFailure();
+    }
+}
+```
+
+Alternatively, you can provide your callbacks using C# **Action**s:
+
+```c#
+public static void RequestNativeAd(string zoneId, Action<string> onSuccess, Action onFailure)
+```
+
+#### Show The Loaded Native Ad
+
+Once the native ad is successfully loaded, the next step is to show the ad. That's done with the `ShowNativeAd()` static method in `Tapsell.Mediation.Tapsell` class passing
+the `adId` received in `OnSuccess` method of the `IRequestListener` and an instance 
+of `NativeAdView` populated with the ad views you used in your layout.
+
+```c#
+public static void ShowNativeAd(string adId, NativeAdView view, IAdStateListener.INative listener)
+```
+
+The `NativeAdView` is a class you need to instantiate and populate with your ad gameObjects using the `Builder` pattern.
+Review the sample below for more details:
+
+```c#
+NativeAdView nativeAdView = new NativeAdView.Builder()
+    .WithIconImage(YOUR_ICON_GAME_OBJECT) // Image or RawImage
+    .WithTitleText(YOUR_TITLE_GAME_OBJECT) // Text or TextMeshPro
+    .WithDescriptionText(YOUR_DESCRIPTION_GAME_OBJECT) // Text or TextMeshPro
+    .WithAdvertiserText(YOUR_ADVERTISER_TEXT_GAME_OBJECT) // Text or TextMeshPro
+    .WithBannerImage(YOUR_BANNER_GAME_OBJECT) // Image or RawImage
+    .WithAdChoicesImage(YOUR_Ad_CHOICES_GAME_OBJECT) // Image or RawImage
+    .WithCtaButton(YOUR_CTA_GAME_OBJECT) // Button or Button-TextMeshPro
+    .Build();
+```
+
+Note that depending on your ad design you could only include and provide a subset of the possible ad items.
+
+Note that only the below items are guaranteed to be present and get filled:
+
+- Title
+- Description
+- Banner
+- CTA Button
+
+> **Important!:**
+>
+> Note that any `GameObject` that is registered for an ad asset must have a convex `Collider` component that is representative of 
+> the size and shape of the `GameObject`. If `GameObject` objects set for ad assets are missing `Collider` components, 
+> the `NativeAdView` is considered invalid and the ad will not be shown.
+>
+
+In the code snippet below, a `BoxCollider` is added to the `GameObject` that 
+uses a `TextMesh` to display the title ad asset of a native ad. 
+Once the `BoxCollider` is attached to the `GameObject`, it will automatically scale to accommodate the text of the `TextMesh` component.
+
+```c#
+GameObject title = new GameObject();
+title.AddComponent<TextMesh>();
+title.GetComponent<TextMesh>().characterSize = 0.5 f;
+title.GetComponent<TextMesh>().anchor = TextAnchor.MiddleCenter;
+title.GetComponent<TextMesh>().color = Color.black;
+
+// Add box collider to the GameObject which will automatically scale.
+headline.AddComponent<BoxCollider>();
+```
+
+The `IAdStateListener.INative` optional parameter can be passed to monitor and handle events
+related to displaying your native ad. The interface has the following implementation:
+
+```c#
+namespace Tapsell.Mediation.Show
+{
+    public interface INative
+    {
+        public void OnAdImpression() 
+        {
+            // Code to be executed when an impression is recorded for the ad.
+        }
+        
+        public void OnAdClicked() 
+        {
+            // Code to be executed when the user clicks on the ad.
+        }
+    
+        public void OnAdFailed(string message) 
+        {
+            // Code to be executed when the ad show fails.
+        }
+    }
+}
+```
+
+Alternatively, you can provide your callbacks using C# **Action**s:
+
+```c#
+public static void ShowNativeAd(string adId, NativeAdView view, Action onImpression = null, Action onClicked = null, Action<string> onFailed = null)
+```
+
+> **Consider Persian Characters Support**
+> 
+> Tapsell Legacy ads usually contain Persian content. Since Persian characters 
+> are not supported in Unity by default, you must use custom UI objects that provide the
+> support for showing Persian text.
+> 
+> [This Plugin](https://github.com/pnarimani/RTLTMPro) is a customization of TextMeshPro that you could use 
+> for this purpose.
+> 
