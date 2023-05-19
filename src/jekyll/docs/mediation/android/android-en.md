@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mBannerContainer = findViewById(R.id.bannerContainer);
-        Tapsell.requestBannerAd(BANNER_AD_ZONE_ID, BannerSize.BANNER_320_90, new RequestResultListener() {
+        Tapsell.requestBannerAd(BANNER_AD_ZONE_ID, BannerSize.BANNER_320_50, new RequestResultListener() {
             @Override
             public void onSuccess(@NonNull String adId) {
                 // Ad loaded
