@@ -43,8 +43,8 @@ Follow the steps below to be able to use the Tapsell Mediation in your applicati
 
 Download the following packages and import them as custom packages to your project.
 
-- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_v1.0.0-beta04.01.unitypackage)
-- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_LegacyAdapter_v1.0.0-beta04.01.unitypackage)
+- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_v1.0.0-beta05.01.unitypackage)
+- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_LegacyAdapter_v1.0.0-beta05.01.unitypackage)
 
 <img src="/images/mediation-unity-import1.jpg" alt="import-package" />
 
@@ -84,12 +84,12 @@ No additional configuration or code is needed to initialize the SDK.
 
 The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
-* [**AdColony**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_AdColonyAdapter_v1.0.0-beta04.01.unitypackage)
-* [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_AdMobAdapter_v1.0.0-beta04.01.unitypackage)
-* [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_ApplovinAdapter_v1.0.0-beta04.01.unitypackage)
-* [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_ChartboostAdapter_v1.0.0-beta04.01.unitypackage)
-* [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_MintegralAdapter_v1.0.0-beta04.01.unitypackage)
-* [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta04%2301/TapsellMediation_UnityAdsAdapter_v1.0.0-beta04.01.unitypackage)
+* [**AdColony**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_AdColonyAdapter_v1.0.0-beta05.01.unitypackage)
+* [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_AdMobAdapter_v1.0.0-beta05.01.unitypackage)
+* [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_ApplovinAdapter_v1.0.0-beta05.01.unitypackage)
+* [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_ChartboostAdapter_v1.0.0-beta05.01.unitypackage)
+* [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_MintegralAdapter_v1.0.0-beta05.01.unitypackage)
+* [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.0-beta05%2301/TapsellMediation_UnityAdsAdapter_v1.0.0-beta05.01.unitypackage)
 
 To integrate each SDK, download the corresponding adapter package from the links above and follow the steps below:
 
