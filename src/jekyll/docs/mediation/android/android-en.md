@@ -34,7 +34,7 @@ that is needed later in this guide.
 
 ```groovy
 dependencies {
-    def tapsellVersion = "1.0.0-beta05"
+    def tapsellVersion = "1.0.0-beta06"
     implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
     implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
 }
