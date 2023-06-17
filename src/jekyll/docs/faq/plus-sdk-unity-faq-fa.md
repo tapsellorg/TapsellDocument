@@ -11,18 +11,34 @@ lang: fa
 > **خطای مورد نظر شما در این صفحه مطرح نشده است؟** در [قسمت Issues گیت‌هاب](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?q=is%3Aissue) جستجو کنید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues/new/choose) مطرح کنید.
 {:data-title="نکته" data-color="red"}
 
+### خطای BuildMethodException: [GoogleMobileAds] Android Google Mobile Ads app ID is empty. Please enter a valid app ID to run ads properly.
+کتابخانه تپسل از کتابخانه Google Mobile Ads به عنوان وابستگی داخلی استفاده می‌کند. در صورتیکه با این خطا مواجه شدید، لازم است وارد مسیر `Assets/Google Mobile Ads` شده و اپ آیدی مورد نیاز اندروید را در آن وارد نمایید. در صورتی که از ادموب استفاده نمیکنید، میتوانید از اپ آیدی تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت اپ آیدی اختصاصی خود را وارد نمایید.  
+
+## خطای Error: Could not load signature of GoogleMobileAds.Placement.BannerAdGameObject:<AddCallbacks>m__1 due to: Could not resolve type with token 0100002d (from typeref, class/assembly GoogleMobileAds.Api.AdFailedToLoadEventArgs, GoogleMobileAds.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)
+این خطا مرتبط با استفاده از پلاگین‌های جدید ادموب از نسخه ۷.۰.۰ به بعد در گریدل های قدیمی است. ابتدا به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` رفته و از وجود نسخه ۴.۲.۲ یا بالاتر اطمینان حاصل نمایید. 
+
+در مرحله بعد لازم است نسخه گریدل نرم افزار یونیتی خود را نیز به جدیدترین نسخه موجود (۶.۱.۱ به بالا) به‌روز رسانی کنید. برای اینکار ابتدا آخرین نسخه موجود را از [مستندات گریدل](https://gradle.org/releases/) دانلود کنید. سپس وارد تنظیمات نرم افزار یونیتی خود به مسیر `Settings/External Tools` شوید و در بخش `Gradle Installed with Unity`، آدرس نسخه جدید را به روز رسانی کنید یا محتویات نسخه جدید را در محل آدرس فعلی جایگزین کنید.
+همچنین می‌توانید یونیتی ادیتور خود را به نسخه های جدیدتر که با نسخه های جدیدتر گریدل ارائه می‌شوند، به‌رزو‌رسانی نمایید.
+برای اطلاعات بیشتر درباره نسخه های سازگار گریدل در ادیتور های مختلف یونیتی، لطفا به لینک [Android Gradle Overview](https://docs.unity3d.com/2023.2/Documentation/Manual/android-gradle-overview.html) مراجعه نمایید 
+
 ## خطای This project uses AndroidX dependencies, but the 'android.useAndroidX' property is not enabled. Set this property to true in the gradle.properties file and retry. The following AndroidX dependencies are detected
 
-  این خطا زمانی اتفاق می‌افتد که پشتیبانی از AndroidX در پروژه شما وجود نداشته باشد. برای رفع آن لازم وارد فایل `Assets\Plugins\Android\mainTemplate.gradle` شده و دو خط کد زیر را به آن اضافه کنید.
+  این خطا زمانی اتفاق می‌افتد که پشتیبانی از AndroidX در پروژه شما وجود نداشته باشد. برای رفع آن لازم است وارد منوی `File> Build Setting > Player Setting` شده و مطابق عکس زیر Gradle properties را فعال کنید.
+
+<img src="https://user-images.githubusercontent.com/21319971/151448756-73085e25-566d-406b-8fea-d2d599ff718a.png"  alt='custom gradle properties'/>
+
+سپس وارد فایل `Assets/Plugins/Android/gradle.properties` شده و دو خط زیر را به آن اضافه کنید
 ```gradle
-    // Android Resolver Repos Start
-    ([rootProject] + (rootProject.subprojects as List)).each {
-    ext {
-    it.setProperty("android.useAndroidX", true)
-    it.setProperty("android.enableJetifier", true)
-    }
-   }
+android.useAndroidX=true
+android.enableJetifier=true
 ```
+
+## مشکل در دانلود کتابخانه های Mintegral
+
+در صورتیکه از شبکه تبلیغاتی مینتگرال در پروژه خود استفاده می‌کنید اما در دانلود کتابخانه های مینتگرال با خطای 403 یا خطاهای مشابه مواجه می‌شوید یا پکیج های آن به هر دلیلی در پلاگین های پروژه اضافه نشده‌اند، می‌توانید پکیج‌های aar مربوطه را مستقیما از [وبسایت مینتگرال](https://dev.mintegral.com/doc/index.html?file=sdk-m_sdk-android&lang=en) به صورت آفلاین دانلود نموده و در مسیر `Assets\Plugins\Android` قرار دهید.
+فرمت پگیج ها باید مشابه زیر باشد:
+
+`com.mbridge.msdk.oversea.same.{VERSION}.aar`
 
 ## خطای Activity is Dead
 
