@@ -119,7 +119,7 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ta
 
 ### 2. Using Resolver
 
-1. First, download the [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/releases) file. Then add it to your project according to the description of the following link:
+1. First, download the [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/tags) file. Then add it to your project according to the description of the following link:
 
     [Google Documentation](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage)
 
