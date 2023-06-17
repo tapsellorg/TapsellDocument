@@ -1,5 +1,24 @@
 ## تغییرات نسخه‌ها:
 
+### 2.1.9-rc04 (14 Jun, 2023)
+- اضافه شدن تبلیغات `Pre-Roll` مربوط به `Google IMA` در کتابخانه تپسل پلاس با پشتیبانی از `VideoPlayer` و `ExoPlayer`. [لینک سمپل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
+- اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
+
+  <img width="350" src="https://github.com/tapsellorg/TapsellDocument/assets/38072572/da643aec-1cc5-4699-81f6-1bde4226f6bc"  alt='New Dialog UI'/>
+
+- به‌روز‌رسانی کتابخانه تپسل به نسخه `4.7.8-rc03`
+- رفع بعضی از `Memory Leak` های گزارش شده توسط کاربران. [لینک گیتهاب](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/58)
+- رفع بعضی از مشکلات مربوط به `Proguard`
+
+### 2.1.9-rc03 (29 March, 2023)
+- به‌روز‌رسانی `minSdkVersion` به نسخه 19 جهت پشتیبانی از ادموب نسخه `21.5.0`
+- رفع مشکل عملکرد اشتباه کلید های دیالوگ بازگشت در تبلیغات ویدیویی
+- به‌رو‌ز‌رسانی `Admob` به نسخه 21.5.0
+- به‌رو‌ز‌رسانی `UnityAds` به نسخه `4.6.1`
+- به‌رو‌ز‌رسانی `Mintegral` به نسخه `16.3.91`
+- به‌رو‌ز‌رسانی `AdColony` به نسخه `4.8.0`
+- به‌رو‌ز‌رسانی `AppLovin` به نسخه `11.8.2`
+
 ### v2.1.8 - 2022/11/21
 - افزودن پیکربندی قابل تنظیم برای فعال/غیرفعال‌سازی دکمه بازگشت بنر انتهایی در تبلیغات ویدیویی
 - افزودن پیکربندی قابل تنظیم جهت شخصی سازی دیالوگ بازگشت در تبلیغات ویدیویی

@@ -45,14 +45,14 @@ toc: true
             <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
     
             <!-- Mintegral - make sure you uncomment the custom repository down below -->
-            <androidPackage spec="com.mbridge.msdk.oversea:videojs:15.6.11"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:15.6.11"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:15.6.11"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:15.6.11"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:reward:15.6.11"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:15.6.11"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:same:15.6.11"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:15.6.11"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:reward:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:same:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.3.91"/>
     
             <repositories>
                 <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->
@@ -133,14 +133,14 @@ dependencies {
 
 
     // For Mintegral - NOTE: Add custom repository (explained after this)
-    implementation "com.mbridge.msdk.oversea:videojs:15.6.11"
-    implementation "com.mbridge.msdk.oversea:mbbanner:15.6.11"
-    implementation "com.mbridge.msdk.oversea:mbjscommon:15.6.11"
-    implementation "com.mbridge.msdk.oversea:playercommon:15.6.11"
-    implementation "com.mbridge.msdk.oversea:reward:15.6.11"
-    implementation "com.mbridge.msdk.oversea:videocommon:15.6.11"
-    implementation "com.mbridge.msdk.oversea:same:15.6.11"
-    implementation "com.mbridge.msdk.oversea:interstitialvideo:15.6.11"
+    implementation "com.mbridge.msdk.oversea:videojs:16.3.91"
+    implementation "com.mbridge.msdk.oversea:mbbanner:16.3.91"
+    implementation "com.mbridge.msdk.oversea:mbjscommon:16.3.91"
+    implementation "com.mbridge.msdk.oversea:playercommon:16.3.91"
+    implementation "com.mbridge.msdk.oversea:reward:16.3.91"
+    implementation "com.mbridge.msdk.oversea:videocommon:16.3.91"
+    implementation "com.mbridge.msdk.oversea:same:16.3.91"
+    implementation "com.mbridge.msdk.oversea:interstitialvideo:16.3.91"
     .....
 }
 ```
@@ -191,14 +191,14 @@ allprojects {
         <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
 
         <!-- Mintegral - make sure you uncomment the custom repository down below -->
-        <androidPackage spec="com.mbridge.msdk.oversea:videojs:15.6.11"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:15.6.11"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:15.6.11"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:playercommon:15.6.11"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:reward:15.6.11"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:videocommon:15.6.11"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:same:15.6.11"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:15.6.11"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:reward:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:same:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.3.91"/>
 
         <repositories>
             <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->
