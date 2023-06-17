@@ -1,6 +1,6 @@
 ## تغییرات نسخه‌ها:
 
-### 2022/06/14 [rc04-2.1.9] 
+### 2022/06/14 [2.1.9-rc04] 
 - اضافه شدن تبلیغات `Pre-Roll` مربوط به `Google IMA` در کتابخانه تپسل پلاس با پشتیبانی از `VideoPlayer` و `ExoPlayer`. [لینک سمپل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
 - اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
 
@@ -10,7 +10,7 @@
 - رفع بعضی از `Memory Leak` های گزارش شده توسط کاربران. [لینک گیتهاب](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/58)
 - رفع بعضی از مشکلات مربوط به `Proguard`
 
-### 2022/03/29 [rc03-2.1.9] 
+### 2022/03/29 [2.1.9-rc03] 
 - به‌روز‌رسانی `minSdkVersion` به نسخه 19 جهت پشتیبانی از ادموب نسخه `21.5.0`
 - رفع مشکل عملکرد اشتباه کلید های دیالوگ بازگشت در تبلیغات ویدیویی
 - به‌رو‌ز‌رسانی `Admob` به نسخه `21.5.0`
