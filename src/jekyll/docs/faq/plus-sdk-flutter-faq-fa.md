@@ -23,6 +23,10 @@ lang: fa
 
 روش دیگر استفاده از ابزار `LogCat` در نرم‌افزار `Android Studio` می‌باشد.
 
+### خطاهای رایج ادموب
+
+در این [لینک](https://support.google.com/admob/thread/3494603/admob-error-codes-logs?hl=en) خطاهای رایج ادموب توضیح داده شده است
+
 ## خطای Activity is Dead
 
  هنگام صدا زدن متد initialize , request و یا Show (تا قبل اینکه  Callback صدا زده بشه) اگر از Activity خارج شوید این خطا رخ می دهد.
