@@ -11,6 +11,11 @@ lang: fa
 > **خطای مورد نظر شما در این صفحه مطرح نشده است؟** در [قسمت Issues گیت‌هاب](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?q=is%3Aissue) جستجو کنید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues/new/choose) مطرح کنید.
 {:data-title="نکته" data-color="red"}
 
+## خطای 403
+
+در صورتیکه در فرایند بیلد اپ خود، دانلود پلاگین های Gradle یا وابستگی های دیگر به دلیل عدم داشتن دسترسی مجاز، تحریم یا مشکلات مربوط به IP ایران، با خطای 403 مواجه شود، سینک پروژه به مشکل خورده و با خطای `Gradle Project Sync Failed` مواجه خواهید شد. یکی از روش های رفع این مشکل، استفاده از ابزار [shecan](https://shecan.ir/) می‌باشد.
+
+
 ### خطای BuildMethodException: [GoogleMobileAds] Android Google Mobile Ads app ID is empty. Please enter a valid app ID to run ads properly.
 کتابخانه تپسل از کتابخانه Google Mobile Ads به عنوان وابستگی داخلی استفاده می‌کند. در صورتیکه با این خطا مواجه شدید، لازم است وارد مسیر `Assets/Google Mobile Ads` شده و اپ آیدی مورد نیاز اندروید را در آن وارد نمایید. در صورتی که از ادموب استفاده نمیکنید، میتوانید از اپ آیدی تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت اپ آیدی اختصاصی خود را وارد نمایید.  
 

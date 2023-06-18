@@ -12,6 +12,10 @@ lang: fa
 > **خطای مورد نظر شما در این صفحه مطرح نشده است؟** در [قسمت Issues گیت‌هاب](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue) جستجو کنید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues/new/choose) مطرح کنید.
 {:data-title="نکته" data-color="red"}
 
+## خطای 403
+
+در صورتیکه در فرایند بیلد اپ خود، دانلود پلاگین های Gradle یا وابستگی های دیگر به دلیل عدم داشتن دسترسی مجاز، تحریم یا مشکلات مربوط به IP ایران، با خطای 403 مواجه شود، سینک پروژه به مشکل خورده و با خطای `Gradle Project Sync Failed` مواجه خواهید شد. یکی از روش های رفع این مشکل، استفاده از ابزار [shecan](https://shecan.ir/) می‌باشد.
+
 ## Uncaught translation error: IllegalArgumentException: already added: …
 این خطا به دلیل conflict دو یا بیشتر از لایبرری‌های اضافه‌شده به پروژه رخ می‌دهد.
 
