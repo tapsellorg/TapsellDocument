@@ -11,35 +11,35 @@ lang: fa
 > **خطای مورد نظر شما در این صفحه مطرح نشده است؟** در [قسمت Issues گیت‌هاب](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue) جستجو کنید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/new/choose) مطرح کنید.
 {:data-title="نکته" data-color="red"}
 
-## خطای 403
+### خطای 403
 
 در صورتیکه در فرایند بیلد اپ خود، دانلود پلاگین های Gradle یا وابستگی های دیگر به دلیل عدم داشتن دسترسی مجاز، تحریم یا مشکلات مربوط به IP ایران، با خطای 403 مواجه شود، سینک پروژه به مشکل خورده و با خطای `Gradle Project Sync Failed` مواجه خواهید شد. یکی از روش های رفع این مشکل، استفاده از ابزار [shecan](https://shecan.ir/) می‌باشد.  
 
-## خطای Activity is Dead
+### خطای Activity is Dead
 
  هنگام صدا زدن متد initialize , request و یا Show (تا قبل اینکه  Callback صدا زده بشه) اگر از Activity خارج شوید این خطا رخ می دهد.
 زمانی که sdk یخواهد جوابی که از سمت سرور اومده رو به کاربر منتقل کند، ابتدا بررسی میکند Activity ای که تابع در آن صدا زده شده Destroy نشده باشد
 
-## خطای App Id is not Valid
+### خطای App Id is not Valid
 
 این خطا هنگام initialize کردن SDK مقدار appId (یا همان شناسه ای که از پنل دربافت کردید) معتبری نداشته باشه، رخ می دهد. 
 توسط دیباگر میتوانید مطمئن بشوید که دقیقا همان مقداری که مدنظر هست به تابع به عنوان ورودی داده می شود
 
-## خطای Tapsell Plus is not Initialized
+### خطای Tapsell Plus is not Initialized
 
 این خطا زمانی که تابع request و یا show را صدا می زنید ولی sdk هنوز initialize نشده است، رخ میدهد.
  برای درخواست تبلیغ ابتدا توسط Callback های تابع initialize مطمئن شوید که sdk نصب شده(توسط یک متغییر) و قبل درخواست تبلیغ این موضوع رو با آن متغییر بررسی کنید
- 
-## خطای Zone Id is not Valid
+
+### خطای Zone Id is not Valid
 
 این خطا زمانی رخ می دهد که request صدا زده میشود و ZoneId مقدار خالی داشته باشد. 
 میتوانید با Debugger از مقداری که به عنوان ورودی به تابع می دهید مطمئن شوید
 
-## خطای Previous Request is Still Trying
+### خطای Previous Request is Still Trying
 
 این خطا زمانی رخ می دهد که یک تبلیغ درخواست داده شده و بالافاصله (قبل اینکه جواب درخواست قبلی دربافت شود) مجددا درخواست تبلیغ بکنید
 
-## خطای All Ad Networks Returned Error
+### خطای All Ad Networks Returned Error
 
 > توصیه می‌شود که به نسخه‌ی ۲.۱.۶ بروزرسانی کنید و با کد `TapsellPlus.setDebugMode(Log.DEBUG)` اطلاعات بیشتری در مورد خطا کسب کنید
 
@@ -48,41 +48,41 @@ lang: fa
 اگر زمان درخواست تبلیغ این خطا را مشاهده کردید احتمال این که شبکه تبلیغاتی به درستی برای شما فعال نشده باشد است. 
 در این صورت مسئله را با تیم پشتیبانی در میان بگذارید
 
-## خطای adContainer should not be null
+### خطای adContainer should not be null
 
 این خطا زمانی که میخواهید تبلیغ از نوع StandardBanner را نمایش دهید رخ می دهد
 اطمینان حاصل کنید که ViewGroup ای که میخواهید تبلیغ را در آن نمایش دهید null نباشد و مقدار درستی داشته باشد
 
-## خطای adHolder should not be null
+### خطای adHolder should not be null
 
 این خطا زمانی که میخواهید تبلیغ از نوع NativeBanner را نمایش دهید رخ می دهد
 اطمینان حاصل کنید که ViewGroup ای که میخواهید تبلیغ را در آن نمایش دهید null نباشد و مقدار درستی داشته باشد
 
-## خطای Banner Type is not Valid
+### خطای Banner Type is not Valid
 
 ابن خطا زمانی رخ می دهد که مقدار سایز بنری که در نمایش تبلیغ StandardBanner به عنوان ورودی به تابع requestStandardBannerAd می دهید مقدار درستی نداشته باشد.
 با Debugger میتوانید از صحت مقدار مطمئن شوید و حتما ار مقادیر TapsellPlusBannerType استفاده نمایید
 
-## خطای adContainer should not have child
+### خطای adContainer should not have child
 
 این خطا زمانی که میخواهید تبلیغ از نوع StandardBanner را نمایش دهید رخ می دهد
 اطمینان حاصل کنید که ViewGroup ای که میخواهید تبلیغ را در آن نمایش دهید، داخل XML آن View دیگری نداشته باشد
 
-## خطای AdShowListener Should not be null
+### خطای AdShowListener Should not be null
 
 این خطا زمانی که میخواهید تبلیغ را نمایش دهید رخ می دهد
 مطمئن شوید که Callback مناسب را به عنوان ورودی به تابع میدهید
 
-## خطای INVALID_BANNER_SIZE
+### خطای INVALID_BANNER_SIZE
 
 این خطا برای هر کدام از شبکه های تبلیغاتی اگر رخ داد، به معنای آن است که مقدار درستی برای انداز بنری که میخواهید نمایش دهید به عنوان ورودی به تابع ندادید
 
-## خطای No Waterfall in Cache and Waterfall API has Error
+### خطای No Waterfall in Cache and Waterfall API has Error
 
 زمانی که که درخواست تبلیغ می دهید Sdk اگر لیست شبکه ها تبلیغاتی رو ذخیره نداشته باشد، سعی میکند که از سرور بگیرد. اگر این مرحله هم با موفقیت انجام نشود (به دلیل قطع شدن اینترنت) این خطا رو  Sdk نمایش می دهد
 
 
-## خطای Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView
+### خطای Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView
 
 این خطا زمانی اتفاق می‌افتد که از ادنتورک AdMob در پرژه خود استفاده کرده باشید، اما وابستگی `play-services-ads` را به پروژه اضافه نکرده باشید. برای رفع آن لازم است تا این وابستگی را به صورت زیر در فایل `app/build.gradle` اضافه کنید.
 > ```groovy
