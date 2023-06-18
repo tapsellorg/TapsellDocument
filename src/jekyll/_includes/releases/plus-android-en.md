@@ -1,5 +1,21 @@
 ## Tapsell plus native Changelog
 
+### 2.1.9-rc04 (14 Jun, 2023)
+- Added preroll video ads to sdk for `VideoPlayer` and `ExoPlayer`. add exoplayer-ima-extension with disabled ui feature. [Sample](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
+- Added new UI for back dialog
+- Update tapsell sdk to `V4.7.8-rc03`
+- Fixed some memory leaks in tapsell sdk and tapsell plus sdk
+- fixed some proguard issues
+
+### 2.1.9-rc03 (29 March, 2023)
+- Updated minSdkVersion to 19 to support Admob `V21.5.0`
+- Fixed wrong back dialog options in rewarded videos
+- Updated Admob to `V21.5.0`
+- Updated UnityAds to `V4.6.1`
+- Updated Mintegral to `V16.3.91`
+- Updated AdColony to `V4.8.0`
+- Updated AppLovin to `V11.8.2`
+
 ### 2.1.8 (2022/11/21)
 - Added dynamic configs for `backPressed` final banner in video ads
 - Add dynamic configs for back alert dialog in videos

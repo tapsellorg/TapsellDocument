@@ -117,7 +117,7 @@ public class MainApplication extends SomeOtherApplication {
 
 ### ۲. استفاده از Resolver
 
-۱. ابتدا فایل [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/releases) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:  
+۱. ابتدا فایل [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/tags) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:  
 
 [مستندات گوگل](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage) 
 

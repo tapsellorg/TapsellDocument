@@ -78,7 +78,7 @@ allprojects {
 ```
 
 ### استفاده از Resolver
-ابتدا فایل [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/releases) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:
+ابتدا فایل [unitypackage resolver](https://github.com/googlesamples/unity-jar-resolver/tags) را دانلود کنید. سپس مطابق توضیحات لینک زیر آن را به پروژه‌ی خود اضافه نمایید:
 \
 [مستندات گوگل](https://github.com/googlesamples/unity-jar-resolver#android-resolver-usage) 
 

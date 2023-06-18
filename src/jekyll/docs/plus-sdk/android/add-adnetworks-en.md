@@ -104,13 +104,13 @@ dependencies {
 ```
 
 ## Mintegral
-> Supported version: `15.6.11`
+> Supported version: `16.3.91`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedMintegral = "15.6.11"
+    def supportedMintegral = "16.3.91"
     implementation("com.mbridge.msdk.oversea:videojs:$supportedMintegral")
     implementation("com.mbridge.msdk.oversea:mbbanner:$supportedMintegral")
     implementation("com.mbridge.msdk.oversea:mbjscommon:$supportedMintegral")
