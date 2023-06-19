@@ -29,11 +29,17 @@ lang: fa
 کتابخانه تپسل از کتابخانه Google Mobile Ads به عنوان وابستگی داخلی استفاده می‌کند. در صورتیکه با این خطا مواجه شدید، لازم است وارد مسیر `Assets/Google Mobile Ads` شده و اپ آیدی مورد نیاز اندروید را در آن وارد نمایید. در صورتی که از ادموب استفاده نمیکنید، میتوانید از اپ آیدی تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت اپ آیدی اختصاصی خود را وارد نمایید.  
 
 ### خطای Error: Could not load signature of GoogleMobileAds.Placement.BannerAdGameObject:<AddCallbacks>m__1 due to: Could not resolve type with token 0100002d (from typeref, class/assembly GoogleMobileAds.Api.AdFailedToLoadEventArgs, GoogleMobileAds.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)
-این خطا مرتبط با استفاده از پلاگین‌های جدید ادموب از نسخه ۷.۰.۰ به بعد در گریدل های قدیمی است. ابتدا به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` رفته و از وجود نسخه ۴.۲.۲ یا بالاتر اطمینان حاصل نمایید. 
+این [خطا](https://github.com/googleads/googleads-mobile-unity/issues/1613) مرتبط با استفاده از پلاگین‌های جدید ادموب از نسخه 6.0.0 به بعد در پروژه است. این خطا از نسخه `Google Mobile Ads v7.4.0` به بعد رفع شده‌است 
+
+در صورتیکه از نسخه های قدیمی‌تر ادموب در پروژه استفاده می‌کنید، برای رفع این مشکل فایل `Assets\GoogleMobileAds\link.xml` را باز کرده و قطعه کد زیر را در داخل تگ `linker` اضافه نمایید:
+
+`<assembly fullname="GoogleMobileAds.Unity" ignoreIfMissing="1" preserve="nothing" />`
+
+در صورتیکه مشکل همچنان وجود دارد، به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` رفته و از وجود نسخه `4.2.2` یا بالاتر اطمینان حاصل نمایید. 
 
 در مرحله بعد لازم است نسخه گریدل نرم افزار یونیتی خود را نیز به جدیدترین نسخه موجود (۶.۱.۱ به بالا) به‌روز رسانی کنید. برای اینکار ابتدا آخرین نسخه موجود را از [مستندات گریدل](https://gradle.org/releases/) دانلود کنید. سپس وارد تنظیمات نرم افزار یونیتی خود به مسیر `Settings/External Tools` شوید و در بخش `Gradle Installed with Unity`، آدرس نسخه جدید را به روز رسانی کنید یا محتویات نسخه جدید را در محل آدرس فعلی جایگزین کنید.
 همچنین می‌توانید یونیتی ادیتور خود را به نسخه های جدیدتر که با نسخه های جدیدتر گریدل ارائه می‌شوند، به‌رزو‌رسانی نمایید.
-برای اطلاعات بیشتر درباره نسخه های سازگار گریدل در ادیتور های مختلف یونیتی، لطفا به لینک [Android Gradle Overview](https://docs.unity3d.com/2023.2/Documentation/Manual/android-gradle-overview.html) مراجعه نمایید 
+برای اطلاعات بیشتر درباره نسخه های سازگار گریدل در ادیتور های مختلف یونیتی، لطفا به لینک [Android Gradle Overview](https://docs.unity3d.com/2023.2/Documentation/Manual/android-gradle-overview.html) مراجعه نمایید
 
 ### خطای This project uses AndroidX dependencies, but the 'android.useAndroidX' property is not enabled. Set this property to true in the gradle.properties file and retry. The following AndroidX dependencies are detected
 
