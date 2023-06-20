@@ -1,5 +1,9 @@
 ## Tapsell plus native Changelog
 
+### 2.1.9 (20 Jun, 2023)
+- Added support for `null companion banner container` in `ExoPlayer` for Pre-Roll IMA ads.
+- fixed triggering multiple event callbacks in `ExoPlayer` Pre-Roll ads.
+
 ### 2.1.9-rc04 (14 Jun, 2023)
 - Added preroll video ads to sdk for `VideoPlayer` and `ExoPlayer`. add exoplayer-ima-extension with disabled ui feature. [Sample](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
 - Added new UI for back dialog
