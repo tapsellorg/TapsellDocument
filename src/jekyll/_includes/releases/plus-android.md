@@ -1,5 +1,9 @@
 ## تغییرات نسخه‌ها:
 
+### 2022/06/20 [2.1.9] 
+- امکان اجباری یا اختیاری شدن نمایش `Companion Banner` در تبلیغات Pre-Roll
+- رفع مشکل فعال شدن چند باره ایونت ها در کالبک `OnAdEvent` در تبلیغات Pre-Roll
+
 ### 2022/06/14 [2.1.9-rc04] 
 - اضافه شدن تبلیغات `Pre-Roll` مربوط به `Google IMA` در کتابخانه تپسل پلاس با پشتیبانی از `VideoPlayer` و `ExoPlayer`. [لینک سمپل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
 - اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
