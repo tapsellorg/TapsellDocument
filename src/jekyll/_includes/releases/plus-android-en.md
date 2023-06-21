@@ -1,5 +1,8 @@
 ## Tapsell plus native Changelog
 
+### 2.2.0 (21 Jun, 2023)
+- Fixed Google Play policy error related to Collecting user's installed apps. [Issue #68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
+
 ### 2.1.9 (20 Jun, 2023)
 - Added support for `null companion banner container` in `ExoPlayer` for Pre-Roll IMA ads.
 - fixed triggering multiple event callbacks in `ExoPlayer` Pre-Roll ads.
