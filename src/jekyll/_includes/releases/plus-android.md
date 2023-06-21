@@ -1,7 +1,7 @@
 ## تغییرات نسخه‌ها:
 
 ### 2022/06/21 [2.2.0]
-- مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [#68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68) 
+- رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68) 
 
 ### 2022/06/20 [2.1.9] 
 - امکان اجباری یا اختیاری شدن نمایش `Companion Banner` در تبلیغات Pre-Roll
