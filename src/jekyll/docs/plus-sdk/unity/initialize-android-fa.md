@@ -128,7 +128,7 @@ Assets > External Dependency Manager > Android Resolver > Settings > Use Jetifie
 Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
 ```
 
-۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.1.8/tapsell-plus-unity-2.1.8.unitypackage) دریافت نمایید. 
+۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.2.0/tapsell-plus-unity-2.2.0.unitypackage) دریافت نمایید. 
 
 ۴. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر `TapsellPlusSDK` از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 

@@ -47,7 +47,7 @@ toc: true
 > ۲. برای استفاده از ادنتورک **Google AdMob SDK** لازم است وابستگی `play-services-ads` را به صورت زیر در `app/build.gradle` قرار دهید.
 > ```groovy
 > dependencies {
->    def supportedAdmob = "20.6.0"
+>    def supportedAdmob = "22.1.0"
 >    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 > }
 > ```
@@ -64,10 +64,10 @@ dependencies {
 
     //for adMob
     // The AppId <meta-data> tag is needed
-    implementation 'com.google.android.gms:play-services-ads:20.6.0'
+    implementation 'com.google.android.gms:play-services-ads:22.1.0'
 
     //for unityAds
-    implementation 'com.unity3d.ads:unity-ads:4.3.0'
+    implementation 'com.unity3d.ads:unity-ads:4.6.1'
 
     //for chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
@@ -85,18 +85,18 @@ dependencies {
     }
     
     //for applovin
-    implementation 'com.applovin:applovin-sdk:10.3.4'
+    implementation 'com.applovin:applovin-sdk:11.8.2'
 
 
     // For Mintegral - NOTE: Add custom repository (explained after this)
-    implementation "com.mbridge.msdk.oversea:videojs:16.3.91"
-    implementation "com.mbridge.msdk.oversea:mbbanner:16.3.91"
-    implementation "com.mbridge.msdk.oversea:mbjscommon:16.3.91"
-    implementation "com.mbridge.msdk.oversea:playercommon:16.3.91"
-    implementation "com.mbridge.msdk.oversea:reward:16.3.91"
-    implementation "com.mbridge.msdk.oversea:videocommon:16.3.91"
-    implementation "com.mbridge.msdk.oversea:same:16.3.91"
-    implementation "com.mbridge.msdk.oversea:interstitialvideo:16.3.91"
+    implementation "com.mbridge.msdk.oversea:videojs:16.4.41"
+    implementation "com.mbridge.msdk.oversea:mbbanner:16.4.41"
+    implementation "com.mbridge.msdk.oversea:mbjscommon:16.4.41"
+    implementation "com.mbridge.msdk.oversea:playercommon:16.4.41"
+    implementation "com.mbridge.msdk.oversea:reward:16.4.41"
+    implementation "com.mbridge.msdk.oversea:videocommon:16.4.41"
+    implementation "com.mbridge.msdk.oversea:same:16.4.41"
+    implementation "com.mbridge.msdk.oversea:interstitialvideo:16.4.41"
 }
 ```
 

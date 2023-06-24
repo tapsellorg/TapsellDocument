@@ -11,13 +11,13 @@ If you want to add more ad networks to your project, this page helps you through
 Here's a list of ad networks that are supported by TapsellPlus.
 
 ## Google AdMob
-> Supported version: `20.6.0`
+> Supported version: `22.1.0`
 
 Add it in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedAdmob = "20.6.0"
+    def supportedAdmob = "22.1.0"
     implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 }
 ```
@@ -41,13 +41,13 @@ You need to contact support to get a **producation admob key** for actual usage.
 
 
 ## Unity ads
-> Supported version: `4.3.0`
+> Supported version: `4.6.1`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedUnityAds = "4.3.0"
+    def supportedUnityAds = "4.6.1"
     implementation("com.unity3d.ads:unity-ads:$supportedUnityAds")
 }
 ```
@@ -92,25 +92,25 @@ dependencies {
 ```
 
 ## AppLovin
-> Supported version: `10.3.4`
+> Supported version: `11.8.2`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedAppLovin = "10.3.4"
+    def supportedAppLovin = "11.8.2"
     implementation("com.applovin:applovin-sdk:$supportedAppLovin")
 }
 ```
 
 ## Mintegral
-> Supported version: `16.3.91`
+> Supported version: `16.4.41`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedMintegral = "16.3.91"
+    def supportedMintegral = "16.4.41"
     implementation("com.mbridge.msdk.oversea:videojs:$supportedMintegral")
     implementation("com.mbridge.msdk.oversea:mbbanner:$supportedMintegral")
     implementation("com.mbridge.msdk.oversea:mbjscommon:$supportedMintegral")
