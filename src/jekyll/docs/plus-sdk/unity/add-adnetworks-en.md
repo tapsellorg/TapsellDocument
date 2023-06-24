@@ -10,9 +10,8 @@ If you want to add more ad networks to your project, this page helps you through
 
 ## Add AdNetworks in TapsellPlus v2.1.8 and above
 ### Admob
-1. import Admob Unity package `v7.1.0` to your project from [GoogleMobileAds](https://github.com/googleads/googleads-mobile-unity/releases)
-   > Note: Please use Admob `7.1.0` for now, Because Admob packages with version of `7.2.0`, `7.3.0` and `7.3.1` have open bugs in native banner click events. For more information see [GitHub issue](https://github.com/googleads/googleads-mobile-unity/issues/2262) and [this post](https://groups.google.com/g/google-admob-ads-sdk/c/821dMZCTCpg).
-   > Note 2: Please don't include iOS files when importing GoogleMobileAds plugin
+1. import Admob Unity package to your project from [GoogleMobileAds](https://github.com/googleads/googleads-mobile-unity/releases)
+   > Note: Latest tested Admob version is `8.3.0`.
 2. import the latest Admob Native package to your project from [GoogleMobileAds-native](https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage)
 3. Add your Google Mobile Ads App ID from `Assets/GoogleMobileAds/Settings` as follows:
    ![GoogleAppID](https://user-images.githubusercontent.com/38072572/206126452-e7235200-510a-42cb-8565-0bfa3beb378f.png)
@@ -25,10 +24,10 @@ If you want to add more ad networks to your project, this page helps you through
       <androidPackages>
     
             <!-- AdMob -->
-            <androidPackage spec="com.google.android.gms:play-services-ads:21.0.0"/>
+            <androidPackage spec="com.google.android.gms:play-services-ads:22.1.0"/>
     
             <!-- UnityAds -->
-            <androidPackage spec="com.unity3d.ads:unity-ads:4.3.0"/>
+            <androidPackage spec="com.unity3d.ads:unity-ads:4.6.1"/>
     
             <!-- ChartBoost -->
             <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
@@ -37,17 +36,17 @@ If you want to add more ad networks to your project, this page helps you through
             <androidPackage spec="com.adcolony:sdk:4.6.5"/>
     
             <!-- AppLovin -->
-            <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
+            <androidPackage spec="com.applovin:applovin-sdk:11.8.2"/>
     
             <!-- Mintegral - make sure you uncomment the custom repository down below -->
-            <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:reward:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:same:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:reward:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:same:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.4.41"/>
     
             <repositories>
                 <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->
@@ -163,10 +162,10 @@ Place any ad network you want according the following template at `Assets\Tapsel
   <androidPackages>
      
         <!-- AdMob -->
-        <androidPackage spec="com.google.android.gms:play-services-ads:20.6.0"/>
+        <androidPackage spec="com.google.android.gms:play-services-ads:22.1.0"/>
 
         <!-- UnityAds -->
-        <androidPackage spec="com.unity3d.ads:unity-ads:4.3.0"/>
+        <androidPackage spec="com.unity3d.ads:unity-ads:4.6.1"/>
 
         <!-- ChartBoost -->
         <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
@@ -175,17 +174,17 @@ Place any ad network you want according the following template at `Assets\Tapsel
         <androidPackage spec="com.adcolony:sdk:4.6.5"/>
 
         <!-- AppLovin -->
-        <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
+        <androidPackage spec="com.applovin:applovin-sdk:11.8.2"/>
 
         <!-- Mintegral - make sure you uncomment the custom repository down below -->
-        <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:reward:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:same:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:reward:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:same:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.4.41"/>
 
         <repositories>
             <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->

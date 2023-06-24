@@ -1,5 +1,14 @@
 ## Tapsell plus Unity Changelog
 
+### v2.2.0 - 2022/06/23
+- Fixed Google Play policy error related to Collecting user's installed apps. [Issue #68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
+- Added new UI for back dialog
+- Added support for Unity Editor before 2020
+- Update android Tapsell dependency to `2.2.0`
+- Update Google Mobile Ads to `8.3.0`. (Android gradle dependency to `22.1.0`)
+- Fixed some memory leaks in Tapsell sdk and tapsell plus sdk
+- Fixed some proguard issues
+
 ### v2.1.8 - 2022/12/07
 * Added new TapsellPlus Unity package to integrate both Gradle & Resolver methods for implementation of Tapsell package.
   - Refer to [package download link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases) or [Github repository](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin) for more information.

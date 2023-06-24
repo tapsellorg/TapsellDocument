@@ -39,7 +39,7 @@ plusFlutter:
   faq: /faq/plus-sdk/flutter/
 
 plusUnity:
-  sdkVersion: 2.1.8
+  sdkVersion: 2.2.0
   releaseNotesFileFa: releases/plus-unity.md
   releaseNotesFileEn: releases/plus-unity-en.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/issues?q=is%3Aissue

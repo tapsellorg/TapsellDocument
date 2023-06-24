@@ -12,9 +12,8 @@ toc: true
 
 ## افزودن شبکه های تبلیغاتی در تپسل پلاس ۲.۱.۸ به بالا
 ### اضافه کردن ادموب
-۱. ابتدا `unitypackage` نسخه ۷.۱.۰ گوگل ادموب را از [این لینک](https://github.com/googleads/googleads-mobile-unity/releases) دریافت نمایید.
-> نکته: لطفا از نسخه ۷.۱.۰ ادموب استفاده نمایید. زیرا نسخه های ۷.۲.۰ و ۷.۳.۰ و ۷.۳.۱ باگ وجود دارد. برای بررسی بهتر می‌توانید [مشکل گیتهاب](https://github.com/googleads/googleads-mobile-unity/issues/2262) یا [این تیکت](https://groups.google.com/g/google-admob-ads-sdk/c/821dMZCTCpg) را بررسی کنید.
-> لطفا از اضافه کردن فایل های iOS در هنگام افزودن کتابخانه ادموب، خودداری کنید تا از بروز خطا های بیلد جلوگیری شود
+۱. ابتدا `unitypackage` گوگل ادموب را از [این لینک](https://github.com/googleads/googleads-mobile-unity/releases) دریافت نمایید.
+> نکته: آخرین نسخه تست شده ادموب نسخه `8.3.0` می‌باشد.
 
 ۲. سپس `unitypackage` مربوط به تبلیغات نیتیو ادموب را از [این لینک](https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage) دریافت نمایید.
 
@@ -30,10 +29,10 @@ toc: true
       <androidPackages>
     
             <!-- AdMob -->
-            <androidPackage spec="com.google.android.gms:play-services-ads:21.0.0"/>
+            <androidPackage spec="com.google.android.gms:play-services-ads:22.1.0"/>
     
             <!-- UnityAds -->
-            <androidPackage spec="com.unity3d.ads:unity-ads:4.3.0"/>
+            <androidPackage spec="com.unity3d.ads:unity-ads:4.6.1"/>
     
             <!-- ChartBoost -->
             <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
@@ -42,17 +41,17 @@ toc: true
             <androidPackage spec="com.adcolony:sdk:4.6.5"/>
     
             <!-- AppLovin -->
-            <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
+            <androidPackage spec="com.applovin:applovin-sdk:11.8.2"/>
     
             <!-- Mintegral - make sure you uncomment the custom repository down below -->
-            <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:reward:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:same:16.3.91"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.3.91"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:reward:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:same:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.4.41"/>
     
             <repositories>
                 <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->
@@ -176,10 +175,10 @@ allprojects {
   <androidPackages>
      
         <!-- AdMob -->
-        <androidPackage spec="com.google.android.gms:play-services-ads:20.6.0"/>
+        <androidPackage spec="com.google.android.gms:play-services-ads:22.1.0"/>
 
         <!-- UnityAds -->
-        <androidPackage spec="com.unity3d.ads:unity-ads:4.3.0"/>
+        <androidPackage spec="com.unity3d.ads:unity-ads:4.6.1"/>
 
         <!-- ChartBoost -->
         <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
@@ -188,17 +187,17 @@ allprojects {
         <androidPackage spec="com.adcolony:sdk:4.6.5"/>
 
         <!-- AppLovin -->
-        <androidPackage spec="com.applovin:applovin-sdk:10.3.4"/>
+        <androidPackage spec="com.applovin:applovin-sdk:11.8.2"/>
 
         <!-- Mintegral - make sure you uncomment the custom repository down below -->
-        <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:reward:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:same:16.3.91"/>
-        <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.3.91"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:reward:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:same:16.4.41"/>
+        <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.4.41"/>
 
         <repositories>
             <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->
@@ -220,6 +219,7 @@ allprojects {
 
 |  **نسخه‌ی تپسل‌پلاس** | **نسخه‌ی ادموب** | **تاریخ اتمام پشتیبانی** | **تاریخ اتمام دریافت تبلیغ** |
 |:-------------------:|:---------------:|:------------------------:|:----------------------------:|
+|        2.2.0        |      22.1.0     |          Q1 2025         |            Q2 2026           |
 |     2.1.7, 2.1.8    |      20.6.0     |          Q1 2023         |            Q2 2024           |
 | 2.1.4, 2.1.5, 2.1.6 |      20.4.0     |          Q1 2023         |            Q2 2024           |
 |        2.1.3        |      20.2.0     |          Q1 2023         |            Q2 2024           |

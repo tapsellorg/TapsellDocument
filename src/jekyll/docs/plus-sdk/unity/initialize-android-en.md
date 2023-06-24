@@ -130,7 +130,7 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ta
     Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
     ```
 
-3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.1.8-alpha04/tapsell-plus-unity-2.1.8.unitypackage).
+3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.2.0/tapsell-plus-unity-2.2.0.unitypackage).
 4. Add the downloaded `unitypackage` to your project as follows: (If the `TapsellPlusSDK` folder already exists in your project, please remove it).
 
     ```console

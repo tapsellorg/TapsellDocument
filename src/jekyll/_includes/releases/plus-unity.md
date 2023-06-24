@@ -1,5 +1,16 @@
 ## تغییرات نسخه‌ها:
 
+### v2.2.0 - 2022/06/23
+- رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
+- اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
+
+  <img width="350" src="https://github.com/tapsellorg/TapsellDocument/assets/38072572/da643aec-1cc5-4699-81f6-1bde4226f6bc"  alt='New Dialog UI'/>
+- اضافه کردن پشتیبانی از یونیتی ادیتور نسخه ۲۰۲۰ به قبل
+- به‌روز‌رسانی کتابخانه اندروید تپسل به نسخه `2.2.0`
+- به‌رو‌ز‌رسانی Google Mobile Ads به نسخه `8.3.0` و نسخه اندروید `22.1.0`
+- رفع تعدادی از `Memory Leak` های گزارش شده
+- رفع تعدادی از مشکلات مربوط به `Proguard`
+
 ### v2.1.8 - 2022/12/07
 * اضافه کردن کتابخانه جدید یونیتی تپسل پلاس جهت یکپارچه سازی روش های Gradle و Resolver برای پیاده‌سازی پکیج تپسل
   - برای اطلاعات بیشتر به [لینک دانلود کتابخانه](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases) یا [آدرس ریپازیتوری در گیتهاب](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin) مراجعه نمایید
