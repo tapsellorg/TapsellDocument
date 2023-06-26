@@ -37,10 +37,10 @@ in google's IMA library. Tapsell also supports these kinds of Ads and you can ad
 ```java
 TapsellPrerollAd tapsellPrerollAd = TapsellPlus.requestVastAd(
         activity,
-        playerView, // VideoPlayer || StyledPlayerView (ExoPlayer)
-        VIDEO_URL,
-        adContainer, // ViewGroup for ad content
-        companionContainer, ViewGroup for comapnion ad
+        playerView,         // `VideoPlayer` || `StyledPlayerView` (ExoPlayer)
+        VIDEO_URL,          // Your video url
+        adContainer,        // ViewGroup for ad content
+        companionContainer, // ViewGroup for comapnion ad (Optional)
         new VastRequestListener() {
             @Override
             public void onAdsLoaderCreated(ImaAdsLoader adsLoader) {

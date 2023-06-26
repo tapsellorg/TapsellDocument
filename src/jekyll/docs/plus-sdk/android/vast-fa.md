@@ -38,10 +38,10 @@ TapsellPlus.getVastTag(ZONE_ID)
 ```java
 TapsellPrerollAd tapsellPrerollAd = TapsellPlus.requestVastAd(
         activity,
-        playerView, // VideoPlayer || StyledPlayerView (ExoPlayer)
-        VIDEO_URL,
-        adContainer, // ViewGroup for ad content
-        companionContainer, ViewGroup for comapnion ad
+        playerView,         // `VideoPlayer` || `StyledPlayerView` (ExoPlayer)
+        VIDEO_URL,          // Your video url
+        adContainer,        // ViewGroup for ad content
+        companionContainer, // ViewGroup for comapnion ad (Optional)
         new VastRequestListener() {
             @Override
             public void onAdsLoaderCreated(ImaAdsLoader adsLoader) {
