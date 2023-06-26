@@ -31,7 +31,34 @@ Implement other steps of implementation according to IMA documentation or Tapsel
 
 Look lik Banner Ads that are shown beside the video ads. to implement these Ads you can use [their documentation link](https://developers.google.com/interactive-media-ads/docs/sdks/android/client-side/companions)
 in google's IMA library. Tapsell also supports these kinds of Ads and you can add them to your project according to google's documentation and also TapsellPlus sample project.
- 
+
+### Request Ads from Tapsell library
+
+```java
+TapsellPrerollAd tapsellPrerollAd = TapsellPlus.requestVastAd(
+        activity,
+        playerView,         // `VideoPlayer` || `StyledPlayerView` (ExoPlayer)
+        VIDEO_URL,          // Your video url
+        adContainer,        // ViewGroup for ad content
+        companionContainer, // ViewGroup for comapnion ad (Optional)
+        new VastRequestListener() {
+            @Override
+            public void onAdsLoaderCreated(ImaAdsLoader adsLoader) {
+              // AdsLoader is created, you can use it to load ads in your player
+            }
+
+            @Override
+            public void onAdEvent(AdEvent adEvent) {
+              // AdEvent is received, you can use it to handle ad events
+            }
+
+            @Override
+            public void onAdError(AdErrorEvent adErrorEvent) {
+              // AdErrorEvent is received, you can use it to handle ad errors
+            }
+        });
+```
+
 ### Sample Project
-for more guidance you can use [our sample project](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/VastActivity.java)
-on github repository.
+for more info you can use [our sample project](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
+on GitHub repository.
