@@ -2,6 +2,17 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/blob/master/CHANGELOG.md))
 
+## 2.2.0 - 2023/06/27
+- رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
+- اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
+
+  <img width="350" src="https://github.com/tapsellorg/TapsellDocument/assets/38072572/da643aec-1cc5-4699-81f6-1bde4226f6bc"  alt='New Dialog UI'/>
+- به‌روز‌رسانی کتابخانه اندروید تپسل به نسخه `2.2.0`
+- به‌روز‌رسانی نسخه‌ی کاتلین به `1.8.20`
+- به‌رو‌ز‌رسانی `google_mobile_ads` به نسخه `3.0.0` و نسخه اندروید `22.0.0`
+- رفع تعدادی از `Memory Leak` های گزارش شده
+- رفع تعدادی از مشکلات مربوط به `Proguard`
+
 ## 2.1.8 - 2023/06/17
 - اضافه شدن Admob Native Banner
 - پشتیبانی از پکیج `google_mobile_ads` نسخه `1.3.0`
