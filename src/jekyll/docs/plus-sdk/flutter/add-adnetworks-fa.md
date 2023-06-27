@@ -51,7 +51,7 @@ toc: true
 > ۲. برای استفاده از ادنتورک **Google AdMob SDK** لازم است وابستگی `play-services-ads` را به صورت زیر در `android/app/build.gradle` قرار دهید.
 > ```groovy
 > dependencies {
->    def supportedAdmob = "20.6.0"
+>    def supportedAdmob = "22.0.0"
 >    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 > }
 > ```
@@ -71,10 +71,10 @@ dependencies {
 
     // For adMob
     // For 20.0.0 and later <meta-data> tag is needed
-    implementation 'com.google.android.gms:play-services-ads:20.6.0'
+    implementation 'com.google.android.gms:play-services-ads:22.0.0'
 
     // For unityAds
-    implementation 'com.unity3d.ads:unity-ads:4.3.0'
+    implementation 'com.unity3d.ads:unity-ads:4.6.1'
 
     // For chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
@@ -86,24 +86,24 @@ dependencies {
     }
     
     // For adcolony
-    implementation 'com.adcolony:sdk:4.6.5'
+    implementation 'com.adcolony:sdk:4.8.0'
     implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
         exclude group: 'com.android.support'
     }
     
     // For applovin
-    implementation 'com.applovin:applovin-sdk:10.3.4'
+    implementation 'com.applovin:applovin-sdk:11.8.2'
 
 
     // For Mintegral - NOTE: Add custom repository (explained after this)
-    implementation "com.mbridge.msdk.oversea:videojs:15.6.11"
-    implementation "com.mbridge.msdk.oversea:mbbanner:15.6.11"
-    implementation "com.mbridge.msdk.oversea:mbjscommon:15.6.11"
-    implementation "com.mbridge.msdk.oversea:playercommon:15.6.11"
-    implementation "com.mbridge.msdk.oversea:reward:15.6.11"
-    implementation "com.mbridge.msdk.oversea:videocommon:15.6.11"
-    implementation "com.mbridge.msdk.oversea:same:15.6.11"
-    implementation "com.mbridge.msdk.oversea:interstitialvideo:15.6.11"
+    implementation "com.mbridge.msdk.oversea:videojs:16.3.91"
+    implementation "com.mbridge.msdk.oversea:mbbanner:16.3.91"
+    implementation "com.mbridge.msdk.oversea:mbjscommon:16.3.91"
+    implementation "com.mbridge.msdk.oversea:playercommon:16.3.91"
+    implementation "com.mbridge.msdk.oversea:reward:16.3.91"
+    implementation "com.mbridge.msdk.oversea:videocommon:16.3.91"
+    implementation "com.mbridge.msdk.oversea:same:16.3.91"
+    implementation "com.mbridge.msdk.oversea:interstitialvideo:16.3.91"
 }
 ```
 
@@ -146,6 +146,7 @@ allprojects {
 
 |  **نسخه‌ی تپسل‌پلاس** | **نسخه‌ی ادموب** | **تاریخ اتمام پشتیبانی** | **تاریخ اتمام دریافت تبلیغ** |
 |:-------------------:|:---------------:|:------------------------:|:----------------------------:|
+|        2.2.0        |      22.0.0     |          Q1 2024         |            Q2 2025           |
 |    2.1.7, 2.1.8     |      20.6.0     |          Q1 2023         |            Q2 2024           |
 | 2.1.4, 2.1.5, 2.1.6 |      20.4.0     |          Q1 2023         |            Q2 2024           |
 |        2.1.3        |      20.2.0     |          Q1 2023         |            Q2 2024           |
