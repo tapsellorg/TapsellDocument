@@ -2,6 +2,23 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+## 2.2.0 - 2023/06/01
+- رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
+- اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
+
+  <img width="350" src="https://github.com/tapsellorg/TapsellDocument/assets/38072572/da643aec-1cc5-4699-81f6-1bde4226f6bc"  alt='New Dialog UI'/>
+- به‌روز‌رسانی کتابخانه اندروید تپسل به نسخه `2.2.0`
+- به‌روز‌رسانی نسخه‌ی ریکت‌نیتیو سمپل به `0.71.11`
+- رفع تعدادی از `Memory Leak` های گزارش شده
+- رفع تعدادی از مشکلات مربوط به `Proguard`
+- به‌روز‌رسانی `minSdkVersion` به نسخه 19 جهت پشتیبانی از ادموب نسخه `21.5.0`
+- رفع مشکل عملکرد اشتباه کلید های دیالوگ بازگشت در تبلیغات ویدیویی
+- به‌رو‌ز‌رسانی `Admob` به نسخه `21.5.0`
+- به‌رو‌ز‌رسانی `UnityAds` به نسخه `4.6.1`
+- به‌رو‌ز‌رسانی `Mintegral` به نسخه `16.3.91`
+- به‌رو‌ز‌رسانی `AdColony` به نسخه `4.8.0`
+- به‌رو‌ز‌رسانی `AppLovin` به نسخه `11.8.2`
+
 ## 2.1.8 - 2023/04/08
 - پشتیبانی از react native نسخه ۰.۷۱.۶
 - رفع مشکل کرش کردن metro bundler پس از افزودن پکیج
