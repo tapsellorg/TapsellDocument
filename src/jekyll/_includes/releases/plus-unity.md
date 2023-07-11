@@ -1,6 +1,6 @@
 ## تغییرات نسخه‌ها:
 
-### v2.2.0 - 2022/06/23
+### v2.2.0 - 2023/06/23
 - رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
 - اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
 

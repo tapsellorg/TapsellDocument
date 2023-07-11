@@ -1,6 +1,6 @@
 ## Tapsell plus Unity Changelog
 
-### v2.2.0 - 2022/06/23
+### v2.2.0 - 2023/06/23
 - Fixed Google Play policy error related to Collecting user's installed apps. [Issue #68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
 - Added new UI for back dialog
 - Added support for Unity Editor before 2020
