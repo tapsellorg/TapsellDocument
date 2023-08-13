@@ -24,18 +24,18 @@ jobs:
       - run:
           name: CNAME config
           command: |
-            echo "docs.irancell.ir" > _site/CNAME
+            echo "docs.tapsell.ir" > _site/CNAME
 
       - run:
           name: git configure
           command: |
             git config --global user.email "technical.irancell.ir@gmail.com"
-            git config --global user.name "irancell.irCI"
+            git config --global user.name "tapsellCI"
 
       - run:
           name: Deploying to GitHub Pages
           command: |
-            git clone git@github.com:irancell.irorg/irancell.irDocument.git
+            git clone git@github.com:tapsellorg/TapsellDocument.git
 
             cd irancell.irDocument
             git checkout gh-pages
