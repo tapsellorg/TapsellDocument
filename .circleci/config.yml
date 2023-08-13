@@ -29,7 +29,7 @@ jobs:
       - run:
           name: git configure
           command: |
-            git config --global user.email "technical.irancell.ir@gmail.com"
+            git config --global user.email "technical.tapsell.ir@gmail.com"
             git config --global user.name "tapsellCI"
 
       - run:
@@ -37,7 +37,7 @@ jobs:
           command: |
             git clone git@github.com:tapsellorg/TapsellDocument.git
 
-            cd irancell.irDocument
+            cd TapsellDocument
             git checkout gh-pages
 
             rm -rf *
