@@ -2,33 +2,33 @@
 layout: classic-docs
 title: تبلیغات جایزه‌ای و آنی در یونیتی
 lang: fa
-permalink: /tapsell-sdk/unity/rewarded-interstitial/index.html
+permalink: /yelloadwise-core/unity/rewarded-interstitial/index.html
 toc: true # table of contents
 ---
 
 <div class="alert alert-danger" role="alert" dir="rtl" markdown="0">
   <h4 class="alert-heading">&#9888; هشدار! این SDK دیگر پشتیبانی نمی‌شود &#9888;</h4>
-  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از تپسل استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.tapsell.ir/plus-sdk/unity/main/">تپسل‌پلاس</a> استفاده نمایید.</p>
+  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از یلوادوایز استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.irancell.ir/plus-sdk/unity/main/">یلوادوایز‌پلاس</a> استفاده نمایید.</p>
   <hr>
-  <p class="mb-0">تپسل پلاس، علاوه بر دارا بودن تمام امکانات تپسل، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
+  <p class="mb-0">یلوادوایز، علاوه بر دارا بودن تمام امکانات یلوادوایز، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
   <p class="mb-0">همچنین فرصت کسب درآمد ارزی را از طریق نمایش تبلیغات شبکه‌های تبلیغاتی خارجی (نظیر AdMob) فراهم می‌کند.</p>
-  <p class="mb-0">نسخه‌های منتشر شده تپسل در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
+  <p class="mb-0">نسخه‌های منتشر شده یلوادوایز در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
 </div>
 
 پیاده سازی تبلیغات جایزه‌ای و آنی (هم ویدیو‌ و هم بنری) به یک صورت است. فقط کافی است نوع تبلیغگاه را از پنل انتخاب کنید.
 
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
 
 
 ## درخواست تبلیغ
 با اجرای کد زیر میتوانید درخواست یک تبلیغ بدهید.
 
 ```c#
-Tapsell.RequestAd(zoneId, cached, Action<TapsellAd> onAdAvailableAction,
-    Action<string> onNoAdAvailableAction, Action<TapsellError> onErrorAction,
-    Action<string> onNoNetworkAction, Action<TapsellAd> onExpiringAction);
+irancell.ir.RequestAd(zoneId, cached, Action<irancell.irAd> onAdAvailableAction,
+    Action<string> onNoAdAvailableAction, Action<irancell.irError> onErrorAction,
+    Action<string> onNoNetworkAction, Action<irancell.irAd> onExpiringAction);
 ```
 
 ورودی اول `zoneId` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
@@ -39,26 +39,26 @@ Tapsell.RequestAd(zoneId, cached, Action<TapsellAd> onAdAvailableAction,
 
 | توضیحات | تابع |
 | - | - |
-| هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید | `onErrorAction(TapsellError)` |
-| زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد | `onAdAvailableAction(TapsellAd)` |
+| هنگامی که هر نوع خطایی در پروسه‌ی دریافت تبلیغ بوجود بیاید | `onErrorAction(irancell.irError)` |
+| زمانی که تبلیغ دریافت شده و آماده‌ی نمایش باشد | `onAdAvailableAction(irancell.irAd)` |
 | در صورتی که تبلیغی برای نمایش وجود نداشته باشد | `onNoAdAvailableAction (string)` |
 | زمانی که دسترسی به شبکه موجود نباشد | `onNoNetworkAction (string)` |
-| تبلیغ منقضی شده است | `onExpiring(TapsellAd)` |
+| تبلیغ منقضی شده است | `onExpiring(irancell.irAd)` |
 
 
 ## نمایش تبلیغ
 
-هر تبلیغ یک شیء از نوع `TapsellAd` است که جهت نمایش آن‌، می‌توانید از تابع زیر استفاده نمایید. (این تابع حداکثر یک بار برای هر تبلیغ قابل اجراست)
+هر تبلیغ یک شیء از نوع `irancell.irAd` است که جهت نمایش آن‌، می‌توانید از تابع زیر استفاده نمایید. (این تابع حداکثر یک بار برای هر تبلیغ قابل اجراست)
 
 
 ```c#
-Tapsell.ShowAd(ad, showOptions);
+irancell.ir.ShowAd(ad, showOptions);
 ```
 
 ورودی اول `ad` میباشد که در گام قبل و در اکشن `onAdAvailable` به شما داده شده‌است.  
-ورودی دوم `showOptions` از نوع `TapsellShowOptions` است. تنظیمات زمان نمایش تبلیغ را از این طریق میتوانید بدهید.  
+ورودی دوم `showOptions` از نوع `irancell.irShowOptions` است. تنظیمات زمان نمایش تبلیغ را از این طریق میتوانید بدهید.  
 
-متدهای `TapsellAdShowListener` مطابق جدول زیر است.
+متدهای `irancell.irAdShowListener` مطابق جدول زیر است.
 
 | توضیحات | متغیر |
 | - | - |
@@ -69,12 +69,12 @@ Tapsell.ShowAd(ad, showOptions);
 
 
 ### تنظیمات نمایش
-تنظیمات زمان نمایش را میتوانید مطابق روش زیر با کمک ورودی `TapsellShowOptions` تغییر دهید.
+تنظیمات زمان نمایش را میتوانید مطابق روش زیر با کمک ورودی `irancell.irShowOptions` تغییر دهید.
 ```java
-TapsellShowOptions showOptions = new TapsellShowOptions ();
+irancell.irShowOptions showOptions = new irancell.irShowOptions ();
 showOptions.backDisabled = false;
 showOptions.immersiveMode = false;
-showOptions.rotationMode = TapsellShowOptions.ROTATION_UNLOCKED;
+showOptions.rotationMode = irancell.irShowOptions.ROTATION_UNLOCKED;
 showOptions.showDialog = true;
 showOptions.setRotationMode(ROTATION_MODE);
 ```
@@ -105,11 +105,11 @@ showOptions.setRotationMode(ROTATION_MODE);
 ## دریافت نتیجه تبلیغ جایزه‌ای
 جهت دریافت نتیجه تبلیغات ویدیو جایزه‌ای مطابق روش زیر عمل کنید.
 ```c#
-Tapsell.SetRewardListener( (TapsellAdFinishedResult result) => 
+irancell.ir.SetRewardListener( (irancell.irAdFinishedResult result) => 
     {
 		// you may give rewards to user if result.completed and
 		// result.rewarded are both true
     }
 );
 ```
-پس از نمایش تبلیغ، اکشن `onAdShowFinished` اجرا می‌شود و نتیجه نمایش تبلیغ بصورت یک شی از کلاس `TapsellAdFinishedResult` بازگردانده می‌شود. درصورتیکه تبلیغ نمایش داده شده جایزه‌دار باشد، متغیر `rewarded` در این شی دارای مقدار `true` خواهد بود. همچنین درصورتیکه تبلیغ تا انتها دیده شود، متغیر `completed` در این شی دارای مقدار `true` خواهد بود. در صورتی که تبلیغ جایزه‌دار باشد و مشاهده ویدئو تا انتها انجام شده باشد، باید جایزه درون برنامه (سکه، اعتبار، بنزین یا …) را به کاربر بدهید.
+پس از نمایش تبلیغ، اکشن `onAdShowFinished` اجرا می‌شود و نتیجه نمایش تبلیغ بصورت یک شی از کلاس `irancell.irAdFinishedResult` بازگردانده می‌شود. درصورتیکه تبلیغ نمایش داده شده جایزه‌دار باشد، متغیر `rewarded` در این شی دارای مقدار `true` خواهد بود. همچنین درصورتیکه تبلیغ تا انتها دیده شود، متغیر `completed` در این شی دارای مقدار `true` خواهد بود. در صورتی که تبلیغ جایزه‌دار باشد و مشاهده ویدئو تا انتها انجام شده باشد، باید جایزه درون برنامه (سکه، اعتبار، بنزین یا …) را به کاربر بدهید.

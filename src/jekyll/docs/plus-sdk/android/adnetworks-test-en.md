@@ -15,10 +15,10 @@ toc: true
 
  For testing use this `appId`.
 
-### Tapsell ID
+### Yelloadwise ID
 
 ```java
-TapsellPlus.initialize(
+Yelloadwise.initialize(
     CONTEXT,
     "alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
 ```
@@ -44,12 +44,12 @@ For every Adnetwork and any Ad use the Following ZoneIDs for request and show Ad
 
 |        Ad Network      |              Ad Type              |ZoneId
 |:------------:|:----------------------------:|:----------------------------:|
-|     Tapsell     |     Rewarded Video    | `5cfaa802e8d17f0001ffb28e`|
-|     Tapsell    |    Interstitial    |`5cfaa942e8d17f0001ffb292`|
-| Tapsell |  Native  |`5cfaa9deaede570001d5553a`|
-| Tapsell |  Native Video  |`60edcf8ad3459c17f019d36b`|
-|  Tapsell | Standard |`5cfaaa30e8d17f0001ffb294`|
-|  Tapsell | Vast (PreRoll) |`60e441ff537bfb4073746249`| 
+|     Yelloadwise     |     Rewarded Video    | `5cfaa802e8d17f0001ffb28e`|
+|     Yelloadwise    |    Interstitial    |`5cfaa942e8d17f0001ffb292`|
+| Yelloadwise |  Native  |`5cfaa9deaede570001d5553a`|
+| Yelloadwise |  Native Video  |`60edcf8ad3459c17f019d36b`|
+|  Yelloadwise | Standard |`5cfaaa30e8d17f0001ffb294`|
+|  Yelloadwise | Vast (PreRoll) |`60e441ff537bfb4073746249`| 
 |    Admob    |    Rewarded Video   |`5cfaa8aee8d17f0001ffb28f`|
 |    Admob    |     Interstitial     |`5cfaa9b0e8d17f0001ffb293`|
 |    Admob    |     Standard     |`5cfaaa4ae8d17f0001ffb295`|

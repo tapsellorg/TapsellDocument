@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tapsellorg/TapsellDocument
+  repo: irancell.irorg/irancell.irDocument
 media_folder: 'src/jekyll/images'
 public_folder: '/images'
 publish_mode: editorial_workflow

@@ -6,23 +6,23 @@ permalink: /plus-sdk/android/standard/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) بنر استاندارد بسازید و `zoneId` را زمان درخواست تبلیغ استفاده کنید.
+ابتدا از [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) یک تبلیغگاه (zone) بنر استاندارد بسازید و `zoneId` را زمان درخواست تبلیغ استفاده کنید.
 
 ### درخواست تبلیغ
-مطابق کد زیر می‌توانید با استفاد از متد TapsellPlus.requestStandardBannerAd  درخواست تبلیغ بدهید.
+مطابق کد زیر می‌توانید با استفاد از متد Yelloadwise.requestStandardBannerAd  درخواست تبلیغ بدهید.
 
 ```java
-TapsellPlus.requestStandardBannerAd(
+Yelloadwise.requestStandardBannerAd(
                 CONTEXT, ZONE_ID_STANDARD_BANNER,
-                TapsellPlusBannerType.BANNER_320x50,
+                YelloadwiseBannerType.BANNER_320x50,
                 new AdRequestCallback() {
                     @Override
-                    public void response(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.response(tapsellPlusAdModel);
+                    public void response(YelloadwiseAdModel yelloadwiseAdModel) {
+                        super.response(yelloadwiseAdModel);
                         
                         //Ad is ready to show
                         //Put the ad's responseId to your responseId variable
-                        standardBannerResponseId = tapsellPlusAdModel.getResponseId();
+                        standardBannerResponseId = yelloadwiseAdModel.getResponseId();
                     }
 
                     @Override
@@ -51,17 +51,17 @@ TapsellPlus.requestStandardBannerAd(
 
 بعد از اجرای متد `response` تبلیغ آماده نمایش است و می‌توانید مطابق روش زیر نمایش دهید.
 ```java
-TapsellPlus.showStandardBannerAd(CONTEXT, standardBannerResponseId,
+Yelloadwise.showStandardBannerAd(CONTEXT, standardBannerResponseId,
                 findViewById(R.id.standardBanner),
                 new AdShowListener() {
                     @Override
-                    public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.onOpened(tapsellPlusAdModel);
+                    public void onOpened(YelloadwiseAdModel yelloadwiseAdModel) {
+                        super.onOpened(yelloadwiseAdModel);
                     }
 
                     @Override
-                    public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
-                        super.onError(tapsellPlusErrorModel);
+                    public void onError(YelloadwiseErrorModel yelloadwiseErrorModel) {
+                        super.onError(yelloadwiseErrorModel);
                     }
                 });
 ```
@@ -70,7 +70,7 @@ TapsellPlus.showStandardBannerAd(CONTEXT, standardBannerResponseId,
 در پایان چرخه‌ی حیات اکتیویتی یا هر زمان که قصد داشتید تبلیغ بسته شود، می‌بایستی متد زیر را صدا بزنید:
 ```java
 private void destroyAd() {
-    TapsellPlus.destroyStandardBanner(this, standardBannerResponseId, findViewById(R.id.standardBanner));
+    Yelloadwise.destroyStandardBanner(this, standardBannerResponseId, findViewById(R.id.standardBanner));
 }
 
 // For example in Activity's onDestory method
@@ -82,14 +82,14 @@ protected void onDestroy() {
 ```
 
 ### سایز بنرها
-تمامی سایزهای قابل پشتیبانی در تپسل پلاس در کلاس TapsellPlusBannerType قرار دارند.
+تمامی سایزهای قابل پشتیبانی در یلوادوایز در کلاس YelloadwiseBannerType قرار دارند.
 
 |نوع بنر|اندازه|شبکه‌های پشتیبانی شده|
 |:----------------:|:-------------:|:------------------:|
-| `BANNER_320x50` | `320x50` |       تپسل، AdMob، AppLovin، UnityAds، AdColony    |
-| `BANNER_320x100` | `320x100` |      تپسل، AdMob    |
-| `BANNER_250x250` | `250x250` |    تپسل  |
-| `BANNER_300x250` | `300x250` |   تپسل، AdMob، AppLovin، AdColony |
+| `BANNER_320x50` | `320x50` |       یلوادوایز، AdMob، AppLovin، UnityAds، AdColony    |
+| `BANNER_320x100` | `320x100` |      یلوادوایز، AdMob    |
+| `BANNER_250x250` | `250x250` |    یلوادوایز  |
+| `BANNER_300x250` | `300x250` |   یلوادوایز، AdMob، AppLovin، AdColony |
 | `BANNER_468x60` | `468x60` |      AdMob، UnityAds   |
 | `BANNER_728x90` | `728x90` |     AdMob، AppLovin، UnityAds، AdColony |
 | `BANNER_160x600` | `160x600` |     AdColony |

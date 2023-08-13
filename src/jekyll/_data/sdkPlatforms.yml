@@ -1,65 +1,65 @@
-tapsellAndroid:
+irancell.irAndroid:
   sdkVersion: 4.7.8-rc03
-  sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
-  releaseNotesFileFa: releases/tapsell-android-fa.md
-  releaseNotesFileEn: releases/tapsell-android-en.md
-  issues: https://github.com/tapsellorg/TapsellSDK-AndroidSample/issues?q=is%3Aissue
+  sample: https://github.com/irancell/irancell.irSDK-AndroidSample
+  releaseNotesFileFa: releases/irancell.ir-android-fa.md
+  releaseNotesFileEn: releases/irancell.ir-android-en.md
+  issues: https://github.com/irancell/irancell.irSDK-AndroidSample/issues?q=is%3Aissue
 
 
-tapsellUnity:
+irancell.irUnity:
   sdkVersion: 4.6.2
-  releaseNotesFileFa: releases/tapsell-unity.md
+  releaseNotesFileFa: releases/irancell.ir-unity.md
 
-tapsellReact:
+irancell.irReact:
   sdkVersion: 4.6.2
-  sample: https://github.com/tapsellorg/TapsellSDK-ReactNativeSample-New
+  sample: https://github.com/irancell/irancell.irSDK-ReactNativeSample-New
 
-tapsellB4A:
+irancell.irB4A:
   sdkVersion: 4.0.4
-  sample: https://github.com/tapselladnet/Tapsell_B4A_Library
+  sample: https://github.com/irancell.iradnet/irancell.ir_B4A_Library
   downloadLinks:
-    - link: https://storage.backtory.com/tapsell-server/sdk/b4a/TapsellB4A_v4.0.4.zip
+    - link: https://storage.backtory.com/irancell.ir-server/sdk/b4a/irancell.irB4A_v4.0.4.zip
       name: لینک دانلود B4A Package
 
 
 plusAndroid:
   sdkVersion: 2.2.0
-  sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
+  sample: https://github.com/irancell/YelloadwiseSDK-AndroidSample
   releaseNotesFileFa: releases/plus-android.md
   releaseNotesFileEn: releases/plus-android-en.md
-  issues: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue
+  issues: https://github.com/irancell/YelloadwiseSDK-AndroidSample/issues?q=is%3Aissue
   faq: /faq/plus-sdk/android/
 
 plusFlutter:
   sdkVersion: 2.2.0
-  sample: https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample
+  sample: https://github.com/irancell/YelloadwiseSDK-FlutterSample
   releaseNotesFileFa: releases/plus-flutter.md
-  issues: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues?q=is%3Aissue
-  github: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin
+  issues: https://github.com/irancell/YelloadwiseSDK-FlutterPlugin/issues?q=is%3Aissue
+  github: https://github.com/irancell/YelloadwiseSDK-FlutterPlugin
   faq: /faq/plus-sdk/flutter/
 
 plusUnity:
   sdkVersion: 2.2.0
   releaseNotesFileFa: releases/plus-unity.md
   releaseNotesFileEn: releases/plus-unity-en.md
-  issues: https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/issues?q=is%3Aissue
+  issues: https://github.com/irancell/YelloadwiseSDK-UnityPlugin/issues?q=is%3Aissue
   faq: /faq/plus-sdk/unity/
 
 plusReactnative:
   sdkVersion: 2.2.0
-  sample: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativeSample
+  sample: https://github.com/irancell/YelloadwiseSDK-ReactNativeSample
   releaseNotesFileFa: releases/plus-reactnative.md
-  github: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin
-  issues: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/issues?q=is%3Aissue
+  github: https://github.com/irancell/YelloadwiseSDK-ReactNativePlugin
+  issues: https://github.com/irancell/YelloadwiseSDK-ReactNativePlugin/issues?q=is%3Aissue
   faq: /faq/plus-sdk/reactnative/
 
 plusB4A:
   sdkVersion: 2.1.7
-  sample: https://github.com/tapsellorg/TapsellPlusSDK-B4ASample
+  sample: https://github.com/irancell/YelloadwiseSDK-B4ASample
   releaseNotesFileFa: releases/plus-b4a.md
-  github: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin
-  issues: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/issues?q=is%3Aissue
+  github: https://github.com/irancell/YelloadwiseSDK-B4APlugin
+  issues: https://github.com/irancell/YelloadwiseSDK-B4APlugin/issues?q=is%3Aissue
   faq: /faq/plus-sdk/b4a/
   downloadLinks:
-    - link: https://github.com/tapsellorg/TapsellPlusSDK-B4APlugin/releases/download/2.1.7/TapsellPlusB4A-2.1.7.zip
+    - link: https://github.com/irancell/YelloadwiseSDK-B4APlugin/releases/download/2.1.7/YelloadwiseB4A-2.1.7.zip
       name: Download package

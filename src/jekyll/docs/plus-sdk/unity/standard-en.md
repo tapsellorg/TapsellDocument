@@ -7,16 +7,16 @@ toc: true # table of contents
 ---
 
 ## Creating a Zone
-First, create a standard zone from the [Tapsell panel](https://dashboard.tapsell.ir/).
+First, create a standard zone from the [Yelloadwise panel](https://dashboard.yelloadwise.ir/).
 
 ### Requesting Ads
-Use the `TapsellPlus.RequestStandardBannerAd` method to request an ad. For example:
+Use the `Yelloadwise.RequestStandardBannerAd` method to request an ad. For example:
 
 ```c#
-TapsellPlus.RequestStandardBannerAd(ZoneID, BANNER_TYPE,
-            tapsellPlusAdModel => {
-                Debug.Log ("on response " + tapsellPlusAdModel.responseId);
-                _responseId = tapsellPlusAdModel.responseId;
+yelloadwise.RequestStandardBannerAd(ZoneID, BANNER_TYPE,
+            yelloadwiseAdModel => {
+                Debug.Log ("on response " + yelloadwiseAdModel.responseId);
+                _responseId = yelloadwiseAdModel.responseId;
             },
             error => {
                 Debug.Log ("Error " + error.message);
@@ -36,10 +36,10 @@ After receiving the `responseId` parameter from the previous step, the Ad is rea
 
 
 ```c#
-TapsellPlus.ShowStandardBannerAd(_responseId, HORIZONTAL_GRAVITY, VERTICAL_GRAVITY,
+Yelloadwise.ShowStandardBannerAd(_responseId, HORIZONTAL_GRAVITY, VERTICAL_GRAVITY,
 
-            tapsellPlusAdModel => {
-                Debug.Log ("onOpenAd " + tapsellPlusAdModel.zoneId);
+            yelloadwiseAdModel => {
+                Debug.Log ("onOpenAd " + yelloadwiseAdModel.zoneId);
             },
             error => {
                 Debug.Log ("onError " + error.errorMessage);
@@ -51,10 +51,10 @@ BANNER_TYPE is the banner display size and can be the following values:
 
 |   Banner Type    |   Size    |            Supported Ad Networks             |
 |:----------------:|:---------:|:--------------------------------------------:|
-| `BANNER_320x50`  | `320x50`  | Tapsell, AdMob, AppLovin, UnityAds, AdColony |
-| `BANNER_320x100` | `320x100` |                Tapsell, AdMob                |
-| `BANNER_250x250` | `250x250` |                   Tapsell                    |
-| `BANNER_300x250` | `300x250` |      Tapsell, AdMob, AppLovin, AdColony      |
+| `BANNER_320x50`  | `320x50`  | Yelloadwise, AdMob, AppLovin, UnityAds, AdColony |
+| `BANNER_320x100` | `320x100` |                Yelloadwise, AdMob                |
+| `BANNER_250x250` | `250x250` |                   Yelloadwise                    |
+| `BANNER_300x250` | `300x250` |      Yelloadwise, AdMob, AppLovin, AdColony      |
 | `BANNER_468x60`  | `468x60`  |               AdMob, UnityAds                |
 | `BANNER_728x90`  | `728x90`  |     AdMob, AppLovin, UnityAds, AdColony      |
 | `BANNER_160x600` | `160x600` |                   AdColony                   |
@@ -69,13 +69,13 @@ Gravity.TOP - Gravity.BOTTOM - Gravity.LEFT - Gravity.RIGHT - Gravity.CENTER
 By default, when a banner ad is received, it is added to the page and becomes Visible. Use this code if for any reason you want to hide the banner or show the hidden banner:
 
 ```c#
-TapsellPlus.HideStandardBannerAd();
-TapsellPlus.TapsellPlus.DisplayStandardBannerAd();
+Yelloadwise.HideStandardBannerAd();
+Yelloadwise.Yelloadwise.DisplayStandardBannerAd();
 ```
 
 ### Removing Ads
 At the end of the view life cycle or whenever you want to close the ad, you should call the following method:
 
 ```c#
-TapsellPlus.DestroyStandardBannerAd(_responseId);
+Yelloadwise.DestroyStandardBannerAd(_responseId);
 ```

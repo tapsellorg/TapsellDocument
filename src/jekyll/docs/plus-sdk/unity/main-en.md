@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: Tapsell Plus Unity platform
+title: Yelloadwise Unity platform
 lang: en
 permalink: /plus-sdk/unity/main/index.html
 toc: true

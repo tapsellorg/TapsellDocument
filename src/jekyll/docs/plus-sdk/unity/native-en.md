@@ -7,17 +7,17 @@ toc: true # table of contents
 ---
 
 ### Creating a Zone
-First, create a native zone from the [Tapsell panel](https://dashboard.tapsell.ir/) and use the `zoneId` when requesting or showing an ad.
+First, create a native zone from the [irancell.ir panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
 
 ### Requesting Ads
-Use the `TapsellPlus.RequestNativeBannerAd` method to request an ad. For example:
+Use the `Yelloadwise.RequestNativeBannerAd` method to request an ad. For example:
 
 ```c#
-TapsellPlus.RequestNativeBannerAd(ZoneID,
+Yelloadwise.RequestNativeBannerAd(ZoneID,
 
-			tapsellPlusAdModel => {
-				Debug.Log ("On Response " + tapsellPlusAdModel.responseId);
-				_responseId = tapsellPlusAdModel.responseId;
+			YelloadwiseAdModel => {
+				Debug.Log ("On Response " + YelloadwiseAdModel.responseId);
+				_responseId = YelloadwiseAdModel.responseId;
 			},
 			error => {
 				Debug.Log ("Error " + error.message);
@@ -38,19 +38,19 @@ After receiving the `responseId` parameter from the previous step, the Ad is rea
 ```c#
 public void Show () {
   // this: refers to MonoBehaviour
-  TapsellPlus.ShowNativeBannerAd(_responseId, this,
+  Yelloadwise.ShowNativeBannerAd(_responseId, this,
 
-			tapsellPlusNativeBannerAd => {
-				Debug.Log ("onOpenAd " + tapsellPlusNativeBannerAd.zoneId);
-				adHeadline.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.title);
-				adCallToAction.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.callToActionText);
-				adBody.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.description);
-				adImage.texture = tapsellPlusNativeBannerAd.landscapeBannerImage;
+			YelloadwiseNativeBannerAd => {
+				Debug.Log ("onOpenAd " + YelloadwiseNativeBannerAd.zoneId);
+				adHeadline.text = ArabicSupport.ArabicFixer.Fix(YelloadwiseNativeBannerAd.title);
+				adCallToAction.text = ArabicSupport.ArabicFixer.Fix(YelloadwiseNativeBannerAd.callToActionText);
+				adBody.text = ArabicSupport.ArabicFixer.Fix(YelloadwiseNativeBannerAd.description);
+				adImage.texture = YelloadwiseNativeBannerAd.landscapeBannerImage;
         
-				tapsellPlusNativeBannerAd.RegisterImageGameObject(adImage.gameObject);
-				tapsellPlusNativeBannerAd.RegisterHeadlineTextGameObject(adHeadline.gameObject);
-				tapsellPlusNativeBannerAd.RegisterCallToActionGameObject(adCallToAction.gameObject);
-				tapsellPlusNativeBannerAd.RegisterBodyTextGameObject(adBody.gameObject);
+				YelloadwiseNativeBannerAd.RegisterImageGameObject(adImage.gameObject);
+				YelloadwiseNativeBannerAd.RegisterHeadlineTextGameObject(adHeadline.gameObject);
+				YelloadwiseNativeBannerAd.RegisterCallToActionGameObject(adCallToAction.gameObject);
+				YelloadwiseNativeBannerAd.RegisterBodyTextGameObject(adBody.gameObject);
 			},
 			error => {
 				Debug.Log ("onError " + error.errorMessage);
@@ -71,7 +71,7 @@ For example, if you have a RawImage from GameObject type called adImage, you can
 
 ```c#
 // ...
-adImage.texture = tapsellPlusNativeBannerAd.landscapeBannerImage;
+adImage.texture = YelloadwiseNativeBannerAd.landscapeBannerImage;
 // ...
 ```
 

@@ -6,7 +6,7 @@ permalink: /plus-sdk/reactnative/native/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 
 ### درخواست تبلیغ
@@ -14,7 +14,7 @@ toc: true
 
 ```javascript
 let zoneId = "theZoneIdYouHave";
-TapsellPlus.requestNativeAd(zoneId).then(responseId => {
+Yelloadwise.requestNativeAd(zoneId).then(responseId => {
   // Save the responseId -- You need it to show the ad
 })
 .catch(error => {
@@ -35,7 +35,7 @@ resolve
 ### نمایش تبلیغ
 
 ```js
-TapsellPlus.showNativeAd(responseId, onOpened, onError);
+Yelloadwise.showNativeAd(responseId, onOpened, onError);
 ```
 
 | پارامتر | توضیحات |
@@ -62,5 +62,5 @@ TapsellPlus.showNativeAd(responseId, onOpened, onError);
 برای باز کردن تبلیغ، هنگامی که کاربر روی آن کلیک می‌کند، از تابع زیر استفاده کنید.
 
 ```javascript
-TapsellPlus.nativeAdClicked(responseId);
+Yelloadwise.nativeAdClicked(responseId);
 ```

@@ -10,7 +10,7 @@ toc: true # table of contents
 
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
 
 
 ## درخواست تبلیغ
@@ -18,11 +18,11 @@ toc: true # table of contents
 
 ```c#
 public void Request () {
-  TapsellPlus.RequestRewardedVideoAd (ZONE_ID,
+  Yelloadwise.RequestRewardedVideoAd (ZONE_ID,
 
-			tapsellPlusAdModel => {
-				Debug.Log ("on response " + tapsellPlusAdModel.responseId);
-				_responseId = tapsellPlusAdModel.responseId;
+			yelloadwiseAdModel => {
+				Debug.Log ("on response " + yelloadwiseAdModel.responseId);
+				_responseId = yelloadwiseAdModel.responseId;
 			},
 			error => {
 				Debug.Log ("Error " + error.message);
@@ -32,7 +32,7 @@ public void Request () {
 ```
 
 ورودی اول `ZONE_ID` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
-برای تبلیغ آنی از متد `TapsellPlus.RequestInterstitialAd` استفاده کنید.
+برای تبلیغ آنی از متد `Yelloadwise.RequestInterstitialAd` استفاده کنید.
 
 >اگر تمایل دارید در کالبک error مجددا درخواست تبلیغ کنید، حتما این کار را به کمک متغیری به
 عنوان شمارنده انجام دهید. زیرا به کمک آن متغیر می‌توانید محدودیت تعداد دفعات را برای
@@ -45,16 +45,16 @@ public void Request () {
 
 ```c#
 public void Show () {
-  TapsellPlus.ShowRewardedVideoAd(_responseId,
+  Yelloadwise.ShowRewardedVideoAd(_responseId,
 
-			tapsellPlusAdModel => {
-				Debug.Log ("onOpenAd " + tapsellPlusAdModel.zoneId);
+			yelloadwiseAdModel => {
+				Debug.Log ("onOpenAd " + yelloadwiseAdModel.zoneId);
 			},
-			tapsellPlusAdModel => {
-				Debug.Log ("onReward " + tapsellPlusAdModel.zoneId);
+			yelloadwiseAdModel => {
+				Debug.Log ("onReward " + yelloadwiseAdModel.zoneId);
 			},
-			tapsellPlusAdModel => {
-				Debug.Log ("onCloseAd " + tapsellPlusAdModel.zoneId);
+			yelloadwiseAdModel => {
+				Debug.Log ("onCloseAd " + yelloadwiseAdModel.zoneId);
 			},
 			error => {
 				Debug.Log ("onError " + error.errorMessage);
@@ -63,4 +63,4 @@ public void Show () {
 }
 ```
 
-برای تبلیغ آنی از متد `TapsellPlus.ShowInterstitialAd`  استفاده کنید. همچنین در تبلیغ آنی نیازی به کالبک `onReward` ندارید و می‌توانید آن را پاک کنید.
+برای تبلیغ آنی از متد `Yelloadwise.ShowInterstitialAd`  استفاده کنید. همچنین در تبلیغ آنی نیازی به کالبک `onReward` ندارید و می‌توانید آن را پاک کنید.

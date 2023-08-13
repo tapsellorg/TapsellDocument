@@ -8,7 +8,7 @@ toc: true
 
 If you want to add more ad networks to your project, this page helps you through it.
 
-Here's a list of ad networks that are supported by TapsellPlus.
+Here's a list of ad networks that are supported by Yelloadwise.
 
 ## Google AdMob
 > Supported version: `22.1.0`
@@ -57,7 +57,7 @@ dependencies {
 > ```xml
 > <uses-sdk tools:overrideLibrary="com.unity3d.ads" />
 > ```
-> **NOTE**: You don't need to worry about lower-api users experiencing any crashes since TapsellPlus takes care of it.
+> **NOTE**: You don't need to worry about lower-api users experiencing any crashes since Yelloadwise takes care of it.
 {:data-title="UnityAds MinSDK version" data-color="green"}
 
 ## Chartboost
@@ -130,7 +130,7 @@ allprojects {
     repositories {
         //....
 
-        // TapsellPlus, Tapsell, ...
+        // Yelloadwise
         mavenCentral()
 
         // Mintegral

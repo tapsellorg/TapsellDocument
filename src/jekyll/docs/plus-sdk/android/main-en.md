@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: Tapsell plus for Android native
+title: Yelloadwise for Android native
 lang: en
 permalink: /plus-sdk/android/main/index.html
 toc: true

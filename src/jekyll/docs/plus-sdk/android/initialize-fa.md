@@ -1,18 +1,18 @@
 ---
 layout: classic-docs
-title: راه اندازی تپسل پلاس در اندروید
+title: راه اندازی یلوادوایز در اندروید
 lang: fa
 permalink: /plus-sdk/android/initialize/index.html
 toc: true
 ---
 
-> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/android/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?q=is%3Aissue) را بررسی نمایید.
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/android/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/irancell.irorg/YelloadwiseSDK-AndroidSample/issues?q=is%3Aissue) را بررسی نمایید.
 {:data-title="نکته Build پروژه" data-color="red"}
 
-ابتدا کتابخانه‌ی TapsellPlus را مطابق روش زیر به پروژه‌ی خود اضافه کنید. سپس هر شبکه‌ی تبلیغاتی که مایل هستید و تپسل پلاس پشتیبانی می‌کند را مطابق توضیحات بخش شبکه‌های تبلیغاتی به پروژه‌ی خود اضافه نمایید. در انتها با اطلاعات موجود در بخش تست، مطمئن شوید که شبکه‌ی مورد نظر به درستی کار می‌کند.
+ابتدا کتابخانه‌ی Yelloadwise را مطابق روش زیر به پروژه‌ی خود اضافه کنید. سپس هر شبکه‌ی تبلیغاتی که مایل هستید و یلوادوایز پشتیبانی می‌کند را مطابق توضیحات بخش شبکه‌های تبلیغاتی به پروژه‌ی خود اضافه نمایید. در انتها با اطلاعات موجود در بخش تست، مطمئن شوید که شبکه‌ی مورد نظر به درستی کار می‌کند.
 
 ## تنظیمات Gradle
-ریپازیتوری تپسل را به فایل `build.gradle` اصلی پروژه اضافه کنید.
+ریپازیتوری یلوادوایز را به فایل `build.gradle` اصلی پروژه اضافه کنید.
 
 ```gradle
 allprojects {  
@@ -22,7 +22,7 @@ allprojects {
 
         // for v1.2.3-rc4 and before
         //maven {  
-        //    url 'https://dl.bintray.com/tapsellorg/maven'  
+        //    url 'https://dl.bintray.com/irancell.irorg/maven'  
         //}
         ....
     }  
@@ -35,7 +35,7 @@ allprojects {
 dependencies {
     // ...
     
-    implementation("ir.tapsell.plus:tapsell-plus-sdk-android:2.2.0")
+    implementation("ir.yelloadwise:irancell.ir-plus-sdk-android:2.2.0")
 }
 ```
 
@@ -48,14 +48,14 @@ compileOptions {
 }
 ```
 
-با کمک پراکسی gradle را sync کنید تا تپسل به پروژه اضافه شود.
+با کمک پراکسی gradle را sync کنید تا یلوادوایز به پروژه اضافه شود.
 
 ## مقداردهی اولیه
 
-در اکتیویتی اولیه برنامه باید تپسل پلاس را راه‌اندازی کنید.
+در اکتیویتی اولیه برنامه باید یلوادوایز را راه‌اندازی کنید.
 
 ```java
-import ir.tapsell.plus.TapsellPlus;
+import ir.yelloadwise.Yelloadwise;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ...
-        TapsellPlus.initialize(this, BuildConfig.TAPSELL_KEY,
-				new TapsellPlusInitListener() {
+        Yelloadwise.initialize(this, BuildConfig.irancell.ir_KEY,
+				new YelloadwiseInitListener() {
             @Override
             public void onInitializeSuccess(AdNetworks adNetworks) {
                 Log.d("onInitializeSuccess", adNetworks.name());
@@ -81,36 +81,36 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-`TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که میسازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
+`irancell.ir_KEY` کلید یلوادوایز هست و برای هر اپلیکیشن که میسازید در [پنل یلوادوایز](https://dashboard.irancell.ir/) ساخته میشود، میتوانید از پنل کپی کنید.
 
 > برای مشاهده‌ی جزئی‌تر لاگ‌ها در لایبرری از کد
 > ```java
-> TapsellPlus.setDebugMode(Log.DEBUG)
+> Yelloadwise.setDebugMode(Log.DEBUG)
 > ```
 > استفاده کنید. هنگام درخواست یا نمایش هرگونه خطایی با جزئیات دقیق‌تر نمایش داده می‌شود.
 {:data-title="Debug mode" data-color="blue"}
 
 
 ## تنظیمات proguard
-تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
+تنظیمات مربوط به `proguard` در [این فایل](https://github.com/irancell.irorg/YelloadwiseSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
 
 ## تنظیمات مربوط به GDPR
 
-از آن‌جا که کتابخانه‌ی تپسل پلاس قوانین GDPR را در خصوص نمایش تبلیغات شخصی‌سازی شده رعایت می‌کند، به طور پیش فرض اگر کاربر با IP یکی از کشورهای مشمول این قانون از اپلیکیشن شما استفاده کند، دیالوگی در این خصوص به کاربر نمایش می‌دهد.
-اگر تمایل دارید تا به جای تصمیم کاربر، خودتان دسترسی لازم را تعیین کنید می‌توانید از تکه کد زیر استفاده نمایید. توجه داشته باشید که این تکه کد می‌بایستی پس از Initialize شدن تپسل پلاس و پیش از درخواست تبلیغ صدا زده شود تا نتیجه‌ی آن در درخواست شما اعمال شده باشد. مقدار true‌ به این معنی است که شما حق استفاده از اطلاعات جهت نمایش تبلیغ شخصی‌سازی شده را به شبکه‌های تبلیغاتی داده‌اید.
+از آن‌جا که کتابخانه‌ی یلوادوایز قوانین GDPR را در خصوص نمایش تبلیغات شخصی‌سازی شده رعایت می‌کند، به طور پیش فرض اگر کاربر با IP یکی از کشورهای مشمول این قانون از اپلیکیشن شما استفاده کند، دیالوگی در این خصوص به کاربر نمایش می‌دهد.
+اگر تمایل دارید تا به جای تصمیم کاربر، خودتان دسترسی لازم را تعیین کنید می‌توانید از تکه کد زیر استفاده نمایید. توجه داشته باشید که این تکه کد می‌بایستی پس از Initialize شدن یلوادوایز و پیش از درخواست تبلیغ صدا زده شود تا نتیجه‌ی آن در درخواست شما اعمال شده باشد. مقدار true‌ به این معنی است که شما حق استفاده از اطلاعات جهت نمایش تبلیغ شخصی‌سازی شده را به شبکه‌های تبلیغاتی داده‌اید.
 
 ```java
-TapsellPlus.setGDPRConsent(this, true);
+Yelloadwise.setGDPRConsent(this, true);
 ```
 
 در صورت نیاز به نمایش مجدد دیالوگ GDPR برای کاربر می‌توانید از کد زیر استفاده نمایید:
 
 ```java
-TapsellPlus.showGDPRDialog(/* activity */ this)
+Yelloadwise.showGDPRDialog(/* activity */ this)
 ```
 
 ## دسترسی‌ها
-کتابخانه‌ی تپسل‌پلاس به جز اینترنت و WAKE_LOCK دسترسی دیگری از کاربر نمی‌گیرد. امّا به منظور بهبود عملکرد کتابخانه برای نمایش تبلیغات متناسب با هر کاربر می‌توانید دسترسی زیر را به اپلیکیشن خود اضافه نمایید. همچنین می‌بایستی [دسترسی در زمان اجرا](https://developer.android.com/training/permissions/requesting) برای این مورد را نیز از کاربر بگیرید.
+کتابخانه‌ی یلوادوایز‌پلاس به جز اینترنت و WAKE_LOCK دسترسی دیگری از کاربر نمی‌گیرد. امّا به منظور بهبود عملکرد کتابخانه برای نمایش تبلیغات متناسب با هر کاربر می‌توانید دسترسی زیر را به اپلیکیشن خود اضافه نمایید. همچنین می‌بایستی [دسترسی در زمان اجرا](https://developer.android.com/training/permissions/requesting) برای این مورد را نیز از کاربر بگیرید.
 ```xml
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```

@@ -1,17 +1,17 @@
-## Tapsell plus native Changelog
+## Yelloadwise native Changelog
 
 ### 2.2.0 (21 Jun, 2023)
-- Fixed Google Play policy error related to Collecting user's installed apps. [Issue #68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
+- Fixed Google Play policy error related to Collecting user's installed apps. [Issue #68](https://github.com/irancell.irorg/YelloadwiseSDK-AndroidSample/issues/68)
 
 ### 2.1.9 (20 Jun, 2023)
 - Added support for `null companion banner container` in `ExoPlayer` for Pre-Roll IMA ads.
 - fixed triggering multiple event callbacks in `ExoPlayer` Pre-Roll ads.
 
 ### 2.1.9-rc04 (14 Jun, 2023)
-- Added preroll video ads to sdk for `VideoPlayer` and `ExoPlayer`. add exoplayer-ima-extension with disabled ui feature. [Sample](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
+- Added preroll video ads to sdk for `VideoPlayer` and `ExoPlayer`. add exoplayer-ima-extension with disabled ui feature. [Sample](https://github.com/irancell.irorg/YelloadwiseSDK-AndroidSample/blob/master/app/src/main/java/ir/irancell.ir/plussample/android/ExoPlayerVastActivity.java)
 - Added new UI for back dialog
-- Update tapsell sdk to `V4.7.8-rc03`
-- Fixed some memory leaks in tapsell sdk and tapsell plus sdk
+- Update irancell.ir sdk to `V4.7.8-rc03`
+- Fixed some memory leaks in irancell.ir sdk and Yelloadwise sdk
 - fixed some proguard issues
 
 ### 2.1.9-rc03 (29 March, 2023)
@@ -30,21 +30,21 @@
 - Update targetSDK version to 33
 
 #### Flutter
-- Add support for Admob Native ad in plugin. For more information see [Flutter Admob Native Docs](https://docs.tapsell.ir/plus-sdk/flutter/native/)
+- Add support for Admob Native ad in plugin. For more information see [Flutter Admob Native Docs](https://docs.irancell.ir/plus-sdk/flutter/native/)
 
 ### 2.1.7 (2022/03/28)
-- Update AdMob to `20.6.0` which fixes [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
+- Update AdMob to `20.6.0` which fixes [#41](https://github.com/irancell.irorg/YelloadwiseSDK-AndroidSample/issues/41)
 - Minor bug fixes
 
 ### 2.1.6 (2022/01/11)
 
-- Update `Tapsell` adNetwork to **4.7.4**
+- Update `irancell.ir` adNetwork to **4.7.4**
 - Fix Native banner crash in AdMob adNetwork
 - Update Target SDK to 31
 - Improvement on verbose logging when ad request fails
-  To make use of it use `TapsellPlus.SetDebugMode(Log.DEBUG)` before requesting
+  To make use of it use `Yelloadwise.SetDebugMode(Log.DEBUG)` before requesting
 
 ### 2.1.5 (2021/11/06)
-- Update `Tapsell` adNetwork to **4.7.3**
+- Update `irancell.ir` adNetwork to **4.7.3**
 - Update `Mintegral` adNetwork to **15.6.11**
   Visit [AdNetwork docs](/plus-sdk/android/add-adnetworks/index.html) for more information

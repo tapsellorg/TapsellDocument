@@ -9,18 +9,18 @@ toc: true # table of contents
 Implementing rewarded and interstitial (both video and banner) is in the same way. Just select the type of ad from the panel.
 
 ### Creating a Zone
-first create rewarded-interstitial Zone from the [Tapsell panel](https://dashboard.tapsell.ir/) and use `ZoneId` when requesting Ad.
+first create rewarded-interstitial Zone from the [yelloadwise.ir panel](https://dashboard.yelloadwise.ir/) and use `ZoneId` when requesting Ad.
 
 ### Requesting Ads
-According to the following code, you can request Ad using the `TapsellPlus.RequestRewardedVideoAd` method
+According to the following code, you can request Ad using the `Yelloadwise.RequestRewardedVideoAd` method
 
 ```c#
 public void Request () {
-  TapsellPlus.RequestRewardedVideoAd (ZONE_ID,
+  Yelloadwise.RequestRewardedVideoAd (ZONE_ID,
 
-			tapsellPlusAdModel => {
-				Debug.Log ("on response " + tapsellPlusAdModel.responseId);
-				_responseId = tapsellPlusAdModel.responseId;
+			yelloadwiseAdModel => {
+				Debug.Log ("on response " + yelloadwiseAdModel.responseId);
+				_responseId = yelloadwiseAdModel.responseId;
 			},
 			error => {
 				Debug.Log ("Error " + error.message);
@@ -29,7 +29,7 @@ public void Request () {
 }
 ```
 
-Use `TapsellPlus.RequestInterstitialAd` for the interstitial Ad instead.
+Use `Yelloadwise.RequestInterstitialAd` for the interstitial Ad instead.
 
 > If you want to request again in error Callback, Be sure to do this with the help of a variable as a Counter.
 > Because with the help of that variable you can set a limit on the number of times for request.
@@ -44,16 +44,16 @@ After receiving the `responseId` parameter from the previous step, the Ad is rea
 
 ```c#
 public void Show () {
-  TapsellPlus.ShowRewardedVideoAd(_responseId,
+  yelloadwise.ShowRewardedVideoAd(_responseId,
 
-			tapsellPlusAdModel => {
-				Debug.Log ("onOpenAd " + tapsellPlusAdModel.zoneId);
+			yelloadwiseAdModel => {
+				Debug.Log ("onOpenAd " + yelloadwiseAdModel.zoneId);
 			},
-			tapsellPlusAdModel => {
-				Debug.Log ("onReward " + tapsellPlusAdModel.zoneId);
+			yelloadwiseAdModel => {
+				Debug.Log ("onReward " + yelloadwiseAdModel.zoneId);
 			},
-			tapsellPlusAdModel => {
-				Debug.Log ("onCloseAd " + tapsellPlusAdModel.zoneId);
+			yelloadwiseAdModel => {
+				Debug.Log ("onCloseAd " + yelloadwiseAdModel.zoneId);
 			},
 			error => {
 				Debug.Log ("onError " + error.errorMessage);
@@ -62,5 +62,5 @@ public void Show () {
 }
 ```
 
-Use `TapsellPlus.ShowInterstitialAd` for the interstitial Ad instead. Also, You don't need the `onReward` callback in interstitial ad, and you can remove it
+Use `Yelloadwise.ShowInterstitialAd` for the interstitial Ad instead. Also, You don't need the `onReward` callback in interstitial ad, and you can remove it
 

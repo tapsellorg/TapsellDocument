@@ -7,7 +7,7 @@ toc: true
 ---
 
 ### Creating a Zone
-First, create a native video zone from the [Tapsell panel](https://dashboard.tapsell.ir/) and use the `zoneId` when requesting or showing an ad.
+First, create a native video zone from the [irancell.ir panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
 
 ### Creating an AdHolder
 You should add a ViewGroup to the page in which you want to show the native ad as space for displaying it. In other words, you need to create an ad container.
@@ -29,16 +29,16 @@ You should add a ViewGroup to the page in which you want to show the native ad a
 ```
 
 ### Requesting Ads
-Use the `TapsellPlus.requestNativeVideo` method to request an ad. For example:
+Use the `Yelloadwise.requestNativeVideo` method to request an ad. For example:
 
 ```java
 String zoneId = "theZoneIdYouHavaForThis";
 String responseId = "";
 
-TapsellPlus.requestNativeVideo(this, zoneId, new AdRequestCallback() {
+Yelloadwise.requestNativeVideo(this, zoneId, new AdRequestCallback() {
     @Override
-    public void response(TapsellPlusAdModel tapsellPlusAdModel) {
-        responseId = tapsellPlusAdModel.getResponseId(); // SAVE the responseID
+    public void response(YelloadwiseAdModel yelloadwiseAdModel) {
+        responseId = yelloadwiseAdModel.getResponseId(); // SAVE the responseID
     }
     @Override
     public void error(String s) {
@@ -55,22 +55,22 @@ The following are required from the previous steps:
 - responseId
 - adContainer
 
-To display the ad, first create an object of `TapsellPlusVideoAdHolder` class according to the following format and then call the request to display the ad:
+To display the ad, first create an object of `YelloadwiseVideoAdHolder` class according to the following format and then call the request to display the ad:
 
 ```java
-TapsellPlusVideoAdHolder holder = new TapsellPlusVideoAdHolder.Builder()
-  .setContentViewTemplate(ir.tapsell.sdk.R.layout.tapsell_content_video_ad_template)
-  .setAppInstallationViewTemplate(ir.tapsell.sdk.R.layout.tapsell_app_installation_video_ad_template)
+YelloadwiseVideoAdHolder holder = new YelloadwiseVideoAdHolder.Builder()
+  .setContentViewTemplate(ir.yelloadwise.core.R.layout.irancell.ir_content_video_ad_template)
+  .setAppInstallationViewTemplate(ir.yelloadwise.core.R.layout.irancell.ir_app_installation_video_ad_template)
   .setAdContainer(findViewById(R.id.adContainer))
   .build();
 
-TapsellPlus.showNativeVideo(this, responseId, holder, new AdShowListener() {
+Yelloadwise.showNativeVideo(this, responseId, holder, new AdShowListener() {
     @Override
-    public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
+    public void onOpened(YelloadwiseAdModel YelloadwiseAdModel) {
       // Video Ad is opened
     }
     @Override
-    public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
+    public void onError(YelloadwiseErrorModel YelloadwiseErrorModel) {
       // Error when showing video ad
     }
 });
@@ -80,20 +80,20 @@ If you want to use your custom layout, assign the following ids according to the
 
 |       view       |              id              | type  |
 |:------------:|:----------------------------:|:-:|
-|     logo     |     `tapsell_nativead_logo`    | `ImageView`  |
-|     title    |    `tapsell_nativead_title`    | `TextView`  |
-| ad indicator |  `tapsell_nativead_sponsored`  | `View`  |
-|  description | `tapsell_nativead_description` | `TextView`  |
-|    banner    |    `tapsell_nativead_video`   | ir.tapsell.sdk.nativeads.views.videoplayer.VideoContainer  |
-|    button    |     `tapsell_nativead_cta`     | `TextView`  |
-| rating |  `tapsell_nativead_rating`  | ir.tapsell.sdk.nativeads.views.RateStarView  |
+|     logo     |     `irancell.ir_nativead_logo`    | `ImageView`  |
+|     title    |    `irancell.ir_nativead_title`    | `TextView`  |
+| ad indicator |  `irancell.ir_nativead_sponsored`  | `View`  |
+|  description | `irancell.ir_nativead_description` | `TextView`  |
+|    banner    |    `irancell.ir_nativead_video`   | ir.yelloadwise.core.nativeads.views.videoplayer.VideoContainer  |
+|    button    |     `irancell.ir_nativead_cta`     | `TextView`  |
+| rating |  `irancell.ir_nativead_rating`  | ir.yelloadwise.core.nativeads.views.RateStarView  |
 
 The rating key is only used in advertisements to install an application.
 
 Then give these layouts to AdHolder:
 
 ```java
-TapsellPlusVideoAdHolder holder = new TapsellPlusVideoAdHolder.Builder()
+YelloadwiseVideoAdHolder holder = new YelloadwiseVideoAdHolder.Builder()
   .setContentViewTemplate(R.layout.my_custom_native_video_layout)
   .setAppInstallationViewTemplate(R.layout.my_custom_native_video_application_layout)
   .setAdContainer(findViewById(R.id.adContainer))

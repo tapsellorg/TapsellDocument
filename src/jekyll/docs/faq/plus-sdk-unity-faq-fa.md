@@ -6,9 +6,9 @@ permalink: /faq/plus-sdk/unity/
 lang: fa
 ---
 
-در این بخش خطاهایی که ممکن‌ است در مراحل مختلف راه‌اندازی تپسل در اندروید با آن‌ها مواجه شوید به همراه راه‌ حل ذکر شده‌اند.
+در این بخش خطاهایی که ممکن‌ است در مراحل مختلف راه‌اندازی یلوادوایز در اندروید با آن‌ها مواجه شوید به همراه راه‌ حل ذکر شده‌اند.
 
-> **خطای مورد نظر شما در این صفحه مطرح نشده است؟** در [قسمت Issues گیت‌هاب](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?q=is%3Aissue) جستجو کنید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues/new/choose) مطرح کنید.
+> **خطای مورد نظر شما در این صفحه مطرح نشده است؟** در [قسمت Issues گیت‌هاب](https://github.com/irancell/YelloadwiseSDK-UnitySample2019/issues?q=is%3Aissue) جستجو کنید و در صورت نیافتن در آنجا [مورد جدیدی](https://github.com/irancell/YelloadwiseSDK-UnitySample2019/issues/new/choose) مطرح کنید.
 {:data-title="نکته" data-color="red"}
 
 ### خطای 403
@@ -26,7 +26,7 @@ lang: fa
 `adb logcat -v color`
 
 ### خطای BuildMethodException: [GoogleMobileAds] Android Google Mobile Ads app ID is empty. Please enter a valid app ID to run ads properly.
-کتابخانه تپسل از کتابخانه Google Mobile Ads به عنوان وابستگی داخلی استفاده می‌کند. در صورتیکه با این خطا مواجه شدید، لازم است وارد مسیر `Assets/Google Mobile Ads` شده و اپ آیدی مورد نیاز اندروید را در آن وارد نمایید. در صورتی که از ادموب استفاده نمیکنید، میتوانید از اپ آیدی تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت اپ آیدی اختصاصی خود را وارد نمایید.  
+کتابخانه یلوادوایز از کتابخانه Google Mobile Ads به عنوان وابستگی داخلی استفاده می‌کند. در صورتیکه با این خطا مواجه شدید، لازم است وارد مسیر `Assets/Google Mobile Ads` شده و اپ آیدی مورد نیاز اندروید را در آن وارد نمایید. در صورتی که از ادموب استفاده نمیکنید، میتوانید از اپ آیدی تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت اپ آیدی اختصاصی خود را وارد نمایید.  
 
 ### خطای Error: Could not load signature of GoogleMobileAds.Placement.BannerAdGameObject:<AddCallbacks>m__1 due to: Could not resolve type with token 0100002d (from typeref, class/assembly GoogleMobileAds.Api.AdFailedToLoadEventArgs, GoogleMobileAds.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)
 این [خطا](https://github.com/googleads/googleads-mobile-unity/issues/1613) مرتبط با استفاده از پلاگین‌های جدید ادموب از نسخه 6.0.0 به بعد در پروژه است. این خطا از نسخه `Google Mobile Ads v7.4.0` به بعد رفع شده‌است 
@@ -70,11 +70,11 @@ android.enableJetifier=true
 
 ### فعال/غیرفعال‌‌سازی دیالوگ بازگشت در تبلیغات ویدیویی
 
-در پلتفرم تپسل‌پلاس، فعال‌سازی دیالوگ بازگشت نیازی به پیاده‌سازی از طرف شما ندارد و از قبل در کتابخانه تعبیه شده است. برای فعال‌سازی آن کافیست درخواست خود را به پشتیبانی تپسل ارجاع دهید
+در پلتفرم یلوادوایز‌پلاس، فعال‌سازی دیالوگ بازگشت نیازی به پیاده‌سازی از طرف شما ندارد و از قبل در کتابخانه تعبیه شده است. برای فعال‌سازی آن کافیست درخواست خود را به پشتیبانی یلوادوایز ارجاع دهید
 
 ### فعال/غیرفعال‌سازی دکمه بازگشت در زمان مشاهده تبلیغات ویدیویی
 
-در پلتفرم تپسل‌پلاس، غیرفعال‌سازی دکمه بازگشت در تبلیغات ویدیویی، نیازی به پیاده‌سازی از طرف شما ندارد و از قبل در کتابخانه تعبیه شده است. برای فعال‌سازی آن کافیست درخواست خود را به پشتیبانی تپسل ارجاع دهید
+در پلتفرم یلوادوایز‌پلاس، غیرفعال‌سازی دکمه بازگشت در تبلیغات ویدیویی، نیازی به پیاده‌سازی از طرف شما ندارد و از قبل در کتابخانه تعبیه شده است. برای فعال‌سازی آن کافیست درخواست خود را به پشتیبانی یلوادوایز ارجاع دهید
 
 ### خطای Activity is Dead
 
@@ -86,7 +86,7 @@ android.enableJetifier=true
 این خطا هنگام initialize کردن SDK مقدار appId (یا همان شناسه ای که از پنل دربافت کردید) معتبری نداشته باشه، رخ می دهد. 
 توسط دیباگر میتوانید مطمئن بشوید که دقیقا همان مقداری که مدنظر هست به تابع به عنوان ورودی داده می شود
 
-### خطای Tapsell Plus is not Initialized
+### خطای Yelloadwise is not Initialized
 
 این خطا زمانی که تابع request و یا show را صدا می زنید ولی sdk هنوز initialize نشده است، رخ میدهد.
  برای درخواست تبلیغ ابتدا توسط Callback های تابع initialize مطمئن شوید که sdk نصب شده(توسط یک متغییر) و قبل درخواست تبلیغ این موضوع رو با آن متغییر بررسی کنید
@@ -120,7 +120,7 @@ android.enableJetifier=true
 ### خطای Banner Type is not Valid
 
 ابن خطا زمانی رخ می دهد که مقدار سایز بنری که در نمایش تبلیغ StandardBanner به عنوان ورودی به تابع requestStandardBannerAd می دهید مقدار درستی نداشته باشد.
-با Debugger میتوانید از صحت مقدار مطمئن شوید و حتما ار مقادیر TapsellPlusBannerType استفاده نمایید
+با Debugger میتوانید از صحت مقدار مطمئن شوید و حتما ار مقادیر YelloadwiseBannerType استفاده نمایید
 
 ### خطای adContainer should not have child
 

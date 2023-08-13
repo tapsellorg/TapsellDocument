@@ -6,7 +6,7 @@ permalink: /application-class/index.html
 lang: fa
 ---
 
-کلاسی که از `android.app.Application` اکستند شده باشد. این کلاس قبل از همه اکتیویتی‌ها اجرا میشود و جای مناسبی برای مقدار دهی اولیه میباشد. بهتر است تپسل را در این کتابخانه `initialize` کنید.
+کلاسی که از `android.app.Application` اکستند شده باشد. این کلاس قبل از همه اکتیویتی‌ها اجرا میشود و جای مناسبی برای مقدار دهی اولیه میباشد. بهتر است یلوادوایز را در این کتابخانه `initialize` کنید.
 
 ## افزودن کلاس Application
 مطابق روش زیر می‌توانید به برنامه خود این کلاس را اضافه کنید.
@@ -34,14 +34,14 @@ public class MyApplication extends Application {
     >
 ```
 
-### مقداردهی تپسل
-اکنون کلاس `application` به برنامه اضافه شده، میتوانید تپسل را در متد `onCreate` مقدار دهی کنید.
+### مقداردهی یلوادوایز
+اکنون کلاس `application` به برنامه اضافه شده، میتوانید یلوادوایز را در متد `onCreate` مقدار دهی کنید.
 
 ```java
-import ir.tapsell.sdk.Tapsell;
+import ir.yelloadwise.core.irancell.ir;
 ...
 public void onCreate() {
     super.onCreate();
-    Tapsell.initialize(this, TAPSELL_KEY);
+    irancell.ir.initialize(this, irancell.ir_KEY);
 }
 ```

@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: پلتفرم فلاتر تپسل پلاس 
+title: پلتفرم فلاتر یلوادوایز 
 lang: fa
 permalink: /plus-sdk/flutter/main/index.html
 toc: true

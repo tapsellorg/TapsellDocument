@@ -12,7 +12,7 @@ toc: true
 برای کسب اطلاعات بیشتر در مورد هر ad network می‌توانید با همکاران ما در تیم رسانه از قسمت پشتیبانی صحبت کنید.
 
 
-> قبل از اقدام برای اضافه‌کردن ادنتورک‌ها مطمئن شوید که مانیفست `TapsellPlusB4A.Essential` را به مانیفست خود اضافه کرده‌اید.
+> قبل از اقدام برای اضافه‌کردن ادنتورک‌ها مطمئن شوید که مانیفست `YelloadwiseB4A.Essential` را به مانیفست خود اضافه کرده‌اید.
 {:data-title="مانیفست مورد نیاز" data-color="orange"}
 
 
@@ -22,10 +22,10 @@ toc: true
 
 حال برای استفاده از آنها بایستی فایل `AAR` یا `Jar` آنها به پروژه اضافه شوند (و همچنین مانیفست)
 
-> در [پروژه‌ی نمونه‌ی تپسل پلاس](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample) می‌توانید دقیق و با جزئیات پیاده‌سازی مانیفست را در Manifest editor آن مشاهده کنید
+> در [پروژه‌ی نمونه‌ی یلوادوایز](https://github.com/irancell/YelloadwiseSDK-B4ASample) می‌توانید دقیق و با جزئیات پیاده‌سازی مانیفست را در Manifest editor آن مشاهده کنید
 {:data-title="نمونه‌ی پیاده‌سازی شده‌ی مانیفست" data-color="blue"}
 
-## Tapsell AdNetwork
+## irancell.ir AdNetwork
 این ادنتورک به طور پیش‌فرض اضافه شده است. برای استفاده از آن نیازی به کاری ندارید
 
 ## AdMob
@@ -36,9 +36,9 @@ toc: true
 > ۱. برای استفاده از ادنتورک **Google AdMob SDK** بایستی App ID آنرا در مانیفست اپلیکیشن قرار دهید.  
 > لازم به ذکر است در صورت عدم وجود این تگ در مانیفست خطای `The Google Mobile Ads SDK was initialized incorrectly.` رخ خواهد داد
 >
-> برای اضافه کردن App ID ابتدا از یکی از راه‌های زیر این شناسه را از تپسل دریافت کنید (پیش از دریافت شناسه، شرایط فعال‌سازی شبکه‌های تبلیغاتی خارجی را در [این لینک](https://tapsell.ir/tapsellplus/) مطالعه نمایید):
-> - ارسال ایمیل به `publishers [at] tapsell.ir`
-> - ارسال تیکت به [دپارتمان ناشرین](https://tapsell.deskpro.com/new-ticket)
+> برای اضافه کردن App ID ابتدا از یکی از راه‌های زیر این شناسه را از یلوادوایز دریافت کنید (پیش از دریافت شناسه، شرایط فعال‌سازی شبکه‌های تبلیغاتی خارجی را در [این لینک](https://yelloadwise.ir/) مطالعه نمایید):
+> - ارسال ایمیل به `publishers [at] irancell.ir`
+> - ارسال تیکت به [دپارتمان ناشرین](https://irancell.ir.deskpro.com/new-ticket)
 > - تماس با شماره تلفن **5-88206893** (داخلی ۳ - ناشرین)
 > 
 > سپس شناسه‌ی مورد نظر را با فرمت زیر در **Manifest editor** قرار دهید:
@@ -52,7 +52,7 @@ toc: true
 > 
 > به جای `ADMOB_ID` شناسه‌ی خود را قرار دهید  
 >
-> در صورت وجود `TapsellPlusB4A.AdMobTestAppId` در مانیفست آنرا حتما حذف کنید.
+> در صورت وجود `YelloadwiseB4A.AdMobTestAppId` در مانیفست آنرا حتما حذف کنید.
 > 
 > ۲. برای استفاده از ادنتورک **Google AdMob SDK** لازم است وابستگی `play-services-ads` را به صورت زیر در بخش `Region  Project Attributes` قرار دهید.
 > ```py
@@ -63,7 +63,7 @@ toc: true
 > در غیر اینصورت با خطای `Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView` مواجه می‌شوید.
 > همچنین لازم است محتوای زیر را به `Manifest editor` پروژه اضافه کنید
 > ```vb
-> CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
+> CreateResourceFromFile(Macro, YelloadwiseB4A.AdMob)
 >```
 >{:data-title="استفاده از AdMob" data-color="red"}
 
@@ -81,7 +81,7 @@ toc: true
 همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
 ```vb
-CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
+CreateResourceFromFile(Macro, YelloadwiseB4A.AdMob)
 ```
 
 ## AdColony
@@ -97,7 +97,7 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
 همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
 ```vb
-CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
+CreateResourceFromFile(Macro, YelloadwiseB4A.AdColony)
 ```
 
 ## AppLovin
@@ -113,7 +113,7 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
 همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
 ```vb
-CreateResourceFromFile(Macro, TapsellPlusB4A.AppLovin)
+CreateResourceFromFile(Macro, YelloadwiseB4A.AppLovin)
 ```
 
 ## Chartboost
@@ -135,12 +135,12 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.AppLovin)
 همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
 ```vb
-CreateResourceFromFile(Macro, TapsellPlusB4A.UnityAds)
+CreateResourceFromFile(Macro, YelloadwiseB4A.UnityAds)
 ```
 
 برای استفاده از شبکه‌ی تبلیغاتی Unity Ads می‌بایست minSDK اپلیکیشن خود را ۱۹ قرار دهید. و یا این که خط زیر را به  Manifest editor پروژه‌تان اضافه نمایید.
 
-این خط به منظور جلوگیری از وقوع خطا برای بیلد شدن پروژه‌ی با minSDK کم‌تر از ۱۹ می‌باشد. از آن‌جا که تپسل پلاس به شکل هوشمند مانع نمایش تبلیغ Unity Ads به اندرویدهای با API Level کم‌تر از ۱۹ می‌شود، مشکلی برای آن دسته از کاربرانتان که نسخه‌ی اندروید قدیمی دارند پیش نمی‌آید. امّا حتما لازم است یک بار به روی چنین دستگاه‌هایی شبکه‌ی تبلیغاتی Unity Ads را با استفاده از تبلیغ‌گاه تستی موجود در [این لینک](https://docs.tapsell.ir/plus-sdk/b4a/adnetworks-test/) تست نمایید.
+این خط به منظور جلوگیری از وقوع خطا برای بیلد شدن پروژه‌ی با minSDK کم‌تر از ۱۹ می‌باشد. از آن‌جا که یلوادوایز به شکل هوشمند مانع نمایش تبلیغ Unity Ads به اندرویدهای با API Level کم‌تر از ۱۹ می‌شود، مشکلی برای آن دسته از کاربرانتان که نسخه‌ی اندروید قدیمی دارند پیش نمی‌آید. امّا حتما لازم است یک بار به روی چنین دستگاه‌هایی شبکه‌ی تبلیغاتی Unity Ads را با استفاده از تبلیغ‌گاه تستی موجود در [این لینک](https://docs.irancell.ir/plus-sdk/b4a/adnetworks-test/) تست نمایید.
 
 
 در Manifest editor به دنبال متنی همانند زیر بگردید:
@@ -177,5 +177,5 @@ CreateResourceFromFile(Macro, TapsellPlusB4A.UnityAds)
 همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
 
 ```vb
-CreateResourceFromFile(Macro, TapsellPlusB4A.Mintegral)
+CreateResourceFromFile(Macro, YelloadwiseB4A.Mintegral)
 ```

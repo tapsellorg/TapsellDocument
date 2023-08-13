@@ -8,7 +8,7 @@ toc: true
 
 If you want to add more ad networks to your project, this page helps you through it.
 
-## Add AdNetworks in TapsellPlus v2.1.8 and above
+## Add AdNetworks in Yelloadwise v2.1.8 and above
 ### Admob
 1. import Admob Unity package to your project from [GoogleMobileAds](https://github.com/googleads/googleads-mobile-unity/releases)
    > Note: Latest tested Admob version is `8.3.0`.
@@ -18,7 +18,7 @@ If you want to add more ad networks to your project, this page helps you through
 4. Build & Run your project
 
 ### UnityAds and other AdNetworks
-1. Open `Assets\TapsellPlus\Editor\TapsellPlusDependencies.xml` and use your desired android package as follows:
+1. Open `Assets\Yelloadwise\Editor\YelloadwiseDependencies.xml` and use your desired android package as follows:
     ```xml
     <dependencies>
       <androidPackages>
@@ -57,7 +57,7 @@ If you want to add more ad networks to your project, this page helps you through
     ```
 2. Build & Run your project
 
-## Using Admob in TapsellPlus v2.1.7 and lower
+## Using Admob in Yelloadwise v2.1.7 and lower
 
 > ** Tip ** to use ** AdMob **
 > 
@@ -140,7 +140,7 @@ allprojects {
     repositories {
         //....
 
-        // TapsellPlus, Tapsell, ...
+        // Yelloadwise, irancell.ir, ...
         mavenCentral()
 
         // Old libraries
@@ -155,7 +155,7 @@ allprojects {
 ```
 
 ## Resolver Settings
-Place any ad network you want according the following template at `Assets\TapsellPlus\Editor\TapsellPlusDependencies.xml`.
+Place any ad network you want according the following template at `Assets\Yelloadwise\Editor\YelloadwiseDependencies.xml`.
 
 ```xml
 <dependencies>
@@ -196,7 +196,7 @@ Place any ad network you want according the following template at `Assets\Tapsel
 
 To use the Unity Ads ad network, you should set your application minSDK to 19. Or add the following line to your project's AndroidManifest.xml file.
 
-This line is used to prevent errors for building projects with minSDK less than 19. Since Tepsel Plus intelligently prevents the Unity Ads from appearing on Android with an API Level less than 19, there is no problem for those of your users who have an older version of Android. But it is required to test the Unity Ads advertising network once on such devices using the test advertisement available in [this link](https://docs.tapsell.ir/plus-sdk/android/adnetworks-test/).     
+This line is used to prevent errors for building projects with minSDK less than 19. Since Tepsel Plus intelligently prevents the Unity Ads from appearing on Android with an API Level less than 19, there is no problem for those of your users who have an older version of Android. But it is required to test the Unity Ads advertising network once on such devices using the test advertisement available in [this link](https://docs.irancell.ir/plus-sdk/android/adnetworks-test/).     
 
 ```xml
 <uses-sdk tools:overrideLibrary="com.unity3d.ads" />

@@ -18,10 +18,10 @@ toc: true
 
 برای تست از این `appId` استفاده کنید.
 
-### شناسه تپسل
+### شناسه یلوادوایز
 
 ```java
-tapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
+yelloadwise.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgjtahflchkqtqosa");
 ```
 
 
@@ -36,9 +36,9 @@ tapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgj
 > در مانیفست خود این خط را برای اضافه‌کردن اپ‌آی‌دی تست اضافه کنید:
 > 
 > ```vb
->CreateResourceFromFile(Macro, TapsellPlusB4A.AdMobTestAppId)
+>CreateResourceFromFile(Macro, YelloadwiseB4A.AdMobTestAppId)
 > ```
-> این مانیفست در فایل‌های تپسل پلاس برای تست کردن ادموب اضافه شده است.  
+> این مانیفست در فایل‌های یلوادوایز برای تست کردن ادموب اضافه شده است.  
 > حتما به ادامه‌ی مستندات بپردازید تا پیاده‌سازی ادنتورک ادموب را نیز انجام دهید
 {:data-title="استفاده از AdMob" data-color="red"}
 
@@ -50,10 +50,10 @@ tapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgj
 
 |        Ad Network      |              Ad Type              |ZoneId
 |:------------:|:----------------------------:|:----------------------------:|
-|     Tapsell     |     Rewarded Video    | `5cfaa802e8d17f0001ffb28e`|
-|     Tapsell    |    Interstitial    |`5cfaa942e8d17f0001ffb292`|
-| Tapsell |  Native  |`5cfaa9deaede570001d5553a`|
-|  Tapsell | Standard |`5cfaaa30e8d17f0001ffb294`|
+|     irancell.ir     |     Rewarded Video    | `5cfaa802e8d17f0001ffb28e`|
+|     irancell.ir    |    Interstitial    |`5cfaa942e8d17f0001ffb292`|
+| irancell.ir |  Native  |`5cfaa9deaede570001d5553a`|
+|  irancell.ir | Standard |`5cfaaa30e8d17f0001ffb294`|
 |    Admob    |    Rewarded Video   |`5cfaa8aee8d17f0001ffb28f`|
 |    Admob    |     Interstitial     |`5cfaa9b0e8d17f0001ffb293`|
 |    Admob    |     Standard     |`5cfaaa4ae8d17f0001ffb295`|

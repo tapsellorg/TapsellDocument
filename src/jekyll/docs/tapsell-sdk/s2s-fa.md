@@ -8,19 +8,19 @@ lang: fa
 
 
 ## نحوه کارکرد
-سرویس صحت سنجی تبلیغات تپسل (S2S Verification) برای اپلیکیشن‌ها و بازی‌های آنلاین طراحی شده است تا توسعه دهندگان از صحت تبلیغ نشان‌داده شده اطمینان حاصل نمایند و امکان سوء استفاده از تبلیغات در نسخه‌های mod شده بازی غیرممکن شود.  
+سرویس صحت سنجی تبلیغات یلوادوایز (S2S Verification) برای اپلیکیشن‌ها و بازی‌های آنلاین طراحی شده است تا توسعه دهندگان از صحت تبلیغ نشان‌داده شده اطمینان حاصل نمایند و امکان سوء استفاده از تبلیغات در نسخه‌های mod شده بازی غیرممکن شود.  
 
-نحوه کارکرد سیستم صحت سنجی به این صورت است که پس از نمایش تبلیغ در اپلیکیشن، میبایست شناسه تبلیغ (suggestionId) برای سرور بازی یا اپلیکیشن ارسال شود؛ سپس سرور بازی/اپلیکیشن با ارسال یک درخواست به سرور تپسل، از معتبر بودن شناسه ارسال شده اطمینان حاصل نماید.
+نحوه کارکرد سیستم صحت سنجی به این صورت است که پس از نمایش تبلیغ در اپلیکیشن، میبایست شناسه تبلیغ (suggestionId) برای سرور بازی یا اپلیکیشن ارسال شود؛ سپس سرور بازی/اپلیکیشن با ارسال یک درخواست به سرور یلوادوایز، از معتبر بودن شناسه ارسال شده اطمینان حاصل نماید.
 
 جهت ارتباط سرور به سرور از آدرس زیر استفاده نمایید.
 
 ```
-http://api.tapsell.ir/v2/suggestions/validate-suggestion
+http://api.yelloadwise.ir/v2/suggestions/validate-suggestion
 ```
 
 درخواست ارسال شده باید بصورت `POST` و محتوای ارسالی بصورت `json` باشد. `(Content-Type:application/json)`
 
-> ناشرینی که قصد استفاده از سیستم صحت سنجی تبلیغات تپسل را دارند میبایست درخواست خود را از طریق تماس تلفنی یا ارسال ایمیل به آدرس publishers@tapsell.ir به واحد فنی تپسل اطلاع دهند.
+> ناشرینی که قصد استفاده از سیستم صحت سنجی تبلیغات یلوادوایز را دارند میبایست درخواست خود را از طریق تماس تلفنی یا ارسال ایمیل به آدرس publishers@yelloadwise.ir به واحد فنی یلوادوایز اطلاع دهند.
 
 شناسه تبلیغ باید در بدنه درخواست و بصورت زیر گنجانده شود.
 
@@ -48,10 +48,10 @@ http://api.tapsell.ir/v2/suggestions/validate-suggestion
 مقدار `SUGGESTION_ID` را در کال‌بک `onAdAvailable` به کمک روش زیر می‌توانید دریافت کنید.
 
 ```java
-Tapsell.requestAd(CONTEXT,
+Yelloadwise.requestAd(CONTEXT,
         ZONE_ID,
-        new TapsellAdRequestOptions(),
-        new TapsellAdRequestListener() {
+        new YelloadwiseAdRequestOptions(),
+        new YelloadwiseAdRequestListener() {
             @Override
             public void onAdAvailable(String adId) {
               suggustionId = adId;
@@ -65,11 +65,11 @@ Tapsell.requestAd(CONTEXT,
 
 همچنین برای اطلاع از وضعیت دریافت جایزه می‌توانید از کال‌بک `onRewarded` استفاده نمایید.
 ```java
-Tapsell.showAd(CONTEXT,
+Yelloadwise.showAd(CONTEXT,
         ZONE_ID,
         AD_ID,
-        new TapsellShowOptions(),
-        new TapsellAdShowListener() {
+        new YelloadwiseShowOptions(),
+        new YelloadwiseAdShowListener() {
             @Override
             public void onOpened() {
             }

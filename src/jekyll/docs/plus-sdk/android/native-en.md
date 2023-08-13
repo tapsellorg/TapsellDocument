@@ -6,7 +6,7 @@ permalink: /plus-sdk/android/native/index.html
 toc: true
 ---
 ### Creating a Zone
-First, create a native zone from the [Tapsell panel](https://dashboard.tapsell.ir/) and use the `zoneId` when requesting or showing an ad.
+First, create a native zone from the [irancell.ir panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
 
 ### Creating an AdHolder
 You should add a ViewGroup to the page in which you want to show the native ad as space for displaying it. In other words, you need to create an ad container.
@@ -31,54 +31,54 @@ Then create a custom layout according to the way you want the ad to be displayed
 
 |       view       |              id              | type  |
 |:------------:|:----------------------------:|:-:|
-|     logo     |     `tapsell_nativead_logo`    | `ImageView`  |
-|     title    |    `tapsell_nativead_title`    | `TextView`  |
-| ad indicator |  `tapsell_nativead_sponsored`  | `View`  |
-|  description | `tapsell_nativead_description` | `TextView`  |
-|    banner    |    `tapsell_nativead_banner`   | `ir.tapsell.sdk.nativeads.views.RatioImageView`  |
-|  media view  |`tapsell_nativead_banner_admob` | `ir.tapsell.plus.adNetworks.admob.AdMobMediaView`  |
-|    button    |     `tapsell_nativead_cta`     | `TextView`  |
-|    clickable view    |     `tapsell_nativead_cta_view`     | `View`  |
+|     logo     |     `irancell.ir_nativead_logo`    | `ImageView`  |
+|     title    |    `irancell.ir_nativead_title`    | `TextView`  |
+| ad indicator |  `irancell.ir_nativead_sponsored`  | `View`  |
+|  description | `irancell.ir_nativead_description` | `TextView`  |
+|    banner    |    `irancell.ir_nativead_banner`   | `ir.yelloadwise.core.nativeads.views.RatioImageView`  |
+|  media view  |`irancell.ir_nativead_banner_admob` | `ir.yelloadwise.adNetworks.admob.AdMobMediaView`  |
+|    button    |     `irancell.ir_nativead_cta`     | `TextView`  |
+|    clickable view    |     `irancell.ir_nativead_cta_view`     | `View`  |
 
 
 * If there is no button for clicking, you can use **clickable view**.
 * View types could be inheriting from the aforementioned types.
-* You should specify 2 views to display the ad photo. One of them is `ir.tapsell.sdk.nativeads.views.RatioImageView` for Tepsell and the other is` ir.tapsell.plus.adNetworks.admob.AdMobMediaView` for AdMob. Both of these can be placed exactly on top of each other. Tepsell Plus displays the desired view according to the advertisement ready for display.
-> In version 1.2.3-rc4 and above, if you do not use the default layout, and you have designed and implemented a layout yourself, replace `com.google.android.gms.ads.formats.MediaView` with` ir.tapsell.plus .adNetworks.admob.AdMobMediaView`.
+* You should specify 2 views to display the ad photo. One of them is `ir.yelloadwise.core.nativeads.views.RatioImageView` for Tepsell and the other is` ir.yelloadwise.adNetworks.admob.AdMobMediaView` for AdMob. Both of these can be placed exactly on top of each other. Tepsell Plus displays the desired view according to the advertisement ready for display.
+> In version 1.2.3-rc4 and above, if you do not use the default layout, and you have designed and implemented a layout yourself, replace `com.google.android.gms.ads.formats.MediaView` with` ir.yelloadwise .adNetworks.admob.AdMobMediaView`.
 * You can use the prepared view for this purpose with the following id or as a construction guide:
 `native_banner`
 
-* Give the ad container and the id of the layout to Tapsell to create a `AdHolder` as the following code:
+* Give the ad container and the id of the layout to irancell.ir to create a `AdHolder` as the following code:
 
 ```java
-import ir.tapsell.plus.AdHolder;
-import ir.tapsell.plus.TapsellPlus;
+import ir.yelloadwise.AdHolder;
+import ir.irancell.ir.Yelloadwise;
 ...
 ViewGroup adContainer = findViewById(R.id.adContainer);
 ...
-AdHolder adHolder = TapsellPlus.createAdHolder(
+AdHolder adHolder = Yelloadwise.createAdHolder(
       CONTEXT, adContainer, R.layout.native_banner);
 ```
 
 ### Requesting Ads
-Use the `TapsellPlus.requestNativeAd` method to request an ad. For example:
+Use the `Yelloadwise.requestNativeAd` method to request an ad. For example:
 
 ```java
-import ir.tapsell.plus.AdRequestCallback;
-import ir.tapsell.plus.TapsellPlus;
+import ir.yelloadwise.AdRequestCallback;
+import ir.irancell.ir.Yelloadwise;
 .......
 private void requestAd() {
-    TapsellPlus.requestNativeAd(
+    Yelloadwise.requestNativeAd(
                 CONTEXT,
                 ZONE_ID_NATIVE,
                 new AdRequestCallback() {
                     @Override
-                    public void response(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.response(tapsellPlusAdModel);
+                    public void response(YelloadwiseAdModel yelloadwiseAdModel) {
+                        super.response(yelloadwiseAdModel);
 
                         //Ad is ready to show
                         //Put the ad's responseId to your responseId variable
-                        nativeAdResponseId = tapsellPlusAdModel.getResponseId();
+                        nativeAdResponseId = yelloadwiseAdModel.getResponseId();
                         showAd();
                     }
 
@@ -96,16 +96,16 @@ After the onResponse method is called, the requested ad is ready to be displayed
 
 ```java
 private void showAd() {
-    TapsellPlus.showNativeAd(CONTEXT, nativeAdResponseId, adHolder,
+    Yelloadwise.showNativeAd(CONTEXT, nativeAdResponseId, adHolder,
                 new AdShowListener() {
                     @Override
-                    public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.onOpened(tapsellPlusAdModel);
+                    public void onOpened(YelloadwiseAdModel yelloadwiseAdModel) {
+                        super.onOpened(yelloadwiseAdModel);
                     }
 
                     @Override
-                    public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
-                        super.onError(tapsellPlusErrorModel);
+                    public void onError(YelloadwiseErrorModel YelloadwiseErrorModel) {
+                        super.onError(YelloadwiseErrorModel);
                     }
                 });
 }
@@ -116,7 +116,7 @@ At the end of the Activity life cycle, you should call the following method:
 
 ```java
 private void destroyAd() {
-    TapsellPlus.destroyNativeBanner(CONTEXT, nativeAdResponseId);
+    Yelloadwise.destroyNativeBanner(CONTEXT, nativeAdResponseId);
 }
 
 // For example in Activity's onDestory method

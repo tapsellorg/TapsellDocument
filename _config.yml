@@ -1,29 +1,29 @@
 # Welcome to Jekyll!
 
 ########### Global Variables ###########
-title: 'Tapsell: Smart ad network agency'
-email: technical.tapsell@gmail.com
+title: 'Yelloadwise: Smart ad network agency'
+email: technical.yelloadwise@gmail.com
 description: >-
-  Tapsell, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience.
+  Yelloadwise, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience.
 baseurl: '' # the subpath of your site, e.g. /docs
-url: 'https://tapsell.ir'
+url: 'https://yelloadwise.ir'
 twitter_username:
 github_username: tapsellorg
-site_name: Tapsell
+site_name: Yelloadwise
 global_vars:
-  landing_url: https://tapsell.ir
-  dashboard_url: https://dashboard.tapsell.ir/
-  blog_url: https://college.tapsell.ir/
-  docs_url: https://docs.tapsell.ir/
-  site_name: Tapsell
-  get_demo_url: https://dashboard.tapsell.ir/
-  header_logo_alt: Tapsell Docs
-  terms_url: https://docs.tapsell.ir/terms-and-condition/
-  paying_income_url: https://docs.tapsell.ir/paying-income/
-  faq_url: https://docs.tapsell.ir/faq/
-  faq_advertisers_url: https://docs.tapsell.ir/faq/advertiser/
-  contact_email: info@tapsell.ir
-  footer_logo_alt: Tapsell
+  landing_url: https://irancell.ir
+  dashboard_url: https://dashboard.irancell.ir/
+  blog_url: https://college.irancell.ir/
+  docs_url: https://docs.irancell.ir/
+  site_name: irancell.ir
+  get_demo_url: https://dashboard.irancell.ir/
+  header_logo_alt: Yelloadwise Docs
+  terms_url: https://docs.irancell.ir/terms-and-condition/
+  paying_income_url: https://docs.irancell.ir/paying-income/
+  faq_url: https://docs.irancell.ir/faq/
+  faq_advertisers_url: https://docs.irancell.ir/faq/advertiser/
+  contact_email: info@irancell.ir
+  footer_logo_alt: Yelloadwise
 
 ########### Condfigurations ###########
 
@@ -73,13 +73,13 @@ t:
     footer:
       terms: Terms of Service
       contact: Contact Us
-      copyright: Designed and Developed by Tapsell - Iran
+      copyright: Designed and Developed by Yelloadwise - Iran
   fa:
     nav:
       home: خانه
       dashboard: داشبورد
       get_demo: دریافت دمو
-      blog: کالج تپسل
+      blog: کالج یلوادوایز
       switch_lang: English
     footer:
       terms: قوانین و ضوابط
@@ -87,4 +87,4 @@ t:
       faq_advertisers: سوالات متداول تبلیغ‌دهندگان
       faq: سوالات متداول
       paying_income: پرداخت درآمد
-      copyright: طراحی و توسعه توسط تپسل - ایران
+      copyright: طراحی و توسعه توسط یلوادوایز - ایران

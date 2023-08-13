@@ -1,20 +1,20 @@
 ---
 layout: classic-docs
-title: Initialization of Tapsell Plus SDK in Unity (Android)
+title: Initialization of Yelloadwise SDK in Unity (Android)
 lang: en
 permalink: /plus-sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 
-> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/unity/) or check the [GitHub Issues](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?Q=is%3Aissue) page.
+> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/unity/) or check the [GitHub Issues](https://github.com/irancell/YelloadwiseSDK-UnitySample2019/issues?Q=is%3Aissue) page.
 {:data-title="Project build note" data-color="red"}
 
-## Adding Tapsell Plus Unity package
-There are two ways to add the required libraries, use method 2 (Resolver) for TapsellPlus v2.1.8 or above.
+## Adding Yelloadwise Unity package
+There are two ways to add the required libraries, use method 2 (Resolver) for Yelloadwise v2.1.8 or above.
 
 ### 1. Using Gradle
-1. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.7/TapsellPlusUnity-Gradle-v2.1.7.unitypackage).
-2. Add the downloaded `unitypackage` to your project as follows: (If the TapsellPlus folder already exists in your project, please remove it).
+1. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/irancell/YelloadwiseSDK-UnitySample2019/releases/download/V2.1.7/YelloadwiseUnity-Gradle-v2.1.7.unitypackage).
+2. Add the downloaded `unitypackage` to your project as follows: (If the Yelloadwise folder already exists in your project, please remove it).
 
     ```
     Assets > Import Package > Custom Package...
@@ -43,7 +43,7 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ta
     ```gradle
     dependencies {
         ...
-        implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.7'
+        implementation 'ir.yelloadwise:irancell.ir-plus-sdk-unity:2.1.7'
         ...
     **DEPS**}
     ```
@@ -64,7 +64,7 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ta
 
     > Note that using version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project only when you are using Unity version 2019 and below. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
-7. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android `minSDKVersion` API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
+7. After adding Yelloadwise and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android `minSDKVersion` API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
     
     ```console
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
@@ -130,14 +130,14 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ta
     Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
     ```
 
-3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.2.0/tapsell-plus-unity-2.2.0.unitypackage).
-4. Add the downloaded `unitypackage` to your project as follows: (If the `TapsellPlusSDK` folder already exists in your project, please remove it).
+3. First, download Tepsell Plus `unitypackage` from [this link](https://github.com/irancell/YelloadwiseSDK-UnityPlugin/releases/download/v2.2.0/irancell.ir-plus-unity-2.2.0.unitypackage).
+4. Add the downloaded `unitypackage` to your project as follows: (If the `YelloadwiseSDK` folder already exists in your project, please remove it).
 
     ```console
     Assets > Import Package > Custom Package...
     ```
 
-5. Resolve libraries through the following menu to ensure that the Tapsell Plus plugin is added:
+5. Resolve libraries through the following menu to ensure that the Yelloadwise plugin is added:
 
     ```console
     Assets > External Dependency Manager > Android Resolver > Force Resolve
@@ -173,7 +173,7 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ta
 
     > Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
 
-10. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android `minSDKVersion` API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
+10. After adding Yelloadwise and other Ad Networks, you will probably need to enable MultiDex due to the increase in code size and method counts to prevent the following error. If you are using the Android `minSDKVersion` API 21 or above, `MultiDex` is activated by default. otherwise you need to enable it manually.
 
     ```console
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
@@ -230,36 +230,36 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ta
 First, use the following code snippet to access Tepsell dependency codes.
 
     ```c#
-    using TapsellPlusSDK;
+    using YelloadwiseSDK;
     ```
 
 Then call the following function in one of your application scripts that runs at the beginning of the program.
 
     ```c#
-    TapsellPlus.Initialize(TAPSELLPLUS_KEY,
+    Yelloadwise.Initialize(Yelloadwise_KEY,
                 adNetworkName => Debug.Log(adNetworkName + " Initialized Successfully."),
                 error => Debug.Log(error.ToString()));
     ```
 
-`TAPSELLPLUS_KEY` is the key of TepsellPlus and it is created in [Tepsell panel](https://dashboard.tapsell.ir/) for every application you create and you can copy it from the panel.
+`Yelloadwise_KEY` is the key of TepsellPlus and it is created in [Tepsell panel](https://dashboard.irancell.ir/) for every application you create and you can copy it from the panel.
 
 You can now display the desired ad according to your needs and the description of each type of ad.
 
 ## GDPR Configuration
 Given that The Tepsel Plus library complies with the GDPR rules for displaying personalized ads, by default if the user uses your application with the IP of one of the countries covered by this law, it will display a dialog to user. If you want to determine the necessary access by yourself, instead of the user's decision, you can use the following code snippet, you can use the following code snippet. Note that this code snippet must be called after Tepsel Plus is initialized and before the ad request is applied to the result of your request. A value of true‌ means that you give ad networks the right to use the information to display personalized advertising.
     ```c#
-    TapsellPlus.SetGdprConsent(true);
+    Yelloadwise.SetGdprConsent(true);
     ```
 
 ## Sample Project
 for more information, please refer to the sample projects on Github.
 
-* [Sample project compatible with Unity 2021.3.5f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin)
+* [Sample project compatible with Unity 2021.3.5f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnityPlugin)
 
-* [Sample project compatible with Unity 2020.3.9f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020)
+* [Sample project compatible with Unity 2020.3.9f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnitySample2020)
 
-* [Sample project compatible with Unity 2019.4.11f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019)
+* [Sample project compatible with Unity 2019.4.11f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnitySample2019)
 
-* [Sample project compatible with Unity 2018.4.26f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018)
+* [Sample project compatible with Unity 2018.4.26f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnitySample2018)
 
 

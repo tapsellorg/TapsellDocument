@@ -2,37 +2,37 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات همسان در React Native
 lang: fa
-permalink: /tapsell-sdk/reactnative/native/index.html
+permalink: /yelloadwise-core/reactnative/native/index.html
 toc: true
 ---
 
 <div class="alert alert-danger" role="alert" dir="rtl" markdown="0">
   <h4 class="alert-heading">&#9888; هشدار! این SDK دیگر پشتیبانی نمی‌شود &#9888;</h4>
-  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از تپسل استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.tapsell.ir/plus-sdk/reactnative/main/">تپسل‌پلاس</a> استفاده نمایید.</p>
+  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از یلوادوایز استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.yelloadwise.ir/plus-sdk/reactnative/main/">یلوادوایز‌پلاس</a> استفاده نمایید.</p>
   <hr>
-  <p class="mb-0">تپسل پلاس، علاوه بر دارا بودن تمام امکانات تپسل، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
+  <p class="mb-0">یلوادوایز، علاوه بر دارا بودن تمام امکانات یلوادوایز، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
   <p class="mb-0">همچنین فرصت کسب درآمد ارزی را از طریق نمایش تبلیغات شبکه‌های تبلیغاتی خارجی (نظیر AdMob) فراهم می‌کند.</p>
-  <p class="mb-0">نسخه‌های منتشر شده تپسل در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
+  <p class="mb-0">نسخه‌های منتشر شده یلوادوایز در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
 </div>
 
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+ابتدا از [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 
 ### درخواست تبلیغ
-ابتدا ماژول تپسل و کامپوننت AdVideo را به کد خود اضافه کنید:
+ابتدا ماژول یلوادوایز و کامپوننت AdVideo را به کد خود اضافه کنید:
 
 ```javascript
-import Tapsell, { AdVideo } from 'react-native-tapsell'
+import Yelloadwise, { AdVideo } from 'react-native-yelloadwise'
 ```
 
 جهت ارسال درخواست تبلیغ همسان، از تابع زیر استفاده کنید.
 
 ```javascript
-Tapsell.requestNativeٰVideoAd(zoneId, onAdAvailable, onNoAdAvailable, OnNoNetwork, onError);
+Yelloadwise.requestNativeٰVideoAd(zoneId, onAdAvailable, onNoAdAvailable, OnNoNetwork, onError);
 ```
 
-ورودی `zoneId`، شناسه تبلیغ‌گاه است که باید آن را از داشبورد تپسل دریافت کنید.
+ورودی `zoneId`، شناسه تبلیغ‌گاه است که باید آن را از داشبورد یلوادوایز دریافت کنید.
 
 اکشن‌های مختلف و شرایط اجرا شدن آن‌ها در جدول زیر آمده است:
 

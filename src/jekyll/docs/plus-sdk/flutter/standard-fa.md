@@ -7,16 +7,16 @@ toc: true # table of contents
 ---
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوع استاندارد بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) یک تبلیغ‌گاه از نوع استاندارد بسازید.
 
 ## درخواست تبلیغ
-جهت نمایش بنر استاندارد، باید محلی برای نمایش آن در صفحه در نظر بگیرید. بنر استاندارد، دارای سایزهای استانداردی است که در SDK تپسل مشخص شده‌اند. جهت نمایش بنر، از تابع زیر استفاده کنید:
+جهت نمایش بنر استاندارد، باید محلی برای نمایش آن در صفحه در نظر بگیرید. بنر استاندارد، دارای سایزهای استانداردی است که در SDK یلوادوایز مشخص شده‌اند. جهت نمایش بنر، از تابع زیر استفاده کنید:
 
 
 ```dart
-TapsellPlus.instance
+Yelloadwise.instance
     .requestStandardBannerAd(
-        zoneId, TapsellPlusBannerType.BANNER_320x100)
+        zoneId, YelloadwiseBannerType.BANNER_320x100)
     .then((responseId) {
         // SAVE the responseId
     }).catchError((error) {
@@ -28,10 +28,10 @@ BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر ز�
 
 |نوع بنر|اندازه|شبکه‌های پشتیبانی شده|
 |:----------------:|:-------------:|:------------------:|
-| `BANNER_320x50` | `320x50` |       تپسل، AdMob، AppLovin، UnityAds، AdColony    |
-| `BANNER_320x100` | `320x100` |      تپسل، AdMob    |
-| `BANNER_250x250` | `250x250` |    تپسل  |
-| `BANNER_300x250` | `300x250` |   تپسل، AdMob، AppLovin، AdColony |
+| `BANNER_320x50` | `320x50` |       یلوادوایز، AdMob، AppLovin، UnityAds، AdColony    |
+| `BANNER_320x100` | `320x100` |      یلوادوایز، AdMob    |
+| `BANNER_250x250` | `250x250` |    یلوادوایز  |
+| `BANNER_300x250` | `300x250` |   یلوادوایز، AdMob، AppLovin، AdColony |
 | `BANNER_468x60` | `468x60` |      AdMob، UnityAds   |
 | `BANNER_728x90` | `728x90` |     AdMob، AppLovin، UnityAds، AdColony |
 | `BANNER_160x600` | `160x600` |     AdColony |
@@ -41,8 +41,8 @@ BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر ز�
 برای نمایش بنر با داشتن **responseId** که از درخواست برمیگردد کد زیر را استفاده کنید:
 
 ```dart
-TapsellPlus.instance.showStandardBannerAd(responseId, TapsellPlusHorizontalGravity.TOP, 
-    TapsellPlusVerticalGravity.RIGHT,
+Yelloadwise.instance.showStandardBannerAd(responseId, YelloadwiseHorizontalGravity.TOP, 
+    YelloadwiseVerticalGravity.RIGHT,
     margin: EdgeInsets.only(top: 100), onOpened: (map) {
       // Ad opened
     }, onError: (map) {
@@ -59,7 +59,7 @@ TapsellPlus.instance.showStandardBannerAd(responseId, TapsellPlusHorizontalGravi
 برای از بین بردن این بنر با استفاده از **responseId** استفاده شده برای نمایش تبلیغ اقدام به حذف آن نمایید
 
 ```dart
-TapsellPlus.instance.destroyStandardBanner(responseId);
+Yelloadwise.instance.destroyStandardBanner(responseId);
 ```
 
 ### نمایش و عدم نمایش بنر (hide/show)
@@ -68,10 +68,10 @@ TapsellPlus.instance.destroyStandardBanner(responseId);
 
 ```dart
 // To hide
-TapsellPlus.instance.hideStandardBanner();
+Yelloadwise.instance.hideStandardBanner();
 
 // To show
-TapsellPlus.instance.displayStandardBanner();
+Yelloadwise.instance.displayStandardBanner();
 ```
 
 **نکته**: این نوع مخفی‌کردن تاثیری در درخواست تبلیغ ندارد و صرفا visibility تبلیغ عوض می‌شود.

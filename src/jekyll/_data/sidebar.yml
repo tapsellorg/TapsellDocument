@@ -1,5 +1,5 @@
 en:
-  - name: Tapsell Plus
+  - name: Yelloadwise
     icon: m-sdk
     children:
       - name: Android
@@ -51,32 +51,32 @@ en:
 
           - name: Test
             link: /plus-sdk/unity/adnetworks-test
-  - name: Tapsell
+  - name: irancell.ir
     icon: m-sdk
     children:
       - name: Android
-        link: /tapsell-sdk/android/main
+        link: /yelloadwise-core/android/main
         children:
           - name: Initialization
-            link: /tapsell-sdk/android/initialize
+            link: /yelloadwise-core/android/initialize
 
           - name: Rewarded/Interstitial
-            link: /tapsell-sdk/android/rewarded-interstitial
+            link: /yelloadwise-core/android/rewarded-interstitial
 
           - name: Native Banner
-            link: /tapsell-sdk/android/native
+            link: /yelloadwise-core/android/native
 
           - name: Standard Banner
-            link: /tapsell-sdk/android/standard
+            link: /yelloadwise-core/android/standard
 
           - name: Vast
-            link: /tapsell-sdk/android/vast
+            link: /yelloadwise-core/android/vast
 
 
 
 
 fa:
-  - name: تپسل پلاس
+  - name: یلوادوایز
     icon: m-sdk
     children:
       - name: Android
@@ -211,26 +211,26 @@ fa:
           - name: خطاهای فنی رایج
             link: /faq/plus-sdk/b4a/
 
-  - name: تپسل
+  - name: یلوادوایز
     icon: m-sdk
     children:
       - name: Android
-        link: /tapsell-sdk/android/main
+        link: /yelloadwise-core/android/main
         children:
           - name: راه اندازی
-            link: /tapsell-sdk/android/initialize
+            link: /yelloadwise-core/android/initialize
 
           - name: جایزه‌ای/آنی
-            link: /tapsell-sdk/android/rewarded-interstitial
+            link: /yelloadwise-core/android/rewarded-interstitial
 
           - name: بنر استاندارد
-            link: /tapsell-sdk/android/standard
+            link: /yelloadwise-core/android/standard
 
           - name: بنر همسان
-            link: /tapsell-sdk/android/native
+            link: /yelloadwise-core/android/native
 
           - name: VAST
-            link: /tapsell-sdk/android/vast
+            link: /yelloadwise-core/android/vast
 
       - name: سیستم صحت سنجی
         link: /s2s

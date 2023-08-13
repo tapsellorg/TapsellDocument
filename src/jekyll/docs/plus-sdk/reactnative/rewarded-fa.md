@@ -10,7 +10,7 @@ toc: true # table of contents
 
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
 
 
 ## درخواست تبلیغ
@@ -24,7 +24,7 @@ responseId
 
 ```javascript
 let zoneId = "theZoneIdYouHave";
-TapsellPlus.requestRewardedVideoAd(zoneId).then(responseId => {
+Yelloadwise.requestRewardedVideoAd(zoneId).then(responseId => {
   // Save the responseId -- You need it to show the ad
 })
 .catch(error => {
@@ -33,7 +33,7 @@ TapsellPlus.requestRewardedVideoAd(zoneId).then(responseId => {
 
 // Using Async/await
 
-let responseId = await TapsellPlus.requestRewardedVideoAd(zoneId);
+let responseId = await Yelloadwise.requestRewardedVideoAd(zoneId);
 ```
 
 ورودی اول `zoneId` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
@@ -50,7 +50,7 @@ let responseId = await TapsellPlus.requestRewardedVideoAd(zoneId);
 با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
 
 ```javascript
-TapsellPlus.showRewardedVideoAd(responseId, onOpened, onClosed, onRewarded, onError);
+Yelloadwise.showRewardedVideoAd(responseId, onOpened, onClosed, onRewarded, onError);
 ```
 
 شناسه‌ی

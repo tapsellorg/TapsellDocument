@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: پلتفرم اندروید تپسل پلاس 
+title: پلتفرم اندروید یلوادوایز 
 lang: fa
 permalink: /plus-sdk/android/main/index.html
 toc: true

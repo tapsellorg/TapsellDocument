@@ -1,7 +1,7 @@
 {
-  "name": "tapsell-document",
+  "name": "irancell-document",
   "version": "1.0.0",
-  "description": "Tapsell Documents",
+  "description": "irancell Documents",
   "main": "gulpfile.js",
   "scripts": {
     "start": "bundle exec gulp",
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tapsellorg/TapsellDocument"
+    "url": "https://github.com/irancell/YelloadwiseDocument"
   },
   "keywords": [
-    "Tapsell",
+    "yelloadwise",
     "C#",
     "Java",
     "Javascript",
@@ -26,9 +26,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tapsellorg/TapsellDocument/issues"
+    "url": "https://github.com/irancell/YelloadwiseDocument/issues"
   },
-  "homepage": "https://docs.tapsell.ir/",
+  "homepage": "https://docs.yelloadwise.ir/",
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",

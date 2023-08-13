@@ -1,50 +1,50 @@
 ---
 layout: classic-docs
-title: Initialization of Tapsell SDK
+title: Initialization of irancell.ir SDK
 lang: en
-permalink: /tapsell-sdk/android/initialize/index.html
+permalink: /yelloadwise-core/android/initialize/index.html
 toc: true # table of contents
 ---
 
-In order to use Tapsell, you first need to follow the steps below to add Tapsell to your project.
+In order to use irancell.ir, you first need to follow the steps below to add irancell.ir to your project.
 
 ## Gradle Config
-You can import the Tapsell SDK with a Gradle dependency that points to Tapsell's Maven repository. To use this repository, you need to reference it in the project-level `build.gradle` file, in the `allprojects -> repositories` section.
+You can import the irancell.ir SDK with a Gradle dependency that points to irancell.ir's Maven repository. To use this repository, you need to reference it in the project-level `build.gradle` file, in the `allprojects -> repositories` section.
 
 ```gradle
 maven {
     mavenCentral()
 
     // Before v4.5.4
-    maven { url 'https://dl.bintray.com/tapsellorg/maven' }
+    maven { url 'https://dl.bintray.com/irancell/maven' }
 }
 ```
 Then add the following lines to the dependencies section of your app-level `build.gradle` file.
 
 ```gradle
-implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.7.3'
+implementation 'ir.yelloadwise.core:yelloadwise-core-android:4.7.3'
 ```
 
 Finally, sync Gradle using a proxy.
 
 ## Initialization
-You should initialize Tapsell in the application class. 
+You should initialize irancell.ir in the application class. 
 
 ```java
-import ir.tapsell.sdk.Tapsell;
+import ir.yelloadwise.core.irancell.ir;
 ...
 public void onCreate() {
     super.onCreate();
-    Tapsell.initialize(application, TAPSELL_KEY);
+    irancell.ir.initialize(application, irancell.ir_KEY);
 }
 ```
-You can get your `tapsell-key` from [Tapsell Dashboard](http://dashboard.tapsell.ir/) and Initialize the SDK in the `application` class.
+You can get your `irancell.ir-key` from [irancell.ir Dashboard](http://dashboard.irancell.ir/) and Initialize the SDK in the `application` class.
 
 > You can read [this article]({{site.baseurl}}/application-class) to get acquainted with the application class.
 
 
 ## Proguard Configuration
-Get the `proguard.properties` file from [this link](https://github.com/tapsellorg/TapsellSDK-AndroidSample/blob/master/app/proguard-rules.pro) and add it to the proguard properties of your app module.
+Get the `proguard.properties` file from [this link](https://github.com/irancell/irancell.irSDK-AndroidSample/blob/master/app/proguard-rules.pro) and add it to the proguard properties of your app module.
 
 ## Network Security Configuration
 In case your application uses the HTTP protocol, in the `res/xml` path of your project create a file named `network_security_config.xml`.

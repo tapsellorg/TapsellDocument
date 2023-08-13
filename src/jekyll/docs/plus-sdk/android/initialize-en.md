@@ -1,16 +1,16 @@
 ---
 layout: classic-docs
-title: Initializing TapsellPlus in Android
+title: Initializing Yelloadwise in Android
 lang: en
 permalink: /plus-sdk/android/initialize/index.html
 toc: true
 ---
 
-> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/android/) or check the [GitHub Issues](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues?Q=is%3Aissue) page.
+> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/android/) or check the [GitHub Issues](https://github.com/irancell/YelloadwiseSDK-AndroidSample/issues?Q=is%3Aissue) page.
 {:data-title="Project build note" data-color="red"}
 
 
-First of all you will need to setup and import TapsellPlus into your project.
+First of all you will need to setup and import Yelloadwise into your project.
 
 
 ## Gradle setup
@@ -19,8 +19,8 @@ In app(module)/`build.gradle`:
 
 ```groovy
 dependencies {
-    def tapsellPlus = "2.2.0"
-    implementation("ir.tapsell.plus:tapsell-plus-sdk-android:$tapsellPlus")
+    def yelloadwise = "2.2.0"
+    implementation("ir.yelloadwise:irancell.ir-plus-sdk-android:$yelloadwise")
 }
 ```
 
@@ -37,13 +37,13 @@ And do a Gradle sync.
 
 ## Initialization
 
-Use `TapsellPlus.initialize(context)` in the beginning of your app's entry point:
+Use `Yelloadwise.initialize(context)` in the beginning of your app's entry point:
 
 ```java
-String tapsellPlusKey = "YOUR_TAPSELL_PLUS_APP_ID";
+String yelloadwiseKey = "YOUR_irancell.ir_PLUS_APP_ID";
 
-TapsellPlus.initialize(this, tapsellPlusKey,
-		new TapsellPlusInitListener() {
+Yelloadwise.initialize(this, yelloadwiseKey,
+		new YelloadwiseInitListener() {
     @Override
     public void onInitializeSuccess(AdNetworks adNetworks) {
         // Init successful
@@ -56,12 +56,12 @@ TapsellPlus.initialize(this, tapsellPlusKey,
 });
 ```
 
-Get `tapsellPlusKey` from [Tapsell dashboard](https://dashboard.tapsell.ir/) after building the app
+Get `yelloadwiseKey` from [irancell.ir dashboard](https://dashboard.irancell.ir/) after building the app
 
 > Also, you may want to activate **debug mode** to get some additional logs and information (specially when ad requests fail):
 >
 > ```java
-> TapsellPlus.setDebugMode(Log.DEBUG);
+> Yelloadwise.setDebugMode(Log.DEBUG);
 > ```
 {:data-title="Debug Mode" data-color="green"}
 
@@ -74,14 +74,14 @@ If GDPR matters to your product you need to consider applying it for the SDK to 
 
 ```java
 Activity activity = this;
-TapsellPlus.setGDPRConsent(activity, true);
+Yelloadwise.setGDPRConsent(activity, true);
 ```
 
 You can show a default dialog for that as well:
 
 ```java
 Activity activity = this;
-TapsellPlus.showGDPRDialog(activity);
+Yelloadwise.showGDPRDialog(activity);
 ```
 
 ## Optional permission

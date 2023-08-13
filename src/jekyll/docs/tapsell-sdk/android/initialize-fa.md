@@ -1,23 +1,23 @@
 ---
 layout: classic-docs
-title: راه اندازی تپسل در اندروید
+title: راه اندازی یلوادوایز در اندروید
 lang: fa
-permalink: /tapsell-sdk/android/initialize/index.html
+permalink: /yelloadwise-core/android/initialize/index.html
 toc: true # table of contents
 ---
 
 
 <div class="alert alert-danger" role="alert" dir="rtl" markdown="0">
   <h4 class="alert-heading">&#9888; هشدار! این SDK دیگر پشتیبانی نمی‌شود &#9888;</h4>
-  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از تپسل استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.tapsell.ir/plus-sdk/android/initialize/">تپسل‌پلاس</a> استفاده نمایید.</p>
+  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از یلوادوایز استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.yelloadwise/plus-sdk/android/initialize/">یلوادوایز‌پلاس</a> استفاده نمایید.</p>
   <hr>
-  <p class="mb-0">تپسل پلاس، علاوه بر دارا بودن تمام امکانات تپسل، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
+  <p class="mb-0">یلوادوایز، علاوه بر دارا بودن تمام امکانات یلوادوایز، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
   <p class="mb-0">همچنین فرصت کسب درآمد ارزی را از طریق نمایش تبلیغات شبکه‌های تبلیغاتی خارجی (نظیر AdMob) فراهم می‌کند.</p>
-  <p class="mb-0">نسخه‌های منتشر شده تپسل در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
+  <p class="mb-0">نسخه‌های منتشر شده یلوادوایز در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
 </div>
 
 
-جهت استفاده از تپسل ابتدا لازم هست مطابق مراحل زیر تپسل را به پروژه اضافه کنید.
+جهت استفاده از یلوادوایز ابتدا لازم هست مطابق مراحل زیر یلوادوایز را به پروژه اضافه کنید.
 
 ## تنظیمات Gradle
 خطوط زیر را به فایل `build.gradle` کل پروژه در قسمت `allprojects -> repositories` اضافه کنید.
@@ -28,43 +28,43 @@ mavenCentral()
 
 // for v4.6.3-rc5 and before
 // maven {
-//    url 'https://dl.bintray.com/tapsellorg/maven'
+//    url 'https://dl.bintray.com/irancell/maven'
 //}
 ```
 
 خط زیر را به فایل `build.gradle` ماژول برنامه در قسمت `dependencies` اضافه کنید.
 
 ```gradle
-    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.7.4'
+    implementation 'ir.yelloadwise.core:yelloadwise-core-android:4.7.4'
 ```
 
-با کمک پراکسی gradle را sync کنید تا تپسل به پروژه اضافه شود.
+با کمک پراکسی gradle را sync کنید تا یلوادوایز به پروژه اضافه شود.
 
 
-## راه‌اندازی تپسل
-در کلاس `application` باید تپسل را راه‌اندازی کنید.
+## راه‌اندازی یلوادوایز
+در کلاس `application` باید یلوادوایز را راه‌اندازی کنید.
 
 ```java
-import ir.tapsell.sdk.Tapsell;
+import ir.yelloadwise.core.Yelloadwise;
 ...
 public void onCreate() {
     super.onCreate();
-    Tapsell.initialize(application, TAPSELL_KEY);
+    Yelloadwise.initialize(application, Yelloadwise_KEY);
 }
 ```
-- از نسخه‌ی 4.6.0 به بعد، راه‌اندازی تپسل تنها می‌تواند از طریق کلاس `application` صورت بگیرد.
+- از نسخه‌ی 4.6.0 به بعد، راه‌اندازی یلوادوایز تنها می‌تواند از طریق کلاس `application` صورت بگیرد.
 > برای آشنایی با کلاس اپلیکیشن می‌توانید [این مطلب]({{site.baseurl}}/application-class) را مطالعه کنید.
 
-`TAPSELL_KEY` کلید تپسل هست و برای هر اپلیکیشن که در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته میشود متفاوت است و میتوانید از پنل کپی کنید.
+`YELLOADWISE_KEY` کلید یلوادوایز هست و برای هر اپلیکیشن که در [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) ساخته میشود متفاوت است و میتوانید از پنل کپی کنید.
 
 ## تنظیمات proguard
-تنظیمات مربوط به `proguard` در [این فایل](https://github.com/tapsellorg/TapsellSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
+تنظیمات مربوط به `proguard` در [این فایل](https://github.com/irancell/YelloadwiseSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
 
 
 اکنون می‌توانید با توجه به نیاز خود و توضیحات به هر نوع تبلیغ، تبلیغ مورد نظر را نمایش دهید.
 
 ## دسترسی‌ها
-کتابخانه‌ی تپسل به جز اینترنت و WAKE_LOCK دسترسی دیگری از کاربر نمی‌گیرد. امّا به منظور بهبود عملکرد کتابخانه برای نمایش تبلیغات متناسب با هر کاربر می‌توانید دسترسی زیر را به اپلیکیشن خود اضافه نمایید. همچنین می‌بایستی [دسترسی در زمان اجرا](https://developer.android.com/training/permissions/requesting) برای این مورد را نیز از کاربر بگیرید.
+کتابخانه‌ی یلوادوایز به جز اینترنت و WAKE_LOCK دسترسی دیگری از کاربر نمی‌گیرد. امّا به منظور بهبود عملکرد کتابخانه برای نمایش تبلیغات متناسب با هر کاربر می‌توانید دسترسی زیر را به اپلیکیشن خود اضافه نمایید. همچنین می‌بایستی [دسترسی در زمان اجرا](https://developer.android.com/training/permissions/requesting) برای این مورد را نیز از کاربر بگیرید.
 ```xml
 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```

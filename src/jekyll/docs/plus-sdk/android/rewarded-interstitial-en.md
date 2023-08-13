@@ -6,26 +6,26 @@ permalink: /plus-sdk/android/rewarded-interstitial/index.html
 toc: true
 ---
 ### AdZone Creation
-first create rewarded-interstitial Zone from the [Tapsell panel](https://dashboard.tapsell.ir/) and use `ZoneId` when requesting Ad.
+first create rewarded-interstitial Zone from the [yelloadwise panel](https://dashboard.yelloadwise.ir/) and use `ZoneId` when requesting Ad.
 
 ### Request Ad
-According to the following code, you can request Ad using the `TapsellPlus.requestRewardedVideoAd` method
+According to the following code, you can request Ad using the `Yelloadwise.requestRewardedVideoAd` method
 ```java
-import ir.tapsell.plus.AdRequestCallback;
-import ir.tapsell.plus.TapsellPlus;
+import ir.yelloadwise.AdRequestCallback;
+import ir.yelloadwise.Yelloadwise;
 
 private void requestAd() {
-    TapsellPlus.requestRewardedVideoAd(
+    Yelloadwise.requestRewardedVideoAd(
         CONTEXT,
         ZONE_ID_REWARDED_VIDEO,
         new AdRequestCallback() {
             @Override
-            public void response(TapsellPlusAdModel tapsellPlusAdModel) {
-                super.response(tapsellPlusAdModel);
+            public void response(YelloadwiseAdModel YelloadwiseAdModel) {
+                super.response(YelloadwiseAdModel);
                 
                 //Ad is ready to show
                 //Put the ad's responseId to your responseId variable
-                rewardedResponseId = tapsellPlusAdModel.getResponseId();
+                rewardedResponseId = YelloadwiseAdModel.getResponseId();
             }
 
             @Override
@@ -37,7 +37,7 @@ private void requestAd() {
 }
 ```
 
-Use `TapsellPlus.requestInterstitialAd` for interstitial Ad instead.
+Use `Yelloadwise.requestInterstitialAd` for interstitial Ad instead.
 
 > If you want to request again in error Callback, Be sure to do this with the help of a variable as a Counter.
 > Because with the help of that variable you can set a limit on the number of times for request.
@@ -49,30 +49,30 @@ Use `TapsellPlus.requestInterstitialAd` for interstitial Ad instead.
 After Calling the `response` method and getting the `responseId` parameter, the Ad is ready to be shown, and you can display it as the following
 
 ```java
-import ir.tapsell.plus.AdShowListener;
+import ir.yelloadwise.AdShowListener;
 .......
-TapsellPlus.showRewardedVideoAd(CONTEXT, rewardedResponseId,
+Yelloadwise.showRewardedVideoAd(CONTEXT, rewardedResponseId,
     new AdShowListener() {
         @Override
-        public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
-            super.onOpened(tapsellPlusAdModel);
+        public void onOpened(YelloadwiseAdModel YelloadwiseAdModel) {
+            super.onOpened(YelloadwiseAdModel);
         }
 
         @Override
-        public void onClosed(TapsellPlusAdModel tapsellPlusAdModel) {
-            super.onClosed(tapsellPlusAdModel);
+        public void onClosed(YelloadwiseAdModel YelloadwiseAdModel) {
+            super.onClosed(YelloadwiseAdModel);
         }
 
         @Override
-        public void onRewarded(TapsellPlusAdModel tapsellPlusAdModel) {
-            super.onRewarded(tapsellPlusAdModel);
+        public void onRewarded(YelloadwiseAdModel YelloadwiseAdModel) {
+            super.onRewarded(YelloadwiseAdModel);
         }
 
         @Override
-        public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
-            super.onError(tapsellPlusErrorModel);
+        public void onError(YelloadwiseErrorModel YelloadwiseErrorModel) {
+            super.onError(YelloadwiseErrorModel);
         }
     });
 ```
 
-For showing an Interstitial ad use `TapsellPlus.showInterstitialAd`. Also you may want to remove `onRewarded` callback since it will not be called for Interstitial Ads.
+For showing an Interstitial ad use `Yelloadwise.showInterstitialAd`. Also you may want to remove `onRewarded` callback since it will not be called for Interstitial Ads.

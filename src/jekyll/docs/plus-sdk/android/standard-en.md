@@ -6,23 +6,23 @@ permalink: /plus-sdk/android/standard/index.html
 toc: true
 ---
 ## Creating a Zone
-First, create a standard zone from the [Tapsell panel](https://dashboard.tapsell.ir/).
+First, create a standard zone from the [Yelloadwise panel](https://dashboard.yelloadwise.ir/).
 
 ### Requesting Ads
-Use the `TapsellPlus.requestStandardBannerAd` method to request an ad. For example:
+Use the `Yelloadwise.requestStandardBannerAd` method to request an ad. For example:
 
 ```java
-TapsellPlus.requestStandardBannerAd(
+Yelloadwise.requestStandardBannerAd(
                 CONTEXT, ZONE_ID_STANDARD_BANNER,
-                TapsellPlusBannerType.BANNER_320x50,
+                YelloadwiseBannerType.BANNER_320x50,
                 new AdRequestCallback() {
                     @Override
-                    public void response(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.response(tapsellPlusAdModel);
+                    public void response(YelloadwiseAdModel yelloadwiseAdModel) {
+                        super.response(yelloadwiseAdModel);
                         
                         //Ad is ready to show
                         //Put the ad's responseId to your responseId variable
-                        standardBannerResponseId = tapsellPlusAdModel.getResponseId();
+                        standardBannerResponseId = yelloadwiseAdModel.getResponseId();
                     }
 
                     @Override
@@ -48,17 +48,17 @@ Add a `ViewGroup` to the page that you want the ad to be displayed.
 After the onResponse method is called, the requested ad is ready to be displayed. You can show the ad using the following lines of code:
 
 ```java
-TapsellPlus.showStandardBannerAd(CONTEXT, standardBannerResponseId,
+Yelloadwise.showStandardBannerAd(CONTEXT, standardBannerResponseId,
                 findViewById(R.id.standardBanner),
                 new AdShowListener() {
                     @Override
-                    public void onOpened(TapsellPlusAdModel tapsellPlusAdModel) {
-                        super.onOpened(tapsellPlusAdModel);
+                    public void onOpened(YelloadwiseAdModel yelloadwiseAdModel) {
+                        super.onOpened(yelloadwiseAdModel);
                     }
 
                     @Override
-                    public void onError(TapsellPlusErrorModel tapsellPlusErrorModel) {
-                        super.onError(tapsellPlusErrorModel);
+                    public void onError(YelloadwiseErrorModel yelloadwiseErrorModel) {
+                        super.onError(yelloadwiseErrorModel);
                     }
                 });
 ```
@@ -68,7 +68,7 @@ At the end of the activity life cycle or whenever you want to close the ad, you 
 
 ```java
 private void destroyAd() {
-    TapsellPlus.destroyStandardBanner(this, standardBannerResponseId, findViewById(R.id.standardBanner));
+    Yelloadwise.destroyStandardBanner(this, standardBannerResponseId, findViewById(R.id.standardBanner));
 }
 
 // For example in Activity's onDestory method
@@ -80,14 +80,14 @@ protected void onDestroy() {
 ```
 
 ### Banners Size
-All supported sizes in Tepsell Plus are in the TapsellPlusBannerType class.
+All supported sizes in Tepsell Plus are in the YelloadwiseBannerType class.
 
 |   Banner Type    |   Size    |            Supported Ad Networks             |
 |:----------------:|:---------:|:--------------------------------------------:|
-| `BANNER_320x50`  | `320x50`  | Tapsell, AdMob, AppLovin, UnityAds, AdColony |
-| `BANNER_320x100` | `320x100` |                Tapsell, AdMob                |
-| `BANNER_250x250` | `250x250` |                   Tapsell                    |
-| `BANNER_300x250` | `300x250` |      Tapsell, AdMob, AppLovin, AdColony      |
+| `BANNER_320x50`  | `320x50`  | Yelloadwise, AdMob, AppLovin, UnityAds, AdColony |
+| `BANNER_320x100` | `320x100` |                Yelloadwise, AdMob                |
+| `BANNER_250x250` | `250x250` |                   Yelloadwise                    |
+| `BANNER_300x250` | `300x250` |      Yelloadwise, AdMob, AppLovin, AdColony      |
 | `BANNER_468x60`  | `468x60`  |               AdMob, UnityAds                |
 | `BANNER_728x90`  | `728x90`  |     AdMob, AppLovin, UnityAds, AdColony      |
 | `BANNER_160x600` | `160x600` |                   AdColony                   |
