@@ -2,14 +2,14 @@
 
 ########### Global Variables ###########
 title: 'Yelloadwise: Smart ad network agency'
-email: technical.yelloadwise@gmail.com
+email: technical.tapsell@gmail.com
 description: >-
   Yelloadwise, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience.
 baseurl: '' # the subpath of your site, e.g. /docs
 url: 'https://yelloadwise.ir'
 twitter_username:
 github_username: tapsellorg
-site_name: Yelloadwise
+site_name: Tapsell
 global_vars:
   landing_url: https://irancell.ir
   dashboard_url: https://dashboard.irancell.ir/
