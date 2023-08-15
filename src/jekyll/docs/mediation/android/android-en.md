@@ -34,7 +34,7 @@ that is needed later in this guide.
 
 ```groovy
 dependencies {
-    def tapsellVersion = "1.0.0-beta06"
+    def tapsellVersion = "1.0.0-beta07"
     implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
     implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
 }
@@ -466,13 +466,13 @@ This guide shows you how to integrate rewarded ads from Tapsell into your Androi
 
 #### Load A Rewarded Ad
 
-Rewarded ads are loaded by calling the `requestRewardedVideoAd` static method of the Tapsell class; 
+Rewarded ads are loaded by calling the `requestRewardedAd` static method of the Tapsell class; 
 passing in the zone identifier and a `RequestResultListener` to receive the loaded ad id
 or possible failure notice.
 This is usually done in the onCreate() method of an Activity.
 
 ```java
-public static void requestRewardedVideoAd(String zoneId, RequestResultListener listener)
+public static void requestRewardedAd(String zoneId, RequestResultListener listener)
 ```
 
 The `RequestResultListener` interface has the following implementation:
@@ -490,7 +490,7 @@ interface RequestResultListener {
 > If you intent to load rewarded ads from `Applovin` ad-network, you also need to pass an activity
 > instance using the method below:
 > ```java
-> public static void requestRewardedVideoAd(String zoneId, Activity activity, RequestResultListener listener)
+> public static void requestRewardedAd(String zoneId, Activity activity, RequestResultListener listener)
 > ```
 
 Here's an example that shows how to load an ad in the onCreate() method of an Activity:
@@ -525,11 +525,11 @@ public class MainActivity extends AppCompatActivity {
 #### Show The Loaded Rewarded Ad
 
 Once the rewarded ad is successfully loaded, the next step is to show the ad.
-To do so simply call the `showRewardedVideoAd()` static method in Tapsell class
+To do so simply call the `showRewardedAd()` static method in Tapsell class
 passing the `adId` received in `onSuccess` method of the `RequestResultListener`.
 
 ```java
-public static void showRewardedVideoAd(String adId, Activity activity, AdStateListener.Rewarded listener)
+public static void showRewardedAd(String adId, Activity activity, AdStateListener.Rewarded listener)
 ```
 
 The `AdStateListener.Rewarded` optional parameter can be passed to monitor and handle events
