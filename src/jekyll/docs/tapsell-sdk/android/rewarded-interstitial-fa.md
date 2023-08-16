@@ -24,10 +24,10 @@ toc: true # table of contents
 با اجرای کد زیر می‌توانید درخواست یک تبلیغ بدهید.
 
 ```java
-irancell.ir.requestAd(CONTEXT,
+Yelloadwise.requestAd(CONTEXT,
         ZONE_ID,
-        new irancell.irAdRequestOptions(),
-        new irancell.irAdRequestListener() {
+        new YelloadwiseAdRequestOptions(),
+        new YelloadwiseAdRequestListener() {
             @Override
             public void onAdAvailable(String adId) {
             }

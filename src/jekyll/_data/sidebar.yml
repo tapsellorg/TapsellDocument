@@ -51,7 +51,7 @@ en:
 
           - name: Test
             link: /plus-sdk/unity/adnetworks-test
-  - name: irancell.ir
+  - name: Yelloadwise
     icon: m-sdk
     children:
       - name: Android

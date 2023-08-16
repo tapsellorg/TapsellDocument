@@ -37,19 +37,19 @@ toc: true
 </FrameLayout>
 ```
 
-نمونه قالب‌های طراحی شده پیش‌فرض برای نمایش تبلیغات همسان در فایل‌های `irancell.ir_content_banner_ad_template` و `irancell.ir_app_installation_banner_ad_template` قابل مشاهده هستند.
+نمونه قالب‌های طراحی شده پیش‌فرض برای نمایش تبلیغات همسان در فایل‌های `irancell.ir_content_banner_ad_template` و `yelloadwise_app_installation_banner_ad_template` قابل مشاهده هستند.
 
 اگر قصد تغییر قالب پیش فرض را دارید، یک `layout` دلخواه  بسازید و `id` و نوع بخش‌های مختلف را مطابق جدول زیر تغییر دهید:
 
 |       view       |              id              | type  |
 |:------------:|:----------------------------:|:-:|
-|     logo     |     `irancell.ir_nativead_logo`    | `ImageView`  |
-|     title    |    `irancell.ir_nativead_title`    | `TextView`  |
-| ad indicator |  `irancell.ir_nativead_sponsored`  | `View`  |
-|  description | `irancell.ir_nativead_description` | `TextView`  |
-|    banner    |    `irancell.ir_nativead_banner`   | `ir.yelloadwise.core.nativeads.views.RatioImageView`  |
-|    button    |     `irancell.ir_nativead_cta`     | `TextView`  |
-|    clickable view    |     `irancell.ir_nativead_cta_view`     | `View`  |
+|     logo     |     `yelloadwise_nativead_logo`    | `ImageView`  |
+|     title    |    `yelloadwise_nativead_title`    | `TextView`  |
+| ad indicator |  `yelloadwise_nativead_sponsored`  | `View`  |
+|  description | `yelloadwise_nativead_description` | `TextView`  |
+|    banner    |    `yelloadwise_nativead_banner`   | `ir.yelloadwise.core.nativeads.views.RatioImageView`  |
+|    button    |     `yelloadwise_nativead_cta`     | `TextView`  |
+|    clickable view    |     `yelloadwise_nativead_cta_view`     | `View`  |
 
 
 * در صورتی که در طراحی دکمه‌ای برای کلیک کردن وجود ندارد می‌توانید از **clickable view** استفاده کنید.
@@ -60,7 +60,7 @@ toc: true
 مطابق قطعه کد زیر `adContainer` و شناسه layout تبلیغ را به یلوادوایز بدهید تا یک `irancell.irNativeBannerViewManager` بسازید.
 
 ```java
-import ir.yelloadwise.core.nativeads.irancell.irNativeBannerManager;
+import ir.yelloadwise.core.nativeads.YelloadwiseNativeBannerManager;
 import ir.yelloadwise.core.nativeads.irancell.irNativeBannerViewManager;;
 ...
 ViewGroup adContainer = findViewById(R.id.adContainer);

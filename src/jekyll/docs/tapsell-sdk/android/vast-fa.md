@@ -25,6 +25,6 @@ toc: true
 در IMA برای نمایش تبلیغ به `ad tag url` نیاز دارید. برای این منظور می‌توانید از روش زیر استفاده کنید.
 
 ```java
-irancell.ir.getVastTag(ZONE_ID)
+Yelloadwise.getVastTag(ZONE_ID)
 ```
 بقیه مراحل پیاده سازی را مطابق مستندات IMA پیش بروید.  
