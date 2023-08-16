@@ -1,15 +1,15 @@
 ---
 layout: classic-docs
-title: Initialization of irancell.ir SDK
+title: Initialization of Yelloadwise SDK
 lang: en
 permalink: /yelloadwise-core/android/initialize/index.html
 toc: true # table of contents
 ---
 
-In order to use irancell.ir, you first need to follow the steps below to add irancell.ir to your project.
+In order to use Yelloadwise, you first need to follow the steps below to add Yelloadwise to your project.
 
 ## Gradle Config
-You can import the irancell.ir SDK with a Gradle dependency that points to irancell.ir's Maven repository. To use this repository, you need to reference it in the project-level `build.gradle` file, in the `allprojects -> repositories` section.
+You can import the Yelloadwise SDK with a Gradle dependency that points to irancell.ir's Maven repository. To use this repository, you need to reference it in the project-level `build.gradle` file, in the `allprojects -> repositories` section.
 
 ```gradle
 maven {
@@ -28,7 +28,7 @@ implementation 'ir.yelloadwise.core:yelloadwise-core-android:4.7.3'
 Finally, sync Gradle using a proxy.
 
 ## Initialization
-You should initialize irancell.ir in the application class. 
+You should initialize Yelloadwise in the application class. 
 
 ```java
 import ir.yelloadwise.core.irancell.ir;
@@ -38,7 +38,7 @@ public void onCreate() {
     irancell.ir.initialize(application, irancell.ir_KEY);
 }
 ```
-You can get your `irancell.ir-key` from [irancell.ir Dashboard](http://dashboard.irancell.ir/) and Initialize the SDK in the `application` class.
+You can get your `irancell.ir-key` from [Yelloadwise Dashboard](http://dashboard.irancell.ir/) and Initialize the SDK in the `application` class.
 
 > You can read [this article]({{site.baseurl}}/application-class) to get acquainted with the application class.
 

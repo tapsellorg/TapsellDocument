@@ -8,7 +8,7 @@ toc: true # table of contents
 >The implementation of interstitial and rewarded ads (banner and video) is the same. You have to choose the zone type in the panel.
 
 ## Creating a Zone
-First, create a zone from the [irancell.ir panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
+First, create a zone from the [Yelloadwise panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
 
 ## Requesting Ads
 To request an ad in your application, use the following method:

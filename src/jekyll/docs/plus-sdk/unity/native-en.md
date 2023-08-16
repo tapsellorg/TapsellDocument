@@ -7,7 +7,7 @@ toc: true # table of contents
 ---
 
 ### Creating a Zone
-First, create a native zone from the [irancell.ir panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
+First, create a native zone from the [Yelloadwise panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
 
 ### Requesting Ads
 Use the `Yelloadwise.RequestNativeBannerAd` method to request an ad. For example:

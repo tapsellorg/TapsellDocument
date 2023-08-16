@@ -10,8 +10,8 @@
 ### 2.1.9-rc04 (14 Jun, 2023)
 - Added preroll video ads to sdk for `VideoPlayer` and `ExoPlayer`. add exoplayer-ima-extension with disabled ui feature. [Sample](https://github.com/irancell.irorg/YelloadwiseSDK-AndroidSample/blob/master/app/src/main/java/ir/irancell.ir/plussample/android/ExoPlayerVastActivity.java)
 - Added new UI for back dialog
-- Update irancell.ir sdk to `V4.7.8-rc03`
-- Fixed some memory leaks in irancell.ir sdk and Yelloadwise sdk
+- Update Yelloadwise sdk to `V4.7.8-rc03`
+- Fixed some memory leaks in Yelloadwise-Core sdk and Yelloadwise sdk
 - fixed some proguard issues
 
 ### 2.1.9-rc03 (29 March, 2023)

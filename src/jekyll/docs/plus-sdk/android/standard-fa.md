@@ -86,10 +86,10 @@ protected void onDestroy() {
 
 |نوع بنر|اندازه|شبکه‌های پشتیبانی شده|
 |:----------------:|:-------------:|:------------------:|
-| `BANNER_320x50` | `320x50` |       یلوادوایز، AdMob، AppLovin، UnityAds، AdColony    |
-| `BANNER_320x100` | `320x100` |      یلوادوایز، AdMob    |
+| `BANNER_320x50` | `320x50` |       Yelloadwise، AdMob، AppLovin، UnityAds، AdColony    |
+| `BANNER_320x100` | `320x100` |      Yelloadwise، AdMob    |
 | `BANNER_250x250` | `250x250` |    یلوادوایز  |
-| `BANNER_300x250` | `300x250` |   یلوادوایز، AdMob، AppLovin، AdColony |
+| `BANNER_300x250` | `300x250` |   Yelloadwise، AdMob، AppLovin، AdColony |
 | `BANNER_468x60` | `468x60` |      AdMob، UnityAds   |
 | `BANNER_728x90` | `728x90` |     AdMob، AppLovin، UnityAds، AdColony |
 | `BANNER_160x600` | `160x600` |     AdColony |

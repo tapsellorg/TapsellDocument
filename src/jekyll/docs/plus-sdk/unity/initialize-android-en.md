@@ -43,7 +43,7 @@ There are two ways to add the required libraries, use method 2 (Resolver) for Ye
     ```gradle
     dependencies {
         ...
-        implementation 'ir.yelloadwise:irancell.ir-plus-sdk-unity:2.1.7'
+        implementation 'ir.yelloadwise:yelloadwise-sdk-unity:2.1.7'
         ...
     **DEPS**}
     ```

@@ -7,7 +7,7 @@ toc: true # table of contents
 ---
 
 ## Creating a Zone
-First, create a standard zone from the [irancell.ir panel](https://dashboard.irancell.ir/).
+First, create a standard zone from the [Yelloadwise panel](https://dashboard.irancell.ir/).
 
 ## Adding to Layout
 Add the banner ad to your layout using the following lines of code:
@@ -21,7 +21,7 @@ Add the banner ad to your layout using the following lines of code:
     app:irancell.ir_zone_id="ZONE_ID" />
 ```
 
-You can find the value of `ZONE_ID` in your irancell.ir panel.  
+You can find the value of `ZONE_ID` in your Yelloadwise panel.  
 The value of `BANNER_SIZE` determines the size of the banner. You can see the acceptable values for it in the `xml` column of the table below:
 
 | `java` | `xml` |

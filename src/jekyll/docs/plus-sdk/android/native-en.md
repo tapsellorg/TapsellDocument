@@ -6,7 +6,7 @@ permalink: /plus-sdk/android/native/index.html
 toc: true
 ---
 ### Creating a Zone
-First, create a native zone from the [irancell.ir panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
+First, create a native zone from the [Yelloadwise panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
 
 ### Creating an AdHolder
 You should add a ViewGroup to the page in which you want to show the native ad as space for displaying it. In other words, you need to create an ad container.
@@ -48,7 +48,7 @@ Then create a custom layout according to the way you want the ad to be displayed
 * You can use the prepared view for this purpose with the following id or as a construction guide:
 `native_banner`
 
-* Give the ad container and the id of the layout to irancell.ir to create a `AdHolder` as the following code:
+* Give the ad container and the id of the layout to Yelloadwise to create a `AdHolder` as the following code:
 
 ```java
 import ir.yelloadwise.AdHolder;

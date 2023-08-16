@@ -20,7 +20,7 @@ In app(module)/`build.gradle`:
 ```groovy
 dependencies {
     def yelloadwise = "2.2.0"
-    implementation("ir.yelloadwise:irancell.ir-plus-sdk-android:$yelloadwise")
+    implementation("ir.yelloadwise:yelloadwise-sdk-android:$yelloadwise")
 }
 ```
 
@@ -56,7 +56,7 @@ Yelloadwise.initialize(this, yelloadwiseKey,
 });
 ```
 
-Get `yelloadwiseKey` from [irancell.ir dashboard](https://dashboard.irancell.ir/) after building the app
+Get `yelloadwiseKey` from [Yelloadwise dashboard](https://dashboard.irancell.ir/) after building the app
 
 > Also, you may want to activate **debug mode** to get some additional logs and information (specially when ad requests fail):
 >

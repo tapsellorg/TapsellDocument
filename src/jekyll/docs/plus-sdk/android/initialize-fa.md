@@ -35,7 +35,7 @@ allprojects {
 dependencies {
     // ...
     
-    implementation("ir.yelloadwise:irancell.ir-plus-sdk-android:2.2.0")
+    implementation("ir.yelloadwise:yelloadwise-sdk-android:2.2.0")
 }
 ```
 

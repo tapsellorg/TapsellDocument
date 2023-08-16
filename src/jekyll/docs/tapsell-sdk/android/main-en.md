@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: irancell.ir Android SDK
+title: Yelloadwise Android SDK
 lang: en
 permalink: /yelloadwise-core/android/main/index.html
 toc: true

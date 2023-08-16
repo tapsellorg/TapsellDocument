@@ -24,7 +24,7 @@
 * بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲ [#41](https://github.com/irancell/YelloadwiseSDK-AndroidSample/issues/41))
 
 ### v2.1.6 - 2022/01/12
-* پشتیبانی از irancell.ir **4.7.4**
+* پشتیبانی از Yelloadwise **4.7.4**
 * رفع مشکل نیتیو بنر AdMob
 * بروزرسانی TargetSDK به 31
 * بهبود خطای درخواست تبلیغ  

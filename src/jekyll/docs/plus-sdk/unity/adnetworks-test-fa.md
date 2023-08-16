@@ -45,10 +45,10 @@ adType/adNetworkهای زیر قابل استفاده هستند.
 
 | Ad Network |    Ad Type     |           ZoneId           |
 |:----------:|:--------------:|:--------------------------:|
-|  irancell.ir   | Rewarded Video | `5cfaa802e8d17f0001ffb28e` |
-|  irancell.ir   |  Interstitial  | `5cfaa942e8d17f0001ffb292` |
-|  irancell.ir   |     Native     | `5cfaa9deaede570001d5553a` |
-|  irancell.ir   |    Standard    | `5cfaaa30e8d17f0001ffb294` |
+|  Yelloadwise   | Rewarded Video | `5cfaa802e8d17f0001ffb28e` |
+|  Yelloadwise   |  Interstitial  | `5cfaa942e8d17f0001ffb292` |
+|  Yelloadwise   |     Native     | `5cfaa9deaede570001d5553a` |
+|  Yelloadwise   |    Standard    | `5cfaaa30e8d17f0001ffb294` |
 |   Admob    | Rewarded Video | `5cfaa8aee8d17f0001ffb28f` |
 |   Admob    |  Interstitial  | `5cfaa9b0e8d17f0001ffb293` |
 |   Admob    |    Standard    | `5cfaaa4ae8d17f0001ffb295` |

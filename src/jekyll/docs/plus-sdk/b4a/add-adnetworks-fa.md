@@ -25,7 +25,7 @@ toc: true
 > در [پروژه‌ی نمونه‌ی یلوادوایز](https://github.com/irancell/YelloadwiseSDK-B4ASample) می‌توانید دقیق و با جزئیات پیاده‌سازی مانیفست را در Manifest editor آن مشاهده کنید
 {:data-title="نمونه‌ی پیاده‌سازی شده‌ی مانیفست" data-color="blue"}
 
-## irancell.ir AdNetwork
+## Yelloadwise AdNetwork
 این ادنتورک به طور پیش‌فرض اضافه شده است. برای استفاده از آن نیازی به کاری ندارید
 
 ## AdMob
