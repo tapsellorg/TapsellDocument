@@ -5,7 +5,7 @@ lang: en
 permalink: /yelloadwise-core/android/main/index.html
 toc: true
 sdkPlatform:
-  name: irancell.irAndroid
+  name: YelloadwiseCoreAndroid 
   logo: /images/sdk-platforms/android.png
 ---
 
