@@ -6,12 +6,12 @@ permalink: /plus-sdk/b4a/native-vid/index.html
 toc: true
 ---
 
-> برای مشاهد‌ه‌ی نمونه پیاده سازی شده در گیتهاب به [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample/blob/c3db2c060e6cf9d1627c4d4a0aaa397fb8444f23/tapsell.b4a#L192) مراجعه نمایید
+> برای مشاهد‌ه‌ی نمونه پیاده سازی شده در گیتهاب به [این لینک](https://github.com/irancell.irorg/YelloadwiseSDK-B4ASample/blob/c3db2c060e6cf9d1627c4d4a0aaa397fb8444f23/irancell.ir.b4a#L192) مراجعه نمایید
 {:data-title="نمونه‌ی این تبلیغ" data-color="green"}
 
 
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) ویدئوی همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغگاه (zone) ویدئوی همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 
 سپس شناسه‌ی تبلیغ مورد نظر را کپی کنید. این شناسه
@@ -33,23 +33,23 @@ toc: true
 از کد زیر برای درخواست تبلیغ استفاده کنید:
 
 ```vb
-' Dim tapsellPlus As TapsellPlus (in `Sub Globals`)
+' Dim yelloadwise As Yelloadwise (in `Sub Globals`)
 ' Dim panel As Panel
 
 
 Dim zoneId As String = "شناسه‌ی تبلیغ"
 
-tapsellPlus.RequestAndShowNativeVideoAd(zoneId, panel)
+yelloadwise.RequestAndShowNativeVideoAd(zoneId, panel)
 ```
 
 کالبک‌های مورد استفاده در این تبلیغ:
 
 |نام کالبک|شرح|
 |:--:|:--:|
-|`TapsellPlus_OnResponse`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
-|`TapsellPlus_OnOpened`|هنگام باز شدن تبلیغ|
-|`TapsellPlus_OnClosed`|در صورت بسته شدن تبلیغ|
-|`TapsellPlus_OnError`|در صورت وجود هر گونه خطا در این مراحل|
+|`Yelloadwise_OnResponse`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
+|`Yelloadwise_OnOpened`|هنگام باز شدن تبلیغ|
+|`Yelloadwise_OnClosed`|در صورت بسته شدن تبلیغ|
+|`Yelloadwise_OnError`|در صورت وجود هر گونه خطا در این مراحل|
 
 
 > برای پیاده‌سازی کالبک‌های لازم به [بخش اول](/plus-sdk/b4a/initialize/index.html) مراجعه کنید

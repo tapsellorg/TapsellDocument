@@ -1,22 +1,22 @@
 ---
 layout: classic-docs
-title: راه اندازی تپسل پلاس در یونیتی (Android)
+title: راه اندازی یلوادوایز در یونیتی (Android)
 lang: fa
 permalink: /plus-sdk/unity/initialize-android/index.html
 toc: true # table of contents
 ---
 
-> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/unity/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?q=is%3Aissue) را بررسی نمایید.
+> در صورت وجود مشکل یا ابهام به [لیست خطاهای فنی رایج]({{ site.baseurl }}/faq/plus-sdk/unity/) مراجعه کنید یا صفحه‌ی [Github Issues](https://github.com/irancell/YelloadwiseSDK-UnitySample2019/issues?q=is%3Aissue) را بررسی نمایید.
 {:data-title="نکته Build پروژه" data-color="red"}
 
 
-## اضافه کردن Unity Package تپسل پلاس
-برای اضافه کردن تپسل پلاس ۲ روش وجود دارد. در صورتیکه تمایل به استفاده از کتابخانه جدید تپسل پلاس (از نسخه ۲.۱.۸ یا بالاتر) را دارید، لطفا از روش ۲ (Resolver) استفاده نمایید.
+## اضافه کردن Unity Package یلوادوایز
+برای اضافه کردن یلوادوایز ۲ روش وجود دارد. در صورتیکه تمایل به استفاده از کتابخانه جدید یلوادوایز (از نسخه ۲.۱.۸ یا بالاتر) را دارید، لطفا از روش ۲ (Resolver) استفاده نمایید.
 
 
 ### ۱. استفاده از Gradle
-۱. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/releases/download/V2.1.7/TapsellPlusUnity-Gradle-v2.1.7.unitypackage) دریافت نمایید. 
-۲. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر TapsellPlus از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
+۱. ابتدا `unitypackage` یلوادوایز را از [این لینک](https://github.com/irancell/YelloadwiseSDK-UnitySample2019/releases/download/V2.1.7/YelloadwiseUnity-Gradle-v2.1.7.unitypackage) دریافت نمایید. 
+۲. از طریق منوی زیر `unitypackage` یلوادوایز را به پروژه‌ی خود اضافه نمایید. (اگر فولدر Yelloadwise از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 
 ```console
 Assets > Import Package > Custom Package...
@@ -45,7 +45,7 @@ android.enableJetifier=true
 ```gradle
 dependencies {
     ...
-    implementation 'ir.tapsell.plus:tapsell-plus-sdk-unity:2.1.7'
+    implementation 'ir.yelloadwise:yelloadwise-sdk-unity:2.1.7'
     ...
 **DEPS**}
 ```
@@ -64,7 +64,7 @@ android {
 
 > دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin تنها در صورتیکه از نسخه یونیتی ۲۰۱۹ و پایین‌تر استفاده میکنید الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
 
-۱۰. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید. در صورتیکه از `minSdkVersion` نسخه‌ی ۲۱ یا بالاتر استفاده میکنید، MultiDex به صورت پیش فرض فعال است. در غیر اینصورت لازم است آن را به صورت دستی به پروژه خود اضافه نمایید.
+۱۰. بعد از اضافه کردن یلوادوایز و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید. در صورتیکه از `minSdkVersion` نسخه‌ی ۲۱ یا بالاتر استفاده میکنید، MultiDex به صورت پیش فرض فعال است. در غیر اینصورت لازم است آن را به صورت دستی به پروژه خود اضافه نمایید.
 ```console
 D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
 ```
@@ -128,15 +128,15 @@ Assets > External Dependency Manager > Android Resolver > Settings > Use Jetifie
 Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto-Resolution
 ```
 
-۳. ابتدا `unitypackage` تپسل پلاس را از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.2.0/tapsell-plus-unity-2.2.0.unitypackage) دریافت نمایید. 
+۳. ابتدا `unitypackage` یلوادوایز را از [این لینک](https://github.com/irancell/YelloadwiseSDK-UnityPlugin/releases/download/v2.2.0/yelloadwise-plus-unity-2.2.0.unitypackage) دریافت نمایید. 
 
-۴. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر `TapsellPlusSDK` از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
+۴. از طریق منوی زیر `unitypackage` یلوادوایز را به پروژه‌ی خود اضافه نمایید. (اگر فولدر `YelloadwiseSDK` از قبل در پروژه‌ی شما وجود دارد لطفا آن را پاک کنید)
 
 ```console
 Assets > Import Package > Custom Package...
 ```
 
-۵. برای اطمینان از اضافه شدن پلاگین تپسل پلاس از طریق منوی زیر اقدام به Resolve کردن کتابخانه‌ها کنید:
+۵. برای اطمینان از اضافه شدن پلاگین یلوادوایز از طریق منوی زیر اقدام به Resolve کردن کتابخانه‌ها کنید:
 
 ```console
 Assets > External Dependency Manager > Android Resolver > Force Resolve
@@ -172,7 +172,7 @@ android {
 
 > دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
 
-۱۰. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید. در صورتیکه از `minSdkVersion` نسخه‌ی ۲۱ یا بالاتر استفاده میکنید، MultiDex به صورت پیش فرض فعال است. در غیر اینصورت لازم است آن را به صورت دستی به پروژه خود اضافه نمایید. 
+۱۰. بعد از اضافه کردن یلوادوایز و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر می‌بایستی MultiDex را فعال نمایید. در صورتیکه از `minSdkVersion` نسخه‌ی ۲۱ یا بالاتر استفاده میکنید، MultiDex به صورت پیش فرض فعال است. در غیر اینصورت لازم است آن را به صورت دستی به پروژه خود اضافه نمایید. 
 ```console
 D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
 ```
@@ -223,37 +223,37 @@ public class MainApplication extends SomeOtherApplication {
 
 
 ## مقداردهی اولیه
-ابتدا برای دسترسی به کدهای تپسل از تکه کد زیر استفاده کنید.
+ابتدا برای دسترسی به کدهای یلوادوایز از تکه کد زیر استفاده کنید.
 
 ```c#
-using TapsellPlusSDK;
+using YelloadwiseSDK;
 ```
 
 سپس تابع زیر را در یکی از اسکریپت‌های برنامه‌ی خود که در ابتدای برنامه اجرا می‌شود فراخوانی کنید.
 
 ```c#
-TapsellPlus.Initialize(TAPSELLPLUS_KEY,
+Yelloadwise.Initialize(Yelloadwise_KEY,
             adNetworkName => Debug.Log(adNetworkName + " Initialized Successfully."),
             error => Debug.Log(error.ToString()));
 ```
 
-`TAPSELLPLUS_KEY` کلید تپسل پلاس هست و برای هر اپلیکیشنی که می‌سازید در [پنل تپسل](https://dashboard.tapsell.ir/) ساخته می‌شود و می‌توانید از پنل کپی کنید.
+`Yelloadwise_KEY` کلید یلوادوایز هست و برای هر اپلیکیشنی که می‌سازید در [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) ساخته می‌شود و می‌توانید از پنل کپی کنید.
 
 اکنون می‌توانید با توجه به نیاز خود و توضیحات به هر نوع تبلیغ، تبلیغ مورد نظر را نمایش دهید.
 
 ## تنظیمات مربوط به GDPR
-از آن‌جا که کتابخانه‌ی تپسل پلاس قوانین GDPR را در خصوص نمایش تبلیغات شخصی‌سازی شده رعایت می‌کند، به طور پیش فرض اگر کاربر با IP یکی از کشورهای مشمول این قانون از اپلیکیشن شما استفاده کند، دیالوگی در این خصوص به کاربر نمایش می‌دهد. اگر تمایل دارید تا به جای تصمیم کاربر، خودتان دسترسی لازم را تعیین کنید می‌توانید از تکه کد زیر استفاده نمایید. توجه داشته باشید که این تکه کد می‌بایستی پس از Initialize شدن تپسل پلاس و پیش از درخواست تبلیغ صدا زده شود تا نتیجه‌ی آن در درخواست شما اعمال شده باشد. مقدار true‌ به این معنی است که شما حق استفاده از اطلاعات جهت نمایش تبلیغ شخصی‌سازی شده را به شبکه‌های تبلیغاتی داده‌اید.
+از آن‌جا که کتابخانه‌ی یلوادوایز قوانین GDPR را در خصوص نمایش تبلیغات شخصی‌سازی شده رعایت می‌کند، به طور پیش فرض اگر کاربر با IP یکی از کشورهای مشمول این قانون از اپلیکیشن شما استفاده کند، دیالوگی در این خصوص به کاربر نمایش می‌دهد. اگر تمایل دارید تا به جای تصمیم کاربر، خودتان دسترسی لازم را تعیین کنید می‌توانید از تکه کد زیر استفاده نمایید. توجه داشته باشید که این تکه کد می‌بایستی پس از Initialize شدن یلوادوایز و پیش از درخواست تبلیغ صدا زده شود تا نتیجه‌ی آن در درخواست شما اعمال شده باشد. مقدار true‌ به این معنی است که شما حق استفاده از اطلاعات جهت نمایش تبلیغ شخصی‌سازی شده را به شبکه‌های تبلیغاتی داده‌اید.
 ```c#
-TapsellPlus.SetGdprConsent(true);
+Yelloadwise.SetGdprConsent(true);
 ```
 
 ## پروژه‌ی نمونه
 برای راهنمایی بیش‌تر می‌توانید از پروژه‌های نمونه‌ی ما بر روی Github استفاده نمایید.
 
-* [پروژه‌ی نمونه مناسب برای Unity 2021.3.5f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin)
+* [پروژه‌ی نمونه مناسب برای Unity 2021.3.5f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnityPlugin)
 
-* [پروژه‌ی نمونه مناسب برای Unity 2020.3.9f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2020)
+* [پروژه‌ی نمونه مناسب برای Unity 2020.3.9f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnitySample2020)
 
-* [پروژه‌ی نمونه مناسب برای Unity 2019.4.11f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019)
+* [پروژه‌ی نمونه مناسب برای Unity 2019.4.11f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnitySample2019)
 
-* [پروژه‌ی نمونه مناسب برای Unity 2018.4.26f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2018)
+* [پروژه‌ی نمونه مناسب برای Unity 2018.4.26f1 LTS](https://github.com/irancell/YelloadwiseSDK-UnitySample2018)

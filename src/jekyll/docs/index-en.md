@@ -1,7 +1,7 @@
 ---
 layout: classic-docs
 page-type: homepage
-title: Welcome to Tapsell Documentation
+title: Welcome to Yelloadwise Documentation
 description: Intelligent Mobile Advertising Network
 lang: en
 permalink: /

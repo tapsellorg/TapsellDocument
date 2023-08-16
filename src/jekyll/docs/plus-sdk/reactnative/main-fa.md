@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: پلتفرم ReactNative تپسل پلاس
+title: پلتفرم ReactNative یلوادوایز
 lang: fa
 permalink: /plus-sdk/reactnative/main/index.html
 toc: true

@@ -6,7 +6,7 @@ permalink: /plus-sdk/flutter/native/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 
 ### درخواست تبلیغ
@@ -14,7 +14,7 @@ toc: true
 
 ```dart
 final zoneId = "theZoneIdYouHave";
-TapsellPlus.instance.requestNativeAd(zoneId).then((responseId) {
+Yelloadwise.instance.requestNativeAd(zoneId).then((responseId) {
       // SAVE the responseId
     }).catchError((error) {
       // Error requesting for an ad
@@ -34,7 +34,7 @@ success
 ### نمایش تبلیغ
 
 ```dart
-TapsellPlus.instance.showNativeAd(id, onOpened: (nativeAd) {
+Yelloadwise.instance.showNativeAd(id, onOpened: (nativeAd) {
   if (nativeAd is GeneralNativeAdPayload) {
     // Use `nativeAd.ad` object to show the native ad
   }
@@ -78,7 +78,7 @@ class AdmobNativeAdFactory(private val context: Context) : GoogleMobileAdsPlugin
     }
 }
 ```
-> برای راهنمایی بیشتر، می‌توانید از [اپ سمپل](https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample) استفاده کنید.
+> برای راهنمایی بیشتر، می‌توانید از [اپ سمپل](https://github.com/irancell/YelloadwiseSDK-FlutterSample) استفاده کنید.
 {:data-title="اپ سمپل" data-color="red"}
 
 ۳. سپس برای فعال سازی یا غیر فعال سازی کلاس `AdmobNativeAdFactory` ساخته شده، وارد مسیر `src/main/java/MainActivity` شوید و قطعه کد های زیر را اضافه نمایید:
@@ -112,7 +112,7 @@ override fun cleanUpFlutterEngine(flutterEngine: FlutterEngine) {
 ۴. اکنون درخواست نمایش تبلیغ را به صورت زیر انجام دهید:
 
 ```dart
-TapsellPlus.instance.showNativeAd(id, admobFactoryId: factoryId, 
+Yelloadwise.instance.showNativeAd(id, admobFactoryId: factoryId, 
 onOpened: (nativeAd) {
   
   if (nativeAd is GeneralNativeAdPayload) {
@@ -168,5 +168,5 @@ onLoaded: (nativeAd) {
 برای باز کردن تبلیغ، هنگامی که کاربر روی آن کلیک می‌کند، از تابع زیر استفاده کنید.
 
 ```dart
-TapsellPlus.instance.nativeBannerAdClicked(responseId);
+Yelloadwise.instance.nativeBannerAdClicked(responseId);
 ```

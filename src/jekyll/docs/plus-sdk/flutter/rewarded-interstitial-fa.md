@@ -10,7 +10,7 @@ toc: true # table of contents
 
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
 
 
 ## درخواست تبلیغ
@@ -24,14 +24,14 @@ responseId
 
 ```dart
 final zoneId = "theZoneIdYouHave";
-TapsellPlus.instance.requestRewardedVideoAd(zoneId).then((responseId) {
+Yelloadwise.instance.requestRewardedVideoAd(zoneId).then((responseId) {
       // SAVE the responseId
     }
 );
 
 // Using Async/await
 
-final responseId = await TapsellPlus.instance.requestRewardedVideoAd(zoneId);
+final responseId = await Yelloadwise.instance.requestRewardedVideoAd(zoneId);
 ```
 
 ورودی تابع `zoneId` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
@@ -48,7 +48,7 @@ final responseId = await TapsellPlus.instance.requestRewardedVideoAd(zoneId);
 
 ```dart
 final zoneId = "theZoneIdYouHave";
-TapsellPlus.instance.requestInterstitialAd(zoneId).then((responseId) {
+Yelloadwise.instance.requestInterstitialAd(zoneId).then((responseId) {
       // SAVE the responseId
     }
 );
@@ -60,7 +60,7 @@ TapsellPlus.instance.requestInterstitialAd(zoneId).then((responseId) {
 با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
 
 ```dart
-TapsellPlus.instance.showRewardedVideoAd(responseId,
+Yelloadwise.instance.showRewardedVideoAd(responseId,
     onOpened: (map) {
       // Ad opened
     }, onError: (map) {
@@ -92,7 +92,7 @@ Future
 برای نمایش تبلیغ آنی نیز از کد زیر استفاده کنید:
 
 ```dart
-TapsellPlus.instance.showInterstitialAd(responseId,
+Yelloadwise.instance.showInterstitialAd(responseId,
     onOpened: (map) {
       // Ad opened
     }, onError: (map) {

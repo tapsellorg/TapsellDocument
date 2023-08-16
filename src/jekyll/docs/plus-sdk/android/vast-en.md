@@ -11,10 +11,10 @@ Video Ads that appear in the start, at the middle or in the end of the clip.
 
 ### Pre-roll Ads:
 Video Ads that appear at the beginning of the clip.
- At the moment TapsellPlus SDK supports Pre-roll Ads that you can use that, according to these documentation.
+ At the moment Yelloadwise SDK supports Pre-roll Ads that you can use that, according to these documentation.
 
 ### AdZone Creation
-First Create a Vast(Pre-roll) AdZone from [Tapsell Panel](https://dashboard.tapsell.ir/) and use `zonId` in the time of requesting and showing Ads.
+First Create a Vast(Pre-roll) AdZone from [Yelloadwise Panel](https://dashboard.yelloadwise.ir/) and use `zonId` in the time of requesting and showing Ads.
 
 ### request and show Ads
 You should use IMA library from Google to Show Vast Ads. you can see IMA library's documentation from [this link](https://developers.google.com/interactive-media-ads/docs/sdks/android)  
@@ -23,19 +23,19 @@ f you want to use a Video player instead of Exo Player you can get help from
 [this link](https://developers.google.com/interactive-media-ads/docs/sdks/android/client-side/custom_ad_playback). In IMA you need `ad tag URL` to show Ads. for this purpose you can use the following method:
 
 ```java
-TapsellPlus.getVastTag(ZONE_ID)
+Yelloadwise.getVastTag(ZONE_ID)
 ```
-Implement other steps of implementation according to IMA documentation or Tapsell`s sample project
+Implement other steps of implementation according to IMA documentation or Yelloadwise`s sample project
 
 ### Companion Ads
 
 Look lik Banner Ads that are shown beside the video ads. to implement these Ads you can use [their documentation link](https://developers.google.com/interactive-media-ads/docs/sdks/android/client-side/companions)
-in google's IMA library. Tapsell also supports these kinds of Ads and you can add them to your project according to google's documentation and also TapsellPlus sample project.
+in google's IMA library. Yelloadwise also supports these kinds of Ads and you can add them to your project according to google's documentation and also Yelloadwise sample project.
 
-### Request Ads from Tapsell library
+### Request Ads from Yelloadwise library
 
 ```java
-TapsellPrerollAd tapsellPrerollAd = TapsellPlus.requestVastAd(
+YelloadwisePrerollAd YelloadwisePrerollAd = Yelloadwise.requestVastAd(
         activity,
         playerView,         // `VideoPlayer` || `StyledPlayerView` (ExoPlayer)
         VIDEO_URL,          // Your video url
@@ -60,5 +60,5 @@ TapsellPrerollAd tapsellPrerollAd = TapsellPlus.requestVastAd(
 ```
 
 ### Sample Project
-for more info you can use [our sample project](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/blob/master/app/src/main/java/ir/tapsell/plussample/android/ExoPlayerVastActivity.java)
+for more info you can use [our sample project](https://github.com/irancell/YelloadwiseSDK-AndroidSample/blob/master/app/src/main/java/ir/yelloadwise/plussample/android/ExoPlayerVastActivity.java)
 on GitHub repository.

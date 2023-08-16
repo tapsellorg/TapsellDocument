@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: پلتفرم یونیتی تپسل پلاس 
+title: پلتفرم یونیتی یلوادوایز 
 lang: fa
 permalink: /plus-sdk/unity/main/index.html
 toc: true

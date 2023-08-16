@@ -10,14 +10,14 @@ toc: true # table of contents
 
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
 
 
 ## درخواست تبلیغ
 با اجرای کد زیر میتوانید درخواست یک تبلیغ بدهید.
 
 ```javascript
-TapsellPlus.requestInterstitialAd(ZONE_ID)
+Yelloadwise.requestInterstitialAd(ZONE_ID)
   .then((responseId) => {
     // Save the responseId
    })
@@ -35,7 +35,7 @@ TapsellPlus.requestInterstitialAd(ZONE_ID)
 با اجرای کد زیر میتوانید یک تبلیغ را نمایش بدهید.
 
 ```javascript
-TapsellPlus.showInterstitialAd(responseId, onOpened, onClosed, onError);
+Yelloadwise.showInterstitialAd(responseId, onOpened, onClosed, onError);
 ```
 
 مقدار

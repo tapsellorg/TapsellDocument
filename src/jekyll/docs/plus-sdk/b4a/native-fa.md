@@ -6,12 +6,12 @@ permalink: /plus-sdk/b4a/native/index.html
 toc: true
 ---
 
-> برای مشاهد‌ه‌ی نمونه پیاده سازی شده در گیتهاب به [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-B4ASample/blob/0ed4cf5b1ec275061b20e600a87eae47b29b1c49/tapsell.b4a#L183) مراجعه نمایید
+> برای مشاهد‌ه‌ی نمونه پیاده سازی شده در گیتهاب به [این لینک](https://github.com/irancell.irorg/YelloadwiseSDK-B4ASample/blob/0ed4cf5b1ec275061b20e600a87eae47b29b1c49/irancell.ir.b4a#L183) مراجعه نمایید
 {:data-title="نمونه‌ی این تبلیغ" data-color="green"}
 
 
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 
 
@@ -34,23 +34,23 @@ toc: true
 از کد زیر برای درخواست تبلیغ استفاده کنید:
 
 ```vb
-' Dim tapsellPlus As TapsellPlus (in `Sub Globals`)
+' Dim yelloadwise As Yelloadwise (in `Sub Globals`)
 ' Dim panel As Panel
 
 
 Dim zoneId As String = "شناسه‌ی تبلیغ"
 
-tapsellPlus.RequestAndShowNativeAd(zoneId, panel)
+yelloadwise.RequestAndShowNativeAd(zoneId, panel)
 ```
 
 کالبک‌های مورد استفاده در این تبلیغ:
 
 |نام کالبک|شرح|
 |:--:|:--:|
-|`TapsellPlus_OnResponse(zoneId as String, responseId as String)`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
-|`TapsellPlus_OnOpened(zoneId as String, responseId as String)`|هنگام باز شدن تبلیغ|
-|`TapsellPlus_OnClosed(zoneId as String, responseId as String)`|در صورت بسته شدن تبلیغ|
-|`TapsellPlus_OnError(error as String)`|در صورت وجود هر گونه خطا در این مراحل|
+|`Yelloadwise_OnResponse(zoneId as String, responseId as String)`|در صورتی که درخواست تبلیغ موفقیت آمیز باشد|
+|`Yelloadwise_OnOpened(zoneId as String, responseId as String)`|هنگام باز شدن تبلیغ|
+|`Yelloadwise_OnClosed(zoneId as String, responseId as String)`|در صورت بسته شدن تبلیغ|
+|`Yelloadwise_OnError(error as String)`|در صورت وجود هر گونه خطا در این مراحل|
 
 
 > برای پیاده‌سازی کالبک‌های لازم به [بخش اول](/plus-sdk/b4a/initialize/index.html) مراجعه کنید

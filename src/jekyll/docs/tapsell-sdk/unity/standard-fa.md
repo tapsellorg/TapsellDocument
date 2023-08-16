@@ -2,34 +2,34 @@
 layout: classic-docs
 title: بنر استاندارد در یونیتی
 lang: fa
-permalink: /tapsell-sdk/unity/standard/index.html
+permalink: /yelloadwise-core/unity/standard/index.html
 toc: true # table of contents
 ---
 
 <div class="alert alert-danger" role="alert" dir="rtl" markdown="0">
   <h4 class="alert-heading">&#9888; هشدار! این SDK دیگر پشتیبانی نمی‌شود &#9888;</h4>
-  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از تپسل استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.tapsell.ir/plus-sdk/unity/main/">تپسل‌پلاس</a> استفاده نمایید.</p>
+  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از یلوادوایز استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.yelloadwise.ir/plus-sdk/unity/main/">یلوادوایز‌پلاس</a> استفاده نمایید.</p>
   <hr>
-  <p class="mb-0">تپسل پلاس، علاوه بر دارا بودن تمام امکانات تپسل، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
+  <p class="mb-0">یلوادوایز، علاوه بر دارا بودن تمام امکانات یلوادوایز، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
   <p class="mb-0">همچنین فرصت کسب درآمد ارزی را از طریق نمایش تبلیغات شبکه‌های تبلیغاتی خارجی (نظیر AdMob) فراهم می‌کند.</p>
-  <p class="mb-0">نسخه‌های منتشر شده تپسل در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
+  <p class="mb-0">نسخه‌های منتشر شده یلوادوایز در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
 </div>
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوع استاندارد بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) یک تبلیغ‌گاه از نوع استاندارد بسازید.
 
 ## درخواست تبلیغ
-جهت نمایش بنر استاندارد، باید محلی برای نمایش آن در صفحه در نظر بگیرید. بنر استاندارد، دارای سایزهای استانداردی است که در SDK تپسل مشخص شده‌اند. جهت نمایش بنر، از تابع زیر استفاده کنید:
+جهت نمایش بنر استاندارد، باید محلی برای نمایش آن در صفحه در نظر بگیرید. بنر استاندارد، دارای سایزهای استانداردی است که در SDK یلوادوایز مشخص شده‌اند. جهت نمایش بنر، از تابع زیر استفاده کنید:
 
 ```c#
-Tapsell.RequestBannerAd(
+Yelloadwise.RequestBannerAd(
 	string zoneId,
 	int bannerType, 
 	int horizontalGravity, 
 	int verticalGravity, 
   Action<string> onRequestFilled,
 	Action<string> onNoAdAvailableAction,
-  Action<TapsellError> onErrorAction, 
+  Action<YelloadwiseError> onErrorAction, 
 	Action<string> onNoNetworkAction,
   Action<string> onHideBannerAction);
 ```
@@ -50,14 +50,14 @@ Tapsell.RequestBannerAd(
 مطابق کد زیر میتوانید برای درخواست تبلیغ `listener` تعریف کنید.
 
 ```c#
-Tapsell.RequestBannerAd (bannerZoneId,BannerType.BANNER_320x50, Gravity.BOTTOM, Gravity.CENTER,
+Yelloadwise.RequestBannerAd (bannerZoneId,BannerType.BANNER_320x50, Gravity.BOTTOM, Gravity.CENTER,
 	(string zoneId)=>{
 		Debug.Log("Action: onBannerRequestFilledAction");
 	},
 	(string zoneId)=>{
 		Debug.Log("Action: onNoBannerAdAvailableAction");
 	},
-	(TapsellError tapsellError)=>{
+	(YelloadwiseError yelloadwiseError)=>{
 		Debug.Log("Action: onBannerAdErrorAction");
 	},
 	(string zoneId)=>{
@@ -73,6 +73,6 @@ Tapsell.RequestBannerAd (bannerZoneId,BannerType.BANNER_320x50, Gravity.BOTTOM, 
 
 
 ```java
-Tapsell.ShowBannerAd (bannerZoneId); //To make visible
-Tapsell.HideBannerAd (bannerZoneId); //To hide banner
+Yelloadwise.ShowBannerAd (bannerZoneId); //To make visible
+Yelloadwise.HideBannerAd (bannerZoneId); //To hide banner
 ```

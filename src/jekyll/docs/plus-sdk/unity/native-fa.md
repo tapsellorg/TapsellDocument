@@ -6,18 +6,18 @@ permalink: /plus-sdk/unity/native/index.html
 toc: true
 ---
 ### ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
+ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغگاه (zone) همسان بسازید و `zoneId` را زمان درخواست و نمایش تبلیغ استفاده کنید.
 
 
 ### درخواست تبلیغ
-با کمک متد `TapsellPlus.RequestNativeBannerAd` و به روش زیر درخواست تبلیغ بدهید.
+با کمک متد `Yelloadwise.RequestNativeBannerAd` و به روش زیر درخواست تبلیغ بدهید.
 
 ```c#
-TapsellPlus.RequestNativeBannerAd(ZoneID,
+Yelloadwise.RequestNativeBannerAd(ZoneID,
 
-			tapsellPlusAdModel => {
-				Debug.Log ("On Response " + tapsellPlusAdModel.responseId);
-				_responseId = tapsellPlusAdModel.responseId;
+			yelloadwiseAdModel => {
+				Debug.Log ("On Response " + yelloadwiseAdModel.responseId);
+				_responseId = yelloadwiseAdModel.responseId;
 			},
 			error => {
 				Debug.Log ("Error " + error.message);
@@ -37,19 +37,19 @@ TapsellPlus.RequestNativeBannerAd(ZoneID,
 ```c#
 public void Show () {
   // this: refers to MonoBehaviour
-  TapsellPlus.ShowNativeBannerAd(_responseId, this,
+  Yelloadwise.ShowNativeBannerAd(_responseId, this,
 
-			tapsellPlusNativeBannerAd => {
-				Debug.Log ("onOpenAd " + tapsellPlusNativeBannerAd.zoneId);
-				adHeadline.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.title);
-				adCallToAction.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.callToActionText);
-				adBody.text = ArabicSupport.ArabicFixer.Fix(tapsellPlusNativeBannerAd.description);
-				adImage.texture = tapsellPlusNativeBannerAd.landscapeBannerImage;
+			yelloadwiseNativeBannerAd => {
+				Debug.Log ("onOpenAd " + yelloadwiseNativeBannerAd.zoneId);
+				adHeadline.text = ArabicSupport.ArabicFixer.Fix(yelloadwiseNativeBannerAd.title);
+				adCallToAction.text = ArabicSupport.ArabicFixer.Fix(yelloadwiseNativeBannerAd.callToActionText);
+				adBody.text = ArabicSupport.ArabicFixer.Fix(yelloadwiseNativeBannerAd.description);
+				adImage.texture = yelloadwiseNativeBannerAd.landscapeBannerImage;
         
-				tapsellPlusNativeBannerAd.RegisterImageGameObject(adImage.gameObject);
-				tapsellPlusNativeBannerAd.RegisterHeadlineTextGameObject(adHeadline.gameObject);
-				tapsellPlusNativeBannerAd.RegisterCallToActionGameObject(adCallToAction.gameObject);
-				tapsellPlusNativeBannerAd.RegisterBodyTextGameObject(adBody.gameObject);
+				yelloadwiseNativeBannerAd.RegisterImageGameObject(adImage.gameObject);
+				yelloadwiseNativeBannerAd.RegisterHeadlineTextGameObject(adHeadline.gameObject);
+				yelloadwiseNativeBannerAd.RegisterCallToActionGameObject(adCallToAction.gameObject);
+				yelloadwiseNativeBannerAd.RegisterBodyTextGameObject(adBody.gameObject);
 			},
 			error => {
 				Debug.Log ("onError " + error.errorMessage);
@@ -69,12 +69,12 @@ public void Show () {
 به عنوان مثال اگر یک GameObject از نوع RawImage به نام adImage در اختیار دارید، به کمک تکه کد زیر می‌توانید تصویر تبلیغ را در آن نمایش دهید:
 ```c#
 ...
-adImage.texture = tapsellPlusNativeBannerAd.landscapeBannerImage;
+adImage.texture = yelloadwiseNativeBannerAd.landscapeBannerImage;
 ...
 ```
 
 ### باز کردن تبلیغ
-برای باز کردن تبلیغ می‌باید ابتدا به هر کدام از GameObjectهایی که در مرحله‌ی پیش ایجاد کرده‌اید، یک Component از جنس Box Collider اضافه کنید و سپس Game Object را از طریق متدهای زیر به تپسل‌پلاس معرفی کنید. 
+برای باز کردن تبلیغ می‌باید ابتدا به هر کدام از GameObjectهایی که در مرحله‌ی پیش ایجاد کرده‌اید، یک Component از جنس Box Collider اضافه کنید و سپس Game Object را از طریق متدهای زیر به یلوادوایز‌پلاس معرفی کنید. 
 
 > دقت کنید که برای هر کدام از Game Objectها تیک Raycast Target را زده باشید به جز Button که تیک Raycast Target را از کامپوننت Image آن باید بردارید.
 

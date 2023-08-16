@@ -1,6 +1,6 @@
 ---
 layout: platform-details
-title: پلتفرم b4a تپسل پلاس
+title: پلتفرم b4a یلوادوایز
 lang: fa
 permalink: /plus-sdk/b4a/main/index.html
 toc: true

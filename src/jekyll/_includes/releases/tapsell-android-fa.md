@@ -26,13 +26,13 @@
     * نسخه retrofit2:converter-gson از 2.6.2 به 2.6.4
 
 ### v4.6.5 - 2021/05/04
-* [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
-* [حذف دسترسی PHONE_STATE](https://docs.tapsell.ir/tapsell-sdk/android/initialize/#%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3%DB%8C%D9%87%D8%A7)
+* [تغییر محل انتشار نسخه‌ها از Bintray به MavenCentral](https://docs.irancell.ir/yelloadwise-core/android/initialize/#%D8%AA%D9%86%D8%B8%DB%8C%D9%85%D8%A7%D8%AA-gradle)
+* [حذف دسترسی PHONE_STATE](https://docs.irancell.ir/yelloadwise-core/android/initialize/#%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3%DB%8C%D9%87%D8%A7)
 
 ### v4.6.3-rc5 - 2021/1/02
 * مطابقت با اندروید 11
 * حل مشکل callback ویدئوی همسان
-* [تغییرات جزئی در نحوه پیاده سازی بنر استاندارد](https://docs.tapsell.ir/tapsell-sdk/android/standard/)
+* [تغییرات جزئی در نحوه پیاده سازی بنر استاندارد](https://docs.irancell.ir/yelloadwise-core/android/standard/)
 * حذف متود deprecate شده‌ی loadAd برای تبلیغات همسان ویدئویی
 
 ### v4.6.2 - 2020/12/07

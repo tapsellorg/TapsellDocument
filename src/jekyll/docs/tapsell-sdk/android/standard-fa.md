@@ -2,31 +2,31 @@
 layout: classic-docs
 title: بنر استاندارد در اندروید
 lang: fa
-permalink: /tapsell-sdk/android/standard/index.html
+permalink: /yelloadwise-core/android/standard/index.html
 toc: true # table of contents
 ---
 
 <div class="alert alert-danger" role="alert" dir="rtl" markdown="0">
   <h4 class="alert-heading">&#9888; هشدار! این SDK دیگر پشتیبانی نمی‌شود &#9888;</h4>
-  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از تپسل استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.tapsell.ir/plus-sdk/android/standard/">تپسل‌پلاس</a> استفاده نمایید.</p>
+  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از یلوادوایز استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.yelloadwise.ir/plus-sdk/android/standard/">یلوادوایز‌پلاس</a> استفاده نمایید.</p>
   <hr>
-  <p class="mb-0">تپسل پلاس، علاوه بر دارا بودن تمام امکانات تپسل، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
+  <p class="mb-0">یلوادوایز، علاوه بر دارا بودن تمام امکانات یلوادوایز، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
   <p class="mb-0">همچنین فرصت کسب درآمد ارزی را از طریق نمایش تبلیغات شبکه‌های تبلیغاتی خارجی (نظیر AdMob) فراهم می‌کند.</p>
-  <p class="mb-0">نسخه‌های منتشر شده تپسل در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
+  <p class="mb-0">نسخه‌های منتشر شده یلوادوایز در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
 </div>
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل تپسل](https://dashboard.tapsell.ir/) یک تبلیغ‌گاه از نوع استاندارد بسازید.
+ابتدا از [پنل یلوادوایز](https://dashboard.yelloadwise.ir/) یک تبلیغ‌گاه از نوع استاندارد بسازید.
 
 ## افزودن به Layout
 مشابه روش زیر تبلیغ را به layout خود اضافه کنید.
 
 ```xml
-<ir.tapsell.sdk.bannerads.TapsellBannerView
+<ir.yelloadwise.core.bannerads.YelloadwiseBannerView
     android:id="@+id/banner"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:tapsell_banner_type="BANNER_SIZE" />
+    app:yelloadwise_banner_type="BANNER_SIZE" />
 ```
 
 مقدار `ZONE_ID` شناسه تبلیغ‌گاه هست که از پنل به آن دسترسی دارید.  
@@ -34,18 +34,18 @@ toc: true # table of contents
 
 | `java` | `xml` |
 | - | - |
-| `TapsellBannerType.BANNER_320x50` | `banner_320x50` |
-| `TapsellBannerType.BANNER_320x100` | `banner_320x100` |
-| `TapsellBannerType.BANNER_250x250` | `banner_250x250` |
-| `TapsellBannerType.BANNER_300x250` | `banner_300x250` |
+| `YelloadwiseBannerType.BANNER_320x50` | `banner_320x50` |
+| `YelloadwiseBannerType.BANNER_320x100` | `banner_320x100` |
+| `YelloadwiseBannerType.BANNER_250x250` | `banner_250x250` |
+| `YelloadwiseBannerType.BANNER_300x250` | `banner_300x250` |
 
 ## درخواست تبلیغ
 با روش زیر می‌توانید تبلیغ را نمایش دهید.
 ```java
-TapsellBannerView banner = findViewById(R.id.banner);
+YelloadwiseBannerView banner = findViewById(R.id.banner);
 banner.loadAd(CONTEXT, ZONE_ID, BANNER_SIZE);
 ```
-باید متد `loadAd` از ویوای که در فایل `xml` از نوع `TapsellBannerView` ساختید را صدا بزنید.  
+باید متد `loadAd` از ویوای که در فایل `xml` از نوع `YelloadwiseBannerView` ساختید را صدا بزنید.  
  ورودی اول `context` هست.  
  ورودی دوم شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
  ورودی سوم سایز بنری هست که میخواهید نمایش بدهید، و از ستون `java` جدول بالا می‌توانید مقادیر قابل قبول را به دست بیاورید. 
@@ -54,7 +54,7 @@ banner.loadAd(CONTEXT, ZONE_ID, BANNER_SIZE);
 مطابق کد زیر می‌توانید برای درخواست تبلیغ `listener` تعریف کنید.
 
 ```java
-banner.setEventListener(new TapsellBannerViewEventListener() {
+banner.setEventListener(new YelloadwiseBannerViewEventListener() {
     @Override
     public void onRequestFilled() {
     }
@@ -112,6 +112,6 @@ banner.showBannerView();
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        tapsellBannerView.destroy();
+        YelloadwiseBannerView.destroy();
     }
 ```

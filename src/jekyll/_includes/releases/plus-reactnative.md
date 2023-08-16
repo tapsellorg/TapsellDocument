@@ -1,13 +1,13 @@
 ## تغییرات نسخه‌ها:
 
-([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
+([جزئیات بیشتر تاریخچه](https://github.com/irancell/YelloadwiseSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
 ## 2.2.0 - 2023/06/01
-- رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
+- رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/irancell/YelloadwiseSDK-AndroidSample/issues/68)
 - اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی
 
-  <img width="350" src="https://github.com/tapsellorg/TapsellDocument/assets/38072572/da643aec-1cc5-4699-81f6-1bde4226f6bc"  alt='New Dialog UI'/>
-- به‌روز‌رسانی کتابخانه اندروید تپسل به نسخه `2.2.0`
+  <img width="350" src="https://github.com/irancell/irancell.irDocument/assets/38072572/da643aec-1cc5-4699-81f6-1bde4226f6bc"  alt='New Dialog UI'/>
+- به‌روز‌رسانی کتابخانه اندروید یلوادوایز به نسخه `2.2.0`
 - به‌روز‌رسانی نسخه‌ی ریکت‌نیتیو سمپل به `0.71.11`
 - رفع تعدادی از `Memory Leak` های گزارش شده
 - رفع تعدادی از مشکلات مربوط به `Proguard`
@@ -24,7 +24,7 @@
 - رفع مشکل کرش کردن metro bundler پس از افزودن پکیج
 
 #### Android
-- [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۸](https://docs.tapsell.ir/plus-sdk/android/main/#v218---20221121)
+- [بروزرسانی لایبرری اندروید یلوادوایز به نسخه‌ی ۲.۱.۸](https://docs.irancell.ir/plus-sdk/android/main/#v218---20221121)
 - افزودن پیکربندی قابل تنظیم برای فعال/غیرفعال‌سازی دکمه بازگشت بنر انتهایی در تبلیغات ویدیویی
 - افزودن پیکربندی قابل تنظیم جهت شخصی سازی دیالوگ بازگشت در تبلیغات ویدیویی
 - پشتیبانی از UnityAds نسخه 4.3.0 به بالا و رفع مشکلات در نمایش تبلیغات ویدیویی در UnityAds
@@ -35,8 +35,8 @@
 - بروزرسانی نسخه react native به ۰.۶۷.۴ و نسخه react به ۱۸.۰.۰ در اپلیکیشن سمپل
 
 #### Android
-- [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۷](https://docs.tapsell.ir/plus-sdk/android/main/#v217---20220328)
-- بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲ [#41](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/41)
+- [بروزرسانی لایبرری اندروید یلوادوایز به نسخه‌ی ۲.۱.۷](https://docs.irancell.ir/plus-sdk/android/main/#v217---20220328)
+- بروزرسانی لایبرری ادموب به نسخه ۲۰.۶.۰ و AppSetId به ۱۶.۰.۲ [#41](https://github.com/irancell/YelloadwiseSDK-AndroidSample/issues/41)
 
 
 ## 2.1.6 (05, Feb, 2022)
@@ -46,26 +46,26 @@
 - افزودن پشتیبانی از hermes engine در اپلیکیشن سمپل
 
 #### Android
-- [بروزرسانی لایبرری اندروید تپسل پلاس به نسخه‌ی ۲.۱.۶](https://docs.tapsell.ir/plus-sdk/android/main/#v216---20220111)
-- [بروزرسانی لایبرری اندروید تپسل به نسخه‌ی ۴.۷.۴](https://docs.tapsell.ir/tapsell-sdk/android/main/#474---20220110)
+- [بروزرسانی لایبرری اندروید یلوادوایز به نسخه‌ی ۲.۱.۶](https://docs.irancell.ir/plus-sdk/android/main/#v216---20220111)
+- [بروزرسانی لایبرری اندروید یلوادوایز به نسخه‌ی ۴.۷.۴](https://docs.irancell.ir/yelloadwise-core/android/main/#474---20220110)
 
 ## 2.1.3 (24, July, 2021)
-- [استفاده از نسخه‌ی ۲.۱.۳ تپسل پلاس](https://docs.tapsell.ir/plus-sdk/android/main/#v213---20210721)
-- [استفاده از نسخه‌ی ۴.۷.۲ تپسل](https://docs.tapsell.ir/tapsell-sdk/android/main/#472---20210720)
+- [استفاده از نسخه‌ی ۲.۱.۳ یلوادوایز](https://docs.irancell.ir/plus-sdk/android/main/#v213---20210721)
+- [استفاده از نسخه‌ی ۴.۷.۲ یلوادوایز](https://docs.irancell.ir/yelloadwise-core/android/main/#472---20210720)
 
 ### 2.1.2 (7 Jun, 2021)
-- [استفاده از نسخه‌ی ۲.۱.۲ تپسل پلاس](https://docs.tapsell.ir/plus-sdk/android/main/#v212---20210607)
-- [استفاده از نسخه‌ی ۴.۷.۱ تپسل](https://docs.tapsell.ir/tapsell-sdk/android/main/#v471---20210602)
+- [استفاده از نسخه‌ی ۲.۱.۲ یلوادوایز](https://docs.irancell.ir/plus-sdk/android/main/#v212---20210607)
+- [استفاده از نسخه‌ی ۴.۷.۱ یلوادوایز](https://docs.irancell.ir/yelloadwise-core/android/main/#v471---20210602)
 
 ### 2.1.1 (22, May, 2021)
 - طراحی مجدد المان‌های داخلی
-- بازنویسی `TapsellPlus.js` با استفاده از کلاس برای خوانایی بیشتر
+- بازنویسی `Yelloadwise.js` با استفاده از کلاس برای خوانایی بیشتر
 - اضافه‌شدن بنر استاندارد
 
 #### Android
 - بروزرسانی لایبرری اندروید به ۲.۱.۱
 - حذف دسترسی PHONE_STATE
-- پشتیبانی از تپسل نسخه‌ی ۴.۷.۰
+- پشتیبانی از یلوادوایز نسخه‌ی ۴.۷.۰
 - پشتیبانی از UnityAds نسخه‌ی ۳.۷.۱
 - پشتیبانی از AdMob نسخه‌ی ۱۹.۸.۰
 - پشتیبانی از بنر استاندارد و تبلیغ آنی در UnityAds

@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: تغییرات دشبورد تپسل
+title: تغییرات دشبورد یلوادوایز
 toc: true
 permalink: /dashboard-changes/
 lang: fa

@@ -1,12 +1,12 @@
 ---
 layout: classic-docs
-title: Initialization of Tapsell Plus SDK in Unity (iOS)
+title: Initialization of Yelloadwise SDK in Unity (iOS)
 lang: en
 permalink: /plus-sdk/unity/initialize-ios/index.html
 toc: true # table of contents
 ---
 
-> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/unity/) or check the [GitHub Issues](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample2019/issues?Q=is%3Aissue) page.
+> If there is a problem or ambiguity, please refer to [common issues]({{site.baseurl}}/faq/plus-sdk/unity/) or check the [GitHub Issues](https://github.com/yelloadwise.irorg/YelloadwiseSDK-UnitySample2019/issues?Q=is%3Aissue) page.
 {:data-title="Project build note" data-color="red"}
 
 ## Cocoapods installation
@@ -16,14 +16,14 @@ Tepsell Plus has been published on `Cocoapods` for easy use. If you have not yet
 $ sudo gem install cocoapods
 ```
 
-For more information, visit [Cocoapods](https://github.com/tapsellorg/TapsellPlusSDK-UnitySample/releases/download/v2.1/TapsellPlusUnity-v2.1.unitypackage) 
+For more information, visit [Cocoapods](https://github.com/irancellorg/YelloadwiseSDK-UnitySample/releases/download/v2.1/YelloadwiseUnity-v2.1.unitypackage) 
 
 ## Adding Tepsell Plus to Podfile
 Add the following lines to your Podfile:
 
 ```pod
-pod ‘TapsellPlusSDK’, ‘1.0.0’
-pod ‘TapsellPlusSDK/UnityPlugin’, ‘1.0.0’
+pod ‘YelloadwiseSDK’, ‘1.0.0’
+pod ‘YelloadwiseSDK/UnityPlugin’, ‘1.0.0’
 ```
 
 With this line, Tepsell Plus and all the required libraries are downloaded, the required configs are applied for each of them and added to your project.
