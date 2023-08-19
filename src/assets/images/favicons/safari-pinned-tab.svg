@@ -1,20 +1,17 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="100.000000pt" height="100.000000pt" viewBox="0 0 100.000000 100.000000"
- preserveAspectRatio="xMidYMid meet">
-<metadata>
-Created by potrace 1.11, written by Peter Selinger 2001-2013
-</metadata>
-<g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M472 902 c-52 -99 -90 -208 -98 -282 -9 -85 -5 -82 -78 -55 -35 13
--86 27 -114 31 -44 5 -51 4 -54 -12 -5 -26 11 -113 27 -144 23 -46 27 -70 13
--70 -21 0 -108 -58 -108 -72 0 -6 23 -33 50 -59 78 -73 186 -111 368 -131 20
--3 15 -8 -30 -38 -29 -19 -60 -38 -68 -42 -8 -4 -10 -7 -4 -7 5 -1 50 15 100
-35 49 20 156 60 239 89 l150 53 32 78 c18 44 32 85 33 91 0 7 -37 -11 -82 -40
--46 -29 -88 -56 -94 -60 -6 -4 0 21 13 54 28 68 32 151 14 232 -25 107 -111
-255 -218 376 l-48 53 -43 -80z"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<path d="M18.4,50c0-2,0.2-3.9,0.5-5.7H4.4c-0.2,1.9-0.4,3.8-0.4,5.7c0,25.4,20.6,45.9,45.9,45.9c1.9,0,3.9-0.1,5.7-0.4V81
+				c-1.9,0.3-3.8,0.5-5.7,0.5C32.6,81.6,18.4,67.4,18.4,50z"/>
+		</g>
+		<g>
+			<path d="M50,4.1C30.7,4.1,14.2,16,7.4,32.8h16.1c5.6-8.6,15.4-14.3,26.4-14.3c17.4,0,31.6,14.1,31.6,31.6
+				c0,11.1-5.7,20.8-14.3,26.4v16.1C84,85.8,95.9,69.3,95.9,50C95.9,24.6,75.4,4.1,50,4.1z"/>
+		</g>
+	</g>
 </g>
 </svg>
