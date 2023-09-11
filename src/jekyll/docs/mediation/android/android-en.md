@@ -34,7 +34,7 @@ that is needed later in this guide.
 
 ```groovy
 dependencies {
-    def tapsellVersion = "1.0.0-beta07"
+    def tapsellVersion = "1.0.0-beta08"
     implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
     implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
 }
@@ -64,6 +64,8 @@ The Tapsell Mediation SDK currently supports the following 3rd-party programmati
 * Chartboost
 * Mintegral
 * UnityAds
+* IronSource
+* Liftoff
 
 To integrate, add the adapter dependency you need to your module's app-level `build.gradle`:
 
@@ -74,6 +76,8 @@ implementation "ir.tapsell.mediation.adapter:applovin:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:chartboost:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:mintegral:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:unityads:$tapsellVersion"
+implementation "ir.tapsell.mediation.adapter:ironsource:$tapsellVersion"
+implementation "ir.tapsell.mediation.adapter:liftoff:$tapsellVersion"
 ```
 
 #### Additional Configuration
@@ -137,6 +141,20 @@ allprojects {
 ```
 
 - UnityAds
+
+No additional configuration needed.
+
+- IronSource
+
+```groovy
+allprojects {
+    repositories {
+        maven { url "https://android-sdk.is.com" }
+    }
+}
+```
+
+- Liftoff
 
 No additional configuration needed.
 
