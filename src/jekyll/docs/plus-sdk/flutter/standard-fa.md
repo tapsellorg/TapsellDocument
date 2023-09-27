@@ -15,6 +15,15 @@ toc: true # table of contents
 
 ```dart
 TapsellPlus.instance
+   .requestStandardBannerAd(
+       zoneId, TapsellPlusBannerType.BANNER_320x50, onResponse: (map) {
+              // SAVE the responseId
+            }, onError: (map) {
+            // Error when requesting for an ad
+            }
+              
+   });
+TapsellPlus.instance
     .requestStandardBannerAd(
         zoneId, TapsellPlusBannerType.BANNER_320x100)
     .then((responseId) {
