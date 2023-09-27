@@ -8,7 +8,7 @@
 - رفع کرش در زمان استفاده از GDPR با خطای `java.lang.SecurityException: Not allowed to access cell info` . لینک های مرتبط: [Link1](https://stackoverflow.com/a/63246124/8291919), [Link2](https://developer.android.com/reference/android/telephony/TelephonyManager#getAllCellInfo())
 
 #### Flutter
-- رفع کرش فلاتر در زمان درخواست بنر استاندارد. لینک های گیتهاب: [GH-15](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues/15), [GH-14](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues/14)
+- رفع کرش فلاتر در زمان درخواست بنر استاندارد. لینک های گیتهاب: [#15](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues/15), [#14](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues/14)
 
 ### 2023/06/21 [2.2.0]
 - رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68) 
