@@ -1,5 +1,15 @@
 ## Tapsell plus native Changelog
 
+### 2.2.3 (21 Jun, 2023)
+- Updated Tapsell legacy SDK to `4.8.4`
+- Updated `IMA` to `3.31.0`
+- Updated `ima-extension` implementation to `2.19.1` according to its GitHub repository [commits](https://github.com/google/ExoPlayer/commit/b8e1a0b4755efd42a0d45fb0e90a6b3304e9544b)
+- Updated `ExoPlayer` to `2.19.1`
+- Fixed crash when using **_GDPR_**: `java.lang.SecurityException: Not allowed to access cell info`. related to `telephonyManager.getAllCellInfo();` in native Android SDK. Related links: [Link1](https://stackoverflow.com/a/63246124/8291919), [Link2](https://developer.android.com/reference/android/telephony/TelephonyManager#getAllCellInfo())
+
+#### Flutter
+- Fixed flutter crash in Standard banner ads: `Reply already submitted` [GH-15](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues/15), [GH-14](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues/14)
+
 ### 2.2.0 (21 Jun, 2023)
 - Fixed Google Play policy error related to Collecting user's installed apps. [Issue #68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
 
