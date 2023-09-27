@@ -1,6 +1,6 @@
 ## Tapsell plus native Changelog
 
-### 2.2.3 (21 Jun, 2023)
+### 2.2.3 (27 Sep, 2023)
 - Updated Tapsell legacy SDK to `4.8.4`
 - Updated `IMA` to `3.31.0`
 - Updated `ima-extension` implementation to `2.19.1` according to its GitHub repository [commits](https://github.com/google/ExoPlayer/commit/b8e1a0b4755efd42a0d45fb0e90a6b3304e9544b)
