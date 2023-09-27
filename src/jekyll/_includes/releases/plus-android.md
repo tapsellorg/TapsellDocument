@@ -4,7 +4,7 @@
 - پشتیبانی از **Tapsell** `4.8.4` 
 - به‌روزرسانی کتابخانه `IMA` پری‌رول به نسخه `3.31.0`
 - به‌روزرسانی کتابخانه `ima-extension` به نسخه `2.19.1` با توجه به [کامیت‌های]([commits](https://github.com/google/ExoPlayer/commit/b8e1a0b4755efd42a0d45fb0e90a6b3304e9544b)) ریپوزیتوی
-- به‌روزرسانی کتابخانه `ExoPlayer` به نسخه `2.1.9.1`
+- به‌روزرسانی کتابخانه `ExoPlayer` به نسخه `2.19.1`
 - رفع کرش در زمان استفاده از GDPR با خطای `java.lang.SecurityException: Not allowed to access cell info` . لینک های مرتبط: [Link1](https://stackoverflow.com/a/63246124/8291919), [Link2](https://developer.android.com/reference/android/telephony/TelephonyManager#getAllCellInfo())
 
 #### Flutter
