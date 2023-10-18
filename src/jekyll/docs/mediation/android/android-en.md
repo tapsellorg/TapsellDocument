@@ -57,7 +57,7 @@ android {
 android {
     defaultConfig {
         manifestPlaceholders = [
-                TapsellMediationAppMarket: "YOUR_APP_MARKET",
+                TapsellMediationAppMarket: "YOUR_APP_MARKET",  // GooglePlay | CafeBazaar | Myket | ...
         ]
     }
 }
@@ -191,10 +191,12 @@ public class MainActivity extends AppCompatActivity {
 
 ### User GDPR consent
 
-The Tapsell SDK respects the GDPR user privacy policy. Considering this policy is required for most of the ad networks
-in markets like `GooglePlay`. The correct approach to manage the GDPR consent is showing a consent dialog in your
-application to choose an option by user. After user selection, you need to pass the user consent result to the Tapsell
-SDK. You can pass the result after initialization is completed by adding the following code:
+The Tapsell SDK respects the GDPR user privacy policy. Considering this policy is required for the apps published in
+markets like `GooglePlay`. All ad networks support the user consent policies as well as Tapsell SDK. The Tapsell
+mediation SDK manages the user consent for all implemented ad networks automatically. The correct approach to manage the
+GDPR consent is showing a consent dialog in your application to choose an option by user. After user selection, you need
+to pass the user consent result to the Tapsell SDK. You can pass the result after initialization is completed by adding
+the following code:
 
 ```java
    Tapsell.setInitializationListener(() -> {
