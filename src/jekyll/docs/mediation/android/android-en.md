@@ -1,5 +1,9 @@
 ---
-layout: no-sidebar-classic-docs title: Tapsell Mediation lang: en permalink: /mediation/android/ toc: true
+layout: no-sidebar-classic-docs
+title: Tapsell Mediation
+lang: en
+permalink: /mediation/android/
+toc: true
 ---
 
 <br/>
