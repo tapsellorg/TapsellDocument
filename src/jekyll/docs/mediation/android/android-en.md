@@ -41,8 +41,7 @@ dependencies {
 }
 ```
 
-2. Add a manifest placeholder inside your module's app-level `build.gradle` providing your Tapsell App ID collected from
-   your dashboard:
+2. Add a manifest placeholder inside your module's app-level `build.gradle` providing your Tapsell App ID collected from your dashboard:
 
 ```groovy
 android {
@@ -54,8 +53,7 @@ android {
 }
 ```
 
-3. Tapsell SDK needs you to define the market your Android application is supposed to be published in. You can specify
-   your market by adding the following manifest placeholder inside your module's app-level `build.gradle`:
+3. Tapsell SDK needs you to define the market your Android application is supposed to be published in. You can specify your market by adding the following manifest placeholder inside your module's app-level `build.gradle`:
 
 ```groovy
 android {
