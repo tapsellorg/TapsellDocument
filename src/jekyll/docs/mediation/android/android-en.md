@@ -1,32 +1,29 @@
 ---
-layout: no-sidebar-classic-docs
-title: Tapsell Mediation
-lang: en
-permalink: /mediation/android/
-toc: true
+layout: no-sidebar-classic-docs title: Tapsell Mediation lang: en permalink: /mediation/android/ toc: true
 ---
 
 <br/>
 
 # Tapsell Mediation
 
-Tapsell Mediation, is a Mediated solution helping businesses increase their mobile apps' revenue with the inclusion of other supported Programmatic & Mediated Ad Solutions.
+Tapsell Mediation, is a Mediated solution helping businesses increase their mobile apps' revenue with the inclusion of
+other supported Programmatic & Mediated Ad Solutions.
 
 <br/>
 
 ## Getting Started
 ---
 
-Integrating the Tapsell SDK into your app is the first step toward displaying ads and earning revenue. 
-Once you've integrated the SDK, you can choose an ad format (such as native or rewarded video) and follow the steps to implement it.
+Integrating the Tapsell SDK into your app is the first step toward displaying ads and earning revenue. Once you've
+integrated the SDK, you can choose an ad format (such as native or rewarded video) and follow the steps to implement it.
 
 ### Before You Begin
 
 To prepare your app, complete the following steps:
 
 - Make sure that your module's app-level `build.gradle` file uses a `compileSdkVersion` of 31 or higher
-- Make sure you have set up your app as an Tapsell Mediation app and have your unique Tapsell App ID 
-that is needed later in this guide.
+- Make sure you have set up your app as an Tapsell Mediation app and have your unique Tapsell App ID that is needed
+  later in this guide.
 
 ### Configure Your App
 
@@ -34,19 +31,33 @@ that is needed later in this guide.
 
 ```groovy
 dependencies {
-    def tapsellVersion = "1.0.0-beta09"
+    def tapsellVersion = "1.0.0-beta10"
     implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
     implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
 }
 ```
 
-2. Add a manifest placeholder inside your module's app-level `build.gradle` providing your Tapsell App ID collected from your dashboard:
+2. Add a manifest placeholder inside your module's app-level `build.gradle` providing your Tapsell App ID collected from
+   your dashboard:
 
 ```groovy
 android {
     defaultConfig {
         manifestPlaceholders = [
                 TapsellMediationAppKey: "YOUR_APP_ID",
+        ]
+    }
+}
+```
+
+3. Tapsell SDK needs you to define the market your Android application is supposed to be published in. You can specify
+   your market by adding the following manifest placeholder inside your module's app-level `build.gradle`:
+
+```groovy
+android {
+    defaultConfig {
+        manifestPlaceholders = [
+                TapsellMediationAppMarket: "YOUR_APP_MARKET",
         ]
     }
 }
@@ -158,11 +169,10 @@ allprojects {
 
 No additional configuration needed.
 
-
 ### Set Initialization Listener
 
-You can set a listener to be notified of the SDK's initialization. The `onInitializationComplete` will
-be called once all the mediation adapters are initialized.
+You can set a listener to be notified of the SDK's initialization. The `onInitializationComplete` will be called once
+all the mediation adapters are initialized.
 
 ```java
 import ir.tapsell.mediation.Tapsell;
@@ -179,42 +189,59 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+### User GDPR consent
+
+The Tapsell SDK respects the GDPR user privacy policy. Considering this policy is required for most of the ad networks
+in markets like `GooglePlay`. The correct approach to manage the GDPR consent is showing a consent dialog in your
+application to choose an option by user. After user selection, you need to pass the user consent result to the Tapsell
+SDK. You can pass the result after initialization is completed by adding the following code:
+
+```java
+   Tapsell.setInitializationListener(() -> {
+       // initialization Completed
+       Tapsell.setUserConsent(activity, true);
+   });
+```
+
+To avoid showing consent dialog to th user each time, you can store user preferences to your app. But you need to pass
+the latest stored user consent to the Tapsell SDK by invoking the above function.
+
 <br/>
 
 ## Implementing Ad Formats
 ---
 
-The Tapsell SDK is now imported and you're ready to implement an ad. Tapsell offers a number of 
-different ad formats, so you can choose the one that best fits your app's user experience.
+The Tapsell SDK is now imported and you're ready to implement an ad. Tapsell offers a number of different ad formats, so
+you can choose the one that best fits your app's user experience.
 
-Make sure you have created the ad placements (zones) in your app's dashboard and have the unique id
-for each zone needed later in this guide.
+Make sure you have created the ad placements (zones) in your app's dashboard and have the unique id for each zone needed
+later in this guide.
 
 ### Banner
 
-Rectangular ads that appear on the device screen usually at the top or bottom. 
-Banner ads stay on screen while users are interacting with the app, and can refresh automatically 
-after a certain period of time. If you're new to mobile advertising, they're a great place to start.
+Rectangular ads that appear on the device screen usually at the top or bottom. Banner ads stay on screen while users are
+interacting with the app, and can refresh automatically after a certain period of time. If you're new to mobile
+advertising, they're a great place to start.
 
-This guide shows you how to integrate banner ads from Tapsell into your Android app. 
+This guide shows you how to integrate banner ads from Tapsell into your Android app.
 
 #### Add Tapsell Banner Ad Container To Your Layout
 
-The first step toward displaying a banner is to place a `BannerContainer` in the layout of 
-the Activity or Fragment in which you'd like to display it. The easiest way to do this is to add 
-one to the corresponding XML layout file. Here's an example that shows an activity's `BannerContainer`:
+The first step toward displaying a banner is to place a `BannerContainer` in the layout of the Activity or Fragment in
+which you'd like to display it. The easiest way to do this is to add one to the corresponding XML layout file. Here's an
+example that shows an activity's `BannerContainer`:
 
 ```xml
 <!-- main_activity.xml-->
 <!--...-->
-    <ir.tapsell.mediation.ad.views.banner.BannerContainer
-      android:id="@+id/bannerContainerView"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_centerHorizontal="true"
-      android:layout_alignParentBottom="true">
-    </ir.tapsell.mediation.ad.views.banner.BannerContainer>
-<!--...-->
+<ir.tapsell.mediation.ad.views.banner.BannerContainer
+  android:id="@+id/bannerContainerView"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_centerHorizontal="true"
+  android:layout_alignParentBottom="true">
+</ir.tapsell.mediation.ad.views.banner.BannerContainer>
+  <!--...-->
 ```
 
 You can alternatively create a `BannerContainer` programmatically:
@@ -236,8 +263,8 @@ public class MainActivity extends AppCompatActivity {
 
 #### Load A Banner Ad
 
-Once the `BannerContainer` is in place, the next step is to load an ad. 
-That's done with the `requestBannerAd()` static method in Tapsell class. 
+Once the `BannerContainer` is in place, the next step is to load an ad. That's done with the `requestBannerAd()` static
+method in Tapsell class.
 
 ```java
 public static void requestBannerAd(String zoneId, BannerSize bannerSize, RequestResultListener listener)
@@ -258,7 +285,8 @@ enum BannerSize {
 }
 ```
 
-You need to provide a class implementing the `RequestResultListener` interface to get the ad load result overriding the success and failure methods:
+You need to provide a class implementing the `RequestResultListener` interface to get the ad load result overriding the
+success and failure methods:
 
 ```java
 interface RequestResultListener {
@@ -311,17 +339,16 @@ public class MainActivity extends AppCompatActivity {
 
 #### Show The Loaded Banner Ad
 
-Once the banner ad is successfully loaded, the next step is to show the ad.
-That's done with the `showBannerAd()` static method in Tapsell class passing 
-the `adId` received in `onSuccess` method of the `RequestResultListener` and
+Once the banner ad is successfully loaded, the next step is to show the ad. That's done with the `showBannerAd()` static
+method in Tapsell class passing the `adId` received in `onSuccess` method of the `RequestResultListener` and
 the `BannerContainer` view added to your layout in which you intend to show the ad.
 
 ```java
 public static void showBannerAd(String adId, BannerContainer container, Activity activity, AdStateListener.Banner listener)
 ```
 
-The `AdStateListener.Banner` optional parameter can be passed to monitor and handle events
-related to displaying your banner ad. The interface has the following implementation:
+The `AdStateListener.Banner` optional parameter can be passed to monitor and handle events related to displaying your
+banner ad. The interface has the following implementation:
 
 ```java
 AdStateListener.Banner listener = new AdStateListener.Banner() {
@@ -344,8 +371,8 @@ AdStateListener.Banner listener = new AdStateListener.Banner() {
 
 #### Destroy Banner Ad
 
-When you are done showing your banner ad, you should destroy it so that the ad is properly garbage collected.
-The example below shows the destroy call in the onDestroy() method of an activity:
+When you are done showing your banner ad, you should destroy it so that the ad is properly garbage collected. The
+example below shows the destroy call in the onDestroy() method of an activity:
 
 ```java
 import ir.tapsell.mediation.Tapsell;
@@ -361,19 +388,17 @@ public class MainActivity extends AppCompatActivity {
 
 ### Interstitial
 
-Interstitial ads are full-screen ads that cover the interface of their host app. 
-They're typically displayed at natural transition points in the flow of an app, such as between 
-activities or during the pause between levels in a game. When an app shows an interstitial ad, 
-the user has the choice to either tap on the ad and continue to its destination or close it and 
-return to the app.
+Interstitial ads are full-screen ads that cover the interface of their host app. They're typically displayed at natural
+transition points in the flow of an app, such as between activities or during the pause between levels in a game. When
+an app shows an interstitial ad, the user has the choice to either tap on the ad and continue to its destination or
+close it and return to the app.
 
 This guide shows you how to integrate interstitial ads from Tapsell into your Android app.
 
 #### Load An Interstitial Ad
 
-To load an interstitial ad, call the `requestInterstitialAd` static method of Tapsell class 
-passing in the zone identifier and a `RequestResultListener` to receive the loaded ad id 
-or possible failure notice.
+To load an interstitial ad, call the `requestInterstitialAd` static method of Tapsell class passing in the zone
+identifier and a `RequestResultListener` to receive the loaded ad id or possible failure notice.
 
 ```java
 public static void requestInterstitialAd(String zoneId, RequestResultListener listener)
@@ -428,17 +453,17 @@ public class MainActivity extends AppCompatActivity {
 
 #### Show The Loaded Interstitial Ad
 
-Once the interstitial ad is successfully loaded, the next step is to show the ad.
-Interstitial ads should be displayed during natural pauses in the flow of an app. Between levels of a game is a good example, or after the user completes a task.
-To do so simply call the `showInterstitialAd()` static method in Tapsell class
-passing the `adId` received in `onSuccess` method of the `RequestResultListener`.
+Once the interstitial ad is successfully loaded, the next step is to show the ad. Interstitial ads should be displayed
+during natural pauses in the flow of an app. Between levels of a game is a good example, or after the user completes a
+task. To do so simply call the `showInterstitialAd()` static method in Tapsell class passing the `adId` received
+in `onSuccess` method of the `RequestResultListener`.
 
 ```java
 public static void showInterstitialAd(String adId, Activity activity, AdStateListener.Interstitial listener)
 ```
 
-The `AdStateListener.Interstitial` optional parameter can be passed to monitor and handle events 
-related to displaying your interstitial ad. The interface has the following implementation:
+The `AdStateListener.Interstitial` optional parameter can be passed to monitor and handle events related to displaying
+your interstitial ad. The interface has the following implementation:
 
 ```java
 AdStateListener.Interstitial listener = new AdStateListener.Interstitial() {
@@ -464,8 +489,8 @@ AdStateListener.Interstitial listener = new AdStateListener.Interstitial() {
 );
 ```
 
-The `AdShowCompletionState` passed in `onAdClosed` callback, indicates whether the ad has been shown completely
-or skipped by the user before completion.
+The `AdShowCompletionState` passed in `onAdClosed` callback, indicates whether the ad has been shown completely or
+skipped by the user before completion.
 
 ```java
 enum AdShowCompletionState {
@@ -477,17 +502,16 @@ enum AdShowCompletionState {
 
 ### Rewarded
 
-Rewarded ads are full-screen ads that reward users for watching short videos and interacting with 
-playable ads and surveys. They are used for monetizing free-to-play apps.
+Rewarded ads are full-screen ads that reward users for watching short videos and interacting with playable ads and
+surveys. They are used for monetizing free-to-play apps.
 
 This guide shows you how to integrate rewarded ads from Tapsell into your Android app.
 
 #### Load A Rewarded Ad
 
-Rewarded ads are loaded by calling the `requestRewardedAd` static method of the Tapsell class; 
-passing in the zone identifier and a `RequestResultListener` to receive the loaded ad id
-or possible failure notice.
-This is usually done in the onCreate() method of an Activity.
+Rewarded ads are loaded by calling the `requestRewardedAd` static method of the Tapsell class; passing in the zone
+identifier and a `RequestResultListener` to receive the loaded ad id or possible failure notice. This is usually done in
+the onCreate() method of an Activity.
 
 ```java
 public static void requestRewardedAd(String zoneId, RequestResultListener listener)
@@ -542,17 +566,16 @@ public class MainActivity extends AppCompatActivity {
 
 #### Show The Loaded Rewarded Ad
 
-Once the rewarded ad is successfully loaded, the next step is to show the ad.
-To do so simply call the `showRewardedAd()` static method in Tapsell class
-passing the `adId` received in `onSuccess` method of the `RequestResultListener`.
+Once the rewarded ad is successfully loaded, the next step is to show the ad. To do so simply call
+the `showRewardedAd()` static method in Tapsell class passing the `adId` received in `onSuccess` method of
+the `RequestResultListener`.
 
 ```java
 public static void showRewardedAd(String adId, Activity activity, AdStateListener.Rewarded listener)
 ```
 
-The `AdStateListener.Rewarded` optional parameter can be passed to monitor and handle events
-related to displaying your rewarded ad; specially when the user should be rewarded. 
-The interface has the following implementation:
+The `AdStateListener.Rewarded` optional parameter can be passed to monitor and handle events related to displaying your
+rewarded ad; specially when the user should be rewarded. The interface has the following implementation:
 
 ```java
 AdStateListener.Rewarded listener = new AdStateListener.Rewarded() {
@@ -583,8 +606,8 @@ AdStateListener.Rewarded listener = new AdStateListener.Rewarded() {
 );
 ```
 
-The `AdShowCompletionState` passed in `onAdClosed` callback, indicates whether the ad has been shown completely
-or skipped by the user before completion.
+The `AdShowCompletionState` passed in `onAdClosed` callback, indicates whether the ad has been shown completely or
+skipped by the user before completion.
 
 ```java
 enum AdShowCompletionState {
@@ -596,93 +619,98 @@ enum AdShowCompletionState {
 
 ### Native
 
-Native ads are ad assets that are presented to users through UI components that are native to the platform.
-They are shown using the same types of views with which you are already building your layouts, 
-and can be formatted to match your app's visual design.
+Native ads are ad assets that are presented to users through UI components that are native to the platform. They are
+shown using the same types of views with which you are already building your layouts, and can be formatted to match your
+app's visual design.
 
 This guide shows you how to integrate native ads from Tapsell into your Android app.
 
 #### Add Tapsell Native Views To Your Layout
 
-The first step toward displaying a native ad is to create your ad layout using the same views you use in your application. Note that the design and format of the ad layout is completely in your own hands to match your app's design. The only thing you need to consider in your 
-layout design is that you must put all your ad layout views inside a `NativeAdViewContainer`, provided by Tapsell SDK:
+The first step toward displaying a native ad is to create your ad layout using the same views you use in your
+application. Note that the design and format of the ad layout is completely in your own hands to match your app's
+design. The only thing you need to consider in your layout design is that you must put all your ad layout views inside
+a `NativeAdViewContainer`, provided by Tapsell SDK:
 
 - ir.tapsell.mediation.ad.views.ntv.**NativeAdViewContainer**
 
-    A custom Android `FrameLayout` that must be used as the parent view of the native ad item views. All your ad views providing the content of the ad,
-like title view, logo view and so on, must be placed inside a `NativeAdViewContainer` view. 
+  A custom Android `FrameLayout` that must be used as the parent view of the native ad item views. All your ad views
+  providing the content of the ad, like title view, logo view and so on, must be placed inside a `NativeAdViewContainer`
+  view.
 
 Here's an example that shows an ad layout inside the activity layout:
 
 ```xml
 <!----------------------- activity_main.xml -------------------------->
 
-        ... 
+  ...
 
-<!-- container -->
+  <!-- container -->
 <ir.tapsell.mediation.ad.views.ntv.NativeAdViewContainer
-    android:id="@+id/tapsell_native_ad_container"
-    ... >
+  android:id="@+id/tapsell_native_ad_container"
+  ... >
 
-    <!-- ad layout (a layout of your choice) -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+  <!-- ad layout (a layout of your choice) -->
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-        <!-- logo view -->
-        <ImageView
-            android:id="@+id/tapsell_native_ad_logo"
-            ... />
-        
-        <!-- title view -->  
-        <TextView
-            android:id="@+id/tapsell_native_ad_title"
-            ... />
+<!-- logo view -->
+<ImageView
+  android:id="@+id/tapsell_native_ad_logo"
+... />
 
-        <!-- description view -->
-        <TextView
-            android:id="@+id/tapsell_native_ad_description"
-            ... />
+<!-- title view -->
+<TextView
+  android:id="@+id/tapsell_native_ad_title"
+... />
 
-        <!-- sponsored text view -->
-        <TextView
-            android:id="@+id/tapsell_native_ad_sponsored"
-            ... />
+<!-- description view -->
+<TextView
+  android:id="@+id/tapsell_native_ad_description"
+... />
 
-        <!-- CTA button view -->
-        <Button
-            android:id="@+id/tapsell_native_ad_cta"
-            ... />
-        
-        <!-- media view -->
-        <FrameLayout
-            android:id="@+id/tapsell_native_ad_media"
-            ... />
-      
-    </RelativeLayout>
+<!-- sponsored text view -->
+<TextView
+  android:id="@+id/tapsell_native_ad_sponsored"
+... />
 
-</ir.tapsell.mediation.ad.views.ntv.NativeAdViewContainer>
+<!-- CTA button view -->
+<Button
+  android:id="@+id/tapsell_native_ad_cta"
+... />
+
+<!-- media view -->
+<FrameLayout
+  android:id="@+id/tapsell_native_ad_media"
+... />
+
+</RelativeLayout>
+
+  </ir.tapsell.mediation.ad.views.ntv.NativeAdViewContainer>
 ```
 
-As an alternative to adding the ad layout directly to the activity layout, you can only place the `NativeAdViewContainer` and have your ad layout in a separate layout file, attaching it programmatically. See the sample below:
+As an alternative to adding the ad layout directly to the activity layout, you can only place
+the `NativeAdViewContainer` and have your ad layout in a separate layout file, attaching it programmatically. See the
+sample below:
 
 ```xml
 <!----------------------- activity_main.xml -------------------------->
 
-        ... 
+  ...
 
-<!-- container -->
+  <!-- container -->
 <ir.tapsell.mediation.ad.views.ntv.NativeAdViewContainer
-    android:id="@+id/tapsell_native_ad_container"
-    ... />
+  android:id="@+id/tapsell_native_ad_container"
+  ... />
 
-<!----------------------- native_ad.xml -------------------------->
+  <!----------------------- native_ad.xml -------------------------->
 
-<!-- ad layout (a layout of your choice) -->
+  <!-- ad layout (a layout of your choice) -->
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content">
 
 <!--  ad content views  -->
 
@@ -707,14 +735,15 @@ public class MainActivity extends AppCompatActivity {
 
 #### Load A Native Ad
 
-Once the layout is ready, the next step is to load an ad.
-That's done with the `requestNativeAd()` static method in Tapsell class.
+Once the layout is ready, the next step is to load an ad. That's done with the `requestNativeAd()` static method in
+Tapsell class.
 
 ```java
 public static void requestNativeAd(String zoneId, RequestResultListener listener)
 ```
 
-You need to provide a class implementing the `RequestResultListener` interface to get the ad load result overriding the success and failure methods:
+You need to provide a class implementing the `RequestResultListener` interface to get the ad load result overriding the
+success and failure methods:
 
 ```java
 interface RequestResultListener {
@@ -757,9 +786,8 @@ public class MainActivity extends AppCompatActivity {
 
 #### Show The Loaded Native Ad
 
-Once the native ad is successfully loaded, the next step is to show the ad.
-That's done with the `showNativeAd()` static method in Tapsell class 
-passing the `adId` received in `onSuccess` method of the `RequestResultListener` and an instance 
+Once the native ad is successfully loaded, the next step is to show the ad. That's done with the `showNativeAd()` static
+method in Tapsell class passing the `adId` received in `onSuccess` method of the `RequestResultListener` and an instance
 of `NativeAdView` populated with the ad views you used in your layout.
 
 ```java
@@ -782,9 +810,8 @@ NativeAdView.Builder(YOUR_CONTAINER_VIEW) // NativeAdViewContainer
 
 Note that depending on your ad design you can only include and provide a subset of the possible ad items.
 
-The `AdStateListener.Native` optional parameter can be passed to monitor and handle events
-related to displaying your native ad.
-The interface has the following implementation:
+The `AdStateListener.Native` optional parameter can be passed to monitor and handle events related to displaying your
+native ad. The interface has the following implementation:
 
 ```java
 AdStateListener.Native listener = new AdStateListener.Native() {
@@ -807,8 +834,8 @@ AdStateListener.Native listener = new AdStateListener.Native() {
 
 #### Destroy Native Ad
 
-When you are done showing your native ad, you should destroy it so that the ad is properly garbage collected.
-The example below shows the destroy call in the onDestroy() method of an activity:
+When you are done showing your native ad, you should destroy it so that the ad is properly garbage collected. The
+example below shows the destroy call in the onDestroy() method of an activity:
 
 ```java
 import ir.tapsell.mediation.Tapsell;
