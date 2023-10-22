@@ -112,39 +112,39 @@ To integrate each SDK, download the corresponding adapter package from the links
 
 - AdColony
 
-No additional configuration needed.
+      No additional configuration needed.
 
 - Admob
 
-In the Tapsell settings menu, add your Admob adapter app signature. (Contact Tapsell support for more information)
+      In the Tapsell settings menu, add your Admob adapter app signature. (Contact Tapsell support for more information)
 
 <img src="/images/mediation-unity-set-admob-id.png" alt="set-admob-signature" />
 
 - Applovin
 
-In the Tapsell settings menu, add your Applovin adapter app signature. (Contact Tapsell support for more information)
+      In the Tapsell settings menu, add your Applovin adapter app signature. (Contact Tapsell support for more information)
 
 <img src="/images/mediation-unity-set-applovin-sig.png" alt="set-applovin-signature" />
 
 - Chartboost
 
-No additional configuration needed.
+      No additional configuration needed.
 
 - Mintegral
 
-No additional configuration needed.
+      No additional configuration needed.
 
 - UnityAds
 
-No additional configuration needed.
+      No additional configuration needed.
 
 - IronSource
 
-No additional configuration needed.
+      No additional configuration needed.
 
 - Liftoff
 
-**Note:** This adapter needs Unity Editor 2023 and above. No need to implement if you're using lower versions.
+      Note: This adapter needs Unity Editor 2023 and above. No need to implement if you're using lower versions.
 
 <br/>
 
