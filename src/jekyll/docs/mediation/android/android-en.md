@@ -33,36 +33,36 @@ To prepare your app, complete the following steps:
 
 1. Add the dependencies for the Tapsell Mediation SDK to your module's app-level `build.gradle`:
 
-```groovy
-dependencies {
-    def tapsellVersion = "1.0.0-beta10"
-    implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
-    implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
-}
-```
+  ```groovy
+  dependencies {
+      def tapsellVersion = "1.0.0-beta10"
+      implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
+      implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
+  }
+  ```
 
 2. Add a manifest placeholder inside your module's app-level `build.gradle` providing your Tapsell App ID collected from your dashboard:
 
-```groovy
-android {
-    defaultConfig {
-        manifestPlaceholders = [
-                TapsellMediationAppKey: "YOUR_APP_ID",
-        ]
-    }
-}
-```
+  ```groovy
+  android {
+      defaultConfig {
+          manifestPlaceholders = [
+                  TapsellMediationAppKey: "YOUR_APP_ID",
+          ]
+      }
+  }
+  ```
 
 3. Tapsell SDK needs you to define the market your Android application is supposed to be published in. You can specify your market by adding the following manifest placeholder inside your module's app-level `build.gradle`:
 
-```groovy
-android {
-    defaultConfig {
-        manifestPlaceholders = [
-                TapsellMediationAppMarket: "YOUR_APP_MARKET",  // GooglePlay | CafeBazaar | Myket | ...
-        ]
-    }
-}
+  ```groovy
+  android {
+      defaultConfig {
+          manifestPlaceholders = [
+                  TapsellMediationAppMarket: "YOUR_APP_MARKET",  // GooglePlay | CafeBazaar | Myket | ...
+          ]
+      }
+  }
 ```
 
 No additional configuration or code is needed to initialize the SDK.
