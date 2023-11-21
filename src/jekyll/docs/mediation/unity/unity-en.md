@@ -84,6 +84,24 @@ Enter the Android market that you want to publish your app there
 
 <br/>
 
+### User GDPR consent
+
+The Tapsell SDK respects the GDPR user privacy policy. Considering this policy is required for the apps published in
+markets like `GooglePlay`. All ad networks support the user consent policies as well as Tapsell SDK. The Tapsell
+mediation SDK manages the user consent for all implemented ad networks automatically. The correct approach to manage the
+GDPR consent is showing a consent dialog in your application to choose an option by user. After user selection, you need
+to pass the user consent result to the Tapsell SDK. You can pass the result after initialization is completed by adding
+the following code:
+
+```c#
+   Tapsell.Mediation.Tapsell.SetUserConsent(true);
+```
+
+To avoid showing consent dialog to the user each time, you can store user preferences to your app. But you need to pass
+the latest stored user consent to the Tapsell SDK by invoking the above function.
+
+<br/>
+
 No additional configuration or code is needed to initialize the SDK.
 
 <br/>

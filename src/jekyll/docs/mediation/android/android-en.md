@@ -207,7 +207,7 @@ the following code:
    });
 ```
 
-To avoid showing consent dialog to th user each time, you can store user preferences to your app. But you need to pass
+To avoid showing consent dialog to the user each time, you can store user preferences to your app. But you need to pass
 the latest stored user consent to the Tapsell SDK by invoking the above function.
 
 <br/>
