@@ -84,6 +84,16 @@ Activity activity = this;
 TapsellPlus.showGDPRDialog(activity);
 ```
 
+### Family Policy
+
+According to the [GooglePlay Family Policy](https://support.google.com/googleplay/android-developer/answer/9893335?hl=en), if 
+any of the target audiences for your app is children (especially if you're developing a game), 
+your app's content must be appropriate for these type of users. Also, you are not allowed to collect some personal information 
+like Google Advertising ID. However, the third party advertising SDKs need this advertising id to provide and serve personalized ads for users. 
+As a result, in Tapsell SDK all users are treated as 13 or older. So as an application developer if you're going to 
+publish your app in GooglePlay, you need to express that your app targets audiences with age of 13 or older. 
+Otherwise, your app will be removed from GooglePlay according to this policy.
+
 ## Optional permission
 
 - `READ_PHONE_STATE`:
