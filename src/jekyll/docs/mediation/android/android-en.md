@@ -35,7 +35,7 @@ To prepare your app, complete the following steps:
 
   ```groovy
   dependencies {
-      def tapsellVersion = "1.0.0-beta10"
+      def tapsellVersion = "1.0.1-beta03"
       implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
       implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
   }
@@ -852,3 +852,8 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+
+
+### PreRoll
+
+You can find the PreRoll implementation details [here](preroll/index.html)
