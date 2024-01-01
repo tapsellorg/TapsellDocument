@@ -28,6 +28,9 @@ en:
 
           - name: Test
             link: /plus-sdk/android/adnetworks-test
+
+          - name: Playable
+            link: /plus-sdk/android/playable
       - name: Unity
         link: /plus-sdk/unity/main
         children:
@@ -108,6 +111,9 @@ fa:
 
           - name: خطاهای فنی رایج
             link: /faq/plus-sdk/android/
+
+          - name: Playable
+            link: /plus-sdk/android/playable
 
       - name: Unity
         link: /plus-sdk/unity/main
