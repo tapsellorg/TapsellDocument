@@ -1,6 +1,6 @@
 ---
 layout: classic-docs
-title: مستندات تپسل 
+title: مستندات تپسل
 description: شبکه هوشمند تبلیغات دیجیتال
 hideTitle: true
 lang: fa
@@ -38,9 +38,20 @@ permalink: /
       </div>
       <h2 class="clickable-box-title">تبلیغ دهنده</h2>
       <p class="clickable-box-desc">می‌خواهم برای کسب و کار خود در پلتفرم تپسل کمپین تبلیغاتی تعریف کنم.</p>
-      <a href="/faq/advertiser">
-        <button class="clickable-box-button btn btn-secondary">سوالات متداول تبلیغ‌دهنده‌ها</button>
-      </a>
+
+
+<div class="row mt-3">
+        <div class="col-6">
+          <a href="/faq/advertiser">
+            <button class="clickable-box-button btn btn-secondary">سوالات متداول<br>تبلیغ‌دهنده‌ها</button>
+          </a>
+        </div>
+        <div class="col-6">
+          <a href="/advertiser/playable">
+            <button class="clickable-box-button btn btn-gray">ورود به مستندات فنی تبلیغ‌دهنده‌ها</button>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

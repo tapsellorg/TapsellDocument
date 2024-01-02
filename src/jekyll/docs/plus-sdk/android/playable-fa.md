@@ -2,7 +2,7 @@
 layout: classic-docs
 title: پیاده سازی تبلیغات Playable
 lang: fa
-permalink: /plus-sdk/android/playable/index.html
+permalink: /advertiser/playable/index.html
 toc: true
 ---
 
@@ -16,7 +16,7 @@ toc: true
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-  <script src='dist/tapsell-playable.js'></script>
+  <script src='YOUR_DIR/tapsell-playable.js'></script>
 </head>
 
 <body>
