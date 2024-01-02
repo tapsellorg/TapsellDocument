@@ -234,7 +234,7 @@ fa:
       - name: سیستم صحت سنجی
         link: /s2s
 
-  - name: مستندات فنی تبلیغ دهنده‌ها
+  - name: تبلیغ دهنده‌ها
     icon: m-sdk
     children:
       - name: Playable
