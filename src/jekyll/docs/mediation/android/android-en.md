@@ -864,4 +864,4 @@ You can find the PreRoll implementation details [here](preroll/index.html)
 ## Test keys
 ---
 
-To use test app keys and zones, you can refer to this [link](../test.html)
+To use test app keys and zones, you can refer to this [link](../test)
