@@ -1,3 +1,13 @@
+---
+layout: no-sidebar-classic-docs
+title: Tapsell Mediation
+lang: en
+permalink: /mediation/test/
+toc: true
+---
+
+<br/>
+
 ## Test App Keys
 
 first add the following keys in your module level `build.gradle` file:
