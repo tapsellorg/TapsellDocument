@@ -857,3 +857,11 @@ public class MainActivity extends AppCompatActivity {
 ### PreRoll
 
 You can find the PreRoll implementation details [here](preroll/index.html)
+
+
+<br/>
+
+## Test keys
+---
+
+To use test app keys and zones, you can refer to this [link](../test.html)

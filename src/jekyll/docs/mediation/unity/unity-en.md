@@ -619,4 +619,11 @@ public static void ShowNativeAd(string adId, NativeAdView view, Action onImpress
 > 
 > [This Plugin](https://github.com/pnarimani/RTLTMPro) is a customization of TextMeshPro that you could use 
 > for this purpose.
-> 
+>
+
+<br/>
+
+## Test keys
+---
+
+To use test app keys and zones, you can refer to this [link](../test.html)
