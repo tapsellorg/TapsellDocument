@@ -64,6 +64,7 @@ defaultConfig {
 | Liftoff (Vungle) |    Rewarded    | `0f447ea1-6b11-4e39-b942-712e2d696d78` |
 | Liftoff (Vungle) |  Interstitial  | `2316460a-fbcc-4e29-8a8e-f10ef5358b3b` |
 | Liftoff (Vungle) |     Banner     | `c066375e-da10-45a8-be3b-6edf5668a0e4` |
+| Liftoff (Vungle) |     Native     | `8ba28550-a749-4226-a4dc-81191949ec88` |
 |    ChartBoost    |    Rewarded    | `3dde311c-daf5-4a6b-8ce7-08a4103cfb7f` |
 |    ChartBoost    |  Interstitial  | `0d3e6f6d-8a11-4c32-a076-4415c03132a9` |
 |    ChartBoost    |     Banner     | `0d3e6f6d-8a11-4c32-a076-4415c03132a9` |
