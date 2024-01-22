@@ -1,6 +1,15 @@
 ## Release Notes:
 
-### v4.8.6 - 2020/12/10
+### 4.8.8 - 2024/01/07
+#### Android
+- Fixed logger crash by avoid printing the log when message is null.
+- Added failure callback for `previous request is still trying ...` situation.
+
+### v4.8.7 - 2023/12/19
+#### Android
+* Changed clickable view parts in Native Banner to improve CTR
+
+### v4.8.6 - 2023/12/10
 * Added `pause` and `resume` methods to `Native Video` class.
 * Fixed crash related to OkHttp in Android 4 by Downgrading Retrofit to `2.5.0`
 
