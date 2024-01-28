@@ -35,7 +35,7 @@ To prepare your app, complete the following steps:
 
   ```groovy
   dependencies {
-      def tapsellVersion = "1.0.1-beta03"
+      def tapsellVersion = "1.0.1-beta04"
       implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
       implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
   }
