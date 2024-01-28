@@ -26,7 +26,7 @@ Make sure to add the IMA gradle dependency to your project.
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.1-beta03"
+      def tapsellVersion = "1.0.1-beta04"
       implementation("com.google.ads.interactivemedia.v3:interactivemedia:$imaVersion") // Google IMA Adapter
   }
   ```
@@ -140,7 +140,7 @@ follows:
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.1-beta03"
+      def tapsellVersion = "1.0.1-beta04"
       implementation "ir.tapsell.mediation.adapter:legacy-ima-extension:$tapsellVersion" // Tapsell legacy IMA Adapter
   }
   ```
@@ -288,6 +288,11 @@ AdStateListener.PreRoll listener = new AdStateListener.PreRoll() {
     @Override
     public void onAdClicked() {
         // Code to be executed when the user clicks on the ad.
+    }
+    
+    @Override
+    public void onAdClosed(AdShowCompletionState completionState) {
+        // This might be `COMPLETED`, `SKIPPED` or `UNKNOWN`.
     }
 
     @Override
