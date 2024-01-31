@@ -1,0 +1,38 @@
+<p>سایر شبکه‌های تبلیغاتی رو می‌توانید مطابق این آموزش به پروژه اضافه کنید. همچنین با روش‌های تست گفته شده مطمئن شوید به درستی پیاده شده‌اند.</p><p>برای کسب اطلاعات بیشتر در مورد هر شبکه‌ی تبلیغاتی می‌توانید با همکاران ما در تیم رسانه از قسمت پشتیبانی صحبت کنید.</p><h2 id="افزودن-شبکه-های-تبلیغاتی-در-تپسل-پلاس">افزودن شبکه های تبلیغاتی در تپسل پلاس</h2><h3 id="اضافه-کردن-ادموب">اضافه کردن ادموب</h3><p>۱. ابتدا <code class="highlighter-rouge">unitypackage</code> گوگل ادموب را از <a href="https://github.com/googleads/googleads-mobile-unity/releases">این لینک</a> دریافت نمایید.</p><blockquote><p>نکته: آخرین نسخه تست شده ادموب نسخه <code class="highlighter-rouge">8.3.0</code> می‌باشد.</p></blockquote><p>۲. سپس <code class="highlighter-rouge">unitypackage</code> مربوط به تبلیغات نیتیو ادموب را از <a href="https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage">این لینک</a> دریافت نمایید.</p><p>۳. سپس اپ آیدی گوگل خود را از مسیر <code class="highlighter-rouge">Assets/GoogleMobileAds/Settings</code>، مطابق عکس زیر اضافه کنید <img src="https://user-images.githubusercontent.com/38072572/206126452-e7235200-510a-42cb-8565-0bfa3beb378f.png" alt="GoogleAppID"></p><p>۴. پروژه خود را بیلد و سپس اجرا کنید</p><h3 id="اضافه-کردن-سایر-شبکه-های-تبلیغاتی">اضافه کردن سایر شبکه های تبلیغاتی</h3><p>فایل <code class="highlighter-rouge">Assets\TapsellPlus\Editor\TapsellPlusDependencies.xml</code> را باز کنید و ادنتورک مد نظر خود را مطابق زیر اضافه کنید</p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">&lt;dependencies&gt;</span>
+  <span class="nt">&lt;androidPackages&gt;</span>
+
+    <span class="c">&lt;!-- AdMob --&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.google.android.gms:play-services-ads:22.1.0"</span><span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- UnityAds --&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.unity3d.ads:unity-ads:4.6.1"</span><span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- ChartBoost --&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.chartboost:chartboost-sdk:8.2.1"</span><span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- AdColony --&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.adcolony:sdk:4.6.5"</span><span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- AppLovin --&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.applovin:applovin-sdk:11.8.2"</span><span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!-- Mintegral - make sure you uncomment the custom repository down below --&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:videojs:16.4.41"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:mbbanner:16.4.41"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:mbjscommon:16.4.41"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:playercommon:16.4.41"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:reward:16.4.41"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:videocommon:16.4.41"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:same:16.4.41"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;androidPackage</span> <span class="na">spec=</span><span class="s">"com.mbridge.msdk.oversea:interstitialvideo:16.4.41"</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;repositories&gt;</span>
+      <span class="c">&lt;!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it --&gt;</span>
+      <span class="nt">&lt;repository&gt;</span>https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea<span class="nt">&lt;/repository&gt;</span>
+    <span class="nt">&lt;/repositories&gt;</span>
+  <span class="nt">&lt;/androidPackages&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span>
+</code></pre></div></div><p>برای استفاده از شبکه‌ی تبلیغاتی <code class="highlighter-rouge">Unity Ads</code> می‌بایست <code class="highlighter-rouge">minSDK</code> اپلیکیشن خود را ۱۹ قرار دهید. و یا این که خط زیر را به فایل <code class="highlighter-rouge">AndroidManifest.xml</code> پروژه‌تان اضافه نمایید.</p><p>این خط به منظور جلوگیری از وقوع خطا برای بیلد شدن پروژه‌ی با minSDK کم‌تر از ۱۹ می‌باشد. از آن‌جا که تپسل پلاس به شکل هوشمند مانع نمایش تبلیغ Unity Ads به اندرویدهای با API Level کم‌تر از ۱۹ می‌شود، مشکلی برای آن دسته از کاربرانتان که نسخه‌ی اندروید قدیمی دارند پیش نمی‌آید. امّا حتما لازم است یک بار به روی چنین دستگاه‌هایی شبکه‌ی تبلیغاتی Unity Ads را با استفاده از تبلیغ‌گاه تستی موجود در <a href="https://docs.tapsell.ir/plus-sdk/android/adnetworks-test/">این لینک</a> تست نمایید.</p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nt">&lt;uses-sdk</span> <span class="na">tools:overrideLibrary=</span><span class="s">"com.unity3d.ads"</span><span class="nt">/&gt;</span>
+</code></pre></div></div><h2 id="نسخههای-ادموب">نسخه‌های ادموب</h2><table><thead><tr><th style="text-align:center"><strong>نسخه‌ی تپسل‌پلاس</strong></th><th style="text-align:center"><strong>نسخه‌ی ادموب</strong></th><th style="text-align:center"><strong>تاریخ اتمام پشتیبانی</strong></th><th style="text-align:center"><strong>تاریخ اتمام دریافت تبلیغ</strong></th></tr></thead><tbody><tr><td style="text-align:center">2.2.0</td><td style="text-align:center">22.1.0</td><td style="text-align:center">Q1 2025</td><td style="text-align:center">Q2 2026</td></tr><tr><td style="text-align:center">2.1.7, 2.1.8</td><td style="text-align:center">20.6.0</td><td style="text-align:center">Q1 2023</td><td style="text-align:center">Q2 2024</td></tr><tr><td style="text-align:center">2.1.4, 2.1.5, 2.1.6</td><td style="text-align:center">20.4.0</td><td style="text-align:center">Q1 2023</td><td style="text-align:center">Q2 2024</td></tr><tr><td style="text-align:center">2.1.3</td><td style="text-align:center">20.2.0</td><td style="text-align:center">Q1 2023</td><td style="text-align:center">Q2 2024</td></tr><tr><td style="text-align:center">2.1.0, 2.1.2</td><td style="text-align:center">19.8.0</td><td style="text-align:center">September 30, 2022</td><td style="text-align:center">Q2 2023</td></tr><tr><td style="text-align:center">1.2.6</td><td style="text-align:center">19.6.0</td><td style="text-align:center">September 30, 2022</td><td style="text-align:center">Q2 2023</td></tr></tbody></table><p>همچنین می‌توانید اطلاعات بیش‌تر در مورد تاریخ اتمام پشتیبانی و یا اتمام دریافت تبلیغ از شبکه‌ی تبلیغاتی ادموب را در <a href="https://developers.google.com/admob/android/deprecation">این لینک</a> مشاهده نمایید.</p>
