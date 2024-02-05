@@ -31,7 +31,7 @@ plusAndroid:
   faq: /faq/plus-sdk/android/
 
 plusFlutter:
-  sdkVersion: 2.2.3
+  sdkVersion: 2.2.4
   sample: https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample
   releaseNotesFileFa: releases/plus-flutter.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues?q=is%3Aissue
@@ -46,7 +46,7 @@ plusUnity:
   faq: /faq/plus-sdk/unity/
 
 plusReactnative:
-  sdkVersion: 2.2.0
+  sdkVersion: 2.2.4
   sample: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativeSample
   releaseNotesFileFa: releases/plus-reactnative.md
   github: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin

@@ -2,6 +2,17 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+## 2.2.4 - 2024/02/04
+- به‌روزرسانی کتابخانه تپسل به `4.8.8`
+- افزودن پشتیبانی از `Gradle 8` و `R8 Full mode`. مشاهده در گیتهاب [#75](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/75).
+- رفع یک مشکل کرش مربوط به `OkHttp` در اندروید ۴
+- رفع مشکل سرو تبلیغ در تبلیغات نیتیو بنری
+- رفع مشکل فراخوانی نشدن کالبک نتیجه درخواست تبلیغ در زمان درخواست چند تبلیغ به صورت همزمان
+- رفع کرش در لاگر در زمان پرینت کردن لاگ خطا
+- رفع مشکلات `GDPR` در کتابخانه تپسل
+
+
+
 ## 2.2.0 - 2023/06/01
 - رفع مشکل Google Play Policy Error مربوط به جمع‌آوری اطلاعات اپ‌های نصب شده کاربر. باگ [68](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/68)
 - اضافه شدن `UI` جدید برای دیالوگ بازگشت در تبلیغات ویدیویی

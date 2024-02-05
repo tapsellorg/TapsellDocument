@@ -8,7 +8,7 @@
 - رفع مشکل فراخوانی نشدن کالبک نتیجه درخواست تبلیغ در تبلیغات نیتیو بنری به دلیل وقوع خطا در زمان درخواست چند تبلیغ به
   صورت همزمان. لاگ
   خطا: `Error Unity ArgumentNullException: Value cannot be null. TapsellPlusSDK.TapsellPlus.CallIfAvailable[T] (System.Collections.Generic.IDictionary'2[TKey,TValue] pool, System.String key, T input)`
-- رفع مشکل سرور تبلیغ در تبلیغات نیتیو بنری
+- رفع مشکل سرو تبلیغ در تبلیغات نیتیو بنری
 - رفع یک مشکل کرش مربوط به `OkHttp` در اندروید ۴
 - رفع کرش در زمان استفاده از GDPR با خطای `java.lang.SecurityException: Not allowed to access cell info` . لینک های مرتبط: [Link1](https://stackoverflow.com/a/63246124/8291919), [Link2](https://developer.android.com/reference/android/telephony/TelephonyManager#getAllCellInfo())
 - رفع کرش در لاگر در زمان پرینت کردن لاگ خطا
