@@ -96,18 +96,18 @@ dependencies {
 
 
     // For Mintegral - NOTE: Add custom repository (explained after this)
-    implementation "com.mbridge.msdk.oversea:videojs:16.3.91"
-    implementation "com.mbridge.msdk.oversea:mbbanner:16.3.91"
-    implementation "com.mbridge.msdk.oversea:mbjscommon:16.3.91"
-    implementation "com.mbridge.msdk.oversea:playercommon:16.3.91"
-    implementation "com.mbridge.msdk.oversea:reward:16.3.91"
-    implementation "com.mbridge.msdk.oversea:videocommon:16.3.91"
-    implementation "com.mbridge.msdk.oversea:same:16.3.91"
-    implementation "com.mbridge.msdk.oversea:interstitialvideo:16.3.91"
+    implementation "com.mbridge.msdk.oversea:videojs:16.4.41"
+    implementation "com.mbridge.msdk.oversea:mbbanner:16.4.41"
+    implementation "com.mbridge.msdk.oversea:mbjscommon:16.4.41"
+    implementation "com.mbridge.msdk.oversea:playercommon:16.4.41"
+    implementation "com.mbridge.msdk.oversea:reward:16.4.41"
+    implementation "com.mbridge.msdk.oversea:videocommon:16.4.41"
+    implementation "com.mbridge.msdk.oversea:same:16.4.41"
+    implementation "com.mbridge.msdk.oversea:interstitialvideo:16.4.41"
 }
 ```
 
-همچنین بسته به ادنتورک اضافه شده بایستی repository مورد استفاده برای دانلود آنهایی که از mavenCentral استفاده نمی‌کنند، نیز اضافه شود:
+همچنین بسته به ادنتورک اضافه شده بایستی repository مورد استفاده برای دانلود آنهایی که از `mavenCentral` استفاده نمی‌کنند، نیز اضافه شود:
 
 ```gradle
 allprojects {  
