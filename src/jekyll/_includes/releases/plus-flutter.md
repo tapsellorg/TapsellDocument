@@ -2,6 +2,16 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/blob/master/CHANGELOG.md))
 
+## 2.2.4 - 2024/02/05
+- به‌روزرسانی کتابخانه تپسل به `4.8.8`
+- افزودن پشتیبانی از `Gradle 8` و `R8 Full mode`. مشاهده در گیتهاب [#75](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/75).
+- رفع یک مشکل کرش مربوط به `OkHttp` در اندروید ۴
+- رفع مشکل سرو تبلیغ در تبلیغات نیتیو بنری
+- رفع کرش در لاگر در زمان پرینت کردن لاگ خطا
+- رفع مشکلات `GDPR` در کتابخانه تپسل
+
+
+
 ## 2.2.3 - 2023/09/27
 - پشتیبانی از **Tapsell** `4.8.4`
 - رفع کرش نیتیو اندروید در زمان استفاده از `GDPR` با خطای `java.lang.SecurityException: Not allowed to access cell info` . لینک های مرتبط: [Link1](https://stackoverflow.com/a/63246124/8291919), [Link2](https://developer.android.com/reference/android/telephony/TelephonyManager#getAllCellInfo())
