@@ -47,9 +47,9 @@ defaultConfig {
 |      Admob       |  Interstitial  | `48b73764-8025-4c9d-9507-ce7a2c7f32ef` |
 |      Admob       |     Native     | `15cacb1b-6598-4fe9-b2da-8b26b4c1bbc5` |
 |      Admob       |     Banner     | `f965455e-a37a-4732-a0b4-05fc39cae16e` |
-|     AdColony     | Rewarded Video | `42bd8edf-bdc9-4da5-ae6d-d465366b29f4` |
-|     AdColony     |  Interstitial  | `ec274046-5cc7-40e0-973b-405084682967` |
-|     AdColony     |     Banner     | `10365955-147e-4fbc-9a08-15a930797902` |
+|      Fyber       | Rewarded Video | `42bd8edf-bdc9-4da5-ae6d-d465366b29f4` |
+|      Fyber       |  Interstitial  | `ec274046-5cc7-40e0-973b-405084682967` |
+|      Fyber       |     Banner     | `10365955-147e-4fbc-9a08-15a930797902` |
 |     AppLovin     | Rewarded Video | `1abf9ca9-4f93-4ead-a238-b2d0d3032a7a` |
 |     AppLovin     |  Interstitial  | `8c33dc60-5911-4145-90b0-d8cce9594fed` |
 |     AppLovin     |     Native     | `2db08af5-54e3-458e-9399-1d365a7516c9` |
