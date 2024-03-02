@@ -1,5 +1,11 @@
 ## Release Notes:
 
+### 4.8.9 - 2024/01/07
+#### Android
+- Added `dont warn` rules in SDK's proguard [#80](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/80), [TUD-5342](https://jira.pegah.tech/browse/TUD-5342).
+- Fixed PreRoll `Media3` Crash on Android 6.0 by adding `android.enableDexingArtifactTransform=false` in `gradle.properties` file.
+
+
 ### 4.8.8 - 2024/01/07
 #### Android
 - Fixed logger crash by avoid printing the log when message is null.
