@@ -171,15 +171,15 @@ Otherwise, your app will be removed from GooglePlay according to this policy.
 ## Test keys
 ---
 
-To use test app keys and zones, you can refer to this [link](../test.html)
+To use test app keys and zones, you can refer to this [link](../test)
 
 ## Next Steps
 
 After setting up and configuring Tapsell Mediation, you can go ahead and start to display different
 ads for users. The Tapsell package provides integration with different following types:
 
-- [Rewarded Ads](./rewarded.html)
-- [Interstitial Ads](./interstitial.html)
-- [Banner Ads](./banner.html)
+- [Rewarded Ads](./rewarded/index.html)
+- [Interstitial Ads](./interstitial/index.html)
+- [Banner Ads](./banner/index.html)
 
 
