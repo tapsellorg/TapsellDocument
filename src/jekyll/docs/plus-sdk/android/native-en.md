@@ -48,6 +48,15 @@ Then create a custom layout according to the way you want the ad to be displayed
 * You can use the prepared view for this purpose with the following id or as a construction guide:
 `native_banner`
 
+> To use `AdMobMediaView` correctly, you need to add `play-services-ads` dependency to your project:
+> ```groovy
+> dependencies {
+>    def supportedAdmob = "20.6.0"
+>    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
+> }
+> ```
+You can use the Admob test id (`ca-app-pub-3940256099942544~3347511713`) if you don't use Admob ads in your project. Otherwise, you can use your dedicated id.
+
 * Give the ad container and the id of the layout to Tapsell to create a `AdHolder` as the following code:
 
 ```java

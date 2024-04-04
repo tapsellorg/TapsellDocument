@@ -100,10 +100,11 @@ lang: fa
 
 ### خطای Error inflating class com.google.android.gms.ads.nativead.NativeAdView Caused by: java.lang.ClassNotFoundException: Didn't find class "com.google.android.gms.ads.nativead.NativeAdView
 
-این خطا زمانی اتفاق می‌افتد که از ادنتورک AdMob در پرژه خود استفاده کرده باشید، اما وابستگی `play-services-ads` را به پروژه اضافه نکرده باشید. برای رفع آن لازم است تا این وابستگی را به صورت زیر در فایل `app/build.gradle` اضافه کنید.
+برای نمایش تبلیغات همسان، لازم است وابستگی `play-services-ads` را به پروژه خود در فایل `app/build.gradle` اضافه کنید.
 > ```groovy
 > dependencies {
 >    def supportedAdmob = "20.6.0"
 >    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 > }
 > ```
+در صورتیکه از پیش از شبکه تبلیغاتی ادموب در پروژه خود استفاده نمی‌کنید، می‌توانید از کلید تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت کلید اختصاصی خود را وارد نمایید.
