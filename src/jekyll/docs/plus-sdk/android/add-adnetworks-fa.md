@@ -55,7 +55,7 @@ toc: true
 
 
 ## تنظیمات Gradle
-در قسمت `dependencies` فایل build.gradle شبکه‌های تبلغاتی که مایل هستید را مطابق زیر اضافه کنید.
+در قسمت `dependencies` فایل build.gradle شبکه‌های تبلیغاتی که مایل هستید را مطابق زیر اضافه کنید.
 
 ```groovy
 dependencies {
