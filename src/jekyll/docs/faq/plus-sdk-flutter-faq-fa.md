@@ -111,7 +111,7 @@ lang: fa
 این خطا زمانی اتفاق می‌افتد که از ادنتورک AdMob در پرژه خود استفاده کرده باشید، اما وابستگی `play-services-ads` را به پروژه اضافه نکرده باشید. برای رفع آن لازم است تا این وابستگی را به صورت زیر در فایل `android/app/build.gradle` اضافه کنید.
 > ```groovy
 > dependencies {
->    def supportedAdmob = "20.6.0"
+>    def supportedAdmob = "22.6.0"
 >    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 > }
 > ```

@@ -49,15 +49,14 @@ TapsellPlus.ShowStandardBannerAd(_responseId, HORIZONTAL_GRAVITY, VERTICAL_GRAVI
 
 BANNER_TYPE is the banner display size and can be the following values:
 
-|   Banner Type    |   Size    |            Supported Ad Networks             |
-|:----------------:|:---------:|:--------------------------------------------:|
-| `BANNER_320x50`  | `320x50`  | Tapsell, AdMob, AppLovin, UnityAds, AdColony |
-| `BANNER_320x100` | `320x100` |                Tapsell, AdMob                |
-| `BANNER_250x250` | `250x250` |                   Tapsell                    |
-| `BANNER_300x250` | `300x250` |      Tapsell, AdMob, AppLovin, AdColony      |
-| `BANNER_468x60`  | `468x60`  |               AdMob, UnityAds                |
-| `BANNER_728x90`  | `728x90`  |     AdMob, AppLovin, UnityAds, AdColony      |
-| `BANNER_160x600` | `160x600` |                   AdColony                   |
+|   Banner Type    |   Size    |           Supported Ad Networks            |
+|:----------------:|:---------:|:------------------------------------------:|
+| `BANNER_320x50`  | `320x50`  |     Tapsell, AdMob, AppLovin, UnityAds     |
+| `BANNER_320x100` | `320x100` |               Tapsell, AdMob               |
+| `BANNER_250x250` | `250x250` |                  Tapsell                   |
+| `BANNER_300x250` | `300x250` |          Tapsell, AdMob, AppLovin          |
+| `BANNER_468x60`  | `468x60`  |              AdMob, UnityAds               |
+| `BANNER_728x90`  | `728x90`  |         AdMob, AppLovin, UnityAds          |
 
 `VERTICAL_GRAVITY` and` HORIZONTAL_GRAVITY` are the position of the banner on the page and can be the following values.
 

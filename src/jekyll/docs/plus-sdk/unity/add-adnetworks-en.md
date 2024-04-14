@@ -29,29 +29,22 @@ If you want to add more ad networks to your project, this page helps you through
       <androidPackages>
     
             <!-- AdMob -->
-            <androidPackage spec="com.google.android.gms:play-services-ads:22.1.0"/>
+            <androidPackage spec="com.google.android.gms:play-services-ads:22.6.0"/>
     
             <!-- UnityAds -->
-            <androidPackage spec="com.unity3d.ads:unity-ads:4.6.1"/>
+            <androidPackage spec="com.unity3d.ads:unity-ads:4.9.2"/>
     
             <!-- ChartBoost -->
             <androidPackage spec="com.chartboost:chartboost-sdk:8.2.1"/>
     
-            <!-- AdColony -->
-            <androidPackage spec="com.adcolony:sdk:4.6.5"/>
-    
             <!-- AppLovin -->
-            <androidPackage spec="com.applovin:applovin-sdk:11.8.2"/>
+            <androidPackage spec="com.applovin:applovin-sdk:12.4.0"/>
     
             <!-- Mintegral - make sure you uncomment the custom repository down below -->
-            <androidPackage spec="com.mbridge.msdk.oversea:videojs:16.4.41"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.4.41"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:mbjscommon:16.4.41"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:playercommon:16.4.41"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:reward:16.4.41"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:videocommon:16.4.41"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:same:16.4.41"/>
-            <androidPackage spec="com.mbridge.msdk.oversea:interstitialvideo:16.4.41"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbbanner:16.6.71"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:reward:16.6.71"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:newinterstitial:16.6.71"/>
+            <androidPackage spec="com.mbridge.msdk.oversea:mbbid:16.6.71"/>
     
             <repositories>
                 <!-- Add this for Mintegral usage. NOTE: Repository will result in 403. Make sure you're using VPN or Proxy to circumvent it -->

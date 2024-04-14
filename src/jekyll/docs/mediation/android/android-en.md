@@ -71,22 +71,22 @@ No additional configuration or code is needed to initialize the SDK.
 
 The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
-* AdColony
 * AdMob
 * Applovin
 * Chartboost
+* Fyber (Digital Turbine Exchange)
 * Mintegral
 * UnityAds
 * IronSource
-* Liftoff
+* Liftoff (Vungle)
 
 To integrate, add the adapter dependency you need to your module's app-level `build.gradle`:
 
 ```groovy
-implementation "ir.tapsell.mediation.adapter:adcolony:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:admob:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:applovin:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:chartboost:$tapsellVersion"
+implementation "ir.tapsell.mediation.adapter:fyber:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:mintegral:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:unityads:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:ironsource:$tapsellVersion"
@@ -94,10 +94,6 @@ implementation "ir.tapsell.mediation.adapter:liftoff:$tapsellVersion"
 ```
 
 #### Additional Configuration
-
-- AdColony
-
-No additional configuration needed.
 
 - Admob
 
@@ -140,6 +136,10 @@ allprojects {
     }
 }
 ```
+
+- Fyber
+
+No additional configuration needed.
 
 - Mintegral
 

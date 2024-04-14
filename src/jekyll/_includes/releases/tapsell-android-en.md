@@ -1,5 +1,8 @@
 ## Release Notes:
 
+### 4.9.0 - 2024/04/09
+- Fixed using `okhttp-logging-interceptor` for non-debug builds.
+
 ### 4.8.9 - 2024/02/21
 #### Android
 - Added `dont warn` rules in SDK's proguard [#80](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/80).

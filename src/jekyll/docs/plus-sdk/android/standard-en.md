@@ -82,12 +82,11 @@ protected void onDestroy() {
 ### Banners Size
 All supported sizes in Tepsell Plus are in the TapsellPlusBannerType class.
 
-|   Banner Type    |   Size    |            Supported Ad Networks             |
-|:----------------:|:---------:|:--------------------------------------------:|
-| `BANNER_320x50`  | `320x50`  | Tapsell, AdMob, AppLovin, UnityAds, AdColony |
-| `BANNER_320x100` | `320x100` |                Tapsell, AdMob                |
-| `BANNER_250x250` | `250x250` |                   Tapsell                    |
-| `BANNER_300x250` | `300x250` |      Tapsell, AdMob, AppLovin, AdColony      |
-| `BANNER_468x60`  | `468x60`  |               AdMob, UnityAds                |
-| `BANNER_728x90`  | `728x90`  |     AdMob, AppLovin, UnityAds, AdColony      |
-| `BANNER_160x600` | `160x600` |                   AdColony                   |
+|   Banner Type    |   Size    |           Supported Ad Networks            |
+|:----------------:|:---------:|:------------------------------------------:|
+| `BANNER_320x50`  | `320x50`  |     Tapsell, AdMob, AppLovin, UnityAds     |
+| `BANNER_320x100` | `320x100` |               Tapsell, AdMob               |
+| `BANNER_250x250` | `250x250` |                  Tapsell                   |
+| `BANNER_300x250` | `300x250` |          Tapsell, AdMob, AppLovin          |
+| `BANNER_468x60`  | `468x60`  |              AdMob, UnityAds               |
+| `BANNER_728x90`  | `728x90`  |         AdMob, AppLovin, UnityAds          |

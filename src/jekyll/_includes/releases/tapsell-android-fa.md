@@ -1,5 +1,8 @@
 ## تغییرات نسخه‌ها:
 
+### v4.9.0 - 2024/04/09
+- حذف `okhttp-logging-interceptor` از نسخه های ریلیز
+
 ### v4.8.9 - 2024/02/21
 - اضافه کردن رول های پروگارد `dont warn` در کتابخانه. [#80](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/80)
 - رفع کرش `Media3` در اندروید ۶ در هنگام پخش ویدیوی `PreRoll`

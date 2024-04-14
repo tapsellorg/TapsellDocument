@@ -74,7 +74,7 @@ dependencies {
     implementation 'com.google.android.gms:play-services-ads:22.0.0'
 
     // For unityAds
-    implementation 'com.unity3d.ads:unity-ads:4.6.1'
+    implementation 'com.unity3d.ads:unity-ads:4.9.2'
 
     // For chartboost
     implementation 'com.chartboost:chartboost-sdk:8.2.1'
@@ -85,25 +85,15 @@ dependencies {
         exclude group: 'com.android.support'
     }
     
-    // For adcolony
-    implementation 'com.adcolony:sdk:4.8.0'
-    implementation ("com.google.android.gms:play-services-ads-identifier:17.0.0"){
-        exclude group: 'com.android.support'
-    }
-    
     // For applovin
-    implementation 'com.applovin:applovin-sdk:11.8.2'
+    implementation 'com.applovin:applovin-sdk:12.4.0'
 
 
     // For Mintegral - NOTE: Add custom repository (explained after this)
-    implementation "com.mbridge.msdk.oversea:videojs:16.4.41"
-    implementation "com.mbridge.msdk.oversea:mbbanner:16.4.41"
-    implementation "com.mbridge.msdk.oversea:mbjscommon:16.4.41"
-    implementation "com.mbridge.msdk.oversea:playercommon:16.4.41"
-    implementation "com.mbridge.msdk.oversea:reward:16.4.41"
-    implementation "com.mbridge.msdk.oversea:videocommon:16.4.41"
-    implementation "com.mbridge.msdk.oversea:same:16.4.41"
-    implementation "com.mbridge.msdk.oversea:interstitialvideo:16.4.41"
+    implementation "com.mbridge.msdk.oversea:mbbanner:16.6.71"
+    implementation "com.mbridge.msdk.oversea:reward:16.6.71"
+    implementation "com.mbridge.msdk.oversea:newinterstitial:16.6.71"
+    implementation "com.mbridge.msdk.oversea:mbbid:16.6.71"
 }
 ```
 
@@ -145,13 +135,14 @@ allprojects {
 ## نسخه‌های ادموب
 
 | **نسخه‌ی تپسل‌پلاس** | **نسخه‌ی ادموب** | **تاریخ اتمام پشتیبانی** | **تاریخ اتمام دریافت تبلیغ** |
-|:--------------------:|:---------------:|:------------------------:|:----------------------------:|
-|     2.2.0, 2.2.4     |      22.0.0     |          Q1 2024         |            Q2 2025           |
-|     2.1.7, 2.1.8     |      20.6.0     |          Q1 2023         |            Q2 2024           |
-| 2.1.4, 2.1.5, 2.1.6  |      20.4.0     |          Q1 2023         |            Q2 2024           |
-|        2.1.3         |      20.2.0     |          Q1 2023         |            Q2 2024           |
-|     2.1.0, 2.1.2     |      19.8.0     |    September 30, 2022    |            Q2 2023           |
-|        1.2.6         |      19.6.0     |    September 30, 2022    |            Q2 2023           |
+|:--------------------:|:----------------:|:------------------------:|:----------------------------:|
+|        2.2.5         |      22.6.0      |         Q1 2025          |           Q2 2026            |
+|     2.2.0, 2.2.4     |      22.0.0      |         Q1 2024          |           Q2 2025            |
+|     2.1.7, 2.1.8     |      20.6.0      |         Q1 2023          |           Q2 2024            |
+| 2.1.4, 2.1.5, 2.1.6  |      20.4.0      |         Q1 2023          |           Q2 2024            |
+|        2.1.3         |      20.2.0      |         Q1 2023          |           Q2 2024            |
+|     2.1.0, 2.1.2     |      19.8.0      |    September 30, 2022    |           Q2 2023            |
+|        1.2.6         |      19.6.0      |    September 30, 2022    |           Q2 2023            |
 
 نسخه‌های تپسل پلاس قدیمی‌تر از ۱.۲.۶ را حتما به نسخه‌های جدیدتر آپدیت نمایید.
 
