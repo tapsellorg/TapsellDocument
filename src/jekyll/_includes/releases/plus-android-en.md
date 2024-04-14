@@ -1,5 +1,18 @@
 ## Tapsell plus native Changelog
 
+### 2.2.5 (09 Apr, 2024)
+
+- Updated `Tapsell` SDK to `4.9.0`
+- Added `Admob` user messaging platform (`UMP`) to manage user consent for admob to resolve GooglePlay issue.
+- Added few `R8` rules [#85](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/85)
+- Updated `AdMob` to `22.6.0`
+- Updated `Google IMA` (`PreRoll`) to `3.33.0`
+- Updated `UnityAds` to `4.9.2`
+- Updated `AppLovin` to `12.4.0`
+- Updated `Mintegral` to `16.6.71`
+- Removed `Vungle` ad network due to deprecation and GooglePlay policy related issues.
+- Removed `AdColony` ad network due to deprecation.
+
 ### 2.2.4 (07 Jan, 2023)
 
 - Updated Tapsell legacy SDK to `4.8.8`

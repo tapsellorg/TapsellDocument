@@ -92,10 +92,10 @@ No additional configuration or code is needed to initialize the SDK.
 
 The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
-* [**AdColony**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_AdColonyAdapter_v1.0.1-beta04.01.unitypackage)
 * [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_AdMobAdapter_v1.0.1-beta04.01.unitypackage)
 * [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_ApplovinAdapter_v1.0.1-beta04.01.unitypackage)
 * [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_ChartboostAdapter_v1.0.1-beta04.01.unitypackage)
+* [**Fyber**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_AdColonyAdapter_v1.0.1-beta04.01.unitypackage)
 * [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_MintegralAdapter_v1.0.1-beta04.01.unitypackage)
 * [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_UnityAdsAdapter_v1.0.1-beta04.01.unitypackage)
 * [**IronSource**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta04%2301/TapsellMediation_IronSourceAdapter_v1.0.1-beta04.01.unitypackage)
@@ -110,10 +110,6 @@ To integrate each SDK, download the corresponding adapter package from the links
 
 #### Additional Configuration
 
-- AdColony
-
-      No additional configuration needed.
-
 - Admob
 
       In the Tapsell settings menu, add your Admob adapter app signature. (Contact Tapsell support for more information)
@@ -127,6 +123,10 @@ To integrate each SDK, download the corresponding adapter package from the links
 <img src="/images/mediation-unity-set-applovin-sig.png" alt="set-applovin-signature" />
 
 - Chartboost
+
+      No additional configuration needed.
+
+- Fyber
 
       No additional configuration needed.
 

@@ -103,7 +103,7 @@ lang: fa
 برای نمایش تبلیغات همسان، لازم است وابستگی `play-services-ads` را به پروژه خود در فایل `app/build.gradle` اضافه کنید.
 > ```groovy
 > dependencies {
->    def supportedAdmob = "20.6.0"
+>    def supportedAdmob = "22.6.0"
 >    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 > }
 > ```

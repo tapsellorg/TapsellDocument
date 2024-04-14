@@ -55,9 +55,6 @@ TapsellPlus.initialize("alsoatsrtrotpqacegkehkaiieckldhrgsbspqtgqnbrrfccrtbdomgj
 |    Unity Ads    |     Standard     |`608d20a7fb661b000190bfe4`|
 |    Chartboost    |     Rewarded Video     |`5cfaa8cee8d17f0001ffb290`|
 |    Chartboost    |     Interstitial     |`60c5b303d756bf0001891f1c`|
-|    AdColony    |     Rewarded Video     |`5d3362766de9f600013662d5`|
-|    AdColony    |     Interstitial     |`5d336289e985d50001427acf`|
-|    AdColony    |     Standard     |`60bf4ef0d40d970001693745`|
 |    AppLovin    |     Rewarded Video     |`5d3eb48c3aef7a0001406f84`|
 |    AppLovin    |     Interstitial     |`5d3eb4fa3aef7a0001406f85`|
 |    AppLovin    |     Standard     |`5d3eb5337a9b060001892441`|

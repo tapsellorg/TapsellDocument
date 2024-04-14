@@ -51,7 +51,7 @@ Then create a custom layout according to the way you want the ad to be displayed
 > To use `AdMobMediaView` correctly, you need to add `play-services-ads` dependency to your project:
 > ```groovy
 > dependencies {
->    def supportedAdmob = "20.6.0"
+>    def supportedAdmob = "22.6.0"
 >    implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 > }
 > ```

@@ -11,13 +11,13 @@ If you want to add more ad networks to your project, this page helps you through
 Here's a list of ad networks that are supported by TapsellPlus.
 
 ## Google AdMob
-> Supported version: `22.1.0`
+> Supported version: `22.6.0`
 
 Add it in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedAdmob = "22.1.0"
+    def supportedAdmob = "22.6.0"
     implementation("com.google.android.gms:play-services-ads:$supportedAdmob")
 }
 ```
@@ -41,13 +41,13 @@ You need to contact support to get a **producation admob key** for actual usage.
 
 
 ## Unity ads
-> Supported version: `4.6.1`
+> Supported version: `4.9.2`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedUnityAds = "4.6.1"
+    def supportedUnityAds = "4.9.2"
     implementation("com.unity3d.ads:unity-ads:$supportedUnityAds")
 }
 ```
@@ -79,46 +79,30 @@ dependencies {
 }
 ```
 
-## AdColony
-> Supported version: `4.6.5`
-
-Add the library in gradle (in `app/build.gradle`):
-
-```groovy
-dependencies {
-    def supportedAdColony = "4.6.5"
-    implementation("com.adcolony:sdk:$supportedAdColony")
-}
-```
-
 ## AppLovin
-> Supported version: `11.8.2`
+> Supported version: `12.4.0`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedAppLovin = "11.8.2"
+    def supportedAppLovin = "12.4.0"
     implementation("com.applovin:applovin-sdk:$supportedAppLovin")
 }
 ```
 
 ## Mintegral
-> Supported version: `16.4.41`
+> Supported version: `16.6.71`
 
 Add the library in gradle (in `app/build.gradle`):
 
 ```groovy
 dependencies {
-    def supportedMintegral = "16.4.41"
-    implementation("com.mbridge.msdk.oversea:videojs:$supportedMintegral")
+    def supportedMintegral = "16.6.71"
     implementation("com.mbridge.msdk.oversea:mbbanner:$supportedMintegral")
-    implementation("com.mbridge.msdk.oversea:mbjscommon:$supportedMintegral")
-    implementation("com.mbridge.msdk.oversea:playercommon:$supportedMintegral")
     implementation("com.mbridge.msdk.oversea:reward:$supportedMintegral")
-    implementation("com.mbridge.msdk.oversea:videocommon:$supportedMintegral")
-    implementation("com.mbridge.msdk.oversea:same:$supportedMintegral")
-    implementation("com.mbridge.msdk.oversea:interstitialvideo:$supportedMintegral")
+    implementation("com.mbridge.msdk.oversea:newinterstitial:$supportedMintegral")
+    implementation("com.mbridge.msdk.oversea:mbbid:$supportedMintegral")
 }
 ```
 

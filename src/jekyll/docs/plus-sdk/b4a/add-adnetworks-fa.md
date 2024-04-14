@@ -84,22 +84,6 @@ toc: true
 CreateResourceFromFile(Macro, TapsellPlusB4A.AdMob)
 ```
 
-## AdColony
-در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
-
-```py
-# Region  Project Attributes 
-    #AdditionalJar: adcolony-4.6.5.aar
-
-#End Region
-```
-
-همچنین محتوای زیر را به Manifest editor پروژه اضافه کنید:
-
-```vb
-CreateResourceFromFile(Macro, TapsellPlusB4A.AdColony)
-```
-
 ## AppLovin
 در بخش `Region  Project Attributes` این کد را **اضافه** کنید:
 
