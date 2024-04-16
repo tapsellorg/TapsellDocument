@@ -23,7 +23,7 @@ lang: fa
 
 روش دیگر استفاده از ابزار `LogCat` در نرم‌افزار `Android Studio` می‌باشد.
 
-### خطای E/AndroidRuntime: The Google Mobile Ads SDK was initialized incorrectly. AdMob publishers should follow the instructions here: https://googlemobileadssdk.page.link/admob-android-update-manifest to add a valid App ID inside the `AndroidManifest`
+### خطای E/AndroidRuntime: The Google Mobile Ads SDK was initialized incorrectly. AdMob publishers should follow the instructions here: https://googlemobileadssdk.page.link/admob-android-update-manifest to add a valid App ID inside the AndroidManifest
 
 کتابخانه تپسل از کتابخانه `google_mobile_ads` به عنوان وابستگی داخلی استفاده می‌کند. در صورتیکه با این خطا مواجه شدید، لازم است وارد مسیر `android/app/src/main/AndroidManifest.xml` شده و اپ آیدی مورد نیاز اندروید را در آن وارد نمایید. در صورتی که از ادموب استفاده نمیکنید، میتوانید از اپ آیدی تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت اپ آیدی اختصاصی خود را وارد نمایید.
 
