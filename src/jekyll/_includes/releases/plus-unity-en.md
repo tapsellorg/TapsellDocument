@@ -1,5 +1,16 @@
 ## Tapsell plus Unity Changelog
 
+### v2.2.6 - 2024/04/16
+
+- Updated `Tapsell` SDK to `4.9.0`
+- Fixed a bug related to missing `GDPR` classes when initializing the SDK
+- Added `Admob` user messaging platform (`UMP`) to manage user consent for admob to resolve GooglePlay issue.
+- Added few `R8` rules [#85](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/85)
+- Updated `AdMob` to `22.6.0`
+- Updated `AppLovin` to `12.4.0`
+- Updated `Mintegral` to `16.6.71`
+- Removed `AdColony` ad network due to deprecation.
+
 ### v2.2.4 - 2024/01/07
 
 - Added support for `Gradle 8` and `R8 Full mode`.

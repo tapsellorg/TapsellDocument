@@ -1,5 +1,9 @@
 ## Tapsell plus native Changelog
 
+### 2.2.6 (19 Apr, 2024)
+
+- Fixed a bug related to missing `GDPR` classes when initializing the SDK
+
 ### 2.2.5 (09 Apr, 2024)
 
 - Updated `Tapsell` SDK to `4.9.0`
