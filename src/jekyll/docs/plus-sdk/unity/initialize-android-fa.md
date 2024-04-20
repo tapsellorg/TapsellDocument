@@ -25,7 +25,7 @@ Assets > External Dependency Manager > Android Resolver > Settings > Enable Auto
 ```
 
 ۳. ابتدا `unitypackage` تپسل پلاس را
-از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.2.4/tapsell-plus-unity-2.2.4.unitypackage)
+از [این لینک](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.2.6/tapsell-plus-unity-2.2.6.unitypackage)
 دریافت نمایید.
 
 ۴. از طریق منوی زیر `unitypackage` تپسل پلاس را به پروژه‌ی خود اضافه نمایید. (اگر فولدر `TapsellPlusSDK` از قبل در
