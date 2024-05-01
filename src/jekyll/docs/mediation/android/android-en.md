@@ -35,7 +35,7 @@ To prepare your app, complete the following steps:
 
   ```groovy
   dependencies {
-      def tapsellVersion = "1.0.1-beta05"
+      def tapsellVersion = "1.0.1-beta06"
       implementation "ir.tapsell.mediation:tapsell:$tapsellVersion" // Mediation
       implementation "ir.tapsell.mediation.adapter:legacy:$tapsellVersion" // Tapsell Adapter
   }
@@ -295,7 +295,8 @@ enum BannerSize {
     BANNER_300_250,
     BANNER_468_60,
     BANNER_728_90,
-    BANNER_160_600
+    BANNER_160_600,
+    BANNER_ADAPTIVE
 }
 ```
 
@@ -630,6 +631,10 @@ enum AdShowCompletionState {
     UNKNOWN
 }
 ```
+
+### AppOpen
+
+You can find the AppOpen ad implementation details [here](appopen/index.html)
 
 ### Native
 
