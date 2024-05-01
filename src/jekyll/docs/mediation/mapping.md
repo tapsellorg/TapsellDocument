@@ -12,6 +12,7 @@ The table below shows the mapping between Tapsell Mediation SDK and Tapsell inte
 
 | Tapsell Mediation Version | Tapsell Legacy Version | Admob Version |
 |:-------------------------:|:----------------------:|:-------------:|
+|      `1.0.1-beta06`       |        `4.9.0`         |   `22.6.0`    |
 |      `1.0.1-beta05`       |        `4.8.9`         |   `22.6.0`    |
 |      `1.0.1-beta04`       |        `4.8.8`         |   `22.0.0`    |
 |      `1.0.1-beta03`       |        `4.8.7`         |   `22.0.0`    |
