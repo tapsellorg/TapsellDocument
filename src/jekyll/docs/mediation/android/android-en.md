@@ -632,6 +632,10 @@ enum AdShowCompletionState {
 }
 ```
 
+### AppOpen
+
+You can find the AppOpen ad implementation details [here](appopen/index.html)
+
 ### Native
 
 Native ads are ad assets that are presented to users through UI components that are native to the platform. They are
