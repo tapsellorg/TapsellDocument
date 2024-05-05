@@ -24,7 +24,7 @@ dependencies {
 }
 ```
 
-Also add JAVA8 support in `android {}`:
+Also add Java 8 support in `android {}`:
 
 ```groovy
 compileOptions {
@@ -34,6 +34,15 @@ compileOptions {
 ```
 
 And do a Gradle sync.
+
+#### Android 13 support
+Apps updating their target API level to 33 (Android 13) will need to declare a Google Play services permission in the manifest file as follows:
+
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+```
+
+Read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en).
 
 ## Initialization
 

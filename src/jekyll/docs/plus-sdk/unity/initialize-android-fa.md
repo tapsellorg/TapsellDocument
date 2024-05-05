@@ -143,6 +143,17 @@ public class MainApplication extends SomeOtherApplication {
 برای راهنمایی بهتر می‌توانید به [مستندات رسمی اندروید](https://developer.android.com/studio/build/multidex) مراجعه
 نمایید.
 
+### پشتیبانی از اندروید ۱۳
+
+اپلیکیشن‌هایی که نسخه `targetSDK` پروژه خود را به ۳۳ (اندروید ۱۳) ارتقا می‌دهند، باید مجوز سرویس‌های گوگل پلی را در فایل مانیفست خود در مسیر `Assets\Plugins\Android\AndroidManifest.xml` اضافه کنند، همانند زیر:
+
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+```
+
+برای خواندن بیشتر در مورد تغییرات شناسه تبلیغات گوگل [اینجا](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) کلیک کنید.
+
+
 ## مقداردهی اولیه
 
 ابتدا برای دسترسی به کدهای تپسل از تکه کد زیر استفاده کنید.

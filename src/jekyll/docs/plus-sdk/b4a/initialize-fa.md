@@ -222,6 +222,18 @@ tapsellPlus.SetGDPRConsent(True)
 AddPermission(android.permission.READ_PHONE_STATE)
 ```
 
+#### پشتیبانی از اندروید ۱۳
+
+اپلیکیشن‌هایی که نسخه `targetSDK` پروژه خود را به ۳۳ (اندروید ۱۳) ارتقا می‌دهند، باید مجوز سرویس‌های گوگل پلی را در فایل مانیفست خود اضافه کنند، همانند زیر:
+
+```vb
+AddPermission(com.google.android.gms.permission.AD_ID)
+```
+
+برای خواندن بیشتر در مورد تغییرات شناسه تبلیغات گوگل [اینجا](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) کلیک کنید.
+
+
+
 ---
 
 
