@@ -41,6 +41,17 @@ npm install react-native-tapsell-plus --save
 
 [![npm version](https://img.shields.io/npm/v/react-native-tapsell-plus?color=green&label=react-native-tapsell-plus&logo=react)](https://www.npmjs.com/package/react-native-tapsell-plus)
 
+### پشتیبانی از اندروید ۱۳
+
+اپلیکیشن‌هایی که نسخه `targetSDK` پروژه خود را به ۳۳ (اندروید ۱۳) ارتقا می‌دهند، باید مجوز سرویس‌های گوگل پلی را در فایل مانیفست خود اضافه کنند، همانند زیر:
+
+```xml
+<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+```
+
+برای خواندن بیشتر در مورد تغییرات شناسه تبلیغات گوگل [اینجا](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) کلیک کنید.
+
+
 ## شروع کار با پلاگین
 
 ابتدا ماژول تپسل پلاس را به کد خود اضافه کنید:
