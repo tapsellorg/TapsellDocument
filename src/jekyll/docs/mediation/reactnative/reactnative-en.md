@@ -70,7 +70,7 @@ module.exports = {
 > the app to crash on start or fail to build.
 
 ### Android 13 support
-Apps updating their target API level to 33 (Android 13) will need to declare a Google Play services permission in the manifest file in `Assets\Plugins\Android\AndroidManifest.xml` as follows:
+Apps updating their target API level to 33 (Android 13) will need to declare a Google Play services permission in the manifest file as follows:
 
 ```xml
 <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
