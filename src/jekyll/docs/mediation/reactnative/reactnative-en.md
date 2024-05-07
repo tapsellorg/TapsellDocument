@@ -34,6 +34,8 @@ the [Tapsell Mediation dashboard](https://ssp.tapsell.ir).
 
 ### Install the Tapsell Mediation plugin
 
+![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/tapsell)
+
 ```
 yarn add react-native-tapsell-mediation/tapsell
 ```
@@ -80,20 +82,21 @@ Read more about Google Advertising ID changes [here](https://support.google.com/
 
 ### Add Mediation Adapters
 
-The `react-native-tapsell-mediation/tapsell` package doesn’t serve any ads itself; which means you must install at least one of the following packages for Tapsell to work. Adding more adapters helps the SDK to get ads from different ad networks and increases the possibility of serving ads. The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
+The `react-native-tapsell-mediation/tapsell` package doesn’t serve any ads itself; which means you must install at least one of the following packages for Tapsell to work. 
+Adding more adapters helps the SDK to get ads from different ad networks and increases the possibility of serving ads. The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
-| Name                                                                                                                      |                                                                                            Downloads                                                                                            |
-|---------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| [Legacy  Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/legacy)                         |     [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/legacy.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/legacy)     |
-| [Admob Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/admob)                            |      [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/admob.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/admob)      |
-| [Mintegral Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/mintegral)                    |  [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/mintegral.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/mintegral)  |
-| [Applovin Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/applovin)                      |   [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/applovin.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/applovin)   |
-| [Liftoff (Vungle) Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/liftoff)               |    [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/liftoff.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/liftoff)    |
-| [IronSource Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/ironsource)                  | [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/ironsource.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/ironsource) |
-| [Fyber (Digital Turbine Exchange) Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/fyber) |      [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/fyber.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/fyber)      |
-| [UnityAds Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/unityads)                      |   [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/unityads.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/unityads)   |
-| [Wortise Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/wortise)                        |    [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/wortise.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/wortise)    |
-| [ChartBoost Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/chartboost)                  | [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/chartboost.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/chartboost) |
+| Name                                                                                                                      |                                                                                            Downloads                                                                                            |                                         Version                                         |
+|---------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
+| [Legacy  Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/legacy)                         |     [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/legacy.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/legacy)     |   ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/legacy)   |
+| [Admob Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/admob)                            |      [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/admob.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/admob)      |   ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/admob)    |
+| [Mintegral Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/mintegral)                    |  [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/mintegral.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/mintegral)  | ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/mintegral)  |                                                                                                                                                                                 |
+| [Applovin Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/applovin)                      |   [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/applovin.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/applovin)   |  ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/applovin)  |                                                                                                                                                                                   |
+| [Liftoff (Vungle) Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/liftoff)               |    [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/liftoff.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/liftoff)    |  ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/liftoff)   |                                                                                                                                                                                   |
+| [IronSource Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/ironsource)                  | [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/ironsource.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/ironsource) | ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/ironsource) |                                                                                                                                                                     |
+| [Fyber (Digital Turbine Exchange) Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/fyber) |      [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/fyber.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/fyber)      |   ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/fyber)    |                                                                                                                                                                                   |
+| [UnityAds Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/unityads)                      |   [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/unityads.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/unityads)   |  ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/unityads)  |                                                                                                                                                                           |
+| [Wortise Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/wortise)                        |    [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/wortise.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/wortise)    |  ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/wortise)   |                                                                                                                                                                              |
+| [ChartBoost Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/chartboost)                  | [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/chartboost.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/chartboost) | ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/chartboost) |                                                                                                                                                                      |
 
 You can install each adapter in your project using the command below:
 
@@ -177,8 +180,15 @@ Otherwise, your app will be removed from GooglePlay according to this policy.
 
 <br/>
 
-## Test keys
 ---
+
+## Sample project
+
+for more info you can
+use [Sample App](https://github.com/tapsellorg/TapsellMediation-ReactNativeSample)
+on GitHub repository.
+
+## Test keys
 
 To use test app keys and zones, you can refer to this [link](../test)
 
@@ -191,6 +201,4 @@ ads for users. The Tapsell package provides integration with different following
 - [Interstitial Ads](./interstitial/index.html)
 - [Banner Ads](./banner/index.html)
 - [Native Ads](./native/index.html)
-- [Sample App](https://github.com/tapsellorg/TapsellMediation-ReactNativeSample)
-
 
