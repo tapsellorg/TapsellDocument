@@ -91,3 +91,10 @@ destroyBannerAd(adId);
 
 To use test app keys and zones, you can refer to this [link](../test)
 
+
+## Sample Project
+
+for more info you can
+use [Banner Sample](https://github.com/tapsellorg/TapsellMediation-ReactNativeSample/tree/master/src/screens/banner)
+on GitHub repository.
+

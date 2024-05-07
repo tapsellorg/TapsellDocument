@@ -70,3 +70,10 @@ enum CompletionState {
 ## Test keys
 
 To use test app keys and zones, you can refer to this [link](../test)
+
+
+## Sample Project
+
+for more info you can
+use [Rewarded Sample](https://github.com/tapsellorg/TapsellMediation-ReactNativeSample/tree/master/src/screens/rewarded)
+on GitHub repository.
