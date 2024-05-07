@@ -136,7 +136,7 @@ useEffect(() => {
 
 ## Test keys
 
-To use test app keys and zones, you can refer to this [link](../test)
+To use test app keys and zones, you can refer to this [link](../test/index.html)
 
 ## Sample Project
 

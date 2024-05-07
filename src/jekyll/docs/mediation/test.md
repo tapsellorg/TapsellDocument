@@ -2,7 +2,7 @@
 layout: no-sidebar-classic-docs
 title: Tapsell Mediation
 lang: en
-permalink: /mediation/test/
+permalink: /mediation/test/index.html
 toc: true
 ---
 
@@ -10,26 +10,14 @@ toc: true
 
 ## Test App Keys
 
-first add the following keys in your module level `build.gradle` file:
+| Ad Network |                                           Key                                            |
+|:----------:|:----------------------------------------------------------------------------------------:|
+|  Tapsell   |                          `76798342-99a7-4a5f-bf5a-60a088d5dcfb`                          | 
+|   Admob    |                         `ca-app-pub-3940256099942544~3347511713`                         |
+|  AppLovin  | `5WfZLCGTQmDr6Mf7BBEf5blVwrf8VBMJSmwUSq9-1q5bPpCH_OGAWEP2z2lRkmonLgPzG6gbL4DlvUF9frFmt6` |
 
-```
-defaultConfig {
 
-        // Your configs
-
-        addManifestPlaceholders(
-            mapOf(
-                "TapsellMediationAppMarket" to "CafeBazaar",
-                "TapsellMediationAppKey" to "76798342-99a7-4a5f-bf5a-60a088d5dcfb",
-                "TapsellMediationAdmobAdapterSignature" to "ca-app-pub-3940256099942544~3347511713",
-                "TapsellMediationApplovinAdapterSignature" to
-                        "5WfZLCGTQmDr6Mf7BBEf5blVwrf8VBMJSmwUSq9-1q5bPpCH_OGAWEP2z2lRkmonLgPzG6gbL4DlvUF9frFmt6",
-            )
-        )
-    }
-```
-
-## AdNetwork test ids
+## Test zone ids
 
 |    Ad Network    |    Ad Type     |                 ZoneId                 |
 |:----------------:|:--------------:|:--------------------------------------:|
