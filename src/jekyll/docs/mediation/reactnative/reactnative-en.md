@@ -80,7 +80,7 @@ Read more about Google Advertising ID changes [here](https://support.google.com/
 
 ### Add Mediation Adapters
 
-The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
+The `react-native-tapsell-mediation/tapsell` package doesn’t serve any ads itself; which means you must install at least one of the following packages for Tapsell to work. Adding more adapters helps the SDK to get ads from different ad networks and increases the possibility of serving ads. The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
 | Name                                                                                                                      |                                                                                            Downloads                                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
