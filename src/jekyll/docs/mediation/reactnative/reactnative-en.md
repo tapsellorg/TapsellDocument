@@ -190,7 +190,7 @@ on GitHub repository.
 
 ## Test keys
 
-To use test app keys and zones, you can refer to this [link](../test/index.html)
+To use test app keys and zones, you can refer to this [link](../test)
 
 ## Next Steps
 

@@ -2,7 +2,7 @@
 layout: no-sidebar-classic-docs
 title: Tapsell Mediation
 lang: en
-permalink: /mediation/test/index.html
+permalink: /mediation/test/
 toc: true
 ---
 
