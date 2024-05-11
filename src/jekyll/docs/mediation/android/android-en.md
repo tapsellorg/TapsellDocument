@@ -100,6 +100,7 @@ The Tapsell Mediation SDK currently supports the following 3rd-party programmati
 * UnityAds
 * IronSource
 * Liftoff (Vungle)
+* Wortise
 
 To integrate, add the adapter dependency you need to your module's app-level `build.gradle`:
 
@@ -112,6 +113,7 @@ implementation "ir.tapsell.mediation.adapter:mintegral:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:unityads:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:ironsource:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:liftoff:$tapsellVersion"
+implementation "ir.tapsell.mediation.adapter:wortise:$tapsellVersion"
 ```
 
 #### Additional Configuration
@@ -169,6 +171,7 @@ In your project-level `build.gradle` file, include Mintegral Maven repository:
 ```groovy
 allprojects {
     repositories {
+      maven { url 'https://cboost.jfrog.io/artifactory/chartboost-ads' }
       maven { url 'https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea' }
     }
 }
@@ -191,6 +194,19 @@ allprojects {
 - Liftoff
 
 No additional configuration needed.
+
+- Wortise
+
+In your project-level `build.gradle` file, include Wortise Maven repository:
+
+```groovy
+allprojects {
+    repositories {
+      maven { url 'https://maven.wortise.com/artifactory/public' }
+      maven { url 'https://artifact.bytedance.com/repository/pangle' }
+    }
+}
+```
 
 ### Set Initialization Listener
 
