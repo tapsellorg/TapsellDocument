@@ -69,20 +69,20 @@ To prepare your app, complete the following steps:
 
 1. Apps updating their target API level to 33 (Android 13) will need to declare a Google Play services permission in the manifest file as follows:
 
-```xml
-<uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
-```
-
-Read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en).
+    ```xml
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    ```
+  
+  Read more about Google Advertising ID changes [here](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en).
 
 2. Add the Google Play Services dependencies into the dependencies block of your `build.gradle` file, to allow GAID (Google Advertising ID) and App Set ID information to be retrieved.
 
-```groovy
-dependencies { 
-    implementation 'com.google.android.gms:play-services-appset:16.0.2' 
-    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1' 
-}
-```
+    ```groovy
+    dependencies { 
+        implementation 'com.google.android.gms:play-services-appset:16.0.2' 
+        implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1' 
+    }
+    ```
 
 ---
 
