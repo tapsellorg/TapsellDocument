@@ -88,6 +88,57 @@ To prepare your app, complete the following steps:
 
 No additional configuration or code is needed to initialize the SDK.
 
+### Set Initialization Listener
+
+You can set a listener to be notified of the SDK's initialization. The `onInitializationComplete` will be called once
+all the mediation adapters are initialized.
+
+```java
+import ir.tapsell.mediation.Tapsell;
+
+public class MainActivity extends AppCompatActivity {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Tapsell.setInitializationListener(() -> {
+            // initialization Completed
+        });
+    }
+}
+```
+
+### User Privacy consent
+
+The Tapsell SDK respects the GDPR user privacy policy. Considering this policy is required for the apps published in
+markets like `GooglePlay`. All ad networks support the user consent policies as well as Tapsell SDK. The Tapsell
+mediation SDK manages the user consent for all implemented ad networks automatically. The correct approach to manage the
+GDPR consent is showing a consent dialog in your application to choose an option by user. After user selection, you need
+to pass the user consent result to the Tapsell SDK. You can pass the result after initialization is completed by adding
+the following code:
+
+```java
+   Tapsell.setInitializationListener(() -> {
+       // initialization Completed
+       Tapsell.setUserConsent(activity, true);
+   });
+```
+
+To avoid showing consent dialog to the user each time, you can store user preferences to your app. But you need to pass
+the latest stored user consent to the Tapsell SDK by invoking the above function.
+
+<br/>
+
+### Family Policy
+
+According to the [GooglePlay Family Policy](https://support.google.com/googleplay/android-developer/answer/9893335?hl=en), if
+any of the target audiences for your app is children (especially if you're developing a game),
+your app's content must be appropriate for these type of users. Also, you are not allowed to collect some personal information
+like Google Advertising ID. However, the third party advertising SDKs need this advertising id to provide and serve personalized ads for users.
+As a result, in Tapsell SDK all users are treated as 13 or older. So as an application developer if you're going to
+publish your app in GooglePlay, you need to express that your app targets audiences with age of 13 or older.
+Otherwise, your app might be removed from GooglePlay according to this policy.
+
 ### Add Mediation Adapters
 
 The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
@@ -155,6 +206,7 @@ In your project-level `build.gradle` file, include Chartboost Maven repository:
 ```groovy
 allprojects {
     repositories {
+        maven { url "https://cboost.jfrog.io/artifactory/chartboost-ads" }
         maven { url "https://cboost.jfrog.io/artifactory/chartboost-mediation" }
     }
 }
@@ -207,57 +259,6 @@ allprojects {
     }
 }
 ```
-
-### Set Initialization Listener
-
-You can set a listener to be notified of the SDK's initialization. The `onInitializationComplete` will be called once
-all the mediation adapters are initialized.
-
-```java
-import ir.tapsell.mediation.Tapsell;
-
-public class MainActivity extends AppCompatActivity {
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Tapsell.setInitializationListener(() -> {
-            // initialization Completed
-        });
-    }
-}
-```
-
-### User GDPR consent
-
-The Tapsell SDK respects the GDPR user privacy policy. Considering this policy is required for the apps published in
-markets like `GooglePlay`. All ad networks support the user consent policies as well as Tapsell SDK. The Tapsell
-mediation SDK manages the user consent for all implemented ad networks automatically. The correct approach to manage the
-GDPR consent is showing a consent dialog in your application to choose an option by user. After user selection, you need
-to pass the user consent result to the Tapsell SDK. You can pass the result after initialization is completed by adding
-the following code:
-
-```java
-   Tapsell.setInitializationListener(() -> {
-       // initialization Completed
-       Tapsell.setUserConsent(activity, true);
-   });
-```
-
-To avoid showing consent dialog to the user each time, you can store user preferences to your app. But you need to pass
-the latest stored user consent to the Tapsell SDK by invoking the above function.
-
-<br/>
-
-### Family Policy
-
-According to the [GooglePlay Family Policy](https://support.google.com/googleplay/android-developer/answer/9893335?hl=en), if
-any of the target audiences for your app is children (especially if you're developing a game),
-your app's content must be appropriate for these type of users. Also, you are not allowed to collect some personal information
-like Google Advertising ID. However, the third party advertising SDKs need this advertising id to provide and serve personalized ads for users.
-As a result, in Tapsell SDK all users are treated as 13 or older. So as an application developer if you're going to
-publish your app in GooglePlay, you need to express that your app targets audiences with age of 13 or older.
-Otherwise, your app might be removed from GooglePlay according to this policy.
 
 ## Implementing Ad Formats
 ---
