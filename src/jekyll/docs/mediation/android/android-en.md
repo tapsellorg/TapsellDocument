@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### User Privacy consent
+### GooglePlay User Privacy
 
 The Tapsell SDK respects the GDPR user privacy policy. Considering this policy is required for the apps published in
 markets like `GooglePlay`. All ad networks support the user consent policies as well as Tapsell SDK. The Tapsell
@@ -129,7 +129,7 @@ the latest stored user consent to the Tapsell SDK by invoking the above function
 
 <br/>
 
-### Family Policy
+### GooglePlay Family Policy
 
 According to the [GooglePlay Family Policy](https://support.google.com/googleplay/android-developer/answer/9893335?hl=en), if
 any of the target audiences for your app is children (especially if you're developing a game),
