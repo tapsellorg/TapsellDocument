@@ -40,6 +40,9 @@ toc: true # table of contents
     Assets > External Dependency Manager > Android Resolver > Force Resolve
     ```
 
+   > If the resolver fails and Tapsell plugins are not downloaded into `Assets/Plugins/Android`, you can also download all plugins from [this link](https://storage.backtory.com/tapsell-sdk-private/plus-unity/Unity-Android-AAR-Plugins/Unity-AAR-Plugins-2.2.6.zip).
+   {:data-title="Project build note" data-color="red"}
+
 6. Add your own custom Gradle build file by enabling related checkboxes as follows:
 
     ```console
@@ -188,3 +191,4 @@ Otherwise, your app will be removed from GooglePlay according to this policy.
 for more information, please refer to the sample projects on Github.
 
 * [Sample project compatible with Unity 2021.3.5f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin)
+* [Unity AAR Plugins](https://storage.backtory.com/tapsell-sdk-private/plus-unity/Unity-Android-AAR-Plugins/Unity-AAR-Plugins-2.2.6.zip)
