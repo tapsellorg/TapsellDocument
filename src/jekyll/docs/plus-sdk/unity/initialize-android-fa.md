@@ -206,3 +206,4 @@ TapsellPlus.SetGdprConsent(true);
 برای راهنمایی بیش‌تر می‌توانید از پروژه‌های نمونه‌ی ما بر روی Github استفاده نمایید.
 
 * [پروژه‌ی نمونه مناسب برای Unity 2021.3.5f1 LTS](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin)
+* [پلاگین های AAR](https://storage.backtory.com/tapsell-sdk-private/plus-unity/Unity-Android-AAR-Plugins/Unity-AAR-Plugins-2.2.6.zip)
