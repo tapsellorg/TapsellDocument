@@ -2,6 +2,18 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+## 2.2.6 - 2024/06/02
+
+- اضافه شدن تابع `TapsellPlus.setGDPRConsent(boolean)` جهت ارسال تاییدیه `GDPR` از سمت کاربر
+- به روزرسانی کتابخانه تپسل به نسخه `4.9.0`
+- اضافه کردن پشتیبانی از `Google UMP` برای مدیریت کردن نحوه جمع‌اوری داده کاربر در ادموب جهت رفع مشکل گوگل پلی
+- اضافه کردن چند رول پروگارد [#85](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/85)
+- بروزرسانی `Admob` به `22.6.0`
+- به‌رو‌ز‌رسانی `AppLovin` به نسخه `12.4.0`
+- به‌رو‌ز‌رسانی `Mintegral` به نسخه `16.6.71`
+- حذف شبکه تبلیغاتی `AdColony` به دلیل منسوخ شدن
+
+
 ## 2.2.4 - 2024/02/04
 - به‌روزرسانی کتابخانه تپسل به `4.8.8`
 - افزودن پشتیبانی از `Gradle 8` و `R8 Full mode`. مشاهده در گیتهاب [#75](https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample/issues/75).
