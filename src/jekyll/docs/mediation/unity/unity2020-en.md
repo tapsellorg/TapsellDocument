@@ -12,7 +12,7 @@ toc: true
 
 Consider the following steps to install Tapsell Mediation in `Unity 2020` or below:
 
-- Update the Unity Editor's default Gradle to version `6.7.1+` from [this link](https://gradle.org/releases) and open Unity `Preferences > External Tools` and set the custom Gradle path as follows:
+- Update the Unity Editor's default Gradle to version `6.7.1+` from [this link](https://gradle.org/releases). Then open `Preferences > External Tools` and set the custom Gradle path:
 
     <img src="https://github.com/tapsellorg/TapsellDocument/assets/38072572/3288f703-a9a6-4b9f-b06a-319f47bf6848" alt="unity-gradle-path" />
 
