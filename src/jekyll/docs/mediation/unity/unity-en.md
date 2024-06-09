@@ -25,7 +25,7 @@ Once you've integrated the SDK, you can choose an ad format (such as banner or r
 
 - Use Unity 2020 or higher.
 
-> If you are using Unity 2020, see [this page](./unity2020/index.html) before starting the installation.
+> Are you using Unity 2020? see [this page](./unity2020/index.html) before starting the installation.
 
 ### Before You Begin
 
