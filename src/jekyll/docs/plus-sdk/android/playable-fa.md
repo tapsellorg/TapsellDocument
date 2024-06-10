@@ -8,7 +8,7 @@ toc: true
 
 ### بارگذاری کردن اسکریپت playable
 
-ابتدا لازم است در پروژه خود یک فایل `index.html` مطابق ساختار زیر بسازید. سپس اسکریپت `tapsell-playable.js` را از [این لینک دانلود](https://storage.backtory.com/tapsell-server/frontend/playable/static/tapsell-playable.js) کرده و به پروژه خود اضافه کرده و مطابق زیر، مسیر آن را در تگ `script` وارد کنید تا دسترسی به توابع تپسل به صورت
+ابتدا لازم است در پروژه خود یک فایل `index.html` مطابق ساختار زیر بسازید. سپس اسکریپت `tapsell-playable.js` را از [این لینک دانلود](https://cdn.tapture.ir/tapsell/app/frontend/playable/tapsell-playable.js) کرده و به پروژه خود اضافه کرده و مطابق زیر، مسیر آن را در تگ `script` وارد کنید تا دسترسی به توابع تپسل به صورت
 بهینه برای شما وجود داشته
 باشد.
 
