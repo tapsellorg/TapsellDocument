@@ -38,10 +38,10 @@ public class MyApplication extends Application {
 اکنون کلاس `application` به برنامه اضافه شده، میتوانید یلوادوایز را در متد `onCreate` مقدار دهی کنید.
 
 ```java
-import ir.yelloadwise.core.irancell.ir;
+import ir.yelloadwise.app.yelloadwise;
 ...
 public void onCreate() {
     super.onCreate();
-    irancell.ir.initialize(this, irancell.ir_KEY);
+    Yelloadwise.initialize(this, YELLOADWISE_KEY);
 }
 ```

@@ -38,10 +38,10 @@ Add the name of the application class you just made to the `application` tag in 
 Now that the `application` class is added to your project you can initialize Yelloadwise in the `onCreate` method of your applicaton class.
 
 ```java
-import ir.yelloadwise.core.irancell.ir;
+import ir.yelloadwise.app.Yelloadwise;
 ...
 public void onCreate() {
     super.onCreate();
-    irancell.ir.initialize(this, irancell.ir_KEY);
+    yelloadwise.initialize(this, YELLOADWISE_KEY);
 }
 ```

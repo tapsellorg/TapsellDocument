@@ -2,11 +2,11 @@
 layout: classic-docs
 title: Implementing VAST Ads
 lang: en
-permalink: /yelloadwise-core/android/vast/index.html
+permalink: /yelloadwise-app/android/vast/index.html
 toc: true
 ---
 ### Creating a Zone
-First, create a zone from the [Yelloadwise panel](https://dashboard.yelloadwise.ir/) of type VAST (preroll) and use the `zoneId` when requesting or showing an ad.
+First, create a zone from the [Yelloadwise panel](https://business.yelloadwise.ir/) of type VAST (preroll) and use the `zoneId` when requesting or showing an ad.
 
 ### Requesting and Showing Ads
 To show VAST ads you need to use the Google IMA library.

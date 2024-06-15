@@ -2,23 +2,14 @@
 layout: classic-docs
 title: تبلیغات جایزه‌ای و آنی در اندروید
 lang: fa
-permalink: /yelloadwise-core/android/rewarded-interstitial/index.html
+permalink: /yelloadwise-app/android/rewarded-interstitial/index.html
 toc: true # table of contents
 ---
-
-<div class="alert alert-danger" role="alert" dir="rtl" markdown="0">
-  <h4 class="alert-heading">&#9888; هشدار! این SDK دیگر پشتیبانی نمی‌شود &#9888;</h4>
-  <p>اگر تاکنون برای تبلیغات درون اپلیکیشن از یلوادوایز استفاده می‌کردید، بهتر است زین‌پس از <a href="https://docs.irancell.ir/plus-sdk/android/rewarded-interstitial/">یلوادوایز‌پلاس</a> استفاده نمایید.</p>
-  <hr>
-  <p class="mb-0">یلوادوایز، علاوه بر دارا بودن تمام امکانات یلوادوایز، الگوریتم‌های هوشمندانه‌تر، تبلیغات متنوع‌تر و عملکرد بهتری دارد.</p>
-  <p class="mb-0">همچنین فرصت کسب درآمد ارزی را از طریق نمایش تبلیغات شبکه‌های تبلیغاتی خارجی (نظیر AdMob) فراهم می‌کند.</p>
-  <p class="mb-0">نسخه‌های منتشر شده یلوادوایز در صورتی که پیش‌تر پیاده‌سازی شده باشند، کماکان به کار خود ادامه می‌دهند و تبلیغ دریافت می‌کنند امّا آپدیت نشده و باگ‌ها پشتیبانی نمی‌شوند.</p>
-</div>
 
 >پیاده‌سازی تبلیغات جایزه‌ای و آنی (هم ویدیو‌ و هم بنری) به یک صورت است. فقط کافی است نوع تبلیغگاه را از پنل انتخاب کنید.
 
 ## ساخت تبلیغگاه
-ابتدا از [پنل یلوادوایز](https://dashboard.irancell.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
+ابتدا از [پنل یلوادوایز](https://business.yelloadwise.ir/) یک تبلیغ‌گاه از نوعی که مایل هستید بسازید.
 
 ## درخواست تبلیغ
 با اجرای کد زیر می‌توانید درخواست یک تبلیغ بدهید.
@@ -39,10 +30,10 @@ Yelloadwise.requestAd(CONTEXT,
 ```
 ورودی اول `CONTEXT` میباشد.  
 ورودی دوم `ZONE_ID` برابر با شناسه تبلیغ‌گاهی هست که در پنل ساخته‌اید.  
-ورودی سوم `OPTIONS` از نوع `irancell.irAdRequestOptions` است. تنظیمات زمان درخواست تبلیغ را از این طریق می‌توانید انجام بدهید.  
-ورودی چهارم از نوع `irancell.irAdRequestListener` است.  
+ورودی سوم `OPTIONS` از نوع `YelloadwiseAdRequestOptions` است. تنظیمات زمان درخواست تبلیغ را از این طریق می‌توانید انجام بدهید.  
+ورودی چهارم از نوع `YelloadwiseAdRequestListener` است.  
   
-متدهای `irancell.irAdRequestListener` مطابق جدول زیر است و نتیجه درخواست تبلیغ با کمک این بخش برمیگردد.
+متدهای `YelloadwiseAdRequestListener` مطابق جدول زیر است و نتیجه درخواست تبلیغ با کمک این بخش برمیگردد.
 
 | عملکرد | متد |
 | - | - |
@@ -59,15 +50,15 @@ Yelloadwise.requestAd(CONTEXT,
 ### تنظیمات درخواست
 با روش زیر می‌توانید نوع `cache` شدن ویدیو را با کمک ورودی `options` را تغییر دهید.  
 ```java
-irancell.irAdRequestOptions options = new irancell.irAdRequestOptions();
+YelloadwiseAdRequestOptions options = new YelloadwiseAdRequestOptions();
 options.setCacheType(CACHE_TYPE);
 ```
 مقدار `CACHE_TYPE` میتواند برابر مقادیر زیر باشد.
 
 | توضیحات | مقدار |
 | - | - |
-| هنگام نمایش تبلیغ، شروع به دانلود ویدیو میکند | `irancell.irAdRequestOptions.CACHE_TYPE_STREAMED` |
-| قبل از نمایش تبلیغ، ویدیو را دانلود میکند | `irancell.irAdRequestOptions.CACHE_TYPE_CACHED` |
+| هنگام نمایش تبلیغ، شروع به دانلود ویدیو میکند | `YelloadwiseAdRequestOptions.CACHE_TYPE_STREAMED` |
+| قبل از نمایش تبلیغ، ویدیو را دانلود میکند | `YelloadwiseAdRequestOptions.CACHE_TYPE_CACHED` |
 
 >تنها زمانی از `CACHE_TYPE_CACHED` استفاده کنید که احتمال دیدن ویدیو توسط کاربر زیاد باشد، تا مصرف اینترنت بالا نرود.
 
@@ -75,11 +66,11 @@ options.setCacheType(CACHE_TYPE);
 برای نمایش تبلیغ از تابغ زیر استفاده کنید.
 
 ```java
-irancell.ir.showAd(CONTEXT,
+Yelloadwise.showAd(CONTEXT,
         ZONE_ID,
         AD_ID,
-        new irancell.irShowOptions(),
-        new irancell.irAdShowListener() {
+        new YelloadwiseShowOptions(),
+        new YelloadwiseAdShowListener() {
             @Override
             public void onOpened() {
             }
@@ -101,10 +92,10 @@ irancell.ir.showAd(CONTEXT,
 ورودی اول `CONTEXT` میباشد.  
 ورودی دوم شناسه تبلیغ‌گاه است.
 ورودی سوم شناسه تبلیغ که در زمان درخواست تبلیغ توسط متد `onAdAvailable` داده شده است.
-ورودی چهارم از نوع `irancell.irShowOptions` است. تنظیمات زمان نمایش تبلیغ را از این طریق می‌توانید انجام بدهید.  
-ورودی پنجم از نوع `irancell.irAdShowListener` است. مراحل نمایش تبلیغ را از این طریق می‌توانید دریافت کنید.  
+ورودی چهارم از نوع `YelloadwiseShowOptions` است. تنظیمات زمان نمایش تبلیغ را از این طریق می‌توانید انجام بدهید.  
+ورودی پنجم از نوع `YelloadwiseAdShowListener` است. مراحل نمایش تبلیغ را از این طریق می‌توانید دریافت کنید.  
 
-متدهای `irancell.irAdShowListener` مطابق جدول زیر است.
+متدهای `YelloadwiseAdShowListener` مطابق جدول زیر است.
 
 | عملکرد | متد |
 | - | - |
@@ -116,7 +107,7 @@ irancell.ir.showAd(CONTEXT,
 ### تنظیمات نمایش
 تنظیمات زمان نمایش را می‌توانید مطابق روش زیر با کمک ورودی `showOptions` تغییر دهید.
 ```java
-irancell.irShowOptions showOptions = new irancell.irShowOptions();
+YelloadwiseShowOptions showOptions = new YelloadwiseShowOptions();
 showOptions.setBackDisabled(true|false);
 showOptions.setImmersiveMode(true|false);
 showOptions.setShowDialog(true|false);
@@ -136,13 +127,13 @@ showOptions.setRotationMode(ROTATION_MODE);
   
 مقادیری که می‌توانید به `setRotationMode` بدهید مطابق جدول زیر است.
 
-| توضیحات | مقدار |
-| - | - |
-| عمودی | `irancell.irShowOptions.ROTATION_LOCKED_PORTRAIT` |
-| افقی | `irancell.irShowOptions.ROTATION_LOCKED_LANDSCAPE` |
-| بر اساس وضعیت گوشی | `irancell.irShowOptions.ROTATION_UNLOCKED` |
-| عمودی برعکس | `irancell.irShowOptions.ROTATION_LOCKED_REVERSED_PORTRAIT` |
-| افقی برعکس | `irancell.irShowOptions.ROTATION_LOCKED_REVERSED_LANDSCAPE` |
+| توضیحات | مقدار                                                       |
+| - |-------------------------------------------------------------|
+| عمودی | `YelloadwiseShowOptions.ROTATION_LOCKED_PORTRAIT`           |
+| افقی | `YelloadwiseShowOptions.ROTATION_LOCKED_LANDSCAPE`          |
+| بر اساس وضعیت گوشی | `YelloadwiseShowOptions.ROTATION_UNLOCKED`                  |
+| عمودی برعکس | `YelloadwiseShowOptions.ROTATION_LOCKED_REVERSED_PORTRAIT`            |
+| افقی برعکس | `YelloadwiseShowOptions.ROTATION_LOCKED_REVERSED_LANDSCAPE` |
 
 ## دریافت نتیجه تبلیغ جایزه‌ای
 در تبلیغات جایزه‌ای در صورتی که متفییر `completed` در متد `onRewarded` هنگام نمایش تبلیغ `true` باشد می‌توانید جایزه را به کاربر بدهید.

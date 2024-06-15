@@ -2,11 +2,11 @@
 layout: classic-docs
 title: Implementing Native Ads
 lang: en
-permalink: /yelloadwise-core/android/native/index.html
+permalink: /yelloadwise-app/android/native/index.html
 toc: true
 ---
 ### Creating a Zone
-First, create a native zone from the [Yelloadwise panel](https://dashboard.irancell.ir/) and use the `zoneId` when requesting or showing an ad.
+First, create a native zone from the [Yelloadwise panel](https://business.yelloadwise.ir/) and use the `zoneId` when requesting or showing an ad.
 
 ### Creating an AdHolder
 You should add a ViewGroup to the page in which you want to show the native ad as space for displaying it. In other words, you need to create an ad container.
@@ -27,19 +27,19 @@ You should add a ViewGroup to the page in which you want to show the native ad a
 </FrameLayout>
 ```
 
-Sample preview template designed to display native ads can be found in `irancell.ir_content_banner_ad_template` and `irancell.ir_app_installation_banner_ad_template` files.
+Sample preview template designed to display native ads can be found in `yelloadwisecontent_banner_ad_template` and `yelloadwiseapp_installation_banner_ad_template` files.
 
 If you want to change the default template, create a `layout` and change the `id` and the type of different sections, shown in the table below:
 
-|       view       |              id              | type  |
-|:------------:|:----------------------------:|:-:|
-|     logo     |     `irancell.ir_nativead_logo`    | `ImageView`  |
-|     title    |    `irancell.ir_nativead_title`    | `TextView`  |
-| ad indicator |  `irancell.ir_nativead_sponsored`  | `View`  |
-|  description | `irancell.ir_nativead_description` | `TextView`  |
-|    banner    |    `irancell.ir_nativead_banner`   | `ir.yelloadwise.core.nativeads.views.RatioImageView`  |
-|    button    |     `irancell.ir_nativead_cta`     | `TextView`  |
-|    clickable view    |     `irancell.ir_nativead_cta_view`     | `View`  |
+|       view       |                                         id                                          | type  |
+|:------------:|:-----------------------------------------------------------------------------------:|:-:|
+|     logo     |                                  `yelloadwise_nativead_logo`                                   | `ImageView`  |
+|     title    |                            `yelloadwise_nativead_title`                             | `TextView`  |
+| ad indicator |                          `yelloadwise_nativead_sponsored`                           | `View`  |
+|  description |                         `yelloadwise_nativead_description`                          | `TextView`  |
+|    banner    |                            `yelloadwise_nativead_banner`                            | `ir.yelloadwise.app.nativeads.views.RatioImageView`  |
+|    button    |                             `yelloadwisenativead_cta`                              | `TextView`  |
+|    clickable view    |                           `yelloadwisenativead_cta_view`                           | `View`  |
 
 
 * If there is no button for clicking you can use **clickable view**.
@@ -47,19 +47,19 @@ If you want to change the default template, create a `layout` and change the `id
 
 
 
-Give the ad container and the id of the layout to Yelloadwise to create a `irancell.irNativeBannerViewManager` such as the following code:
+Give the ad container and the id of the layout to Yelloadwise to create a `yelloadwise.irNativeBannerViewManager` such as the following code:
 
 ```java
-import ir.yelloadwise.core.nativeads.irancell.irNativeBannerManager;
-import ir.yelloadwise.core.nativeads.irancell.irNativeBannerViewManager;;
+import ir.yelloadwise.app.nativeads.YelloadwiseNativeBannerManager;
+import ir.yelloadwise.app.nativeads.YelloadwiseNativeBannerViewManager;;
 ...
 ViewGroup adContainer = findViewById(R.id.adContainer);
 ...
-irancell.irNativeBannerViewManager nativeBannerViewManager = new irancell.irNativeBannerManager
+YelloadwiseNativeBannerViewManager nativeBannerViewManager = new YelloadwiseNativeBannerManager
     .Builder()
     .setParentView(adContainer)
-    .setContentViewTemplate(R.layout.irancell.ir_content_banner_ad_template)
-    .setAppInstallationViewTemplate(R.layout.irancell.ir_app_installation_banner_ad_template)
+    .setContentViewTemplate(R.layout.yelloadwisecontent_banner_ad_template)
+    .setAppInstallationViewTemplate(R.layout.yelloadwiseapp_installation_banner_ad_template)
     .inflateTemplate(CONTEXT);
 ```
 
@@ -67,11 +67,11 @@ irancell.irNativeBannerViewManager nativeBannerViewManager = new irancell.irNati
 Use the `getAd` method to request an ad. For example:
 
 ```java
-import ir.yelloadwise.core.AdRequestCallback;
-import ir.yelloadwise.core.nativeads.irancell.irNativeBannerManager;
+import ir.yelloadwise.app.AdRequestCallback;
+import ir.yelloadwise.app.nativeads.YelloadwiseNativeBannerManager;
 .......
 private void requestAd() {
-    irancell.irNativeBannerManager.getAd(CONTEXT, ZONE_ID_NATIVE,
+    YelloadwiseNativeBannerManager.getAd(CONTEXT, ZONE_ID_NATIVE,
                 new AdRequestCallback() {
                     @Override
                     public void onResponse(String[] adId) {
@@ -90,10 +90,10 @@ private void requestAd() {
 After the onResponse method is called, the requested ad is ready to be displayed. You can show the ad using the following lines of code:
 
 ```java
-import ir.yelloadwise.core.nativeads.irancell.irNativeBannerManager;
+import ir.yelloadwise.app.nativeads.YelloadwiseNativeBannerManager;
 ........
 private void showAd() {
-    irancell.irNativeBannerManager.bindAd(
+    YelloadwiseNativeBannerManager.bindAd(
                 CONTEXT,
                 nativeBannerViewManager,
                 ZONE_ID_NATIVE,

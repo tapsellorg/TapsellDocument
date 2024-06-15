@@ -1,236 +1,43 @@
 en:
-  - name: Yelloadwise
+  - name: Yelloadwise App
     icon: m-sdk
     children:
       - name: Android
-        link: /plus-sdk/android/main
+        link: /yelloadwise-app/android/main
         children:
           - name: Initialization
-            link: /plus-sdk/android/initialize
+            link: /yelloadwise-app/android/initialize
 
           - name: Rewarded/Interstitial
-            link: /plus-sdk/android/rewarded-interstitial
-
-          - name: Native
-            link: /plus-sdk/android/native
-
-          - name: Native Video
-            link: /plus-sdk/android/native-vid
-
-          - name: Standard
-            link: /plus-sdk/android/standard
-
-          - name: Vast
-            link: /plus-sdk/android/vast
-
-          - name: Ad Networks
-            link: /plus-sdk/android/add-adnetworks
-
-          - name: Test
-            link: /plus-sdk/android/adnetworks-test
-      - name: Unity
-        link: /plus-sdk/unity/main
-        children:
-          - name: Android Initialization
-            link: /plus-sdk/unity/initialize-android
-
-          - name: iOS Initialization
-            link: /plus-sdk/unity/initialize-ios
-
-          - name: Rewarded/Interstitial
-            link: /plus-sdk/unity/rewarded-interstitial
-
-          - name: Native
-            link: /plus-sdk/unity/native
-
-          - name: Standard
-            link: /plus-sdk/unity/standard
-
-          - name: Ad Networks
-            link: /plus-sdk/unity/add-adnetworks
-
-          - name: Test
-            link: /plus-sdk/unity/adnetworks-test
-  - name: Yelloadwise
-    icon: m-sdk
-    children:
-      - name: Android
-        link: /yelloadwise-core/android/main
-        children:
-          - name: Initialization
-            link: /yelloadwise-core/android/initialize
-
-          - name: Rewarded/Interstitial
-            link: /yelloadwise-core/android/rewarded-interstitial
+            link: /yelloadwise-app/android/rewarded-interstitial
 
           - name: Native Banner
-            link: /yelloadwise-core/android/native
+            link: /yelloadwise-app/android/native
 
           - name: Standard Banner
-            link: /yelloadwise-core/android/standard
+            link: /yelloadwise-app/android/standard
 
           - name: Vast
-            link: /yelloadwise-core/android/vast
-
-
-
+            link: /yelloadwise-app/android/vast
 
 fa:
-  - name: یلوادوایز
+  - name: یلوادوایز اپ
     icon: m-sdk
     children:
       - name: Android
-        link: /plus-sdk/android/main
+        link: /yelloadwise-app/android/main
         children:
           - name: راه اندازی
-            link: /plus-sdk/android/initialize
-
-          - name: آنی/جایزه‌ای
-            link: /plus-sdk/android/rewarded-interstitial
-
-          - name: همسان
-            link: /plus-sdk/android/native
-
-          - name: ویدئوی همسان
-            link: /plus-sdk/android/native-vid
-
-          - name: استاندارد
-            link: /plus-sdk/android/standard
-
-          - name: VAST
-            link: /plus-sdk/android/vast
-
-          - name: شبکه‌های تبلیغاتی
-            link: /plus-sdk/android/add-adnetworks
-
-          - name: تست
-            link: /plus-sdk/android/adnetworks-test
-
-          - name: خطاهای فنی رایج
-            link: /faq/plus-sdk/android/
-
-      - name: Unity
-        link: /plus-sdk/unity/main
-        children:
-          - name: راه اندازی اندروید
-            link: /plus-sdk/unity/initialize-android
-
-          - name: راه اندازی ios
-            link: /plus-sdk/unity/initialize-ios
-
-          - name: آنی/جایزه‌ای
-            link: /plus-sdk/unity/rewarded-interstitial
-
-          - name: همسان
-            link: /plus-sdk/unity/native
-
-          - name: استاندارد
-            link: /plus-sdk/unity/standard
-
-          - name: شبکه‌های تبلیغاتی
-            link: /plus-sdk/unity/add-adnetworks
-
-          - name: تست
-            link: /plus-sdk/unity/adnetworks-test
-
-          - name: خطاهای فنی رایج
-            link: /faq/plus-sdk/unity/
-
-      - name: Flutter
-        link: /plus-sdk/flutter/main
-        children:
-          - name: راه اندازی
-            link: /plus-sdk/flutter/initialize
-
-          - name: آنی/جایزه‌ای
-            link: /plus-sdk/flutter/rewarded-interstitial
-
-          - name: همسان
-            link: /plus-sdk/flutter/native
-
-          - name: استاندارد
-            link: /plus-sdk/flutter/standard
-
-          - name: شبکه‌های تبلیغاتی
-            link: /plus-sdk/flutter/add-adnetworks
-
-          - name: تست
-            link: /plus-sdk/flutter/adnetworks-test
-
-          - name: خطاهای فنی رایج
-            link: /faq/plus-sdk/flutter/
-
-      - name: React Native
-        link: /plus-sdk/reactnative/main
-        children:
-          - name: راه اندازی
-            link: /plus-sdk/reactnative/initialize-android
-
-          - name: آنی/جایزه‌ای
-            link: /plus-sdk/reactnative/rewarded
-
-          - name: همسان
-            link: /plus-sdk/reactnative/native
-
-          - name: استاندارد
-            link: /plus-sdk/reactnative/standard
-
-          - name: شبکه‌های تبلیغاتی
-            link: /plus-sdk/reactnative/add-adnetworks
-
-          - name: تست
-            link: /plus-sdk/reactnative/adnetworks-test
-
-          - name: خطاهای فنی رایج
-            link: /faq/plus-sdk/reactnative/
-
-      - name: Basic4Android
-        link: /plus-sdk/b4a/main
-        children:
-          - name: راه اندازی
-            link: /plus-sdk/b4a/initialize
-
-          - name: آنی/جایزه‌ای
-            link: /plus-sdk/b4a/rewarded
-
-          - name: همسان
-            link: /plus-sdk/b4a/native
-
-          - name: ویدئوی همسان
-            link: /plus-sdk/b4a/native-vid
-
-          - name: استاندارد
-            link: /plus-sdk/b4a/standard
-
-          - name: شبکه‌های تبلیغاتی
-            link: /plus-sdk/b4a/add-adnetworks
-
-          - name: تست
-            link: /plus-sdk/b4a/adnetworks-test
-
-          - name: خطاهای فنی رایج
-            link: /faq/plus-sdk/b4a/
-
-  - name: یلوادوایز
-    icon: m-sdk
-    children:
-      - name: Android
-        link: /yelloadwise-core/android/main
-        children:
-          - name: راه اندازی
-            link: /yelloadwise-core/android/initialize
+            link: /yelloadwise-app/android/initialize
 
           - name: جایزه‌ای/آنی
-            link: /yelloadwise-core/android/rewarded-interstitial
+            link: /yelloadwise-app/android/rewarded-interstitial
 
           - name: بنر استاندارد
-            link: /yelloadwise-core/android/standard
+            link: /yelloadwise-app/android/standard
 
           - name: بنر همسان
-            link: /yelloadwise-core/android/native
+            link: /yelloadwise-app/android/native
 
-          - name: VAST
-            link: /yelloadwise-core/android/vast
-
-      - name: سیستم صحت سنجی
-        link: /s2s
+          - name: پیش نمایشی (PreRoll)
+            link: /yelloadwise-app/android/vast

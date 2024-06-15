@@ -2,27 +2,27 @@
 
 ########### Global Variables ###########
 title: 'Yelloadwise: Smart ad network agency'
-email: technical.tapsell@gmail.com
+email: technical.yelloadwise@gmail.com
 description: >-
   Yelloadwise, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience.
 baseurl: '' # the subpath of your site, e.g. /docs
 url: 'https://yelloadwise.ir'
 twitter_username:
-github_username: tapsellorg
-site_name: Tapsell
+github_username: yelloadwise
+site_name: Yelloadwise
 global_vars:
-  landing_url: https://irancell.ir
-  dashboard_url: https://dashboard.irancell.ir/
-  blog_url: https://college.irancell.ir/
-  docs_url: https://docs.tapsell.ir/
-  site_name: irancell.ir
-  get_demo_url: https://dashboard.irancell.ir/
+  landing_url: https://yelloadwise.ir
+  dashboard_url: https://business.yelloadwise.ir/
+  blog_url: https://business.yelloadwise.ir/
+  docs_url: https://docs.yelloadwise.ir/
+  site_name: yelloadwise.ir
+  get_demo_url: https://business.yelloadwise.ir/
   header_logo_alt: Yelloadwise Docs
-  terms_url: https://docs.irancell.ir/terms-and-condition/
-  paying_income_url: https://docs.irancell.ir/paying-income/
-  faq_url: https://docs.irancell.ir/faq/
-  faq_advertisers_url: https://docs.irancell.ir/faq/advertiser/
-  contact_email: info@irancell.ir
+  terms_url: https://docs.yelloadwise.ir/terms-and-condition/
+  paying_income_url: https://docs.yelloadwise.ir/paying-income/
+  faq_url: https://docs.yelloadwise.ir/faq/
+  faq_advertisers_url: https://docs.yelloadwise.ir/faq/advertiser/
+  contact_email: info@yelloadwise.ir
   footer_logo_alt: Yelloadwise
 
 ########### Condfigurations ###########
@@ -73,13 +73,12 @@ t:
     footer:
       terms: Terms of Service
       contact: Contact Us
-      copyright: Designed and Developed by Yelloadwise - Iran
+      description: Designed and Developed by Yelloadwise - Iran
   fa:
     nav:
       home: خانه
       dashboard: داشبورد
       get_demo: دریافت دمو
-      blog: کالج یلوادوایز
       switch_lang: English
     footer:
       terms: قوانین و ضوابط
@@ -87,4 +86,4 @@ t:
       faq_advertisers: سوالات متداول تبلیغ‌دهندگان
       faq: سوالات متداول
       paying_income: پرداخت درآمد
-      copyright: طراحی و توسعه توسط یلوادوایز - ایران
+      description: یلوادوایز مسیری برای رساندن پیام شما به مشتریان. کمپین‌های ارجاعی و ساده خود را طراحی کنید و از نتیجه آن شگفت‌زده شوید!

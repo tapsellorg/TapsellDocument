@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: tapsellorg/TapsellDocument
+  repo: yelloadwise/YelloadwiseDocument
 media_folder: 'src/jekyll/images'
 public_folder: '/images'
 publish_mode: editorial_workflow
