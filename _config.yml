@@ -18,7 +18,7 @@ global_vars:
   site_name: yelloadwise.ir
   get_demo_url: https://business.yelloadwise.ir/
   header_logo_alt: Yelloadwise Docs
-  terms_url: https://docs.yelloadwise.ir/terms-and-condition/
+  terms_url: https://yelloadwise.ir/rules/
   paying_income_url: https://docs.yelloadwise.ir/paying-income/
   faq_url: https://docs.yelloadwise.ir/faq/
   faq_advertisers_url: https://docs.yelloadwise.ir/faq/advertiser/
