@@ -5,7 +5,7 @@ lang: en
 permalink: /yelloadwise-app/android/main/index.html
 toc: true
 sdkPlatform:
-  name: YelloadwiseAppAndroid 
+  name: yelloadwiseAndroid 
   logo: /images/sdk-platforms/android.png
 ---
 
