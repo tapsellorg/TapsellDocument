@@ -41,7 +41,7 @@ You can get your `yelloadwise-key` from [Yelloadwise Dashboard](http://business.
 
 
 ## Proguard Configuration
-Get the `proguard.properties` file from [this link](https://github.com/irancell/YelloadwiseSDK-AndroidSample/blob/master/app/proguard-rules.pro) and add it to the proguard properties of your app module.
+Get the `proguard.properties` file from [this link](https://github.com/Yelloadwise/YelloadwiseSDK-AndroidSample/blob/master/app/proguard-rules.pro) and add it to the proguard properties of your app module.
 
 ## Network Security Configuration
 In case your application uses the HTTP protocol, in the `res/xml` path of your project create a file named `network_security_config.xml`.

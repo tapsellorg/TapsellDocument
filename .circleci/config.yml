@@ -35,7 +35,7 @@ jobs:
       - run:
           name: Deploying to GitHub Pages
           command: |
-            git clone git@github.com:irancell/YelloadwiseDocument.git
+            git clone git@github.com:Yelloadwise/YelloadwiseDocument.git
 
             cd YelloadwiseDocument
             git checkout gh-pages

@@ -41,7 +41,7 @@ public void onCreate() {
 `YELLOADWISE_KEY` کلید یلوادوایز هست و برای هر اپلیکیشن که در [پنل یلوادوایز](https://business.yelloadwise.ir/) ساخته میشود متفاوت است و میتوانید از پنل کپی کنید.
 
 ## تنظیمات proguard
-تنظیمات مربوط به `proguard` در [این فایل](https://github.com/irancell/YelloadwiseSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
+تنظیمات مربوط به `proguard` در [این فایل](https://github.com/Yelloadwise/YelloadwiseSDK-AndroidSample/blob/master/app/proguard-rules.pro) قرار دارد.
 
 
 اکنون می‌توانید با توجه به نیاز خود و توضیحات به هر نوع تبلیغ، تبلیغ مورد نظر را نمایش دهید.

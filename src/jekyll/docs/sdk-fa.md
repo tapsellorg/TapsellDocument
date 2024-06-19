@@ -15,7 +15,7 @@ permalink: /sdk/index.html
       <h2>Android</h2>
       <ul>
         <li><a href="{{ site.baseurl }}/yelloadwise-app/android/main">مستندات</a></li>
-        <li><a href="https://github.com/irancell/YelloadwiseSDK-AndroidSample">پروژه نمونه</a></li>
+        <li><a href="https://github.com/Yelloadwise/YelloadwiseSDK-AndroidSample">پروژه نمونه</a></li>
       </ul>
     </div>
   </div>
