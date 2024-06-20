@@ -48,7 +48,7 @@ jobs:
         env:
           PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          git clone https://github.com/MortezaNedaei/TapsellDocument.git
+          git clone https://github.com/tapsellorg/TapsellDocument.git
           cd TapsellDocument
           if [ `git branch --list gh-pages` ]; then
             git checkout gh-pages
@@ -59,4 +59,4 @@ jobs:
           cp -r ../_site/* .
           git add -A
           git commit -m "update gh pages"
-          git push https://tapsellCI:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/MortezaNedaei/TapsellDocument.git gh-pages --force
+          git push https://tapsellCI:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/tapsellorg/TapsellDocument.git gh-pages --force
