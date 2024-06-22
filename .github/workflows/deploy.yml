@@ -35,12 +35,12 @@ jobs:
       - name: Build the site
         run: npm run build
 
-      - name: Configure CNAME
-        run: echo "docs.tapsell.ir" > _site/CNAME
+#      - name: Configure CNAME
+#        run: echo "docs.tapsell.ir" > _site/CNAME
 
       - name: Configure Git
         run: |
-          git config --global user.email "nedaei1375@gmail.com"
+          git config --global user.email "technical.tapsell@gmail.com"
           git config --global user.name "tapsellCI"
           git config --global url.https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/.insteadOf https://github.com/
 

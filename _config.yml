@@ -5,8 +5,8 @@ title: 'Tapsell: Smart ad network agency'
 email: technical.tapsell@gmail.com
 description: >-
   Tapsell, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience.
-baseurl: '' # the subpath of your site, e.g. /docs
-url: 'https://tapsell.ir'
+baseurl: 'TapsellDocument' # the subpath of your site, e.g. /docs
+url: 'https://tapsellorg.github.io'
 twitter_username:
 github_username: tapsellorg
 site_name: Tapsell
