@@ -35,8 +35,8 @@ jobs:
       - name: Build the site
         run: npm run build
 
-#      - name: Configure CNAME
-#        run: echo "docs.tapsell.ir" > _site/CNAME
+      - name: Configure CNAME
+        run: echo "docs.tapsell.ir" > _site/CNAME
 
       - name: Configure Git
         run: |
