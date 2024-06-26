@@ -1,6 +1,6 @@
 ---
 layout: no-sidebar-classic-docs
-title: Tapsell Mediation Versions Mapping
+title: Compatibility Matrix
 lang: en
 permalink: /mediation/versions-mapping/
 toc: true
@@ -8,7 +8,7 @@ toc: true
 
 <br/>
 
-The table below shows the compatibility mapping between Tapsell Mediation SDK and Tapsell internal Ad Network SDK versions.
+The table below shows the versions mapping between Tapsell Mediation SDK and Tapsell internal Ad Network SDK versions.
 
 | Tapsell Mediation Version | Tapsell Legacy Version | Admob Version | Gradle Version | Kotlin Version |
 |:-------------------------:|:----------------------:|:-------------:|:--------------:|:--------------:|
