@@ -14,7 +14,7 @@ If you want to add more ad networks to your project, this page helps you through
 
 1. import Admob Unity package to your project
    from [GoogleMobileAds](https://github.com/googleads/googleads-mobile-unity/releases)
-   > Note: Latest tested Admob version is `8.3.0`.
+   > Note: Latest tested Admob version is `8.7.0`.
 2. import the latest Admob Native package to your project
    from [GoogleMobileAds-native](https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage)
 3. Add your Google Mobile Ads App ID from `Assets/GoogleMobileAds/Settings` as follows:

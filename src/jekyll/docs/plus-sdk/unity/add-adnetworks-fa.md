@@ -17,7 +17,7 @@ toc: true
 
 ۱. ابتدا `unitypackage` گوگل ادموب را از [این لینک](https://github.com/googleads/googleads-mobile-unity/releases) دریافت
 نمایید.
-> نکته: آخرین نسخه تست شده ادموب نسخه `8.3.0` می‌باشد.
+> نکته: آخرین نسخه تست شده ادموب نسخه `8.7.0` می‌باشد.
 
 ۲. سپس `unitypackage` مربوط به تبلیغات نیتیو ادموب را
 از [این لینک](https://dl.google.com/googleadmobadssdk/GoogleMobileAds-native.unitypackage) دریافت نمایید.
