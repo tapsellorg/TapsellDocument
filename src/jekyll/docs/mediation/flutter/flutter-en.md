@@ -140,7 +140,7 @@ GDPR consent is showing a consent dialog in your application to choose an option
 to pass the user consent result to the Tapsell SDK. You can pass the result after initialization is completed by adding
 the following code:
 
-```ts
+```dart
 import 'package:tapsell_mediation/tapsell.dart';
 
 Tapsell.setUserConsent(consent);
