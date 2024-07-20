@@ -82,9 +82,9 @@ enum ShowCompletionState {
 To destroy an ad, call the `destroyBannerAd` function from the Tapsell package:
 
 ```dart
-import { destroyBannerAd } from '@react-native-tapsell-mediation/tapsell';
+import 'package:tapsell_mediation/tapsell.dart';
 
-destroyBannerAd(adId);
+Tapsell.destroyBannerAd(adId);
 ```
 
 ## Test keys
