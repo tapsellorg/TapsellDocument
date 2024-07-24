@@ -29,6 +29,34 @@ requestRewardedAd(zoneId)
   });
 ```
 
+=== "Latest"
+
+    ``` ts
+    import { requestRewardedAd } from '@react-native-tapsell-mediation/tapsell';
+
+    requestRewardedAd(zoneId)
+    .then((adId: string) => {
+    // Ad loaded successfully
+    })
+    .catch((error: string) => {
+    // Failed to load ad
+    });
+    ```
+
+=== "9.x"
+
+    ``` js
+    import { requestRewardedAd } from '@react-native-tapsell-mediation/tapsell';
+
+    requestRewardedAd(zoneId)
+    .then((adId) => {
+    // Ad loaded successfully
+    })
+    .catch((error) => {
+    // Failed to load ad
+    });
+    ```
+
 ## Show Ad
 
 To show an ad, call the `showRewardedAd` function from the Tapsell package. The first argument of the method is the ad
