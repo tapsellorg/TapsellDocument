@@ -29,7 +29,7 @@ requestRewardedAd(zoneId)
   });
 ```
 
-=== "Latest"
+=== "ts"
 
     ``` ts
     import { requestRewardedAd } from '@react-native-tapsell-mediation/tapsell';
@@ -43,7 +43,7 @@ requestRewardedAd(zoneId)
     });
     ```
 
-=== "9.x"
+=== "js"
 
     ``` js
     import { requestRewardedAd } from '@react-native-tapsell-mediation/tapsell';
