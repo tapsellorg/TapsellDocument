@@ -1,11 +1,16 @@
 const sourcemaps = require('gulp-sourcemaps');
-const gulpSass = require('gulp-sass');
+const gulpSass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const gulpif = require('gulp-if');
-const imagemin = require('gulp-imagemin');
+
+let imagemin;
+import('gulp-imagemin').then((obj) => {
+  imagemin = obj.default;
+});
+
 const newer = require('gulp-newer');
 const plumber = require('gulp-plumber');
 const named = require('vinyl-named'); // arbitrary chunk names
