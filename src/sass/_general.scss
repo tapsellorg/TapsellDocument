@@ -95,31 +95,31 @@ $scroll-bar-width: 7px;
   @each $x, $o-x in $lr-list {
     .m#{$x}-ltr-#{$i} {
       @include rtl {
-        @extend .m#{$o-x}-#{$i};
+        //@extend .m#{$o-x}-#{$i};
       }
 
       @include ltr {
-        @extend .m#{$x}-#{$i};
+        //@extend .m#{$x}-#{$i};
       }
     }
 
     .m#{$x}-rtl-#{$i} {
       @include ltr {
-        @extend .m#{$o-x}-#{$i};
+        //@extend .m#{$o-x}-#{$i};
       }
 
       @include rtl {
-        @extend .m#{$x}-#{$i};
+        //@extend .m#{$x}-#{$i};
       }
     }
 
     .p#{$x}-ltr-#{$i} {
       @include rtl {
-        @extend .p#{$o-x}-#{$i};
+        //@extend .p#{$o-x}-#{$i};
       }
 
       @include ltr {
-        @extend .p#{$x}-#{$i};
+        //@extend .p#{$x}-#{$i};
       }
     }
   }
@@ -133,11 +133,11 @@ $right-left-opposite-list: (
 @each $dir, $opposite-dir in $right-left-opposite-list {
   .text-#{$dir}-ltr {
     @include rtl {
-      @extend .text-#{$opposite-dir};
+      //@extend .text-#{$opposite-dir};
     }
 
     @include ltr {
-      @extend .text-#{$dir};
+      //@extend .text-#{$dir};
     }
   }
 }
