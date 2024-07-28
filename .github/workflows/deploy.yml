@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - chore/update-jekyll-4.3.3
 
 jobs:
   deploy-website:
