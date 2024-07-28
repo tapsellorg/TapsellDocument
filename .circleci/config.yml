@@ -4,7 +4,7 @@ jobs:
   deploy-website:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:2.4-node
+      - image: circleci/ruby:3.3.4-node
 
     steps:
       - checkout
