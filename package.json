@@ -76,6 +76,6 @@
   },
   "dependencies": {
     "eslint-webpack-plugin": "^4.2.0",
-    "netlify-cms": "^2.10.192"
+    "netlify-cms": "^2.10.126"
   }
 }
