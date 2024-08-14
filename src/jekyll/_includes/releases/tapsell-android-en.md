@@ -1,5 +1,8 @@
 ## Release Notes:
 
+### 4.9.1 - 2024/08/10
+- Improved internal functionality
+
 ### 4.9.0 - 2024/04/09
 - Fixed using `okhttp-logging-interceptor` for non-debug builds.
 
