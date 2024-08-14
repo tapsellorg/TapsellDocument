@@ -1,5 +1,5 @@
 tapsellAndroid:
-  sdkVersion: 4.9.0
+  sdkVersion: 4.9.1
   sample: https://github.com/tapsellorg/TapsellSDK-AndroidSample
   releaseNotesFileFa: releases/tapsell-android-fa.md
   releaseNotesFileEn: releases/tapsell-android-en.md
@@ -23,7 +23,7 @@ tapsellB4A:
 
 
 plusAndroid:
-  sdkVersion: 2.2.6
+  sdkVersion: 2.2.7
   sample: https://github.com/tapsellorg/TapsellPlusSDK-AndroidSample
   releaseNotesFileFa: releases/plus-android.md
   releaseNotesFileEn: releases/plus-android-en.md
@@ -31,7 +31,7 @@ plusAndroid:
   faq: /faq/plus-sdk/android/
 
 plusFlutter:
-  sdkVersion: 2.2.4
+  sdkVersion: 2.2.7
   sample: https://github.com/tapsellorg/TapsellPlusSDK-FlutterSample
   releaseNotesFileFa: releases/plus-flutter.md
   issues: https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues?q=is%3Aissue

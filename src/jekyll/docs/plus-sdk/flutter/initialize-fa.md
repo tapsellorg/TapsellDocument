@@ -15,7 +15,7 @@ toc: true
 
 ```yaml
 dependencies:
-  tapsell_plus: ^2.2.4
+  tapsell_plus: ^2.2.7
 ```
 
 

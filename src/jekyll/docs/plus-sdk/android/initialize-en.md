@@ -19,7 +19,7 @@ In app(module)/`build.gradle`:
 
 ```groovy
 dependencies {
-    def tapsellPlus = "2.2.6"
+    def tapsellPlus = "2.2.7"
     implementation("ir.tapsell.plus:tapsell-plus-sdk-android:$tapsellPlus")
 }
 ```

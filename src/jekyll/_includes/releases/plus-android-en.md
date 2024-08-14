@@ -1,5 +1,14 @@
 ## Tapsell plus native Changelog
 
+### 2.2.7 (12 Aug, 2024)
+
+- Updated `Tapsell` SDK to `4.9.1`
+- Removed GDPR consent dialog.
+
+#### Flutter
+
+- Fixed flutter crash when requesting multiple native banner ads at the same time. See [#27](https://github.com/tapsellorg/TapsellPlusSDK-FlutterPlugin/issues/27)
+
 ### 2.2.6 (19 Apr, 2024)
 
 - Fixed a bug related to missing `GDPR` classes when initializing the SDK
