@@ -18,19 +18,10 @@ TapsellPlus.instance
    .requestStandardBannerAd(
        zoneId, TapsellPlusBannerType.BANNER_320x50, onResponse: (map) {
               // SAVE the responseId
-            }, onError: (map) {
+         }, onError: (map) {
             // Error when requesting for an ad
-            }
-              
+      }        
    });
-TapsellPlus.instance
-    .requestStandardBannerAd(
-        zoneId, TapsellPlusBannerType.BANNER_320x100)
-    .then((responseId) {
-        // SAVE the responseId
-    }).catchError((error) {
-      // Error when requesting for an ad
-    });
 ```
 
 BANNER_TYPE سایز نمایش بنر هست و میتواند مقادیر زیر باشد:

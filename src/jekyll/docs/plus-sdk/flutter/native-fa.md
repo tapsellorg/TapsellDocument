@@ -14,11 +14,11 @@ toc: true
 
 ```dart
 final zoneId = "theZoneIdYouHave";
-TapsellPlus.instance.requestNativeAd(zoneId).then((responseId) {
-      // SAVE the responseId
-    }).catchError((error) {
-      // Error requesting for an ad
-    });
+TapsellPlus.instance.requestNativeAd(zoneId, onResponse: (map) {
+        // SAVE the responseId
+   }, onError: (map) {
+        // Error requesting for an ad
+});
 ```
 خروجی تابع یک
 Future
