@@ -43,6 +43,7 @@ You can find more information about each ad networks' data collection disclosure
 - [Applovin](https://www.applovin.com/array-privacy-policy)
 - [Liftoff (Vungle)](https://support.vungle.com/hc/en-us/articles/5035287250331-Google-Play-Data-Safety-Questionnaire-for-Liftoff-Monetize#Data_types)
 - [IronSource](https://developers.is.com/ironsource-mobile/general/googles-data-safety-questionnaire-full)
+- [Yandex](https://ads.yandex.com/helpcenter/en/dev/android/app-privacy-android)
 - [Fyber (Digital Turbine Exchange)](https://www.digitalturbine.com/fyber-services-privacy-statement)
 - [UnityAds](https://docs.unity.com/ads/en-us/manual/GoogleDataSafety)
 - [Wortise](https://docs.wortise.com/v/en/privacy/google-data-safety)
