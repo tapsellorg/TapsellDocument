@@ -1,5 +1,9 @@
 ## Release Notes:
 
+### 4.9.3 - 2024/09/11
+- Updated `tagetSdk` version  to `34`
+- Added few R8 Proguard rules
+
 ### 4.9.1 - 2024/08/10
 - Improved internal functionality
 

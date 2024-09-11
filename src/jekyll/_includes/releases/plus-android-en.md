@@ -1,5 +1,11 @@
 ## Tapsell plus native Changelog
 
+### 2.2.8 (11 Sep, 2024)
+
+- Updated `Tapsell` SDK to `4.9.3`
+- Updated `tagetSdk` version  to `34`
+- Added few R8 Proguard rules
+
 ### 2.2.7 (12 Aug, 2024)
 
 - Updated `Tapsell` SDK to `4.9.1`
