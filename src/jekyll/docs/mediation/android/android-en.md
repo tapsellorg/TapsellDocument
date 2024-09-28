@@ -152,6 +152,7 @@ The Tapsell Mediation SDK currently supports the following 3rd-party programmati
 * IronSource
 * Liftoff (Vungle)
 * Wortise
+* Yandex
 
 To integrate, add the adapter dependency you need to your module's app-level `build.gradle`:
 
@@ -165,6 +166,7 @@ implementation "ir.tapsell.mediation.adapter:unityads:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:ironsource:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:liftoff:$tapsellVersion"
 implementation "ir.tapsell.mediation.adapter:wortise:$tapsellVersion"
+implementation "ir.tapsell.mediation.adapter:yandex:$tapsellVersion"
 ```
 
 #### Additional Configuration
@@ -186,18 +188,7 @@ android {
 
 - Applovin
 
-Add a manifest placeholder inside your module's app-level `build.gradle` providing your Applovin app signature.
-(Contact Tapsell support for more information):
-
-```groovy
-android {
-    defaultConfig {
-        manifestPlaceholders = [
-                TapsellMediationApplovinAdapterSignature: "YOUR_APP_SIGNATURE",
-        ]
-    }
-}
-```
+No additional configuration needed.
 
 - Chartboost
 
@@ -259,6 +250,10 @@ allprojects {
     }
 }
 ```
+
+- Yandex
+
+No additional configuration needed.
 
 ## Implementing Ad Formats
 ---

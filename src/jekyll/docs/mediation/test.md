@@ -14,8 +14,6 @@ toc: true
 |:----------:|:----------------------------------------------------------------------------------------:|
 |  Tapsell   |                          `76798342-99a7-4a5f-bf5a-60a088d5dcfb`                          | 
 |   Admob    |                         `ca-app-pub-3940256099942544~3347511713`                         |
-|  AppLovin  | `5WfZLCGTQmDr6Mf7BBEf5blVwrf8VBMJSmwUSq9-1q5bPpCH_OGAWEP2z2lRkmonLgPzG6gbL4DlvUF9frFmt6` |
-
 
 ## Test zone ids
 
@@ -56,6 +54,10 @@ toc: true
 |    ChartBoost    |    Rewarded    | `3dde311c-daf5-4a6b-8ce7-08a4103cfb7f` |
 |    ChartBoost    |  Interstitial  | `0d3e6f6d-8a11-4c32-a076-4415c03132a9` |
 |    ChartBoost    |     Banner     | `0d3e6f6d-8a11-4c32-a076-4415c03132a9` |
+|      Yandex      | Rewarded Video | `27891b5b-1ff5-48f2-98ad-096cfc2dda1a` |
+|      Yandex      |  Interstitial  | `e0695171-a079-40c6-9dce-1b31ac2bce15` |
+|      Yandex      |     Native     | `26ac2ef1-5968-43c2-889b-bf36d68368c4` |
+|      Yandex      |     Banner     | `d088d32c-47ce-4df8-9b2c-184716c77ec0` |
 |     Wortise      |    Rewarded    | `4fcf71a4-afd1-412d-9b19-46dd85644f9d` |
 |     Wortise      |  Interstitial  | `4d268df4-7e8a-43d8-a014-02b4aeff1e72` |
 |     Wortise      |     Native     | `88eab80b-113b-4856-8dc2-4aa571c4d7c3` |
