@@ -83,6 +83,7 @@ Adding more adapters helps the SDK to get ads from different ad networks and inc
 | [Fyber (Digital Turbine Exchange) Mediation Adapter](https://pub.dev/packages/tapsell_mediation_fyber) |      [![badge](https://img.shields.io/pub/v/tapsell_mediation_fyber.svg)](https://pub.dev/packages/tapsell_mediation_fyber)      |                                                                                                                                                                                  
 | [UnityAds Mediation Adapter](https://pub.dev/packages/tapsell_mediation_unityads)                      |   [![badge](https://img.shields.io/pub/v/tapsell_mediation_unityads.svg)](https://pub.dev/packages/tapsell_mediation_unityads)   |                                                                                                                                                                           
 | [Wortise Mediation Adapter](https://pub.dev/packages/tapsell_mediation_wortise)                        |    [![badge](https://img.shields.io/pub/v/tapsell_mediation_wortise.svg)](https://pub.dev/packages/tapsell_mediation_wortise)    |                                                                                                                                                                              
+| [Yandex Mediation Adapter](https://pub.dev/packages/tapsell_mediation_yandex)                          |     [![badge](https://img.shields.io/pub/v/tapsell_mediation_yandex.svg)](https://pub.dev/packages/tapsell_mediation_yandex)     |                                                                                                                                                                              
 | [ChartBoost Mediation Adapter](https://pub.dev/packages/tapsell_mediation_chartboost)                  | [![badge](https://img.shields.io/pub/v/tapsell_mediation_chartboost.svg)](https://pub.dev/packages/tapsell_mediation_chartboost) |                                                                                                                                                                    
 
 You can install each adapter in your project using the command below:
@@ -102,19 +103,6 @@ flutter pub add tapsell_mediation_<adapter>
 ```groovy
 manifestPlaceholders = [
         TapsellMediationAdmobAdapterSignature: "ca-app-pub-xxxxxxxx~xxxxxxxx",
-]
-```
-
-
-- Applovin: 
-
-  > Open the `android/app/build.gradle` file from the root of your Flutter project and add the `TapsellMediationApplovinAdapterSignature` key with the ID provided from the [Tapsell Mediation dashboard](https://ssp.tapsell.ir).
-
-**build.gradle**
-
-```groovy
-manifestPlaceholders = [
-        TapsellMediationApplovinAdapterSignature: "YOUR_APPLOVIN_SIGNATURE",
 ]
 ```
 
