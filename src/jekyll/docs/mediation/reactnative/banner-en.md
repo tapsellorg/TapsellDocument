@@ -39,6 +39,7 @@ enum BannerSize {
   BANNER_468_60,
   BANNER_728_90,
   BANNER_160_600,
+  BANNER_ADAPTIVE
 }
 ```
 

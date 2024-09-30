@@ -96,6 +96,7 @@ Adding more adapters helps the SDK to get ads from different ad networks and inc
 | [Fyber (Digital Turbine Exchange) Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/fyber) |      [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/fyber.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/fyber)      |   ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/fyber)    |                                                                                                                                                                                   |
 | [UnityAds Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/unityads)                      |   [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/unityads.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/unityads)   |  ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/unityads)  |                                                                                                                                                                           |
 | [Wortise Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/wortise)                        |    [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/wortise.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/wortise)    |  ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/wortise)   |                                                                                                                                                                              |
+| [Yandex Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/yandex)                          |     [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/yandex.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/yandex)     |   ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/yandex)   |                                                                                                                                                                              |
 | [ChartBoost Mediation Adapter](https://www.npmjs.com/package/@react-native-tapsell-mediation/chartboost)                  | [![badge](https://img.shields.io/npm/dm/@react-native-tapsell-mediation/chartboost.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@react-native-tapsell-mediation/chartboost) | ![NPM Version](https://img.shields.io/npm/v/@react-native-tapsell-mediation/chartboost) |                                                                                                                                                                      |
 
 You can install each adapter in your project using the command below:
@@ -116,21 +117,6 @@ yarn add @react-native-tapsell-mediation/<adapter>
   {
     "react-native-tapsell-mediation": {
       "TapsellMediationAdmobAdapterSignature": "ca-app-pub-xxxxxxxx~xxxxxxxx"
-    }
-  }
-  ```
-
-
-- Applovin: 
-
-  > Open the `app.json` or `app.config.js` (if using `Expo`) file from the root of your React Native project and add the `TapsellMediationApplovinAdapterSignature` key with the ID provided from the [Tapsell Mediation dashboard](https://ssp.tapsell.ir).
-
-  **app.config.js**
-
-  ```json
-  {
-    "react-native-tapsell-mediation": {
-      "TapsellMediationApplovinAdapterSignature": "YOUR_APPLOVIN_SIGNATURE"
     }
   }
   ```
