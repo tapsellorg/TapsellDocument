@@ -45,8 +45,8 @@ Follow the steps below to be able to use the Tapsell Mediation in your applicati
 
 Download the following packages and import them as custom packages to your project.
 
-- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_v1.0.1-beta07.02.unitypackage)
-- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_LegacyAdapter_v1.0.1-beta07.02.unitypackage)
+- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_v1.0.1-beta08.01.unitypackage)
+- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_LegacyAdapter_v1.0.1-beta08.01.unitypackage)
 
 <img src="/images/mediation-unity-import1.jpg" alt="import-package" />
 
@@ -105,14 +105,15 @@ No additional configuration or code is needed to initialize the SDK.
 
 The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
-* [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_AdMobAdapter_v1.0.1-beta07.02.unitypackage)
-* [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_ApplovinAdapter_v1.0.1-beta07.02.unitypackage)
-* [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_ChartboostAdapter_v1.0.1-beta07.02.unitypackage)
-* [**Fyber**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_AdColonyAdapter_v1.0.1-beta07.02.unitypackage)
-* [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_MintegralAdapter_v1.0.1-beta07.02.unitypackage)
-* [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_UnityAdsAdapter_v1.0.1-beta07.02.unitypackage)
-* [**IronSource**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_IronSourceAdapter_v1.0.1-beta07.02.unitypackage)
-* [**Liftoff**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta07%2302/TapsellMediation_LiftoffAdapter_v1.0.1-beta07.02.unitypackage)
+* [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_AdMobAdapter_v1.0.1-beta08.01.unitypackage)
+* [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_ApplovinAdapter_v1.0.1-beta08.01.unitypackage)
+* [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_ChartboostAdapter_v1.0.1-beta08.01.unitypackage)
+* [**Fyber**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_AdColonyAdapter_v1.0.1-beta08.01.unitypackage)
+* [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_MintegralAdapter_v1.0.1-beta08.01.unitypackage)
+* [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_UnityAdsAdapter_v1.0.1-beta08.01.unitypackage)
+* [**IronSource**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_IronSourceAdapter_v1.0.1-beta08.01.unitypackage)
+* [**Liftoff**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_LiftoffAdapter_v1.0.1-beta08.01.unitypackage)
+* [**Yandex**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.1-beta08%2301/TapsellMediation_YandexAdapter_v1.0.1-beta08.01.unitypackage)
 
 To integrate each SDK, download the corresponding adapter package from the links above and follow the steps below:
 
@@ -131,9 +132,7 @@ To integrate each SDK, download the corresponding adapter package from the links
 
 - Applovin
 
-      In the Tapsell settings menu, add your Applovin adapter app signature. (Contact Tapsell support for more information)
-
-<img src="/images/mediation-unity-set-applovin-sig.png" alt="set-applovin-signature" />
+      No additional configuration needed.
 
 - Chartboost
 
@@ -158,6 +157,10 @@ To integrate each SDK, download the corresponding adapter package from the links
 - Liftoff
 
       Note: This adapter needs Unity Editor 2023 and above. No need to implement if you're using lower versions.
+
+- Yandex
+
+      No additional configuration needed.
 
 <br/>
 
@@ -209,6 +212,7 @@ public enum BannerSize
   Banner46860,
   Banner72890,
   Banner160600
+  BannerAdaptive
 }
 ```
 
