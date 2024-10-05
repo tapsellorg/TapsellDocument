@@ -2,6 +2,13 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+## 2.2.8 - 2024/09/25
+
+- بروزرسانی کتابخانه تپسل به نسخه `4.9.3`
+- بروزرسانی `targetSdk` به نسخه اندروید `14`
+- حذف دیالوگ `GDPR` تپسل
+
+
 ## 2.2.6 - 2024/06/02
 
 - اضافه شدن تابع `TapsellPlus.setGDPRConsent(boolean)` جهت ارسال تاییدیه `GDPR` از سمت کاربر
