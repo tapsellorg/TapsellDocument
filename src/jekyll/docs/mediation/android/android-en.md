@@ -53,18 +53,6 @@ To prepare your app, complete the following steps:
   }
   ```
 
-3. Tapsell SDK needs you to define the market your Android application is supposed to be published in. You can specify your market by adding the following manifest placeholder inside your module's app-level `build.gradle`:
-
-  ```groovy
-  android {
-      defaultConfig {
-          manifestPlaceholders = [
-                  TapsellMediationAppMarket: "YOUR_APP_MARKET",  // GooglePlay | CafeBazaar | Myket | ...
-          ]
-      }
-  }
-```
-
 ### Add Google identifier permissions
 
 1. Apps updating their target API level to 33 (Android 13) will need to declare a Google Play services permission in the manifest file as follows:

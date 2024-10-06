@@ -78,14 +78,6 @@ Enter your Tapsell App ID collected from your dashboard.
 
 <br/>
 
-#### Set Your Tapsell Mediation App Market Key
-
-Enter the Android market that you want to publish your app there
-
-<img src="/images/mediation-unity-set-app-market.png" alt="set-app-market" />
-
-<br/>
-
 #### Android 13 support
 Apps updating their target API level to 33 (Android 13) will need to declare a Google Play services permission in the manifest file in `Assets\Plugins\Android\AndroidManifest.xml` as follows:
 
