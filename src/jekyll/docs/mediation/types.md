@@ -1,6 +1,6 @@
 ---
 layout: no-sidebar-classic-docs
-title: Compatibility Matrix
+title: Ad Network Types
 lang: en
 permalink: /mediation/types/
 toc: true
