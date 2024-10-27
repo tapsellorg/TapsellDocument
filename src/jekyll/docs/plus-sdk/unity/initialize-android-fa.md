@@ -41,7 +41,7 @@ Assets > Import Package > Custom Package...
 Assets > External Dependency Manager > Android Resolver > Force Resolve
 ```
 
-> در صورت مواجه با خطای resolution failed و عدم دانلود پکیج های aar در مسیر Plugins/Android ، میتوانید تمامی پکیج های aar مربوطه را از [این لینک](https://storage.backtory.com/tapsell-sdk-private/plus-unity/Unity-Android-AAR-Plugins/Unity-AAR-Plugins-2.2.8.zip) نیز دانلود نمایید.
+> در صورت مواجه با خطای resolution failed و عدم دانلود پکیج های aar در مسیر Plugins/Android ، اطمینان حاصل کنید که از ابزارهای تحریم شکن مانند [shecan](https://shecan.ir/) یا [403.online](https://403.online/) و یا در زمان resolve استفاده می‌کنید. همچنین میتوانید تمامی پکیج های aar مربوطه را از [این لینک](https://storage.backtory.com/tapsell-sdk-private/plus-unity/Unity-Android-AAR-Plugins/Unity-AAR-Plugins-2.2.8.zip) نیز دانلود نمایید.
 {:data-title="نکته Build پروژه" data-color="red"}
 
 ۶. از طریق منوهای زیر، تیک‌های مربوط به ایجاد فایل‌های Custom Gradle را بزنید:
