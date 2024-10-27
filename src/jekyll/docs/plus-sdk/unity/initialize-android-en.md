@@ -49,32 +49,30 @@ toc: true # table of contents
     Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
     Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
+    Edit > Project Setting... > Player > Publishing Settings > Custom Main Manifest // If you support Android 5 and lower
     ```
 
-7. To enable AndroidX, go to `Assets\Plugins\Android\gradle.properties` and add the following code snippet to it:
+7. If you use Unity Editor 2021 and below, you may need to enable AndroidX is it was not enabled already, go to `Assets\Plugins\Android\gradleTemplate.properties` and add the following code snippet to it:
     ```gradle
     android.useAndroidX=true
     android.enableJetifier=true
     ```
 
-8. Go to `Assets\Plugins\Android\launcherTemplate.gradle`, and add the following code snippet to it if not already
+8. If you use Unity Editor 2021 and below, Go to `Assets\Plugins\Android\launcherTemplate.gradle`, and make sure the compiler's Java version is 8 and above.
    added:
 
     ```gradle
     android {
       compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8 // or JavaVersion.VERSION_11 and above
+        targetCompatibility JavaVersion.VERSION_1_8 // or JavaVersion.VERSION_11 and above
       }
     }
     ```
 
-9. Go to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. Then
-   change the version of `com.android.tools.build:gradle` to 4.2.2.
+9. If you use Unity Editor 2021 and below, Go to `Assets\Plugins\Android\baseProjectTemplate.gradle` and add `mavenCentral()` to both `repositories`. In newer versions of Unity Editor, this repository is enabled by default in `Assets\Plugins\Android\settingsTemplate.gradle`.
 
-    > Note that at least version 3.6.0 is required for the Android Gradle Plugin to support Android 11 in the project. You can get help from [this link](https://developers.google.com/ar/develop/unity/android-11-build) to add a version of Gradle that supports Android 11.
-
-10. After adding TapsellPlus and other Ad Networks, you will probably need to enable MultiDex due to the increase in
+10. If your game, supports devices with Android 5 and lower, you may need to enable MultiDex due to the increase in
     code size and method counts to prevent the following error. If you are using the Android `minSDKVersion` API 21 or
     above, `MultiDex` is activated by default. otherwise you need to enable it manually.
 
@@ -82,7 +80,7 @@ toc: true # table of contents
     D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
     ```
 
-    To enable MultiDex, go to `Assets\Plugins\Android\launcherTemplate.gradle` and add the following code snippet to it:
+    To enable `MultiDex`, go to `Assets\Plugins\Android\launcherTemplate.gradle` and add the following code snippet to it:
 
     ```gradle
     dependencies {
@@ -117,7 +115,7 @@ toc: true # table of contents
     // your code
     }
     ```
-    c. But, If you extend the `Application` class from another class, and you can't extend it from `MultiDexApplication`
+    c. If you extend the `Application` class from another class, and you can't extend it from `MultiDexApplication`
     , you can `override` the `attachBaseContext` method as follows:
     ```java
     public class MainApplication extends SomeOtherApplication {

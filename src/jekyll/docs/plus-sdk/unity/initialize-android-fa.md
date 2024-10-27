@@ -50,34 +50,33 @@ Assets > External Dependency Manager > Android Resolver > Force Resolve
 Edit > Project Setting... > Player > Publishing Settings > Custom Launcher Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Base Gradle Template
 Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Properties Template
+Edit > Project Setting... > Player > Publishing Settings > Custom Main Manifest
 ```
 
-۴. برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradle.properties` بروید و قطعه کد زیر را اضافه
+۴. در صورتیکه از یونیتی ۲۰۲۱ یا پایین تر استفاده می‌کنید، برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradleTemplate.properties` بروید و قطعه کد زیر را اضافه
 کنید:
 
 ```gradle
 android.useAndroidX=true
 android.enableJetifier=true
 ```
+در نسخه های جدیدتر یونیتی، AndroidX به صورت پیش فرض فعال است و نیازی به اضافه کردن این کد نیست.
 
-۸. اگر تکه کد زیر در آدرس `Assets\Plugins\Android\launcherTemplate.gradle` وجود نداشت آن را اضافه نمایید:
+۸. در صورتیکه از یونیتی ۲۰۲۱ یا پایین تر استفاده می‌کنید، به آدرس `Assets\Plugins\Android\launcherTemplate.gradle` بروید و اطمینان حاصل کنید که همانند کد زیر، از نسخه جاوا ۸ یا بالاتر استفاده شده است:
 
 ```gradle
 android {
   compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
+    sourceCompatibility JavaVersion.VERSION_1_8 // or JavaVersion.VERSION_11 and above
+    targetCompatibility JavaVersion.VERSION_1_8 // or JavaVersion.VERSION_11 and above
   }
 }
 ```
 
-۹. به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و عبارت `mavenCentral()` را به هر دو
-بخش `repositories` اضافه نمایید. سپس ورژن `com.android.tools.build:gradle` را به ۴.۲.۲ تغییر دهید.
+۹. در صورتیکه از یونیتی ۲۰۲۱ یا پایین تر استفاده می‌کنید، به آدرس `Assets\Plugins\Android\baseProjectTemplate.gradle` بروید و مخزن `mavenCentral()` را به هر دو
+بخش `repositories` اضافه نمایید. در نسخه های جدیدتر یونیتی این مخزن به صورت پیش فرض در فایل `Assets\Plugins\Android\settingsTemplate.gradle` وجود دارد.
 
-
-> دقت داشته باشید که استفاده از ورژن ۳.۶.۰ برای Android Gradle Plugin الزامی است. زیرا برای پشتیبانی از اندروید یازده می‌بایستی حداقل از این ورژن در پروژه پشتیبانی شود. برای اضافه کردن نسخه‌ای از Gradle که قابلیت پشتیبانی از اندروید یازده را دارد، می‌توانید از [این لینک](https://developers.google.com/ar/develop/unity/android-11-build) کمک بگیرید.
-
-۱۰. بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر
+۱۰. در صورتیکه بازی شما، دستگاه های اندروید ۵ یا پایینتر را پوشش می‌دهد، بعد از اضافه کردن تپسل پلاس و شبکه‌های تبلیغاتی دیگر احتمالا به دلیل بالا رفتن حجم کد و جلوگیری از وقوع خطای زیر
 می‌بایستی MultiDex را فعال نمایید. در صورتیکه از `minSdkVersion` نسخه‌ی ۲۱ یا بالاتر استفاده میکنید، MultiDex به صورت
 پیش فرض فعال است. در غیر اینصورت لازم است آن را به صورت دستی به پروژه خود اضافه نمایید.
 
@@ -85,7 +84,7 @@ android {
 D8: Cannot fit requested classes in a single dex file (# methods: 68109 > 65536)
 ```
 
-نحوه‌ی فعال‌سازی MultiDex به این ترتیب است که به آدرس `Assets\Plugins\Android\launcherTemplate.gradle` بروید و کدهای زیر
+نحوه‌ی فعال‌سازی `MultiDex` به این ترتیب است که به آدرس `Assets\Plugins\Android\launcherTemplate.gradle` بروید و کدهای زیر
 را به آن اضافه نمایید:
 
 ```gradle
