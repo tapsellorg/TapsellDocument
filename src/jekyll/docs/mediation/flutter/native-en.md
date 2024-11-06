@@ -52,7 +52,7 @@ corresponding ad which is going to be shown:
 ```dart
 import 'package:tapsell_mediation/tapsell.dart';
 
-Tapsell.showNativeAd(_adId, adDispatch, onAdImpression: () {
+Tapsell.showNativeAd(adId, adDispatch, onAdImpression: () {
   // Ad impression
 }, onAdClicked: () {
   // Ad clicked
@@ -124,7 +124,7 @@ import 'package:tapsell_mediation/tapsell.dart';
 @override
 void dispose() {
   super.dispose();
-  Tapsell.destroyNativeAd(_adId);
+  Tapsell.destroyNativeAd(adId);
 }
 ```
 
