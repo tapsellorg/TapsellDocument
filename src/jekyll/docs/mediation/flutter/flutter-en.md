@@ -170,3 +170,4 @@ ads for users. The Tapsell package provides integration with different following
 - [Rewarded Ads](./rewarded/index.html)
 - [Interstitial Ads](./interstitial/index.html)
 - [Banner Ads](./banner/index.html)
+- [Native Ads](./native/index.html)
