@@ -76,11 +76,11 @@ The following code is an example of how to use it to show ads:
   @override
   Widget build(BuildContext context) {
       return NativeAdWidget( // Your custom ad layout
-        title: adData.title,
-        description: adData.description,
-        logo: adData.logo,
-        callToActionText: adData.callToActionText,
-        bannerImageUrl: adData.bannerImageUrl
+        title: adDispatch.title,
+        description: adDispatch.description,
+        logo: adDispatch.logo,
+        callToActionText: adDispatch.callToActionText,
+        bannerImageUrl: adDispatch.bannerImageUrl
     );
   }
   ```
