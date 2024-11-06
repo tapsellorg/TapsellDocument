@@ -17,22 +17,22 @@ order to facilitate this process, we’ve disclosed the Tapsell data collection 
 
 ### Tapsell Data Types
 
-| Data Type                    | Collected | Shared | Ephemeral | Required | Purpose                                                     |
-|:-----------------------------|:---------:|:------:|:---------:|:--------:|:------------------------------------------------------------|
-| **Location**                 |    Yes    |  Yes   |    No     |   Yes    | Analytics, advertising <br/>or marketing                    |
-| **Personal Info**            |    Yes    |  Yes   |    No     |   Yes    | Analytics, app functionality, <br/>advertising or marketing |
-| **Financial Info**           |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Health and fitness**       |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Messages**                 |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Photos and videos**        |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Audio files**              |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Files and docs**           |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Calendar**                 |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Contacts**                 |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **App Activity**             |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **Web browsing**             |    No     |   No   |    No     |    No    | Not Applicable                                              |
-| **App info and performance** |    Yes    |   No   |    No     |   Yes    | Diagnostics, advertising <br/>or marketing                  |
-| **Device or other IDs**      |    Yes    |  Yes   |    No     |   Yes    | Analytics, app functionality, <br/>advertising or marketing |
+| Data Type                             | Collected | Shared | Ephemeral | Required | Purpose                                                     |
+|:--------------------------------------|:---------:|:------:|:---------:|:--------:|:------------------------------------------------------------|
+| **Location** (needs permission grant) |    Yes    |   No   |    No     |    No    | Analytics, advertising <br/>or marketing                    |
+| **Personal Info**                     |    No     |   No   |    No     |    No    | Analytics, app functionality, <br/>advertising or marketing |
+| **Financial Info**                    |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Health and fitness**                |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Messages**                          |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Photos and videos**                 |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Audio files**                       |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Files and docs**                    |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Calendar**                          |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Contacts**                          |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **App Activity**                      |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **Web browsing**                      |    No     |   No   |    No     |    No    | Not Applicable                                              |
+| **App info and performance**          |    Yes    |   No   |    No     |   Yes    | Diagnostics, advertising <br/>or marketing                  |
+| **Device or other IDs**               |    Yes    |   No   |    No     |   Yes    | Analytics, app functionality, <br/>advertising or marketing |
 
 ### Mediation Ad Networks
 
