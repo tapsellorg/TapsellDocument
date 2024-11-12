@@ -1,5 +1,8 @@
 ## Release Notes:
 
+### 4.9.4 - 2024/11/12
+- Added support for fully-clickable native video ads
+
 ### 4.9.3 - 2024/09/11
 - Updated `tagetSdk` version  to `34`
 - Added few R8 Proguard rules
