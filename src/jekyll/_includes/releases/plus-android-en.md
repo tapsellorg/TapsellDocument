@@ -1,5 +1,10 @@
 ## Tapsell plus native Changelog
 
+### 2.2.9 (13 Nov 2024)
+
+- Updated tapsell-sdk to `4.9.4`
+- Added support for fully clickable native videos
+
 ### 2.2.8 (11 Sep, 2024)
 
 - Updated `Tapsell` SDK to `4.9.3`
