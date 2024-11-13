@@ -26,7 +26,7 @@ Make sure to add the IMA gradle dependency to your project.
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.2-beta01"
+      def tapsellVersion = "1.0.2-beta02"
       implementation("com.google.ads.interactivemedia.v3:interactivemedia:$imaVersion") // Google IMA Adapter
   }
   ```
@@ -140,7 +140,7 @@ follows:
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.2-beta01"
+      def tapsellVersion = "1.0.2-beta02"
       implementation "ir.tapsell.mediation.adapter:legacy-ima-extension:$tapsellVersion" // Tapsell legacy IMA Adapter
   }
   ```
