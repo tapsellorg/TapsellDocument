@@ -64,6 +64,8 @@ android.enableJetifier=true
 
 در این [لینک](https://support.google.com/admob/thread/3494603/admob-error-codes-logs?hl=en) خطاهای رایج ادموب توضیح داده شده است
 
+<img src="/images/admob-error-codes.png" alt="Admob-error-codes" />
+
 ### unable to connect the host 127.1.1
 
 این خطا معمولا به دلیل مشکل در اینترنت کلاینت یا استفاده از `VPN` نامناسب است. همچنین در صورتیکه از شبیه ساز استفاده میکنید، ممکنه است در لحظه درخواست، به اینترنت متصل نباشد. لطفا شبکه اینترنت را بررسی بفرمایید

@@ -72,9 +72,41 @@ public static void requestMultipleNativeAds(String zoneId, int maximumCount, Act
 
 ### GooglePlay Your app targets Android 13 (API 33) or above. You must declare the use of advertising ID in Play Console.
 
-با توجه به سیاست‌های پلی استور از اندروید ۱۳ به بعد، لازم است ابتدا وارد فایل `AndroidManifest.xml` شده و دسترسی `com.google.android.gms.permission.AD_ID` را به آن اضاقفه کنید. همچنین لازم است که استفاده از `Advertising ID` به اطلاع کاربر نیز برسد. برای اینکار کافیست که در کنسول پلی‌استور مطابق عکس زیر، تیکِ استفاده از `Advertising ID` را بزنید. و دلیل آن را استفاده از تبلیغات تعیین کنید.
+با توجه به سیاست‌های پلی استور از اندروید ۱۳ به بعد، لازم است ابتدا وارد فایل `AndroidManifest.xml` شده و دسترسی `com.google.android.gms.permission.AD_ID` را به آن اضافه کنید. همچنین لازم است که استفاده از `Advertising ID` به اطلاع کاربر نیز برسد. برای اینکار کافیست که در کنسول پلی‌استور مطابق عکس زیر، تیکِ استفاده از `Advertising ID` را بزنید. و دلیل آن را استفاده از تبلیغات تعیین کنید.
 
 <img src="/images/google_play_error_ad_id.png" alt="GooglePlay-Advertising-ID-error" />
+
+### Module was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.8.0, expected version is 1.6.0.
+
+این مشکل زمانی اتفاق می افتد که نسخه کاتلین پروژه از نسخه کاتلین کتابخانه تپسل یا وابستگی های داخلی آن قدیمی تر باشد. برای بررسی دقیقتر این موضوع میتوانید از دستور `./gradlew dependencies` جهت لیست کردن وابستگی های پروژه استفاده کنید. پس از آن می‌توانید آن وابستگی را که باعث آپدیت نسخه کاتلین شده را یافته و از وابستگی های پروژه غیرفعال کنید. برای مثال اگر فرض کنیم که کتابخانه `androidx.fragment` از نسخه جدید کاتلین استفاده می‌کند، برای رفع این ناسازگاری لازم است آن را مطابق زیر از کتابخانه تپسل غیر فعال کنید:
+
+```groovy
+def tapsellVersion = "1.0.0"
+implementation ("ir.tapsell.mediation:tapsell:$tapsellVersion") {
+    exclude group: 'androidx.fragment', module: 'fragment-ktx'
+}
+```
+
+سپس کد زیر را به بلاک `android` داخل فایل `build.gradle` اضافه کنید:
+
+```groovy
+kotlinOptions {
+    freeCompilerArgs += ["-Xskip-metadata-version-check"]
+}
+```
+
+### Error trying to fetch default waterfalls: ir.tapsell.utils.common.NetworkFailureResponseException: Failure response code, 400, was received on network call
+
+این مشکل زمانی رخ میدهد که تنظیمات پیش فرض واترفال برای جایگاه تبلیغاتی شما به درستی انجام نشده باشد. در صورتی که با این خطا مواجه شدید، لازم است این مشکل را در داشبورد حساب خود ثبت نمایید تا بررسی شود.
+
+### Could not GET 'https://android-sdk.is.com/com/ironsource/adapters/admobadapter/4.3.39/admobadapter-4.3.39.pom'. Received status code 403 from server: Request blocked
+
+این مشکل مربوط به عدم توانایی دانلود وابستگی شبکه تبلیغاتی آیرون سورس است. بعضی شبکه های تبلیغاتی نظیر آیرون سورس از ریپازیتوری مخصوص خود استفاده می‌کنند که لازم است به پروژه اضافه شود. برای رفع این مشکل لازم است آدرس `maven { url "https://android-sdk.is.com" }` به لیست ریپازیتوری های پروژه اضافه کنید.
+برای مشاهده تمام آدرس موردنیاز می توانید به [لینک سمپل](https://github.com/tapsellorg/TapsellMediation-AndroidSample/blob/master/settings.gradle.kts) یا مستندات تپسل مراجعه نمایید
+
+### Error loading consent form: Publisher misconfiguration: Failed to read publisher's account configuration; no form(s) configured for the input app ID. Verify that you have configured one or more forms for this application and try again. Received app ID:
+
+این خطا مربوط به عدم تنظیم شدن فرم `GDPR` در پنل ادموب و سرویس `User Messaging Platform (UMP)` است. سرویس `UMP` جهت مدیریت فرایندهای مربوط به حریم خصوصی کاربران استفاده می‌شود. برای رفع این مشکل، در صورتیکه به پنل ادموب دسترسی دارید، لازم است از بخش `Privacy Settings` فرم `GDPR` را فعال نمایید. در غیر اینصورت می‌توانید این مورد را در داشبورد حساب تپسل خود مطرح نمایید تا بررسی شود.
 
 ### خطای 403
 
@@ -83,3 +115,5 @@ public static void requestMultipleNativeAds(String zoneId, int maximumCount, Act
 ### خطاهای رایج ادموب
 
 در این [لینک](https://support.google.com/admob/thread/3494603/admob-error-codes-logs?hl=en) خطاهای رایج ادموب توضیح داده شده است
+
+<img src="/images/admob-error-codes.png" alt="Admob-error-codes" />

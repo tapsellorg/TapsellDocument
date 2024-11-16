@@ -35,6 +35,8 @@ lang: fa
 
 در این [لینک](https://support.google.com/admob/thread/3494603/admob-error-codes-logs?hl=en) خطاهای رایج ادموب توضیح داده شده است
 
+<img src="/images/admob-error-codes.png" alt="Admob-error-codes" />
+
 ## خطای Activity is Dead
 
  هنگام صدا زدن متد initialize , request و یا Show (تا قبل اینکه  Callback صدا زده بشه) اگر از Activity خارج شوید این خطا رخ می دهد.
