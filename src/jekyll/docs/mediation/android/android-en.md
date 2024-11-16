@@ -901,9 +901,3 @@ You can find the PreRoll implementation details [here](preroll/index.html)
 ---
 
 To use test app keys and zones, you can refer to this [link](../test/index.html)
-
-## FAQ
----
-
-You can refer to this [link](https://docs.tapsell.ir/faq/mediation/android/)
-
