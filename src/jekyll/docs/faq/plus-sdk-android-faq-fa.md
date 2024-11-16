@@ -108,3 +108,9 @@ lang: fa
 > }
 > ```
 در صورتیکه از پیش از شبکه تبلیغاتی ادموب در پروژه خود استفاده نمی‌کنید، می‌توانید از کلید تست ادموب (`ca-app-pub-3940256099942544~3347511713`) استفاده کنید. در غیر اینصورت کلید اختصاصی خود را وارد نمایید.
+
+### GooglePlay Your app targets Android 13 (API 33) or above. You must declare the use of advertising ID in Play Console.
+
+با توجه به سیاست‌های پلی استور از اندروید ۱۳ به بعد، لازم است ابتدا وارد فایل `AndroidManifest.xml` شده و دسترسی `com.google.android.gms.permission.AD_ID` را به آن اضاقفه کنید. همچنین لازم است که استفاده از `Advertising ID` به اطلاع کاربر نیز برسد. برای اینکار کافیست که در کنسول پلی‌استور مطابق عکس زیر، تیکِ استفاده از `Advertising ID` را بزنید. و دلیل آن را استفاده از تبلیغات تعیین کنید.
+
+<img src="/images/google_play_error_ad_id.png" alt="GooglePlay-Advertising-ID-error" />
