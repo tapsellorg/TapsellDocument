@@ -894,6 +894,9 @@ public class MainActivity extends AppCompatActivity {
 
 You can find the PreRoll implementation details [here](preroll/index.html)
 
+### Changelog
+
+You can find the SDK Changelog [here](changelog/index.html)
 
 <br/>
 
