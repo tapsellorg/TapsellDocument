@@ -193,4 +193,16 @@ toc: true
     </tr>
   </tbody>
 
+<tbody>
+    <tr>
+      <td><code>1.0.0-beta07</code></td>
+      <td>2023-08-14</td>
+      <td>
+        <ul>
+        <li>Remove Collecting user's installed apps duo to Google Play policy error.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+
 </table>
