@@ -2,7 +2,7 @@
 layout: no-sidebar-classic-docs
 title: Compatibility Matrix
 lang: en
-permalink: /mediation/versions-mapping/
+permalink: /mediation/compatibility-matrix/
 toc: true
 ---
 
