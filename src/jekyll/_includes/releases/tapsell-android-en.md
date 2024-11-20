@@ -1,5 +1,8 @@
 ## Release Notes:
 
+### 4.9.5 - 2024/11/20
+- Remove usage of `reset` function from SDK to fix an internal crash on Android `MediaPlayer`
+
 ### 4.9.4 - 2024/11/12
 - Added support for fully-clickable native video ads
 

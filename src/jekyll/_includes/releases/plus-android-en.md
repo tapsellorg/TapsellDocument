@@ -1,5 +1,10 @@
 ## Tapsell plus native Changelog
 
+### 2.3.0 (20 Nov 2024)
+
+- Updated tapsell-sdk to `4.9.5`
+- Remove usage of `reset` function from SDK to fix an internal crash on Android `MediaPlayer`
+
 ### 2.2.9 (13 Nov 2024)
 
 - Updated tapsell-sdk to `4.9.4`

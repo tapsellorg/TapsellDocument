@@ -35,7 +35,7 @@ allprojects {
 dependencies {
     // ...
     
-    implementation("ir.tapsell.plus:tapsell-plus-sdk-android:2.2.9")
+    implementation("ir.tapsell.plus:tapsell-plus-sdk-android:2.3.0")
 }
 ```
 
