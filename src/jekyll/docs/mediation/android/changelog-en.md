@@ -220,7 +220,7 @@ toc: true
       <td>2023-08-14</td>
       <td>
         <ul>
-        <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.4</code>. Removed Collecting user's installed apps duo to Google Play policy error.</li>
+        <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.4</code>. Removed Collecting user's installed apps due to Google Play policy error.</li>
         </ul>
       </td>
     </tr>
