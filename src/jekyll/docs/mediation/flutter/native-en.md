@@ -118,7 +118,7 @@ To destroy an ad, call the `destroyNativeAd` function from the Tapsell package.
 You can destroy the ad resources in the unmounting phase of the screen. 
 The following code is an example of how to destroy the ad:
 
-```ts
+```dart
 import 'package:tapsell_mediation/tapsell.dart';
 
 @override
@@ -127,6 +127,18 @@ void dispose() {
   Tapsell.destroyNativeAd(adId);
 }
 ```
+
+## Caching Native Ads
+
+To cache native ads, you can use the `requestMultipleNativeAds` method to fetch and store up to **5** ads at once.
+
+```dart
+static Future<String?> requestMultipleNativeAds(String zoneId, int maximumCount)
+```
+
+This method allows you to simultaneously request multiple ads (up to 5) and invoke the provided listener up to the requested count. This way, you can pre-load several ads before displaying them.
+
+You can utilize this feature in infinite scrolling lists or scenarios that require displaying multiple ads. Please note that this functionality is exclusively available for native ads.
 
 ## Test keys
 

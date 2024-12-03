@@ -642,6 +642,18 @@ public static void ShowNativeAd(string adId, NativeAdView view, Action onImpress
 
 <br/>
 
+## Caching Native Ads
+
+To cache native ads, you can use the `RequestMultipleNativeAds` method to fetch and store up to **5** ads at once.
+
+```c#
+public static void RequestMultipleNativeAds(string zoneId, int maximumCount, Action<string> onSuccess, Action onFailure)
+```
+
+This method allows you to simultaneously request multiple ads (up to 5) and invoke the provided listener up to the requested count. This way, you can pre-load several ads before displaying them.
+
+You can utilize this feature in infinite scrolling lists or scenarios that require displaying multiple ads. Please note that this functionality is exclusively available for native ads.
+
 ## Test keys
 ---
 

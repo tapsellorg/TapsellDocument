@@ -894,6 +894,20 @@ public class MainActivity extends AppCompatActivity {
 
 You can find the PreRoll implementation details [here](preroll/index.html)
 
+## Caching Native Ads
+
+To cache native ads, you can use the `requestMultipleNativeAds` method to fetch and store up to **5** ads at once.
+
+```java
+public static void requestMultipleNativeAds(String zoneId, int maximumCount, Activity activity, RequestResultListener listener)
+```
+
+This method allows you to simultaneously request multiple ads (up to 5) and invoke the provided listener up to the requested count. This way, you can pre-load several ads before displaying them.
+
+You can utilize this feature in infinite scrolling lists or scenarios that require displaying multiple ads. Please note that this functionality is exclusively available for native ads.
+
+You can find the sample project [here](https://github.com/tapsellorg/MediationSample-NativeAd-RecyclerView/blob/master/sample-native-recyclerview/src/main/java/ir/tapsell/mediation/sample/recyclerview/NativeAdProvider.kt#L98)
+
 ## Changelog
 
 You can find the SDK Changelog [here](changelog/index.html)

@@ -134,6 +134,18 @@ useEffect(() => {
 }, []);
 ```
 
+## Caching Native Ads
+
+To cache native ads, you can use the `requestMultipleNativeAds` method to fetch and store up to **5** ads at once.
+
+```ts
+requestMultipleNativeAd(zoneId: string, maximumCount: number): Promise<string>;
+```
+
+This method allows you to simultaneously request multiple ads (up to 5) and invoke the provided listener up to the requested count. This way, you can pre-load several ads before displaying them.
+
+You can utilize this feature in infinite scrolling lists or scenarios that require displaying multiple ads. Please note that this functionality is exclusively available for native ads.
+
 ## Test keys
 
 To use test app keys and zones, you can refer to this [link](../../test)
