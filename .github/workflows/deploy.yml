@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - fix/ci-deploy
 
 jobs:
   deploy-website:
@@ -16,7 +17,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
+          ruby-version: 2.6.3
 
       - name: Install Bundler
         run: gem install bundler -v 2.2.4
