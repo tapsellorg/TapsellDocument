@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - chore/update-docs
 
 jobs:
   deploy-website:
