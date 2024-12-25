@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - chore/update-docs
 
 jobs:
   deploy-website:
@@ -16,18 +17,19 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.2
+          ruby-version: 3.3
+          bundler-cache: true
 
       - name: Install Bundler
-        run: gem install bundler -v 2.2.4
+        run: gem install bundler -v 2.5.13
 
       - name: Install dependencies
         run: bundle install
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
 
       - name: Install npm dependencies
         run: npm install
@@ -60,3 +62,4 @@ jobs:
           git add -A
           git commit -m "update gh pages"
           git push https://tapsellCI:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/tapsellorg/TapsellDocument.git gh-pages --force
+
