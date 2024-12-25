@@ -20,7 +20,7 @@ jobs:
           ruby-version: 2.6.3
 
       - name: Install Bundler
-        run: gem install bundler -v 2.2.4
+        run: gem install bundler -v 2.1.4
 
       - name: Install dependencies
         run: bundle install
