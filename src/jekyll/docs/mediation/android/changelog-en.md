@@ -14,19 +14,6 @@ toc: true
       <th>Notes</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td><code>1.0.2-beta03</code></td>
-      <td>2024-12-23</td>
-      <td>
-        <ul>
-          <li>Added <code>onAdClosed</code> callback for native ads to identify video completion state.</li>
-          <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.7-rc01</code>. Migrated from Android MediaPlayer to ExoPlayer</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-
 <tbody>
     <tr>
       <td><code>1.0.2-beta02</code></td>
