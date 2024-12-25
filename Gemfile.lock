@@ -74,7 +74,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (~> 4.0.0)
+  jekyll (~> 4.3.4)
   jekyll-polyglot
   jekyll-seo-tag
   jekyll-toc
