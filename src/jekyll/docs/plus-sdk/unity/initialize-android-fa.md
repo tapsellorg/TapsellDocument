@@ -53,7 +53,7 @@ Edit > Project Setting... > Player > Publishing Settings > Custom Gradle Propert
 Edit > Project Setting... > Player > Publishing Settings > Custom Main Manifest
 ```
 
-۴. در صورتیکه از یونیتی ۲۰۲۱ یا پایین تر استفاده می‌کنید، برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradleTemplate.properties` بروید و قطعه کد زیر را اضافه
+۷. در صورتیکه از یونیتی ۲۰۲۱ یا پایین تر استفاده می‌کنید، برای فعال سازی AndroidX در پروژه، به آدرس `Assets\Plugins\Android\gradleTemplate.properties` بروید و قطعه کد زیر را اضافه
 کنید:
 
 ```gradle
