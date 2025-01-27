@@ -16,6 +16,18 @@ toc: true
   </thead>
   <tbody>
     <tr>
+      <td><code>1.0.2-beta04</code></td>
+      <td>2025-01-26</td>
+      <td>
+        <ul>
+          <li>Changed validation of zone id and app key format.</li>
+          <li>Improved functionality of the SDK</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+<tbody>
+    <tr>
       <td><code>1.0.2-beta03</code></td>
       <td>2024-12-23</td>
       <td>
