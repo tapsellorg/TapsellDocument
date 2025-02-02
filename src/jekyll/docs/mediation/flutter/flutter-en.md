@@ -51,7 +51,7 @@ the `TapsellMediationAppKey` key with the ID provided from the [Tapsell Mediatio
 
 ```groovy
 manifestPlaceholders = [
-        TapsellMediationAppKey: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+        TapsellMediationAppKey: "xxxxxxxxxxxxxxxxxxxxxxxx",
 ]
 ```
 

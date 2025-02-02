@@ -52,7 +52,7 @@ the `TapsellMediationAppKey` key with the ID provided from the [Tapsell Mediatio
 ```json
 {
   "react-native-tapsell-mediation": {
-    "TapsellMediationAppKey": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    "TapsellMediationAppKey": "xxxxxxxxxxxxxxxxxxxxxxxx"
   }
 }
 ```
@@ -62,7 +62,7 @@ the `TapsellMediationAppKey` key with the ID provided from the [Tapsell Mediatio
 ```js
 module.exports = {
   "react-native-tapsell-mediation": {
-    "TapsellMediationAppKey": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    "TapsellMediationAppKey": "xxxxxxxxxxxxxxxxxxxxxxxx"
   }
 };
 ```
