@@ -1,5 +1,9 @@
 ## Tapsell plus Unity Changelog
 
+### 2.3.1 (05 Feb 2025)
+
+- Updated tapsell-sdk to `4.9.7`
+
 ### 2.2.8 (16 Sep 2024)
 
 - Updated tapsell-sdk to `4.9.3`

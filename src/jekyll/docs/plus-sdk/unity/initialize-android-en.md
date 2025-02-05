@@ -25,7 +25,7 @@ toc: true # table of contents
     ```
 
 3. First, download Tepsell Plus `unitypackage`
-   from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.2.8/tapsell-plus-unity-2.2.8.unitypackage)
+   from [this link](https://github.com/tapsellorg/TapsellPlusSDK-UnityPlugin/releases/download/v2.3.1/tapsell-plus-unity-2.3.1.unitypackage)
    .
 4. Add the downloaded `unitypackage` to your project as follows: (If the `TapsellPlusSDK` folder already exists in your
    project, please remove it).
