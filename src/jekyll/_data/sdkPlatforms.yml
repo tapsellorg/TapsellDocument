@@ -46,7 +46,7 @@ plusUnity:
   faq: /faq/plus-sdk/unity/
 
 plusReactnative:
-  sdkVersion: 2.2.8
+  sdkVersion: 2.3.1
   sample: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativeSample
   releaseNotesFileFa: releases/plus-reactnative.md
   github: https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin

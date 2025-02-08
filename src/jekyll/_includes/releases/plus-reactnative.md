@@ -2,6 +2,10 @@
 
 ([جزئیات بیشتر تاریخچه](https://github.com/tapsellorg/TapsellPlusSDK-ReactNativePlugin/blob/master/CHANGELOG.md))
 
+## 2.3.1 - 2025/02/08
+
+- بروزرسانی کتابخانه تپسل به نسخه `4.9.7`
+
 ## 2.2.8 - 2024/09/25
 
 - بروزرسانی کتابخانه تپسل به نسخه `4.9.3`
