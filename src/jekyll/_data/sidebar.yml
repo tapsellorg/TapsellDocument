@@ -114,8 +114,8 @@ fa:
           - name: راه اندازی اندروید
             link: /plus-sdk/unity/initialize-android
 
-          - name: راه اندازی ios
-            link: /plus-sdk/unity/initialize-ios
+#          - name: راه اندازی ios
+#            link: /plus-sdk/unity/initialize-ios
 
           - name: آنی/جایزه‌ای
             link: /plus-sdk/unity/rewarded-interstitial
