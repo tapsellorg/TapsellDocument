@@ -34,8 +34,8 @@ en:
           - name: Android Initialization
             link: /plus-sdk/unity/initialize-android
 
-          - name: iOS Initialization
-            link: /plus-sdk/unity/initialize-ios
+#          - name: iOS Initialization
+#            link: /plus-sdk/unity/initialize-ios
 
           - name: Rewarded/Interstitial
             link: /plus-sdk/unity/rewarded-interstitial
