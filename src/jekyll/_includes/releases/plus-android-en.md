@@ -1,5 +1,10 @@
 ## Tapsell plus native Changelog
 
+### 2.3.2 (23 Feb 2025)
+
+- Updated tapsell-sdk to `4.9.8`
+- Fix conflict with `InAppBilling` SDKs
+
 ### 2.3.1 (05 Feb 2025)
 
 - Updated tapsell-sdk to `4.9.7`
