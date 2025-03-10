@@ -26,7 +26,7 @@ Make sure to add the IMA gradle dependency to your project.
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.2-beta04"
+      def tapsellVersion = "1.0.2-beta05"
       implementation("ir.tapsell.mediation:tapsell:$tapsellVersion") // Mediation
       implementation("ir.tapsell.mediation.adapter:legacy:$tapsellVersion") // Tapsell Adapter
   }
@@ -141,7 +141,7 @@ follows:
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.2-beta04"
+      def tapsellVersion = "1.0.2-beta05"
       implementation("ir.tapsell.mediation:tapsell:$tapsellVersion") // Mediation
       implementation("ir.tapsell.mediation.adapter:legacy:$tapsellVersion") // Tapsell Adapter
       implementation "ir.tapsell.mediation.adapter:legacy-ima-extension:$tapsellVersion" // Tapsell legacy IMA Adapter

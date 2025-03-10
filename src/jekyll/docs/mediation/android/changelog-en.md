@@ -16,6 +16,26 @@ toc: true
   </thead>
   <tbody>
     <tr>
+      <td><code>1.0.2-beta05</code></td>
+      <td>2025-03-10</td>
+      <td>
+        <ul>
+          <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.8</code>: Fixed conflict with InAppBilling SDKs.</li>
+          <li>Upgraded Admob version to <code>v23.6.0</code></li>
+          <li>Upgraded Yandex version to <code>v7.6.0.0</code>.</li>
+          <li>Upgraded Applovin version to <code>v13.1.0</code>.</li>
+          <li>Upgraded IronSource version to <code>v8.6.1</code>.</li>
+          <li>Upgraded Mintegral version to <code>v16.8.61</code>.</li>
+          <li>Upgraded Vungle version to <code>v7.4.3</code>.</li>
+          <li>Upgraded UnityAds version to <code>v4.13.1</code>.</li>
+          <li>Upgraded Fyber (Digital Turbine Exchange) version to <code>v8.3.6</code>.</li>
+          <li>Upgraded Wortise version to <code>v1.6.1</code>.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+<tbody>
+    <tr>
       <td><code>1.0.2-beta04</code></td>
       <td>2025-01-26</td>
       <td>
