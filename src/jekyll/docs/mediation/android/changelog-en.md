@@ -16,6 +16,18 @@ toc: true
   </thead>
   <tbody>
     <tr>
+      <td><code>1.0.2-beta06</code></td>
+      <td>2025-03-10</td>
+      <td>
+        <ul>
+          <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.9</code></li>
+          <li>Downgraded Admob version to <code>v23.4.0</code></li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+<tbody>
+    <tr>
       <td><code>1.0.2-beta05</code></td>
       <td>2025-03-10</td>
       <td>
