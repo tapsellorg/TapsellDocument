@@ -20,8 +20,8 @@ toc: true
       <td>2025-03-10</td>
       <td>
         <ul>
-          <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.9</code></li>
-          <li>Downgraded Admob version to <code>v23.4.0</code></li>
+          <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.9</code> to support new back navigation API in Android 13+</li>
+          <li>Downgraded Admob version to <code>v23.4.0</code> to fix compile issues in Unity 2021</li>
         </ul>
       </td>
     </tr>

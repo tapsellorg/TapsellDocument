@@ -1,5 +1,11 @@
 ## Release Notes:
 
+### 4.9.9 - 2025/03/30
+- Added support for new back navigation API in Android 13+
+
+### 4.9.8 - 2024/11/20
+- Fix conflict with `InAppBilling` SDKs
+
 ### 4.9.5 - 2024/11/20
 - Remove usage of `reset` function from SDK to fix an internal crash on Android `MediaPlayer`
 
