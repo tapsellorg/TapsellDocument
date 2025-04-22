@@ -16,6 +16,18 @@ toc: true
   </thead>
   <tbody>
     <tr>
+      <td><code>1.0.2-beta07</code></td>
+      <td>2025-04-22</td>
+      <td>
+        <ul>
+          <li>Downgraded Applovin Admob adapter version to <code>v23.4.0.0</code> to fix compile issues in Unity 2021</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+
+<tbody>
+    <tr>
       <td><code>1.0.2-beta06</code></td>
       <td>2025-03-10</td>
       <td>
