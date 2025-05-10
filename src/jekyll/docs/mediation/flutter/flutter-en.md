@@ -155,7 +155,7 @@ Otherwise, your app will be removed from GooglePlay according to this policy.
 
 ## Sample project
 
-for more info you can use [Sample App](https://github.com/tapsellorg/TapsellMediation-FlutterSample)
+for more info you can use [Sample App](https://github.com/tapsellorg/TapsellMediation-Flutter)
 on GitHub repository.
 
 ## Test keys

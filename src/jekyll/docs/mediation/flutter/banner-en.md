@@ -95,6 +95,6 @@ To use test app keys and zones, you can refer to this [link](../../test)
 ## Sample Project
 
 for more info you can
-use [Banner Sample](https://github.com/tapsellorg/TapsellMediation-FlutterSample/tree/master/src/screens/banner)
+use [Banner Sample](https://github.com/tapsellorg/TapsellMediation-Flutter/blob/master/lib/screens/banner.dart)
 on GitHub repository.
 

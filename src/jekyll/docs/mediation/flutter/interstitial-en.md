@@ -68,5 +68,5 @@ To use test app keys and zones, you can refer to this [link](../../test)
 ## Sample Project
 
 for more info you can
-use [Interstitial Sample](https://github.com/tapsellorg/TapsellMediation-FlutterSample/tree/master/src/screens/interstitial)
+use [Interstitial Sample](https://github.com/tapsellorg/TapsellMediation-Flutter/blob/master/lib/screens/interstitial.dart)
 on GitHub repository.
