@@ -1,5 +1,8 @@
 ## Release Notes:
 
+### 4.9.10 - 2025/05/19
+- Fix back navigation issue by isolating predictive back-gesture handling to AdActivity to avoid side-effect on global back navigation.
+
 ### 4.9.9 - 2025/03/30
 - Added support for new back navigation API in Android 13+
 
