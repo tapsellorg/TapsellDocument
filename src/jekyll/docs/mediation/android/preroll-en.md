@@ -26,7 +26,7 @@ Make sure to add the IMA gradle dependency to your project.
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.2-beta07"
+      def tapsellVersion = "1.0.2-beta08"
       implementation("ir.tapsell.mediation:tapsell:$tapsellVersion") // Mediation
       implementation("ir.tapsell.mediation.adapter:legacy:$tapsellVersion") // Tapsell Adapter
   }
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure() {
+            public void onFailure(String message) {
                 // Ad not available
             }
         });
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure() {
+            public void onFailure(String message) {
                 // Ad not available
             }
         });
@@ -141,7 +141,7 @@ follows:
 
 ```groovy
   dependencies {
-      def tapsellVersion = "1.0.2-beta07"
+      def tapsellVersion = "1.0.2-beta08"
       implementation("ir.tapsell.mediation:tapsell:$tapsellVersion") // Mediation
       implementation("ir.tapsell.mediation.adapter:legacy:$tapsellVersion") // Tapsell Adapter
       implementation "ir.tapsell.mediation.adapter:legacy-ima-extension:$tapsellVersion" // Tapsell legacy IMA Adapter
@@ -221,7 +221,7 @@ interface RequestResultListener {
     // Called when the ad is successfully loaded; providing the ad id needed to show the ad 
     void onSuccess(String adId);
     // Called when there is no ad available
-    void onFailure();
+    void onFailure(String message);
 }
 ```
 
@@ -254,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
                     }
         
                     @Override
-                    public void onFailure() {
+                    public void onFailure(String message) {
                         // Ad not available
                     }
                 });

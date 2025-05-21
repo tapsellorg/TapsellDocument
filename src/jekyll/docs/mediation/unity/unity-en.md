@@ -45,8 +45,8 @@ Follow the steps below to be able to use the Tapsell Mediation in your applicati
 
 Download the following packages and import them as custom packages to your project.
 
-- [Tapsell Mediation](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_v1.0.2-beta07.01.unitypackage)
-- [Tapsell Legacy Adapter](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_LegacyAdapter_v1.0.2-beta07.01.unitypackage)
+- [Tapsell Mediation](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_v1.0.2-beta08.01.unitypackage)
+- [Tapsell Legacy Adapter](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_LegacyAdapter_v1.0.2-beta08.01.unitypackage)
 
 <img src="/images/mediation-unity-import1.jpg" alt="import-package" />
 
@@ -97,15 +97,15 @@ No additional configuration or code is needed to initialize the SDK.
 
 The Tapsell Mediation SDK currently supports the following 3rd-party programmatic & mediated partner SDKs:
 
-* [**AdMob**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_AdMobAdapter_v1.0.2-beta07.01.unitypackage)
-* [**Applovin**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_ApplovinAdapter_v1.0.2-beta07.01.unitypackage)
-* [**Chartboost**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_ChartboostAdapter_v1.0.2-beta07.01.unitypackage)
-* [**Fyber**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_AdColonyAdapter_v1.0.2-beta07.01.unitypackage)
-* [**Mintegral**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_MintegralAdapter_v1.0.2-beta07.01.unitypackage)
-* [**UnityAds**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_UnityAdsAdapter_v1.0.2-beta07.01.unitypackage)
-* [**IronSource**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_IronSourceAdapter_v1.0.2-beta07.01.unitypackage)
-* [**Liftoff**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_LiftoffAdapter_v1.0.2-beta07.01.unitypackage)
-* [**Yandex**](https://github.com/tapsellorg/Unity-Plugin/releases/download/v1.0.2-beta07%2301/TapsellMediation_YandexAdapter_v1.0.2-beta07.01.unitypackage)
+* [**AdMob**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_AdMobAdapter_v1.0.2-beta08.01.unitypackage)
+* [**Applovin**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_ApplovinAdapter_v1.0.2-beta08.01.unitypackage)
+* [**Chartboost**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_ChartboostAdapter_v1.0.2-beta08.01.unitypackage)
+* [**Fyber**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_FyberAdapter_v1.0.2-beta08.01.unitypackage)
+* [**Mintegral**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_MintegralAdapter_v1.0.2-beta08.01.unitypackage)
+* [**UnityAds**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_UnityAdsAdapter_v1.0.2-beta08.01.unitypackage)
+* [**IronSource**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_IronSourceAdapter_v1.0.2-beta08.01.unitypackage)
+* [**Liftoff**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_LiftoffAdapter_v1.0.2-beta08.01.unitypackage)
+* [**Yandex**](https://github.com/tapsellorg/TapsellMediation-Unity/releases/download/v1.0.2-beta08%2301/TapsellMediation_YandexAdapter_v1.0.2-beta08.01.unitypackage)
 
 To integrate each SDK, download the corresponding adapter package from the links above and follow the steps below:
 
@@ -218,7 +218,7 @@ namespace Tapsell.Mediation.Request
         // Called when the ad is successfully loaded; providing the ad id needed to show the ad 
         public void OnSuccess(string adId);
         // Called when there is no ad available
-        public void OnFailure();
+        public void OnFailure(string message);
     }
 }
 ```
@@ -226,7 +226,7 @@ namespace Tapsell.Mediation.Request
 Alternatively, you can provide your callbacks using C# **Action**s:
 
 ```c#
-public static void RequestBannerAd(string zoneId, BannerSize bannerSize, Action<string> onSuccess, Action onFailure)
+public static void RequestBannerAd(string zoneId, BannerSize bannerSize, Action<string> onSuccess, Action<string> onFailure)
 ```
 
 #### Show The Loaded Banner Ad
@@ -325,7 +325,7 @@ namespace Tapsell.Mediation.Request
         // Called when the ad is successfully loaded; providing the ad id needed to show the ad 
         public void OnSuccess(string adId);
         // Called when there is no ad available
-        public void OnFailure();
+        public void OnFailure(string message);
     }
 }
 ```
@@ -333,7 +333,7 @@ namespace Tapsell.Mediation.Request
 Alternatively, you can provide your callbacks using C# **Action**s:
 
 ```c#
-public static void RequestInterstitialAd(string zoneId, Action<string> onSuccess, Action onFailure)
+public static void RequestInterstitialAd(string zoneId, Action<string> onSuccess, Action<string> onFailure)
 ```
 
 #### Show The Loaded Interstitial Ad
@@ -423,7 +423,7 @@ namespace Tapsell.Mediation.Request
         // Called when the ad is successfully loaded; providing the ad id needed to show the ad 
         public void OnSuccess(string adId);
         // Called when there is no ad available
-        public void OnFailure();
+        public void OnFailure(string message);
     }
 }
 ```
@@ -431,7 +431,7 @@ namespace Tapsell.Mediation.Request
 Alternatively, you can provide your callbacks using C# **Action**s:
 
 ```c#
-public static void RequestRewardedVideoAd(string zoneId, Action<string> onSuccess, Action onFailure)
+public static void RequestRewardedVideoAd(string zoneId, Action<string> onSuccess, Action<string> onFailure)
 ```
 
 #### Show The Loaded Rewarded Ad
@@ -531,7 +531,7 @@ namespace Tapsell.Mediation.Request
         // Called when the ad is successfully loaded; providing the ad id needed to show the ad 
         public void OnSuccess(string adId);
         // Called when there is no ad available
-        public void OnFailure();
+        public void OnFailure(string message);
     }
 }
 ```
@@ -539,7 +539,7 @@ namespace Tapsell.Mediation.Request
 Alternatively, you can provide your callbacks using C# **Action**s:
 
 ```c#
-public static void RequestNativeAd(string zoneId, Action<string> onSuccess, Action onFailure)
+public static void RequestNativeAd(string zoneId, Action<string> onSuccess, Action<string> onFailure)
 ```
 
 #### Show The Loaded Native Ad
@@ -647,7 +647,7 @@ public static void ShowNativeAd(string adId, NativeAdView view, Action onImpress
 To cache native ads, you can use the `RequestMultipleNativeAds` method to fetch and store up to **5** ads at once.
 
 ```c#
-public static void RequestMultipleNativeAds(string zoneId, int maximumCount, Action<string> onSuccess, Action onFailure)
+public static void RequestMultipleNativeAds(string zoneId, int maximumCount, Action<string> onSuccess, Action<string> onFailure)
 ```
 
 This method allows you to simultaneously request multiple ads (up to 5) and invoke the provided listener up to the requested count. This way, you can pre-load several ads before displaying them.

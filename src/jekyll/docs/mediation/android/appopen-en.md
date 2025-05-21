@@ -31,7 +31,7 @@ interface RequestResultListener {
     // Called when the ad is successfully loaded; providing the ad id needed to show the ad 
     void onSuccess(String adId);
     // Called when there is no ad available
-    void onFailure();
+    void onFailure(String message);
 }
 ```
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure() {
+            public void onFailure(String message) {
                 // Ad not available
             }
         });

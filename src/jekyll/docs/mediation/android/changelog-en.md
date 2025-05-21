@@ -16,6 +16,22 @@ toc: true
   </thead>
   <tbody>
     <tr>
+      <td><code>1.0.2-beta08</code></td>
+      <td>2025-05-15</td>
+      <td>
+        <ul>
+          <li>Added error message for <code>onFailure</code> callback in <code>RequestResultListener</code>.</li>
+          <li>Add device time field in Report API to compare with the NTP time and server time to check accuracy of NTP time.</li>
+          <li>Removed Unused <code>DeviceTimeInfo</code> model from API request body. These fields are now used in header instead.</li>
+          <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.10</code></li>
+          <li>Fix back navigation issue by isolating predictive back-gesture handling to AdActivity to avoid side-effect on global back navigation.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+
+  <tbody>
+    <tr>
       <td><code>1.0.2-beta07</code></td>
       <td>2025-04-22</td>
       <td>
@@ -25,6 +41,7 @@ toc: true
       </td>
     </tr>
   </tbody>
+
 
 <tbody>
     <tr>
