@@ -12,6 +12,7 @@ The table below shows the versions mapping between Tapsell Mediation SDK and Tap
 
 | Tapsell Mediation Version | Tapsell Legacy Version | Admob Version | Gradle Version | Kotlin Version |
 |:-------------------------:|:----------------------:|:-------------:|:--------------:|:--------------:|
+|      `1.0.2-beta09`       |        `4.9.10`        |   `23.4.0`    |    `7.6.1`     |    `1.8.20`    |
 |      `1.0.2-beta08`       |        `4.9.10`        |   `23.4.0`    |    `7.6.1`     |    `1.8.20`    |
 |      `1.0.2-beta07`       |        `4.9.9`         |   `23.4.0`    |    `7.6.1`     |    `1.8.20`    |
 |      `1.0.2-beta06`       |        `4.9.9`         |   `23.4.0`    |    `7.6.1`     |    `1.8.20`    |

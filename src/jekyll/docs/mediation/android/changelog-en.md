@@ -16,6 +16,18 @@ toc: true
   </thead>
   <tbody>
     <tr>
+      <td><code>1.0.2-beta09</code></td>
+      <td>2025-05-15</td>
+      <td>
+        <ul>
+          <li>Upgraded Tapsell Legacy adapter version to <code>v4.9.10</code></li>. Fixed showing close icon in interstitial banner when rotation happens.
+          <li>Improved functionality of the SDK</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
       <td><code>1.0.2-beta08</code></td>
       <td>2025-05-15</td>
       <td>
