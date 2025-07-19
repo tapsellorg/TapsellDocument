@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport"><meta name="description" content="Tapsell, by dominating a great extent of digital media network and giving various advertising campaigns, is capable of meeting the expectation of the most valuable brands. Additionally, by showing the advertisements to the subscribers in a smart way, we bring a long- lasting and remarkable revenue without any damage to media owners’ practical experience."><link href="/assets/images/favicons/76X76.png" rel="apple-touch-icon" sizes="152x152"><link href="/assets/images/favicons/32X32.png" rel="icon" sizes="32x32" type="image/png"><link href="/assets/images/favicons/16X16.png" rel="icon" sizes="16x16" type="image/png"><link href="/assets/images/favicons/site.webmanifest" rel="manifest"><link color="#5bbad5" href="/assets/images/favicons/safari-pinned-tab.svg" rel="mask-icon"><meta content="#da532c" name="msapplication-TileColor"><meta content="#ffffff" name="theme-color"><link href="/assets/style.css?v=1752915253&_v=1752915254286" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css?_v=1752915254286"><script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.92/darkreader.min.js?_v=1752915254286"></script><script src="/assets/js/color-scheme.js?_v=1752915254286"></script><title>PreRoll Ad - Tapsell</title></head><body><header id="header"><div class="container"><div class="header-content"><div class="header-logo"><a class="logo" href="https://tapsell.ir"><img src="/assets/images/logos/logo-dark-background.png" class="logo-image" alt="Tapsell Docs"></a></div><nav class="header-nav"><ul class="main-nav"><li class="nav-item"><a href="/"><span>Home</span></a></li><li class="nav-item"><a href="https://dashboard.tapsell.ir/" target="_blank"><span>Dashboard</span></a></li><li class="nav-item"><a href="https://college.tapsell.ir/" target="_blank"><span>Blog</span></a></li><li class="nav-item"><a href="https://docs.tapsell.ir/"><span>فارسی</span></a></li></ul></nav><div class="header-nav-btns"></div></div></div></header><main class="outer"><div class="main-searchbar"></div><div class="hits-target"></div><div class="main-body"><div class="article-container"><article><h1 class="article-title">PreRoll Ad</h1><div class="article-content"><ul id="toc" class="section-nav"><li class="toc-entry toc-h2"><a href="#implementing-preroll-ads">Implementing PreRoll ads</a><ul><li class="toc-entry toc-h3"><a href="#vast-tags-requests-only">Vast Tags Requests only</a><ul><li class="toc-entry toc-h4"><a href="#load-a-preroll-ad">Load A PreRoll Ad</a></li></ul></li><li class="toc-entry toc-h3"><a href="#ima-exoplayer-integration">IMA-ExoPlayer Integration</a><ul><li class="toc-entry toc-h4"><a href="#add-tapsell-preroll-views-to-your-layout">Add Tapsell PreRoll Views To Your Layout</a></li><li class="toc-entry toc-h4"><a href="#load-a-preroll-ad-1">Load A PreRoll Ad</a></li><li class="toc-entry toc-h4"><a href="#show-the-loaded-preroll-ad">Show The Loaded PreRoll Ad</a></li><li class="toc-entry toc-h4"><a href="#destroy-preroll-ad">Destroy PreRoll Ad</a></li></ul></li><li class="toc-entry toc-h3"><a href="#sample-project">Sample Project</a></li></ul></li></ul><h2 id="implementing-preroll-ads"><a class="anchor" href="#implementing-preroll-ads" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementing PreRoll ads</h2><p>PreRoll ads are the promotional video advertisement that are played before the content of an online video. They are shown using the same types of views with which you are already building your layouts, and can be formatted to match your app’s visual design.</p><p>There are two overloaded ways to integrate pre-roll ads from Tapsell into your Android app. This guide shows you how to implement each one.</p><h3 id="vast-tags-requests-only"><a class="anchor" href="#vast-tags-requests-only" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vast Tags Requests only</h3><p>In this method, you can request to get IMA vast tags, but all implementations related to integrating ads with your video player should be done from your side. so you can use your own video player (<code class="language-plaintext highlighter-rouge">ExoPlayer</code> or other players) here. but you need to integrate the ad into your player. Also, you have complete access to your layout and the video player design.</p><p>Make sure to add the IMA gradle dependency to your project.</p><div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">dependencies</span> <span class="o">{</span>
+      <span class="kt">def</span> <span class="n">tapsellVersion</span> <span class="o">=</span> <span class="s2">"1.0.2-beta09"</span>
+      <span class="n">implementation</span><span class="o">(</span><span class="s2">"ir.tapsell.mediation:tapsell:$tapsellVersion"</span><span class="o">)</span> <span class="c1">// Mediation</span>
+      <span class="n">implementation</span><span class="o">(</span><span class="s2">"ir.tapsell.mediation.adapter:legacy:$tapsellVersion"</span><span class="o">)</span> <span class="c1">// Tapsell Adapter</span>
+  <span class="o">}</span>
+</code></pre></div></div><h4 id="load-a-preroll-ad"><a class="anchor" href="#load-a-preroll-ad" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load A PreRoll Ad</h4><p>Once the layout is ready, the next step is to load an ad. That’s done with the <code class="language-plaintext highlighter-rouge">requestPreRollAd()</code> static method in Tapsell class.</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">requestPreRollAd</span><span class="o">(</span><span class="nc">String</span> <span class="n">zoneId</span><span class="o">,</span> <span class="nc">RequestResultListener</span> <span class="n">listener</span><span class="o">)</span>
+</code></pre></div></div><p>You need to provide a class implementing the <code class="language-plaintext highlighter-rouge">RequestResultListener</code> interface to get the ad load result overriding the success and failure methods:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">RequestResultListener</span> <span class="o">{</span>
+    <span class="c1">// Called when the ad is successfully loaded; providing the ad id needed to show the ad </span>
+    <span class="kt">void</span> <span class="nf">onSuccess</span><span class="o">(</span><span class="nc">String</span> <span class="n">adId</span><span class="o">);</span>
+    <span class="c1">// Called when there is no ad available</span>
+    <span class="kt">void</span> <span class="nf">onFailure</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div><p>Here’s an example that shows how to load an ad in the onCreate() method of an Activity:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ir.tapsell.mediation.ad.request.RequestResultListener</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">ir.tapsell.mediation.Tapsell</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">PRE_ROLL_AD_ZONE_ID</span> <span class="o">=</span> <span class="s">"SampleZoneId"</span><span class="o">;</span>
+    
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+
+        <span class="nc">Tapsell</span><span class="o">.</span><span class="na">requestPreRollAd</span><span class="o">(</span><span class="no">PRE_ROLL_AD_ZONE_ID</span><span class="o">,</span> <span class="k">new</span> <span class="nc">RequestResultListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSuccess</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="nc">String</span> <span class="n">adId</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Ad loaded</span>
+                <span class="c1">// TODO: Show the ad</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailure</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Ad not available</span>
+            <span class="o">}</span>
+        <span class="o">});</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div><p>Once your ad id is received successfully, the next step is to get vast tag url of an ad. That’s done with the <code class="language-plaintext highlighter-rouge">getPreRollVastUrl()</code> static method in Tapsell class.</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">getPreRollVastUrl</span><span class="o">(</span><span class="nc">String</span> <span class="n">adId</span><span class="o">,</span> <span class="nc">PreRollAdListener</span> <span class="n">listener</span><span class="o">)</span>
+</code></pre></div></div><p>Then You need to provide a class implementing the <code class="language-plaintext highlighter-rouge">PreRollAdListener</code> interface to get the vast tag result overriding the success and failure methods:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">PreRollAdListener</span> <span class="o">{</span>
+    <span class="c1">// Called when the ad is successfully loaded; providing the vast tag needed to show the ad </span>
+    <span class="kt">void</span> <span class="nf">onVastAvailable</span><span class="o">(</span><span class="nc">String</span> <span class="n">vastTagUrl</span><span class="o">);</span>
+    <span class="c1">// Called when there is no vast tag available</span>
+    <span class="kt">void</span> <span class="nf">onAdFailed</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div><p>Here’s an example that shows how to load an ad in the onCreate() method of an Activity:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ir.tapsell.mediation.ad.request.RequestResultListener</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">ir.tapsell.mediation.Tapsell</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">PRE_ROLL_AD_ZONE_ID</span> <span class="o">=</span> <span class="s">"SampleZoneId"</span><span class="o">;</span>
+    
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+
+        <span class="nc">Tapsell</span><span class="o">.</span><span class="na">requestPreRollAd</span><span class="o">(</span><span class="no">PRE_ROLL_AD_ZONE_ID</span><span class="o">,</span> <span class="k">new</span> <span class="nc">RequestResultListener</span><span class="o">()</span> <span class="o">{</span>
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSuccess</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="nc">String</span> <span class="n">adId</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Ad loaded</span>
+                <span class="c1">// TODO: Get the vast tag url</span>
+            <span class="o">}</span>
+
+            <span class="nd">@Override</span>
+            <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailure</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+                <span class="c1">// Ad not available</span>
+            <span class="o">}</span>
+        <span class="o">});</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div><h3 id="ima-exoplayer-integration"><a class="anchor" href="#ima-exoplayer-integration" aria-hidden="true"><span class="octicon octicon-link"></span></a>IMA-ExoPlayer Integration</h3><p>In this method, you can request to show pre-roll ads and Tapsell SDK will manage all operation related to integrating ad with your video player. In this way you must use <code class="language-plaintext highlighter-rouge">androidx.Media3.PlayerView</code> as the vide player The first step toward displaying a pre-roll ad is adding <code class="language-plaintext highlighter-rouge">legacy-ima-extension</code> gradle dependency to your project as follows:</p><div class="language-groovy highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">dependencies</span> <span class="o">{</span>
+      <span class="kt">def</span> <span class="n">tapsellVersion</span> <span class="o">=</span> <span class="s2">"1.0.2-beta09"</span>
+      <span class="n">implementation</span><span class="o">(</span><span class="s2">"ir.tapsell.mediation:tapsell:$tapsellVersion"</span><span class="o">)</span> <span class="c1">// Mediation</span>
+      <span class="n">implementation</span><span class="o">(</span><span class="s2">"ir.tapsell.mediation.adapter:legacy:$tapsellVersion"</span><span class="o">)</span> <span class="c1">// Tapsell Adapter</span>
+      <span class="n">implementation</span> <span class="s2">"ir.tapsell.mediation.adapter:legacy-ima-extension:$tapsellVersion"</span> <span class="c1">// Tapsell legacy IMA Adapter</span>
+  <span class="o">}</span>
+</code></pre></div></div><h4 id="add-tapsell-preroll-views-to-your-layout"><a class="anchor" href="#add-tapsell-preroll-views-to-your-layout" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Tapsell PreRoll Views To Your Layout</h4><p>The next step is to create your ad layout using the same views you use in your application. Note that you can change the video player design according to your requirements. The only thing you need to consider in your layout design is that you must use <code class="language-plaintext highlighter-rouge">androidx.Media3 ExoPlayer</code>. Other players or Google namespace versions of <code class="language-plaintext highlighter-rouge">ExoPlayer</code> are no longer supported. Also consider to use A <code class="language-plaintext highlighter-rouge">FrameLayout</code> which is used for the companion banner ad.</p><p>Here’s an example that shows an ad layout inside the activity layout:</p><div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!----------------------- activity_main.xml --------------------------&gt;</span>
+
+<span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;androidx.constraintlayout.widget.ConstraintLayout</span>
+  <span class="na">xmlns:android=</span><span class="s">"http://schemas.android.com/apk/res/android"</span>
+  <span class="na">xmlns:app=</span><span class="s">"http://schemas.android.com/apk/res-auto"</span>
+  <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+  <span class="na">android:layout_height=</span><span class="s">"match_parent"</span>
+  <span class="na">android:orientation=</span><span class="s">"vertical"</span><span class="nt">&gt;</span>
+
+  <span class="nt">&lt;LinearLayout</span>
+    <span class="na">android:id=</span><span class="s">"@+id/preroll_container"</span>
+    <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+    <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+    <span class="na">android:orientation=</span><span class="s">"vertical"</span>
+    <span class="na">app:layout_constraintTop_toBottomOf=</span><span class="s">"@+id/btn_play"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;RelativeLayout</span>
+      <span class="na">android:id=</span><span class="s">"@+id/video_player_container"</span>
+      <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+      <span class="na">android:layout_height=</span><span class="s">"200dp"</span><span class="nt">&gt;</span>
+
+      <span class="c">&lt;!-- Your Media3 Player --&gt;</span>
+      <span class="nt">&lt;androidx.media3.ui.PlayerView</span>
+        <span class="na">android:id=</span><span class="s">"@+id/exo_player"</span>
+        <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+        <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span>
+        <span class="na">app:resize_mode=</span><span class="s">"fill"</span>
+        <span class="na">app:shutter_background_color=</span><span class="s">"@android:color/transparent"</span>
+        <span class="na">app:use_controller=</span><span class="s">"true"</span><span class="nt">/&gt;</span>
+
+    <span class="nt">&lt;/RelativeLayout&gt;</span>
+
+    <span class="c">&lt;!-- PreRoll Companion Banner --&gt;</span>
+    <span class="nt">&lt;FrameLayout</span>
+      <span class="na">android:id=</span><span class="s">"@+id/companion_container"</span>
+      <span class="na">android:layout_width=</span><span class="s">"match_parent"</span>
+      <span class="na">android:layout_height=</span><span class="s">"wrap_content"</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;/LinearLayout&gt;</span>
+
+<span class="nt">&lt;/androidx.constraintlayout.widget.ConstraintLayout&gt;</span>
+
+</code></pre></div></div><h4 id="load-a-preroll-ad-1"><a class="anchor" href="#load-a-preroll-ad-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load A PreRoll Ad</h4><p>Once the layout is ready, the next step is to load an ad. That’s done with the <code class="language-plaintext highlighter-rouge">requestPreRollAd()</code> static method in Tapsell class.</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">requestPreRollAd</span><span class="o">(</span><span class="nc">String</span> <span class="n">zoneId</span><span class="o">,</span> <span class="nc">ViewGroup</span> <span class="n">container</span><span class="o">,</span> <span class="nd">@Nullable</span> <span class="nc">ViewGroup</span> <span class="n">companionContainer</span><span class="o">,</span> <span class="nc">FrameLayout</span> <span class="n">videoPlayer</span><span class="o">,</span> <span class="nc">String</span> <span class="n">videoPath</span><span class="o">,</span> <span class="nc">RequestResultListener</span> <span class="n">listener</span><span class="o">)</span>
+</code></pre></div></div><p>You need to provide a class implementing the <code class="language-plaintext highlighter-rouge">RequestResultListener</code> interface to get the ad load result overriding the success and failure methods:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">RequestResultListener</span> <span class="o">{</span>
+    <span class="c1">// Called when the ad is successfully loaded; providing the ad id needed to show the ad </span>
+    <span class="kt">void</span> <span class="nf">onSuccess</span><span class="o">(</span><span class="nc">String</span> <span class="n">adId</span><span class="o">);</span>
+    <span class="c1">// Called when there is no ad available</span>
+    <span class="kt">void</span> <span class="nf">onFailure</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div><p>Here’s an example that shows how to load an ad in the onCreate() method of an Activity:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ir.tapsell.mediation.ad.request.RequestResultListener</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">ir.tapsell.mediation.Tapsell</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">PRE_ROLL_AD_ZONE_ID</span> <span class="o">=</span> <span class="s">"SampleZoneId"</span><span class="o">;</span>
+    
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="nc">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
+        <span class="n">setContentView</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_main</span><span class="o">);</span>
+        
+        <span class="nc">TapsellBannerView</span> <span class="n">banner</span> <span class="o">=</span> <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">banner</span><span class="o">);</span>
+
+        <span class="nc">Tapsell</span><span class="o">.</span><span class="na">requestPreRollAd</span><span class="o">(</span>
+              <span class="no">PRE_ROLL_AD_ZONE_ID</span><span class="o">,</span> 
+              <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">videoPlayerContainer</span><span class="o">),</span> 
+              <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">companionContainer</span><span class="o">),</span> 
+              <span class="n">findViewById</span><span class="o">(</span><span class="no">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">exoPlayer</span><span class="o">),</span> 
+              <span class="s">"VIDEO_URL"</span><span class="o">,</span> 
+              <span class="k">new</span> <span class="nf">RequestResultListener</span><span class="o">()</span> <span class="o">{</span>
+                    <span class="nd">@Override</span>
+                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSuccess</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="nc">String</span> <span class="n">adId</span><span class="o">)</span> <span class="o">{</span>
+                        <span class="c1">// Ad loaded</span>
+                        <span class="c1">// TODO: Show the ad</span>
+                    <span class="o">}</span>
+        
+                    <span class="nd">@Override</span>
+                    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onFailure</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+                        <span class="c1">// Ad not available</span>
+                    <span class="o">}</span>
+                <span class="o">});</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div><h4 id="show-the-loaded-preroll-ad"><a class="anchor" href="#show-the-loaded-preroll-ad" aria-hidden="true"><span class="octicon octicon-link"></span></a>Show The Loaded PreRoll Ad</h4><p>Once the pre-roll ad is successfully loaded, the next step is to show the ad. That’s done with the <code class="language-plaintext highlighter-rouge">showPreRollAd()</code> static method in Tapsell class passing the <code class="language-plaintext highlighter-rouge">adId</code> received in <code class="language-plaintext highlighter-rouge">onSuccess</code> method of the <code class="language-plaintext highlighter-rouge">RequestResultListener</code> and below parameters to load the video.</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">requestPreRollAd</span><span class="o">(</span><span class="nc">String</span> <span class="n">zoneId</span><span class="o">,</span> <span class="nc">ViewGroup</span> <span class="n">container</span><span class="o">,</span> <span class="nd">@Nullable</span> <span class="nc">ViewGroup</span> <span class="n">companionContainer</span><span class="o">,</span> <span class="nc">FrameLayout</span> <span class="n">videoPlayer</span><span class="o">,</span> <span class="nc">String</span> <span class="n">videoPath</span><span class="o">,</span> <span class="nc">RequestResultListener</span> <span class="n">listener</span><span class="o">)</span>
+</code></pre></div></div><p>The <code class="language-plaintext highlighter-rouge">AdStateListener.PreRoll</code> optional parameter can be passed to monitor and handle events related to displaying your pre-roll ad. The interface has the following implementation:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">AdStateListener</span><span class="o">.</span><span class="na">PreRoll</span> <span class="n">listener</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AdStateListener</span><span class="o">.</span><span class="na">PreRoll</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onVastAvailable</span><span class="o">(</span><span class="nc">String</span> <span class="n">vastUrl</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// You can access the vast tag url here</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdImpression</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Code to be executed when an impression is recorded for the ad.</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdClicked</span><span class="o">()</span> <span class="o">{</span>
+        <span class="c1">// Code to be executed when the user clicks on the ad.</span>
+    <span class="o">}</span>
+    
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdClosed</span><span class="o">(</span><span class="nc">AdShowCompletionState</span> <span class="n">completionState</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// This might be `COMPLETED`, `SKIPPED` or `UNKNOWN`.</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onAdFailed</span><span class="o">(</span><span class="nc">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// Code to be executed when the ad show fails.</span>
+    <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div><h4 id="destroy-preroll-ad"><a class="anchor" href="#destroy-preroll-ad" aria-hidden="true"><span class="octicon octicon-link"></span></a>Destroy PreRoll Ad</h4><p>When you are done showing your PreRoll ad, you should destroy it so that the ad is properly garbage collected. The example below shows the destroy call in the onDestroy() method of an activity:</p><div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ir.tapsell.mediation.Tapsell</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="nc">AppCompatActivity</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onDestroy</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nc">Tapsell</span><span class="o">.</span><span class="na">destroyPreRollAd</span><span class="o">(</span><span class="n">adId</span><span class="o">);</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onDestroy</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div><h3 id="sample-project"><a class="anchor" href="#sample-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Project</h3><p>for more info you can use <a href="https://github.com/tapsellorg/TapsellMediation-AndroidSample/tree/master/sample-kotlin/src/main/java/ir/tapsell/sample/preroll">PreRoll Sample</a> on GitHub repository.</p></div></article></div></div><footer id="footer" class="footer"><div class="container"><div class="row justify-content-between"><div class="col-auto"><div><div class="social-container"><div class="social-btns"><a href="https://t.me/tapsell" target="_blank" class="social-btn-telegram" title="Telegram"><i class="fab fa-telegram" aria-hidden="true"></i><span class="sr-only">Telegram</span> </a><a href="https://twitter.com/TapsellAdNet" target="_blank" class="social-btn-twitter" title="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span> </a><a href="https://www.youtube.com/channel/UCopCgb525Yict-Kqgdbkmjw" target="_blank" class="social-btn-youtube" title="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i><span class="sr-only">YouTube</span> </a><a href="https://www.linkedin.com/company/tapsell" target="_blank" class="social-btn-linkedin" title="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span></a></div></div></div></div><div class="col-auto"><img src="/assets/images/logos/logo-dark-background.png" class="logo-small margin-top-small" alt="Tapsell"></div></div><div class="row"><div class="col-md-12"><hr class="dark m-0"><div class="footer-nav-container"><nav class="footer-nav"><ul class="footer-nav-list"><li><a href="https://docs.tapsell.ir/terms-and-condition/">Terms of Service</a></li><li><a href="https://docs.tapsell.ir/faq/publisher/"></a></li><li><a href="https://docs.tapsell.ir/faq/advertiser/"></a></li><li><a href="https://docs.tapsell.ir/paying-income/"></a></li><li><a href="mailto:info@tapsell.ir" target="_blank"><span>Contact Us</span></a></li></ul></nav></div><div class="margin-top-small margin-bottom-small text-center-small-float-right"><span>Designed and Developed by Tapsell - Iran 2025.</span></div></div></div></div></footer><script src="/assets/bundle.js?v=1752915253&_v=1752915254286" type="text/javascript"></script></main></body></html>
